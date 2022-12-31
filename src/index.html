@@ -7,8 +7,38 @@
     <script type="module" src="./js/app.js"></script>
   </head>
   <body>
-    <div class="flex h-screen flex-col items-center justify-center">
-      <h1 class="text-3xl font-bold">Dashboard</h1>
+    <div class="flex h-screen">
+      <!-- Sidebar Start -->
+      <aside id="sidebar" class="w-64 bg-primary-500">
+        <div id="sidebar-header">
+          <div id="sidebar-header-title">Sidebar</div>
+        </div>
+        <div id="sidebar-content">
+          <div id="sidebar-content-title">Content</div>
+        </div>
+      </aside>
+      <!-- Sidebar End -->
+
+      <!-- Page Content Start -->
+      <div class="flex-grow">
+        <!-- Header Start -->
+        <header class="flex h-16 w-full items-center px-6 shadow">
+          <div>Header</div>
+        </header>
+        <!-- Header End -->
+
+        <!-- Main Start -->
+        <main class="h-[1200px] bg-slate-50 p-6">
+          <div class="h-96 rounded border-4 border-dashed p-4">
+            <h4 class="text-xl font-medium">Dashboard</h4>
+          </div>
+        </main>
+        <!-- Main End -->
+
+        <!-- Footer Start -->
+        <footer class="h-10 items-center">Copyright 2020</footer>
+      </div>
+      <!-- Page Content Star -->
     </div>
   </body>
 </html>
