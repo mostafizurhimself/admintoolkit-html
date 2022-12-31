@@ -35,3 +35,11 @@ Then, start the development server:
 ```bash
 yarn dev
 ```
+
+After completing a feature, you need to push the code to the remote repository. To push the code run the following command:
+
+```bash
+git add .
+git commit -m "commit message"
+git push origin feat/<feature-name>
+```
