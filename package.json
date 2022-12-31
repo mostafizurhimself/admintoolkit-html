@@ -2,15 +2,15 @@
   "name": "admin-toolkit-html",
   "version": "1.0.0",
   "description": "Admin Toolkit HTML Template",
+  "author": "Md Mostafizur Rahman",
+  "private": true,
   "default": "index.html",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html",
+    "dev": "parcel src/**/*.html --port 3000",
+    "build": "parcel build src/**/*.html",
     "format": "prettier --write src/**/*.{html,css,js} --config ./.prettierrc"
   },
   "keywords": [],
-  "author": "Md Mostafizur Rahman",
-  "license": "ISC",
   "devDependencies": {
     "parcel": "^2.8.2",
     "postcss": "^8.4.20",
