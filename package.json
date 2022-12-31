@@ -1,0 +1,21 @@
+{
+  "name": "admin-toolkit-html",
+  "version": "1.0.0",
+  "description": "Admin Toolkit HTML Template",
+  "default": "index.html",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "format": "prettier --write src/**/*.{html,css,js} --config ./.prettierrc"
+  },
+  "keywords": [],
+  "author": "Md Mostafizur Rahman",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.2",
+    "postcss": "^8.4.20",
+    "prettier": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "tailwindcss": "^3.2.4"
+  }
+}
