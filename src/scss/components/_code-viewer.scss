@@ -1,0 +1,21 @@
+@import '~/node_modules/highlight.js/styles/atom-one-dark.css';
+
+.code-viewer {
+  @apply w-full overflow-hidden rounded-primary border bg-white duration-300 dark:border-slate-700 dark:bg-slate-800;
+
+  &-content {
+    @apply bg-slate-50 p-6 dark:bg-slate-900;
+  }
+
+  &-footer {
+    @apply px-6 py-4;
+
+    pre {
+      @apply overflow-hidden whitespace-nowrap rounded;
+
+      code {
+        @apply whitespace-pre-wrap text-base;
+      }
+    }
+  }
+}

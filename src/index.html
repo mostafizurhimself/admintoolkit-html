@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./scss/app.scss" />
-    <script type="module" src="./js/app.js"></script>
   </head>
   <body>
     <div class="flex h-screen">
       <!-- Sidebar Start -->
-      <aside id="sidebar" class="w-64 bg-primary-500">
+      <aside id="sidebar" class="w-64 flex-shrink-0 bg-primary-500">
         <div id="sidebar-header">
           <div id="sidebar-header-title">Sidebar</div>
         </div>
@@ -28,17 +27,31 @@
         <!-- Header End -->
 
         <!-- Main Start -->
-        <main class="h-[1200px] bg-slate-50 p-6">
-          <div class="h-96 rounded border-4 border-dashed p-4">
-            <h4 class="text-xl font-medium">Dashboard</h4>
+        <main class="bg-slate-50 p-6">
+          <div class="code-viewer">
+            <div class="rounded-primary bg-white shadow">
+              <div class="border-b px-6 py-4 dark:border-slate-700">
+                <h4 class="text-lg font-semibold">Card Header</h4>
+              </div>
+              <div class="p-6">
+                <div class="text-sm text-slate-600 dark:text-slate-300">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, ex a? Ullam magnam soluta
+                  voluptate molestias natus, eius sint ducimus possimus neque? Fugit cumque cum ipsam repellat beatae
+                  eius aliquam, vero hic enim voluptatem libero suscipit maxime, consequuntur non ullam. Blanditiis
+                  nulla repellendus quam dolores assumenda rem amet odio sit!
+                </div>
+              </div>
+            </div>
           </div>
         </main>
         <!-- Main End -->
 
         <!-- Footer Start -->
-        <footer class="h-10 items-center">Copyright 2020</footer>
+        <footer class="mt-auto h-10 items-center px-6 text-sm">Copyright 2020</footer>
       </div>
       <!-- Page Content Star -->
     </div>
+
+    <script type="module" src="./js/app.js"></script>
   </body>
 </html>
