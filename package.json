@@ -6,7 +6,7 @@
   "private": true,
   "default": "index.html",
   "scripts": {
-    "dev": "parcel src/**/*.html --port 3000",
+    "dev": "parcel src/**/*.html --port 3000 --open",
     "build": "parcel build src/**/*.html",
     "format": "prettier --write src/**/*.{html,css,js} --config ./.prettierrc"
   },
