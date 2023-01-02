@@ -3,9 +3,10 @@ import jsBeautify from 'js-beautify';
 
 // Highlight the code
 const highlightCode = () => {
-  const codeViewer = document.querySelector('.code-viewer');
+  const codeViewers = document.querySelectorAll('.code-viewer');
 
-  if (codeViewer) {
+  // Loop through all code viewers
+  codeViewers.forEach((codeViewer) => {
     // Get the source code from the code viewer
     const sourceCode = jsBeautify.html(codeViewer.innerHTML).replace(/</g, '&lt;').replace(/>/g, '&gt;').trim();
 
@@ -30,7 +31,7 @@ const highlightCode = () => {
       const pre = codeViewer.querySelector('pre');
       pre.classList.toggle('hidden');
     });
-  }
+  });
 };
 
 // Create the toggle element
