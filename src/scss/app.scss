@@ -5,7 +5,9 @@
 // Base
 @import 'fonts';
 @import 'reset';
+@import 'utilities';
 
 // Components
+@import 'components/sidebar';
 @import 'components/code-viewer';
 @import 'components/toggle';

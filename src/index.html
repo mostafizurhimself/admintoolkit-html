@@ -1,63 +1,266 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./scss/app.scss" />
-  </head>
-  <body>
-    <div class="flex h-screen">
-      <!-- Sidebar Start -->
-      <aside id="sidebar" class="w-64 flex-shrink-0 bg-primary-500">
-        <div id="sidebar-header">
-          <div id="sidebar-header-title">Sidebar</div>
-        </div>
-        <div id="sidebar-content">
-          <div id="sidebar-content-title">Content</div>
-        </div>
-      </aside>
-      <!-- Sidebar End -->
+<html class="dark" lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <link rel="stylesheet" href="./scss/app.scss" />
+          <script type="module" src="./js/app.js"></script>
+     </head>
 
-      <!-- Page Content Start -->
-      <div class="flex-grow">
-        <!-- Header Start -->
-        <header class="flex h-16 w-full items-center px-6 shadow">
-          <div>Header</div>
-        </header>
-        <!-- Header End -->
+     <body>
 
-        <!-- Main Start -->
-        <main class="bg-slate-50 p-6">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-title">Button Colors</div>
-              <div class="card-subtitle">
-                There are six pre defined colors available for buttons. You can set the color prop value to primary,
-                secondary, success, danger, warning & info. Default value is primary.
-              </div>
+          <div id="app" class="w-full min-h-screen">
+               <!-- sidebar starts -->
+               <aside id="sidebar" class="sidebar">
+                    
+                    <!-- sidebar header -->
+                    <div class="sidebar-header">
+                         <div class="sidebar-block sidebar-block--logo w-full flex items-center space-x-4 px-4">
+                              <svg class="inline-block fill-current text-primary-500" width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                                   <path d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z"></path>
+                                   <path d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z"></path>
+                              </svg>
 
-              <div class="code-viewer">
-                <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary-solid btn-md">Primary</button
-                  ><button class="btn btn-secondary-solid btn-md">Secondary</button
-                  ><button class="btn btn-success-solid btn-md">Success</button
-                  ><button class="btn btn-danger-solid btn-md">Danger</button
-                  ><button class="btn btn-warning-solid btn-md">Warning</button
-                  ><button class="btn btn-info-solid btn-md">Info</button
-                  ><button class="btn btn-dark-solid btn-md">Dark</button>
-                </div>
-              </div>
-            </div>
+                              <div class="flex flex-col">
+                                   <h1 class="flex text-xl">
+                                        <span class="font-bold text-slate-800 dark:text-slate-200">
+                                             Admin
+                                        </span> 
+
+                                        <span class="font-semibold text-primary-500">
+                                             Toolkit
+                                        </span>
+                                   </h1>
+
+                                   <p class="whitespace-nowrap text-xs text-slate-400">
+                                        Simple &amp; Customizable
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- sidebar container -->
+                    <div class="sidebar-container">
+                         <ul class="sidebar-menu space-y-0.5">
+                             <li class="sidebar-menu-item sidebar-menu-item--content">
+                                 <button  class="sidebar-btn active" type="button">
+                                     <span class="sidebar-btn-icon sidebar-btn-icon--char">
+                                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
+                                             </path>
+                                         </svg>
+                                     </span>
+
+                                     <span class="sidebar-btn-text">Dashboard</span>
+                                     
+                                     <svg
+                                        class="sidebar-btn-icon sidebar-btn-icon--arrow"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-width="2"
+                                        viewBox="0 0 24 24"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        height="1em"
+                                        width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                     >
+                                         <polyline points="9 18 15 12 9 6"></polyline>
+                                     </svg>
+                                 </button>
+                             </li>
+
+                             <ul class="sidebar-submenu">
+                                   <li class="sidebar-submenu-item">
+                                        <a class="sidebar-submenu-link" href="#">
+                                             Ecommerce
+                                        </a>
+                                   </li>
+
+                                   <li class="sidebar-submenu-item">
+                                        <a class="sidebar-submenu-link" href="#">
+                                             Analytics
+                                        </a>
+                                   </li>
+                             </ul>
+
+                             <li class="sidebar-menu-item sidebar-menu-item--title pt-4 pb-2 text-xs uppercase tracking-widest text-slate-400 ps-7">
+                                   Applications
+                              </li>
+
+                              <li class="sidebar-menu-item sidebar-menu-item--content px-[18px]">
+                                   <a class="sidebar-menu-link" href="#">
+                                        <span class="sidebar-menu-link-icon">
+                                             <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                             </svg>
+                                        </span>
+
+                                        <span class="sidebar-menu-link-text">Email</span>
+                                   </a>
+                              </li>
+
+                              <li class="sidebar-menu-item sidebar-menu-item--content px-[18px]">
+                                   <a class="sidebar-menu-link" href="#">
+                                        <span class="sidebar-menu-link-icon">
+                                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M464 512a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm200 0a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm-400 0a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm661.2-173.6c-22.6-53.7-55-101.9-96.3-143.3a444.35 444.35 0 0 0-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9a445.35 445.35 0 0 0-142 96.5c-40.9 41.3-73 89.3-95.2 142.8-23 55.4-34.6 114.3-34.3 174.9A449.4 449.4 0 0 0 112 714v152a46 46 0 0 0 46 46h152.1A449.4 449.4 0 0 0 510 960h2.1c59.9 0 118-11.6 172.7-34.3a444.48 444.48 0 0 0 142.8-95.2c41.3-40.9 73.8-88.7 96.5-142 23.6-55.2 35.6-113.9 35.9-174.5.3-60.9-11.5-120-34.8-175.6zm-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8 69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9 44.6 18.7 84.6 45.6 119 80 34.3 34.3 61.3 74.4 80 119 19.4 46.2 29.1 95.2 28.9 145.8-.6 99.6-39.7 192.9-110.1 262.7z"></path>
+                                             </svg>
+                                        </span>
+
+                                        <span class="sidebar-menu-link-text">Chat</span>
+                                   </a>
+                              </li>
+
+                              <li class="sidebar-menu-item sidebar-menu-item--content px-[18px]">
+                                   <a class="sidebar-menu-link" href="#">
+                                        <span class="sidebar-menu-link-icon">
+                                             <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="22" width="22" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                        </span>
+
+                                        <span class="sidebar-menu-link-text">Calender</span>
+                                   </a>
+                              </li>
+                         </ul>
+                     </div>
+               </aside>
+               <!-- sidebar ends -->
+               
+               <!-- main content starts -->
+               <div class="flex flex-col flex-1 transition-margin duration-300 ease-in-out lg:ml-72">
+                    <header id="header" class="header header--primary w-full h-16 sticky top-0 flex items-center bg-white drop-shadow-sm dark:bg-slate-800">
+                         <div class="header-container container-fluid flex justify-between items-center">
+                              <!-- header-block--search+toggle -->
+                              <div class="header-block flex items-center space-x-6">
+                                   <div class="header-block-inner">
+                                        <button class="header-btn header-btn--toggle text-slate-600 dark:text-slate-400">
+                                             <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+                                             </svg>
+                                        </button>
+                                   </div>
+
+                                   <div class="header-block-inner w-72 hidden sm:block">
+                                        <form class="header-form header-form--search w-full h-10 inline-flex items-center overflow-hidden rounded-primary border shadow-sm focus-within:ring-1 focus-within:ring-primary-500 border-transparent bg-slate-100 focus-within:border-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500" action="">
+                                             <div class="flex h-full items-center px-3">
+                                                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 group-focus-within:text-primary-500 " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                  </svg>
+                                             </div>
+
+                                             <input 
+                                                  class="w-full h-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0" 
+                                                  placeholder="Search" 
+                                                  type="text" 
+                                             >
+                                        </form>
+                                   </div>
+                              </div>
+
+                              <!-- header-block--options -->
+                              <div class="header-block flex items-center space-x-6">
+                                   <!-- header-block-inner--option-lang -->
+                                   <div class="header-block-inner relative">
+                                        <button type="button" class="flex items-center space-x-2 text-sm">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
+                                                  <path fill="#FFF" d="M0 0h513v342H0z"></path>
+                                                  <path d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z" fill="#D80027"></path>
+                                                  <path fill="#2E52B2" d="M0 0h256.5v184.1H0z"></path>
+                                                  <path d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z" fill="#FFF"></path>
+                                             </svg>
+
+                                             <span class="hidden md:inline-block">
+                                                  English
+                                             </span>
+
+                                             <span class="inline-block md:hidden">
+                                                  EN
+                                             </span>
+                                        </button>
+                                   </div>
+
+                                   <!-- header-block-inner--option-search -->
+                                   <div class="header-block-inner sm:hidden">
+                                        <button 
+                                             class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150  hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
+                                             type="button" 
+                                        >
+                                             <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                                                  <circle cx="11" cy="11" r="8"></circle>
+                                                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                             </svg>
+                                        </button>
+                                   </div>
+
+                                   <!-- header-block-inner--option-darkmode -->
+                                   <div class="header-block-inner">
+                                        <button 
+                                             class="flex items-center justify-center rounded-full  text-slate-600 transition-colors duration-150 hover:text-primary-500  dark:text-slate-300 dark:hover:text-slate-300"
+                                             type="button" 
+                                        >
+                                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+                                                  <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                                             </svg>
+                                        </button>
+                                   </div>
+
+                                   <!-- header-block-inner--option-notification -->
+                                   <div class="header-block-inner relative">
+                                        <button class="relative mt-0.5 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
+                                             <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                             </svg>
+
+                                             <span class="absolute flex items-center justify-center rounded-full bg-danger-500 text-slate-200 -right-1 -top-1.5 h-4 w-4 text-[11px]">
+                                                  5
+                                             </span>
+                                        </button>
+                                   </div>
+
+                                   <!-- header-block-inner--option-profile-dropdown -->
+                                   <div class="header-block-inner relative">
+                                        <button class="relative flex items-center space-x-1.5">
+                                             <img 
+                                                  class="h-9 w-9 rounded-full block group-focus:ring group-focus:ring-primary-500"
+                                                  src="https://avatars.githubusercontent.com/u/1164541?v=4" 
+                                                  alt="avatar" 
+                                             >
+
+                                             <div class="hidden md:flex md:flex-col">
+                                                  <span class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
+                                                       John Doe
+                                                  </span>
+
+                                                  <span class="inline-block text-left text-xs text-slate-400">
+                                                       Admin
+                                                  </span>
+                                             </div>
+                                        </button>
+                                   </div>
+                              </div>
+                         </div>
+                    </header>
+
+                    <main>
+                         <section>
+                              <div class="container-fluid py-6">
+                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus perferendis quia maxime quibusdam nisi numquam cum eveniet et modi. Perferendis tempore laudantium omnis sed molestiae maxime exercitationem maiores ullam sapiente impedit! Enim, voluptatibus ipsum soluta labore dicta quisquam at expedita! Dolorum, quod sequi optio non cum expedita, reiciendis laboriosam excepturi beatae velit pariatur amet a distinctio esse enim sunt fugit? Saepe ipsum natus voluptas sapiente delectus, eveniet impedit recusandae cumque amet mollitia. Laudantium reiciendis alias nobis mollitia natus. Accusamus rerum vitae eaque laborum nemo, quis atque reiciendis eos odio ipsam? Voluptate, sequi quos iusto numquam soluta officiis recusandae unde non repudiandae nesciunt eligendi atque assumenda, quidem odio molestiae, explicabo voluptas quo modi magni dolorum aperiam harum cumque optio. Sit vitae ad esse eveniet sunt earum cum obcaecati error dolore commodi porro rerum harum, quis, officiis, eius sapiente laudantium a atque. Nihil ipsa ad et itaque esse repellat? Ullam saepe modi repellat quas temporibus, iusto voluptatem veritatis. Eius dolores, nesciunt veniam sed, voluptatibus eveniet repellendus illo quia porro inventore nisi facere modi dignissimos reprehenderit aperiam in labore earum quasi odio fuga? Nesciunt eum quaerat at deserunt voluptatum, aliquam non fugiat amet a suscipit provident aperiam sapiente nulla quia accusamus placeat quidem architecto nemo soluta delectus repellendus ex? Praesentium eum dolorem, esse harum similique maiores quo nobis fuga neque laboriosam, sequi nihil iusto excepturi. Necessitatibus hic vero cum eius? Facere nesciunt voluptates quod ipsam aspernatur commodi, corrupti nihil similique officia perspiciatis voluptas? Dignissimos, doloremque repudiandae! Cumque veritatis earum ipsum eaque alias provident porro commodi iure autem voluptas dolore repudiandae id corporis sapiente, aut doloribus, quae eum beatae dolor consequuntur labore aperiam voluptates. Dolore, doloribus quo pariatur ut rem neque iure maxime ex voluptatem enim impedit accusamus modi aliquid autem, tenetur ipsum quisquam maiores corrupti? Inventore, iure quidem. Harum blanditiis non at labore hic dignissimos voluptatibus modi quas iste molestias. Doloremque architecto impedit natus pariatur quae deserunt cum nihil distinctio tempore totam. Reprehenderit natus cupiditate quia architecto sint suscipit harum porro atque deleniti illo pariatur quibusdam quisquam quod, voluptatum debitis eos tempora nulla dolorum accusantium eaque omnis laudantium ullam. Vel porro maxime, soluta rerum mollitia obcaecati aliquid velit ipsum, eius vitae amet perspiciatis earum cupiditate tenetur. Suscipit iure, ad aperiam illo dolore necessitatibus quisquam cumque assumenda blanditiis quaerat rem modi. Fugit alias nostrum, iste eaque eos adipisci repudiandae ducimus assumenda soluta iure velit cupiditate ipsum id quisquam vitae, beatae molestiae minima quia aspernatur, sint esse cumque. Iste eius distinctio blanditiis saepe hic, voluptas similique modi nemo unde. Nobis, quo quasi magnam natus, voluptates temporibus provident numquam et saepe earum voluptatem possimus porro id esse fuga! Reiciendis voluptatem unde ab itaque illo suscipit eum temporibus inventore quidem nam quas odio qui vero vitae eaque provident aliquid autem odit non, quisquam id quasi ipsa? Impedit illo adipisci quos, voluptate fuga quo rerum beatae ea debitis fugit nam distinctio placeat ut nostrum et, animi officia ipsum sint natus sed. Reprehenderit, repellat nulla dolor praesentium enim unde accusamus ducimus, molestias quod necessitatibus numquam amet? Quae, aliquid est.
+                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus perferendis quia maxime quibusdam nisi numquam cum eveniet et modi. Perferendis tempore laudantium omnis sed molestiae maxime exercitationem maiores ullam sapiente impedit! Enim, voluptatibus ipsum soluta labore dicta quisquam at expedita! Dolorum, quod sequi optio non cum expedita, reiciendis laboriosam excepturi beatae velit pariatur amet a distinctio esse enim sunt fugit? Saepe ipsum natus voluptas sapiente delectus, eveniet impedit recusandae cumque amet mollitia. Laudantium reiciendis alias nobis mollitia natus. Accusamus rerum vitae eaque laborum nemo, quis atque reiciendis eos odio ipsam? Voluptate, sequi quos iusto numquam soluta officiis recusandae unde non repudiandae nesciunt eligendi atque assumenda, quidem odio molestiae, explicabo voluptas quo modi magni dolorum aperiam harum cumque optio. Sit vitae ad esse eveniet sunt earum cum obcaecati error dolore commodi porro rerum harum, quis, officiis, eius sapiente laudantium a atque. Nihil ipsa ad et itaque esse repellat? Ullam saepe modi repellat quas temporibus, iusto voluptatem veritatis. Eius dolores, nesciunt veniam sed, voluptatibus eveniet repellendus illo quia porro inventore nisi facere modi dignissimos reprehenderit aperiam in labore earum quasi odio fuga? Nesciunt eum quaerat at deserunt voluptatum, aliquam non fugiat amet a suscipit provident aperiam sapiente nulla quia accusamus placeat quidem architecto nemo soluta delectus repellendus ex? Praesentium eum dolorem, esse harum similique maiores quo nobis fuga neque laboriosam, sequi nihil iusto excepturi. Necessitatibus hic vero cum eius? Facere nesciunt voluptates quod ipsam aspernatur commodi, corrupti nihil similique officia perspiciatis voluptas? Dignissimos, doloremque repudiandae! Cumque veritatis earum ipsum eaque alias provident porro commodi iure autem voluptas dolore repudiandae id corporis sapiente, aut doloribus, quae eum beatae dolor consequuntur labore aperiam voluptates. Dolore, doloribus quo pariatur ut rem neque iure maxime ex voluptatem enim impedit accusamus modi aliquid autem, tenetur ipsum quisquam maiores corrupti? Inventore, iure quidem. Harum blanditiis non at labore hic dignissimos voluptatibus modi quas iste molestias. Doloremque architecto impedit natus pariatur quae deserunt cum nihil distinctio tempore totam. Reprehenderit natus cupiditate quia architecto sint suscipit harum porro atque deleniti illo pariatur quibusdam quisquam quod, voluptatum debitis eos tempora nulla dolorum accusantium eaque omnis laudantium ullam. Vel porro maxime, soluta rerum mollitia obcaecati aliquid velit ipsum, eius vitae amet perspiciatis earum cupiditate tenetur. Suscipit iure, ad aperiam illo dolore necessitatibus quisquam cumque assumenda blanditiis quaerat rem modi. Fugit alias nostrum, iste eaque eos adipisci repudiandae ducimus assumenda soluta iure velit cupiditate ipsum id quisquam vitae, beatae molestiae minima quia aspernatur, sint esse cumque. Iste eius distinctio blanditiis saepe hic, voluptas similique modi nemo unde. Nobis, quo quasi magnam natus, voluptates temporibus provident numquam et saepe earum voluptatem possimus porro id esse fuga! Reiciendis voluptatem unde ab itaque illo suscipit eum temporibus inventore quidem nam quas odio qui vero vitae eaque provident aliquid autem odit non, quisquam id quasi ipsa? Impedit illo adipisci quos, voluptate fuga quo rerum beatae ea debitis fugit nam distinctio placeat ut nostrum et, animi officia ipsum sint natus sed. Reprehenderit, repellat nulla dolor praesentium enim unde accusamus ducimus, molestias quod necessitatibus numquam amet? Quae, aliquid est.
+                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus perferendis quia maxime quibusdam nisi numquam cum eveniet et modi. Perferendis tempore laudantium omnis sed molestiae maxime exercitationem maiores ullam sapiente impedit! Enim, voluptatibus ipsum soluta labore dicta quisquam at expedita! Dolorum, quod sequi optio non cum expedita, reiciendis laboriosam excepturi beatae velit pariatur amet a distinctio esse enim sunt fugit? Saepe ipsum natus voluptas sapiente delectus, eveniet impedit recusandae cumque amet mollitia. Laudantium reiciendis alias nobis mollitia natus. Accusamus rerum vitae eaque laborum nemo, quis atque reiciendis eos odio ipsam? Voluptate, sequi quos iusto numquam soluta officiis recusandae unde non repudiandae nesciunt eligendi atque assumenda, quidem odio molestiae, explicabo voluptas quo modi magni dolorum aperiam harum cumque optio. Sit vitae ad esse eveniet sunt earum cum obcaecati error dolore commodi porro rerum harum, quis, officiis, eius sapiente laudantium a atque. Nihil ipsa ad et itaque esse repellat? Ullam saepe modi repellat quas temporibus, iusto voluptatem veritatis. Eius dolores, nesciunt veniam sed, voluptatibus eveniet repellendus illo quia porro inventore nisi facere modi dignissimos reprehenderit aperiam in labore earum quasi odio fuga? Nesciunt eum quaerat at deserunt voluptatum, aliquam non fugiat amet a suscipit provident aperiam sapiente nulla quia accusamus placeat quidem architecto nemo soluta delectus repellendus ex? Praesentium eum dolorem, esse harum similique maiores quo nobis fuga neque laboriosam, sequi nihil iusto excepturi. Necessitatibus hic vero cum eius? Facere nesciunt voluptates quod ipsam aspernatur commodi, corrupti nihil similique officia perspiciatis voluptas? Dignissimos, doloremque repudiandae! Cumque veritatis earum ipsum eaque alias provident porro commodi iure autem voluptas dolore repudiandae id corporis sapiente, aut doloribus, quae eum beatae dolor consequuntur labore aperiam voluptates. Dolore, doloribus quo pariatur ut rem neque iure maxime ex voluptatem enim impedit accusamus modi aliquid autem, tenetur ipsum quisquam maiores corrupti? Inventore, iure quidem. Harum blanditiis non at labore hic dignissimos voluptatibus modi quas iste molestias. Doloremque architecto impedit natus pariatur quae deserunt cum nihil distinctio tempore totam. Reprehenderit natus cupiditate quia architecto sint suscipit harum porro atque deleniti illo pariatur quibusdam quisquam quod, voluptatum debitis eos tempora nulla dolorum accusantium eaque omnis laudantium ullam. Vel porro maxime, soluta rerum mollitia obcaecati aliquid velit ipsum, eius vitae amet perspiciatis earum cupiditate tenetur. Suscipit iure, ad aperiam illo dolore necessitatibus quisquam cumque assumenda blanditiis quaerat rem modi. Fugit alias nostrum, iste eaque eos adipisci repudiandae ducimus assumenda soluta iure velit cupiditate ipsum id quisquam vitae, beatae molestiae minima quia aspernatur, sint esse cumque. Iste eius distinctio blanditiis saepe hic, voluptas similique modi nemo unde. Nobis, quo quasi magnam natus, voluptates temporibus provident numquam et saepe earum voluptatem possimus porro id esse fuga! Reiciendis voluptatem unde ab itaque illo suscipit eum temporibus inventore quidem nam quas odio qui vero vitae eaque provident aliquid autem odit non, quisquam id quasi ipsa? Impedit illo adipisci quos, voluptate fuga quo rerum beatae ea debitis fugit nam distinctio placeat ut nostrum et, animi officia ipsum sint natus sed. Reprehenderit, repellat nulla dolor praesentium enim unde accusamus ducimus, molestias quod necessitatibus numquam amet? Quae, aliquid est.
+                              </div>
+                         </section>
+                    </main>
+
+                    <footer class="mt-auto">
+                         <div class="container-fluid">
+                              <h1>Footer</h1>
+                         </div>
+                    </footer>
+               </div>
+               <!-- main content ends -->
           </div>
-        </main>
-        <!-- Main End -->
-
-        <!-- Footer Start -->
-        <footer class="mt-auto h-10 items-center px-6 text-sm">Copyright 2020</footer>
-      </div>
-      <!-- Page Content Star -->
-    </div>
-
-    <script type="module" src="./js/app.js"></script>
-  </body>
+     </body>
 </html>
