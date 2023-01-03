@@ -1,0 +1,15 @@
+.dropdown {
+  @apply relative;
+
+  &-toggle {
+    @apply inline-block cursor-pointer;
+  }
+
+  &-content {
+    @apply absolute hidden overflow-hidden rounded bg-white shadow;
+  }
+
+  &-content.show {
+    @apply block;
+  }
+}
