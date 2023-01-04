@@ -6,7 +6,7 @@
   }
 
   &-content {
-    @apply absolute hidden overflow-hidden rounded bg-white shadow;
+    @apply w-[150px] absolute top-[54px] right-0 hidden overflow-hidden rounded-primary border dark:border-slate-800  bg-white dark:bg-slate-800 shadow-lg;
   }
 
   &-content.show {
