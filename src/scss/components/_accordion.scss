@@ -38,22 +38,26 @@
                     }
      
                     &--right{
-                         @apply  text-primary-500 dark:text-slate-200 rotate-90;
+                         @apply  text-primary-500 dark:text-slate-200;
                     }
                }
-     
+
                #{$accordion}.active &-text {
                     @apply text-primary-500 dark:text-slate-200;
-               }
+               }    
 
-             
-               
+               #{$accordion}.open &-icon {
+
+                    &--right{
+                         @apply rotate-90;
+                    }
+               }
           }
      
           &-content {
                @apply w-full h-0 overflow-hidden transition-height duration-300 ease-in-out;
      
-               #{$accordion}.active & {
+               #{$accordion}.open & {
                     @apply h-auto;
                }
           }
