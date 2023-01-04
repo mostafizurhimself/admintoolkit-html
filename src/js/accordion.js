@@ -1,55 +1,41 @@
 const accordion = {
+  init() {
+    const accordions = document.querySelectorAll('.accordion');
 
-     init() {
+    accordions.forEach((accordion) => {
+      const accordionBtn = accordion.querySelector('.accordion-btn');
 
-          const accordions = document.querySelectorAll('.accordion');
+      accordionBtn.addEventListener('click', () => {
+        const accordionContent = accordion.querySelector('.accordion-content');
 
-          accordions.forEach((accordion) => {
+        if (accordionContent) {
+          if (!accordion.classList.contains('open')) {
+            //open the accordion
+            accordion.classList.add('open');
 
-               const accordionBtn = accordion.querySelector('.accordion-btn');
-          
-               accordionBtn.addEventListener('click', () => {
+            accordionContent.style.height = 0;
 
-                    const accordionContent = accordion.querySelector('.accordion-content');
+            setTimeout(() => {
+              accordionContent.style.height = accordionContent.scrollHeight + 'px';
+            }, 10);
+          } else {
+            //close the accordion
+            accordionContent.style.height = accordionContent.scrollHeight + 'px';
 
-                    if(accordionContent) {
+            setTimeout(() => {
+              accordionContent.style.height = 0;
+            }, 10);
 
-                         if(!accordion.classList.contains('open')) {
-                              //open the accordion
-                              accordion.classList.add('open');
+            setTimeout(() => {
+              accordion.classList.remove('open');
 
-                              accordionContent.style.height = 0;
-
-                              setTimeout(() => {
-                                   
-                                   accordionContent.style.height = accordionContent.scrollHeight + 'px';
-
-                              }, 10);
-
-                         }else {
-
-                              //close the accordion
-                              accordionContent.style.height = accordionContent.scrollHeight + 'px';
-                              
-                              setTimeout(() => {
-
-                                   accordionContent.style.height = 0;
-                                   
-                              }, 10);
-
-                              setTimeout(() => {
-
-                                   accordion.classList.remove('open');
-
-                                   accordionContent.removeAttribute('style');
-                                   
-                              }, 10)
-                         }
-          
-                    }
-               });
-          });
-     }
-}
+              accordionContent.removeAttribute('style');
+            }, 10);
+          }
+        }
+      });
+    });
+  },
+};
 
 export default accordion;

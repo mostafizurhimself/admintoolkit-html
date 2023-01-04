@@ -1,15 +1,17 @@
-.dropdown {
-  @apply relative;
+@layer components {
+  .dropdown {
+    @apply relative flex items-center;
 
-  &-toggle {
-    @apply inline-block cursor-pointer;
-  }
+    &-toggle {
+      @apply inline-block cursor-pointer;
+    }
 
-  &-content {
-    @apply w-[150px] absolute top-[54px] right-0 hidden overflow-hidden rounded-primary border dark:border-slate-800  bg-white dark:bg-slate-800 shadow-lg;
-  }
+    &-content {
+      @apply absolute top-[54px] right-0 hidden w-[150px] overflow-hidden rounded-primary border bg-white  shadow-lg dark:border-slate-800 dark:bg-slate-800;
+    }
 
-  &-content.show {
-    @apply block;
+    &-content.show {
+      @apply block;
+    }
   }
 }
