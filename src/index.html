@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 
 <head>
      <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
           <aside id="sidebar" class="sidebar">
                <!-- sidebar header -->
                <div class="sidebar-header">
-                    <div class="sidebar-block sidebar-block--logo flex w-full items-center space-x-4 px-4">
+                    <div class="w-full flex items-center space-x-4 px-4">
                          <svg class="inline-block fill-current text-primary-500" width="45" height="45"
                               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
                               <path
@@ -29,9 +29,8 @@
 
                          <div class="flex flex-col">
                               <h1 class="flex text-xl">
-                                   <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
-
-                                   <span class="font-semibold text-primary-500"> Toolkit </span>
+                                   <span class="font-bold text-slate-800 dark:text-slate-200">Admin</span>
+                                   <span class="font-semibold text-primary-500">Toolkit</span>
                               </h1>
 
                               <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
@@ -39,94 +38,70 @@
                     </div>
                </div>
 
-               <!-- sidebar container -->
+               <!-- sidebar container starts -->
                <div class="sidebar-container">
-                    <ul class="sidebar-menu space-y-0.5">
-                         <li class="sidebar-menu-item sidebar-menu-item--content">
-                              <button class="sidebar-btn active" type="button">
-                                   <span class="sidebar-btn-icon sidebar-btn-icon--char">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0"
-                                             viewBox="0 0 1024 1024" height="22" width="22"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                             <path
-                                                  d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
-                                             </path>
-                                        </svg>
-                                   </span>
+                    <ul class="space-y-0.5">
+                         <li class="px-[18px]">
+                             <div class="accordion active">
+                                   <div class="accordion-item">
+                                        <div class="accordion-header">
+                                             <button class="accordion-btn" type="button">
+                                                  <span class="accordion-btn-icon accordion-btn-icon--left">
+                                                       <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
+                                                            </path>
+                                                       </svg>
+                                                  </span>
+                                                  
+                                                  <span class="accordion-btn-text">Dashboard</span>
+                                                  
+                                                  <svg class="accordion-btn-icon accordion-btn-icon--right" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                       <polyline points="9 18 15 12 9 6"></polyline>
+                                                  </svg>
+                                             </button>
+                                        </div> 
 
-                                   <span class="sidebar-btn-text">Dashboard</span>
+                                        <div class="accordion-content">
+                                             <ul class="w-full mt-0.5">
+                                                  <li>
+                                                       <!-- active link -->
+                                                       <a class="w-full block rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 text-primary-500 hover:bg-primary-50 dark:hover:bg-primary-500 dark:hover:text-slate-200 hover:text-primary-500 transition-colors ease-in-out duration-150" href="#">
+                                                            Ecommerce
+                                                       </a>
+                                                  </li>
 
-                                   <svg class="sidebar-btn-icon sidebar-btn-icon--arrow" stroke="currentColor"
-                                        fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
-                                        stroke-linejoin="round" height="1em" width="1em"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <polyline points="9 18 15 12 9 6"></polyline>
-                                   </svg>
-                              </button>
+                                                  <li>
+                                                       <!-- Inactive link -->
+                                                       <a class="w-full block rounded-[.4rem] py-2 pl-[2.88rem]  text-sm leading-5 hover:bg-primary-50 dark:hover:bg-primary-500 hover:text-primary-500 dark:text-slate-200 transition-colors ease-in-out duration-150" href="#">
+                                                            Analytics
+                                                       </a>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                             </div> 
                          </li>
 
-                         <ul class="sidebar-submenu">
-                              <li class="sidebar-submenu-item">
-                                   <a class="sidebar-submenu-link" href="#"> Ecommerce </a>
-                              </li>
-
-                              <li class="sidebar-submenu-item">
-                                   <a class="sidebar-submenu-link" href="#"> Analytics </a>
-                              </li>
-                         </ul>
-
-                         <li
-                              class="sidebar-menu-item sidebar-menu-item--title pt-4 pb-2 text-xs uppercase tracking-widest text-slate-400 ps-7">
+                         <li class="pt-4 pb-2 text-xs uppercase tracking-widest text-slate-400 ps-7">
                               Applications
                          </li>
 
-                         <li class="sidebar-menu-item sidebar-menu-item--content px-[18px]">
-                              <a class="sidebar-menu-link" href="#">
-                                   <span class="sidebar-menu-link-icon">
-                                        <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24"
-                                             height="22" width="22" xmlns="http://www.w3.org/2000/svg">
-                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                             </path>
-                                        </svg>
-                                   </span>
-
-                                   <span class="sidebar-menu-link-text">Email</span>
-                              </a>
-                         </li>
-
-                         <li class="sidebar-menu-item sidebar-menu-item--content px-[18px]">
-                              <a class="sidebar-menu-link" href="#">
-                                   <span class="sidebar-menu-link-icon">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0"
-                                             viewBox="0 0 1024 1024" height="22" width="22"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                             <path
-                                                  d="M464 512a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm200 0a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm-400 0a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm661.2-173.6c-22.6-53.7-55-101.9-96.3-143.3a444.35 444.35 0 0 0-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9a445.35 445.35 0 0 0-142 96.5c-40.9 41.3-73 89.3-95.2 142.8-23 55.4-34.6 114.3-34.3 174.9A449.4 449.4 0 0 0 112 714v152a46 46 0 0 0 46 46h152.1A449.4 449.4 0 0 0 510 960h2.1c59.9 0 118-11.6 172.7-34.3a444.48 444.48 0 0 0 142.8-95.2c41.3-40.9 73.8-88.7 96.5-142 23.6-55.2 35.6-113.9 35.9-174.5.3-60.9-11.5-120-34.8-175.6zm-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8 69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9 44.6 18.7 84.6 45.6 119 80 34.3 34.3 61.3 74.4 80 119 19.4 46.2 29.1 95.2 28.9 145.8-.6 99.6-39.7 192.9-110.1 262.7z">
-                                             </path>
-                                        </svg>
-                                   </span>
-
-                                   <span class="sidebar-menu-link-text">Chat</span>
-                              </a>
-                         </li>
-
-                         <li class="sidebar-menu-item sidebar-menu-item--content px-[18px]">
-                              <a class="sidebar-menu-link" href="#">
-                                   <span class="sidebar-menu-link-icon">
-                                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
-                                             stroke-linecap="round" stroke-linejoin="round" height="22" width="22"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                             <line x1="16" y1="2" x2="16" y2="6"></line>
-                                             <line x1="8" y1="2" x2="8" y2="6"></line>
-                                             <line x1="3" y1="10" x2="21" y2="10"></line>
-                                        </svg>
-                                   </span>
-
-                                   <span class="sidebar-menu-link-text">Calender</span>
-                              </a>
-                         </li>
+                         <li class="px-[18px]">
+                              <div class="accordion accordion--link">
+                                    <div class="accordion-item">
+                                         <div class="accordion-header">
+                                              <a href="#" class="accordion-btn" role="button">
+                                                   <span class="accordion-btn-icon accordion-btn-icon--left">
+                                                        <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                                       </svg>
+                                                   </span>
+                                                   <span class="accordion-btn-text">Email</span>
+                                              </a>
+                                         </div> 
+                                    </div>
+                              </div> 
+                          </li>
                     </ul>
                </div>
           </aside>
@@ -140,7 +115,7 @@
                     <div class="header-container container-fluid flex items-center justify-between">
                          <!-- Sidebar Toggle & Search -->
                          <div class="flex items-center space-x-6">
-                              <div class="header-block-inner">
+                              <div class="header-block-inner flex">
                                    <button class="header-btn header-btn--toggle text-slate-600 dark:text-slate-400">
                                         <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24"
                                              height="22" width="22" xmlns="http://www.w3.org/2000/svg">
