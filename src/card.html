@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/app.scss" />
+    <script type="module" src="./js/app.js"></script>
+  </head>
+  <body>
+    <div class="flex h-screen">
+      <!-- Sidebar Start -->
+      <aside id="sidebar" class="w-64 flex-shrink-0 bg-primary-500">
+        <div id="sidebar-header">
+          <div id="sidebar-header-title">Sidebar</div>
+        </div>
+        <div id="sidebar-content">
+          <div id="sidebar-content-title">Content</div>
+        </div>
+      </aside>
+      <!-- Sidebar End -->
+
+      <!-- Page Content Start -->
+      <div class="flex-grow">
+        <!-- Header Start -->
+        <header class="flex h-16 w-full items-center bg-white px-6 shadow"></header>
+        <!-- Header End -->
+
+        <!-- Main Start -->
+        <main class="bg-slate-50 p-6">
+          <!-- Page Title Start -->
+          <div class="flex">
+            <h1 class="text-xl font-semibold dark:text-slate-300">Card</h1>
+            <ol class="breadcrumb ml-auto">
+              <li class="breadcrumb-item"><a href="">Home</a></li>
+              <li class="breadcrumb-item"><a href="">Components</a></li>
+              <li class="breadcrumb-item"><a href="">Card</a></li>
+            </ol>
+          </div>
+          <!-- Page Title End -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <h4 class="card-title">Basic Example</h4>
+              <p class="card-subtitle">Basic usage of <code class="code">Card</code> component</p>
+              <div class="code-viewer mt-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Card Title</h4>
+                    <div class="card-content">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, ex a? Ullam magnam soluta
+                      voluptate molestias natus, eius sint ducimus possimus neque? Fugit cumque cum ipsam repellat
+                      beatae eius aliquam, vero hic enim voluptatem libero suscipit maxime, consequuntur non ullam.
+                      Blanditiis nulla repellendus quam dolores assumenda rem amet odio sit!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Header & Footer -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <h4 class="card-title">Card Header &amp; Footer</h4>
+              <p class="card-subtitle">
+                You can add a header by adding a <code class="code">Card.Header</code> and a footer by adding a
+                <code class="code">Card.Footer</code>
+              </p>
+              <div class="code-viewer mt-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-title">Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-content">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, ex a? Ullam magnam soluta
+                      voluptate molestias natus, eius sint ducimus possimus neque? Fugit cumque cum ipsam repellat
+                      beatae eius aliquam, vero hic enim voluptatem libero suscipit maxime, consequuntur non ullam.
+                      Blanditiis nulla repellendus quam dolores assumenda rem amet odio sit!
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-secondary-plain btn-md">Cancel</button>
+                    <button class="btn btn-primary-solid btn-md">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card Header & Footer -->
+
+          <!-- Bordered Card -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <h4 class="card-title">Bordered Card</h4>
+              <p class="card-subtitle">Use card of the <code class="code">Border</code> component</p>
+              <div class="code-viewer mt-6">
+                <div class="card-fixed">
+                  <div class="card-body">
+                    <h4 class="card-title">Card Title</h4>
+                    <div class="card-content">
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Borderd Card -->
+
+          <!-- Clickable Card -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <h4 class="card-title">Media Card</h4>
+              <p class="card-subtitle">Use card of the <code class="code">Click</code> component</p>
+              <div class="code-viewer mt-6">
+                <div class="card-media">
+                  <div class="card-body">
+                    <h4 class="card-title">Card Title</h4>
+                    <div class="card-content">
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Clickable Card -->
+
+          <!-- Color Card -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <h4 class="card-title">Card With Colors</h4>
+              <p class="card-subtitle">Basic usage of <code class="code">Card</code> component</p>
+              <div class="code-viewer mt-6">
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  <!-- Primary Card -->
+                  <div class="card card-primary">
+                    <div class="card-body">
+                      <h4 class="card-title">Card Title</h4>
+                      <div class="card-content">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Primary Card -->
+
+                  <!-- Secondary Card -->
+                  <div class="card card-secondary">
+                    <div class="card-body">
+                      <h4 class="card-title">Card Title</h4>
+                      <div class="card-content">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Secondary Card -->
+
+                  <!-- Success Color Card -->
+                  <div class="card card-success">
+                    <div class="card-body">
+                      <h4 class="card-title">Card Title</h4>
+                      <div class="card-content">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Success Color Card -->
+
+                  <!-- Danger Color Card -->
+                  <div class="card card-danger">
+                    <div class="card-body">
+                      <h4 class="card-title">Card Title</h4>
+                      <div class="card-content">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Danger Color Card -->
+
+                  <!-- Warning Color Card -->
+                  <div class="card card-warning">
+                    <div class="card-body">
+                      <h4 class="card-title">Card Title</h4>
+                      <div class="card-content">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Warning Color Card -->
+
+                  <!-- Indigo Color Code -->
+                  <div class="card card-indigo">
+                    <div class="card-body">
+                      <h4 class="card-title">Card Title</h4>
+                      <div class="card-content">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Indigo Color Code -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Color Card -->
+        </main>
+        <!-- Main End -->
+
+        <!-- Footer Start -->
+        <footer class="h-10 items-center">Copyright 2020</footer>
+      </div>
+      <!-- Page Content Star -->
+    </div>
+  </body>
+</html>
