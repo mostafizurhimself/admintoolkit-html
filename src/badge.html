@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/app.scss" />
+    <script type="module" src="./js/app.js"></script>
+  </head>
+
+  <body>
+    <div class="flex h-screen">
+      <!-- Sidebar Start -->
+      <aside id="sidebar" class="w-64 flex-shrink-0 bg-primary-500">
+        <div id="sidebar-header">
+          <div id="sidebar-header-title">Sidebar</div>
+        </div>
+        <div id="sidebar-content">
+          <div id="sidebar-content-title">Content</div>
+        </div>
+      </aside>
+      <!-- Sidebar End -->
+
+      <!-- Page Content Start -->
+      <div class="flex-grow">
+        <!-- Header Start -->
+        <header class="flex h-16 w-full items-center px-6 shadow">
+          <div>Header</div>
+        </header>
+        <!-- Header End -->
+
+        <!-- Main Start -->
+        <main class="bg-slate-50 p-6">
+          <!-- Badges Colors -->
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title">Badges Colors</div>
+              <div class="card-subtitle">
+                <p class="text-sm text-slate-400">
+                  There are six pre defined colors available for buttons. You can set the
+                  <code>color</code> prop value to <code>primary</code>, <code>secondary</code>, <code>success</code>,
+                  <code>danger</code>, <code>warning</code> &amp; <code>info</code>. Default value is
+                  <code>primary</code>.
+                </p>
+              </div>
+              <div class="code-viewer mt-4">
+                <div class="flex flex-wrap items-center gap-2">
+                  <div
+                    class="inline-flex items-center rounded-primary bg-primary-500 px-2 py-0.5 text-xs text-primary-100"
+                  >
+                    Primary
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary bg-secondary-500 px-2 py-0.5 text-xs text-secondary-100"
+                  >
+                    Secondary
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary bg-success-500 px-2 py-0.5 text-xs text-success-100"
+                  >
+                    Success
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary bg-danger-500 px-2 py-0.5 text-xs text-danger-100"
+                  >
+                    Danger
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary bg-warning-500 px-2 py-0.5 text-xs text-warning-100"
+                  >
+                    Warning
+                  </div>
+                  <div class="inline-flex items-center rounded-primary bg-info-500 px-2 py-0.5 text-xs text-info-100">
+                    Info
+                  </div>
+                  <div class="inline-flex items-center rounded-primary bg-dark-500 px-2 py-0.5 text-xs text-dark-100">
+                    Dark
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Colors -->
+
+          <!-- Outline Badges -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <div class="card-title">Outline Badges</div>
+              <div class="card-subtitle">
+                <p class="text-sm text-slate-400">
+                  There are six pre defined colors available for buttons. You can set the
+                  <code>color</code> prop value to <code>primary</code>, <code>secondary</code>, <code>success</code>,
+                  <code>danger</code>, <code>warning</code> &amp; <code>info</code>. Default value is
+                  <code>primary</code>.
+                </p>
+              </div>
+              <div class="code-viewer mt-4">
+                <div class="flex flex-wrap items-center gap-2">
+                  <div
+                    class="inline-flex items-center rounded-primary border border-primary-500 px-2 py-0.5 text-xs text-primary-500"
+                  >
+                    Primary
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary border border-secondary-500 px-2 py-0.5 text-xs text-secondary-500"
+                  >
+                    Secondary
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary border border-success-500 px-2 py-0.5 text-xs text-success-500"
+                  >
+                    Success
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary border border-danger-500 px-2 py-0.5 text-xs text-danger-500"
+                  >
+                    Danger
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary border border-warning-500 px-2 py-0.5 text-xs text-warning-500"
+                  >
+                    Warning
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary border border-info-500 px-2 py-0.5 text-xs text-info-500"
+                  >
+                    Info
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary border border-dark-500 px-2 py-0.5 text-xs text-dark-500"
+                  >
+                    Dark
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Outline Badges -->
+
+          <!-- Soft Badges -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <div class="card-title">Soft Badges</div>
+              <div class="card-subtitle">
+                <p class="text-sm text-slate-400">
+                  There are six pre defined colors available for buttons. You can set the
+                  <code>color</code> prop value to <code>primary</code>, <code>secondary</code>, <code>success</code>,
+                  <code>danger</code>, <code>warning</code> &amp; <code>info</code>. Default value is
+                  <code>primary</code>.
+                </p>
+              </div>
+              <div class="code-viewer mt-4">
+                <div class="flex flex-wrap items-center gap-2">
+                  <div
+                    class="inline-flex items-center rounded-primary bg-primary-100 px-2 py-0.5 text-xs text-primary-500"
+                  >
+                    Primary
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary bg-secondary-100 px-2 py-0.5 text-xs text-secondary-500"
+                  >
+                    Secondary
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary bg-success-100 px-2 py-0.5 text-xs text-success-500"
+                  >
+                    Success
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary bg-danger-100 px-2 py-0.5 text-xs text-danger-500"
+                  >
+                    Danger
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary bg-warning-100 px-2 py-0.5 text-xs text-warning-500"
+                  >
+                    Warning
+                  </div>
+                  <div class="inline-flex items-center rounded-primary bg-info-100 px-2 py-0.5 text-xs text-info-500">
+                    Info
+                  </div>
+                  <div class="inline-flex items-center rounded-primary bg-dark-200 px-2 py-0.5 text-xs text-dark-500">
+                    Dark
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Soft Badges -->
+
+          <!-- Rounded Badges -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <div class="card-title">Rounded Badges</div>
+              <div class="card-subtitle">
+                <p class="text-sm text-slate-400">
+                  There are six pre defined colors available for buttons. You can set the
+                  <code>color</code> prop value to <code>primary</code>, <code>secondary</code>, <code>success</code>,
+                  <code>danger</code>, <code>warning</code> &amp; <code>info</code>. Default value is
+                  <code>primary</code>.
+                </p>
+              </div>
+              <div class="code-viewer mt-4">
+                <div class="flex flex-wrap items-center gap-2">
+                  <div
+                    class="inline-flex items-center rounded-primary rounded-full bg-primary-500 py-0.5 px-3 text-xs text-primary-100"
+                  >
+                    Primary
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary rounded-full bg-secondary-500 py-0.5 px-3 text-xs text-secondary-100"
+                  >
+                    Secondary
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary rounded-full bg-success-500 py-0.5 px-3 text-xs text-success-100"
+                  >
+                    Success
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary rounded-full bg-danger-500 py-0.5 px-3 text-xs text-danger-100"
+                  >
+                    Danger
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary rounded-full bg-warning-500 py-0.5 px-3 text-xs text-warning-100"
+                  >
+                    Warning
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary rounded-full bg-info-500 py-0.5 px-3 text-xs text-info-100"
+                  >
+                    Info
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-primary rounded-full bg-dark-500 py-0.5 px-3 text-xs text-dark-100"
+                  >
+                    Dark
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Rounded Badges -->
+
+          <!-- Icon Badges -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <div class="card-title">Badge With Icon</div>
+              <div class="card-subtitle">
+                <p class="text-sm text-slate-400">
+                  There are six pre defined colors available for buttons. You can set the
+                  <code>color</code> prop value to <code>primary</code>, <code>secondary</code>, <code>success</code>,
+                  <code>danger</code>, <code>warning</code> &amp; <code>info</code>. Default value is
+                  <code>primary</code>.
+                </p>
+              </div>
+              <div class="code-viewer mt-4">
+                <div class="flex flex-wrap items-center gap-2">
+                  <div
+                    class="inline-flex items-center gap-1 rounded-primary bg-success-100 px-2 py-0.5 text-xs text-success-500"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Completed
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-1 rounded-primary bg-info-100 px-2 py-0.5 text-xs text-info-500"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    2 minutes ago
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-1 rounded-primary bg-danger-100 px-2 py-0.5 text-xs text-danger-500"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="8" x2="12" y2="12"></line>
+                      <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    Failed
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Icon Badges -->
+        </main>
+        <!-- Main End -->
+        <!-- Footer Start -->
+        <footer class="h-10 items-center">Copyright 2020</footer>
+      </div>
+      <!-- Page Content Star -->
+    </div>
+  </body>
+</html>

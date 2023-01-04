@@ -1,0 +1,85 @@
+@layer components {
+  .card {
+    @apply w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800;
+
+    &-fixed {
+      @apply w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800 sm:w-72;
+    }
+
+    &-clickable {
+      @apply w-full cursor-pointer overflow-hidden rounded-primary bg-white shadow transition-all duration-300 hover:shadow-lg dark:bg-slate-800 sm:w-72;
+    }
+
+    &-media {
+      @apply w-full cursor-pointer overflow-hidden rounded-primary bg-white shadow transition-all duration-300 hover:shadow-lg dark:bg-slate-800 sm:w-96;
+    }
+
+    &-header {
+      @apply border-b px-6 py-4 dark:border-slate-700;
+    }
+
+    &-body {
+      @apply p-6;
+    }
+
+    &-title {
+      @apply text-lg font-semibold;
+    }
+
+    &-content {
+      @apply text-sm text-slate-600 dark:text-slate-300;
+    }
+
+    &-footer {
+      @apply flex justify-end gap-2 border-t px-6 py-4 dark:border-slate-700;
+    }
+
+    &.card-primary {
+      @apply bg-primary-500 text-primary-100;
+    }
+
+    &.card-primary &-content {
+      @apply text-primary-100;
+    }
+
+    &.card-secondary {
+      @apply bg-secondary-500 text-primary-100;
+    }
+
+    &.card-secondary &-content {
+      @apply text-primary-100;
+    }
+
+    &.card-success {
+      @apply bg-success-500 text-primary-100;
+    }
+
+    &.card-success &-content {
+      @apply bg-success-500 text-primary-100;
+    }
+
+    &.card-danger {
+      @apply bg-danger-500 text-primary-100;
+    }
+
+    &.card-danger &-content {
+      @apply text-primary-100;
+    }
+
+    &.card-warning {
+      @apply bg-warning-500 text-primary-100;
+    }
+
+    &.card-warning &-content {
+      @apply text-primary-100;
+    }
+
+    &.card-indigo {
+      @apply bg-indigo-500 text-primary-100;
+    }
+
+    &.card-indigo &-content {
+      @apply text-primary-100;
+    }
+  }
+}
