@@ -1,0 +1,67 @@
+@layer components {
+
+     .accordion {
+          $accordion: &;
+     
+          &-btn {
+               @apply w-full flex items-center gap-2 rounded-[.4rem] p-1 text-sm leading-5 hover:bg-primary-50 hover:dark:bg-primary-500 hover:text-primary-500 transition-colors ease-in-out duration-150;
+     
+               &-icon {
+     
+                    &--left {
+                         @apply w-9 h-9 rounded-[.4rem] flex justify-center items-center text-slate-500 dark:text-slate-400;
+                    }
+     
+                    &--right {
+                         @apply ml-auto mr-2 rotate-0 text-slate-600; 
+                    }
+               }
+               
+               &-text {
+                    @apply text-slate-700 dark:text-slate-200;
+               }
+               
+              
+               &:hover &-icon,
+               &:hover &-text {
+                    @apply text-primary-500 dark:text-slate-200;
+               }
+               
+               #{$accordion}.active & {
+                    @apply bg-primary-50 dark:bg-slate-700;
+               }
+     
+               #{$accordion}.active &-icon {
+     
+                    &--left{
+                         @apply bg-primary-500 text-slate-200 dark:text-slate-200;
+                    }
+     
+                    &--right{
+                         @apply  text-primary-500 dark:text-slate-200;
+                    }
+               }
+
+               #{$accordion}.active &-text {
+                    @apply text-primary-500 dark:text-slate-200;
+               }    
+
+               #{$accordion}.open &-icon {
+
+                    &--right{
+                         @apply rotate-90;
+                    }
+               }
+          }
+     
+          &-content {
+               @apply w-full h-0 overflow-hidden transition-height duration-300 ease-in-out;
+     
+               #{$accordion}.open & {
+                    @apply h-auto;
+               }
+          }
+     }
+
+
+}
