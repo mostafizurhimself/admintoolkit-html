@@ -7,7 +7,7 @@
     }
 
     &-content {
-      @apply absolute top-[54px] right-0 hidden w-[150px] overflow-hidden rounded-primary border bg-white  shadow-lg dark:border-slate-800 dark:bg-slate-800;
+      @apply w-[150px] absolute top-full mt-7 right-0 hidden overflow-hidden rounded-primary border bg-white  shadow-lg dark:border-slate-800 dark:bg-slate-800;
     }
 
     &-content.show {

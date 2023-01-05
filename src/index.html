@@ -1,533 +1,401 @@
 <!DOCTYPE html>
 <html class="light" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./scss/app.scss" />
-    <script type="module" src="./js/app.js"></script>
-  </head>
 
-  <body>
-    <div id="app" class="min-h-screen w-full">
-      <!-- sidebar starts -->
-      <aside id="sidebar" class="sidebar">
-        <!-- sidebar header -->
-        <div class="sidebar-header">
-          <div class="flex w-full items-center space-x-4 px-4">
-            <svg
-              class="inline-block fill-current text-primary-500"
-              width="45"
-              height="45"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 48 48"
-            >
-              <path
-                d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z"
-              ></path>
-              <path
-                d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z"
-              ></path>
-            </svg>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./scss/app.scss" />
+  <script type="module" src="./js/app.js"></script>
+</head>
 
-            <div class="flex flex-col">
-              <h1 class="flex text-xl">
-                <span class="font-bold text-slate-800 dark:text-slate-200">Admin</span>
-                <span class="font-semibold text-primary-500">Toolkit</span>
-              </h1>
+<body>
+  <div id="app" class="min-h-screen w-full">
+    <!-- sidebar starts -->
+    <aside id="sidebar" class="sidebar">
+      <!-- sidebar header -->
+      <div class="sidebar-header">
+        <div class="flex w-full items-center space-x-4 px-4">
+          <svg class="inline-block fill-current text-primary-500" width="45" height="45"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+            <path
+              d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z">
+            </path>
+            <path
+              d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z">
+            </path>
+          </svg>
 
-              <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
-            </div>
+          <div class="flex flex-col">
+            <h1 class="flex text-xl">
+              <span class="font-bold text-slate-800 dark:text-slate-200">Admin</span>
+              <span class="font-semibold text-primary-500">Toolkit</span>
+            </h1>
+
+            <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
           </div>
         </div>
+      </div>
 
-        <!-- sidebar container starts -->
-        <div class="sidebar-container">
-          <ul class="space-y-0.5">
-            <li class="px-[18px]">
-              <div class="accordion active open">
-                <div class="accordion-item">
-                  <div class="accordion-header">
-                    <button class="accordion-btn" type="button">
-                      <span class="accordion-btn-icon accordion-btn-icon--left">
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          viewBox="0 0 1024 1024"
-                          height="22"
-                          width="22"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"
-                          ></path>
-                        </svg>
-                      </span>
-
-                      <span class="accordion-btn-text">Dashboard</span>
-
-                      <svg
-                        class="accordion-btn-icon accordion-btn-icon--right"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline points="9 18 15 12 9 6"></polyline>
+      <!-- sidebar container starts -->
+      <div class="sidebar-container">
+        <ul class="space-y-0.5">
+          <li class="px-[18px]">
+            <div class="accordion active open">
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button class="accordion-btn" type="button">
+                    <span class="accordion-btn-icon accordion-btn-icon--left">
+                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+                        height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
+                        </path>
                       </svg>
-                    </button>
-                  </div>
+                    </span>
 
-                  <div class="accordion-content">
-                    <ul class="mt-0.5 w-full">
-                      <li>
-                        <!-- active link -->
-                        <a
-                          class="block w-full rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 text-primary-500 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200"
-                          href="#"
-                        >
-                          Ecommerce
-                        </a>
-                      </li>
+                    <span class="accordion-btn-text">Dashboard</span>
 
-                      <li>
-                        <!-- Inactive link -->
-                        <a
-                          class="block w-full rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 dark:text-slate-200 dark:hover:bg-primary-500"
-                          href="#"
-                        >
-                          Analytics
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="pt-4 pb-2 text-xs uppercase tracking-widest text-slate-400 ps-7">Applications</li>
-
-            <li class="px-[18px]">
-              <div class="accordion">
-                <div class="accordion-item">
-                  <div class="accordion-header">
-                    <a href="#" class="accordion-btn" role="button">
-                      <span class="accordion-btn-icon accordion-btn-icon--left">
-                        <svg
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          height="22"
-                          width="22"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span class="accordion-btn-text">Email</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="px-[18px]">
-              <div class="accordion">
-                <div class="accordion-item">
-                  <div class="accordion-header">
-                    <button class="accordion-btn" type="button">
-                      <span class="accordion-btn-icon accordion-btn-icon--left">
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          viewBox="0 0 1024 1024"
-                          height="22"
-                          width="22"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"
-                          ></path>
-                        </svg>
-                      </span>
-
-                      <span class="accordion-btn-text">Common</span>
-
-                      <svg
-                        class="accordion-btn-icon accordion-btn-icon--right"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="accordion-content">
-                    <ul class="mt-0.5 w-full">
-                      <li>
-                        <!-- active link -->
-                        <a
-                          class="block w-full rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 text-primary-500 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200"
-                          href="#"
-                        >
-                          Ecommerce
-                        </a>
-                      </li>
-
-                      <li>
-                        <!-- Inactive link -->
-                        <a
-                          class="block w-full rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 dark:text-slate-200 dark:hover:bg-primary-500"
-                          href="#"
-                        >
-                          Analytics
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </aside>
-      <!-- sidebar ends -->
-
-      <!-- main content starts -->
-      <div class="flex flex-1 flex-col transition-margin duration-300 ease-in-out lg:ml-72">
-        <!-- header starts -->
-        <header
-          id="header"
-          class="header header--primary sticky top-0 flex h-16 w-full items-center bg-white drop-shadow-sm dark:bg-slate-800"
-        >
-          <div class="header-container container-fluid flex items-center justify-between">
-            <!-- Sidebar Toggle & Search -->
-            <div class="flex items-center space-x-6">
-              <div class="header-block-inner flex">
-                <button class="header-btn header-btn--toggle text-slate-600 dark:text-slate-400">
-                  <svg
-                    stroke="currentColor"
-                    fill="none"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    height="22"
-                    width="22"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-
-              <div class="header-block-inner hidden w-72 sm:block">
-                <form
-                  class="header-form header-form--search inline-flex h-10 w-full items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500"
-                  action=""
-                >
-                  <div class="flex h-full items-center px-3">
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="text-slate-400 group-focus-within:text-primary-500"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <svg class="accordion-btn-icon accordion-btn-icon--right" stroke="currentColor" fill="none"
+                      stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em"
+                      width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
-                  </div>
-
-                  <input
-                    class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                    placeholder="Search"
-                    type="text"
-                  />
-                </form>
-              </div>
-            </div>
-
-            <div class="flex items-center space-x-6">
-              <!-- Language Dropdown Start -->
-              <div class="dropdown">
-                <div class="dropdown-toggle">
-                  <button type="button" class="flex items-center space-x-2 text-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
-                      <path fill="#FFF" d="M0 0h513v342H0z"></path>
-                      <path
-                        d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z"
-                        fill="#D80027"
-                      ></path>
-                      <path fill="#2E52B2" d="M0 0h256.5v184.1H0z"></path>
-                      <path
-                        d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z"
-                        fill="#FFF"
-                      ></path>
-                    </svg>
-                    <span class="hidden md:inline-block">English</span>
-                    <span class="inline-block md:hidden">EN</span>
                   </button>
                 </div>
 
-                <div class="dropdown-content">
-                  <ul>
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
-                          <path fill="#FFF" d="M0 0h513v342H0z"></path>
-                          <path
-                            d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z"
-                            fill="#D80027"
-                          ></path>
-                          <path fill="#2E52B2" d="M0 0h256.5v184.1H0z"></path>
-                          <path
-                            d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z"
-                            fill="#FFF"
-                          ></path>
-                        </svg>
-
-                        <span>English</span>
-                      </button>
+                <div class="accordion-content">
+                  <ul class="mt-0.5 w-full">
+                    <li>
+                      <!-- active link -->
+                      <a class="block w-full rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 text-primary-500 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200"
+                        href="#">
+                        Ecommerce
+                      </a>
                     </li>
 
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
-                          <path fill="#D80027" d="M0 85.331h512v341.337H0z"></path>
-                          <path d="M0 85.331h512v113.775H0z"></path>
-                          <path fill="#FFDA44" d="M0 312.882h512v113.775H0z"></path>
-                        </svg>
-
-                        <span>German</span>
-                      </button>
-                    </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
-                          <path fill="#FFF" d="M0 85.331h512v341.337H0z"></path>
-                          <path fill="#0052B4" d="M0 85.331h170.663v341.337H0z"></path>
-                          <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z"></path>
-                        </svg>
-
-                        <span>French</span>
-                      </button>
-                    </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
-                          <path fill="#055e1c" d="M0 85.333h512v341.333H0z"></path>
-                          <g fill="#FFF">
-                            <path
-                              d="M183.548 289.386c0 12.295 9.731 22.261 21.736 22.261h65.208c0 10.244 8.11 18.551 18.114 18.551h21.736c10.004 0 18.114-8.306 18.114-18.551v-22.261H183.548zm146.716-107.595v51.942c0 8.183-6.5 14.84-14.491 14.84v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.942h-21.735zm-155.773 51.943c0 8.183-6.5 14.84-14.491 14.84v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.942H174.49v51.942z"
-                            ></path>
-                            <path
-                              d="M297.661 181.788h21.736v51.942h-21.736zm-32.604 29.685c0 2.046-1.625 3.71-3.623 3.71-1.998 0-3.623-1.664-3.623-3.71v-29.682h-21.736v29.682c0 2.046-1.625 3.71-3.623 3.71s-3.623-1.664-3.623-3.71v-29.682h-21.736v29.682c0 14.32 11.376 25.971 25.358 25.971 5.385 0 10.38-1.733 14.491-4.677 4.11 2.944 9.106 4.677 14.491 4.677 1.084 0 2.15-.078 3.2-.215-1.54 6.499-7.255 11.345-14.068 11.345v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.943h-21.736l.002 29.682z"
-                            ></path>
-                            <path d="M207.093 248.57h32.601v22.261h-32.601z"></path>
-                          </g>
-                        </svg>
-
-                        <span>Arabic</span>
-                      </button>
-                    </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
-                          <path fill="#D80027" d="M0 0h513v342H0z"></path>
-                          <path
-                            d="m226.8 239.2-9.7-15.6-17.9 4.4 11.9-14.1-9.7-15.6 17.1 6.9 11.8-14.1-1.3 18.4 17.1 6.9-17.9 4.4zM290.6 82l-10.1 15.4 11.6 14.3-17.7-4.8-10.1 15.5-1-18.4-17.7-4.8 17.2-6.6-1-18.4 11.6 14.3zm-54.4-56.6-2 18.3 16.8 7.6-18 3.8-2 18.3-9.2-16-17.9 3.8 12.3-13.7-9.2-15.9 16.8 7.5zm56.6 136.4-14.9 10.9 5.8 17.5-14.9-10.8-14.9 11 5.6-17.6-14.9-10.7 18.4-.1 5.6-17.6 5.8 17.5zM115 46.3l17.3 53.5h56.2l-45.4 32.9 17.3 53.5-45.4-33-45.5 33 17.4-53.5-45.5-32.9h56.3z"
-                            fill="#FFDA44"
-                          ></path>
-                        </svg>
-
-                        <span>Chinese</span>
-                      </button>
-                    </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 513 342" height="15">
-                          <path fill="#2d6e41" d="M0 85.331h513v342H0z"></path>
-                          <circle fill="#F40B32" cx="218.902" cy="256.5" r="115"></circle>
-                        </svg>
-
-                        <span>Bangla</span>
-                      </button>
+                    <li>
+                      <!-- Inactive link -->
+                      <a class="block w-full rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 dark:text-slate-200 dark:hover:bg-primary-500"
+                        href="#">
+                        Analytics
+                      </a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- Language Dropdown End -->
+            </div>
+          </li>
 
-              <!-- Mobile Search Start -->
-              <div class="sm:hidden">
-                <button
-                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
-                  type="button"
-                >
-                  <svg
-                    stroke="currentColor"
-                    fill="none"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    height="22"
-                    width="22"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  </svg>
-                </button>
-              </div>
-              <!-- Mobile Search End -->
+          <li class="pt-4 pb-2 text-xs uppercase tracking-widest text-slate-400 ps-7">Applications</li>
 
-              <!-- Dark Mood Toggle Start -->
-              <div class="">
-                <button
-                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
-                  type="button"
-                >
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 16 16"
-                    height="20"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
-                    ></path>
-                    <path
-                      d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-              <!-- Dark Mood Toggle End -->
-
-              <!-- Notification Dropdown Start -->
-              <div class="dropdown -mt-0.5">
-                <div class="dropdown-toggle">
-                  <button
-                    class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
-                  >
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      height="24"
-                      width="24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                      <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-                    </svg>
-
-                    <span
-                      class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200"
-                    >
-                      5
+          <li class="px-[18px]">
+            <div class="accordion">
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <a href="#" class="accordion-btn" role="button">
+                    <span class="accordion-btn-icon accordion-btn-icon--left">
+                      <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                      </svg>
                     </span>
+                    <span class="accordion-btn-text">Email</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="px-[18px]">
+            <div class="accordion">
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button class="accordion-btn" type="button">
+                    <span class="accordion-btn-icon accordion-btn-icon--left">
+                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+                        height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
+                        </path>
+                      </svg>
+                    </span>
+
+                    <span class="accordion-btn-text">Common</span>
+
+                    <svg class="accordion-btn-icon accordion-btn-icon--right" stroke="currentColor" fill="none"
+                      stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em"
+                      width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
                   </button>
                 </div>
 
-                <div class="dropdown-content right-0 w-64">
-                  <p class="px-4 py-2 text-sm text-slate-400">No Notification found</p>
+                <div class="accordion-content">
+                  <ul class="mt-0.5 w-full">
+                    <li>
+                      <!-- active link -->
+                      <a class="block w-full rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 text-primary-500 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200"
+                        href="#">
+                        Ecommerce
+                      </a>
+                    </li>
+
+                    <li>
+                      <!-- Inactive link -->
+                      <a class="block w-full rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 dark:text-slate-200 dark:hover:bg-primary-500"
+                        href="#">
+                        Analytics
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <!-- Notification Dropdown End -->
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- sidebar ends -->
 
-              <div class="relative">
-                <button class="relative flex items-center space-x-1.5">
-                  <img
-                    class="block h-9 w-9 rounded-full group-focus:ring group-focus:ring-primary-500"
-                    src="https://avatars.githubusercontent.com/u/1164541?v=4"
-                    alt="avatar"
-                  />
+    <!-- main content starts -->
+    <div class="flex flex-1 flex-col transition-margin duration-300 ease-in-out lg:ml-72">
+      <!-- header starts -->
+      <header id="header" class="header header--primary sticky top-0 flex h-16 w-full items-center bg-white drop-shadow-sm dark:bg-slate-800">
+        <div class="header-container container-fluid flex items-center justify-between">
+          <!-- Sidebar Toggle & Search -->
+          <div class="flex items-center space-x-6">
+            <div class="header-block-inner flex">
+              <button class="header-btn header-btn--toggle text-slate-600 dark:text-slate-400">
+                <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
+                  </path>
+                </svg>
+              </button>
+            </div>
 
-                  <div class="hidden md:flex md:flex-col">
-                    <span
-                      class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300"
-                    >
-                      John Doe
-                    </span>
+            <div class="header-block-inner hidden w-72 sm:block">
+              <form
+                class="header-form header-form--search inline-flex h-10 w-full items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500"
+                action="">
+                <div class="flex h-full items-center px-3">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" class="text-slate-400 group-focus-within:text-primary-500" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </div>
 
-                    <span class="inline-block text-left text-xs text-slate-400"> Admin </span>
-                  </div>
-                </button>
-              </div>
+                <input
+                  class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                  placeholder="Search" type="text" />
+              </form>
             </div>
           </div>
-        </header>
-        <!-- header ends -->
 
-        <main>
-          <section>
-            <div class="container-fluid py-6"></div>
-          </section>
-        </main>
+          <div class="flex items-center space-x-6">
+            <!-- Language Dropdown Start -->
+            <div class="dropdown">
+              <div class="dropdown-toggle">
+                  <button type="button" class="flex items-center space-x-2 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
+                      <path fill="#FFF" d="M0 0h513v342H0z"></path>
+                      <path d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z" fill="#D80027"></path>
+                      <path fill="#2E52B2" d="M0 0h256.5v184.1H0z"></path>
+                      <path d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z" fill="#FFF"></path>
+                    </svg>
+                    <span class="hidden md:inline-block">English</span>
+                    <span class="inline-block md:hidden">EN</span>
+                  </button>
+              </div>
 
-        <!-- footer starts -->
-        <footer class="mt-auto">
-          <div class="container-fluid">
-            <h1>Footer</h1>
+              <div class="dropdown-content">
+                <ul>
+                  <li class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                    <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
+                        <path fill="#FFF" d="M0 0h513v342H0z"></path>
+                        <path d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z" fill="#D80027"></path>
+                        <path fill="#2E52B2" d="M0 0h256.5v184.1H0z"></path>
+                        <path d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z" fill="#FFF"></path>
+                      </svg>
+                      
+                      <span>English</span>
+                    </button>
+                  </li>
+
+                  <li
+                    class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                    <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
+                        <path fill="#D80027" d="M0 85.331h512v341.337H0z"></path>
+                        <path d="M0 85.331h512v113.775H0z"></path>
+                        <path fill="#FFDA44" d="M0 312.882h512v113.775H0z"></path>
+                      </svg>
+
+                      <span>German</span>
+                    </button>
+                  </li>
+
+                  <li
+                    class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                    <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
+                        <path fill="#FFF" d="M0 85.331h512v341.337H0z"></path>
+                        <path fill="#0052B4" d="M0 85.331h170.663v341.337H0z"></path>
+                        <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z"></path>
+                      </svg>
+
+                      <span>French</span>
+                    </button>
+                  </li>
+
+                  <li
+                    class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                    <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
+                        <path fill="#055e1c" d="M0 85.333h512v341.333H0z"></path>
+                        <g fill="#FFF">
+                          <path
+                            d="M183.548 289.386c0 12.295 9.731 22.261 21.736 22.261h65.208c0 10.244 8.11 18.551 18.114 18.551h21.736c10.004 0 18.114-8.306 18.114-18.551v-22.261H183.548zm146.716-107.595v51.942c0 8.183-6.5 14.84-14.491 14.84v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.942h-21.735zm-155.773 51.943c0 8.183-6.5 14.84-14.491 14.84v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.942H174.49v51.942z">
+                          </path>
+                          <path
+                            d="M297.661 181.788h21.736v51.942h-21.736zm-32.604 29.685c0 2.046-1.625 3.71-3.623 3.71-1.998 0-3.623-1.664-3.623-3.71v-29.682h-21.736v29.682c0 2.046-1.625 3.71-3.623 3.71s-3.623-1.664-3.623-3.71v-29.682h-21.736v29.682c0 14.32 11.376 25.971 25.358 25.971 5.385 0 10.38-1.733 14.491-4.677 4.11 2.944 9.106 4.677 14.491 4.677 1.084 0 2.15-.078 3.2-.215-1.54 6.499-7.255 11.345-14.068 11.345v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.943h-21.736l.002 29.682z">
+                          </path>
+                          <path d="M207.093 248.57h32.601v22.261h-32.601z"></path>
+                        </g>
+                      </svg>
+
+                      <span>Arabic</span>
+                    </button>
+                  </li>
+
+                  <li
+                    class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                    <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
+                        <path fill="#D80027" d="M0 0h513v342H0z"></path>
+                        <path
+                          d="m226.8 239.2-9.7-15.6-17.9 4.4 11.9-14.1-9.7-15.6 17.1 6.9 11.8-14.1-1.3 18.4 17.1 6.9-17.9 4.4zM290.6 82l-10.1 15.4 11.6 14.3-17.7-4.8-10.1 15.5-1-18.4-17.7-4.8 17.2-6.6-1-18.4 11.6 14.3zm-54.4-56.6-2 18.3 16.8 7.6-18 3.8-2 18.3-9.2-16-17.9 3.8 12.3-13.7-9.2-15.9 16.8 7.5zm56.6 136.4-14.9 10.9 5.8 17.5-14.9-10.8-14.9 11 5.6-17.6-14.9-10.7 18.4-.1 5.6-17.6 5.8 17.5zM115 46.3l17.3 53.5h56.2l-45.4 32.9 17.3 53.5-45.4-33-45.5 33 17.4-53.5-45.5-32.9h56.3z"
+                          fill="#FFDA44"></path>
+                      </svg>
+
+                      <span>Chinese</span>
+                    </button>
+                  </li>
+
+                  <li
+                    class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                    <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 513 342" height="15">
+                        <path fill="#2d6e41" d="M0 85.331h513v342H0z"></path>
+                        <circle fill="#F40B32" cx="218.902" cy="256.5" r="115"></circle>
+                      </svg>
+
+                      <span>Bangla</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Language Dropdown End -->
+
+            <!-- Mobile Search Start -->
+            <div class="sm:hidden">
+              <button
+                class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
+                type="button">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                  stroke-linejoin="round" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+            </div>
+            <!-- Mobile Search End -->
+
+            <!-- Dark Mood Toggle Start -->
+            <div class="">
+              <button
+                class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
+                type="button">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20"
+                  width="20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z">
+                  </path>
+                  <path
+                    d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+            <!-- Dark Mood Toggle End -->
+
+            <!-- Notification Dropdown Start -->
+            <div class="dropdown -mt-0.5">
+              <div class="dropdown-toggle">
+                <button
+                  class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                  </svg>
+
+                  <span
+                    class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
+                    5
+                  </span>
+                </button>
+              </div>
+
+              <div class="dropdown-content right-0 w-64">
+                <p class="px-4 py-2 text-sm text-slate-400">No Notification found</p>
+              </div>
+            </div>
+            <!-- Notification Dropdown End -->
+
+            <div class="relative">
+              <button class="relative flex items-center space-x-1.5">
+                <img class="block h-9 w-9 rounded-full group-focus:ring group-focus:ring-primary-500"
+                  src="https://avatars.githubusercontent.com/u/1164541?v=4" alt="avatar" />
+
+                <div class="hidden md:flex md:flex-col">
+                  <span
+                    class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
+                    John Doe
+                  </span>
+
+                  <span class="inline-block text-left text-xs text-slate-400"> Admin </span>
+                </div>
+              </button>
+            </div>
           </div>
-        </footer>
-        <!-- footer ends -->
-      </div>
+        </div>
+      </header>
+      <!-- header ends -->
+
+      <main>
+        <section>
+          <div class="container-fluid py-6"></div>
+        </section>
+      </main>
+
+      <!-- footer starts -->
+      <footer class="mt-auto">
+        <div class="container-fluid">
+          <h1>Footer</h1>
+        </div>
+      </footer>
+      <!-- footer ends -->
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

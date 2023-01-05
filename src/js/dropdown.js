@@ -13,6 +13,7 @@ const dropdown = {
       document.addEventListener('click', (e) => {
         if (!dropdown.contains(e.target)) {
           content.classList.remove('show');
+          content.classList.remove('animate-fade-in-up');
         }
       });
     });
