@@ -5,11 +5,11 @@
     &-toggle {
       @apply inline-block cursor-pointer;
     }
-
+    
     &-content {
-      @apply w-[150px] absolute top-full mt-7 right-0 hidden overflow-hidden rounded-primary border bg-white  shadow-lg dark:border-slate-800 dark:bg-slate-800;
+      @apply absolute top-full hidden rounded-primary border dark:border-slate-800 bg-white dark:bg-slate-800 mt-7 shadow-lg;
     }
-
+    
     &-content.show {
       @apply block;
     }
