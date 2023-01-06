@@ -13,7 +13,7 @@
 <body>
   
   <div id="app" class="min-h-screen w-full">
-    <!-- sidebar starts -->
+    <!-- Sidebar Starts -->
     <aside id="sidebar" class="sidebar">
       <!-- sidebar header -->
       <div class="sidebar-header">
@@ -160,47 +160,43 @@
         </ul>
       </div>
     </aside>
-    <!-- sidebar ends -->
+    <!-- Sidebar Ends -->
 
     <!-- main content starts -->
     <div class="flex flex-1 flex-col transition-margin duration-300 ease-in-out lg:ml-72">
-      <!-- header starts -->
-      <header id="header" class="header header--primary sticky top-0 flex h-16 w-full items-center bg-white drop-shadow-sm dark:bg-slate-800">
-        <div class="header-container container-fluid flex items-center justify-between">
-          <!-- Sidebar Toggle & Search -->
+      <!-- Header Starts -->
+      <header id="header" class="w-full h-16 flex items-center bg-white drop-shadow-sm dark:bg-slate-800">
+        <div class="container-fluid flex items-center justify-between">
+          <!-- Sidebar Toggle & Search Starts -->
           <div class="flex items-center space-x-6">
-            <div class="header-block-inner flex">
-              <button class="header-btn header-btn--toggle text-slate-600 dark:text-slate-400">
-                <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
-                  </path>
+            <button class="text-slate-600 dark:text-slate-400">
+              <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
+                </path>
+              </svg>
+            </button>
+
+            <form class="w-72 h-10 hidden sm:flex items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500" action="">
+              <div class="h-full flex items-center px-3">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 group-focus-within:text-primary-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-              </button>
-            </div>
+              </div>
 
-            <div class="header-block-inner hidden w-72 sm:block">
-              <form
-                class="header-form header-form--search inline-flex h-10 w-full items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500"
-                action="">
-                <div class="flex h-full items-center px-3">
-                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
-                    stroke-linejoin="round" class="text-slate-400 group-focus-within:text-primary-500" height="1em"
-                    width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  </svg>
-                </div>
-
-                <input
-                  class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                  placeholder="Search" type="text" />
-              </form>
-            </div>
+              <input
+                class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                placeholder="Search" 
+                type="text" 
+              />
+            </form>
           </div>
-
+          <!-- Sidebar Toggle & Search Ends -->
+          
+          <!-- Header Options Starts -->
           <div class="flex items-center space-x-6">
-            <!-- Language Dropdown Start -->
+            <!-- Language Dropdown Starts -->
             <div class="dropdown">
               <div class="dropdown-toggle">
                   <button type="button" class="flex items-center space-x-2 text-sm">
@@ -304,9 +300,9 @@
                 </ul>
               </div>
             </div>
-            <!-- Language Dropdown End -->
+            <!-- Language Dropdown Ends -->
 
-            <!-- Mobile Search Start -->
+            <!-- Mobile Search Starts -->
             <div class="sm:hidden">
               <button
                 class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
@@ -318,9 +314,9 @@
                 </svg>
               </button>
             </div>
-            <!-- Mobile Search End -->
+            <!-- Mobile Search Ends -->
 
-            <!-- Dark Mood Toggle Start -->
+            <!-- Dark Mood Toggle Starts -->
             <div class="flex">
               <button class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300" type="button">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
@@ -329,9 +325,9 @@
                 </svg>
               </button>
             </div>
-            <!-- Dark Mood Toggle End -->
+            <!-- Dark Mood Toggle Ends -->
 
-            <!-- Notification Dropdown Start -->
+            <!-- Notification Dropdown Starts -->
             <div class="dropdown -mt-0.5">
               <div class="dropdown-toggle">
                 <button class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
@@ -454,9 +450,9 @@
                   </div>  
               </div>
             </div>
-            <!-- Notification Dropdown End -->
+            <!-- Notification Dropdown Ends -->
             
-            <!-- Profile Dropdown Start -->
+            <!-- Profile Dropdown Starts -->
             <div class="dropdown">
               <div class="dropdown-toggle">
                 <button class="group relative flex items-center space-x-1.5" type="button">
@@ -508,25 +504,26 @@
                 </a>
               </div>
             </div>
-            <!-- Profile Dropdown End -->
+            <!-- Profile Dropdown Ends -->
           </div>
+          <!-- Header Options Ends -->
         </div>
       </header>
-      <!-- header ends -->
+      <!-- Header Ends -->
 
-      <main>
-        <section>
-          <div class="container-fluid py-6"></div>
-        </section>
-      </main>
+      <div class="w-full flex flex-col overflow-y-auto" style="height: calc(100vh - 4rem);">
+        <!-- Main Content Starts -->
+        <main class="p-6">
+          <h1>Content</h1>
+        </main>
+        <!-- Main Content Ends -->
 
-      <!-- footer starts -->
-      <footer class="mt-auto">
-        <div class="container-fluid">
+        <!-- Footer Starts -->
+        <footer class="my-5 mt-auto flex flex-wrap items-center justify-between px-6 text-slate-500">
           <h1>Footer</h1>
-        </div>
-      </footer>
-      <!-- footer ends -->
+        </footer>
+        <!-- Footer Ends -->
+      </div> 
     </div>
   </div>
 </body>
