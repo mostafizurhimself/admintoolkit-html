@@ -455,22 +455,60 @@
               </div>
             </div>
             <!-- Notification Dropdown End -->
+            
+            <!-- Profile Dropdown Start -->
+            <div class="dropdown">
+              <div class="dropdown-toggle">
+                <button class="group relative flex items-center space-x-1.5" type="button">
+                  <img 
+                    class="block h-9 w-9 rounded-full group-focus:ring group-focus:ring-primary-500"
+                    src="https://avatars.githubusercontent.com/u/1164541?v=4" 
+                    alt="avatar" 
+                  />
+  
+                  <div class="hidden md:flex md:flex-col">
+                    <span class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
+                      John Doe
+                    </span>
 
-            <div class="relative">
-              <button class="relative flex items-center space-x-1.5">
-                <img class="block h-9 w-9 rounded-full group-focus:ring group-focus:ring-primary-500"
-                  src="https://avatars.githubusercontent.com/u/1164541?v=4" alt="avatar" />
+                    <span class="inline-block text-left text-xs text-slate-400">
+                      Admin
+                    </span>
+                  </div>
+                </button>
+              </div>
 
-                <div class="hidden md:flex md:flex-col">
-                  <span
-                    class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
-                    John Doe
-                  </span>
+              <div class="dropdown-content w-[180px] right-0 mt-5">
+                <a class="w-full px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700 flex items-center gap-3" href="/dashboard/ecommerce">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 dark:text-slate-400" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
 
-                  <span class="inline-block text-left text-xs text-slate-400"> Admin </span>
-                </div>
-              </button>
+                  <span>Profile</span>
+                </a>
+
+                <a class="w-full px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700 flex items-center gap-3" href="/dashboard/ecommerce">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 dark:text-slate-400" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  </svg>
+
+                  <span>Settings</span>
+                </a>
+
+                <a class="w-full px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700 flex items-center gap-3" href="/dashboard/ecommerce">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 dark:text-slate-400" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+
+                  <span>Sign out</span>
+                </a>
+              </div>
             </div>
+            <!-- Profile Dropdown End -->
           </div>
         </div>
       </header>
