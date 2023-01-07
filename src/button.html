@@ -22,180 +22,180 @@
       <!-- Page Content Start -->
       <div class="flex-grow">
         <!-- Header Start -->
-        <header class="flex h-16 w-full items-center px-6 shadow">
+        <header class="flex h-16 w-full items-center bg-white px-6 shadow">
           <div>Header</div>
         </header>
         <!-- Header End -->
 
         <!-- Main Start -->
         <main class="bg-slate-50 p-6">
-          <!-- Button Colors -->
-          <div class="card">
+          <!-- Page Title Start -->
+          <div class="flex">
+            <h1 class="text-xl font-semibold dark:text-slate-300">Card</h1>
+            <ol class="breadcrumb ml-auto">
+              <li class="breadcrumb-item"><a href="">Home</a></li>
+              <li class="breadcrumb-item"><a href="">Components</a></li>
+              <li class="breadcrumb-item"><a href="">Card</a></li>
+            </ol>
+          </div>
+          <!-- Page Title End -->
+
+          <!-- Button Colors Start -->
+          <div class="card mt-6">
             <div class="card-body">
               <div class="card-title">Button Colors</div>
               <div class="card-subtitle">
                 <p class="text-sm text-slate-400">
-                  There are six pre defined colors available for buttons. You can set the <code>color</code> tailwind to
-                  <code>primary</code>, <code>secondary</code>, <code>success</code>, <code>danger</code>,
-                  <code>warning</code> &amp; <code>info</code>. Default value is <code>primary</code>.
+                  Use <code>color</code> class to <code>btn-primary-solid</code>, <code>btn-secondary-solid</code>, <code>btn-success-solid</code>, <code>btn-danger-solid</code>,
+                  <code>btn-warning-solid</code> <code>btn-info-solid</code> &amp; <code>btn-dark-solid</code>.
                 </p>
               </div>
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary-solid btn-md">Primary</button
-                  ><button class="btn btn-secondary-solid btn-md">Secondary</button
-                  ><button class="btn btn-success-solid btn-md">Success</button
-                  ><button class="btn btn-danger-solid btn-md">Danger</button
-                  ><button class="btn btn-warning-solid btn-md">Warning</button
-                  ><button class="btn btn-info-solid btn-md">Info</button
-                  ><button class="btn btn-dark-solid btn-md">Dark</button>
+                  <button class="btn btn-primary--solid btn-md">Primary</button>
+                  <button class="btn btn-secondary--solid btn-md">Secondary</button>
+                  <button class="btn btn-success--solid btn-md">Success</button>
+                  <button class="btn btn-danger--solid btn-md">Danger</button>
+                  <button class="btn btn-warning--solid btn-md">Warning</button>
+                  <button class="btn btn-info--solid btn-md">Info</button>
+                  <button class="btn btn-dark--solid btn-md">Dark</button>
                 </div>
               </div>
             </div>
           </div>
-          <!-- End button colors -->
+          <!-- button Colors End -->
 
-          <!-- Button Size -->
+          <!-- Button Size Start -->
           <div class="card mt-4">
             <div class="card-body">
               <div class="card-title">Button Sizes</div>
               <div class="card-subtitle">
                 <p class="text-sm text-slate-400">
-                  You can set the <code>size</code> tailwind to <code>xs</code>, <code>sm</code>, <code>md</code>,
-                  <code>lg</code> &amp; <code>xl</code> Default Value is <code>md</code>.
+                  Use <code>size</code> class to <code>btn-xs</code>, <code>btn-sm</code>, <code>btn-md</code>,
+                  <code>btn-lg</code> &amp; <code>btn-xl</code> Default Value is <code>btn-md</code>.
                 </p>
               </div>
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary-solid btn-xs">Extra Small</button>
-                  <button class="btn btn-primary-solid btn-sm">Small</button>
-                  <button class="btn btn-primary-solid btn-md">Medium</button>
-                  <button class="btn btn-primary-solid btn-lg">Large</button>
-                  <button class="btn btn-primary-solid btn-xl">Extra Large</button>
+                  <button class="btn btn-primary--solid btn-xs">Extra Small</button>
+                  <button class="btn btn-primary--solid btn-sm">Small</button>
+                  <button class="btn btn-primary--solid btn-md">Medium</button>
+                  <button class="btn btn-primary--solid btn-lg">Large</button>
+                  <button class="btn btn-primary--solid btn-xl">Extra Large</button>
                 </div>
               </div>
             </div>
           </div>
-          <!-- End button size -->
+          <!-- button Size End -->
 
-          <!-- Outline buttons  -->
+          <!-- Outline Buttons  -->
           <div class="card mt-4">
             <div class="card-body">
-              <div class="card-title">Button Colors</div>
+              <div class="card-title">Outline Buttons</div>
               <div class="card-subtitle">
-                <p class="text-sm text-slate-400">
-                  Use <code>variant</code>, tailwind <code>outline</code> to create outline button.
-                </p>
+                <p class="text-sm text-slate-400">Use <code>outline</code> class to <code>btn-primary-outline</code>, 
+                  <code>btn-secondary-outline</code>, <code>btn-success-outline</code>, <code>btn-danger-outline</code>, 
+                  <code>btn-warning-outline</code>, <code>btn-info-outline</code> &amp; <code>btn-dark-outline</code> create a outlined button.</p>
               </div>
-
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary-outline btn-md">Primary</button
-                  ><button class="btn btn-secondary-outline btn-md">Secondary</button
-                  ><button class="btn btn-success-outline btn-md">Success</button
-                  ><button class="btn btn-danger-outline btn-md">Danger</button
-                  ><button class="btn btn-warning-outline btn-md">Warning</button
-                  ><button class="btn btn-info-outline btn-md">Info</button
-                  ><button class="btn btn-dark-outline btn-md">Dark</button>
+                  <button class="btn btn-primary--outline btn-md">Primary</button>
+                  <button class="btn btn-secondary--outline btn-md">Secondary</button>
+                  <button class="btn btn-success--outline btn-md">Success</button>
+                  <button class="btn btn-danger--outline btn-md">Danger</button>
+                  <button class="btn btn-warning--outline btn-md">Warning</button>
+                  <button class="btn btn-info--outline btn-md">Info</button>
+                  <button class="btn btn-dark--outline btn-md">Dark</button>
                 </div>
               </div>
             </div>
           </div>
-          <!-- End outline buttons -->
+          <!-- Outline Buttons End -->
 
-          <!-- Soft buttons -->
+          <!-- Soft buttons Start -->
           <div class="card mt-4">
             <div class="card-body">
               <div class="card-title">Soft Buttons</div>
               <div class="card-subtitle">
-                <p class="text-sm text-slate-400">
-                  Use <code>variant</code>, tailwind <code>soft</code>to create soft button.
-                </p>
+                <p class="text-sm text-slate-400">use <soft> <code>soft</code> class to <code>btn-primary-soft</code>, 
+                  <code>btn-secondary-soft</code>, <code>btn-success-soft</code>, <code>btn-danger-soft</code>, 
+                  <code>btn-warning-soft</code>, <code>btn-info-soft</code> &amp; <code>btn-info-soft</code> create a soft button.</p>
               </div>
-
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary-soft btn-md">Primary</button
-                  ><button class="btn btn-secondary-soft btn-md">Secondary</button
-                  ><button class="btn btn-success-soft btn-md">Success</button
-                  ><button class="btn btn-danger-soft btn-md">Danger</button
-                  ><button class="btn btn-warning-soft btn-md">Warning</button
-                  ><button class="btn btn-info-soft btn-md">Info</button
-                  ><button class="btn btn-dark-soft btn-md">Dark</button>
+                  <button class="btn btn-primary--soft btn-md">Primary</button>
+                  <button class="btn btn-secondary--soft btn-md">Secondary</button>
+                  <button class="btn btn-success--soft btn-md">Success</button>
+                  <button class="btn btn-danger--soft btn-md">Danger</button>
+                  <button class="btn btn-warning--soft btn-md">Warning</button>
+                  <button class="btn btn-info--soft btn-md">Info</button>
+                  <button class="btn btn-dark--soft btn-md">Dark</button>
                 </div>
               </div>
             </div>
           </div>
-          <!-- End soft buttons -->
+          <!-- Soft Buttons End -->
 
-          <!-- Plain buttons -->
+          <!-- Plain Buttons Start -->
           <div class="card mt-4">
             <div class="card-body">
               <div class="card-title">Plain Buttons</div>
               <div class="card-subtitle">
-                <p class="text-sm text-slate-400">
-                  Use <code>variant</code>, tailwind <code>plain</code> to create outline button.
-                </p>
+                <p class="text-sm text-slate-400">Use <code>plain</code> class to <code>btn-primary-plain</code>, 
+                  <code>btn-secondary-plain</code>, <code>btn-success-plain</code>, <code>btn-danger-plain</code>, 
+                  <code>btn-warning-plain</code>, <code>btn-info-plain</code> &amp; <code>btn-dark-plain</code> create a soft button.</p>
               </div>
-
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary-plain btn-md">Primary</button
-                  ><button class="btn btn-secondary-plain btn-md">Secondary</button
-                  ><button class="btn btn-success-plain btn-md">Success</button
-                  ><button class="btn btn-danger-plain btn-md">Danger</button
-                  ><button class="btn btn-warning-plain btn-md">Warning</button
-                  ><button class="btn btn-info-plain btn-md">Info</button
-                  ><button class="btn btn-dark-plain btn-md">Dark</button>
+                  <button class="btn btn-primary--plain btn-md">Primary</button>
+                  <button class="btn btn-secondary--plain btn-md">Secondary</button>
+                  <button class="btn btn-success--plain btn-md">Success</button>
+                  <button class="btn btn-danger--plain btn-md">Danger</button>
+                  <button class="btn btn-warning--plain btn-md">Warning</button>
+                  <button class="btn btn-info--plain btn-md">Info</button>
+                  <button class="btn btn-dark--plain btn-md">Dark</button>
                 </div>
               </div>
             </div>
           </div>
-          <!-- End plain buttons -->
+          <!-- plain Buttons Start -->
 
-          <!-- Rounded buttons -->
+          <!-- Rounded Buttons Start -->
           <div class="card mt-4">
             <div class="card-body">
               <div class="card-title">Rounded Buttons</div>
               <div class="card-subtitle">
-                <p class="text-sm text-slate-400">Use <code>rounded</code> to create outline button.</p>
+                <p class="text-sm text-slate-400">
+                  Use<code>rounded-full</code> class to create a rounded button.
+                </p>
               </div>
-
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary-solid btn-md rounded-full">Primary</button
-                  ><button class="btn btn-secondary-solid btn-md rounded-full">Secondary</button
-                  ><button class="btn btn-success-solid btn-md rounded-full">Success</button
-                  ><button class="btn btn-danger-solid btn-md rounded-full">Danger</button
-                  ><button class="btn btn-warning-solid btn-md rounded-full">Warning</button
-                  ><button class="btn btn-info-solid btn-md rounded-full">Info</button
-                  ><button class="btn btn-dark-solid btn-md rounded-full">Dark</button>
+                  <button class="btn btn-primary--solid btn-md rounded-full">Primary</button>
+                  <button class="btn btn-secondary--solid btn-md rounded-full">Secondary</button>
+                  <button class="btn btn-success--solid btn-md rounded-full">Success</button>
+                  <button class="btn btn-danger--solid btn-md rounded-full">Danger</button>
+                  <button class="btn btn-warning--solid btn-md rounded-full">Warning</button>
+                  <button class="btn btn-info--solid btn-md rounded-full">Info</button>
+                  <button class="btn btn-dark--solid btn-md rounded-full">Dark</button>
                 </div>
               </div>
             </div>
           </div>
-          <!-- End rounded buttons -->
+          <!-- Rounded Buttons End -->
 
-          <!-- Icon buttons -->
+          <!-- Icon Buttons -->
           <div class="card mt-4">
             <div class="card-body">
               <div class="card-title">Icon Buttons</div>
               <div class="card-subtitle">
                 <p class="text-sm text-slate-400">
-                  Use <code>variant</code>, tailwind <code>plain</code> to create outline button.
+                  By adding <code>icon</code> to the button, you can create icon buttons
                 </p>
-                <a
-                  class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
-                  href="https://react-icons.github.io/react-icons/"
-                  target="_blank"
-                  rel="noreferrer"
-                  >React Icons</a
-                >
               </div>
-
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary-solid btn-md gap-2">
+                  <button class="btn btn-primary--solid btn-md gap-2">
                     <svg
                       stroke="currentColor"
                       fill="none"
@@ -210,8 +210,9 @@
                       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                       <polyline points="9 22 9 12 15 12 15 22"></polyline>
                     </svg>
-                    Home</button
-                  ><button class="btn btn-warning-outline btn-md gap-2 rounded-full">
+                    Home
+                  </button>
+                  <button class="btn btn-warning--outline btn-md gap-2 rounded-full">
                     <svg
                       stroke="currentColor"
                       fill="none"
@@ -228,8 +229,9 @@
                       <line x1="20" y1="8" x2="20" y2="14"></line>
                       <line x1="23" y1="11" x2="17" y2="11"></line>
                     </svg>
-                    Users</button
-                  ><button class="btn btn-danger-soft btn-md gap-2">
+                    Users
+                  </button>
+                  <button class="btn btn-danger--soft btn-md gap-2">
                     <svg
                       stroke="currentColor"
                       fill="none"
@@ -246,8 +248,9 @@
                       <line x1="10" y1="11" x2="10" y2="17"></line>
                       <line x1="14" y1="11" x2="14" y2="17"></line>
                     </svg>
-                    Delete</button
-                  ><button class="btn btn-info-outline btn-md gap-2">
+                    Delete
+                  </button>
+                  <button class="btn btn-info--outline btn-md gap-2">
                     <svg
                       stroke="currentColor"
                       fill="none"
@@ -262,8 +265,9 @@
                       <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                       <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                     </svg>
-                    Edit</button
-                  ><button class="btn btn-success-plain btn-md gap-2">
+                    Edit
+                  </button>
+                  <button class="btn btn-success--plain btn-md gap-2">
                     <svg
                       stroke="currentColor"
                       fill="none"
@@ -284,21 +288,20 @@
               </div>
             </div>
           </div>
-          <!-- End icon buttons -->
+          <!-- Icon Buttons End -->
 
-          <!-- Loading buttons -->
+          <!-- Loading Buttons Start -->
           <div class="card mt-4">
             <div class="card-body">
               <div class="card-title">Loading Buttons</div>
               <div class="card-subtitle">
                 <p class="text-sm text-slate-400">
-                  By adding a loading icon with <code>disabled</code> tailwind, you can create loading buttons.
+                  By adding a loading icon with <code>disabled</code>class, you can create loading buttons.
                 </p>
               </div>
-
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary-solid btn-md gap-2" disabled="">
+                  <button class="btn btn-primary--solid btn-md gap-2" disabled="">
                     <svg
                       stroke="currentColor"
                       fill="none"
@@ -319,7 +322,7 @@
                       <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"></path>
                     </svg>
                     Loading</button
-                  ><button class="btn btn-success-outline btn-md gap-2" disabled="">
+                  ><button class="btn btn-success--outline btn-md gap-2" disabled="">
                     <svg
                       stroke="currentColor"
                       fill="none"
@@ -340,7 +343,7 @@
                       <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"></path>
                     </svg>
                     Loading</button
-                  ><button class="btn btn-info-soft btn-md gap-2" disabled="">
+                  ><button class="btn btn-info--soft btn-md gap-2" disabled="">
                     <svg
                       stroke="currentColor"
                       fill="none"
@@ -361,7 +364,7 @@
                       <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"></path>
                     </svg>
                     Loading</button
-                  ><button class="btn btn-danger-plain btn-md gap-2" disabled="">
+                  ><button class="btn btn-danger--plain btn-md gap-2" disabled="">
                     <svg
                       stroke="currentColor"
                       fill="none"
@@ -387,14 +390,14 @@
               </div>
             </div>
           </div>
-          <!-- End loading buttons -->
+          <!-- Loading Buttons Start -->
 
-          <!-- Disabled buttons -->
+          <!-- Disabled Buttons Start -->
           <div class="card mt-4">
             <div class="card-body">
               <div class="card-title">Disabled Buttons</div>
               <div class="card-subtitle">
-                <p class="text-sm text-slate-400">Use <code>disabled</code>, tailwind to disable the button.</p>
+                <p class="text-sm text-slate-400">Use <code>disabled</code>, class to create a disable button.</p>
                 <a
                   class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
                   href="https://react-icons.github.io/react-icons/"
@@ -403,64 +406,61 @@
                   >React Icons</a
                 >
               </div>
-
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-4">
                   <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary-solid btn-md" disabled="">Primary</button
-                    ><button class="btn btn-secondary-solid btn-md" disabled="">Secondary</button
-                    ><button class="btn btn-success-solid btn-md" disabled="">Success</button
-                    ><button class="btn btn-danger-solid btn-md" disabled="">Danger</button
-                    ><button class="btn btn-warning-solid btn-md" disabled="">Warning</button
-                    ><button class="btn btn-info-solid btn-md" disabled="">Info</button
-                    ><button class="btn btn-dark-solid btn-md" disabled="">Dark</button>
+                    <button class="btn btn-primary--solid btn-md" disabled="">Primary</button>
+                    <button class="btn btn-secondary--solid btn-md" disabled="">Secondary</button>
+                    <button class="btn btn-success--solid btn-md" disabled="">Success</button>
+                    <button class="btn btn-danger--solid btn-md" disabled="">Danger</button>
+                    <button class="btn btn-warning--solid btn-md" disabled="">Warning</button>
+                    <button class="btn btn-info--solid btn-md" disabled="">Info</button>
+                    <button class="btn btn-dark--solid btn-md" disabled="">Dark</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- End disabled buttons -->
+          <!-- Disabled Buttons End -->
 
-          <!-- Block buttons -->
+          <!-- Block Buttons Start -->
           <div class="card mt-4">
             <div class="card-body">
               <div class="card-title">Block Buttons</div>
               <div class="card-subtitle">
-                <p class="text-sm text-slate-400">Use <code>block</code>, tailwind to create block button.</p>
+                <p class="text-sm text-slate-400">Use <code>w-full</code>, class to create block button.</p>
               </div>
-
               <div class="code-viewer mt-4">
                 <div class="flex flex-col gap-y-4">
-                  <button class="btn btn-primary-solid btn-md w-full">Block Button</button
-                  ><button class="btn btn-primary-outline btn-md w-full">Block Button</button
-                  ><button class="btn btn-primary-soft btn-md w-full">Block Button</button>
+                  <button class="btn btn-primary--solid btn-md w-full">Block Button</button>
+                  <button class="btn btn-primary--outline btn-md w-full">Block Button</button>
+                  <button class="btn btn-primary--soft btn-md w-full">Block Button</button>
                 </div>
               </div>
             </div>
           </div>
-          <!-- End block buttons -->
+          <!-- Block Buttons End -->
 
-          <!-- Group buttons -->
+          <!-- Group Buttons Start -->
           <div class="card mt-4">
             <div class="card-body">
               <div class="card-title">Group Buttons</div>
               <div class="card-subtitle">
                 <p class="text-sm text-slate-400">
-                  Wrap a series of buttons with <code>ButtonGroup</code>component to create a group of buttons.
+                  Use <code>ButtonGroup</code> class to create a group of buttons.
                 </p>
               </div>
-
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-4">
                   <div class="btn-group">
-                    <button class="btn btn-primary-solid btn-md">HTML</button
-                    ><button class="btn btn-primary-solid btn-md">CSS</button
-                    ><button class="btn btn-primary-solid btn-md">Javascript</button
-                    ><button class="btn btn-primary-solid btn-md">PHP</button
-                    ><button class="btn btn-primary-solid btn-md">Python</button>
+                    <button class="btn btn-primary--solid btn-md">HTML</button>
+                    <button class="btn btn-primary--solid btn-md">CSS</button>
+                    <button class="btn btn-primary--solid btn-md">Javascript</button>
+                    <button class="btn btn-primary--solid btn-md">PHP</button>
+                    <button class="btn btn-primary--solid btn-md">Python</button>
                   </div>
                   <div class="btn-group">
-                    <button class="btn btn-primary-outline btn-md gap-2">
+                    <button class="btn btn-primary--outline btn-md gap-2">
                       <svg
                         stroke="currentColor"
                         fill="none"
@@ -477,7 +477,7 @@
                         ></path>
                       </svg>
                       120k</button
-                    ><button class="btn btn-primary-outline btn-md gap-2">
+                    ><button class="btn btn-primary--outline btn-md gap-2">
                       <svg
                         stroke="currentColor"
                         fill="none"
@@ -497,15 +497,17 @@
                     </button>
                   </div>
                   <div class="btn-group rounded">
-                    <button class="btn btn-primary-soft btn-md">Years</button
-                    ><button class="btn btn-primary-soft btn-md">Months</button
-                    ><button class="btn btn-primary-soft btn-md">Days</button>
+                    <button class="btn btn-primary--soft btn-md">Years</button
+                    >
+                    <button class="btn btn-primary--soft btn-md">Months</button
+                    >
+                    <button class="btn btn-primary--soft btn-md">Days</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- End group buttons -->
+          <!-- Group Buttons -->
         </main>
         <!-- Main End -->
         <!-- Footer Start -->
