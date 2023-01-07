@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html class="light" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/app.scss" />
+    <script type="module" src="./js/app.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./scss/app.scss" />
-  <script type="module" src="./js/app.js"></script>
-</head>
-
-<body>
-  
-  <div id="app" class="min-h-screen w-full">
-    <!-- Sidebar Starts -->
-    <aside id="sidebar" class="sidebar">
-      <!-- sidebar header -->
-      <div class="sidebar-header">
-        <div class="flex w-full items-center space-x-4 px-4">
-          <svg class="inline-block fill-current text-primary-500" width="45" height="45"
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <body>
+    <div id="app" class="min-h-screen w-full">
+      <!-- Sidebar Starts -->
+      <aside class="sidebar">
+        <!-- sidebar header -->
+        <div class="sidebar-header">
+          <svg
+            class="sidebar-header--logo"
+            fill="currentColor"
+            width="45"
+            height="45"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 48 48"
+          >
             <path
-              d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z">
-            </path>
+              d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z"
+            ></path>
             <path
-              d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z">
-            </path>
+              d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z"
+            ></path>
           </svg>
 
-          <div class="flex flex-col">
+          <div class="sidebar-header--logo-text">
             <h1 class="flex text-xl">
               <span class="font-bold text-slate-800 dark:text-slate-200">Admin</span>
               <span class="font-semibold text-primary-500">Toolkit</span>
@@ -37,325 +40,330 @@
             <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
           </div>
         </div>
-      </div>
 
-      <!-- sidebar container starts -->
-      <div class="sidebar-container">
-        <ul class="space-y-0.5">
-          <li class="px-[18px]">
-            <div class="accordion active open">
-              <div class="accordion-item">
-                <div class="accordion-header">
-                  <button class="accordion-btn" type="button">
-                    <span class="accordion-btn-icon accordion-btn-icon--left">
-                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
-                        height="22" width="22" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
-                        </path>
-                      </svg>
-                    </span>
-
-                    <span class="accordion-btn-text">Dashboard</span>
-
-                    <svg class="accordion-btn-icon accordion-btn-icon--right" stroke="currentColor" fill="none"
-                      stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em"
-                      width="1em" xmlns="http://www.w3.org/2000/svg">
-                      <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                  </button>
-                </div>
-
-                <div class="accordion-content">
-                  <ul class="mt-0.5 w-full">
-                    <li>
-                      <!-- active link -->
-                      <a class="block w-full rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 text-primary-500 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200"
-                        href="#">
-                        Ecommerce
-                      </a>
-                    </li>
-
-                    <li>
-                      <!-- Inactive link -->
-                      <a class="block w-full rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 dark:text-slate-200 dark:hover:bg-primary-500"
-                        href="#">
-                        Analytics
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+        <!-- sidebar container starts -->
+        <ul class="sidebar-menu">
+          <li>
+            <a href="" class="sidebar-menu-item active">
+              <span class="sidebar-menu-item--icon">
+                <i data-feather="home"></i>
+              </span>
+              <span class="sidebar-menu-item--label">Dashboard</span>
+              <span class="sidebar-menu-item--arrow">
+                <i data-feather="chevron-down"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="" class="sidebar-submenu-item active">Ecommerce</a>
+              </li>
+              <li>
+                <a href="" class="sidebar-submenu-item">Analytics</a>
+              </li>
+            </ul>
           </li>
-
-          <li class="pt-4 pb-2 text-xs uppercase tracking-widest text-slate-400 ps-7">Applications</li>
-
-          <li class="px-[18px]">
-            <div class="accordion">
-              <div class="accordion-item">
-                <div class="accordion-header">
-                  <a href="#" class="accordion-btn" role="button">
-                    <span class="accordion-btn-icon accordion-btn-icon--left">
-                      <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                        </path>
-                      </svg>
-                    </span>
-                    <span class="accordion-btn-text">Email</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <li class="px-[18px]">
-            <div class="accordion">
-              <div class="accordion-item">
-                <div class="accordion-header">
-                  <button class="accordion-btn" type="button">
-                    <span class="accordion-btn-icon accordion-btn-icon--left">
-                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
-                        height="22" width="22" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
-                        </path>
-                      </svg>
-                    </span>
-
-                    <span class="accordion-btn-text">Common</span>
-
-                    <svg class="accordion-btn-icon accordion-btn-icon--right" stroke="currentColor" fill="none"
-                      stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em"
-                      width="1em" xmlns="http://www.w3.org/2000/svg">
-                      <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                  </button>
-                </div>
-
-                <div class="accordion-content">
-                  <ul class="mt-0.5 w-full">
-                    <li>
-                      <!-- active link -->
-                      <a class="block w-full rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 text-primary-500 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200"
-                        href="#">
-                        Ecommerce
-                      </a>
-                    </li>
-
-                    <li>
-                      <!-- Inactive link -->
-                      <a class="block w-full rounded-[.4rem] py-2 pl-[2.88rem] text-sm leading-5 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 dark:text-slate-200 dark:hover:bg-primary-500"
-                        href="#">
-                        Analytics
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <div class="pt-4 pb-2 pl-7 text-xs uppercase tracking-widest text-slate-400">Applications</div>
+          <li>
+            <a href="" class="sidebar-menu-item">
+              <span class="sidebar-menu-item--icon">
+                <i data-feather="mail"></i>
+              </span>
+              <span class="sidebar-menu-item--label">Email</span>
+            </a>
           </li>
         </ul>
-      </div>
-    </aside>
-    <!-- Sidebar Ends -->
+      </aside>
+      <!-- Sidebar Ends -->
 
-    <!-- main content starts -->
-    <div class="flex flex-1 flex-col transition-margin duration-300 ease-in-out lg:ml-72">
-      <!-- Header Starts -->
-      <header id="header" class="w-full h-16 flex items-center bg-white drop-shadow-sm dark:bg-slate-800">
-        <div class="container-fluid flex items-center justify-between">
-          <!-- Sidebar Toggle & Search Starts -->
-          <div class="flex items-center space-x-6">
-            <button class="text-slate-600 dark:text-slate-400">
-              <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
-                </path>
-              </svg>
-            </button>
-
-            <form class="w-72 h-10 hidden sm:flex items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500" action="">
-              <div class="h-full flex items-center px-3">
-                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 group-focus-within:text-primary-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      <!-- main content starts -->
+      <div class="flex flex-1 flex-col transition-margin duration-300 ease-in-out lg:ml-72">
+        <!-- Header Starts -->
+        <header id="header" class="flex h-16 w-full items-center bg-white drop-shadow-sm dark:bg-slate-800">
+          <div class="container-fluid flex items-center justify-between">
+            <!-- Sidebar Toggle & Search Starts -->
+            <div class="flex items-center space-x-6">
+              <button class="text-slate-600 dark:text-slate-400">
+                <svg
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  height="22"
+                  width="22"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  ></path>
                 </svg>
-              </div>
+              </button>
 
-              <input
-                class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                placeholder="Search" 
-                type="text" 
-              />
-            </form>
-          </div>
-          <!-- Sidebar Toggle & Search Ends -->
-          
-          <!-- Header Options Starts -->
-          <div class="flex items-center space-x-6">
-            <!-- Language Dropdown Starts -->
-            <div class="dropdown">
-              <div class="dropdown-toggle">
+              <form
+                class="hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
+                action=""
+              >
+                <div class="flex h-full items-center px-3">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-slate-400 group-focus-within:text-primary-500"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </div>
+
+                <input
+                  class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                  placeholder="Search"
+                  type="text"
+                />
+              </form>
+            </div>
+            <!-- Sidebar Toggle & Search Ends -->
+
+            <!-- Header Options Starts -->
+            <div class="flex items-center space-x-6">
+              <!-- Language Dropdown Starts -->
+              <div class="dropdown">
+                <div class="dropdown-toggle">
                   <button type="button" class="flex items-center space-x-2 text-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
                       <path fill="#FFF" d="M0 0h513v342H0z"></path>
-                      <path d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z" fill="#D80027"></path>
+                      <path
+                        d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z"
+                        fill="#D80027"
+                      ></path>
                       <path fill="#2E52B2" d="M0 0h256.5v184.1H0z"></path>
-                      <path d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z" fill="#FFF"></path>
+                      <path
+                        d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z"
+                        fill="#FFF"
+                      ></path>
                     </svg>
                     <span class="hidden md:inline-block">English</span>
                     <span class="inline-block md:hidden">EN</span>
                   </button>
-              </div>
+                </div>
 
-              <div class="dropdown-content w-[150px] -right-8 sm:right-0">
-                <ul>
-                  <li class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
-                    <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
-                        <path fill="#FFF" d="M0 0h513v342H0z"></path>
-                        <path d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z" fill="#D80027"></path>
-                        <path fill="#2E52B2" d="M0 0h256.5v184.1H0z"></path>
-                        <path d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z" fill="#FFF"></path>
-                      </svg>
-                      
-                      <span>English</span>
-                    </button>
-                  </li>
-
-                  <li
-                    class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
-                    <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
-                        <path fill="#D80027" d="M0 85.331h512v341.337H0z"></path>
-                        <path d="M0 85.331h512v113.775H0z"></path>
-                        <path fill="#FFDA44" d="M0 312.882h512v113.775H0z"></path>
-                      </svg>
-
-                      <span>German</span>
-                    </button>
-                  </li>
-
-                  <li
-                    class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
-                    <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
-                        <path fill="#FFF" d="M0 85.331h512v341.337H0z"></path>
-                        <path fill="#0052B4" d="M0 85.331h170.663v341.337H0z"></path>
-                        <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z"></path>
-                      </svg>
-
-                      <span>French</span>
-                    </button>
-                  </li>
-
-                  <li
-                    class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
-                    <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
-                        <path fill="#055e1c" d="M0 85.333h512v341.333H0z"></path>
-                        <g fill="#FFF">
+                <div class="dropdown-content -right-8 w-[150px] sm:right-0">
+                  <ul>
+                    <li
+                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
+                    >
+                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
+                          <path fill="#FFF" d="M0 0h513v342H0z"></path>
                           <path
-                            d="M183.548 289.386c0 12.295 9.731 22.261 21.736 22.261h65.208c0 10.244 8.11 18.551 18.114 18.551h21.736c10.004 0 18.114-8.306 18.114-18.551v-22.261H183.548zm146.716-107.595v51.942c0 8.183-6.5 14.84-14.491 14.84v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.942h-21.735zm-155.773 51.943c0 8.183-6.5 14.84-14.491 14.84v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.942H174.49v51.942z">
-                          </path>
+                            d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z"
+                            fill="#D80027"
+                          ></path>
+                          <path fill="#2E52B2" d="M0 0h256.5v184.1H0z"></path>
                           <path
-                            d="M297.661 181.788h21.736v51.942h-21.736zm-32.604 29.685c0 2.046-1.625 3.71-3.623 3.71-1.998 0-3.623-1.664-3.623-3.71v-29.682h-21.736v29.682c0 2.046-1.625 3.71-3.623 3.71s-3.623-1.664-3.623-3.71v-29.682h-21.736v29.682c0 14.32 11.376 25.971 25.358 25.971 5.385 0 10.38-1.733 14.491-4.677 4.11 2.944 9.106 4.677 14.491 4.677 1.084 0 2.15-.078 3.2-.215-1.54 6.499-7.255 11.345-14.068 11.345v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.943h-21.736l.002 29.682z">
-                          </path>
-                          <path d="M207.093 248.57h32.601v22.261h-32.601z"></path>
-                        </g>
-                      </svg>
+                            d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z"
+                            fill="#FFF"
+                          ></path>
+                        </svg>
 
-                      <span>Arabic</span>
-                    </button>
-                  </li>
+                        <span>English</span>
+                      </button>
+                    </li>
 
-                  <li
-                    class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
-                    <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
-                        <path fill="#D80027" d="M0 0h513v342H0z"></path>
-                        <path
-                          d="m226.8 239.2-9.7-15.6-17.9 4.4 11.9-14.1-9.7-15.6 17.1 6.9 11.8-14.1-1.3 18.4 17.1 6.9-17.9 4.4zM290.6 82l-10.1 15.4 11.6 14.3-17.7-4.8-10.1 15.5-1-18.4-17.7-4.8 17.2-6.6-1-18.4 11.6 14.3zm-54.4-56.6-2 18.3 16.8 7.6-18 3.8-2 18.3-9.2-16-17.9 3.8 12.3-13.7-9.2-15.9 16.8 7.5zm56.6 136.4-14.9 10.9 5.8 17.5-14.9-10.8-14.9 11 5.6-17.6-14.9-10.7 18.4-.1 5.6-17.6 5.8 17.5zM115 46.3l17.3 53.5h56.2l-45.4 32.9 17.3 53.5-45.4-33-45.5 33 17.4-53.5-45.5-32.9h56.3z"
-                          fill="#FFDA44"></path>
-                      </svg>
+                    <li
+                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
+                    >
+                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
+                          <path fill="#D80027" d="M0 85.331h512v341.337H0z"></path>
+                          <path d="M0 85.331h512v113.775H0z"></path>
+                          <path fill="#FFDA44" d="M0 312.882h512v113.775H0z"></path>
+                        </svg>
 
-                      <span>Chinese</span>
-                    </button>
-                  </li>
+                        <span>German</span>
+                      </button>
+                    </li>
 
-                  <li
-                    class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
-                    <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 513 342" height="15">
-                        <path fill="#2d6e41" d="M0 85.331h513v342H0z"></path>
-                        <circle fill="#F40B32" cx="218.902" cy="256.5" r="115"></circle>
-                      </svg>
+                    <li
+                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
+                    >
+                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
+                          <path fill="#FFF" d="M0 85.331h512v341.337H0z"></path>
+                          <path fill="#0052B4" d="M0 85.331h170.663v341.337H0z"></path>
+                          <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z"></path>
+                        </svg>
 
-                      <span>Bangla</span>
-                    </button>
-                  </li>
-                </ul>
+                        <span>French</span>
+                      </button>
+                    </li>
+
+                    <li
+                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
+                    >
+                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
+                          <path fill="#055e1c" d="M0 85.333h512v341.333H0z"></path>
+                          <g fill="#FFF">
+                            <path
+                              d="M183.548 289.386c0 12.295 9.731 22.261 21.736 22.261h65.208c0 10.244 8.11 18.551 18.114 18.551h21.736c10.004 0 18.114-8.306 18.114-18.551v-22.261H183.548zm146.716-107.595v51.942c0 8.183-6.5 14.84-14.491 14.84v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.942h-21.735zm-155.773 51.943c0 8.183-6.5 14.84-14.491 14.84v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.942H174.49v51.942z"
+                            ></path>
+                            <path
+                              d="M297.661 181.788h21.736v51.942h-21.736zm-32.604 29.685c0 2.046-1.625 3.71-3.623 3.71-1.998 0-3.623-1.664-3.623-3.71v-29.682h-21.736v29.682c0 2.046-1.625 3.71-3.623 3.71s-3.623-1.664-3.623-3.71v-29.682h-21.736v29.682c0 14.32 11.376 25.971 25.358 25.971 5.385 0 10.38-1.733 14.491-4.677 4.11 2.944 9.106 4.677 14.491 4.677 1.084 0 2.15-.078 3.2-.215-1.54 6.499-7.255 11.345-14.068 11.345v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.943h-21.736l.002 29.682z"
+                            ></path>
+                            <path d="M207.093 248.57h32.601v22.261h-32.601z"></path>
+                          </g>
+                        </svg>
+
+                        <span>Arabic</span>
+                      </button>
+                    </li>
+
+                    <li
+                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
+                    >
+                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
+                          <path fill="#D80027" d="M0 0h513v342H0z"></path>
+                          <path
+                            d="m226.8 239.2-9.7-15.6-17.9 4.4 11.9-14.1-9.7-15.6 17.1 6.9 11.8-14.1-1.3 18.4 17.1 6.9-17.9 4.4zM290.6 82l-10.1 15.4 11.6 14.3-17.7-4.8-10.1 15.5-1-18.4-17.7-4.8 17.2-6.6-1-18.4 11.6 14.3zm-54.4-56.6-2 18.3 16.8 7.6-18 3.8-2 18.3-9.2-16-17.9 3.8 12.3-13.7-9.2-15.9 16.8 7.5zm56.6 136.4-14.9 10.9 5.8 17.5-14.9-10.8-14.9 11 5.6-17.6-14.9-10.7 18.4-.1 5.6-17.6 5.8 17.5zM115 46.3l17.3 53.5h56.2l-45.4 32.9 17.3 53.5-45.4-33-45.5 33 17.4-53.5-45.5-32.9h56.3z"
+                            fill="#FFDA44"
+                          ></path>
+                        </svg>
+
+                        <span>Chinese</span>
+                      </button>
+                    </li>
+
+                    <li
+                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
+                    >
+                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 513 342" height="15">
+                          <path fill="#2d6e41" d="M0 85.331h513v342H0z"></path>
+                          <circle fill="#F40B32" cx="218.902" cy="256.5" r="115"></circle>
+                        </svg>
+
+                        <span>Bangla</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <!-- Language Dropdown Ends -->
+              <!-- Language Dropdown Ends -->
 
-            <!-- Mobile Search Starts -->
-            <div class="sm:hidden">
-              <button
-                class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
-                type="button">
-                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
-                  stroke-linejoin="round" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-              </button>
-            </div>
-            <!-- Mobile Search Ends -->
-
-            <!-- Dark Mood Toggle Starts -->
-            <div class="flex">
-              <button class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300" type="button">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
-                  <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
-                </svg>
-              </button>
-            </div>
-            <!-- Dark Mood Toggle Ends -->
-
-            <!-- Notification Dropdown Starts -->
-            <div class="dropdown -mt-0.5">
-              <div class="dropdown-toggle">
-                <button class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
-                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              <!-- Mobile Search Starts -->
+              <div class="sm:hidden">
+                <button
+                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
+                  type="button"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    height="22"
+                    width="22"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                   </svg>
-
-                  <span class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">5</span>
                 </button>
               </div>
+              <!-- Mobile Search Ends -->
 
-              <div class="dropdown-content divide-y dark:divide-slate-700 w-[280px] sm:w-80 -right-full sm:-right-2">
+              <!-- Dark Mood Toggle Starts -->
+              <div class="flex">
+                <button
+                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
+                  type="button"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    height="20"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
+                    ></path>
+                    <path
+                      d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <!-- Dark Mood Toggle Ends -->
+
+              <!-- Notification Dropdown Starts -->
+              <div class="dropdown -mt-0.5">
+                <div class="dropdown-toggle">
+                  <button
+                    class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      height="24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                      <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+
+                    <span
+                      class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200"
+                      >5</span
+                    >
+                  </button>
+                </div>
+
+                <div class="dropdown-content -right-full w-[280px] divide-y dark:divide-slate-700 sm:-right-2 sm:w-80">
                   <div class="flex items-center justify-between py-4 px-4">
-                    <h5 class="font-semibold text-slate-800 dark:text-slate-300">
-                      Notifications
-                    </h5>
-  
-                    <button class="text-xs text-slate-600 hover:text-primary-500 dark:text-slate-300">
-                      Clear All
-                    </button>
+                    <h5 class="font-semibold text-slate-800 dark:text-slate-300">Notifications</h5>
+
+                    <button class="text-xs text-slate-600 hover:text-primary-500 dark:text-slate-300">Clear All</button>
                   </div>
-                  
-                  <div class="w-full h-80 overflow-y-auto">
+
+                  <div class="h-80 w-full overflow-y-auto">
                     <ul>
-                      <li class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-blue-500 bg-blue-100">
-                          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500"
+                        >
+                          <svg
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            height="20"
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
                             <circle cx="12" cy="12" r="10"></circle>
                             <line x1="12" y1="16" x2="12" y2="12"></line>
                             <line x1="12" y1="8" x2="12.01" y2="8"></line>
@@ -366,20 +374,54 @@
                           <h6 class="text-sm">New order received</h6>
                           <p class="text-xs text-slate-400">Order #1234 has been placed</p>
                           <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <svg
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              height="1em"
+                              width="1em"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
                               <circle cx="12" cy="12" r="10"></circle>
                               <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg> 
+                            </svg>
                             <span>2 min ago</span>
                           </p>
                         </div>
                       </li>
 
-                      <li class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-yellow-500 bg-yellow-100">
-                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M85.57 446.25h340.86a32 32 0 0028.17-47.17L284.18 82.58c-12.09-22.44-44.27-22.44-56.36 0L57.4 399.08a32 32 0 0028.17 47.17z"></path>
-                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M250.26 195.39l5.74 122 5.73-121.95a5.74 5.74 0 00-5.79-6h0a5.74 5.74 0 00-5.68 5.95z"></path>
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500"
+                        >
+                          <svg
+                            stroke="currentColor"
+                            fill="currentColor"
+                            stroke-width="0"
+                            viewBox="0 0 512 512"
+                            height="20"
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="32"
+                              d="M85.57 446.25h340.86a32 32 0 0028.17-47.17L284.18 82.58c-12.09-22.44-44.27-22.44-56.36 0L57.4 399.08a32 32 0 0028.17 47.17z"
+                            ></path>
+                            <path
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="32"
+                              d="M250.26 195.39l5.74 122 5.73-121.95a5.74 5.74 0 00-5.79-6h0a5.74 5.74 0 00-5.68 5.95z"
+                            ></path>
                             <path d="M256 397.25a20 20 0 1120-20 20 20 0 01-20 20z"></path>
                           </svg>
                         </div>
@@ -388,153 +430,285 @@
                           <h6 class="text-sm">High CPU usage</h6>
                           <p class="text-xs text-slate-400">CPU usage is at 92%</p>
                           <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <svg
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              height="1em"
+                              width="1em"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
                               <circle cx="12" cy="12" r="10"></circle>
                               <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg> 
+                            </svg>
                             <span>5 minutes ago</span>
                           </p>
                         </div>
                       </li>
-                      
-                      <li class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-green-500 bg-green-100">
-                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M699 353h-46.9c-10.2 0-19.9 4.9-25.9 13.3L469 584.3l-71.2-98.8c-6-8.3-15.6-13.3-25.9-13.3H325c-6.5 0-10.3 7.4-6.5 12.7l124.6 172.8a31.8 31.8 0 0 0 51.7 0l210.6-292c3.9-5.3.1-12.7-6.4-12.7z"></path>
-                            <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
+                        >
+                          <svg
+                            stroke="currentColor"
+                            fill="currentColor"
+                            stroke-width="0"
+                            viewBox="0 0 1024 1024"
+                            height="20"
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M699 353h-46.9c-10.2 0-19.9 4.9-25.9 13.3L469 584.3l-71.2-98.8c-6-8.3-15.6-13.3-25.9-13.3H325c-6.5 0-10.3 7.4-6.5 12.7l124.6 172.8a31.8 31.8 0 0 0 51.7 0l210.6-292c3.9-5.3.1-12.7-6.4-12.7z"
+                            ></path>
+                            <path
+                              d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                            ></path>
                           </svg>
                         </div>
                         <div>
                           <h6 class="text-sm">Your order has been shipped</h6>
                           <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
                           <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <svg
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              height="1em"
+                              width="1em"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
                               <circle cx="12" cy="12" r="10"></circle>
                               <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg> 
+                            </svg>
                             <span>10 minutes ago</span>
                           </p>
                         </div>
                       </li>
 
-                      <li class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-danger-500 bg-danger-100">
-                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500"
+                        >
+                          <svg
+                            stroke="currentColor"
+                            fill="currentColor"
+                            stroke-width="0"
+                            viewBox="0 0 24 24"
+                            height="20"
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
                             <path fill="none" d="M0 0h24v24H0V0z"></path>
-                            <path d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM19 14.9L14.9 19H9.1L5 14.9V9.1L9.1 5h5.8L19 9.1v5.8zm-4.17-7.14L12 10.59 9.17 7.76 7.76 9.17 10.59 12l-2.83 2.83 1.41 1.41L12 13.41l2.83 2.83 1.41-1.41L13.41 12l2.83-2.83-1.41-1.41z"></path>
+                            <path
+                              d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM19 14.9L14.9 19H9.1L5 14.9V9.1L9.1 5h5.8L19 9.1v5.8zm-4.17-7.14L12 10.59 9.17 7.76 7.76 9.17 10.59 12l-2.83 2.83 1.41 1.41L12 13.41l2.83 2.83 1.41-1.41L13.41 12l2.83-2.83-1.41-1.41z"
+                            ></path>
                           </svg>
                         </div>
                         <div>
                           <h6 class="text-sm">Something went wrong</h6>
                           <p class="text-xs text-slate-400">Order #1234 has been placed</p>
                           <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <svg
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              height="1em"
+                              width="1em"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
                               <circle cx="12" cy="12" r="10"></circle>
                               <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg> 
-                            
+                            </svg>
+
                             <span>1 hour ago</span>
                           </p>
                         </div>
                       </li>
+                    </ul>
                   </div>
 
                   <div class="py-2 px-4">
                     <button class="btn btn-primary-plain btn-sm w-full" type="button">
-                      <span>View More</span> 
-                      <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ms-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <span>View More</span>
+                      <svg
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="ms-1"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
                     </button>
-                  </div>  
-              </div>
-            </div>
-            <!-- Notification Dropdown Ends -->
-            
-            <!-- Profile Dropdown Starts -->
-            <div class="dropdown">
-              <div class="dropdown-toggle">
-                <button class="group relative flex items-center space-x-1.5" type="button">
-                  <img 
-                    class="block h-9 w-9 rounded-full group-focus:ring group-focus:ring-primary-500"
-                    src="https://avatars.githubusercontent.com/u/1164541?v=4" 
-                    alt="avatar" 
-                  />
-  
-                  <div class="hidden md:flex md:flex-col">
-                    <span class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
-                      John Doe
-                    </span>
-
-                    <span class="inline-block text-left text-xs text-slate-400">
-                      Admin
-                    </span>
                   </div>
-                </button>
+                </div>
               </div>
+              <!-- Notification Dropdown Ends -->
 
-              <div class="dropdown-content w-[180px] right-0 mt-5">
-                <a class="w-full px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700 flex items-center gap-3" href="/dashboard/ecommerce">
-                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 dark:text-slate-400" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                  </svg>
+              <!-- Profile Dropdown Starts -->
+              <div class="dropdown">
+                <div class="dropdown-toggle">
+                  <button class="group relative flex items-center space-x-1.5" type="button">
+                    <img
+                      class="block h-9 w-9 rounded-full group-focus:ring group-focus:ring-primary-500"
+                      src="https://avatars.githubusercontent.com/u/1164541?v=4"
+                      alt="avatar"
+                    />
 
-                  <span>Profile</span>
-                </a>
+                    <div class="hidden md:flex md:flex-col">
+                      <span
+                        class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300"
+                      >
+                        John Doe
+                      </span>
 
-                <a class="w-full px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700 flex items-center gap-3" href="/dashboard/ecommerce">
-                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 dark:text-slate-400" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="3"></circle>
-                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                  </svg>
+                      <span class="inline-block text-left text-xs text-slate-400"> Admin </span>
+                    </div>
+                  </button>
+                </div>
 
-                  <span>Settings</span>
-                </a>
+                <div class="dropdown-content right-0 mt-5 w-[180px]">
+                  <a
+                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
+                    href="/dashboard/ecommerce"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-slate-600 dark:text-slate-400"
+                      height="18"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
 
-                <a class="w-full px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700 flex items-center gap-3" href="/dashboard/ecommerce">
-                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 dark:text-slate-400" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                    <polyline points="16 17 21 12 16 7"></polyline>
-                    <line x1="21" y1="12" x2="9" y2="12"></line>
-                  </svg>
+                    <span>Profile</span>
+                  </a>
 
-                  <span>Sign out</span>
-                </a>
+                  <a
+                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
+                    href="/dashboard/ecommerce"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-slate-600 dark:text-slate-400"
+                      height="18"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                      ></path>
+                    </svg>
+
+                    <span>Settings</span>
+                  </a>
+
+                  <a
+                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
+                    href="/dashboard/ecommerce"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-slate-600 dark:text-slate-400"
+                      height="18"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                      <polyline points="16 17 21 12 16 7"></polyline>
+                      <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+
+                    <span>Sign out</span>
+                  </a>
+                </div>
               </div>
+              <!-- Profile Dropdown Ends -->
             </div>
-            <!-- Profile Dropdown Ends -->
+            <!-- Header Options Ends -->
           </div>
-          <!-- Header Options Ends -->
+        </header>
+        <!-- Header Ends -->
+
+        <div class="flex w-full flex-col" style="height: calc(100vh - 4rem)">
+          <!-- Main Content Starts -->
+          <main class="flex-grow overflow-y-auto p-6">
+            <div>
+              <h1 class="text-xl font-semibold">Dashboard</h1>
+              <div class="mt-4 h-96 rounded-primary border-4 border-dashed"></div>
+            </div>
+          </main>
+          <!-- Main Content Ends -->
+
+          <!-- Footer Starts -->
+          <footer class="my-5 flex flex-wrap items-center justify-between px-6 text-slate-500">
+            <p class="text-sm">
+              Copyright © 2023 <a class="text-primary-500 hover:underline" href="https://bdlancers.com">Bdlancers</a>,
+              All right Reserved
+            </p>
+
+            <p class="flex items-center gap-1 text-sm">
+              Hand-crafted &amp; Made with
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-danger-500"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </p>
+          </footer>
+          <!-- Footer Ends -->
         </div>
-      </header>
-      <!-- Header Ends -->
-
-      <div class="w-full flex flex-col overflow-y-auto" style="height: calc(100vh - 4rem);">
-        <!-- Main Content Starts -->
-        <main class="p-6">
-          <h1>Content</h1>
-        </main>
-        <!-- Main Content Ends -->
-
-        <!-- Footer Starts -->
-        <footer class="my-5 mt-auto flex flex-wrap items-center justify-between px-6 text-slate-500">
-          <p class="text-sm">
-            Copyright © 2023 <a class="text-primary-500 hover:underline" href="https://bdlancers.com">Bdlancers</a>, All right Reserved
-          </p>
-          
-          <p class="flex items-center gap-1 text-sm">
-            Hand-crafted &amp; Made with 
-            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-danger-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-            </svg>
-          </p>
-        </footer>
-        <!-- Footer Ends -->
-      </div> 
+      </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>

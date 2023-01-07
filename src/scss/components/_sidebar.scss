@@ -1,12 +1,82 @@
 .sidebar {
+  $sidebar: &;
 
-     @apply w-72 h-screen bg-white dark:bg-slate-800 fixed top-0 bottom-0 z-20 -translate-x-full lg:translate-x-0 transition-all duration-300 ease-in-out shadow-lg;
+  @apply fixed top-0 bottom-0 z-20 h-screen w-72 -translate-x-full bg-white shadow-lg transition-all duration-300 ease-in-out dark:bg-slate-800 lg:translate-x-0;
 
-     &-header {
-          @apply w-full h-16 flex items-center;
-     }
+  &-header {
+    @apply flex h-16 w-full items-center gap-4 px-4;
 
-     &-container {
-          @apply w-full h-full overflow-auto mt-2;
-     }
+    &--logo {
+      @apply inline-block fill-current text-primary-500;
+    }
+
+    &--logo-text {
+      @apply flex flex-col;
+    }
+
+    #{$sidebar}.collapsed &--logo-text {
+      @apply hidden;
+    }
+  }
+
+  &-menu {
+    @apply mt-2 h-full w-full space-y-0.5 overflow-auto;
+
+    > li {
+      @apply px-[18px];
+    }
+
+    &-item {
+      @apply flex w-full items-center gap-2 rounded-primary p-1 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
+
+      &--icon {
+        @apply flex h-9 w-9 min-w-max flex-shrink-0 items-center justify-center text-slate-500 dark:text-slate-400;
+
+        svg {
+          @apply h-5 w-5;
+        }
+      }
+
+      &--arrow {
+        @apply text-slate-600 me-2 ms-auto;
+
+        svg {
+          @apply h-4 w-4;
+        }
+      }
+
+      &--submenu {
+        @apply block rounded-primary py-2 text-sm transition-colors duration-150 ps-12 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
+      }
+
+      &:hover &--icon,
+      &:hover &--arrow {
+        @apply text-primary-500 dark:text-slate-200;
+      }
+
+      &.active {
+        @apply bg-primary-50 text-primary-500 dark:bg-slate-700 dark:text-slate-200;
+      }
+
+      &.active &--icon {
+        @apply rounded-primary bg-primary-500 text-slate-200 dark:bg-primary-500;
+      }
+
+      &.active &--arrow {
+        @apply text-primary-500 dark:text-slate-200;
+      }
+    }
+  }
+
+  &-submenu {
+    @apply mt-0.5 overflow-hidden;
+
+    &-item {
+      @apply block rounded-primary py-2 pl-12 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
+    }
+
+    &-item.active {
+      @apply text-primary-500;
+    }
+  }
 }

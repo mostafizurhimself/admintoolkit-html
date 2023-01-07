@@ -25,6 +25,7 @@
     "tailwindcss-rtl": "^0.9.0"
   },
   "dependencies": {
+    "feather-icons": "^4.29.0",
     "highlight.js": "^11.7.0",
     "js-beautify": "^1.14.7"
   }
