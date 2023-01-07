@@ -23,58 +23,45 @@
       <!-- Page Content Start -->
       <div class="flex-grow">
         <!-- Header Start -->
-        <header class="flex h-16 w-full items-center px-6 shadow">
+        <header class="flex h-16 w-full items-center bg-white px-6 shadow">
           <div>Header</div>
         </header>
         <!-- Header End -->
 
         <!-- Main Start -->
         <main class="bg-slate-50 p-6">
+          <!-- Page Title Start -->
+          <div class="flex">
+            <h1 class="text-xl font-semibold dark:text-slate-300">Card</h1>
+            <ol class="breadcrumb ml-auto">
+              <li class="breadcrumb-item"><a href="">Home</a></li>
+              <li class="breadcrumb-item"><a href="">Components</a></li>
+              <li class="breadcrumb-item"><a href="">Card</a></li>
+            </ol>
+          </div>
+          <!-- Page Title End -->
+
           <!-- Badges Colors -->
-          <div class="card">
+          <div class="card mt-6">
             <div class="card-body">
               <div class="card-title">Badges Colors</div>
               <div class="card-subtitle">
                 <p class="text-sm text-slate-400">
-                  There are six pre defined colors available for buttons. You can set the
-                  <code>color</code> prop value to <code>primary</code>, <code>secondary</code>, <code>success</code>,
-                  <code>danger</code>, <code>warning</code> &amp; <code>info</code>. Default value is
-                  <code>primary</code>.
+                  Used to <code>color</code> class <code>badge-solid--primary</code>,
+                  <code>badge-solid--secondary</code>, <code>badge-solid--success</code>,
+                  <code>badge-solid--danger</code>, <code>badge-solid--warning</code>,
+                  <code>badge-solid--info</code> &amp; <code>badge-solid--dark</code> to create a badge color.
                 </p>
               </div>
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-2">
-                  <div
-                    class="inline-flex items-center rounded-primary bg-primary-500 px-2 py-0.5 text-xs text-primary-100"
-                  >
-                    Primary
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary bg-secondary-500 px-2 py-0.5 text-xs text-secondary-100"
-                  >
-                    Secondary
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary bg-success-500 px-2 py-0.5 text-xs text-success-100"
-                  >
-                    Success
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary bg-danger-500 px-2 py-0.5 text-xs text-danger-100"
-                  >
-                    Danger
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary bg-warning-500 px-2 py-0.5 text-xs text-warning-100"
-                  >
-                    Warning
-                  </div>
-                  <div class="inline-flex items-center rounded-primary bg-info-500 px-2 py-0.5 text-xs text-info-100">
-                    Info
-                  </div>
-                  <div class="inline-flex items-center rounded-primary bg-dark-500 px-2 py-0.5 text-xs text-dark-100">
-                    Dark
-                  </div>
+                  <div class="badge badge-primary--solid">Primary</div>
+                  <div class="badge badge-secondary--solid">Secondary</div>
+                  <div class="badge badge-success--solid">Success</div>
+                  <div class="badge badge-danger--solid">Danger</div>
+                  <div class="badge badge-warning--solid">Warning</div>
+                  <div class="badge badge-info--solid">Info</div>
+                  <div class="badge badge-dark--solid">Dark</div>
                 </div>
               </div>
             </div>
@@ -87,49 +74,21 @@
               <div class="card-title">Outline Badges</div>
               <div class="card-subtitle">
                 <p class="text-sm text-slate-400">
-                  There are six pre defined colors available for buttons. You can set the
-                  <code>color</code> prop value to <code>primary</code>, <code>secondary</code>, <code>success</code>,
-                  <code>danger</code>, <code>warning</code> &amp; <code>info</code>. Default value is
-                  <code>primary</code>.
+                  Use <code>outline</code> class <code>badge-primary--outline</code>,
+                  <code>badge-secondary--outline</code>, <code>badge-success--outline</code>,
+                  <code>badge-warning--outline</code>, <code>badge-info--outline</code>,
+                  <code>badge-dark--outline</code> to create a outlined badge.
                 </p>
               </div>
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-2">
-                  <div
-                    class="inline-flex items-center rounded-primary border border-primary-500 px-2 py-0.5 text-xs text-primary-500"
-                  >
-                    Primary
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary border border-secondary-500 px-2 py-0.5 text-xs text-secondary-500"
-                  >
-                    Secondary
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary border border-success-500 px-2 py-0.5 text-xs text-success-500"
-                  >
-                    Success
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary border border-danger-500 px-2 py-0.5 text-xs text-danger-500"
-                  >
-                    Danger
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary border border-warning-500 px-2 py-0.5 text-xs text-warning-500"
-                  >
-                    Warning
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary border border-info-500 px-2 py-0.5 text-xs text-info-500"
-                  >
-                    Info
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary border border-dark-500 px-2 py-0.5 text-xs text-dark-500"
-                  >
-                    Dark
-                  </div>
+                  <div class="badge badge-primary--outline">Primary</div>
+                  <div class="badge badge-secondary--outline">Secondary</div>
+                  <div class="badge badge-success--outline">Success</div>
+                  <div class="badge badge-danger--outline">Danger</div>
+                  <div class="badge badge-warning--outline">Warning</div>
+                  <div class="badge badge-info--outline">Info</div>
+                  <div class="badge badge-dark--outline">Dark</div>
                 </div>
               </div>
             </div>
@@ -142,45 +101,20 @@
               <div class="card-title">Soft Badges</div>
               <div class="card-subtitle">
                 <p class="text-sm text-slate-400">
-                  There are six pre defined colors available for buttons. You can set the
-                  <code>color</code> prop value to <code>primary</code>, <code>secondary</code>, <code>success</code>,
-                  <code>danger</code>, <code>warning</code> &amp; <code>info</code>. Default value is
-                  <code>primary</code>.
+                  Use <code>soft</code> class <code>badge-primary--soft</code>, <code>badge-secondar--soft</code>,
+                  <code>badge-success--soft</code>, <code>badge-danger--soft</code>, <code>badge-warning--soft</code>,
+                  <code>badge-info--soft</code> &amp; <code>badge-dark--soft</code> to create a soft badge.
                 </p>
               </div>
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-2">
-                  <div
-                    class="inline-flex items-center rounded-primary bg-primary-100 px-2 py-0.5 text-xs text-primary-500"
-                  >
-                    Primary
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary bg-secondary-100 px-2 py-0.5 text-xs text-secondary-500"
-                  >
-                    Secondary
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary bg-success-100 px-2 py-0.5 text-xs text-success-500"
-                  >
-                    Success
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary bg-danger-100 px-2 py-0.5 text-xs text-danger-500"
-                  >
-                    Danger
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary bg-warning-100 px-2 py-0.5 text-xs text-warning-500"
-                  >
-                    Warning
-                  </div>
-                  <div class="inline-flex items-center rounded-primary bg-info-100 px-2 py-0.5 text-xs text-info-500">
-                    Info
-                  </div>
-                  <div class="inline-flex items-center rounded-primary bg-dark-200 px-2 py-0.5 text-xs text-dark-500">
-                    Dark
-                  </div>
+                  <div class="badge badge-primary--soft">Primary</div>
+                  <div class="badge badge-secondary--soft">Secondary</div>
+                  <div class="badge badge-success--soft">Success</div>
+                  <div class="badge badge-danger--soft">Danger</div>
+                  <div class="badge badge-warning--soft">Warning</div>
+                  <div class="badge badge-info--soft">Info</div>
+                  <div class="badge badge-dark--soft">Dark</div>
                 </div>
               </div>
             </div>
@@ -193,49 +127,21 @@
               <div class="card-title">Rounded Badges</div>
               <div class="card-subtitle">
                 <p class="text-sm text-slate-400">
-                  There are six pre defined colors available for buttons. You can set the
-                  <code>color</code> prop value to <code>primary</code>, <code>secondary</code>, <code>success</code>,
-                  <code>danger</code>, <code>warning</code> &amp; <code>info</code>. Default value is
-                  <code>primary</code>.
+                  Use <code>rounded</code> class <code>badge-primary--rounded</code>,
+                  <code>badge-secondary--rounded</code>, <code>badge-success--rounded</code>,
+                  <code>badge-warning--rounded</code>, <code>badge-info--rounded</code> &amp;
+                  <code>badge-dark--rounded</code> to create a rounded badge.
                 </p>
               </div>
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-2">
-                  <div
-                    class="inline-flex items-center rounded-primary rounded-full bg-primary-500 py-0.5 px-3 text-xs text-primary-100"
-                  >
-                    Primary
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary rounded-full bg-secondary-500 py-0.5 px-3 text-xs text-secondary-100"
-                  >
-                    Secondary
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary rounded-full bg-success-500 py-0.5 px-3 text-xs text-success-100"
-                  >
-                    Success
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary rounded-full bg-danger-500 py-0.5 px-3 text-xs text-danger-100"
-                  >
-                    Danger
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary rounded-full bg-warning-500 py-0.5 px-3 text-xs text-warning-100"
-                  >
-                    Warning
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary rounded-full bg-info-500 py-0.5 px-3 text-xs text-info-100"
-                  >
-                    Info
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-primary rounded-full bg-dark-500 py-0.5 px-3 text-xs text-dark-100"
-                  >
-                    Dark
-                  </div>
+                  <div class="badge badge-primary--rounded">Primary</div>
+                  <div class="badge badge-secondary--rounded">Secondary</div>
+                  <div class="badge badge-success--rounded">Success</div>
+                  <div class="badge badge-danger--rounded">Danger</div>
+                  <div class="badge badge-warning--rounded">Warning</div>
+                  <div class="badge badge-info--rounded">Info</div>
+                  <div class="badge badge-dark--rounded">Dark</div>
                 </div>
               </div>
             </div>
@@ -247,12 +153,7 @@
             <div class="card-body">
               <div class="card-title">Badge With Icon</div>
               <div class="card-subtitle">
-                <p class="text-sm text-slate-400">
-                  There are six pre defined colors available for buttons. You can set the
-                  <code>color</code> prop value to <code>primary</code>, <code>secondary</code>, <code>success</code>,
-                  <code>danger</code>, <code>warning</code> &amp; <code>info</code>. Default value is
-                  <code>primary</code>.
-                </p>
+                <p class="text-sm text-slate-400">Use <code>icon</code> class to create a icon badge.</p>
               </div>
               <div class="code-viewer mt-4">
                 <div class="flex flex-wrap items-center gap-2">
