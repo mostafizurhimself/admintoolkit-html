@@ -13,8 +13,9 @@ dropdown.init();
 
 // Initialize accordions
 accordion.init();
-theme.init();
 
+// Initialize theme
+theme.init();
 
 // Initialize sidebar
 sidebar.init();
