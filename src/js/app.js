@@ -1,5 +1,6 @@
 import dropdown from './dropdown';
 import accordion from './accordion';
+import theme from './theme';
 import highlightCode from './highlight';
 import sidebar from './sidebar';
 import feather from 'feather-icons';
@@ -12,6 +13,9 @@ dropdown.init();
 
 // Initialize accordions
 accordion.init();
+
+// Initialize theme
+theme.init();
 
 // Initialize sidebar
 sidebar.init();

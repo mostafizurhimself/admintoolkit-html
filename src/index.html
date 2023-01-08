@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,23 +13,18 @@
     <div id="app" class="min-h-screen w-full">
       <!-- Sidebar Starts -->
       <aside class="sidebar">
-        <!-- sidebar header -->
+        <!-- Sidebar Header Starts -->
         <div class="sidebar-header">
-          <svg
-            class="sidebar-header--logo"
-            fill="currentColor"
-            width="45"
-            height="45"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 48 48"
-          >
-            <path
-              d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z"
-            ></path>
-            <path
-              d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z"
-            ></path>
-          </svg>
+          <span class="sidebar-header--logo">
+            <svg fill="currentColor" width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+              <path
+                d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z"
+              ></path>
+              <path
+                d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z"
+              ></path>
+            </svg>
+          </span>
 
           <div class="sidebar-header--logo-text">
             <h1 class="flex text-xl">
@@ -40,8 +35,9 @@
             <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
           </div>
         </div>
+        <!-- Sidebar Header Ends -->
 
-        <!-- sidebar container starts -->
+        <!-- Sidebar Menu Starts -->
         <ul class="sidebar-menu">
           <!-- Dashboard -->
           <li>
@@ -49,7 +45,7 @@
               <span class="sidebar-menu-item--icon">
                 <i data-feather="home"></i>
               </span>
-              <span class="sidebar-menu-item--label">Dashboard</span>
+              <span class="sidebar-menu-item--text">Dashboard</span>
               <span class="sidebar-menu-item--arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -64,7 +60,7 @@
             </ul>
           </li>
 
-          <div class="pt-4 pb-2 pl-7 text-xs uppercase tracking-widest text-slate-400">Applications</div>
+          <div class="sidebar-menu-header">Applications</div>
 
           <!-- Email -->
           <li>
@@ -72,7 +68,7 @@
               <span class="sidebar-menu-item--icon">
                 <i data-feather="mail"></i>
               </span>
-              <span class="sidebar-menu-item--label">Email</span>
+              <span class="sidebar-menu-item--text">Email</span>
             </a>
           </li>
 
@@ -82,7 +78,7 @@
               <span class="sidebar-menu-item--icon">
                 <i data-feather="file-text"></i>
               </span>
-              <span class="sidebar-menu-item--label">Invoice</span>
+              <span class="sidebar-menu-item--text">Invoice</span>
               <span class="sidebar-menu-item--arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -100,33 +96,36 @@
             </ul>
           </li>
         </ul>
+        <!-- Sidebar Menu Ends -->
       </aside>
       <!-- Sidebar Ends -->
 
-      <!-- main content starts -->
-      <div class="flex flex-1 flex-col transition-margin duration-300 ease-in-out lg:ml-72">
+      <!-- Wrapper Starts -->
+      <div class="wrapper">
         <!-- Header Starts -->
-        <header id="header" class="flex h-16 w-full items-center bg-white drop-shadow-sm dark:bg-slate-800">
+        <header class="header">
           <div class="container-fluid flex items-center justify-between">
             <!-- Sidebar Toggle & Search Starts -->
             <div class="flex items-center space-x-6">
-              <button class="text-slate-600 dark:text-slate-400">
-                <svg
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  height="22"
-                  width="22"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  ></path>
-                </svg>
+              <button class="sidebar-toggle">
+                <span>
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    height="22"
+                    width="22"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    ></path>
+                  </svg>
+                </span>
               </button>
 
               <form
@@ -315,25 +314,12 @@
               <!-- Dark Mood Toggle Starts -->
               <div class="flex">
                 <button
+                  id="btn-theme-mode"
                   class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
                   type="button"
                 >
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 16 16"
-                    height="20"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
-                    ></path>
-                    <path
-                      d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
-                    ></path>
-                  </svg>
+                  <i class="block dark:hidden" width="22" height="22" data-feather="moon"></i>
+                  <i class="hidden dark:block" width="22" height="22" data-feather="sun"></i>
                 </button>
               </div>
               <!-- Dark Mood Toggle Ends -->
@@ -697,7 +683,8 @@
         </header>
         <!-- Header Ends -->
 
-        <div class="flex w-full flex-col" style="height: calc(100vh - 4rem)">
+        <!-- Page Content Starts -->
+        <div class="content">
           <!-- Main Content Starts -->
           <main class="flex-grow overflow-y-auto p-6">
             <div>
@@ -708,7 +695,7 @@
           <!-- Main Content Ends -->
 
           <!-- Footer Starts -->
-          <footer class="my-5 flex flex-wrap items-center justify-between px-6 text-slate-500">
+          <footer class="footer">
             <p class="text-sm">
               Copyright © 2023 <a class="text-primary-500 hover:underline" href="https://bdlancers.com">Bdlancers</a>,
               All right Reserved
@@ -736,7 +723,9 @@
           </footer>
           <!-- Footer Ends -->
         </div>
+        <!-- Page Content Ends -->
       </div>
+      <!-- Wrapper Ends -->
     </div>
   </body>
 </html>

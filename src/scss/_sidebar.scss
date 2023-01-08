@@ -1,13 +1,25 @@
 .sidebar {
   $sidebar: &;
 
-  @apply fixed top-0 bottom-0 z-20 h-screen w-72 -translate-x-full bg-white shadow-lg transition-all duration-300 ease-in-out dark:bg-slate-800 lg:translate-x-0;
+  @apply fixed top-0 bottom-0 z-20 h-screen w-72 -translate-x-full overflow-hidden bg-white shadow-lg transition-all duration-300 ease-in-out dark:bg-slate-800  lg:translate-x-0;
+
+  &.collapsed {
+    @apply lg:w-20;
+
+    &.hovered {
+      @apply w-72;
+    }
+  }
+
+  &.expanded {
+    @apply translate-x-0;
+  }
 
   &-header {
     @apply flex h-16 w-full items-center gap-4 px-4;
 
     &--logo {
-      @apply inline-block fill-current text-primary-500;
+      @apply inline-block flex-shrink-0 fill-current text-primary-500;
     }
 
     &--logo-text {
@@ -16,6 +28,10 @@
 
     #{$sidebar}.collapsed &--logo-text {
       @apply hidden;
+    }
+
+    #{$sidebar}.collapsed.hovered &--logo-text {
+      @apply flex;
     }
   }
 
@@ -65,6 +81,22 @@
       &.active &--arrow {
         @apply text-primary-500 dark:text-slate-200;
       }
+
+      #{$sidebar}.collapsed &--text {
+        @apply hidden;
+      }
+
+      #{$sidebar}.collapsed.hovered &--text {
+        @apply block;
+      }
+
+      #{$sidebar}.collapsed &--arrow {
+        @apply hidden;
+      }
+
+      #{$sidebar}.collapsed.hovered &--arrow {
+        @apply block;
+      }
     }
   }
 
@@ -77,6 +109,38 @@
 
     &-item.active {
       @apply text-primary-500;
+    }
+  }
+
+  &-menu-header {
+    @apply pt-4 pb-2 pl-7 text-xs uppercase tracking-widest text-slate-400;
+  }
+
+  &-toggle {
+    @apply text-slate-600 dark:text-slate-400;
+  }
+
+  &.collapsed &-submenu {
+    @apply hidden;
+  }
+
+  &.collapsed.hovered &-submenu {
+    @apply block;
+  }
+
+  &.collapsed &-menu-header {
+    @apply hidden;
+  }
+
+  &.collapsed.hovered &-menu-header {
+    @apply block;
+  }
+
+  &-overlay {
+    @apply invisible fixed inset-0 z-10 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out lg:hidden;
+
+    &.active {
+      @apply visible;
     }
   }
 }

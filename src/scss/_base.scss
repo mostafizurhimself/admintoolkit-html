@@ -1,0 +1,7 @@
+body {
+  @apply bg-slate-50 text-slate-700  dark:bg-slate-900 dark:text-slate-200;
+}
+
+code {
+  @apply rounded bg-slate-100 p-1 text-xs tracking-wide text-slate-500 dark:bg-slate-600 dark:text-slate-300;
+}
