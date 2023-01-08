@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/app.scss" />
+    <script type="module" src="./js/app.js"></script>
+  </head>
+  <body>
+    <div class="flex h-screen">
+      <!-- Sidebar Start -->
+      <aside id="sidebar" class="w-64 flex-shrink-0 bg-primary-500">
+        <div id="sidebar-header">
+          <div id="sidebar-header-title">Sidebar</div>
+        </div>
+        <div id="sidebar-content">
+          <div id="sidebar-content-title">Content</div>
+        </div>
+      </aside>
+      <!-- Sidebar End -->
+
+      <!-- Page Content Start -->
+      <div class="flex-grow">
+        <!-- Header Start -->
+        <header class="flex h-16 w-full items-center bg-white px-6 shadow">
+          <div>Header</div>
+        </header>
+        <!-- Header End -->
+
+        <!-- Main Start -->
+        <main class="bg-slate-50 p-6">
+          <!-- Page Title Start -->
+          <div class="flex">
+            <h1 class="text-xl font-semibold dark:text-slate-300">Input</h1>
+            <ol class="breadcrumb ml-auto">
+              <li class="breadcrumb-item"><a href="">Home</a></li>
+              <li class="breadcrumb-item"><a href="">Components</a></li>
+              <li class="breadcrumb-item"><a href="">Input</a></li>
+            </ol>
+          </div>
+          <!-- Page Title End -->
+
+          <!-- Basic Input Start -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <h4 class="card-title">Basic Input</h4>
+              <p class="card-subtitle">You can create a input by using the<code>input</code> component</p>
+              <div class="code-viewer mt-6">
+                <input type="text" class="input" placeholder="Basic Input" />
+
+                <div class="mt-4">
+                  <input type="text" class="input" placeholder="Helper Text" />
+                  <div class="help-text mt-1">Here you can provide some helper text to fill the input</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Basic Input End -->
+
+          <!-- Input With Label Start -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <h4 class="card-title">Input With Label</h4>
+              <p class="card-subtitle">You can create a input with label by using the<code>Label</code> component</p>
+              <div class="code-viewer mt-6">
+                <label for="email" class="text-sm font-medium dark:text-slate-300"
+                  >Email
+                  <span class="text-danger-500 ms-1">*</span>
+                </label>
+                <input type="email" class="input mt-1" id="email" placeholder="Enter your email" />
+              </div>
+            </div>
+          </div>
+          <!-- Input With Label End -->
+
+          <!-- Input Sizes Start -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <h4 class="card-title">Input Sizes</h4>
+              <p class="card-subtitle">
+                Use the<code>inputSize</code> class <code>text-xs</code>, <code>text-sm</code>,
+                <code>text-base</code>.The Default Size is <code>text-sm</code>
+                <code>text-sm</code>
+              </p>
+              <div class="code-viewer mt-6">
+                <input type="text" class="input input-sm leading-5 placeholder:text-xs" placeholder="Small Input" />
+
+                <input type="text" class="input mt-4" placeholder="Default Input" />
+
+                <input type="text" class="input input-lg mt-4" placeholder="Large Input" />
+              </div>
+            </div>
+          </div>
+          <!-- Input Sizes End -->
+
+          <!-- Disabled Input Start -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <h4 class="card-title">Disabled Input</h4>
+              <p class="card-subtitle">You can disable the input by using the<code>disabled</code> component</p>
+              <div class="code-viewer mt-6">
+                <input type="text" class="input" disabled="" placeholder="Disabled Input" />
+              </div>
+            </div>
+          </div>
+          <!-- Disabled Input End -->
+
+          <!-- Valid Input Start -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <h4 class="card-title">Valid Input</h4>
+              <p class="card-subtitle">Use <code>isValid</code> class create a valid input</p>
+              <div class="code-viewer mt-6">
+                <input type="text" class="input input-valid" placeholder="Valid Input" value="John Doe" />
+                <p class="success-message mt-1">Looks good</p>
+              </div>
+            </div>
+          </div>
+          <!-- Valid Input End -->
+
+          <!-- Invalid Input Start -->
+          <div class="card mt-6">
+            <div class="card-body">
+              <h4 class="card-title">Invalid Input</h4>
+              <p class="card-subtitle">Use <code>inValid</code> create a invalid input</p>
+              <div class="code-viewer mt-6">
+                <input type="text" class="input invalid" placeholder="Invalid Input" />
+                <div class="error-message mt-1">This field is required</div>
+              </div>
+            </div>
+          </div>
+          <!-- Invalid Input End -->
+        </main>
+        <!-- Main End -->
+
+        <!-- Footer Start -->
+        <footer class="h-10 items-center">Copyright 2020</footer>
+      </div>
+      <!-- Page Content Star -->
+    </div>
+  </body>
+</html>

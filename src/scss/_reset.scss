@@ -1,3 +1,18 @@
 .simplebar-scrollbar:before {
   @apply w-1.5 bg-slate-300 dark:bg-slate-900;
 }
+
+code {
+  @apply rounded bg-slate-100 p-1 text-xs tracking-wide text-slate-500 dark:bg-slate-600 dark:text-slate-300;
+}
+
+.help-text {
+  @apply text-xs font-light text-slate-400;
+}
+
+.success-message {
+  @apply text-xs text-success-500;
+}
+.error-message {
+  @apply text-xs text-danger-600;
+}
