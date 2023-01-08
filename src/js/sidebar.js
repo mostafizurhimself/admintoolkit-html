@@ -1,7 +1,7 @@
 const sidebar = {
   wrapper: document.querySelector('.wrapper'),
   sidebar: document.querySelector('.sidebar'),
-  sidebarMenu: document.querySelector('.sidebar-menu'),
+  menuItems: document.querySelectorAll('.sidebar-menu'),
   sidebarToggle: document.querySelector('.sidebar-toggle'),
 
   init() {
@@ -14,12 +14,10 @@ const sidebar = {
   },
 
   initMenuItems() {
-    const menuItems = this.sidebarMenu.querySelectorAll('.sidebar-menu-item');
-
-    menuItems.forEach((menuItem) => {
+    this.menuItems.forEach((menuItem) => {
       const parent = menuItem.parentElement;
       const submenu = parent.querySelector('.sidebar-submenu');
-      const arrow = menuItem.querySelector('.sidebar-menu-item--arrow');
+      const arrow = menuItem.querySelector('.sidebar-menu-arrow');
 
       if (submenu) {
         menuItem.addEventListener('click', (e) => {
