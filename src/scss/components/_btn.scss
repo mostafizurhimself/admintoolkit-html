@@ -54,115 +54,115 @@
       }
     }
 
-    &-primary--solid {
+    &-primary {
       @apply bg-primary-500 text-white focus:bg-primary-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
     }
 
-    &-secondary--solid {
+    &-secondary {
       @apply bg-secondary-500 text-white focus:bg-secondary-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
     }
 
-    &-success--solid {
+    &-success {
       @apply bg-success-500 text-white focus:bg-success-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
     }
 
-    &-info--solid {
+    &-info {
       @apply bg-info-500 text-white focus:bg-info-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
     }
 
-    &-warning--solid {
+    &-warning {
       @apply bg-warning-500 text-white focus:bg-warning-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
     }
 
-    &-danger--solid {
+    &-danger {
       @apply bg-danger-500 text-white focus:bg-danger-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
     }
 
-    &-dark--solid {
+    &-dark {
       @apply bg-dark-500 text-white focus:bg-dark-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
     }
 
-    &-primary--outline {
+    &-outline-primary {
       @apply border border-primary-500 text-primary-500 focus:border-primary-600 focus:bg-primary-100 focus:text-primary-600 enabled:hover:bg-primary-100 dark:enabled:hover:bg-primary-500 dark:enabled:hover:text-slate-200;
     }
 
-    &-secondary--outline {
+    &-outline-secondary {
       @apply border border-secondary-500 text-secondary-500 focus:border-secondary-600 focus:bg-secondary-100 focus:text-secondary-600 enabled:hover:bg-secondary-100 dark:enabled:hover:bg-secondary-500 dark:enabled:hover:text-slate-200;
     }
 
-    &-success--outline {
+    &-outline-success {
       @apply border border-success-500 text-success-500 focus:border-success-600 focus:bg-success-100 focus:text-success-600 enabled:hover:bg-success-100 dark:enabled:hover:bg-success-500 dark:enabled:hover:text-slate-200;
     }
 
-    &-info--outline {
+    &-outline-info {
       @apply border border-info-500 text-info-500 focus:border-info-600 focus:bg-info-100 focus:text-info-600 enabled:hover:bg-info-100 dark:enabled:hover:bg-info-500 dark:enabled:hover:text-slate-200;
     }
 
-    &-warning--outline {
+    &-outline-warning {
       @apply border border-warning-500 text-warning-500 focus:border-warning-600 focus:bg-warning-100 focus:text-warning-600 enabled:hover:bg-warning-100 dark:enabled:hover:bg-warning-500 dark:enabled:hover:text-slate-200;
     }
 
-    &-danger--outline {
+    &-outline-danger {
       @apply border border-danger-500 text-danger-500 focus:border-danger-600 focus:bg-danger-100 focus:text-danger-600 enabled:hover:bg-danger-100 dark:enabled:hover:bg-danger-500 dark:enabled:hover:text-slate-200;
     }
 
-    &-dark--outline {
+    &-outline-dark {
       @apply border border-dark-500 text-dark-500 focus:border-dark-600 focus:bg-dark-100 focus:text-dark-600 enabled:hover:bg-dark-100 dark:enabled:hover:bg-dark-500 dark:enabled:hover:text-slate-200;
     }
 
-    &-primary--plain {
+    &-plain-primary {
       @apply text-primary-500 focus:bg-primary-100 focus:text-primary-600 enabled:hover:bg-primary-100;
     }
 
-    &-secondary--plain {
+    &-plain-secondary {
       @apply text-secondary-500 focus:bg-secondary-100 focus:text-secondary-600 enabled:hover:bg-secondary-100;
     }
 
-    &-success--plain {
+    &-plain-success {
       @apply text-success-500 focus:bg-success-100 focus:text-success-600 enabled:hover:bg-success-100;
     }
 
-    &-info--plain {
+    &-plain-info {
       @apply text-info-500 focus:bg-info-100 focus:text-info-600 enabled:hover:bg-info-100;
     }
 
-    &-warning--plain {
+    &-plain-warning {
       @apply text-warning-500 focus:bg-warning-100 focus:text-warning-600 enabled:hover:bg-warning-100;
     }
 
-    &-danger--plain {
+    &-plain-danger {
       @apply text-danger-500 focus:bg-danger-100 focus:text-danger-600 enabled:hover:bg-danger-100;
     }
 
-    &-dark--plain {
+    &-plain-dark {
       @apply text-dark-500 focus:bg-dark-100 focus:text-dark-600 enabled:hover:bg-dark-200;
     }
 
-    &-primary--soft {
+    &-soft-primary {
       @apply bg-primary-100 text-primary-500 focus:bg-primary-200 focus:text-primary-600 enabled:hover:bg-primary-200 dark:bg-primary-900 dark:text-primary-200 dark:enabled:hover:bg-primary-800;
     }
 
-    &-secondary--soft {
+    &-soft-secondary {
       @apply bg-secondary-100 text-secondary-500 focus:bg-secondary-200 focus:text-secondary-600 enabled:hover:bg-secondary-200 dark:bg-secondary-700 dark:text-secondary-200 dark:enabled:hover:bg-secondary-600;
     }
 
-    &-success--soft {
+    &-soft-success {
       @apply bg-success-100 text-success-500 focus:bg-success-200 focus:text-success-600 enabled:hover:bg-success-200 dark:bg-success-800 dark:text-success-200 dark:enabled:hover:bg-success-700;
     }
 
-    &-info--soft {
+    &-soft-info {
       @apply bg-info-100 text-info-500 focus:bg-info-200 focus:text-info-600 enabled:hover:bg-info-200 dark:bg-info-800 dark:text-info-200 dark:enabled:hover:bg-info-700;
     }
 
-    &-warning--soft {
+    &-soft-warning {
       @apply bg-warning-100 text-warning-500 focus:bg-warning-200 focus:text-warning-600 enabled:hover:bg-warning-200 dark:bg-warning-800 dark:text-warning-200 dark:enabled:hover:bg-warning-700;
     }
 
-    &-danger--soft {
+    &-soft-danger {
       @apply bg-danger-100 text-danger-500 focus:bg-danger-200 focus:text-danger-600 enabled:hover:bg-danger-200 dark:bg-danger-900 dark:text-danger-300 dark:enabled:hover:bg-danger-800;
     }
 
-    &-dark--soft {
+    &-soft-dark {
       @apply bg-dark-200 text-dark-500 focus:bg-dark-300 focus:text-dark-600 enabled:hover:bg-dark-300 dark:bg-dark-800 dark:text-dark-200 dark:enabled:hover:bg-dark-700;
     }
   }
