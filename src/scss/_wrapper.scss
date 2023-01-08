@@ -10,7 +10,7 @@
   }
 
   .content {
-    @apply flex w-full flex-col;
+    @apply flex w-full flex-col overflow-y-auto;
 
     height: calc(100vh - 4rem);
   }
