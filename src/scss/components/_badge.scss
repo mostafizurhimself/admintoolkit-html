@@ -2,116 +2,92 @@
   .badge {
     @apply inline-flex items-center rounded-primary px-2 py-0.5 text-xs;
 
-    &-primary--solid {
+    &-primary {
       @apply bg-primary-500 text-primary-100;
     }
 
-    &-secondary--solid {
+    &-secondary {
       @apply bg-secondary-500 text-secondary-100;
     }
 
-    &-success--solid {
+    &-success {
       @apply bg-success-500 text-success-100;
     }
 
-    &-danger--solid {
+    &-danger {
       @apply bg-danger-500 text-danger-100;
     }
 
-    &-warning--solid {
+    &-warning {
       @apply bg-warning-500 text-warning-100;
     }
 
-    &-info--solid {
+    &-info {
       @apply bg-info-500 text-info-100;
     }
 
-    &-dark--solid {
+    &-dark {
       @apply bg-dark-500 text-dark-100;
     }
 
-    &-primary--outline {
+    &-outline-primary {
       @apply border border-primary-500 text-primary-500;
     }
 
-    &-secondary--outline {
+    &-outline-secondary {
       @apply border border-secondary-500 text-secondary-500;
     }
 
-    &-success--outline {
+    &-outline-success {
       @apply border border-success-500 text-success-500;
     }
 
-    &-danger--outline {
+    &-outline-danger {
       @apply border border-danger-500 text-danger-500;
     }
 
-    &-warning--outline {
+    &-outline-warning {
       @apply border border-warning-500 text-warning-500;
     }
 
-    &-info--outline {
+    &-outline-info {
       @apply border border-info-500 text-info-500;
     }
 
-    &-dark--outline {
+    &-outline-dark {
       @apply border border-dark-500 text-dark-500;
     }
 
-    &-primary--soft {
+    &-soft-primary {
       @apply bg-primary-100 text-primary-500;
     }
 
-    &-secondary--soft {
+    &-soft-secondary {
       @apply bg-secondary-100 text-secondary-500;
     }
 
-    &-success--soft {
+    &-soft-success {
       @apply bg-success-100 text-success-500;
     }
 
-    &-danger--soft {
+    &-soft-danger {
       @apply bg-danger-100 text-danger-500;
     }
 
-    &-warning--soft {
+    &-soft-warning {
       @apply bg-warning-100 text-warning-500;
     }
 
-    &-info--soft {
+    &-soft-info {
       @apply bg-info-100 text-info-500;
     }
 
-    &-dark--soft {
+    &-soft-dark {
       @apply bg-dark-200 text-dark-500;
     }
 
-    &-primary--rounded {
-      @apply rounded-full bg-primary-500 px-3 text-primary-100;
-    }
-
-    &-secondary--rounded {
-      @apply rounded-full bg-secondary-500 px-3 text-secondary-100;
-    }
-
-    &-success--rounded {
-      @apply rounded-full bg-success-500 px-3 text-success-100;
-    }
-
-    &-danger--rounded {
-      @apply rounded-full bg-danger-500 px-3 text-danger-100;
-    }
-
-    &-warning--rounded {
-      @apply rounded-full bg-warning-500 px-3 text-warning-100;
-    }
-
-    &-info--rounded {
-      @apply rounded-full bg-info-500 px-3 text-info-100;
-    }
-
-    &-dark--rounded {
-      @apply rounded-full bg-dark-500 px-3 text-dark-100;
+    &-rounded {
+      @apply rounded-full px-3;
     }
   }
 }

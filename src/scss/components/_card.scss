@@ -2,18 +2,6 @@
   .card {
     @apply w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800;
 
-    &-fixed {
-      @apply w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800 sm:w-72;
-    }
-
-    &-clickable {
-      @apply w-full cursor-pointer overflow-hidden rounded-primary bg-white shadow transition-all duration-300 hover:shadow-lg dark:bg-slate-800 sm:w-72;
-    }
-
-    &-media {
-      @apply w-full cursor-pointer overflow-hidden rounded-primary bg-white shadow transition-all duration-300 hover:shadow-lg dark:bg-slate-800 sm:w-96;
-    }
-
     &-header {
       @apply border-b px-6 py-4 dark:border-slate-700;
     }
@@ -24,6 +12,10 @@
 
     &-title {
       @apply text-lg font-semibold;
+    }
+
+    &-subtitle {
+      @apply text-sm text-slate-500 dark:text-slate-400;
     }
 
     &-content {
@@ -80,6 +72,10 @@
 
     &.card-indigo &-content {
       @apply text-primary-100;
+    }
+
+    &.card-bordered {
+      @apply border border-slate-200 shadow-none dark:border-slate-700;
     }
   }
 }

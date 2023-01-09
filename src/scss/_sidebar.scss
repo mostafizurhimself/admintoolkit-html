@@ -17,86 +17,86 @@
 
   &-header {
     @apply flex h-16 w-full items-center gap-4 px-4;
-
-    &--logo {
-      @apply inline-block flex-shrink-0 fill-current text-primary-500;
-    }
-
-    &--logo-text {
-      @apply flex flex-col;
-    }
-
-    #{$sidebar}.collapsed &--logo-text {
-      @apply hidden;
-    }
-
-    #{$sidebar}.collapsed.hovered &--logo-text {
-      @apply flex;
-    }
   }
 
-  &-menu {
+  &-logo-icon {
+    @apply inline-block flex-shrink-0 fill-current text-primary-500;
+  }
+
+  &-logo-text {
+    @apply flex flex-col;
+  }
+
+  &.collapsed &-logo-text {
+    @apply hidden;
+  }
+
+  &.collapsed.hovered &-logo-text {
+    @apply flex;
+  }
+
+  &-content {
     @apply mt-2 h-full w-full space-y-0.5 overflow-auto;
 
     > li {
       @apply px-[18px];
     }
+  }
 
-    &-item {
-      @apply flex w-full items-center gap-2 rounded-primary p-1 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
+  &-menu {
+    @apply flex w-full items-center gap-2 rounded-primary p-1 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
 
-      &--icon {
-        @apply flex h-9 w-9 min-w-max flex-shrink-0 items-center justify-center text-slate-500 dark:text-slate-400;
+    &-icon {
+      @apply flex h-9 w-9 min-w-max flex-shrink-0 items-center justify-center text-slate-500 dark:text-slate-400;
 
-        svg {
-          @apply h-5 w-5;
-        }
+      svg {
+        @apply h-5 w-5;
       }
+    }
 
-      &--arrow {
-        @apply text-slate-600 transition-transform duration-150 me-2 ms-auto;
+    &-arrow {
+      @apply text-slate-600 transition-transform duration-150 me-2 ms-auto;
 
-        svg {
-          @apply h-4 w-4;
-        }
+      svg {
+        @apply h-4 w-4;
       }
+    }
 
-      &--arrow.rotate {
-        @apply rotate-90 transform;
-      }
+    &-arrow.rotate {
+      @apply rotate-90 transform;
+    }
 
-      &:hover &--icon,
-      &:hover &--arrow {
-        @apply text-primary-500 dark:text-slate-200;
-      }
+    &:hover &-icon,
+    &:hover &-arrow {
+      @apply text-primary-500 dark:text-slate-200;
+    }
 
-      &.active {
-        @apply bg-primary-50 text-primary-500 dark:bg-slate-700 dark:text-slate-200;
-      }
+    &.active {
+      @apply bg-primary-50 text-primary-500 dark:bg-slate-700 dark:text-slate-200;
+    }
 
-      &.active &--icon {
-        @apply rounded-primary bg-primary-500 text-slate-200 dark:bg-primary-500;
-      }
+    &.active &-icon {
+      @apply rounded-primary bg-primary-500 text-slate-200 dark:bg-primary-500;
+    }
 
-      &.active &--arrow {
-        @apply text-primary-500 dark:text-slate-200;
-      }
+    &.active &-arrow {
+      @apply text-primary-500 dark:text-slate-200;
+    }
 
-      #{$sidebar}.collapsed &--text {
-        @apply hidden;
-      }
+    #{$sidebar}.collapsed &--text {
+      @apply hidden;
+    }
 
-      #{$sidebar}.collapsed.hovered &--text {
-        @apply block;
-      }
+    #{$sidebar}.collapsed.hovered &--text {
+      @apply block;
+    }
 
-      #{$sidebar}.collapsed &--arrow {
-        @apply hidden;
-      }
+    #{$sidebar}.collapsed &-arrow {
+      @apply hidden;
+    }
 
-      #{$sidebar}.collapsed.hovered &--arrow {
-        @apply block;
-      }
+    #{$sidebar}.collapsed.hovered &-arrow {
+      @apply block;
     }
   }
 
