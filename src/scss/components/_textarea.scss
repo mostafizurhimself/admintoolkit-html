@@ -1,0 +1,19 @@
+.textarea {
+  @apply inline-flex w-full overflow-hidden rounded-primary border border-slate-300 bg-transparent text-sm placeholder-slate-400 placeholder:text-sm focus:border-primary-500 focus:ring-1 focus:ring-primary-500 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 dark:border-slate-600 dark:placeholder-slate-500 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
+
+  &-valid {
+    @apply border-success-500 focus:border-success-500 focus:ring-1 focus:ring-success-500 dark:border-success-500 dark:focus:border-success-500 dark:focus:ring-success-500;
+  }
+
+  &-invalid {
+    @apply border-danger-500 focus:border-danger-500 focus:ring-1 focus:ring-danger-500 dark:border-danger-500 dark:focus:border-danger-500 dark:focus:ring-danger-500;
+  }
+
+  &-md {
+    @apply placeholder:text-base;
+  }
+
+  &-lg {
+    @apply placeholder:text-lg;
+  }
+}
