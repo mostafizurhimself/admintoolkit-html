@@ -8,14 +8,19 @@
   }
 
   &-footer {
-    @apply px-6 py-4;
+    @apply border-t dark:border-slate-700 px-6 py-3;
 
     pre {
-      @apply overflow-hidden whitespace-nowrap rounded;
+      @apply mt-4 overflow-hidden overflow-x-auto whitespace-nowrap rounded;
 
       code {
-        @apply whitespace-pre-wrap text-base;
+        @apply w-full min-w-max relative whitespace-pre-wrap text-base dark:bg-slate-900;
       }
     }
   }
+
+  &-btn-copy {
+    @apply p-2 text-xs bg-transparent text-primary-500;
+  }
+
 }
