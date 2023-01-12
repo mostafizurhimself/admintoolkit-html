@@ -32,7 +32,7 @@ const highlightCode = {
       hljs.highlightBlock(code);
 
       // Add copy to clipboard functionality
-      const copyBtn = codeViewer.querySelector('.code-viewer-btn-copy');
+      const copyBtn = codeViewer.querySelector('#btn-copy');
 
       copyBtn.addEventListener('click', () => {
 
@@ -44,16 +44,23 @@ const highlightCode = {
 
           // Copy the source code to clipboard
           navigator.clipboard.writeText(originalSourceCode);
-            
-          // Change the icon copy to check
-          copyBtn.innerHTML = feather.icons.check.toSvg();
+
+          // Add success class
+          copyBtn.classList.add('btn-copy-success');
+
+          // Change button's default html
+          copyBtn.innerHTML = `${feather.icons['check-circle'].toSvg({width: '1em', height: '1em'})} <span>Copied</span>`;
           
           // Change the icon check to copy after 1000ms
           setTimeout(() => {
 
-            copyBtn.innerHTML = feather.icons.copy.toSvg();
-            
-          }, 1000);
+            // Remove success class
+            copyBtn.classList.remove('btn-copy-success');
+
+            // Set button's default html
+            copyBtn.innerHTML = `${feather.icons.copy.toSvg({width: '1em', height: '1em'})} <span>Copy</span>`;
+
+          }, 1200);
           
         }
         
@@ -97,8 +104,9 @@ const highlightCode = {
     const button =  document.createElement('button');
     button.setAttribute('type','button');
     button.setAttribute('title','Copy to clipboard');
-    button.classList.add('code-viewer-btn-copy', 'invisible');
-    button.innerHTML = feather.icons.copy.toSvg();
+    button.setAttribute('id','btn-copy');
+    button.classList.add('btn-copy', 'invisible');
+    button.innerHTML = `${feather.icons.copy.toSvg({ width: '1em', height: '1em' })} <span>Copy</span>`;
     return button;
   },
 
