@@ -1,519 +1,777 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./scss/app.scss" />
-    <script type="module" src="./js/app.js"></script>
-  </head>
-  <body>
-    <div class="flex h-screen">
-      <!-- Sidebar Start -->
-      <aside id="sidebar" class="w-64 flex-shrink-0 bg-primary-500">
-        <div id="sidebar-header">
-          <div id="sidebar-header-title">Sidebar</div>
-        </div>
-        <div id="sidebar-content">
-          <div id="sidebar-content-title">Content</div>
-        </div>
-      </aside>
-      <!-- Sidebar End -->
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Buttons - Admin Toolkit</title>
+          <link rel="stylesheet" href="./scss/app.scss" />
+          <script type="module" src="./js/app.js"></script>
+     </head>
+     <body>
+          <div id="app" class="min-h-screen w-full">
+               <!-- Sidebar Starts -->
+               <aside class="sidebar">
+                    <!-- Sidebar Header Starts -->
+                    <div class="sidebar-header">
+                         <span class="sidebar-logo-icon">
+                              <svg fill="currentColor" width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                                   <path
+                                        d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z">
+                                   </path>
+                                   <path
+                                        d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z">
+                                   </path>
+                              </svg>
+                         </span>
+               
+                         <div class="sidebar-logo-text">
+                              <h1 class="flex text-xl">
+                                   <span class="font-bold text-slate-800 dark:text-slate-200">Admin</span>
+                                   <span class="font-semibold text-primary-500">Toolkit</span>
+                              </h1>
+                              
+                              <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+                         </div>
+                    </div>
+                    <!-- Sidebar Header Ends -->
+               
+                    <!-- Sidebar Menu Starts -->
+                    <ul class="sidebar-content">
+                         <!-- Dashboard -->
+                         <li>
+                              <a href="javascript:void(0);" class="sidebar-menu active">
+                                   <span class="sidebar-menu-icon">
+                                        <i data-feather="home"></i>
+                                   </span>
+                                   <span class="sidebar-menu--text">Dashboard</span>
+                                   <span class="sidebar-menu-arrow">
+                                        <i data-feather="chevron-right"></i>
+                                   </span>
+                              </a>
+                              <ul class="sidebar-submenu">
+                                   <li>
+                                        <a href="javascript:void(0);" class="sidebar-submenu-item active">Ecommerce</a>
+                                   </li>
+                                   <li>
+                                        <a href="javascript:void(0);" class="sidebar-submenu-item">Analytics</a>
+                                   </li>
+                              </ul>
+                         </li>
+               
+                         <div class="sidebar-menu-header">Applications</div>
+               
+                         <!-- Email -->
+                         <li>
+                              <a href="javascript:void(0);" class="sidebar-menu">
+                                   <span class="sidebar-menu-icon">
+                                        <i data-feather="mail"></i>
+                                   </span>
+                                   <span class="sidebar-menu--text">Email</span>
+                              </a>
+                         </li>
+               
+                         <!-- Invoice -->
+                         <li>
+                              <a href="javascript:void(0);" class="sidebar-menu">
+                                   <span class="sidebar-menu-icon">
+                                        <i data-feather="file-text"></i>
+                                   </span>
+                                   <span class="sidebar-menu--text">Invoice</span>
+                                   <span class="sidebar-menu-arrow">
+                                        <i data-feather="chevron-right"></i>
+                                   </span>
+                              </a>
+                              <ul class="sidebar-submenu">
+                                   <li>
+                                        <a href="javascript:void(0);" class="sidebar-submenu-item">Create</a>
+                                   </li>
+                                   <li>
+                                        <a href="javascript:void(0);" class="sidebar-submenu-item">Listing</a>
+                                   </li>
+                                   <li>
+                                        <a href="javascript:void(0);" class="sidebar-submenu-item">Details</a>
+                                   </li>
+                              </ul>
+                         </li>
+                    </ul>
+                    <!-- Sidebar Menu Ends -->
+               </aside>
+               <!-- Sidebar Ends -->
 
-      <!-- Page Content Start -->
-      <div class="flex-grow">
-        <!-- Header Start -->
-        <header class="flex h-16 w-full items-center bg-white px-6 shadow">
-          <div>Header</div>
-        </header>
-        <!-- Header End -->
+               <!-- Wrapper Starts -->
+               <div class="wrapper">
+                    <!-- Header Starts -->
+                    <header class="header">
+                         <div class="container-fluid flex items-center justify-between">
+                              <!-- Sidebar Toggle & Search Starts -->
+                              <div class="flex items-center space-x-6">
+                                   <button class="sidebar-toggle">
+                                        <span class="flex space-x-4">
+                                             <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+                                             </svg>
+                                        </span>
+                                   </button>
+                    
+                                   <form class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex" action="">
+                                        <div class="flex h-full items-center px-3">
+                                             <i class="text-slate-400 group-focus-within:text-primary-500" width="1em" height="1em" data-feather="search"></i>
+                                        </div>
+                    
+                                        <input
+                                             class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                                             placeholder="Search" 
+                                             type="text" 
+                                        />
+                                   </form>
+                              </div>
+                              <!-- Sidebar Toggle & Search Ends -->
+                    
+                              <!-- Header Options Starts -->
+                              <div class="flex items-center space-x-6">
+                                   <!-- Language Dropdown Starts -->
+                                   <div class="dropdown">
+                                        <div class="dropdown-toggle">
+                                             <button type="button" class="flex items-center space-x-2 text-sm">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
+                                                       <path fill="#FFF" d="M0 0h513v342H0z"></path>
+                                                       <path d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z" fill="#D80027"></path>
+                                                       <path fill="#2E52B2" d="M0 0h256.5v184.1H0z"></path>
+                                                       <path d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z" fill="#FFF"></path>
+                                                  </svg>
+                                                  <span class="hidden md:inline-block">English</span>
+                                                  <span class="inline-block md:hidden">EN</span>
+                                             </button>
+                                        </div>
+                    
+                                        <div class="dropdown-content -right-8 w-[150px] sm:right-0">
+                                             <ul>
+                                                  <li class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                                                       <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
+                                                                 <path fill="#FFF" d="M0 0h513v342H0z"></path>
+                                                                 <path d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z" fill="#D80027"></path>
+                                                                 <path fill="#2E52B2" d="M0 0h256.5v184.1H0z"></path>
+                                                                 <path d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z" fill="#FFF"></path>
+                                                            </svg>
+                                                            <span>English</span>
+                                                       </button>
+                                                  </li>
+                    
+                                                  <li class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                                                       <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
+                                                                 <path fill="#D80027" d="M0 85.331h512v341.337H0z"></path>
+                                                                 <path d="M0 85.331h512v113.775H0z"></path>
+                                                                 <path fill="#FFDA44" d="M0 312.882h512v113.775H0z"></path>
+                                                            </svg>
+                                                            <span>German</span>
+                                                       </button>
+                                                  </li>
+                    
+                                                  <li class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                                                       <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
+                                                                 <path fill="#FFF" d="M0 85.331h512v341.337H0z"></path>
+                                                                 <path fill="#0052B4" d="M0 85.331h170.663v341.337H0z"></path>
+                                                                 <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z"></path>
+                                                            </svg>
+                                                            <span>French</span>
+                                                       </button>
+                                                  </li>
+                    
+                                                  <li class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                                                       <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
+                                                                 <path fill="#055e1c" d="M0 85.333h512v341.333H0z"></path>
+                                                                 <g fill="#FFF">
+                                                                      <path d="M183.548 289.386c0 12.295 9.731 22.261 21.736 22.261h65.208c0 10.244 8.11 18.551 18.114 18.551h21.736c10.004 0 18.114-8.306 18.114-18.551v-22.261H183.548zm146.716-107.595v51.942c0 8.183-6.5 14.84-14.491 14.84v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.942h-21.735zm-155.773 51.943c0 8.183-6.5 14.84-14.491 14.84v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.942H174.49v51.942z"></path>
+                                                                      <path d="M297.661 181.788h21.736v51.942h-21.736zm-32.604 29.685c0 2.046-1.625 3.71-3.623 3.71-1.998 0-3.623-1.664-3.623-3.71v-29.682h-21.736v29.682c0 2.046-1.625 3.71-3.623 3.71s-3.623-1.664-3.623-3.71v-29.682h-21.736v29.682c0 14.32 11.376 25.971 25.358 25.971 5.385 0 10.38-1.733 14.491-4.677 4.11 2.944 9.106 4.677 14.491 4.677 1.084 0 2.15-.078 3.2-.215-1.54 6.499-7.255 11.345-14.068 11.345v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.943h-21.736l.002 29.682z">
+                                                                      </path>
+                                                                      <path d="M207.093 248.57h32.601v22.261h-32.601z"></path>
+                                                                 </g>
+                                                            </svg>
+                                                            <span>Arabic</span>
+                                                       </button>
+                                                  </li>
+                    
+                                                  <li class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                                                       <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
+                                                                 <path fill="#D80027" d="M0 0h513v342H0z"></path>
+                                                                 <path d="m226.8 239.2-9.7-15.6-17.9 4.4 11.9-14.1-9.7-15.6 17.1 6.9 11.8-14.1-1.3 18.4 17.1 6.9-17.9 4.4zM290.6 82l-10.1 15.4 11.6 14.3-17.7-4.8-10.1 15.5-1-18.4-17.7-4.8 17.2-6.6-1-18.4 11.6 14.3zm-54.4-56.6-2 18.3 16.8 7.6-18 3.8-2 18.3-9.2-16-17.9 3.8 12.3-13.7-9.2-15.9 16.8 7.5zm56.6 136.4-14.9 10.9 5.8 17.5-14.9-10.8-14.9 11 5.6-17.6-14.9-10.7 18.4-.1 5.6-17.6 5.8 17.5zM115 46.3l17.3 53.5h56.2l-45.4 32.9 17.3 53.5-45.4-33-45.5 33 17.4-53.5-45.5-32.9h56.3z" fill="#FFDA44"></path>
+                                                            </svg>
+                                                            <span>Chinese</span>
+                                                       </button>
+                                                  </li>
+                    
+                                                  <li class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                                                       <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 513 342" height="15">
+                                                                 <path fill="#2d6e41" d="M0 85.331h513v342H0z"></path>
+                                                                 <circle fill="#F40B32" cx="218.902" cy="256.5" r="115"></circle>
+                                                            </svg>
+                                                            <span>Bangla</span>
+                                                       </button>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                                   <!-- Language Dropdown Ends -->
+                    
+                                   <!-- Mobile Search Starts -->
+                                   <div class="sm:hidden">
+                                        <button 
+                                             class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300" 
+                                             type="button"
+                                        >
+                                             <i width="22" height="22" data-feather="search"></i>
+                                        </button>
+                                   </div>
+                                   <!-- Mobile Search Ends -->
+                    
+                                   <!-- Dark Mood Toggle Starts -->
+                                   <div class="flex">
+                                        <button 
+                                             id="btn-theme-mode"
+                                             class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
+                                             type="button"
+                                        >
+                                             <i class="block dark:hidden" width="24" height="24" data-feather="moon"></i>
+                                             <i class="hidden dark:block" width="24" height="24" data-feather="sun"></i>
+                                        </button>
+                                   </div>
+                                   <!-- Dark Mood Toggle Ends -->
+                    
+                                   <!-- Notification Dropdown Starts -->
+                                   <div class="dropdown -mt-0.5">
+                                        <div class="dropdown-toggle">
+                                             <button class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
+                                                  <i width="24" height="24" data-feather="bell"></i>
+                                                  <span class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
+                                                       5
+                                                  </span>
+                                             </button>
+                                        </div>
+                    
+                                        <div class="dropdown-content -right-full w-[280px] divide-y dark:divide-slate-700 sm:-right-2 sm:w-80">
+                                             <div class="flex items-center justify-between py-4 px-4">
+                                                  <h5 class="font-semibold text-slate-800 dark:text-slate-300">
+                                                       Notifications
+                                                  </h5>
+                                                  <button class="text-xs text-slate-600 hover:text-primary-500 dark:text-slate-300">
+                                                       Clear All
+                                                  </button>
+                                             </div>
+                    
+                                             <div class="h-80 w-full overflow-y-auto">
+                                                  <ul>
+                                                       <li class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700">
+                                                            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500">
+                                                                 <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                      <circle cx="12" cy="12" r="10"></circle>
+                                                                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                                 </svg>
+                                                            </div>
+                    
+                                                            <div>
+                                                                 <h6 class="text-sm">New order received</h6>
+                                                                 <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                                                                 <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                                                                      <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                                           <circle cx="12" cy="12" r="10"></circle>
+                                                                           <polyline points="12 6 12 12 16 14"></polyline>
+                                                                      </svg>
+                                                                      <span>2 min ago</span>
+                                                                 </p>
+                                                            </div>
+                                                       </li>
+                    
+                                                       <li class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700">
+                                                            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500">
+                                                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M85.57 446.25h340.86a32 32 0 0028.17-47.17L284.18 82.58c-12.09-22.44-44.27-22.44-56.36 0L57.4 399.08a32 32 0 0028.17 47.17z"></path>
+                                                                      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M250.26 195.39l5.74 122 5.73-121.95a5.74 5.74 0 00-5.79-6h0a5.74 5.74 0 00-5.68 5.95z"></path>
+                                                                      <path d="M256 397.25a20 20 0 1120-20 20 20 0 01-20 20z"></path>
+                                                                 </svg>
+                                                            </div>
+                    
+                                                            <div>
+                                                                 <h6 class="text-sm">High CPU usage</h6>
+                                                                 <p class="text-xs text-slate-400">CPU usage is at 92%</p>
+                                                                 <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                                                                      <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                                           <circle cx="12" cy="12" r="10"></circle>
+                                                                           <polyline points="12 6 12 12 16 14"></polyline>
+                                                                      </svg>
+                                                                      <span>5 minutes ago</span>
+                                                                 </p>
+                                                            </div>
+                                                       </li>
+                    
+                                                       <li class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700">
+                                                            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                                                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path d="M699 353h-46.9c-10.2 0-19.9 4.9-25.9 13.3L469 584.3l-71.2-98.8c-6-8.3-15.6-13.3-25.9-13.3H325c-6.5 0-10.3 7.4-6.5 12.7l124.6 172.8a31.8 31.8 0 0 0 51.7 0l210.6-292c3.9-5.3.1-12.7-6.4-12.7z"></path>
+                                                                      <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path>
+                                                                 </svg>
+                                                            </div>
+                                                            <div>
+                                                                 <h6 class="text-sm">Your order has been shipped</h6>
+                                                                 <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                                                                 <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                                                                      <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                                           <circle cx="12" cy="12" r="10"></circle>
+                                                                           <polyline points="12 6 12 12 16 14"></polyline>
+                                                                      </svg>
+                                                                      <span>10 minutes ago</span>
+                                                                 </p>
+                                                            </div>
+                                                       </li>
+                    
+                                                       <li class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700">
+                                                            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500">
+                                                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                                                      <path d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM19 14.9L14.9 19H9.1L5 14.9V9.1L9.1 5h5.8L19 9.1v5.8zm-4.17-7.14L12 10.59 9.17 7.76 7.76 9.17 10.59 12l-2.83 2.83 1.41 1.41L12 13.41l2.83 2.83 1.41-1.41L13.41 12l2.83-2.83-1.41-1.41z">
+                                                                      </path>
+                                                                 </svg>
+                                                            </div>
+                                                            <div>
+                                                                 <h6 class="text-sm">Something went wrong</h6>
+                                                                 <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                                                                 <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                                                                      <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                                           <circle cx="12" cy="12" r="10"></circle>
+                                                                           <polyline points="12 6 12 12 16 14"></polyline>
+                                                                      </svg>
+                                                                      <span>1 hour ago</span>
+                                                                 </p>
+                                                            </div>
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                    
+                                             <div class="py-2 px-4">
+                                                  <button class="btn btn-primary-plain btn-sm w-full" type="button">
+                                                       <span>View More</span>
+                                                       <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ms-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                                       </svg>
+                                                  </button>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <!-- Notification Dropdown Ends -->
+                    
+                                   <!-- Profile Dropdown Starts -->
+                                   <div class="dropdown">
+                                        <div class="dropdown-toggle">
+                                             <button class="group relative flex items-center space-x-1.5" type="button">
+                                                  <img 
+                                                       class="block h-9 w-9 rounded-full group-focus:ring group-focus:ring-primary-500"
+                                                       src="https://avatars.githubusercontent.com/u/1164541?v=4" 
+                                                       alt="avatar" 
+                                                  />
+                    
+                                                  <div class="hidden md:flex md:flex-col">
+                                                       <span class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
+                                                            John Doe
+                                                       </span>
+                                                       <span class="inline-block text-left text-xs text-slate-400">Admin</span>
+                                                  </div>
+                                             </button>
+                                        </div>
+                    
+                                        <div class="dropdown-content right-0 mt-5 w-[180px]">
+                                             <a href="/dashboard/ecommerce" class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                                                  <i class="text-slate-600 dark:text-slate-400" width="18" height="18" data-feather="user"></i>
+                                                  <span>Profile</span>
+                                             </a>
+                    
+                                             <a href="/dashboard/ecommerce" class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                                                  <i class="text-slate-600 dark:text-slate-400" width="18" height="18" data-feather="settings"></i>
+                                                  <span>Settings</span>
+                                             </a>
+                    
+                                             <a href="/dashboard/ecommerce" class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
+                                                  <i class="text-slate-600 dark:text-slate-400" width="18" height="18" data-feather="log-out"></i>
+                                                  <span>Sign out</span>
+                                             </a>
+                                        </div>
+                                   </div>
+                                   <!-- Profile Dropdown Ends -->
+                              </div>
+                              <!-- Header Options Ends -->
+                         </div>
+                    </header>
+                    <!-- Header Ends -->
 
-        <!-- Main Start -->
-        <main class="bg-slate-50 p-6">
-          <!-- Page Title Start -->
-          <div class="flex">
-            <h1 class="text-xl font-semibold dark:text-slate-300">Card</h1>
-            <ol class="breadcrumb ml-auto">
-              <li class="breadcrumb-item"><a href="">Home</a></li>
-              <li class="breadcrumb-item"><a href="">Components</a></li>
-              <li class="breadcrumb-item"><a href="">Card</a></li>
-            </ol>
+                    <!-- Page Content Starts -->
+                    <div class="content">
+                         <!-- Main Content Starts -->
+                         <main class="flex-grow p-6">
+                              <!-- Page Title Starts -->
+                              <div class="flex">
+                                   <h1 class="text-xl font-semibold dark:text-slate-300">Buttons</h1>
+                                   <ol class="breadcrumb ml-auto">
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Components</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Buttons</a></li>
+                                   </ol>
+                              </div>
+                              <!-- Page Title Ends -->
+
+                              <!-- Color Button Starts -->
+                              <div class="card mt-6">
+                                   <div class="card-body">
+                                        <h4 class="card-title">Color Buttons</h4>
+                                        <div class="card-subtitle">
+                                             <p class="text-sm text-slate-400">
+                                                  Use <code>color</code> class to <code>btn-primary-solid</code>,
+                                                  <code>btn-secondary-solid</code>, <code>btn-success-solid</code>,
+                                                  <code>btn-danger-solid</code>,
+                                                  <code>btn-warning-solid</code> <code>btn-info-solid</code> &amp;
+                                                  <code>btn-dark-solid</code>.
+                                             </p>
+                                        </div>
+                                        <div class="code-viewer mt-4">
+                                             <div class="flex flex-wrap items-center gap-4">
+                                                  <button class="btn btn-primary btn-md">Primary</button>
+                                                  <button class="btn btn-secondary btn-md">Secondary</button>
+                                                  <button class="btn btn-success btn-md">Success</button>
+                                                  <button class="btn btn-danger btn-md">Danger</button>
+                                                  <button class="btn btn-warning btn-md">Warning</button>
+                                                  <button class="btn btn-info btn-md">Info</button>
+                                                  <button class="btn btn-dark btn-md">Dark</button>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- Color Button Ends -->
+
+                              <!-- Button Size Start -->
+                              <div class="card mt-4">
+                                   <div class="card-body">
+                                        <h4 class="card-title">Button Sizes</h4>
+                                        <div class="card-subtitle">
+                                             <p class="text-sm text-slate-400">
+                                                  Use <code>size</code> class to <code>btn-xs</code>, <code>btn-sm</code>,
+                                                  <code>btn-md</code>,
+                                                  <code>btn-lg</code> &amp; <code>btn-xl</code> Default Value is
+                                                  <code>btn-md</code>.
+                                             </p>
+                                        </div>
+                                        <div class="code-viewer mt-4">
+                                             <div class="flex flex-wrap items-center gap-4">
+                                                  <button class="btn btn-primary btn-xs">Extra Small</button>
+                                                  <button class="btn btn-primary btn-sm">Small</button>
+                                                  <button class="btn btn-primary btn-md">Medium</button>
+                                                  <button class="btn btn-primary btn-lg">Large</button>
+                                                  <button class="btn btn-primary btn-xl">Extra Large</button>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- Button Size End -->
+
+                              <!-- Outline Button Starts -->
+                              <div class="card mt-4">
+                                   <div class="card-body">
+                                        <h4 class="card-title">Outline Buttons</h4>
+                                        <div class="card-subtitle">
+                                             <p class="text-sm text-slate-400">Use <code>outline</code> class to
+                                                  <code>btn-primary-outline</code>,
+                                                  <code>btn-secondary-outline</code>, <code>btn-success-outline</code>,
+                                                  <code>btn-danger-outline</code>,
+                                                  <code>btn-warning-outline</code>, <code>btn-info-outline</code> &amp;
+                                                  <code>btn-dark-outline</code> create a outlined button.
+                                             </p>
+                                        </div>
+                                        <div class="code-viewer mt-4">
+                                             <div class="flex flex-wrap items-center gap-4">
+                                                  <button class="btn btn-outline-primary btn-md">Primary</button>
+                                                  <button class="btn btn-outline-secondary btn-md">Secondary</button>
+                                                  <button class="btn btn-outline-success btn-md">Success</button>
+                                                  <button class="btn btn-outline-danger btn-md">Danger</button>
+                                                  <button class="btn btn-outline-warning btn-md">Warning</button>
+                                                  <button class="btn btn-outline-info btn-md">Info</button>
+                                                  <button class="btn btn-outline-dark btn-md">Dark</button>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- Outline Button Ends -->
+
+                              <!-- Soft Button Starts -->
+                              <div class="card mt-4">
+                                   <div class="card-body">
+                                        <h4 class="card-title">Soft Buttons</h4>
+                                        <div class="card-subtitle">
+                                             <p class="text-sm text-slate-400">
+                                                  use <code>soft</code> class to
+                                                  <code>btn-primary-soft</code>,
+                                                  <code>btn-secondary-soft</code>, <code>btn-success-soft</code>,
+                                                  <code>btn-danger-soft</code>,
+                                                  <code>btn-warning-soft</code>, <code>btn-info-soft</code> &amp;
+                                                  <code>btn-info-soft</code> create a soft button.
+                                             </p>
+                                        </div>
+                                        <div class="code-viewer mt-4">
+                                             <div class="flex flex-wrap items-center gap-4">
+                                                  <button class="btn btn-soft-primary btn-md">Primary</button>
+                                                  <button class="btn btn-soft-secondary btn-md">Secondary</button>
+                                                  <button class="btn btn-soft-success btn-md">Success</button>
+                                                  <button class="btn btn-soft-danger btn-md">Danger</button>
+                                                  <button class="btn btn-soft-warning btn-md">Warning</button>
+                                                  <button class="btn btn-soft-info btn-md">Info</button>
+                                                  <button class="btn btn-soft-dark btn-md">Dark</button>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- Soft Button Ends -->
+
+                              <!-- Plain Button Starts -->
+                              <div class="card mt-4">
+                                   <div class="card-body">
+                                        <h4 class="card-title">Plain Buttons</h4>
+                                        <div class="card-subtitle">
+                                             <p class="text-sm text-slate-400">Use <code>plain</code> class to
+                                                  <code>btn-primary-plain</code>,
+                                                  <code>btn-secondary-plain</code>, <code>btn-success-plain</code>,
+                                                  <code>btn-danger-plain</code>,
+                                                  <code>btn-warning-plain</code>, <code>btn-info-plain</code> &amp;
+                                                  <code>btn-dark-plain</code> create a soft button.
+                                             </p>
+                                        </div>
+                                        <div class="code-viewer mt-4">
+                                             <div class="flex flex-wrap items-center gap-4">
+                                                  <button class="btn btn-plain-primary btn-md">Primary</button>
+                                                  <button class="btn btn-plain-secondary btn-md">Secondary</button>
+                                                  <button class="btn btn-plain-success btn-md">Success</button>
+                                                  <button class="btn btn-plain-danger btn-md">Danger</button>
+                                                  <button class="btn btn-plain-warning btn-md">Warning</button>
+                                                  <button class="btn btn-plain-info btn-md">Info</button>
+                                                  <button class="btn btn-plain-dark btn-md">Dark</button>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- Plain Button Ends -->
+
+                              <!-- Rounded Button Starts -->
+                              <div class="card mt-4">
+                                   <div class="card-body">
+                                        <h4 class="card-title">Rounded Buttons</h4>
+                                        <div class="card-subtitle">
+                                             <p class="text-sm text-slate-400">
+                                                  Use<code>rounded-full</code> class to create a rounded button.
+                                             </p>
+                                        </div>
+                                        <div class="code-viewer mt-4">
+                                             <div class="flex flex-wrap items-center gap-4">
+                                                  <button class="btn btn-primary btn-md rounded-full">Primary</button>
+                                                  <button class="btn btn-secondary btn-md rounded-full">Secondary</button>
+                                                  <button class="btn btn-success btn-md rounded-full">Success</button>
+                                                  <button class="btn btn-danger btn-md rounded-full">Danger</button>
+                                                  <button class="btn btn-warning btn-md rounded-full">Warning</button>
+                                                  <button class="btn btn-info btn-md rounded-full">Info</button>
+                                                  <button class="btn btn-dark btn-md rounded-full">Dark</button>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- Rounded Button Ends -->
+
+                              <!-- Icon Button Starts -->
+                              <div class="card mt-4">
+                                   <div class="card-body">
+                                        <h4 class="card-title">Icon Buttons</h4>
+                                        <div class="card-subtitle">
+                                             <p class="text-sm text-slate-400">
+                                                  By adding <code>icon</code> to the button, you can create icon buttons
+                                             </p>
+                                        </div>
+                                        <div class="code-viewer mt-4">
+                                             <div class="flex flex-wrap items-center gap-4">
+                                                  <button class="btn btn-primary btn-md gap-2">
+                                                       <i data-feather="home" height="1em" width="1em"></i>
+                                                       <span>Home</span>
+                                                  </button>
+                                                  <button class="btn btn-outline-warning btn-md gap-2 rounded-full">
+                                                       <i data-feather="user-plus" height="1em" width="1em"></i>
+                                                       <span>Users</span>
+                                                  </button>
+                                                  <button class="btn btn-soft-danger btn-md gap-2">
+                                                       <i data-feather="trash" height="1em" width="1em"></i>
+                                                       <span>Delete</span>
+                                                  </button>
+                                                  <button class="btn btn-outline-info btn-md gap-2">
+                                                       <i data-feather="edit" height="1em" width="1em"></i>
+                                                       <span>Edit</span>
+                                                  </button>
+                                                  <button class="btn btn-plain-success btn-md gap-2">
+                                                       <i data-feather="check-circle" height="1em" width="1em"></i>
+                                                       <span>Done</span>
+                                                  </button>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- Icon Button Ends -->
+
+                              <!-- Loading Button Starts -->
+                              <div class="card mt-4">
+                                   <div class="card-body">
+                                        <h4 class="card-title">Loading Buttons</h4>
+                                        <div class="card-subtitle">
+                                             <p class="text-sm text-slate-400">
+                                                  By adding a loading icon with <code>disabled</code>class, you can create loading
+                                                  buttons.
+                                             </p>
+                                        </div>
+                                        <div class="code-viewer mt-4">
+                                             <div class="flex flex-wrap items-center gap-4">
+                                                  <button class="btn btn-primary btn-md gap-2" disabled="true">
+                                                       <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" class="animate-spin" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"></path>
+                                                            <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"></path>
+                                                       </svg>
+                                                       <span>Loading</span>
+                                                  </button>
+                                                  <button class="btn btn-outline-success btn-md gap-2" disabled="true">
+                                                       <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" class="animate-spin" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"></path>
+                                                            <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"></path>
+                                                       </svg>
+                                                       <span>Loading</span>
+                                                  </button>
+                                                  <button class="btn btn-soft-info btn-md gap-2" disabled="true">
+                                                       <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" class="animate-spin" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"></path>
+                                                            <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"></path>
+                                                       </svg>
+                                                       <span>Loading</span>
+                                                  </button>
+                                                  <button class="btn btn-plain-danger btn-md gap-2" disabled="true">
+                                                       <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" class="animate-spin" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"></path>
+                                                            <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"></path>
+                                                       </svg>
+                                                       <span>Loading</span>
+                                                  </button>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- Loading Button Ends -->
+
+                              <!-- Disabled Button Starts -->
+                              <div class="card mt-4">
+                                   <div class="card-body">
+                                        <h4 class="card-title">Disabled Buttons</h4>
+                                        <div class="card-subtitle">
+                                             <p class="text-sm text-slate-400">Use <code>disabled</code>, class to create a
+                                                  disable button. <a class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline" href="https://react-icons.github.io/react-icons/" target="_blank" rel="noreferrer">React Icons</a>
+                                             </p>
+                                        </div>
+                                        <div class="code-viewer mt-4">
+                                             <div class="flex flex-wrap items-center gap-4">
+                                                  <div class="flex flex-wrap items-center gap-4">
+                                                       <button class="btn btn-primary btn-md" disabled="true">Primary</button>
+                                                       <button class="btn btn-secondary btn-md" disabled="true">Secondary</button>
+                                                       <button class="btn btn-success btn-md" disabled="true">Success</button>
+                                                       <button class="btn btn-danger btn-md" disabled="true">Danger</button>
+                                                       <button class="btn btn-warning btn-md" disabled="true">Warning</button>
+                                                       <button class="btn btn-info btn-md" disabled="true">Info</button>
+                                                       <button class="btn btn-dark btn-md" disabled="true">Dark</button>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- Disabled Button Ends -->
+
+                              <!-- Block Button Starts -->
+                              <div class="card mt-4">
+                                   <div class="card-body">
+                                        <h4 class="card-title">Block Buttons</h4>
+                                        <div class="card-subtitle">
+                                             <p class="text-sm text-slate-400">
+                                                  Use <code>w-full</code>, class to create block button.
+                                             </p>
+                                        </div>
+                                        <div class="code-viewer mt-4">
+                                             <div class="flex flex-col gap-y-4">
+                                                  <button class="btn btn-primary btn-md w-full">Block Button</button>
+                                                  <button class="btn btn-outline-primary btn-md w-full">Block Button</button>
+                                                  <button class="btn btn-soft-primary btn-md w-full">Block Button</button>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- Block Button Ends -->
+
+                              <!-- Group Buttons Start -->
+                              <div class="card mt-4">
+                                   <div class="card-body">
+                                        <h4 class="card-title">Group Buttons</h4>
+                                        <div class="card-subtitle">
+                                             <p class="text-sm text-slate-400">
+                                                  Use <code>ButtonGroup</code> class to create a group of buttons.
+                                             </p>
+                                        </div>
+                                        <div class="code-viewer mt-4">
+                                             <div class="flex flex-wrap items-center gap-4">
+                                                  <div class="btn-group">
+                                                       <button class="btn btn-primary btn-md">HTML</button>
+                                                       <button class="btn btn-primary btn-md">CSS</button>
+                                                       <button class="btn btn-primary btn-md">Javascript</button>
+                                                       <button class="btn btn-primary btn-md">PHP</button>
+                                                       <button class="btn btn-primary btn-md">Python</button>
+                                                  </div>
+                                                  <div class="btn-group">
+                                                       <button class="btn btn-outline-primary btn-md gap-2">
+                                                            <i data-feather="thumbs-up" height="1em" width="1em"></i>
+                                                            <span>120k</span>
+                                                       </button>
+                                                       <button class="btn btn-outline-primary btn-md gap-2">
+                                                            <i data-feather="heart" height="1em" width="1em"></i>
+                                                            <span>200k</span>
+                                                       </button>
+                                                  </div>
+                                                  <div class="btn-group rounded">
+                                                       <button class="btn btn-soft-primary btn-md">Years</button>
+                                                       <button class="btn btn-soft-primary btn-md">Months</button>
+                                                       <button class="btn btn-soft-primary btn-md">Days</button>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- Group Buttons Ends -->
+                         </main>
+                         <!-- Main Content Ends -->
+
+                          <!-- Footer Starts -->
+                          <footer class="footer">
+                              <p class="text-sm">
+                                   Copyright © 2023 <a class="text-primary-500 hover:underline" href="https://bdlancers.com">Bdlancers</a>, All right Reserved
+                              </p>
+                         
+                              <p class="flex items-center gap-1 text-sm">
+                                   Hand-crafted &amp; Made with <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
+                              </p>
+                         </footer>
+                         <!-- Footer Ends -->
+                    </div>
+                    <!-- Page Content Ends -->
+               </div>
+               <!-- Wrapper Ends -->               
           </div>
-          <!-- Page Title End -->
-
-          <!-- Button Colors Start -->
-          <div class="card mt-6">
-            <div class="card-body">
-              <div class="card-title">Button Colors</div>
-              <div class="card-subtitle">
-                <p class="text-sm text-slate-400">
-                  Use <code>color</code> class to <code>btn-primary-solid</code>, <code>btn-secondary-solid</code>, <code>btn-success-solid</code>, <code>btn-danger-solid</code>,
-                  <code>btn-warning-solid</code> <code>btn-info-solid</code> &amp; <code>btn-dark-solid</code>.
-                </p>
-              </div>
-              <div class="code-viewer mt-4">
-                <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary btn-md">Primary</button>
-                  <button class="btn btn-secondary btn-md">Secondary</button>
-                  <button class="btn btn-success btn-md">Success</button>
-                  <button class="btn btn-danger btn-md">Danger</button>
-                  <button class="btn btn-warning btn-md">Warning</button>
-                  <button class="btn btn-info btn-md">Info</button>
-                  <button class="btn btn-dark btn-md">Dark</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- button Colors End -->
-
-          <!-- Button Size Start -->
-          <div class="card mt-4">
-            <div class="card-body">
-              <div class="card-title">Button Sizes</div>
-              <div class="card-subtitle">
-                <p class="text-sm text-slate-400">
-                  Use <code>size</code> class to <code>btn-xs</code>, <code>btn-sm</code>, <code>btn-md</code>,
-                  <code>btn-lg</code> &amp; <code>btn-xl</code> Default Value is <code>btn-md</code>.
-                </p>
-              </div>
-              <div class="code-viewer mt-4">
-                <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary btn-xs">Extra Small</button>
-                  <button class="btn btn-primary btn-sm">Small</button>
-                  <button class="btn btn-primary btn-md">Medium</button>
-                  <button class="btn btn-primary btn-lg">Large</button>
-                  <button class="btn btn-primary btn-xl">Extra Large</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- button Size End -->
-
-          <!-- Outline Buttons  -->
-          <div class="card mt-4">
-            <div class="card-body">
-              <div class="card-title">Outline Buttons</div>
-              <div class="card-subtitle">
-                <p class="text-sm text-slate-400">Use <code>outline</code> class to <code>btn-primary-outline</code>, 
-                  <code>btn-secondary-outline</code>, <code>btn-success-outline</code>, <code>btn-danger-outline</code>, 
-                  <code>btn-warning-outline</code>, <code>btn-info-outline</code> &amp; <code>btn-dark-outline</code> create a outlined button.</p>
-              </div>
-              <div class="code-viewer mt-4">
-                <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-outline-primary btn-md">Primary</button>
-                  <button class="btn btn-outline-secondary btn-md">Secondary</button>
-                  <button class="btn btn-outline-success btn-md">Success</button>
-                  <button class="btn btn-outline-danger btn-md">Danger</button>
-                  <button class="btn btn-outline-warning btn-md">Warning</button>
-                  <button class="btn btn-outline-info btn-md">Info</button>
-                  <button class="btn btn-outline-dark btn-md">Dark</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Outline Buttons End -->
-
-          <!-- Soft buttons Start -->
-          <div class="card mt-4">
-            <div class="card-body">
-              <div class="card-title">Soft Buttons</div>
-              <div class="card-subtitle">
-                <p class="text-sm text-slate-400">use <soft> <code>soft</code> class to <code>btn-primary-soft</code>, 
-                  <code>btn-secondary-soft</code>, <code>btn-success-soft</code>, <code>btn-danger-soft</code>, 
-                  <code>btn-warning-soft</code>, <code>btn-info-soft</code> &amp; <code>btn-info-soft</code> create a soft button.</p>
-              </div>
-              <div class="code-viewer mt-4">
-                <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-soft-primary btn-md">Primary</button>
-                  <button class="btn btn-soft-secondary btn-md">Secondary</button>
-                  <button class="btn btn-soft-success btn-md">Success</button>
-                  <button class="btn btn-soft-danger btn-md">Danger</button>
-                  <button class="btn btn-soft-warning btn-md">Warning</button>
-                  <button class="btn btn-soft-info btn-md">Info</button>
-                  <button class="btn btn-soft-dark btn-md">Dark</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Soft Buttons End -->
-
-          <!-- Plain Buttons Start -->
-          <div class="card mt-4">
-            <div class="card-body">
-              <div class="card-title">Plain Buttons</div>
-              <div class="card-subtitle">
-                <p class="text-sm text-slate-400">Use <code>plain</code> class to <code>btn-primary-plain</code>, 
-                  <code>btn-secondary-plain</code>, <code>btn-success-plain</code>, <code>btn-danger-plain</code>, 
-                  <code>btn-warning-plain</code>, <code>btn-info-plain</code> &amp; <code>btn-dark-plain</code> create a soft button.</p>
-              </div>
-              <div class="code-viewer mt-4">
-                <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-plain-primary btn-md">Primary</button>
-                  <button class="btn btn-plain-secondary btn-md">Secondary</button>
-                  <button class="btn btn-plain-success btn-md">Success</button>
-                  <button class="btn btn-plain-danger btn-md">Danger</button>
-                  <button class="btn btn-plain-warning btn-md">Warning</button>
-                  <button class="btn btn-plain-info btn-md">Info</button>
-                  <button class="btn btn-plain-dark btn-md">Dark</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- plain Buttons Start -->
-
-          <!-- Rounded Buttons Start -->
-          <div class="card mt-4">
-            <div class="card-body">
-              <div class="card-title">Rounded Buttons</div>
-              <div class="card-subtitle">
-                <p class="text-sm text-slate-400">
-                  Use<code>rounded-full</code> class to create a rounded button.
-                </p>
-              </div>
-              <div class="code-viewer mt-4">
-                <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary btn-md rounded-full">Primary</button>
-                  <button class="btn btn-secondary btn-md rounded-full">Secondary</button>
-                  <button class="btn btn-success btn-md rounded-full">Success</button>
-                  <button class="btn btn-danger btn-md rounded-full">Danger</button>
-                  <button class="btn btn-warning btn-md rounded-full">Warning</button>
-                  <button class="btn btn-info btn-md rounded-full">Info</button>
-                  <button class="btn btn-dark btn-md rounded-full">Dark</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Rounded Buttons End -->
-
-          <!-- Icon Buttons -->
-          <div class="card mt-4">
-            <div class="card-body">
-              <div class="card-title">Icon Buttons</div>
-              <div class="card-subtitle">
-                <p class="text-sm text-slate-400">
-                  By adding <code>icon</code> to the button, you can create icon buttons
-                </p>
-              </div>
-              <div class="code-viewer mt-4">
-                <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary btn-md gap-2">
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                    Home
-                  </button>
-                  <button class="btn btn-outline-warning btn-md gap-2 rounded-full">
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                      <circle cx="8.5" cy="7" r="4"></circle>
-                      <line x1="20" y1="8" x2="20" y2="14"></line>
-                      <line x1="23" y1="11" x2="17" y2="11"></line>
-                    </svg>
-                    Users
-                  </button>
-                  <button class="btn btn-soft-danger btn-md gap-2">
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <polyline points="3 6 5 6 21 6"></polyline>
-                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                      <line x1="10" y1="11" x2="10" y2="17"></line>
-                      <line x1="14" y1="11" x2="14" y2="17"></line>
-                    </svg>
-                    Delete
-                  </button>
-                  <button class="btn btn-outline-info btn-md gap-2">
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
-                    Edit
-                  </button>
-                  <button class="btn btn-plain-success btn-md gap-2">
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                    Done
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Icon Buttons End -->
-
-          <!-- Loading Buttons Start -->
-          <div class="card mt-4">
-            <div class="card-body">
-              <div class="card-title">Loading Buttons</div>
-              <div class="card-subtitle">
-                <p class="text-sm text-slate-400">
-                  By adding a loading icon with <code>disabled</code>class, you can create loading buttons.
-                </p>
-              </div>
-              <div class="code-viewer mt-4">
-                <div class="flex flex-wrap items-center gap-4">
-                  <button class="btn btn-primary btn-md gap-2" disabled="">
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-width="0"
-                      viewBox="0 0 24 24"
-                      class="animate-spin"
-                      height="20"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.2"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                        fill="currentColor"
-                      ></path>
-                      <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"></path>
-                    </svg>
-                    Loading</button
-                  ><button class="btn btn-outline-success btn-md gap-2" disabled="">
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-width="0"
-                      viewBox="0 0 24 24"
-                      class="animate-spin"
-                      height="20"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.2"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                        fill="currentColor"
-                      ></path>
-                      <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"></path>
-                    </svg>
-                    Loading</button
-                  ><button class="btn btn-soft-info btn-md gap-2" disabled="">
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-width="0"
-                      viewBox="0 0 24 24"
-                      class="animate-spin"
-                      height="20"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.2"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                        fill="currentColor"
-                      ></path>
-                      <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"></path>
-                    </svg>
-                    Loading</button
-                  ><button class="btn btn-plain-danger btn-md gap-2" disabled="">
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-width="0"
-                      viewBox="0 0 24 24"
-                      class="animate-spin"
-                      height="20"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.2"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                        fill="currentColor"
-                      ></path>
-                      <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"></path>
-                    </svg>
-                    Loading
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Loading Buttons Start -->
-
-          <!-- Disabled Buttons Start -->
-          <div class="card mt-4">
-            <div class="card-body">
-              <div class="card-title">Disabled Buttons</div>
-              <div class="card-subtitle">
-                <p class="text-sm text-slate-400">Use <code>disabled</code>, class to create a disable button.</p>
-                <a
-                  class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
-                  href="https://react-icons.github.io/react-icons/"
-                  target="_blank"
-                  rel="noreferrer"
-                  >React Icons</a
-                >
-              </div>
-              <div class="code-viewer mt-4">
-                <div class="flex flex-wrap items-center gap-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary btn-md" disabled="">Primary</button>
-                    <button class="btn btn-secondary btn-md" disabled="">Secondary</button>
-                    <button class="btn btn-success btn-md" disabled="">Success</button>
-                    <button class="btn btn-danger btn-md" disabled="">Danger</button>
-                    <button class="btn btn-warning btn-md" disabled="">Warning</button>
-                    <button class="btn btn-info btn-md" disabled="">Info</button>
-                    <button class="btn btn-dark btn-md" disabled="">Dark</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Disabled Buttons End -->
-
-          <!-- Block Buttons Start -->
-          <div class="card mt-4">
-            <div class="card-body">
-              <div class="card-title">Block Buttons</div>
-              <div class="card-subtitle">
-                <p class="text-sm text-slate-400">Use <code>w-full</code>, class to create block button.</p>
-              </div>
-              <div class="code-viewer mt-4">
-                <div class="flex flex-col gap-y-4">
-                  <button class="btn btn-primary btn-md w-full">Block Button</button>
-                  <button class="btn btn-outline-primary btn-md w-full">Block Button</button>
-                  <button class="btn btn-soft-primary btn-md w-full">Block Button</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Block Buttons End -->
-
-          <!-- Group Buttons Start -->
-          <div class="card mt-4">
-            <div class="card-body">
-              <div class="card-title">Group Buttons</div>
-              <div class="card-subtitle">
-                <p class="text-sm text-slate-400">
-                  Use <code>ButtonGroup</code> class to create a group of buttons.
-                </p>
-              </div>
-              <div class="code-viewer mt-4">
-                <div class="flex flex-wrap items-center gap-4">
-                  <div class="btn-group">
-                    <button class="btn btn-primary btn-md">HTML</button>
-                    <button class="btn btn-primary btn-md">CSS</button>
-                    <button class="btn btn-primary btn-md">Javascript</button>
-                    <button class="btn btn-primary btn-md">PHP</button>
-                    <button class="btn btn-primary btn-md">Python</button>
-                  </div>
-                  <div class="btn-group">
-                    <button class="btn btn-outline-primary btn-md gap-2">
-                      <svg
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
-                        ></path>
-                      </svg>
-                      120k</button
-                    ><button class="btn btn-outline-primary btn-md gap-2">
-                      <svg
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                        ></path>
-                      </svg>
-                      200k
-                    </button>
-                  </div>
-                  <div class="btn-group rounded">
-                    <button class="btn btn-soft-primary btn-md">Years</button
-                    >
-                    <button class="btn btn-soft-primary btn-md">Months</button
-                    >
-                    <button class="btn btn-soft-primary btn-md">Days</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Group Buttons -->
-        </main>
-        <!-- Main End -->
-        <!-- Footer Start -->
-        <footer class="h-10 items-center">Copyright 2020</footer>
-      </div>
-      <!-- Page Content Star -->
-    </div>
-  </body>
+     </body>
 </html>
