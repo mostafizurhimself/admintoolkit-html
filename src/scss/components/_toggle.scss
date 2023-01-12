@@ -5,5 +5,17 @@
     &-body {
       @apply h-5 w-9 rounded-full bg-slate-200 transition-colors duration-100 after:absolute after:top-[2px] after:left-[2px] after:h-4 after:w-4 after:rounded-full after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary-500 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:border-slate-600 dark:bg-slate-700;
     }
+
+    &-bg {
+      @apply h-5 w-9 rounded-full bg-slate-200 transition-colors duration-100 peer-checked:bg-primary-500 peer-focus:outline-none dark:border-slate-600 dark:bg-slate-700;
+    }
+
+    &-circle {
+      @apply absolute top-[2px] left-[2px] h-4 w-4 transform rounded-full bg-slate-50 transition-all duration-150 peer-checked:translate-x-full peer-checked:border-white dark:bg-slate-200;
+    }
+
+    &-text {
+      @apply text-sm font-medium dark:text-slate-300;
+    }
   }
 }
