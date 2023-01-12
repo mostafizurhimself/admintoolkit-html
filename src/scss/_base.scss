@@ -7,7 +7,11 @@ code {
 }
 
 .label {
+<<<<<<< HEAD
   @apply inline-block text-sm font-medium dark:text-slate-300;
+=======
+  @apply text-sm inline-block font-medium dark:text-slate-300;
+>>>>>>> develop
 
   &[aria-disabled='true'] {
     @apply cursor-not-allowed opacity-50;
