@@ -1,21 +1,32 @@
 @layer components {
   .toggle {
-    @apply relative inline-flex cursor-pointer items-center;
+    @apply relative inline-flex cursor-pointer items-center gap-2;
 
     &-body {
-      @apply h-5 w-9 rounded-full bg-slate-200 transition-colors duration-100 after:absolute after:top-[2px] after:left-[2px] after:h-4 after:w-4 after:rounded-full after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary-500 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:border-slate-600 dark:bg-slate-700;
+      @apply w-9 h-5 rounded-full bg-slate-200 dark:bg-slate-700 transition-colors duration-100 
+      after:absolute after:top-[2px] after:left-[2px] after:w-4 after:h-4 after:rounded-full after:bg-slate-50 after:transition-all after:content-[''] 
+      peer-checked:bg-primary-500 peer-checked:after:translate-x-full peer-focus:outline-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50
+      group-[.toggle-primary]:peer-checked:bg-primary-500
+      group-[.toggle-secondary]:peer-checked:bg-slate-500
+      group-[.toggle-success]:peer-checked:bg-success-500
+      group-[.toggle-danger]:peer-checked:bg-danger-500
+      group-[.toggle-warning]:peer-checked:bg-warning-500
+      group-[.toggle-info]:peer-checked:bg-info-500
+      group-[.toggle-dark]:peer-checked:bg-dark-500;
+    }
+    
+    &-sm &-body {
+      @apply w-9 h-5 after:w-4 after:h-4;
+      
     }
 
-    &-bg {
-      @apply h-5 w-9 rounded-full bg-slate-200 transition-colors duration-100 peer-checked:bg-primary-500 peer-focus:outline-none dark:border-slate-600 dark:bg-slate-700;
+    &-md &-body {
+      @apply w-11 h-6 after:w-5 after:h-5;
     }
 
-    &-circle {
-      @apply absolute top-[2px] left-[2px] h-4 w-4 transform rounded-full bg-slate-50 transition-all duration-150 peer-checked:translate-x-full peer-checked:border-white dark:bg-slate-200;
-    }
-
-    &-text {
-      @apply text-sm font-medium dark:text-slate-300;
+    &-lg &-body {
+      @apply w-[52px] h-[28px] after:w-6 after:h-6;
     }
   }
+
 }
