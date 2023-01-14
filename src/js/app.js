@@ -1,8 +1,8 @@
-import dropdown from './dropdown';
-import accordion from './accordion';
-import theme from './theme';
-import highlightCode from './highlight';
-import sidebar from './sidebar';
+import dropdown from './components/dropdown';
+import accordion from './components/accordion';
+import themeSwitcher from './components/theme-switcher';
+import highlightCode from './components/highlight';
+import sidebar from './components/sidebar';
 import feather from 'feather-icons';
 
 // Initialize code highlighting
@@ -14,8 +14,8 @@ dropdown.init();
 // Initialize accordions
 accordion.init();
 
-// Initialize theme
-theme.init();
+// Initialize themeSwitcher
+themeSwitcher.init();
 
 // Initialize sidebar
 sidebar.init();
