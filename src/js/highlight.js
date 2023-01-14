@@ -67,7 +67,7 @@ const highlightCode = {
       });
   
       // Add event listener to toggle button
-      const toggle = codeViewer.querySelector('.toggle-input');
+      const toggle = codeViewer.querySelector('.code-viewer-footer').querySelector('.toggle-input');
       toggle.addEventListener('change', () => {
         const pre = codeViewer.querySelector('pre');
         copyBtn.classList.toggle('invisible');
@@ -90,8 +90,8 @@ const highlightCode = {
     toggleBody.classList.add('toggle-body');
 
     const span = document.createElement('span');
-    span.classList.add('ml-3', 'text-sm', 'font-medium', 'text-slate-400', 'dark:text-slate-300');
-    span.innerText = 'Show Code';
+    span.classList.add('label', '!text-slate-400');
+    span.innerText = 'Show code';
 
     toggle.appendChild(input);
     toggle.appendChild(toggleBody);
