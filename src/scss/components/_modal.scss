@@ -1,0 +1,29 @@
+@layer components {
+  .modal {
+    @apply fixed left-0 right-0 top-0 bottom-0 z-50 bg-slate-500 bg-opacity-30;
+
+    &-content {
+      @apply mx-auto mt-12 w-[600px] rounded bg-white py-4;
+    }
+
+    &-header {
+      @apply flex border-b;
+    }
+
+    &-body {
+      @apply mt-2 border-b;
+    }
+
+    &-footer {
+      @apply mt-4 flex items-center justify-end pr-6;
+    }
+
+    &-title {
+      @apply pl-6 pb-2 text-lg font-semibold;
+    }
+
+    &-subtitile {
+      @apply text-slate-500 dark:text-slate-400;
+    }
+  }
+}
