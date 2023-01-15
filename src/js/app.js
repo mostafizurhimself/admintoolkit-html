@@ -1,12 +1,12 @@
 import dropdown from './components/dropdown';
 import accordion from './components/accordion';
 import themeSwitcher from './components/theme-switcher';
-import highlightCode from './components/highlight';
+import codeViewer from './components/code-viewer';
 import sidebar from './components/sidebar';
 import feather from 'feather-icons';
 
 // Initialize code highlighting
-highlightCode.init();
+codeViewer.init();
 
 // Initialize dropdowns
 dropdown.init();
