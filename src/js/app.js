@@ -1,16 +1,22 @@
-import dropdown from './components/dropdown';
+//Import core components
 import accordion from './components/accordion';
-import themeSwitcher from './components/theme-switcher';
+import dropdown from './components/dropdown';
 import highlightCode from './components/highlight';
-import sidebar from './components/sidebar';
 import modal from './components/modal';
+import themeSwitcher from './components/theme-switcher';
+import sidebar from './components/sidebar';
+
+//Import third party packages
 import feather from 'feather-icons';
 
-// Initialize code highlighting
-highlightCode.init();
+// Initialize code accordion
+accordion.init();
 
 // Initialize dropdowns
 dropdown.init();
+
+// Initialize code highlighting
+highlightCode.init();
 
 // Initialize modal
 modal.init();
@@ -21,6 +27,5 @@ themeSwitcher.init();
 // Initialize sidebar
 sidebar.init();
 
-// Initialize feather icons
+// Initialize feather icons Icons should be replaced at the end
 feather.replace();
-

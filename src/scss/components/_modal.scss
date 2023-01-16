@@ -1,29 +1,64 @@
 @layer components {
-  .modal {
-    @apply fixed left-0 right-0 top-0 bottom-0 z-50 bg-slate-500 bg-opacity-30;
+     .modal {
+          $modal: &;
+          @apply w-full h-full hidden flex-col fixed inset-0 z-[1000] overflow-x-hidden overflow-y-auto px-4 py-10;
 
-    &-content {
-      @apply mx-auto mt-12 w-[600px] rounded bg-white py-4;
-    }
+          &-full {
+               @apply p-0;
+          }
+          
+          &-centered {
+               @apply justify-center;
+          }
 
-    &-header {
-      @apply flex border-b;
-    }
+          &-dialog {
+               @apply w-full max-w-xl mx-auto relative z-[1010] pointer-events-none transform opacity-0 scale-90 origin-center transition-all duration-300 ease-in-out;
 
-    &-body {
-      @apply mt-2 border-b;
-    }
+               #{$modal}-sm & {
+                    @apply max-w-md;
+               }
 
-    &-footer {
-      @apply mt-4 flex items-center justify-end pr-6;
-    }
+               #{$modal}-lg & {
+                    @apply max-w-3xl;
+               }
 
-    &-title {
-      @apply pl-6 pb-2 text-lg font-semibold;
-    }
+               #{$modal}-full & {
+                    @apply max-w-full h-screen;
+               }
 
-    &-subtitile {
-      @apply text-slate-500 dark:text-slate-400;
-    }
-  }
+               #{$modal}.show & {
+                    @apply opacity-100 scale-100;
+               }
+          }
+
+          &-content {
+               @apply w-full h-full relative flex flex-col pointer-events-auto bg-white rounded-primary shadow-xl;
+          }
+
+          &-backdrop {
+               @apply w-screen h-screen fixed inset-0 z-[1005] bg-slate-600 bg-opacity-0 transition-colors duration-300 ease-in-out;
+
+               #{$modal}.show & {
+                    @apply bg-opacity-50;
+               }
+          }
+
+          &-header,
+          &-body,
+          &-footer {
+               @apply px-6 py-4;
+          }
+
+          &-header {
+               @apply border-b;
+          }
+
+          &-body {
+               @apply flex-grow overflow-auto;
+          }
+
+          &-footer {
+               @apply border-t;
+          }
+     }
 }
