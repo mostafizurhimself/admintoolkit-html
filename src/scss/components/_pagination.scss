@@ -1,0 +1,77 @@
+.pagination {
+     $pagination: &;
+     @apply flex items-center;
+
+     &-start {
+          @apply justify-start;
+     }
+
+     &-center {
+          @apply justify-center;
+     }
+
+     &-end {
+          @apply justify-end;
+     }
+
+     &-list {
+          @apply flex items-stretch gap-4;
+     }
+
+     &-item {
+          @apply flex;
+     }
+
+     &-link {
+          @apply inline-flex items-center justify-center px-3 py-2 rounded text-sm font-medium text-slate-500 dark:text-slate-300 bg-slate-200 bg-opacity-50 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-600 transition-colors duration-150 cursor-pointer;
+          
+          &-more {
+               @apply bg-transparent  hover:bg-transparent dark:bg-transparent dark:hover:bg-transparent tracking-widest;
+          }
+
+          #{$pagination}-sm & {
+               @apply px-2 py-1;
+          }
+
+          #{$pagination}-md & {
+               @apply px-3 py-2;
+          }
+
+          #{$pagination}-lg & {
+               @apply px-4 py-3;
+          }
+
+          #{$pagination}-item.active & {
+               @apply bg-primary-500 text-white;
+          }
+
+          #{$pagination}-primary #{$pagination}-item.active & {
+               @apply bg-primary-500 text-white;
+          }
+          #{$pagination}-secondary #{$pagination}-item.active & {
+               @apply bg-secondary-500 text-white;
+          }
+          #{$pagination}-success #{$pagination}-item.active & {
+               @apply bg-success-500 text-white;
+          }
+          #{$pagination}-primary #{$pagination}-item.active & {
+               @apply bg-primary-500 text-white;
+          }
+          #{$pagination}-danger #{$pagination}-item.active & {
+               @apply bg-danger-500 text-white;
+          }
+          #{$pagination}-warning #{$pagination}-item.active & {
+               @apply bg-warning-500 text-white;
+          }
+          #{$pagination}-info #{$pagination}-item.active & {
+               @apply bg-info-500 text-white;
+          }
+          #{$pagination}-dark #{$pagination}-item.active & {
+               @apply bg-dark-500 text-white;
+          }
+
+          #{$pagination}-item.disabled & {
+               @apply bg-slate-300  opacity-50 cursor-not-allowed;
+          }
+     }
+}
