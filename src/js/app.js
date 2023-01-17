@@ -1,7 +1,7 @@
 //Import core components
 import accordion from './components/accordion';
 import dropdown from './components/dropdown';
-import highlightCode from './components/highlight';
+import codeViewer from './components/code-viewer';
 import modal from './components/modal';
 import themeSwitcher from './components/theme-switcher';
 import sidebar from './components/sidebar';
@@ -16,7 +16,7 @@ accordion.init();
 dropdown.init();
 
 // Initialize code highlighting
-highlightCode.init();
+codeViewer.init();
 
 // Initialize modal
 modal.init();
