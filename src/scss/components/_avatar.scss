@@ -1,0 +1,28 @@
+.avatar {
+
+     @apply w-12 h-12 relative inline-block cursor-pointer;
+
+     & > img {
+          @apply object-cover object-center;
+     }
+
+     &-xs {
+          @apply w-6 h-6;
+     }
+     
+     &-sm {
+          @apply w-8 h-8;
+     }
+     
+     &-md {
+          @apply w-12 h-12;
+     }
+
+     &-lg {
+          @apply w-16 h-16;
+     }
+
+     &-xl {
+          @apply w-[4.5rem] h-[4.5rem];
+     }
+}
