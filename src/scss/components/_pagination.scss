@@ -71,7 +71,7 @@
           }
 
           #{$pagination}-item.disabled & {
-               @apply bg-slate-300  opacity-50 cursor-not-allowed;
+               @apply bg-slate-300 dark:bg-dark-700 dark:bg-opacity-50 opacity-50 cursor-not-allowed;
           }
      }
 }

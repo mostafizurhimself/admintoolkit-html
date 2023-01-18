@@ -455,7 +455,7 @@
                                                             <nav class="pagination">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">Previous</span>
+                                                                           <a class="pagination-link pagination-link-prev"  href="#">Previous</a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -473,7 +473,7 @@
                                                                            <a class="pagination-link" href="#">5</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">Next</span>
+                                                                           <a class="pagination-link pagination-link-next"  href="#">Next</a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -483,7 +483,7 @@
                                                             <nav class="pagination">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">Previous</span>
+                                                                           <a class="pagination-link pagination-link-prev"  href="#">Previous</a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -501,7 +501,7 @@
                                                                            <a class="pagination-link" href="#">5</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">Next</span>
+                                                                           <a class="pagination-link pagination-link-next"  href="#">Next</a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -512,6 +512,94 @@
                                    </div>
                               </div>
                               <!-- Basic Pagination Ends -->
+
+                              <!-- More Pagination Stars -->
+                              <div class="mt-6 space-y-6">
+                                   <div class="w-full overflow-hidden rounded-primary bg-white transition-all duration-300 dark:bg-slate-800 shadow">
+                                        <div class="p-6">
+                                             <h4 class="text-lg font-semibold">
+                                                  More Pagination
+                                             </h4>
+
+                                             <p class="text-sm text-slate-400">
+                                                  Use <code>.pagination-link-more</code> class in <code>span</code> tag to creat to make a pagination component
+                                             </p>
+
+                                             <div class="mt-4">
+                                                  <div class="code-viewer">
+                                                       <div class="code-viewer-content">
+                                                            <nav class="pagination">
+                                                                 <ul class="pagination-list">
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">Previous</a>
+                                                                      </li>
+                                                                      <li class="pagination-item active">
+                                                                           <a class="pagination-link" href="#">1</a>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link" href="#">2</a>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link" href="#">3</a>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link" href="#">4</a>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link" href="#">5</a>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <span class="pagination-link pagination-link-more">...</span>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link" href="#">50</a>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link pagination-link-next" href="#">Next</a>
+                                                                      </li>
+                                                                 </ul>
+                                                            </nav>
+                                                       </div>
+                                                       
+                                                       <div class="code-viewer-source">
+                                                            <nav class="pagination">
+                                                                 <ul class="pagination-list">
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">Previous</a>
+                                                                      </li>
+                                                                      <li class="pagination-item active">
+                                                                           <a class="pagination-link" href="#">1</a>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link" href="#">2</a>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link" href="#">3</a>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link" href="#">4</a>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link" href="#">5</a>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <span class="pagination-link pagination-link-more">...</span>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link" href="#">50</a>
+                                                                      </li>
+                                                                      <li class="pagination-item">
+                                                                           <a class="pagination-link pagination-link-next" href="#">Next</a>
+                                                                      </li>
+                                                                 </ul>
+                                                            </nav>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- More Pagination Ends -->
 
                               <!-- Pagination With Icon Stars -->
                               <div class="mt-6 space-y-6">
@@ -531,9 +619,9 @@
                                                             <nav class="pagination">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -551,9 +639,9 @@
                                                                            <a class="pagination-link" href="#">5</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -562,9 +650,9 @@
                                                             <nav class="pagination">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -582,9 +670,9 @@
                                                                            <a class="pagination-link" href="#">5</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -616,9 +704,9 @@
                                                                  <nav class="pagination pagination-sm">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item active">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -636,9 +724,9 @@
                                                                                 <a class="pagination-link" href="#">5</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -646,9 +734,9 @@
                                                                  <nav class="pagination pagination-md">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item active">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -666,9 +754,9 @@
                                                                                 <a class="pagination-link" href="#">5</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -676,9 +764,9 @@
                                                                  <nav class="pagination pagination-lg">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item active">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -696,9 +784,9 @@
                                                                                 <a class="pagination-link" href="#">5</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -709,9 +797,9 @@
                                                             <nav class="pagination pagination-sm">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -729,9 +817,9 @@
                                                                            <a class="pagination-link" href="#">5</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -739,9 +827,9 @@
                                                             <nav class="pagination pagination-md">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -759,9 +847,9 @@
                                                                            <a class="pagination-link" href="#">5</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -769,9 +857,9 @@
                                                             <nav class="pagination pagination-lg">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -789,9 +877,9 @@
                                                                            <a class="pagination-link" href="#">5</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -823,9 +911,9 @@
                                                                  <nav class="pagination pagination-start">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item active">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -843,9 +931,9 @@
                                                                                 <a class="pagination-link" href="#">5</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -853,9 +941,9 @@
                                                                  <nav class="pagination pagination-center">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item active">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -873,9 +961,9 @@
                                                                                 <a class="pagination-link" href="#">5</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -883,9 +971,9 @@
                                                                  <nav class="pagination pagination-end">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item active">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -903,9 +991,9 @@
                                                                                 <a class="pagination-link" href="#">5</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -917,9 +1005,9 @@
                                                             <nav class="pagination pagination-start">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -937,9 +1025,9 @@
                                                                            <a class="pagination-link" href="#">5</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -947,9 +1035,9 @@
                                                             <nav class="pagination pagination-center">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -967,9 +1055,9 @@
                                                                            <a class="pagination-link" href="#">5</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -977,9 +1065,9 @@
                                                             <nav class="pagination pagination-end">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -997,9 +1085,9 @@
                                                                            <a class="pagination-link" href="#">5</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -1031,9 +1119,9 @@
                                                                  <nav class="pagination pagination-primary">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item active">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -1057,9 +1145,9 @@
                                                                                 <a class="pagination-link" href="#">7</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -1067,9 +1155,9 @@
                                                                  <nav class="pagination pagination-secondary">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -1093,9 +1181,9 @@
                                                                                 <a class="pagination-link" href="#">7</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -1103,9 +1191,9 @@
                                                                  <nav class="pagination pagination-success">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -1129,9 +1217,9 @@
                                                                                 <a class="pagination-link" href="#">7</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -1139,9 +1227,9 @@
                                                                  <nav class="pagination pagination-danger">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -1165,9 +1253,9 @@
                                                                                 <a class="pagination-link" href="#">7</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -1175,9 +1263,9 @@
                                                                  <nav class="pagination pagination-warning">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -1201,9 +1289,9 @@
                                                                                 <a class="pagination-link" href="#">7</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -1211,9 +1299,9 @@
                                                                  <nav class="pagination pagination-info">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -1237,9 +1325,9 @@
                                                                                 <a class="pagination-link" href="#">7</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -1247,9 +1335,9 @@
                                                                  <nav class="pagination pagination-dark">
                                                                       <ul class="pagination-list">
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-prev">
+                                                                                <a class="pagination-link pagination-link-prev" href="#">
                                                                                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                            <li class="pagination-item">
                                                                                 <a class="pagination-link" href="#">1</a>
@@ -1273,9 +1361,9 @@
                                                                                 <a class="pagination-link" href="#">7</a>
                                                                            </li>
                                                                            <li class="pagination-item">
-                                                                                <span class="pagination-link pagination-link-next">
+                                                                                <a class="pagination-link pagination-link-next" href="#">
                                                                                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                                </span>
+                                                                                </a>
                                                                            </li>
                                                                       </ul>
                                                                  </nav>
@@ -1287,9 +1375,9 @@
                                                             <nav class="pagination pagination-primary">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -1313,9 +1401,9 @@
                                                                            <a class="pagination-link" href="#">7</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -1323,9 +1411,9 @@
                                                             <nav class="pagination pagination-secondary">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -1349,9 +1437,9 @@
                                                                            <a class="pagination-link" href="#">7</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -1359,9 +1447,9 @@
                                                             <nav class="pagination pagination-success">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -1385,9 +1473,9 @@
                                                                            <a class="pagination-link" href="#">7</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -1395,9 +1483,9 @@
                                                             <nav class="pagination pagination-danger">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -1421,9 +1509,9 @@
                                                                            <a class="pagination-link" href="#">7</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -1431,9 +1519,9 @@
                                                             <nav class="pagination pagination-warning">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -1457,9 +1545,9 @@
                                                                            <a class="pagination-link" href="#">7</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -1467,9 +1555,9 @@
                                                             <nav class="pagination pagination-info">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -1493,9 +1581,9 @@
                                                                            <a class="pagination-link" href="#">7</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -1503,9 +1591,9 @@
                                                             <nav class="pagination pagination-dark">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -1529,9 +1617,9 @@
                                                                            <a class="pagination-link" href="#">7</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -1561,9 +1649,9 @@
                                                             <nav class="pagination">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item disabled">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -1581,9 +1669,9 @@
                                                                            <a class="pagination-link" href="#">5</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
@@ -1592,9 +1680,9 @@
                                                             <nav class="pagination">
                                                                  <ul class="pagination-list">
                                                                       <li class="pagination-item disabled">
-                                                                           <span class="pagination-link pagination-link-prev">
+                                                                           <a class="pagination-link pagination-link-prev" href="#">
                                                                                 <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                       <li class="pagination-item active">
                                                                            <a class="pagination-link" href="#">1</a>
@@ -1612,9 +1700,9 @@
                                                                            <a class="pagination-link" href="#">5</a>
                                                                       </li>
                                                                       <li class="pagination-item">
-                                                                           <span class="pagination-link pagination-link-next">
+                                                                           <a class="pagination-link pagination-link-next" href="#">
                                                                                 <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                                                           </span>
+                                                                           </a>
                                                                       </li>
                                                                  </ul>
                                                             </nav>
