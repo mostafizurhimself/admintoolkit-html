@@ -137,3 +137,10 @@ const modal = {
 }
 
 export default modal;
+
+ 
+function sum() {
+
+     // return 5 * 2;
+
+}

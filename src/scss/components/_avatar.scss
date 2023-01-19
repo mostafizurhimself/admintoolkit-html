@@ -1,0 +1,177 @@
+.avatar {
+     $avatar: &;
+
+     @apply w-10 h-10 overflow-hidden rounded-none  flex items-center justify-center;
+
+     & > &-img {
+          @apply inline-block object-cover object-center;
+     }
+
+     & > &-text,
+     & > &-icon {
+          @apply w-full h-full inline-flex items-center justify-center bg-secondary-500 text-slate-100;
+     }
+
+     & > &-icon  {
+
+          & > svg {
+               @apply w-5 h-5;
+          }
+     }
+
+     & > &-text {
+          @apply text-base tracking-wide;
+     }
+
+     &-square {
+          @apply rounded-none;
+     }
+
+     &-rounded {
+          @apply rounded-primary;
+     }
+
+     &-circle {
+          @apply rounded-full;
+     }
+
+     &-xs {
+          @apply w-6 h-6;
+
+          & > #{$avatar}-text {
+               @apply text-xs;
+          }
+
+          & > #{$avatar}-icon {
+
+               & > svg {
+                    @apply w-3 h-3;
+               }
+          }
+     }
+
+     &-sm {
+          @apply w-8 h-8;
+
+          & > #{$avatar}-text {
+               @apply text-sm;
+          }
+
+          & > #{$avatar}-icon {
+
+               & > svg {
+                    @apply w-4 h-4;
+               }
+          }
+          
+     }
+
+     &-md {
+          @apply w-10 h-10;
+
+          & > #{$avatar}-text {
+               @apply text-base;
+          }
+
+          & > #{$avatar}-icon {
+
+               & > svg {
+                    @apply w-5 h-5;
+               }
+          }
+     }
+
+     &-lg {
+          @apply w-12 h-12;
+
+          & > #{$avatar}-text {
+               @apply text-lg;
+          }
+
+          & > #{$avatar}-icon {
+
+               & > svg {
+                    @apply w-6 h-6;
+               }
+          }
+     }
+
+     &-xl {
+          @apply w-16 h-16;
+
+          & > #{$avatar}-text {
+               @apply text-xl;
+          }
+
+          & > #{$avatar}-icon {
+
+               & > svg {
+                    @apply w-7 h-7;
+               }
+          }
+     }
+
+     &-primary {
+
+          & > #{$avatar}-text,
+          & > #{$avatar}-icon {
+               @apply bg-primary-500;
+          }
+     }
+
+     &-secondary {
+
+          & > #{$avatar}-text,
+          & > #{$avatar}-icon {
+               @apply bg-secondary-500;
+          }
+     }
+
+     &-success {
+
+          & > #{$avatar}-text,
+          & > #{$avatar}-icon {
+               @apply bg-success-500;
+          }
+     }
+
+     &-danger {
+
+          & > #{$avatar}-text,
+          & > #{$avatar}-icon {
+               @apply bg-danger-500;
+          }
+     }
+
+     &-warning {
+
+          & > #{$avatar}-text,
+          & > #{$avatar}-icon {
+               @apply bg-warning-500;
+          }
+     }
+
+     &-info {
+
+          & > #{$avatar}-text,
+          & > #{$avatar}-icon {
+               @apply bg-info-500;
+          }
+     }
+
+     &-dark {
+          
+          & > #{$avatar}-text,
+          & > #{$avatar}-icon {
+               @apply bg-dark-500;
+          }
+     }
+
+     &-group {
+          @apply flex items-center;
+
+          & > .avatar:not(:first-child) {
+               @apply -ml-2;
+          }
+     }
+}
