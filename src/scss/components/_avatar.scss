@@ -1,18 +1,67 @@
 .avatar {
      $avatar: &;
+     @apply w-10 h-10 rounded-none flex items-center justify-center relative cursor-pointer;
 
-     @apply w-10 h-10 overflow-hidden rounded-none  flex items-center justify-center;
+     &-indicator {
+          
+          @apply after:content-[''] after:inline-block after:w-2 after:h-2 after:rounded-full after:absolute after:right-[-2px] after:bottom-[-2px] after:bg-slate-500 after:shadow-[0px_0px_0px_2px] after:shadow-slate-50 dark:after:shadow-slate-800;
+          
+          &#{$avatar}-circle {
+
+               @apply after:right-[3px] after:bottom-0;
+          }
+          
+          &-top {
+
+               @apply after:right-[-2px] after:top-[-2px];
+
+               &#{$avatar}-circle {
+                    @apply after:right-[3px] after:top-0;
+               }
+          }
+
+          &-bottom {
+
+               @apply after:right-[-2px] after:bottom-[-2px];
+               
+               &#{$avatar}-circle {
+                    @apply after:right-[3px] after:bottom-0;
+               }
+          }
+
+          &-online {
+
+               @apply after:bg-success-500;
+          }
+
+          &-away {
+
+               @apply after:bg-warning-500;
+          }
+
+          &-busy {
+
+               @apply after:bg-danger-500;
+          }
+
+          &-offline {
+
+               @apply after:bg-slate-500;
+          }
+     }
 
      & > &-img {
+
           @apply inline-block object-cover object-center;
      }
 
      & > &-text,
      & > &-icon {
+
           @apply w-full h-full inline-flex items-center justify-center bg-secondary-500 text-slate-100;
      }
 
-     & > &-icon  {
+     & > &-icon {
 
           & > svg {
                @apply w-5 h-5;
@@ -20,22 +69,39 @@
      }
 
      & > &-text {
+
           @apply text-base tracking-wide;
      }
 
      &-square {
-          @apply rounded-none;
+
+          & > #{$avatar}-text,
+          & > #{$avatar}-icon,
+          & > #{$avatar}-img {
+               @apply rounded-none;
+          }
      }
 
      &-rounded {
-          @apply rounded-primary;
+
+          & > #{$avatar}-text,
+          & > #{$avatar}-icon,
+          & > #{$avatar}-img {
+               @apply rounded-primary;
+          }
      }
 
      &-circle {
-          @apply rounded-full;
+
+          & > #{$avatar}-text,
+          & > #{$avatar}-icon,
+          & > #{$avatar}-img {
+               @apply rounded-full;
+          }
      }
 
      &-xs {
+
           @apply w-6 h-6;
 
           & > #{$avatar}-text {
@@ -51,6 +117,7 @@
      }
 
      &-sm {
+
           @apply w-8 h-8;
 
           & > #{$avatar}-text {
@@ -67,6 +134,7 @@
      }
 
      &-md {
+
           @apply w-10 h-10;
 
           & > #{$avatar}-text {
@@ -82,6 +150,7 @@
      }
 
      &-lg {
+
           @apply w-12 h-12;
 
           & > #{$avatar}-text {
@@ -97,6 +166,7 @@
      }
 
      &-xl {
+          
           @apply w-16 h-16;
 
           & > #{$avatar}-text {
@@ -115,7 +185,7 @@
 
           & > #{$avatar}-text,
           & > #{$avatar}-icon {
-               @apply bg-primary-500;
+               @apply bg-primary-100 text-primary-500 dark:bg-primary-500 dark:text-slate-100;
           }
      }
 
@@ -123,7 +193,8 @@
 
           & > #{$avatar}-text,
           & > #{$avatar}-icon {
-               @apply bg-secondary-500;
+               @apply bg-secondary-200 text-secondary-500 dark:bg-secondary-500 dark:text-slate-100;
+
           }
      }
 
@@ -131,7 +202,8 @@
 
           & > #{$avatar}-text,
           & > #{$avatar}-icon {
-               @apply bg-success-500;
+               @apply bg-success-100 text-success-500 dark:bg-success-500 dark:text-slate-100;
+
           }
      }
 
@@ -139,7 +211,8 @@
 
           & > #{$avatar}-text,
           & > #{$avatar}-icon {
-               @apply bg-danger-500;
+               @apply bg-danger-100 text-danger-500 dark:bg-danger-500 dark:text-slate-100;
+
           }
      }
 
@@ -147,7 +220,7 @@
 
           & > #{$avatar}-text,
           & > #{$avatar}-icon {
-               @apply bg-warning-500;
+               @apply bg-warning-100 text-warning-500 dark:bg-warning-500 dark:text-slate-100;
           }
      }
 
@@ -155,7 +228,7 @@
 
           & > #{$avatar}-text,
           & > #{$avatar}-icon {
-               @apply bg-info-500;
+               @apply bg-info-100 text-info-500 dark:bg-info-500 dark:text-slate-100;
           }
      }
 
@@ -163,7 +236,9 @@
           
           & > #{$avatar}-text,
           & > #{$avatar}-icon {
-               @apply bg-dark-500;
+
+               @apply bg-dark-200 text-dark-500 dark:bg-dark-500 dark:text-slate-100;
+
           }
      }
 
