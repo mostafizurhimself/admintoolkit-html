@@ -134,7 +134,12 @@
                 action=""
               >
                 <div class="flex h-full items-center px-3">
-                  <i class="text-slate-400 group-focus-within:text-primary-500" width="1em" height="1em" data-feather="search"></i>
+                  <i
+                    class="text-slate-400 group-focus-within:text-primary-500"
+                    width="1em"
+                    height="1em"
+                    data-feather="search"
+                  ></i>
                 </div>
 
                 <input
@@ -287,9 +292,9 @@
 
               <!-- Dark Mood Toggle Starts -->
               <div class="flex">
-                <button 
-                  id="btn-theme-mode" 
-                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300" 
+                <button
+                  id="btn-theme-mode"
+                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
                   type="button"
                 >
                   <i class="block dark:hidden" width="24" height="24" data-feather="moon"></i>
@@ -301,10 +306,14 @@
               <!-- Notification Dropdown Starts -->
               <div class="dropdown -mt-0.5">
                 <div class="dropdown-toggle">
-                  <button class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
+                  <button
+                    class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                  >
                     <i width="24" height="24" data-feather="bell"></i>
-          
-                    <span class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
+
+                    <span
+                      class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200"
+                    >
                       5
                     </span>
                   </button>
@@ -523,7 +532,7 @@
                         viewBox="0 0 24 24"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="ms-1"
+                        class="ml-1"
                         height="1em"
                         width="1em"
                         xmlns="http://www.w3.org/2000/svg"
@@ -548,7 +557,9 @@
                     />
 
                     <div class="hidden md:flex md:flex-col">
-                      <span class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
+                      <span
+                        class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300"
+                      >
                         John Doe
                       </span>
 
@@ -596,9 +607,7 @@
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h1 class="text-xl font-semibold dark:text-slate-300">
-                Alerts
-              </h1>
+              <h1 class="text-xl font-semibold dark:text-slate-300">Alerts</h1>
 
               <ol class="breadcrumb ml-auto">
                 <li class="breadcrumb-item">
@@ -619,16 +628,16 @@
             <!-- Alert Starts -->
             <div class="mt-6 space-y-6">
               <!-- Basic Alert Starts -->
-              <div class="w-full overflow-hidden rounded-primary bg-white transition-all duration-300 dark:bg-slate-800 shadow">
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
                 <div class="p-6">
-                  <h4 class="text-lg font-semibold">
-                    Basic Alert
-                  </h4>
+                  <h4 class="text-lg font-semibold">Basic Alert</h4>
 
                   <p class="text-sm text-slate-400">
                     For styling an alert, use <code>alert</code> and <code>alert-*</code> clasess.
                   </p>
-                  
+
                   <div class="mt-6">
                     <div class="code-viewer">
                       <div class="flex flex-col gap-4">
@@ -661,16 +670,23 @@
               <!-- Basic Alert Ends -->
 
               <!-- Icon Alert Start -->
-              <div class="w-full overflow-hidden rounded-primary bg-white transition-all duration-300 dark:bg-slate-800 shadow">
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
                 <div class="p-6">
-                  <h4 class="text-lg font-semibold">
-                    Alert with icon
-                  </h4>
+                  <h4 class="text-lg font-semibold">Alert with icon</h4>
 
                   <p class="text-sm text-slate-400">
-                    Use <a class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline" href="https://feathericons.com" target="_blank">Feather Icons</a> to create alerts with icons.
+                    Use
+                    <a
+                      class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
+                      href="https://feathericons.com"
+                      target="_blank"
+                      >Feather Icons</a
+                    >
+                    to create alerts with icons.
                   </p>
-                  
+
                   <div class="mt-6">
                     <div class="code-viewer">
                       <div class="flex flex-col gap-4">
@@ -710,16 +726,16 @@
               <!-- Icon Alert End -->
 
               <!-- Outlined Alert Starts -->
-              <div class="w-full overflow-hidden rounded-primary bg-white transition-all duration-300 dark:bg-slate-800 shadow">
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
                 <div class="p-6">
-                  <h4 class="text-lg font-semibold">
-                    Outlined Alert
-                  </h4>
+                  <h4 class="text-lg font-semibold">Outlined Alert</h4>
 
                   <p class="text-sm text-slate-400">
-                    Use <code>alert-outlined</code> class with our contextual classes to create an oulined alert 
+                    Use <code>alert-outlined</code> class with our contextual classes to create an oulined alert
                   </p>
-                  
+
                   <div class="mt-6">
                     <div class="code-viewer">
                       <div class="flex flex-col gap-4">
@@ -759,16 +775,16 @@
               <!-- Outlined Alert Ends -->
 
               <!-- Dismissable Alert Starts -->
-              <div class="w-full overflow-hidden rounded-primary bg-white transition-all duration-300 dark:bg-slate-800 shadow">
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
                 <div class="p-6">
-                  <h4 class="text-lg font-semibold">
-                    Dismissable Alert
-                  </h4>
+                  <h4 class="text-lg font-semibold">Dismissable Alert</h4>
 
                   <p class="text-sm text-slate-400">
-                    Use <code>dismissable</code> class with our theme classes to create an outline alert 
+                    Use <code>dismissable</code> class with our theme classes to create an outline alert
                   </p>
-                  
+
                   <div class="mt-6">
                     <div class="code-viewer">
                       <div class="flex flex-col gap-4">
@@ -822,30 +838,26 @@
               <!-- Dismissable Alert Ends -->
 
               <!-- Controlled Alert Start -->
-              <div class="w-full overflow-hidden rounded-primary bg-white transition-all duration-300 dark:bg-slate-800 shadow">
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
                 <div class="p-6">
-                  <h4 class="text-lg font-semibold">
-                    Controlled Alert
-                  </h4>
+                  <h4 class="text-lg font-semibold">Controlled Alert</h4>
 
                   <p class="text-sm text-slate-400">
-                    Use the <code>show</code> class to control the visibility of the alert 
+                    If you want to manually hide the alert, you need create an instance of <code>Alert</code> class.
+                    Then call the <code>dismiss()</code> method to hide the alert.
                   </p>
-                  
+
                   <div class="mt-6">
                     <div class="code-viewer">
                       <div class="flex flex-col gap-4">
-                        <div class="alert alert-success alert-dismissible" role="alert">
+                        <div class="alert alert-success" role="alert" id="controlled-alert">
                           <span class="alert-icon"><i width="1em" height="1em" data-feather="check-circle"></i></span>
                           <p class="alert-text">This is a success alert with addtional information and content.</p>
-                          <button class="alert-dismiss" type="button">
-                            <i width="16" height="16" data-feather="x"></i>
-                          </button>
                         </div>
                         <div>
-                          <button class="btn btn-md btn-primary--solid">
-                            Hide dismissable alert
-                          </button>
+                          <button class="btn btn-primary" type="button">Hide dismissable alert</button>
                         </div>
                       </div>
                     </div>
@@ -855,27 +867,35 @@
               <!-- Controlled Alert Ends -->
 
               <!-- Additional Content Alert Starts -->
-              <div class="w-full overflow-hidden rounded-primary bg-white transition-all duration-300 dark:bg-slate-800 shadow">
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
                 <div class="p-6">
-                  <h4 class="text-lg font-semibold">
-                    Additional Content
-                  </h4>
+                  <h4 class="text-lg font-semibold">Additional Content</h4>
 
                   <p class="text-sm text-slate-400">
-                    Use the <code>show</code> class to control the visibility of the alert 
+                    Use the <code>show</code> class to control the visibility of the alert
                   </p>
-                  
+
                   <div class="mt-6">
                     <div class="code-viewer">
                       <div class="flex flex-col gap-4">
                         <div class="alert alert-success alert-dismissible" role="alert">
                           <div>
-                            <div class="flex items-center text-base font-medium gap-2">
-                              <span class="alert-icon"><i width="1em" height="1em" data-feather="check-circle"></i></span>
+                            <div class="flex items-center gap-2 text-base font-medium">
+                              <span class="alert-icon"
+                                ><i width="1em" height="1em" data-feather="check-circle"></i
+                              ></span>
                               <span>Order completed</span>
                             </div>
-                            <div class="font-normal mt-3">
-                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, libero sed delectus nulla necessitatibus magni voluptas inventore esse ducimus, nam, blanditiis ut dolor vero nobis molestiae tenetur perferendis quae! Porro accusantium temporibus quas necessitatibus. Facere dolor repudiandae impedit iure, velit accusamus nisi reprehenderit laudantium consequatur odio est minima placeat architecto?</p>
+                            <div class="mt-3 font-normal">
+                              <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, libero sed delectus
+                                nulla necessitatibus magni voluptas inventore esse ducimus, nam, blanditiis ut dolor
+                                vero nobis molestiae tenetur perferendis quae! Porro accusantium temporibus quas
+                                necessitatibus. Facere dolor repudiandae impedit iure, velit accusamus nisi
+                                reprehenderit laudantium consequatur odio est minima placeat architecto?
+                              </p>
                             </div>
                           </div>
                           <button class="alert-dismiss" type="button">
@@ -884,11 +904,13 @@
                         </div>
                         <div class="alert alert-danger alert-dismissible" role="alert">
                           <div>
-                            <div class="flex items-center text-base font-medium gap-2">
-                              <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-triangle"></i></span>
+                            <div class="flex items-center gap-2 text-base font-medium">
+                              <span class="alert-icon"
+                                ><i width="1em" height="1em" data-feather="alert-triangle"></i
+                              ></span>
                               <span> There were some errors with your submission</span>
                             </div>
-                            <div class="font-normal mt-3 ps-10">
+                            <div class="ps-10 mt-3 font-normal">
                               <ul class="list-disc space-y-1" role="list">
                                 <li>Your password must be at least 8 characters</li>
                                 <li>Your password must include at least one pro wrestling finishing move</li>
@@ -912,13 +934,14 @@
 
           <!-- Footer Starts -->
           <footer class="footer">
-                <p class="text-sm">
-                    Copyright © 2023 <a class="text-primary-500 hover:underline" href="https://bdlancers.com">Bdlancers</a>, All right Reserved
-                </p>
-          
-                <p class="flex items-center gap-1 text-sm">
-                    Hand-crafted &amp; Made with <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
-                </p>
+            <p class="text-sm">
+              Copyright © 2023 <a class="text-primary-500 hover:underline" href="https://bdlancers.com">Bdlancers</a>,
+              All right Reserved
+            </p>
+
+            <p class="flex items-center gap-1 text-sm">
+              Hand-crafted &amp; Made with <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
+            </p>
           </footer>
           <!-- Footer Ends -->
         </div>

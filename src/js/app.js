@@ -1,4 +1,5 @@
 //Import core components
+import alert from './components/alert';
 import accordion from './components/accordion';
 import dropdown from './components/dropdown';
 import codeViewer from './components/code-viewer';
@@ -9,14 +10,17 @@ import sidebar from './components/sidebar';
 //Import third party packages
 import feather from 'feather-icons';
 
+// Initialize code highlighting
+codeViewer.init();
+
+// Initialize alert
+alert.init();
+
 // Initialize code accordion
 accordion.init();
 
 // Initialize dropdowns
 dropdown.init();
-
-// Initialize code highlighting
-codeViewer.init();
 
 // Initialize modal
 modal.init();
