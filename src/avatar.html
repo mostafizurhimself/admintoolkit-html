@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toggles - Admin Toolkit</title>
+    <title>Avatar - Admin Toolkit</title>
     <link rel="stylesheet" href="./scss/app.scss" />
     <script type="text/javascript" src="./js/theme.js"></script>
     <script type="module" src="./js/app.js"></script>
@@ -543,7 +543,7 @@
                   <button class="group relative flex items-center space-x-1.5" type="button">
                     <img
                       class="block h-9 w-9 rounded-full group-focus:ring group-focus:ring-primary-500"
-                      src="https://avatars.githubusercontent.com/u/1164541?v=4"
+                      src="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/assets/img/avatars/1.png"
                       alt="avatar"
                     />
 
@@ -597,7 +597,7 @@
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h1 class="text-xl font-semibold dark:text-slate-300">Toggles</h1>
+              <h1 class="text-xl font-semibold dark:text-slate-300">Avatar</h1>
 
               <ol class="breadcrumb ml-auto">
                 <li class="breadcrumb-item">
@@ -609,249 +609,341 @@
                 </li>
 
                 <li class="breadcrumb-item">
-                  <a href="#">Toggles</a>
+                  <a href="#">Avatar</a>
                 </li>
               </ol>
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Basic Toggle Stars -->
+            <!-- Avatar Shapes Starts -->
             <div class="mt-6 space-y-6">
               <div
                 class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
               >
                 <div class="p-6">
-                  <h4 class="text-lg font-semibold">Basic Toggle</h4>
-
-                  <p class="text-sm text-slate-400">Use the <code>Toggle</code> component to create a toggle switch.</p>
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex flex-wrap items-center gap-4">
-                        <label for="toggle-checked-input" class="toggle">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="toggle-checked-input"
-                            type="checkbox"
-                            name="toggle-checked-input"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label">Toggle Me</span>
-                        </label>
-                        <label for="toggle-unchecked-input" class="toggle">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="toggle-unchecked-input"
-                            type="checkbox"
-                            name="toggle-unchecked-input"
-                            checked="true"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label">Checked Toggle</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Basic Toggle Ends -->
-
-            <!-- Toggle Color Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Toggle Color</h4>
+                  <h4 class="text-lg font-semibold">Avatar Shapes</h4>
 
                   <p class="text-sm text-slate-400">
-                    Use the <code>color</code> prop to change the color of the toggle. You can use the following colors:
-                    <code>primary</code>, <code>secondary</code>, <code>success</code>, <code>danger</code>,
-                    <code>warning</code>, <code>info</code>, <code>dark</code>. Default color is <code>primary</code>.
+                    Use <code>.avatar-square</code>, <code>.avatar-rounded</code> and <code>.avatar-circle</code> to
+                    shape avatars. Default is <code>.avatar-square</code>
                   </p>
+
                   <div class="mt-4">
                     <div class="code-viewer">
-                      <div class="flex flex-wrap items-center gap-4">
-                        <label for="toggle-primary" class="toggle toggle-primary group">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="toggle-primary"
-                            type="checkbox"
-                            name="toggle-primary"
-                            checked="true"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label">Primary</span>
-                        </label>
-                        <label for="toggle-secondary" class="toggle toggle-secondary group">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="toggle-secondary"
-                            type="checkbox"
-                            name="toggle-secondary"
-                            checked="true"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label">Secondary</span>
-                        </label>
-                        <label for="toggle-success" class="toggle toggle-success group">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="toggle-success"
-                            type="checkbox"
-                            name="toggle-success"
-                            checked="true"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label">Success</span>
-                        </label>
-                        <label for="toggle-danger" class="toggle toggle-danger group">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="toggle-danger"
-                            type="checkbox"
-                            name="toggle-danger"
-                            checked="true"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label">Danger</span>
-                        </label>
-                        <label for="toggle-warning" class="toggle toggle-warning group">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="toggle-warning"
-                            type="checkbox"
-                            name="toggle-warning"
-                            checked="true"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label">Warning</span>
-                        </label>
-                        <label for="toggle-info" class="toggle toggle-info group">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="toggle-info"
-                            type="checkbox"
-                            name="toggle-info"
-                            checked="true"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label">Info</span>
-                        </label>
-                        <label for="toggle-dark" class="toggle toggle-dark group">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="toggle-dark"
-                            type="checkbox"
-                            name="toggle-dark"
-                            checked="true"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label">Dark</span>
-                        </label>
+                      <div class="flex flex-wrap items-center gap-6">
+                        <div class="avatar avatar-square">
+                          <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
+                        </div>
+                        <div class="avatar avatar-rounded">
+                          <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 2" />
+                        </div>
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img" src="./images/women-avatar-01.jpg" alt="Avatar 3" />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Toggle Color Ends -->
+            <!-- Avatar Shapes Ends -->
 
-            <!-- Toggle Size Stars -->
+            <!-- Avatar Size Starts -->
             <div class="mt-6 space-y-6">
               <div
                 class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
               >
                 <div class="p-6">
-                  <h4 class="text-lg font-semibold">Toggle Size</h4>
+                  <h4 class="text-lg font-semibold">Avatar Sizes</h4>
 
                   <p class="text-sm text-slate-400">
-                    Use the <code>size</code> prop to change the size of the toggle. You can use the following sizes:
-                    <code>sm</code>, <code>md</code>, <code>lg</code>. Default size is md.
+                    Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
+                    Default is <code>.avatar-md</code>
                   </p>
+
                   <div class="mt-4">
                     <div class="code-viewer">
-                      <div class="flex flex-wrap items-center gap-4">
-                        <label for="toggle-sm" class="toggle toggle-sm">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="toggle-sm"
-                            type="checkbox"
-                            name="toggle-primary"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label">Smail</span>
-                        </label>
-                        <label for="toggle-md" class="toggle toggle-md">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="toggle-md"
-                            type="checkbox"
-                            name="toggle-primary"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label">Medium</span>
-                        </label>
-                        <label for="toggle-lg" class="toggle toggle-lg">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="toggle-lg"
-                            type="checkbox"
-                            name="toggle-primary"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label">Large</span>
-                        </label>
+                      <div class="flex flex-wrap items-center gap-6">
+                        <div class="avatar avatar-circle avatar-xs">
+                          <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
+                        </div>
+                        <div class="avatar avatar-circle avatar-sm">
+                          <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 1" />
+                        </div>
+                        <div class="avatar avatar-circle avatar-md">
+                          <img class="avatar-img" src="./images/men-avatar-03.jpg" alt="Avatar 2" />
+                        </div>
+                        <div class="avatar avatar-circle avatar-lg">
+                          <img class="avatar-img" src="./images/men-avatar-04.jpg" alt="Avatar 3" />
+                        </div>
+                        <div class="avatar avatar-circle avatar-xl">
+                          <img class="avatar-img" src="./images/women-avatar-01.jpg" alt="Avatar 1" />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Toggle Size` Ends -->
+            <!-- Avatar Size Ends -->
 
-            <!-- Disabled Toggle Stars -->
+            <!-- Avatar With Placeholder Icons Starts -->
             <div class="mt-6 space-y-6">
               <div
                 class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
               >
                 <div class="p-6">
-                  <h4 class="text-lg font-semibold">Disabled Toggle</h4>
+                  <h4 class="text-lg font-semibold">Avatar With Placeholder Icons</h4>
 
-                  <p class="text-sm text-slate-400">Use the <code>disabled</code> prop to disable the toggle.</p>
+                  <p class="text-sm text-slate-400">
+                    Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
+                    Default is <code>.avatar-md</code>
+                  </p>
+
                   <div class="mt-4">
                     <div class="code-viewer">
-                      <div class="flex flex-wrap items-center gap-4">
-                        <label for="disabled-unchecked-toggle" class="toggle">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="disabled-unchecked-toggle"
-                            type="checkbox"
-                            name="disabled-unchecked-toggle"
-                            disabled="true"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label" aria-disabled="true">Disabled Toggle</span>
-                        </label>
-                        <label for="disabled-checked-toggle" class="toggle">
-                          <input
-                            class="toggle-input peer sr-only"
-                            id="disabled-checked-toggle"
-                            type="checkbox"
-                            name="disabled-checked-toggle"
-                            checked="true"
-                            disabled="true"
-                          />
-                          <div class="toggle-body"></div>
-                          <span class="label" aria-disabled="true">Disabled Toggle</span>
-                        </label>
+                      <div class="flex flex-wrap items-center gap-6">
+                        <div class="avatar avatar-square">
+                          <span class="avatar-icon">
+                            <i data-feather="user"></i>
+                          </span>
+                        </div>
+                        <div class="avatar avatar-rounded">
+                          <span class="avatar-icon">
+                            <i data-feather="user"></i>
+                          </span>
+                        </div>
+                        <div class="avatar avatar-circle">
+                          <span class="avatar-icon">
+                            <i data-feather="user"></i>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Disabled Toggle Ends -->
+            <!-- Avatar With Placeholder Icons Ends -->
+
+            <!-- Avatar With Placeholder Text Starts -->
+            <div class="mt-6 space-y-6">
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
+                <div class="p-6">
+                  <h4 class="text-lg font-semibold">Avatar With Placeholder Text</h4>
+
+                  <p class="text-sm text-slate-400">
+                    Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
+                    Default is <code>.avatar-md</code>
+                  </p>
+
+                  <div class="mt-4">
+                    <div class="code-viewer">
+                      <div class="flex flex-wrap items-center gap-6">
+                        <div class="avatar avatar-square">
+                          <span class="avatar-text">
+                            <span>AB</span>
+                          </span>
+                        </div>
+                        <div class="avatar avatar-rounded">
+                          <span class="avatar-text">
+                            <span>AB</span>
+                          </span>
+                        </div>
+                        <div class="avatar avatar-circle">
+                          <span class="avatar-text">
+                            <span>AB</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Avatar With Placeholder Text Ends -->
+
+            <!-- Avatar With Theme Color Starts -->
+            <div class="mt-6 space-y-6">
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
+                <div class="p-6">
+                  <h4 class="text-lg font-semibold">Avatar With Theme Color</h4>
+
+                  <p class="text-sm text-slate-400">
+                    Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
+                    Default is <code>.avatar-md</code>
+                  </p>
+
+                  <div class="mt-4">
+                    <div class="code-viewer">
+                      <div class="flex flex-col justify-center gap-6">
+                        <!-- Icon Avatars -->
+                        <div class="flex flex-wrap items-center gap-6">
+                          <div class="avatar avatar-circle avatar-primary">
+                            <span class="avatar-icon">
+                              <i data-feather="user"></i>
+                            </span>
+                          </div>
+                          <div class="avatar avatar-circle avatar-secondary">
+                            <span class="avatar-icon">
+                              <i data-feather="user"></i>
+                            </span>
+                          </div>
+                          <div class="avatar avatar-circle avatar-success">
+                            <span class="avatar-icon">
+                              <i data-feather="user"></i>
+                            </span>
+                          </div>
+                          <div class="avatar avatar-circle avatar-danger">
+                            <span class="avatar-icon">
+                              <i data-feather="user"></i>
+                            </span>
+                          </div>
+                          <div class="avatar avatar-circle avatar-warning">
+                            <span class="avatar-icon">
+                              <i data-feather="user"></i>
+                            </span>
+                          </div>
+                          <div class="avatar avatar-circle avatar-info">
+                            <span class="avatar-icon">
+                              <i data-feather="user"></i>
+                            </span>
+                          </div>
+                          <div class="avatar avatar-circle avatar-dark">
+                            <span class="avatar-icon">
+                              <i data-feather="user"></i>
+                            </span>
+                          </div>
+                        </div>
+                        <!-- Text Avatars -->
+                        <div class="flex flex-wrap items-center gap-6">
+                          <div class="avatar avatar-circle avatar-primary">
+                            <span class="avatar-text">
+                              <span>AB</span>
+                            </span>
+                          </div>
+                          <div class="avatar avatar-circle avatar-secondary">
+                            <span class="avatar-text">
+                              <span>AB</span>
+                            </span>
+                          </div>
+                          <div class="avatar avatar-circle avatar-success">
+                            <span class="avatar-text">
+                              <span>AB</span>
+                            </span>
+                          </div>
+                          <div class="avatar avatar-circle avatar-danger">
+                            <span class="avatar-text">
+                              <span>AB</span>
+                            </span>
+                          </div>
+                          <div class="avatar avatar-circle avatar-warning">
+                            <span class="avatar-text">
+                              <span>AB</span>
+                            </span>
+                          </div>
+                          <div class="avatar avatar-circle avatar-info">
+                            <span class="avatar-text">
+                              <span>AB</span>
+                            </span>
+                          </div>
+                          <div class="avatar avatar-circle avatar-dark">
+                            <span class="avatar-text">
+                              <span>AB</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Avatar With Theme Color Ends -->
+
+            <!-- Avatar With Status Indicator Starts -->
+            <div class="mt-6 space-y-6">
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
+                <div class="p-6">
+                  <h4 class="text-lg font-semibold">Avatar With Status Indicator</h4>
+
+                  <p class="text-sm text-slate-400">
+                    Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
+                    Default is <code>.avatar-md</code>
+                  </p>
+
+                  <div class="mt-4">
+                    <div class="code-viewer">
+                      <div class="flex gap-6">
+                        <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                          <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
+                        </div>
+                        <div class="avatar avatar-circle avatar-indicator avatar-indicator-offline">
+                          <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 1" />
+                        </div>
+                        <div class="avatar avatar-circle avatar-indicator avatar-indicator-top avatar-indicator-busy">
+                          <img class="avatar-img" src="./images/men-avatar-03.jpg" alt="Avatar 1" />
+                        </div>
+                        <div class="avatar avatar-circle avatar-indicator avatar-indicator-top avatar-indicator-away">
+                          <img class="avatar-img" src="./images/men-avatar-04.jpg" alt="Avatar 1" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Avatar With Status Indicator Ends -->
+
+            <!-- Avatar Group Starts -->
+            <div class="mt-6 space-y-6">
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
+                <div class="p-6">
+                  <h4 class="text-lg font-semibold">Avatar Group</h4>
+
+                  <p class="text-sm text-slate-400">
+                    Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
+                    Default is <code>.avatar-md</code>
+                  </p>
+
+                  <div class="mt-4">
+                    <div class="code-viewer">
+                      <div class="avatar-group">
+                        <div class="avatar avatar-circle avatar-md">
+                          <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
+                        </div>
+                        <div class="avatar avatar-circle avatar-md">
+                          <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 1" />
+                        </div>
+                        <div class="avatar avatar-circle avatar-md">
+                          <img class="avatar-img" src="./images/men-avatar-03.jpg" alt="Avatar 2" />
+                        </div>
+                        <div class="avatar avatar-circle avatar-md">
+                          <img class="avatar-img" src="./images/men-avatar-04.jpg" alt="Avatar 3" />
+                        </div>
+                        <div class="avatar avatar-circle avatar-md">
+                          <img class="avatar-img" src="./images/women-avatar-01.jpg" alt="Avatar 1" />
+                        </div>
+                        <div class="avatar avatar-circle">
+                          <span class="avatar-text">
+                            <span>2+</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Avatar Group Ends -->
           </main>
           <!-- Main Content Ends -->
 

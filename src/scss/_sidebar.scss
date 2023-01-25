@@ -55,7 +55,7 @@
     }
 
     &-arrow {
-      @apply text-slate-600 transition-transform duration-150 me-2 ms-auto;
+      @apply ml-auto mr-2 text-slate-600 transition-transform duration-150;
 
       svg {
         @apply h-4 w-4;
