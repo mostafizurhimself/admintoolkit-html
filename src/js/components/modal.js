@@ -5,53 +5,49 @@ const modal = {
           // Store all the modal trigger element
           const triggers = document.querySelectorAll('[data-component-trigger="modal"]');
 
-          if(triggers.length) {
-
-               triggers.forEach((trigger) => {
-
-                    trigger.addEventListener('click', () => {
-
-                         //Store the modal ID
-                         const modalId = trigger.dataset.componentId;
-                         
-                         //Store the modal Element
-                         const modal = document.querySelector(modalId);
-
-                         if(modal) {
-
-                              // Store all dissmissable buttons from modal
-                              const dismisses = modal.querySelectorAll('[data-component-dismisss="modal"]')
-                              
-                              // Open the modal
-                              this.open(modal);
-
-                              // Check the modal contains any dismissable button
-                              if(dismisses.length) {
-
-                                   // Close the modal when clicks one of the dismissable buttons
-                                   dismisses.forEach((dismisse) => dismisse.addEventListener('click', () => this.close(modal)))
-                              }
-
-                              //Get the modal's backdrop value
-                              const backdrop = modal.dataset.componentBackdrop ? modal.dataset.componentBackdrop : 'true';
-
-                              // Check if backdrop is enabled
-                              if(backdrop === 'true') {
-
-                                   // Close the modal when press the esc key
-                                   document.addEventListener('keydown', (e) => {
-
-                                        if (e.key == 'Escape' && modal.classList.contains('show')) {
-
-                                             this.close(modal);
-                                        }
-                                   })
-                              }
-                              
-                         }
-                    });
-               });
+          // Check if page contains any trigger
+          if(triggers.length === 0) {
+               return;
           }
+          
+          triggers.forEach((trigger) => {
+
+               trigger.addEventListener('click', () => {
+
+                    //Store the modal ID
+                    const modalId = trigger.dataset.componentId;
+                    
+                    //Store the modal Element
+                    const modal = document.querySelector(modalId);
+
+                    if(modal) {
+
+                         // Store all dissmissable buttons from modal
+                         const dismisses = modal.querySelectorAll('[data-component-dismisss="modal"]');
+                         
+                         //Get the modal's backdrop value
+                         const backdrop = modal.dataset.componentBackdrop ? modal.dataset.componentBackdrop : 'true';
+
+                         // Open the modal
+                         this.open(modal);
+
+                         // Check the modal contains any dismissable button
+                         if(dismisses.length) {
+
+                              // Close the modal when clicks one of the dismissable buttons
+                              dismisses.forEach((dismisse) => dismisse.addEventListener('click', () => this.close(modal)))
+                         }
+                         
+                         // Check if backdrop is enabled
+                         if(backdrop === 'true') {
+
+                              // Close the modal when press the esc key
+                              document.addEventListener('keydown', this.enableEscClose.bind({ modalObj: this, modal }))
+                         }
+                    }
+               });
+          });
+          
      },
 
      open(modal) {  
@@ -111,9 +107,26 @@ const modal = {
                     // Remove the backdrop from modal
                     modal.querySelector('.modal-backdrop').remove();
 
+                    // Remove keydown eventListener from document
+                    document.removeEventListener('keydown', this.enableEscClose);
+
                }, 300)
           }
 
+     },
+
+     enableEscClose(e) {
+          
+          //Store the modal element
+          const modal = this.modal;
+
+          //Store the entire modal object
+          const modalObj = this.modalObj;
+
+          if (e.key == 'Escape' && modal.classList.contains('show')) {
+
+               modalObj.close(modal);
+          }
      },
 
      createHTMLTag(tag, attributes = {}) {
@@ -137,10 +150,3 @@ const modal = {
 }
 
 export default modal;
-
- 
-function sum() {
-
-     // return 5 * 2;
-
-}
