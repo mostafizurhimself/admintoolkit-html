@@ -1,0 +1,350 @@
+.progress {
+     $progress: &;
+
+     &-line {
+          @apply w-full flex items-center gap-2 overflow-hidden;
+
+          &-track {
+               @apply w-full rounded-full bg-slate-200 dark:bg-slate-700;
+          }
+          
+          &-label {
+               @apply text-slate-600 dark:text-slate-300 text-sm font-medium; 
+               
+               #{$progress}-sm &{
+                    @apply text-xs;
+               }
+
+               #{$progress}-md &{
+                    @apply text-sm;
+               }
+
+               #{$progress}-lg &{
+                    @apply text-base;
+               }
+          }
+
+          &-thumb {
+               @apply max-w-full h-3 bg-primary-500 rounded-full flex justify-center items-center;
+
+               #{$progress}-sm & {
+                    @apply h-2;
+               }
+
+               #{$progress}-md & {
+                    @apply h-3;
+               }
+
+               #{$progress}-lg & {
+                    @apply h-4;
+               }
+
+               #{$progress}-primary & {
+                    @apply bg-primary-500;
+               }
+
+               #{$progress}-secondary & {
+                    @apply bg-secondary-500;
+               }
+
+               #{$progress}-success & {
+                    @apply bg-success-500;
+               }
+               
+               #{$progress}-danger & {
+                    @apply bg-danger-500;
+               }
+
+               #{$progress}-warning & {
+                    @apply bg-warning-500;
+               }
+
+               #{$progress}-info & {
+                    @apply bg-info-500;
+               }
+
+               #{$progress}-dark & {
+                    @apply bg-dark-500;
+               }
+
+               #{$progress}-striped & {
+                    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+                    background-size: .75rem;
+               }
+
+               #{$progress}-striped#{$progress}-sm &{
+                    background-size: .5rem;
+               }
+
+               #{$progress}-striped#{$progress}-md &{
+                    background-size: .75rem;
+               }
+
+               #{$progress}-striped#{$progress}-lg &{
+                    background-size: 1rem;
+               }
+
+               #{$progress}-striped#{$progress}-animated & {
+                    animation: 1s linear infinite progress-line-default-stripes;
+
+                    @keyframes progress-line-default-stripes {
+
+                         0% { 
+                              background-position-x: .75rem; 
+                         }
+                    }  
+               }
+
+               #{$progress}-striped#{$progress}-animated#{$progress}-sm & {
+                    animation: 1s linear infinite progress-line-sm-stripes;
+                    
+                    @keyframes progress-line-sm-stripes {
+
+                         0% { 
+                              background-position-x: .5rem; 
+                         }
+                    }  
+               }
+
+               #{$progress}-striped#{$progress}-animated#{$progress}-md & {
+                    animation: 1s linear infinite progress-line-md-stripes;
+                    
+                    @keyframes progress-line-md-stripes {
+
+                         0% { 
+                              background-position-x: .75rem; 
+                         }
+                    }  
+               }
+
+               #{$progress}-striped#{$progress}-animated#{$progress}-lg & {
+                    animation: 1s linear infinite progress-line-lg-stripes;
+                    
+                    @keyframes progress-line-lg-stripes {
+
+                         0% { 
+                              background-position-x: 1rem; 
+                         }
+                    }  
+               }     
+          }
+     }
+
+     &-circle {
+          @apply max-w-[150px] max-h-[150px] flex justify-center items-center relative;
+
+          #{$progress}-sm & {
+               @apply max-w-[130px] max-h-[130px];
+          }
+
+          #{$progress}-md & {
+               @apply max-w-[150px] max-h-[150px];
+          }
+
+          #{$progress}-lg & {
+               @apply max-w-[170px] max-h-[170px];
+          }
+
+          &-label {
+               @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 font-medium text-primary-500 dark:text-slate-300;
+               
+               #{$progress}-primary & {
+                    @apply text-primary-500 dark:text-slate-300;
+               }
+               
+               #{$progress}-secondary & {
+                    @apply text-secondary-500 dark:text-slate-300;
+               }
+
+               #{$progress}-success & {
+                    @apply text-success-500 dark:text-slate-300;
+               }
+
+               #{$progress}-danger & {
+                    @apply text-danger-500 dark:text-slate-300;
+               }
+
+               #{$progress}-warning & {
+                    @apply text-warning-500 dark:text-slate-300;
+               }
+
+               #{$progress}-info & {
+                    @apply text-info-500 dark:text-slate-300;
+               }
+
+               #{$progress}-dark & {
+                    @apply text-dark-500 dark:text-slate-300;
+               }
+          }
+
+          &-svg {
+               @apply w-full h-full;
+
+               & > circle {
+
+                    @apply fill-none stroke-[12] translate-x-[6px] translate-y-[6px];
+                    stroke-dasharray: 440;
+                    stroke-dashoffset: 440;
+                    stroke-linecap: round;
+
+                    &:nth-child(1) {
+                         stroke-dashoffset: 0;
+                         @apply stroke-slate-200 dark:stroke-slate-700;
+                    }
+
+                    &:nth-child(2) {
+                         @apply stroke-primary-500;
+
+                         #{$progress}-primary & {
+                              @apply stroke-primary-500;
+                         }
+                         
+                         #{$progress}-secondary & {
+                              @apply stroke-secondary-500;
+                         }
+
+                         #{$progress}-success & {
+                              @apply stroke-success-500;
+                         }
+
+                         #{$progress}-danger & {
+                              @apply stroke-danger-500;
+                         }
+
+                         #{$progress}-warning & {
+                              @apply stroke-warning-500;
+                         }
+
+                         #{$progress}-info & {
+                              @apply stroke-info-500;
+                         }
+
+                         #{$progress}-dark & {
+                              @apply stroke-dark-500;
+                         }
+                    }
+               }
+          }
+     }
+
+     &-step {
+          @apply w-full max-w-md flex items-center justify-between relative;
+
+          &-line {
+               @apply w-full h-[2px] bg-slate-200 relative after:content-[''] after:absolute after:inset-0 after:w-0 after:h-full after:inline-block after:bg-slate-500;
+          }
+
+          &-btn {
+               @apply w-10 h-10 rounded-full shrink-0 flex items-center justify-center border-2 border-transparent bg-slate-500 dark:bg-slate-700  text-slate-100;
+               
+               #{$progress}-sm & {
+                    @apply w-8 h-8;
+               }
+
+               #{$progress}-md & {
+                    @apply w-10 h-10;
+               }
+
+               #{$progress}-lg & {
+                    @apply w-12 h-12;
+               }
+
+               &-complete {
+                    @apply bg-primary-500 dark:bg-primary-500 text-slate-100;
+                    
+                    & + #{$progress}-step-line {
+                         @apply after:w-full after:bg-primary-500;
+                    }
+
+                    #{$progress}-primary & {
+                         @apply bg-primary-500 dark:bg-primary-500 text-slate-100;
+                         
+                         & + #{$progress}-step-line {
+                              @apply after:w-full after:bg-primary-500;
+                         }
+                    }
+                    
+                    #{$progress}-secondary & {
+                         @apply bg-secondary-500 dark:bg-secondary-500 text-slate-100;
+                         
+                         & + #{$progress}-step-line {
+                              @apply after:w-full after:bg-secondary-500;
+                         }
+                    }
+
+                    #{$progress}-success & {
+                         @apply bg-success-500 dark:bg-success-500 text-slate-100;
+                         
+                         & + #{$progress}-step-line {
+                              @apply after:w-full after:bg-success-500;
+                         }
+                    }
+
+                    #{$progress}-danger & {
+                         @apply bg-danger-500 dark:bg-danger-500 text-slate-100;
+                         
+                         & + #{$progress}-step-line {
+                              @apply after:w-full after:bg-danger-500;
+                         }
+                    }
+
+                    #{$progress}-warning & {
+                         @apply bg-warning-500 dark:bg-warning-500 text-slate-100;
+                         
+                         & + #{$progress}-step-line {
+                              @apply after:w-full after:bg-warning-500;
+                         }
+                    }
+
+                    #{$progress}-info & {
+                         @apply bg-info-500 dark:bg-info-500 text-slate-100;
+                         
+                         & + #{$progress}-step-line {
+                              @apply after:w-full after:bg-info-500;
+                         }
+                    }
+
+                    #{$progress}-dark & {
+                         @apply bg-dark-500 dark:bg-dark-500 text-slate-100;
+                         
+                         & + #{$progress}-step-line {
+                              @apply after:w-full after:bg-dark-500;
+                         }
+                    }
+               }
+
+               &-active {
+                    @apply bg-transparent dark:bg-primary-900/40 border-primary-500 text-primary-500;
+                    
+                    #{$progress}-primary & {
+                         @apply bg-transparent dark:bg-primary-900/40 border-primary-500 text-primary-500;
+                    }
+
+                    #{$progress}-secondary & {
+                         @apply bg-transparent dark:bg-secondary-900/40 border-secondary-500 text-secondary-500;
+                    }
+
+                    #{$progress}-success & {
+                         @apply bg-transparent dark:bg-success-900/40 border-success-500 text-success-500;
+                    }
+
+                    #{$progress}-danger & {
+                         @apply bg-transparent dark:bg-danger-900/40 border-danger-500 text-danger-500;
+                    }
+
+                    #{$progress}-warning & {
+                         @apply bg-transparent dark:bg-warning-900/40 border-warning-500 text-warning-500;
+                    }
+
+                    #{$progress}-info & {
+                         @apply bg-transparent dark:bg-info-900/40 border-info-500 text-info-500;
+                    }
+
+                    #{$progress}-dark & {
+                         @apply bg-transparent dark:bg-dark-900/40 border-dark-500 text-dark-500;
+                    }
+               }
+          }
+     }
+
+}
