@@ -1,64 +1,64 @@
 @layer components {
-     .modal {
-          $modal: &;
-          @apply w-full h-full hidden flex-col fixed inset-0 z-[1000] overflow-x-hidden overflow-y-auto px-4 py-10;
+  .modal {
+    $modal: &;
+    @apply fixed inset-0 z-[1000] hidden h-full w-full flex-col overflow-y-auto overflow-x-hidden px-4 py-10;
 
-          &-full {
-               @apply p-0;
-          }
-          
-          &-centered {
-               @apply justify-center;
-          }
+    &-full {
+      @apply p-0;
+    }
 
-          &-dialog {
-               @apply w-full max-w-xl mx-auto relative z-[1010] pointer-events-none transform opacity-0 scale-90 origin-center transition-all duration-300 ease-in-out;
+    &-centered {
+      @apply justify-center;
+    }
 
-               #{$modal}-sm & {
-                    @apply max-w-md;
-               }
+    &-dialog {
+      @apply pointer-events-none relative z-[1010] mx-auto w-full max-w-xl origin-center scale-90 transform opacity-0 transition-all duration-300 ease-in-out;
 
-               #{$modal}-lg & {
-                    @apply max-w-3xl;
-               }
+      #{$modal}-sm & {
+        @apply max-w-md;
+      }
 
-               #{$modal}-full & {
-                    @apply max-w-full h-screen;
-               }
+      #{$modal}-lg & {
+        @apply max-w-3xl;
+      }
 
-               #{$modal}.show & {
-                    @apply opacity-100 scale-100;
-               }
-          }
+      #{$modal}-full & {
+        @apply h-screen max-w-full;
+      }
 
-          &-content {
-               @apply w-full h-full relative flex flex-col pointer-events-auto bg-white rounded-primary shadow-xl;
-          }
+      #{$modal}.show & {
+        @apply scale-100 opacity-100;
+      }
+    }
 
-          &-backdrop {
-               @apply w-screen h-screen fixed inset-0 z-[1005] bg-slate-600 bg-opacity-0 transition-colors duration-300 ease-in-out;
+    &-content {
+      @apply pointer-events-auto relative flex h-full w-full flex-col rounded-primary bg-white shadow-xl;
+    }
 
-               #{$modal}.show & {
-                    @apply bg-opacity-50;
-               }
-          }
+    &-backdrop {
+      @apply fixed inset-0 z-[1005] h-screen w-screen bg-slate-600 bg-opacity-0 transition-colors duration-300 ease-in-out;
 
-          &-header,
-          &-body,
-          &-footer {
-               @apply px-6 py-4;
-          }
+      #{$modal}.show & {
+        @apply bg-opacity-50;
+      }
+    }
 
-          &-header {
-               @apply border-b;
-          }
+    &-header,
+    &-body,
+    &-footer {
+      @apply px-6 py-4;
+    }
 
-          &-body {
-               @apply flex-grow overflow-auto;
-          }
+    &-header {
+      @apply border-b;
+    }
 
-          &-footer {
-               @apply border-t;
-          }
-     }
+    &-body {
+      @apply flex-grow overflow-auto;
+    }
+
+    &-footer {
+      @apply border-t;
+    }
+  }
 }
