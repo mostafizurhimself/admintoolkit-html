@@ -128,6 +128,7 @@ gulp.task('watch', function () {
     server: {
       baseDir: 'dist',
     },
+    open: false,
   });
 
   gulp.watch(paths.src.fonts, gulp.series('fonts'));
