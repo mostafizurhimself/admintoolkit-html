@@ -1,44 +1,43 @@
 .radio {
-     @apply h-4 w-4 border-slate-400 bg-transparent disabled:cursor-not-allowed disabled:opacity-50 text-primary-500 focus:ring-primary-500;
+  @apply h-4 w-4 border-slate-400 bg-transparent text-primary-500 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-50;
 
-     &-primary {
-          @apply text-primary-500 focus:ring-primary-500;
-     }
+  &-primary {
+    @apply text-primary-500 focus:ring-primary-500;
+  }
 
-     &-secondary {
-          @apply text-secondary-500 focus:ring-secondary-500;
-     }
+  &-secondary {
+    @apply text-secondary-500 focus:ring-secondary-500;
+  }
 
-     &-success {
-          @apply text-success-500 focus:ring-success-500;
-     }
+  &-success {
+    @apply text-success-500 focus:ring-success-500;
+  }
 
-     &-danger {
-          @apply text-danger-500 focus:ring-danger-500;
-     }
+  &-danger {
+    @apply text-danger-500 focus:ring-danger-500;
+  }
 
-     &-warning {
-          @apply text-warning-500 focus:ring-warning-500;
-     }
+  &-warning {
+    @apply text-warning-500 focus:ring-warning-500;
+  }
 
-     &-info {
-          @apply text-info-500 focus:ring-info-500;
-     }
+  &-info {
+    @apply text-info-500 focus:ring-info-500;
+  }
 
-     &-dark {
-          @apply text-dark-500 focus:ring-dark-500;
-     }
+  &-dark {
+    @apply text-dark-500 focus:ring-dark-500;
+  }
 
-     &-sm {
-          @apply h-4 w-4;
-     }
-     
-     &-md {
-          @apply h-5 w-5;
-     }
+  &-sm {
+    @apply h-4 w-4;
+  }
 
-     &-lg {
-          @apply h-6 w-6;
-     }  
+  &-md {
+    @apply h-5 w-5;
+  }
 
+  &-lg {
+    @apply h-6 w-6;
+  }
 }

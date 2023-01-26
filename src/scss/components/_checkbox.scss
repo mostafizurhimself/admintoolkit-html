@@ -1,44 +1,43 @@
 .checkbox {
-     @apply rounded text-primary-500 border-slate-300 dark:border-slate-600 bg-transparent shadow-sm focus:ring-0 focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-150 enabled:hover:shadow checked:hover:shadow-none h-4 w-4 ;
-     
-     &-primary {
-          @apply  text-primary-500 enabled:hover:text-primary-600 border-primary-500;
-     }
+  @apply h-4 w-4 rounded border-slate-300 bg-transparent text-primary-500 shadow-sm transition-all duration-150 checked:hover:shadow-none focus:ring-0 focus:ring-offset-0 enabled:hover:shadow disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-600;
 
-     &-secondary {
-          @apply text-secondary-500 enabled:hover:text-secondary-600 border-secondary-500;
-     }
+  &-primary {
+    @apply border-primary-500 text-primary-500 enabled:hover:text-primary-600;
+  }
 
-     &-success {
-          @apply text-success-500 enabled:hover:text-success-600 border-success-500;
-     }
+  &-secondary {
+    @apply border-secondary-500 text-secondary-500 enabled:hover:text-secondary-600;
+  }
 
-     &-danger {
-          @apply text-danger-500 enabled:hover:text-danger-600 border-danger-500;
-     }
+  &-success {
+    @apply border-success-500 text-success-500 enabled:hover:text-success-600;
+  }
 
-     &-warning {
-          @apply text-warning-500 enabled:hover:text-warning-600 border-warning-500;
-     }
+  &-danger {
+    @apply border-danger-500 text-danger-500 enabled:hover:text-danger-600;
+  }
 
-     &-info {
-          @apply text-info-500 enabled:hover:text-info-600 border-info-500;
-     }
+  &-warning {
+    @apply border-warning-500 text-warning-500 enabled:hover:text-warning-600;
+  }
 
-     &-dark {
-          @apply text-dark-500 enabled:hover:text-dark-600 border-dark-500;
-     }
+  &-info {
+    @apply border-info-500 text-info-500 enabled:hover:text-info-600;
+  }
 
-     &-sm {
-          @apply h-4 w-4;
-     }
+  &-dark {
+    @apply border-dark-500 text-dark-500 enabled:hover:text-dark-600;
+  }
 
-     &-md {
-          @apply h-5 w-5;
-     }
+  &-sm {
+    @apply h-4 w-4;
+  }
 
-     &-lg {
-          @apply h-6 w-6;
-     }
+  &-md {
+    @apply h-5 w-5;
+  }
 
+  &-lg {
+    @apply h-6 w-6;
+  }
 }
