@@ -1,3 +1,27 @@
+class Modal {
+  constructor(target) {
+    if (typeof target === 'string') {
+      this.target = document.querySelector(target);
+    }
+
+    if (target instanceof HTMLElement) {
+      this.target = target;
+    }
+
+    if (!this.target) {
+      throw new Error('No target element found');
+    }
+  }
+
+  show() {
+    // Show to modal
+  }
+
+  hide() {
+    // Hide the modal
+  }
+}
+
 const modal = {
   init() {
     // Store all the modal trigger element

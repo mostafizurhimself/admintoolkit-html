@@ -1,18 +1,17 @@
 class Alert {
   constructor(target) {
-    if (!target) {
-      throw new Error('No target element provided');
-    }
-
-    if (!target instanceof HTMLElement) {
-      throw new Error('Invalid target element provided');
-    }
-
     if (typeof target === 'string') {
       this.target = document.querySelector(target);
     }
 
-    this.target = target;
+    if (target instanceof HTMLElement) {
+      this.target = target;
+    }
+
+    if (!this.target) {
+      throw new Error('No target element found');
+    }
+
     this.dismissButton = this.target.querySelector('.alert-dismiss');
 
     if (this.dismissButton) {
@@ -36,6 +35,11 @@ const alert = {
       new Alert(target);
     });
   },
+};
+
+// Set up a global function for creating dismissable alerts
+window.createDismissableAlert = function (target) {
+  return new Alert(target);
 };
 
 export default alert;
