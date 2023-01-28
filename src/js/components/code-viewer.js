@@ -2,93 +2,114 @@ import hljs from 'highlight.js';
 import jsBeautify from 'js-beautify';
 import feather from 'feather-icons';
 
-const codeViewer = {
-  init() {
-    this.highlight();
-  },
-
-  highlight() {
-    const codeViewers = document.querySelectorAll('.code-viewer');
-
-    if (!codeViewer) {
-      return;
+class CodeViewer {
+  constructor(target, sourceCode = null) {
+    if (typeof target === 'string') {
+      this.target = document.querySelector(target);
     }
 
-    // Loop through all code viewers
-    codeViewers.forEach((codeViewer) => {
-      // Get the source code from the code viewer
-      const sourceCode = this.getSourceCode(codeViewer);
+    if (target instanceof HTMLElement) {
+      this.target = target;
+    }
 
-      const content = codeViewer.querySelector('.code-viewer-content');
+    if (!this.target) {
+      throw new Error('No target element found');
+    }
 
-      if (!content) {
-        // Create a wrapper element
-        const wrapper = document.createElement('div');
-        wrapper.classList.add('code-viewer-content');
-        wrapper.innerHTML = codeViewer.innerHTML;
-        codeViewer.innerHTML = '';
-        codeViewer.appendChild(wrapper);
+    if (sourceCode) {
+      this.sourceCode = sourceCode;
+    }
+  }
+
+  render() {
+    // Get the source code from the code viewer
+    const sourceCode = this.getSourceCode();
+
+    const content = this.target.querySelector('.code-viewer-content');
+
+    if (!content) {
+      // Create a wrapper element
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('code-viewer-content');
+      wrapper.innerHTML = this.target.innerHTML;
+      this.target.innerHTML = '';
+      this.target.appendChild(wrapper);
+    }
+
+    // Append the footer element
+    this.target.appendChild(this.createFooterElement());
+
+    // Highlight the code
+    const code = this.target.querySelector('code');
+    code.innerHTML = sourceCode;
+    hljs.highlightBlock(code);
+
+    // Add copy to clipboard functionality
+    const copyBtn = this.target.querySelector('#btn-copy');
+
+    copyBtn.addEventListener('click', () => {
+      // Check if the browser supports Clipboard API
+      if (navigator.clipboard) {
+        // Replace entities
+        const originalSourceCode = jsBeautify.html(
+          jsBeautify.html(sourceCode).replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim()
+        );
+
+        // Copy the source code to clipboard
+        navigator.clipboard.writeText(originalSourceCode);
+
+        // Add success class
+        copyBtn.classList.add('btn-copy-success');
+
+        // Change button's default html
+        copyBtn.innerHTML = `${feather.icons['check-circle'].toSvg({
+          width: '1em',
+          height: '1em',
+        })} <span>Copied</span>`;
+
+        // Change the icon check to copy after 1000ms
+        setTimeout(() => {
+          // Remove success class
+          copyBtn.classList.remove('btn-copy-success');
+
+          // Set button's default html
+          copyBtn.innerHTML = `${feather.icons.copy.toSvg({ width: '1em', height: '1em' })} <span>Copy</span>`;
+        }, 1200);
       }
-
-      // Append the footer element
-      codeViewer.appendChild(this.createFooterElement());
-
-      // Highlight the code
-      const code = codeViewer.querySelector('code');
-      code.innerHTML = sourceCode;
-      hljs.highlightBlock(code);
-
-      // Add copy to clipboard functionality
-      const copyBtn = codeViewer.querySelector('#btn-copy');
-
-      copyBtn.addEventListener('click', () => {
-        // Check if the browser supports Clipboard API
-        if (navigator.clipboard) {
-          // Replace entities
-          const originalSourceCode = jsBeautify.html(
-            jsBeautify.html(sourceCode).replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim()
-          );
-
-          // Copy the source code to clipboard
-          navigator.clipboard.writeText(originalSourceCode);
-
-          // Add success class
-          copyBtn.classList.add('btn-copy-success');
-
-          // Change button's default html
-          copyBtn.innerHTML = `${feather.icons['check-circle'].toSvg({
-            width: '1em',
-            height: '1em',
-          })} <span>Copied</span>`;
-
-          // Change the icon check to copy after 1000ms
-          setTimeout(() => {
-            // Remove success class
-            copyBtn.classList.remove('btn-copy-success');
-
-            // Set button's default html
-            copyBtn.innerHTML = `${feather.icons.copy.toSvg({ width: '1em', height: '1em' })} <span>Copy</span>`;
-          }, 1200);
-        }
-      });
-
-      // Add event listener to toggle button
-      const toggle = codeViewer.querySelector('.code-viewer-footer').querySelector('.toggle-input');
-      toggle.addEventListener('change', () => {
-        const pre = codeViewer.querySelector('pre');
-        copyBtn.classList.toggle('invisible');
-        pre.classList.toggle('hidden');
-      });
     });
-  },
 
-  getSourceCode(codeViewer) {
-    const sourceElement = codeViewer.querySelector('.code-viewer-source');
-    if (sourceElement) {
-      return jsBeautify.html(sourceElement.innerHTML).replace(/</g, '&lt;').replace(/>/g, '&gt;').trim();
+    // Add event listener to toggle button
+    const toggle = this.target.querySelector('.code-viewer-footer').querySelector('.toggle-input');
+    toggle.addEventListener('change', () => {
+      const pre = this.target.querySelector('pre');
+      copyBtn.classList.toggle('invisible');
+      pre.classList.toggle('hidden');
+    });
+  }
+
+  setSourceCode(sourceCode) {
+    this.sourceCode = sourceCode;
+  }
+
+  getSourceCode() {
+    // Get the source code from the sourceCode property
+    if (this.sourceCode) {
+      return this.beautify(this.sourceCode);
     }
-    return jsBeautify.html(codeViewer.innerHTML).replace(/</g, '&lt;').replace(/>/g, '&gt;').trim();
-  },
+
+    // Get the source code from the code-viewer-source element
+    const sourceElement = this.target.querySelector('.code-viewer-source');
+    if (sourceElement) {
+      return this.beautify(sourceElement.innerHTML);
+    }
+
+    // Get the source code from the code-viewer element
+    return this.beautify(this.target.innerHTML);
+  }
+
+  beautify(code) {
+    return jsBeautify.html(code).replace(/</g, '&lt;').replace(/>/g, '&gt;').trim();
+  }
 
   createToggleElement() {
     const toggle = document.createElement('label');
@@ -111,7 +132,7 @@ const codeViewer = {
     toggle.appendChild(span);
 
     return toggle;
-  },
+  }
 
   createCopyElement() {
     const button = document.createElement('button');
@@ -121,7 +142,7 @@ const codeViewer = {
     button.classList.add('btn-copy', 'invisible');
     button.innerHTML = `${feather.icons.copy.toSvg({ width: '1em', height: '1em' })} <span>Copy</span>`;
     return button;
-  },
+  }
 
   createPreElement() {
     const pre = document.createElement('pre');
@@ -130,7 +151,7 @@ const codeViewer = {
     code.classList.add('html');
     pre.appendChild(code);
     return pre;
-  },
+  }
 
   createFooterElement() {
     const footer = document.createElement('div');
@@ -147,7 +168,19 @@ const codeViewer = {
     footer.appendChild(this.createPreElement());
 
     return footer;
+  }
+}
+
+const codeViewer = {
+  init() {
+    document.querySelectorAll('.code-viewer:not([data-render-source="false"])').forEach((target) => {
+      new CodeViewer(target).render();
+    });
   },
+};
+
+window.createCodeViewer = (target, sourceCode) => {
+  return new CodeViewer(target, sourceCode);
 };
 
 export default codeViewer;
