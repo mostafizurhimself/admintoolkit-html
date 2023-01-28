@@ -6,6 +6,7 @@ import codeViewer from './components/code-viewer';
 import modal from './components/modal';
 import themeSwitcher from './components/theme-switcher';
 import sidebar from './components/sidebar';
+import tabs from './components/tabs';
 
 //Import third party packages
 import feather from 'feather-icons';
@@ -30,6 +31,9 @@ themeSwitcher.init();
 
 // Initialize sidebar
 sidebar.init();
+
+// Initialize tabs
+tabs.init();
 
 // Initialize feather icons Icons should be replaced at the end
 feather.replace();
