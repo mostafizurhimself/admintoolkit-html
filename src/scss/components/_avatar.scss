@@ -1,214 +1,216 @@
-.avatar {
-  $avatar: &;
-  @apply relative flex h-10 w-10 cursor-pointer items-center justify-center rounded-none;
-
-  &-indicator {
-    @apply after:absolute after:right-[-2px] after:bottom-[-2px] after:inline-block after:h-2 after:w-2 after:rounded-full after:bg-slate-500 after:shadow-[0px_0px_0px_2px] after:shadow-slate-50 after:content-[''] dark:after:shadow-slate-800;
-
-    &#{$avatar}-circle {
-      @apply after:right-[3px] after:bottom-0;
-    }
-
-    &-top {
-      @apply after:right-[-2px] after:top-[-2px];
-
-      &#{$avatar}-circle {
-        @apply after:right-[3px] after:top-0;
-      }
-    }
-
-    &-bottom {
-      @apply after:right-[-2px] after:bottom-[-2px];
-
+@layer components {
+  .avatar {
+    $avatar: &;
+    @apply relative flex h-10 w-10 cursor-pointer items-center justify-center rounded-none;
+  
+    &-indicator {
+      @apply after:absolute after:right-[-2px] after:bottom-[-2px] after:inline-block after:h-2 after:w-2 after:rounded-full after:bg-slate-500 after:shadow-[0px_0px_0px_2px] after:shadow-slate-50 after:content-[''] dark:after:shadow-slate-800;
+  
       &#{$avatar}-circle {
         @apply after:right-[3px] after:bottom-0;
       }
-    }
-
-    &-online {
-      @apply after:bg-success-500;
-    }
-
-    &-away {
-      @apply after:bg-warning-500;
-    }
-
-    &-busy {
-      @apply after:bg-danger-500;
-    }
-
-    &-offline {
-      @apply after:bg-slate-500;
-    }
-  }
-
-  & > &-img {
-    @apply inline-block object-cover object-center;
-  }
-
-  & > &-text,
-  & > &-icon {
-    @apply inline-flex h-full w-full items-center justify-center bg-secondary-500 text-slate-100;
-  }
-
-  & > &-icon {
-    & > svg {
-      @apply h-5 w-5;
-    }
-  }
-
-  & > &-text {
-    @apply text-base tracking-wide;
-  }
-
-  &-square {
-    & > #{$avatar}-text,
-    & > #{$avatar}-icon,
-    & > #{$avatar}-img {
-      @apply rounded-none;
-    }
-  }
-
-  &-rounded {
-    & > #{$avatar}-text,
-    & > #{$avatar}-icon,
-    & > #{$avatar}-img {
-      @apply rounded-primary;
-    }
-  }
-
-  &-circle {
-    & > #{$avatar}-text,
-    & > #{$avatar}-icon,
-    & > #{$avatar}-img {
-      @apply rounded-full;
-    }
-  }
-
-  &-xs {
-    @apply h-6 w-6;
-
-    & > #{$avatar}-text {
-      @apply text-xs;
-    }
-
-    & > #{$avatar}-icon {
-      & > svg {
-        @apply h-3 w-3;
+  
+      &-top {
+        @apply after:right-[-2px] after:top-[-2px];
+  
+        &#{$avatar}-circle {
+          @apply after:right-[3px] after:top-0;
+        }
+      }
+  
+      &-bottom {
+        @apply after:right-[-2px] after:bottom-[-2px];
+  
+        &#{$avatar}-circle {
+          @apply after:right-[3px] after:bottom-0;
+        }
+      }
+  
+      &-online {
+        @apply after:bg-success-500;
+      }
+  
+      &-away {
+        @apply after:bg-warning-500;
+      }
+  
+      &-busy {
+        @apply after:bg-danger-500;
+      }
+  
+      &-offline {
+        @apply after:bg-slate-500;
       }
     }
-  }
-
-  &-sm {
-    @apply h-8 w-8;
-
-    & > #{$avatar}-text {
-      @apply text-sm;
+  
+    & > &-img {
+      @apply inline-block object-cover object-center;
     }
-
-    & > #{$avatar}-icon {
-      & > svg {
-        @apply h-4 w-4;
-      }
+  
+    & > &-text,
+    & > &-icon {
+      @apply inline-flex h-full w-full items-center justify-center bg-secondary-500 text-slate-100;
     }
-  }
-
-  &-md {
-    @apply h-10 w-10;
-
-    & > #{$avatar}-text {
-      @apply text-base;
-    }
-
-    & > #{$avatar}-icon {
+  
+    & > &-icon {
       & > svg {
         @apply h-5 w-5;
       }
     }
-  }
-
-  &-lg {
-    @apply h-12 w-12;
-
-    & > #{$avatar}-text {
-      @apply text-lg;
+  
+    & > &-text {
+      @apply text-base tracking-wide;
     }
-
-    & > #{$avatar}-icon {
-      & > svg {
-        @apply h-6 w-6;
+  
+    &-square {
+      & > #{$avatar}-text,
+      & > #{$avatar}-icon,
+      & > #{$avatar}-img {
+        @apply rounded-none;
       }
     }
-  }
-
-  &-xl {
-    @apply h-16 w-16;
-
-    & > #{$avatar}-text {
-      @apply text-xl;
-    }
-
-    & > #{$avatar}-icon {
-      & > svg {
-        @apply h-7 w-7;
+  
+    &-rounded {
+      & > #{$avatar}-text,
+      & > #{$avatar}-icon,
+      & > #{$avatar}-img {
+        @apply rounded-primary;
       }
     }
-  }
-
-  &-primary {
-    & > #{$avatar}-text,
-    & > #{$avatar}-icon {
-      @apply bg-primary-100 text-primary-500 dark:bg-primary-500 dark:text-slate-100;
+  
+    &-circle {
+      & > #{$avatar}-text,
+      & > #{$avatar}-icon,
+      & > #{$avatar}-img {
+        @apply rounded-full;
+      }
     }
-  }
-
-  &-secondary {
-    & > #{$avatar}-text,
-    & > #{$avatar}-icon {
-      @apply bg-secondary-200 text-secondary-500 dark:bg-secondary-500 dark:text-slate-100;
+  
+    &-xs {
+      @apply h-6 w-6;
+  
+      & > #{$avatar}-text {
+        @apply text-xs;
+      }
+  
+      & > #{$avatar}-icon {
+        & > svg {
+          @apply h-3 w-3;
+        }
+      }
     }
-  }
-
-  &-success {
-    & > #{$avatar}-text,
-    & > #{$avatar}-icon {
-      @apply bg-success-100 text-success-500 dark:bg-success-500 dark:text-slate-100;
+  
+    &-sm {
+      @apply h-8 w-8;
+  
+      & > #{$avatar}-text {
+        @apply text-sm;
+      }
+  
+      & > #{$avatar}-icon {
+        & > svg {
+          @apply h-4 w-4;
+        }
+      }
     }
-  }
-
-  &-danger {
-    & > #{$avatar}-text,
-    & > #{$avatar}-icon {
-      @apply bg-danger-100 text-danger-500 dark:bg-danger-500 dark:text-slate-100;
+  
+    &-md {
+      @apply h-10 w-10;
+  
+      & > #{$avatar}-text {
+        @apply text-base;
+      }
+  
+      & > #{$avatar}-icon {
+        & > svg {
+          @apply h-5 w-5;
+        }
+      }
     }
-  }
-
-  &-warning {
-    & > #{$avatar}-text,
-    & > #{$avatar}-icon {
-      @apply bg-warning-100 text-warning-500 dark:bg-warning-500 dark:text-slate-100;
+  
+    &-lg {
+      @apply h-12 w-12;
+  
+      & > #{$avatar}-text {
+        @apply text-lg;
+      }
+  
+      & > #{$avatar}-icon {
+        & > svg {
+          @apply h-6 w-6;
+        }
+      }
     }
-  }
-
-  &-info {
-    & > #{$avatar}-text,
-    & > #{$avatar}-icon {
-      @apply bg-info-100 text-info-500 dark:bg-info-500 dark:text-slate-100;
+  
+    &-xl {
+      @apply h-16 w-16;
+  
+      & > #{$avatar}-text {
+        @apply text-xl;
+      }
+  
+      & > #{$avatar}-icon {
+        & > svg {
+          @apply h-7 w-7;
+        }
+      }
     }
-  }
-
-  &-dark {
-    & > #{$avatar}-text,
-    & > #{$avatar}-icon {
-      @apply bg-dark-200 text-dark-500 dark:bg-dark-500 dark:text-slate-100;
+  
+    &-primary {
+      & > #{$avatar}-text,
+      & > #{$avatar}-icon {
+        @apply bg-primary-100 text-primary-500 dark:bg-primary-500 dark:text-slate-100;
+      }
     }
-  }
-
-  &-group {
-    @apply flex items-center;
-
-    & > .avatar:not(:first-child) {
-      @apply -ml-2;
+  
+    &-secondary {
+      & > #{$avatar}-text,
+      & > #{$avatar}-icon {
+        @apply bg-secondary-200 text-secondary-500 dark:bg-secondary-500 dark:text-slate-100;
+      }
+    }
+  
+    &-success {
+      & > #{$avatar}-text,
+      & > #{$avatar}-icon {
+        @apply bg-success-100 text-success-500 dark:bg-success-500 dark:text-slate-100;
+      }
+    }
+  
+    &-danger {
+      & > #{$avatar}-text,
+      & > #{$avatar}-icon {
+        @apply bg-danger-100 text-danger-500 dark:bg-danger-500 dark:text-slate-100;
+      }
+    }
+  
+    &-warning {
+      & > #{$avatar}-text,
+      & > #{$avatar}-icon {
+        @apply bg-warning-100 text-warning-500 dark:bg-warning-500 dark:text-slate-100;
+      }
+    }
+  
+    &-info {
+      & > #{$avatar}-text,
+      & > #{$avatar}-icon {
+        @apply bg-info-100 text-info-500 dark:bg-info-500 dark:text-slate-100;
+      }
+    }
+  
+    &-dark {
+      & > #{$avatar}-text,
+      & > #{$avatar}-icon {
+        @apply bg-dark-200 text-dark-500 dark:bg-dark-500 dark:text-slate-100;
+      }
+    }
+  
+    &-group {
+      @apply flex items-center;
+  
+      & > .avatar:not(:first-child) {
+        @apply -ml-2;
+      }
     }
   }
 }

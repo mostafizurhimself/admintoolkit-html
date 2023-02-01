@@ -595,10 +595,10 @@
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
-            <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h1 class="text-xl font-semibold dark:text-slate-300">Progress</h1>
+            <div class="flex items-center justify-between mb-6">
+              <h3>Progress</h3>
 
-              <ol class="breadcrumb ml-auto">
+              <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="#">Home</a>
                 </li>
@@ -613,237 +613,122 @@
               </ol>
             </div>
             <!-- Page Title Ends -->
+            
+            <!-- Progressbar Starts -->
+            <div class="space-y-6">
+                <!-- Card: Basic Progressbar Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Basic Progress Bar</h4>
 
-            <!-- Basic Progress Bar Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Basic Progress Bar</h4>
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
 
-                  <p class="text-sm text-slate-400">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
-
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="progress" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-line">
-                          <div class="progress-line-track">
-                            <div class="progress-line-thumb" style="width: 10%"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Basic Progress Bar Ends -->
-
-            <!-- Progress Bar With Label Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Progress Bar With Label</h4>
-
-                  <p class="text-sm text-slate-400">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
-
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="progress" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-line">
-                          <div class="progress-line-track">
-                            <div class="progress-line-thumb" style="width: 15%"></div>
-                          </div>
-                          <span class="progress-line-label">15%</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Progress Bar With Label Ends -->
-
-            <!-- Progress Bar Size Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Progress Bar Sizes</h4>
-
-                  <p class="text-sm text-slate-400">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
-
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex flex-col gap-6">
-                        <div
-                          class="progress progress-sm"
-                          role="progressbar"
-                          aria-valuenow="10"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
+                      <div class="code-viewer mt-4">
+                        <div class="progress" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
                           <div class="progress-line">
                             <div class="progress-line-track">
                               <div class="progress-line-thumb" style="width: 10%"></div>
                             </div>
                           </div>
                         </div>
-                        <div
-                          class="progress progress-md"
-                          role="progressbar"
-                          aria-valuenow="15"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
+                      </div>
+                  </div>
+                </div>
+                <!-- Card: Basic Progressbar Ends -->
+
+                <!-- Card: Progressbar With Label Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Progress Bar With Label</h4>
+
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+
+                      <div class="code-viewer mt-4">
+                        <div class="progress" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
                           <div class="progress-line">
                             <div class="progress-line-track">
                               <div class="progress-line-thumb" style="width: 15%"></div>
                             </div>
+                            <span class="progress-line-label">15%</span>
                           </div>
                         </div>
-                        <div
-                          class="progress progress-lg"
-                          role="progressbar"
-                          aria-valuenow="20"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-line">
-                            <div class="progress-line-track">
-                              <div class="progress-line-thumb" style="width: 20%"></div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Card: Progressbar With Label Ends -->
+
+                <!-- Card: Progressbar Size Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Progress Bar Sizes</h4>
+
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+
+                      <div class="code-viewer mt-4">
+                        <div class="flex flex-col gap-6">
+                          <div
+                            class="progress progress-sm"
+                            role="progressbar"
+                            aria-valuenow="10"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 10%"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-md"
+                            role="progressbar"
+                            aria-valuenow="15"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 15%"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-lg"
+                            role="progressbar"
+                            aria-valuenow="20"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 20%"></div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <!-- Progress Bar Size Ends -->
+                <!-- Card: Progressbar Size Ends -->
 
-            <!-- Striped Progress Bar  Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Striped Progress Bar</h4>
+                <!-- Card: Striped Progressbar Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Striped Progress Bar</h4>
 
-                  <p class="text-sm text-slate-400">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div
-                        class="progress progress-striped"
-                        role="progressbar"
-                        aria-valuenow="30"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        <div class="progress-line">
-                          <div class="progress-line-track">
-                            <div class="progress-line-thumb" style="width: 30%"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Striped Progress Bar  Ends -->
-
-            <!-- Animated Striped Progress Bar Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Animated Striped Progress Bar</h4>
-
-                  <p class="text-sm text-slate-400">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
-
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div
-                        class="progress progress-striped progress-animated"
-                        role="progressbar"
-                        aria-valuenow="30"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        <div class="progress-line">
-                          <div class="progress-line-track">
-                            <div class="progress-line-thumb" style="width: 30%"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Animated Striped Progress Bar Ends -->
-
-            <!-- Progress Bar Color Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Progress Bar colors</h4>
-
-                  <p class="text-sm text-slate-400">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
-
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex flex-col gap-6">
+                      <div class="code-viewer mt-4">
                         <div
-                          class="progress progress-primary"
-                          role="progressbar"
-                          aria-valuenow="10"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-line">
-                            <div class="progress-line-track">
-                              <div class="progress-line-thumb" style="width: 10%"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="progress progress-secondary"
-                          role="progressbar"
-                          aria-valuenow="20"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-line">
-                            <div class="progress-line-track">
-                              <div class="progress-line-thumb" style="width: 20%"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="progress progress-success"
+                          class="progress progress-striped"
                           role="progressbar"
                           aria-valuenow="30"
                           aria-valuemin="0"
@@ -855,387 +740,446 @@
                             </div>
                           </div>
                         </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Card: Striped Progressbar Ends -->
+
+                <!-- Card: Animated Striped Progressbar Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Animated Striped Progress Bar</h4>
+
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+
+                      <div class="code-viewer mt-4">
                         <div
-                          class="progress progress-danger"
+                          class="progress progress-striped progress-animated"
                           role="progressbar"
-                          aria-valuenow="40"
+                          aria-valuenow="30"
                           aria-valuemin="0"
                           aria-valuemax="100"
                         >
                           <div class="progress-line">
                             <div class="progress-line-track">
-                              <div class="progress-line-thumb" style="width: 40%"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="progress progress-warning"
-                          role="progressbar"
-                          aria-valuenow="50"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-line">
-                            <div class="progress-line-track">
-                              <div class="progress-line-thumb" style="width: 50%"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="progress progress-info"
-                          role="progressbar"
-                          aria-valuenow="60"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-line">
-                            <div class="progress-line-track">
-                              <div class="progress-line-thumb" style="width: 60%"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="progress progress-dark"
-                          role="progressbar"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-line">
-                            <div class="progress-line-track">
-                              <div class="progress-line-thumb" style="width: 70%"></div>
+                              <div class="progress-line-thumb" style="width: 30%"></div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <!-- Progress Bar Color Ends -->
+                <!-- Card: Animated Striped Progressbar Ends -->
 
-            <!-- Step Progress Bar Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Step Progress Bar</h4>
+                <!-- Card: Progressbar Color Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Progress Bar colors</h4>
 
-                  <p class="text-sm text-slate-400">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="progress" role="progressbar">
-                        <div class="progress-step">
-                          <button class="progress-step-btn progress-step-btn-complete" type="button">1</button>
-                          <div class="progress-step-line"></div>
-                          <button class="progress-step-btn progress-step-btn-complete" type="button">2</button>
-                          <div class="progress-step-line"></div>
-                          <button class="progress-step-btn progress-step-btn-active" type="button">3</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Step Progress Bar Ends -->
-
-            <!-- Circle Progress Bar Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Circle Progress Bar</h4>
-
-                  <p class="text-sm text-slate-400">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
-
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-circle">
-                          <svg class="progress-circle-svg" viewBox="0 0 152 152">
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <!-- calc((440 - (440 * 70[Change the percentage value]) / 100) * -1) -->
-                            <circle
-                              cx="70"
-                              cy="70"
-                              r="70"
-                              style="stroke-dashoffset: calc((440 - (440 * 70) / 100) * -1)"
-                            ></circle>
-                          </svg>
-                          <span class="progress-circle-label">70%</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Circle Progress Bar Ends -->
-
-            <!-- Circle Progress Bar Size Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Circle Progress Bar Sizes</h4>
-
-                  <p class="text-sm text-slate-400">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
-
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex items-center gap-6">
-                        <div
-                          class="progress progress-sm"
-                          role="progressbar"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-circle">
-                            <svg class="progress-circle-svg" viewBox="0 0 152 152">
-                              <circle cx="70" cy="70" r="70"></circle>
-                              <!-- calc((440 - (440 * 70[Change the percentage value]) / 100) * -1) -->
-                              <circle
-                                cx="70"
-                                cy="70"
-                                r="70"
-                                style="stroke-dashoffset: calc((440 - (440 * 70) / 100) * -1)"
-                              ></circle>
-                            </svg>
-                            <span class="progress-circle-label">70%</span>
+                      <div class="code-viewer mt-4">
+                        <div class="flex flex-col gap-6">
+                          <div
+                            class="progress progress-primary"
+                            role="progressbar"
+                            aria-valuenow="10"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 10%"></div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                        <div
-                          class="progress progress-md"
-                          role="progressbar"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-circle">
-                            <svg class="progress-circle-svg" viewBox="0 0 152 152">
-                              <circle cx="70" cy="70" r="70"></circle>
-                              <!-- calc((440 - (440 * 70[Change the percentage value]) / 100) * -1) -->
-                              <circle
-                                cx="70"
-                                cy="70"
-                                r="70"
-                                style="stroke-dashoffset: calc((440 - (440 * 70) / 100) * -1)"
-                              ></circle>
-                            </svg>
-                            <span class="progress-circle-label">70%</span>
+                          <div
+                            class="progress progress-secondary"
+                            role="progressbar"
+                            aria-valuenow="20"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 20%"></div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                        <div
-                          class="progress progress-lg"
-                          role="progressbar"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-circle">
-                            <svg class="progress-circle-svg" viewBox="0 0 152 152">
-                              <circle cx="70" cy="70" r="70"></circle>
-                              <!-- calc((440 - (440 * 70[Change the percentage value]) / 100) * -1) -->
-                              <circle
-                                cx="70"
-                                cy="70"
-                                r="70"
-                                style="stroke-dashoffset: calc((440 - (440 * 70) / 100) * -1)"
-                              ></circle>
-                            </svg>
-                            <span class="progress-circle-label">70%</span>
+                          <div
+                            class="progress progress-success"
+                            role="progressbar"
+                            aria-valuenow="30"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 30%"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-danger"
+                            role="progressbar"
+                            aria-valuenow="40"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 40%"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-warning"
+                            role="progressbar"
+                            aria-valuenow="50"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 50%"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-info"
+                            role="progressbar"
+                            aria-valuenow="60"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 60%"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-dark"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 70%"></div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <!-- Circle Progress Bar Size Ends -->
+                <!-- Card: Progressbar Color Ends -->
 
-            <!-- Circle Progress Bar Color Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Circle Progress Bar Colors</h4>
+                <!-- Card: Step Progressbar Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Step Progress Bar</h4>
 
-                  <p class="text-sm text-slate-400">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+                      
+                      <div class="code-viewer mt-4">
+                        <div class="progress" role="progressbar">
+                          <div class="progress-step">
+                            <button class="progress-step-btn progress-step-btn-complete" type="button">1</button>
+                            <div class="progress-step-line"></div>
+                            <button class="progress-step-btn progress-step-btn-complete" type="button">2</button>
+                            <div class="progress-step-line"></div>
+                            <button class="progress-step-btn progress-step-btn-active" type="button">3</button>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Card: Step Progressbar Ends -->
+                
+                <!-- Card: Circle Progressbar Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Circle Progress Bar</h4>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex items-center gap-6">
-                        <div
-                          class="progress progress-primary"
-                          role="progressbar"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+                      
+                      <div class="code-viewer mt-4">
+                        <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                           <div class="progress-circle">
                             <svg class="progress-circle-svg" viewBox="0 0 152 152">
                               <circle cx="70" cy="70" r="70"></circle>
-                              <!-- calc((440 - (440 * 70[Change the percentage value]) / 100) * -1) -->
+                              <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
                               <circle
                                 cx="70"
                                 cy="70"
                                 r="70"
-                                style="stroke-dashoffset: calc((440 - (440 * 70) / 100) * -1)"
-                              ></circle>
-                            </svg>
-                            <span class="progress-circle-label">70%</span>
-                          </div>
-                        </div>
-                        <div
-                          class="progress progress-secondary"
-                          role="progressbar"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-circle">
-                            <svg class="progress-circle-svg" viewBox="0 0 152 152">
-                              <circle cx="70" cy="70" r="70"></circle>
-                              <!-- calc((440 - (440 * 70[Change the percentage value]) / 100) * -1) -->
-                              <circle
-                                cx="70"
-                                cy="70"
-                                r="70"
-                                style="stroke-dashoffset: calc((440 - (440 * 70) / 100) * -1)"
-                              ></circle>
-                            </svg>
-                            <span class="progress-circle-label">70%</span>
-                          </div>
-                        </div>
-                        <div
-                          class="progress progress-success"
-                          role="progressbar"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-circle">
-                            <svg class="progress-circle-svg" viewBox="0 0 152 152">
-                              <circle cx="70" cy="70" r="70"></circle>
-                              <!-- calc((440 - (440 * 70[Change the percentage value]) / 100) * -1) -->
-                              <circle
-                                cx="70"
-                                cy="70"
-                                r="70"
-                                style="stroke-dashoffset: calc((440 - (440 * 70) / 100) * -1)"
-                              ></circle>
-                            </svg>
-                            <span class="progress-circle-label">70%</span>
-                          </div>
-                        </div>
-                        <div
-                          class="progress progress-danger"
-                          role="progressbar"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-circle">
-                            <svg class="progress-circle-svg" viewBox="0 0 152 152">
-                              <circle cx="70" cy="70" r="70"></circle>
-                              <!-- calc((440 - (440 * 70[Change the percentage value]) / 100) * -1) -->
-                              <circle
-                                cx="70"
-                                cy="70"
-                                r="70"
-                                style="stroke-dashoffset: calc((440 - (440 * 70) / 100) * -1)"
-                              ></circle>
-                            </svg>
-                            <span class="progress-circle-label">70%</span>
-                          </div>
-                        </div>
-                        <div
-                          class="progress progress-warning"
-                          role="progressbar"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-circle">
-                            <svg class="progress-circle-svg" viewBox="0 0 152 152">
-                              <circle cx="70" cy="70" r="70"></circle>
-                              <!-- calc((440 - (440 * 70[Change the percentage value]) / 100) * -1) -->
-                              <circle
-                                cx="70"
-                                cy="70"
-                                r="70"
-                                style="stroke-dashoffset: calc((440 - (440 * 70) / 100) * -1)"
-                              ></circle>
-                            </svg>
-                            <span class="progress-circle-label">70%</span>
-                          </div>
-                        </div>
-                        <div
-                          class="progress progress-info"
-                          role="progressbar"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-circle">
-                            <svg class="progress-circle-svg" viewBox="0 0 152 152">
-                              <circle cx="70" cy="70" r="70"></circle>
-                              <!-- calc((440 - (440 * 70[Change the percentage value]) / 100) * -1) -->
-                              <circle
-                                cx="70"
-                                cy="70"
-                                r="70"
-                                style="stroke-dashoffset: calc((440 - (440 * 70) / 100) * -1)"
-                              ></circle>
-                            </svg>
-                            <span class="progress-circle-label">70%</span>
-                          </div>
-                        </div>
-                        <div
-                          class="progress progress-dark"
-                          role="progressbar"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div class="progress-circle">
-                            <svg class="progress-circle-svg" viewBox="0 0 152 152">
-                              <circle cx="70" cy="70" r="70"></circle>
-                              <!-- calc((440 - (440 * 70[Change the percentage value]) / 100) * -1) -->
-                              <circle
-                                cx="70"
-                                cy="70"
-                                r="70"
-                                style="stroke-dashoffset: calc((440 - (440 * 70) / 100) * -1)"
+                                style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1);"
                               ></circle>
                             </svg>
                             <span class="progress-circle-label">70%</span>
                           </div>
                         </div>
                       </div>
-                    </div>
                   </div>
                 </div>
-              </div>
+                <!-- Card: Circle Progressbar Ends -->
+
+                <!-- Card: Circle Progressbar Size Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Circle Progress Bar Sizes</h4>
+
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+                      
+                      <div class="code-viewer mt-4">
+                        <div class="flex items-center gap-6">
+                            <div
+                              class="progress progress-sm"
+                              role="progressbar"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            >
+                              <div class="progress-circle">
+                                <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                  <circle cx="70" cy="70" r="70"></circle>
+                                  <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                  <circle
+                                    cx="70"
+                                    cy="70"
+                                    r="70"
+                                    style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                  ></circle>
+                                </svg>
+                                <span class="progress-circle-label">70%</span>
+                              </div>
+                            </div>
+                            <div
+                              class="progress progress-md"
+                              role="progressbar"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            >
+                              <div class="progress-circle">
+                                <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                  <circle cx="70" cy="70" r="70"></circle>
+                                  <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                  <circle
+                                    cx="70"
+                                    cy="70"
+                                    r="70"
+                                    style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                  ></circle>
+                                </svg>
+                                <span class="progress-circle-label">70%</span>
+                              </div>
+                            </div>
+                            <div
+                              class="progress progress-lg"
+                              role="progressbar"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            >
+                              <div class="progress-circle">
+                                <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                  <circle cx="70" cy="70" r="70"></circle>
+                                  <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                  <circle
+                                    cx="70"
+                                    cy="70"
+                                    r="70"
+                                    style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                  ></circle>
+                                </svg>
+                                <span class="progress-circle-label">70%</span>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Card: Circle Progressbar Size Ends -->
+
+                <!-- Card: Circle Progressbar Color Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Circle Progress Bar Colors</h4>
+
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+                    
+                      <div class="code-viewer mt-4">
+                        <div class="flex items-center gap-6">
+                          <div
+                            class="progress progress-primary"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-secondary"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-success"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-danger"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-warning"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-info"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-dark"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Card: Circle Progressbar Color Ends -->
             </div>
-            <!-- Circle Progress Bar Color Ends -->
+            <!-- Progressbar Ends -->
           </main>
           <!-- Main Content Ends -->
 
