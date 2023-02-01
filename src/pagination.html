@@ -594,10 +594,10 @@
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
-            <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h1 class="text-xl font-semibold dark:text-slate-300">Pagination</h1>
+            <div class="flex flex-wrap items-center justify-between mb-6">
+              <h3>Pagination</h3>
 
-              <ol class="breadcrumb ml-auto">
+              <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="#">Home</a>
                 </li>
@@ -612,167 +612,221 @@
               </ol>
             </div>
             <!-- Page Title Ends -->
+            
+            <!-- Pagination Starts -->
+            <div class="space-y-6">
+              <!-- Card: Basic Pagination Stars -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Basic Pagination</h4>
 
-            <!-- Basic Pagination Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Basic Pagination</h4>
-
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use <code>.pagination</code> class to make a pagination component
                   </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <nav class="pagination">
-                        <ul class="pagination-list">
-                          <li class="pagination-item">
-                            <a class="pagination-link pagination-link-prev-text" href="#">Previous</a>
-                          </li>
-                          <li class="pagination-item active">
-                            <a class="pagination-link" href="#">1</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">2</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">3</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">4</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">5</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link pagination-link-next-text" href="#">Next</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
+                  <div class="code-viewer mt-4">
+                    <nav class="pagination">
+                      <ul class="pagination-list">
+                        <li class="pagination-item">
+                          <a class="pagination-link pagination-link-prev-text" href="#">Previous</a>
+                        </li>
+                        <li class="pagination-item active">
+                          <a class="pagination-link" href="#">1</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">2</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">3</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">4</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">5</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link pagination-link-next-text" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Basic Pagination Ends -->
+              <!-- Card: Basic Pagination Ends -->
 
-            <!-- Outlined Pagination Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Outlined Pagination</h4>
+              <!-- Card: Outlined Pagination Stars -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Outlined Pagination</h4>
 
-                  <p class="text-sm text-slate-400">
-                    Use <code>.pagination-outlined</code> class to get a outlined pagination
+                  <p class="card-subtitle">
+                    Use <code>.pagination-outlined</code> class to get a outlined pagination.
                   </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <nav class="pagination pagination-outlined">
-                        <ul class="pagination-list">
-                          <li class="pagination-item">
-                            <a class="pagination-link pagination-link-prev-text" href="#">Previous</a>
-                          </li>
-                          <li class="pagination-item active">
-                            <a class="pagination-link" href="#">1</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">2</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">3</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">4</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">5</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link pagination-link-next-text" href="#">Next</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
+                  <div class="code-viewer mt-4">
+                    <nav class="pagination pagination-outlined">
+                      <ul class="pagination-list">
+                        <li class="pagination-item">
+                          <a class="pagination-link pagination-link-prev-text" href="#">Previous</a>
+                        </li>
+                        <li class="pagination-item active">
+                          <a class="pagination-link" href="#">1</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">2</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">3</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">4</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">5</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link pagination-link-next-text" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Outlined Pagination Ends -->
+              <!-- Card: Outlined Pagination Ends -->
 
-            <!-- More Pagination Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">More Pagination</h4>
+              <!-- Card: More Pagination Stars -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">More Pagination</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use <code>.pagination-link-more</code> class in <code>span</code> tag to creat to make a pagination
-                    component
+                    component.
                   </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <nav class="pagination">
-                        <ul class="pagination-list">
-                          <li class="pagination-item">
-                            <a class="pagination-link pagination-link-prev-text" href="#">Previous</a>
-                          </li>
-                          <li class="pagination-item active">
-                            <a class="pagination-link" href="#">1</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">2</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">3</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">4</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">5</a>
-                          </li>
-                          <li class="pagination-item">
-                            <span class="pagination-link pagination-link-more">...</span>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link" href="#">50</a>
-                          </li>
-                          <li class="pagination-item">
-                            <a class="pagination-link pagination-link-next-text" href="#">Next</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
+                  <div class="code-viewer mt-4">
+                    <nav class="pagination">
+                      <ul class="pagination-list">
+                        <li class="pagination-item">
+                          <a class="pagination-link pagination-link-prev-text" href="#">Previous</a>
+                        </li>
+                        <li class="pagination-item active">
+                          <a class="pagination-link" href="#">1</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">2</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">3</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">4</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">5</a>
+                        </li>
+                        <li class="pagination-item">
+                          <span class="pagination-link pagination-link-more">...</span>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">50</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link pagination-link-next-text" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- More Pagination Ends -->
+              <!-- Card: More Pagination Ends -->
 
-            <!-- Pagination With Icon Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Pagination With Icon</h4>
+              <!-- Card: Pagination With Icon Stars -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Pagination With Icon</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     You can use the <code>Checkbox</code> component to render a checkbox input.
                   </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <nav class="pagination">
+                  <div class="code-viewer mt-4">
+                    <nav class="pagination">
+                      <ul class="pagination-list">
+                        <li class="pagination-item">
+                          <a class="pagination-link pagination-link-prev-icon" href="#">
+                            <i data-feather="chevron-left" width="1em" height="1em"></i>
+                          </a>
+                        </li>
+                        <li class="pagination-item active">
+                          <a class="pagination-link" href="#">1</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">2</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">3</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">4</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">5</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link pagination-link-next-icon" href="#">
+                            <i data-feather="chevron-right" width="1em" height="1em"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Pagination With Icon Ends -->
+
+              <!-- Card: Pagination Shape Stars -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Pagination Shapes</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.pagination-square</code> and <code>.pagination-circle</code> classes to change a pagination's shape.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-col gap-6">
+                      <nav class="pagination pagination-square">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <nav class="pagination pagination-circle">
                         <ul class="pagination-list">
                           <li class="pagination-item">
                             <a class="pagination-link pagination-link-prev-icon" href="#">
@@ -805,618 +859,245 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Pagination With Icon Ends -->
+              <!-- Card: Pagination Shape Ends -->
 
-            <!-- Pagination Shape Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Pagination Shapes</h4>
+              <!-- Card: Pagination Size Stars -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Pagination Sizes</h4>
 
-                  <p class="text-sm text-slate-400">
-                    Use <code>.pagination-square</code> and <code>.pagination-circle</code> classes to change a
-                    pagination's shape.
-                  </p>
-
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex flex-col gap-6">
-                        <nav class="pagination pagination-square">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                        <nav class="pagination pagination-circle">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Pagination Shape Ends -->
-
-            <!-- Pagination Size Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Pagination Sizes</h4>
-
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use <code>.pagination-sm</code>, <code>.pagination-md</code> and <code>.pagination-lg</code> classes
-                    to customize pagination size. Default is <code>.pagination-md</code>
+                    to customize pagination size. Default is <code>.pagination-md</code>.
                   </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex flex-col gap-6">
-                        <!-- Small Pagination -->
-                        <nav class="pagination pagination-sm">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                        <!-- Medium Pagination -->
-                        <nav class="pagination pagination-md">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                        <!-- Large Pagination -->
-                        <nav class="pagination pagination-lg">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                                <!-- Previous -->
-                              </a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                                <!-- Next -->
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                      </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-col gap-6">
+                      <!-- Small Pagination -->
+                      <nav class="pagination pagination-sm">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <!-- Medium Pagination -->
+                      <nav class="pagination pagination-md">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <!-- Large Pagination -->
+                      <nav class="pagination pagination-lg">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                              <!-- Previous -->
+                            </a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                              <!-- Next -->
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Pagination Size Ends -->
+              <!-- Card: Pagination Size Ends -->
 
-            <!-- Pagination Position Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Pagination Positions</h4>
+              <!-- Card: Pagination Position Stars -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Pagination Positions</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use <code>.pagination-start</code>, <code>.pagination-center</code> and
                     <code>.pagination-end</code> classes to set pagination position. Default is
-                    <code>.pagination-start</code>
+                    <code>.pagination-start</code>.
                   </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex flex-col gap-6">
-                        <!-- Start Pagination -->
-                        <nav class="pagination pagination-start">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                        <!-- Center Pagination -->
-                        <nav class="pagination pagination-center">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                        <!-- End Pagination -->
-                        <nav class="pagination pagination-end">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                      </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-col gap-6">
+                      <!-- Start Pagination -->
+                      <nav class="pagination pagination-start">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <!-- Center Pagination -->
+                      <nav class="pagination pagination-center">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <!-- End Pagination -->
+                      <nav class="pagination pagination-end">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Pagination Position Ends -->
+              <!-- Card: Pagination Position Ends -->
 
-            <!-- Pagination Color Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Pagination Colors</h4>
+              <!-- Card: Pagination Color Stars -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Pagination Colors</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use <code>.pagination-primary</code>, <code>.pagination-secondary</code>,
                     <code>.pagination-success</code>, <code>.pagination-danger</code>, <code>.pagination-warning</code>,
                     <code>.pagination-info</code>, <code>.pagination-dark</code> classes to change pagination style.
                     Default is <code>.pagination-primary</code>
                   </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex flex-col gap-6">
-                        <!-- Primary Pagination -->
-                        <nav class="pagination pagination-primary">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">6</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">7</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                        <!-- Secondary Pagination -->
-                        <nav class="pagination pagination-secondary">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">6</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">7</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                        <!-- Success Pagination -->
-                        <nav class="pagination pagination-success">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">6</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">7</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                        <!-- Danger Pagination -->
-                        <nav class="pagination pagination-danger">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">6</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">7</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                        <!-- Warning Pagination -->
-                        <nav class="pagination pagination-warning">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">6</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">7</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                        <!-- Info Pagination -->
-                        <nav class="pagination pagination-info">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">6</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">7</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                        <!-- Dark Pagination -->
-                        <nav class="pagination pagination-dark">
-                          <ul class="pagination-list">
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-prev-icon" href="#">
-                                <i data-feather="chevron-left" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">4</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">5</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link" href="#">6</a>
-                            </li>
-                            <li class="pagination-item active">
-                              <a class="pagination-link" href="#">7</a>
-                            </li>
-                            <li class="pagination-item">
-                              <a class="pagination-link pagination-link-next-icon" href="#">
-                                <i data-feather="chevron-right" width="1em" height="1em"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Pagination Color Ends -->
-
-            <!-- Disabled Pagination Stars -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Disabled Pagination</h4>
-
-                  <p class="text-sm text-slate-400">
-                    Use <code>.disabled</code> class with <code>.pagination-item</code> to make a pagination item
-                    disable.
-                  </p>
-
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <nav class="pagination">
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-col gap-6">
+                      <!-- Primary Pagination -->
+                      <nav class="pagination pagination-primary">
                         <ul class="pagination-list">
-                          <li class="pagination-item disabled">
+                          <li class="pagination-item">
                             <a class="pagination-link pagination-link-prev-icon" href="#">
                               <i data-feather="chevron-left" width="1em" height="1em"></i>
                             </a>
@@ -1437,6 +1118,228 @@
                             <a class="pagination-link" href="#">5</a>
                           </li>
                           <li class="pagination-item">
+                            <a class="pagination-link" href="#">6</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">7</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <!-- Secondary Pagination -->
+                      <nav class="pagination pagination-secondary">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">6</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">7</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <!-- Success Pagination -->
+                      <nav class="pagination pagination-success">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">6</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">7</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <!-- Danger Pagination -->
+                      <nav class="pagination pagination-danger">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">6</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">7</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <!-- Warning Pagination -->
+                      <nav class="pagination pagination-warning">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">6</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">7</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <!-- Info Pagination -->
+                      <nav class="pagination pagination-info">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">6</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">7</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <!-- Dark Pagination -->
+                      <nav class="pagination pagination-dark">
+                        <ul class="pagination-list">
+                          <li class="pagination-item">
+                            <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                            </a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">1</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">2</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">5</a>
+                          </li>
+                          <li class="pagination-item">
+                            <a class="pagination-link" href="#">6</a>
+                          </li>
+                          <li class="pagination-item active">
+                            <a class="pagination-link" href="#">7</a>
+                          </li>
+                          <li class="pagination-item">
                             <a class="pagination-link pagination-link-next-icon" href="#">
                               <i data-feather="chevron-right" width="1em" height="1em"></i>
                             </a>
@@ -1447,8 +1350,54 @@
                   </div>
                 </div>
               </div>
+              <!-- Card: Pagination Color Ends -->
+              
+              <!-- Card: Disabled Pagination Stars -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Disabled Pagination</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.disabled</code> class with <code>.pagination-item</code> to make a pagination item
+                    disable.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <nav class="pagination">
+                      <ul class="pagination-list">
+                        <li class="pagination-item disabled">
+                          <a class="pagination-link pagination-link-prev-icon" href="#">
+                            <i data-feather="chevron-left" width="1em" height="1em"></i>
+                          </a>
+                        </li>
+                        <li class="pagination-item active">
+                          <a class="pagination-link" href="#">1</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">2</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">3</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">4</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link" href="#">5</a>
+                        </li>
+                        <li class="pagination-item">
+                          <a class="pagination-link pagination-link-next-icon" href="#">
+                            <i data-feather="chevron-right" width="1em" height="1em"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Disabled Pagination Ends -->
             </div>
-            <!-- Disabled Pagination Ends -->
+            <!-- Pagination Ends -->
           </main>
           <!-- Main Content Ends -->
 

@@ -594,9 +594,9 @@
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
-            <div class="flex">
-              <h1 class="text-xl font-semibold dark:text-slate-300">Buttons</h1>
-              <ol class="breadcrumb ml-auto">
+            <div class="flex items-center justify-between mb-6">
+              <h3>Buttons</h3>
+              <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">Components</a></li>
                 <li class="breadcrumb-item"><a href="#">Buttons</a></li>
@@ -604,397 +604,401 @@
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Color Button Starts -->
-            <div class="card mt-6">
-              <div class="card-body">
-                <h4 class="card-title">Color Buttons</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">
-                    Use <code>color</code> class to <code>btn-primary-solid</code>, <code>btn-secondary-solid</code>,
-                    <code>btn-success-solid</code>, <code>btn-danger-solid</code>, <code>btn-warning-solid</code>
-                    <code>btn-info-solid</code> &amp; <code>btn-dark-solid</code>.
-                  </p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary btn-md">Primary</button>
-                    <button class="btn btn-secondary btn-md">Secondary</button>
-                    <button class="btn btn-success btn-md">Success</button>
-                    <button class="btn btn-danger btn-md">Danger</button>
-                    <button class="btn btn-warning btn-md">Warning</button>
-                    <button class="btn btn-info btn-md">Info</button>
-                    <button class="btn btn-dark btn-md">Dark</button>
+            <!-- Button Starts -->
+            <div class="space-y-6">
+              <!-- Card: Button Color Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Color Buttons</h4>
+                  <div class="card-subtitle">
+                    <p class="text-sm text-slate-400">
+                      Use <code>color</code> class to <code>btn-primary-solid</code>, <code>btn-secondary-solid</code>,
+                      <code>btn-success-solid</code>, <code>btn-danger-solid</code>, <code>btn-warning-solid</code>
+                      <code>btn-info-solid</code> &amp; <code>btn-dark-solid</code>.
+                    </p>
                   </div>
-                </div>
-              </div>
-            </div>
-            <!-- Color Button Ends -->
-
-            <!-- Button Size Start -->
-            <div class="card mt-4">
-              <div class="card-body">
-                <h4 class="card-title">Button Sizes</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">
-                    Use <code>size</code> class to <code>btn-xs</code>, <code>btn-sm</code>, <code>btn-md</code>,
-                    <code>btn-lg</code> &amp; <code>btn-xl</code> Default Value is <code>btn-md</code>.
-                  </p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary btn-xs">Extra Small</button>
-                    <button class="btn btn-primary btn-sm">Small</button>
-                    <button class="btn btn-primary btn-md">Medium</button>
-                    <button class="btn btn-primary btn-lg">Large</button>
-                    <button class="btn btn-primary btn-xl">Extra Large</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Button Size End -->
-
-            <!-- Outline Button Starts -->
-            <div class="card mt-4">
-              <div class="card-body">
-                <h4 class="card-title">Outline Buttons</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">
-                    Use <code>outline</code> class to <code>btn-primary-outline</code>,
-                    <code>btn-secondary-outline</code>, <code>btn-success-outline</code>,
-                    <code>btn-danger-outline</code>, <code>btn-warning-outline</code>,
-                    <code>btn-info-outline</code> &amp; <code>btn-dark-outline</code> create a outlined button.
-                  </p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-outline-primary btn-md">Primary</button>
-                    <button class="btn btn-outline-secondary btn-md">Secondary</button>
-                    <button class="btn btn-outline-success btn-md">Success</button>
-                    <button class="btn btn-outline-danger btn-md">Danger</button>
-                    <button class="btn btn-outline-warning btn-md">Warning</button>
-                    <button class="btn btn-outline-info btn-md">Info</button>
-                    <button class="btn btn-outline-dark btn-md">Dark</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Outline Button Ends -->
-
-            <!-- Soft Button Starts -->
-            <div class="card mt-4">
-              <div class="card-body">
-                <h4 class="card-title">Soft Buttons</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">
-                    use <code>soft</code> class to <code>btn-primary-soft</code>, <code>btn-secondary-soft</code>,
-                    <code>btn-success-soft</code>, <code>btn-danger-soft</code>, <code>btn-warning-soft</code>,
-                    <code>btn-info-soft</code> &amp; <code>btn-info-soft</code> create a soft button.
-                  </p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-soft-primary btn-md">Primary</button>
-                    <button class="btn btn-soft-secondary btn-md">Secondary</button>
-                    <button class="btn btn-soft-success btn-md">Success</button>
-                    <button class="btn btn-soft-danger btn-md">Danger</button>
-                    <button class="btn btn-soft-warning btn-md">Warning</button>
-                    <button class="btn btn-soft-info btn-md">Info</button>
-                    <button class="btn btn-soft-dark btn-md">Dark</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Soft Button Ends -->
-
-            <!-- Plain Button Starts -->
-            <div class="card mt-4">
-              <div class="card-body">
-                <h4 class="card-title">Plain Buttons</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">
-                    Use <code>plain</code> class to <code>btn-primary-plain</code>, <code>btn-secondary-plain</code>,
-                    <code>btn-success-plain</code>, <code>btn-danger-plain</code>, <code>btn-warning-plain</code>,
-                    <code>btn-info-plain</code> &amp; <code>btn-dark-plain</code> create a soft button.
-                  </p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-plain-primary btn-md">Primary</button>
-                    <button class="btn btn-plain-secondary btn-md">Secondary</button>
-                    <button class="btn btn-plain-success btn-md">Success</button>
-                    <button class="btn btn-plain-danger btn-md">Danger</button>
-                    <button class="btn btn-plain-warning btn-md">Warning</button>
-                    <button class="btn btn-plain-info btn-md">Info</button>
-                    <button class="btn btn-plain-dark btn-md">Dark</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Plain Button Ends -->
-
-            <!-- Rounded Button Starts -->
-            <div class="card mt-4">
-              <div class="card-body">
-                <h4 class="card-title">Rounded Buttons</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">Use<code>rounded-full</code> class to create a rounded button.</p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary btn-md rounded-full">Primary</button>
-                    <button class="btn btn-secondary btn-md rounded-full">Secondary</button>
-                    <button class="btn btn-success btn-md rounded-full">Success</button>
-                    <button class="btn btn-danger btn-md rounded-full">Danger</button>
-                    <button class="btn btn-warning btn-md rounded-full">Warning</button>
-                    <button class="btn btn-info btn-md rounded-full">Info</button>
-                    <button class="btn btn-dark btn-md rounded-full">Dark</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Rounded Button Ends -->
-
-            <!-- Icon Button Starts -->
-            <div class="card mt-4">
-              <div class="card-body">
-                <h4 class="card-title">Icon Buttons</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">
-                    By adding <code>icon</code> to the button, you can create icon buttons
-                  </p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary btn-md gap-2">
-                      <i data-feather="home" height="1em" width="1em"></i>
-                      <span>Home</span>
-                    </button>
-                    <button class="btn btn-outline-warning btn-md gap-2 rounded-full">
-                      <i data-feather="user-plus" height="1em" width="1em"></i>
-                      <span>Users</span>
-                    </button>
-                    <button class="btn btn-soft-danger btn-md gap-2">
-                      <i data-feather="trash" height="1em" width="1em"></i>
-                      <span>Delete</span>
-                    </button>
-                    <button class="btn btn-outline-info btn-md gap-2">
-                      <i data-feather="edit" height="1em" width="1em"></i>
-                      <span>Edit</span>
-                    </button>
-                    <button class="btn btn-plain-success btn-md gap-2">
-                      <i data-feather="check-circle" height="1em" width="1em"></i>
-                      <span>Done</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Icon Button Ends -->
-
-            <!-- Loading Button Starts -->
-            <div class="card mt-4">
-              <div class="card-body">
-                <h4 class="card-title">Loading Buttons</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">
-                    By adding a loading icon with <code>disabled</code>class, you can create loading buttons.
-                  </p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary btn-md gap-2" disabled="true">
-                      <svg
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-width="0"
-                        viewBox="0 0 24 24"
-                        class="animate-spin"
-                        height="20"
-                        width="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.2"
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                          fill="currentColor"
-                        ></path>
-                        <path
-                          d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                      <span>Loading</span>
-                    </button>
-                    <button class="btn btn-outline-success btn-md gap-2" disabled="true">
-                      <svg
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-width="0"
-                        viewBox="0 0 24 24"
-                        class="animate-spin"
-                        height="20"
-                        width="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.2"
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                          fill="currentColor"
-                        ></path>
-                        <path
-                          d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                      <span>Loading</span>
-                    </button>
-                    <button class="btn btn-soft-info btn-md gap-2" disabled="true">
-                      <svg
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-width="0"
-                        viewBox="0 0 24 24"
-                        class="animate-spin"
-                        height="20"
-                        width="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.2"
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                          fill="currentColor"
-                        ></path>
-                        <path
-                          d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                      <span>Loading</span>
-                    </button>
-                    <button class="btn btn-plain-danger btn-md gap-2" disabled="true">
-                      <svg
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-width="0"
-                        viewBox="0 0 24 24"
-                        class="animate-spin"
-                        height="20"
-                        width="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.2"
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                          fill="currentColor"
-                        ></path>
-                        <path
-                          d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                      <span>Loading</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Loading Button Ends -->
-
-            <!-- Disabled Button Starts -->
-            <div class="card mt-4">
-              <div class="card-body">
-                <h4 class="card-title">Disabled Buttons</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">
-                    Use <code>disabled</code>, class to create a disable button.
-                    <a
-                      class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
-                      href="https://react-icons.github.io/react-icons/"
-                      target="_blank"
-                      rel="noreferrer"
-                      >React Icons</a
-                    >
-                  </p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
+                  <div class="code-viewer mt-4">
                     <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-primary btn-md" disabled="true">Primary</button>
-                      <button class="btn btn-secondary btn-md" disabled="true">Secondary</button>
-                      <button class="btn btn-success btn-md" disabled="true">Success</button>
-                      <button class="btn btn-danger btn-md" disabled="true">Danger</button>
-                      <button class="btn btn-warning btn-md" disabled="true">Warning</button>
-                      <button class="btn btn-info btn-md" disabled="true">Info</button>
-                      <button class="btn btn-dark btn-md" disabled="true">Dark</button>
+                      <button class="btn btn-primary btn-md">Primary</button>
+                      <button class="btn btn-secondary btn-md">Secondary</button>
+                      <button class="btn btn-success btn-md">Success</button>
+                      <button class="btn btn-danger btn-md">Danger</button>
+                      <button class="btn btn-warning btn-md">Warning</button>
+                      <button class="btn btn-info btn-md">Info</button>
+                      <button class="btn btn-dark btn-md">Dark</button>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Disabled Button Ends -->
+              <!-- Card: Button Color Ends -->
+              
+              <!-- Card: Button Size Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Button Sizes</h4>
+                  <div class="card-subtitle">
+                    <p class="text-sm text-slate-400">
+                      Use <code>size</code> class to <code>btn-xs</code>, <code>btn-sm</code>, <code>btn-md</code>,
+                      <code>btn-lg</code> &amp; <code>btn-xl</code> Default Value is <code>btn-md</code>.
+                    </p>
+                  </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-primary btn-xs">Extra Small</button>
+                      <button class="btn btn-primary btn-sm">Small</button>
+                      <button class="btn btn-primary btn-md">Medium</button>
+                      <button class="btn btn-primary btn-lg">Large</button>
+                      <button class="btn btn-primary btn-xl">Extra Large</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Size Ends -->
+              
+              <!-- Card: Button Outline Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Outline Buttons</h4>
+                  <div class="card-subtitle">
+                    <p class="text-sm text-slate-400">
+                      Use <code>outline</code> class to <code>btn-primary-outline</code>,
+                      <code>btn-secondary-outline</code>, <code>btn-success-outline</code>,
+                      <code>btn-danger-outline</code>, <code>btn-warning-outline</code>,
+                      <code>btn-info-outline</code> &amp; <code>btn-dark-outline</code> create a outlined button.
+                    </p>
+                  </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-outline-primary btn-md">Primary</button>
+                      <button class="btn btn-outline-secondary btn-md">Secondary</button>
+                      <button class="btn btn-outline-success btn-md">Success</button>
+                      <button class="btn btn-outline-danger btn-md">Danger</button>
+                      <button class="btn btn-outline-warning btn-md">Warning</button>
+                      <button class="btn btn-outline-info btn-md">Info</button>
+                      <button class="btn btn-outline-dark btn-md">Dark</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Outline Ends -->
+              
+              <!-- Card: Button Soft Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Soft Buttons</h4>
+                  <div class="card-subtitle">
+                    <p class="text-sm text-slate-400">
+                      use <code>soft</code> class to <code>btn-primary-soft</code>, <code>btn-secondary-soft</code>,
+                      <code>btn-success-soft</code>, <code>btn-danger-soft</code>, <code>btn-warning-soft</code>,
+                      <code>btn-info-soft</code> &amp; <code>btn-info-soft</code> create a soft button.
+                    </p>
+                  </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-soft-primary btn-md">Primary</button>
+                      <button class="btn btn-soft-secondary btn-md">Secondary</button>
+                      <button class="btn btn-soft-success btn-md">Success</button>
+                      <button class="btn btn-soft-danger btn-md">Danger</button>
+                      <button class="btn btn-soft-warning btn-md">Warning</button>
+                      <button class="btn btn-soft-info btn-md">Info</button>
+                      <button class="btn btn-soft-dark btn-md">Dark</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Soft Ends -->
+              
+              <!-- Card: Button Plain Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Plain Buttons</h4>
+                  <div class="card-subtitle">
+                    <p class="text-sm text-slate-400">
+                      Use <code>plain</code> class to <code>btn-primary-plain</code>, <code>btn-secondary-plain</code>,
+                      <code>btn-success-plain</code>, <code>btn-danger-plain</code>, <code>btn-warning-plain</code>,
+                      <code>btn-info-plain</code> &amp; <code>btn-dark-plain</code> create a soft button.
+                    </p>
+                  </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-plain-primary btn-md">Primary</button>
+                      <button class="btn btn-plain-secondary btn-md">Secondary</button>
+                      <button class="btn btn-plain-success btn-md">Success</button>
+                      <button class="btn btn-plain-danger btn-md">Danger</button>
+                      <button class="btn btn-plain-warning btn-md">Warning</button>
+                      <button class="btn btn-plain-info btn-md">Info</button>
+                      <button class="btn btn-plain-dark btn-md">Dark</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Plain Ends -->
 
-            <!-- Block Button Starts -->
-            <div class="card mt-4">
-              <div class="card-body">
-                <h4 class="card-title">Block Buttons</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">Use <code>w-full</code>, class to create block button.</p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-col gap-y-4">
-                    <button class="btn btn-primary btn-md w-full">Block Button</button>
-                    <button class="btn btn-outline-primary btn-md w-full">Block Button</button>
-                    <button class="btn btn-soft-primary btn-md w-full">Block Button</button>
+              <!-- Card: Button Rounded Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Rounded Buttons</h4>
+                  <div class="card-subtitle">
+                    <p class="text-sm text-slate-400">Use<code>rounded-full</code> class to create a rounded button.</p>
+                  </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-primary btn-md rounded-full">Primary</button>
+                      <button class="btn btn-secondary btn-md rounded-full">Secondary</button>
+                      <button class="btn btn-success btn-md rounded-full">Success</button>
+                      <button class="btn btn-danger btn-md rounded-full">Danger</button>
+                      <button class="btn btn-warning btn-md rounded-full">Warning</button>
+                      <button class="btn btn-info btn-md rounded-full">Info</button>
+                      <button class="btn btn-dark btn-md rounded-full">Dark</button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Block Button Ends -->
+              <!-- Card: Button Rounded Ends -->
 
-            <!-- Group Buttons Start -->
-            <div class="card mt-4">
-              <div class="card-body">
-                <h4 class="card-title">Group Buttons</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">Use <code>ButtonGroup</code> class to create a group of buttons.</p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <div class="btn-group">
-                      <button class="btn btn-primary btn-md">HTML</button>
-                      <button class="btn btn-primary btn-md">CSS</button>
-                      <button class="btn btn-primary btn-md">Javascript</button>
-                      <button class="btn btn-primary btn-md">PHP</button>
-                      <button class="btn btn-primary btn-md">Python</button>
-                    </div>
-                    <div class="btn-group">
-                      <button class="btn btn-outline-primary btn-md gap-2">
-                        <i data-feather="thumbs-up" height="1em" width="1em"></i>
-                        <span>120k</span>
+              <!-- Card: Button Icon Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Icon Buttons</h4>
+                  <div class="card-subtitle">
+                    <p class="text-sm text-slate-400">
+                      By adding <code>icon</code> to the button, you can create icon buttons
+                    </p>
+                  </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-primary btn-md gap-2">
+                        <i data-feather="home" height="1em" width="1em"></i>
+                        <span>Home</span>
                       </button>
-                      <button class="btn btn-outline-primary btn-md gap-2">
-                        <i data-feather="heart" height="1em" width="1em"></i>
-                        <span>200k</span>
+                      <button class="btn btn-outline-warning btn-md gap-2 rounded-full">
+                        <i data-feather="user-plus" height="1em" width="1em"></i>
+                        <span>Users</span>
                       </button>
-                    </div>
-                    <div class="btn-group rounded">
-                      <button class="btn btn-soft-primary btn-md">Years</button>
-                      <button class="btn btn-soft-primary btn-md">Months</button>
-                      <button class="btn btn-soft-primary btn-md">Days</button>
+                      <button class="btn btn-soft-danger btn-md gap-2">
+                        <i data-feather="trash" height="1em" width="1em"></i>
+                        <span>Delete</span>
+                      </button>
+                      <button class="btn btn-outline-info btn-md gap-2">
+                        <i data-feather="edit" height="1em" width="1em"></i>
+                        <span>Edit</span>
+                      </button>
+                      <button class="btn btn-plain-success btn-md gap-2">
+                        <i data-feather="check-circle" height="1em" width="1em"></i>
+                        <span>Done</span>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- Card: Button Icon Ends -->
+              
+              <!-- Card: Button Loading Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Loading Buttons</h4>
+                  <div class="card-subtitle">
+                    <p class="text-sm text-slate-400">
+                      By adding a loading icon with <code>disabled</code>class, you can create loading buttons.
+                    </p>
+                  </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-primary btn-md gap-2" disabled="true">
+                        <svg
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-width="0"
+                          viewBox="0 0 24 24"
+                          class="animate-spin"
+                          height="20"
+                          width="20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.2"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="currentColor"
+                          ></path>
+                          <path
+                            d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                        <span>Loading</span>
+                      </button>
+                      <button class="btn btn-outline-success btn-md gap-2" disabled="true">
+                        <svg
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-width="0"
+                          viewBox="0 0 24 24"
+                          class="animate-spin"
+                          height="20"
+                          width="20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.2"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="currentColor"
+                          ></path>
+                          <path
+                            d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                        <span>Loading</span>
+                      </button>
+                      <button class="btn btn-soft-info btn-md gap-2" disabled="true">
+                        <svg
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-width="0"
+                          viewBox="0 0 24 24"
+                          class="animate-spin"
+                          height="20"
+                          width="20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.2"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="currentColor"
+                          ></path>
+                          <path
+                            d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                        <span>Loading</span>
+                      </button>
+                      <button class="btn btn-plain-danger btn-md gap-2" disabled="true">
+                        <svg
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-width="0"
+                          viewBox="0 0 24 24"
+                          class="animate-spin"
+                          height="20"
+                          width="20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.2"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="currentColor"
+                          ></path>
+                          <path
+                            d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                        <span>Loading</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Loading Ends -->
+              
+              <!-- Card: Button Disabled Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Disabled Buttons</h4>
+                  <div class="card-subtitle">
+                    <p class="text-sm text-slate-400">
+                      Use <code>disabled</code>, class to create a disable button.
+                      <a
+                        class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
+                        href="https://react-icons.github.io/react-icons/"
+                        target="_blank"
+                        rel="noreferrer"
+                        >React Icons</a
+                      >
+                    </p>
+                  </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <div class="flex flex-wrap items-center gap-4">
+                        <button class="btn btn-primary btn-md" disabled="true">Primary</button>
+                        <button class="btn btn-secondary btn-md" disabled="true">Secondary</button>
+                        <button class="btn btn-success btn-md" disabled="true">Success</button>
+                        <button class="btn btn-danger btn-md" disabled="true">Danger</button>
+                        <button class="btn btn-warning btn-md" disabled="true">Warning</button>
+                        <button class="btn btn-info btn-md" disabled="true">Info</button>
+                        <button class="btn btn-dark btn-md" disabled="true">Dark</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Disabled Ends -->
+
+              <!-- Card: Button Block Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Block Buttons</h4>
+                  <div class="card-subtitle">
+                    <p class="text-sm text-slate-400">Use <code>w-full</code>, class to create block button.</p>
+                  </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-col gap-y-4">
+                      <button class="btn btn-primary btn-md w-full">Block Button</button>
+                      <button class="btn btn-outline-primary btn-md w-full">Block Button</button>
+                      <button class="btn btn-soft-primary btn-md w-full">Block Button</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Block Ends -->
+              
+              <!-- Card: Button Group Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Group Buttons</h4>
+                  <div class="card-subtitle">
+                    <p class="text-sm text-slate-400">Use <code>ButtonGroup</code> class to create a group of buttons.</p>
+                  </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <div class="btn-group">
+                        <button class="btn btn-primary btn-md">HTML</button>
+                        <button class="btn btn-primary btn-md">CSS</button>
+                        <button class="btn btn-primary btn-md">Javascript</button>
+                        <button class="btn btn-primary btn-md">PHP</button>
+                        <button class="btn btn-primary btn-md">Python</button>
+                      </div>
+                      <div class="btn-group">
+                        <button class="btn btn-outline-primary btn-md gap-2">
+                          <i data-feather="thumbs-up" height="1em" width="1em"></i>
+                          <span>120k</span>
+                        </button>
+                        <button class="btn btn-outline-primary btn-md gap-2">
+                          <i data-feather="heart" height="1em" width="1em"></i>
+                          <span>200k</span>
+                        </button>
+                      </div>
+                      <div class="btn-group rounded">
+                        <button class="btn btn-soft-primary btn-md">Years</button>
+                        <button class="btn btn-soft-primary btn-md">Months</button>
+                        <button class="btn btn-soft-primary btn-md">Days</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Group Ends -->
             </div>
-            <!-- Group Buttons Ends -->
+            <!-- Button Ends -->
           </main>
           <!-- Main Content Ends -->
 
