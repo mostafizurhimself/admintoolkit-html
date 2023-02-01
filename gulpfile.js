@@ -129,14 +129,14 @@ gulp.task('watch', function () {
       baseDir: 'dist',
     },
     open: false,
-    notify: false
+    notify: false,
   });
 
   gulp.watch(paths.src.fonts, gulp.series('fonts'));
   gulp.watch(paths.src.images, gulp.series('images'));
   gulp.watch(paths.src.scss, gulp.series('scss'));
   gulp.watch(paths.src.js, gulp.series('js'));
-  gulp.watch(paths.src.html, gulp.series('html'));
+  gulp.watch(paths.src.html, gulp.series('html', 'scss'));
 
   gulp.watch('src/**/*').on('change', browserSync.reload);
 });
