@@ -44,6 +44,20 @@
     @apply text-base; //16px(40%)
   }
 
+  mark {
+    @apply bg-warning-100 dark:bg-warning-200 px-[.5em] rounded-sm;
+  }
+
+  .blockquote {
+    @apply font-medium italic text-slate-500 dark:text-slate-300 border-l-[.25rem] border-l-slate-200 dark:border-l-slate-800 pl-4;
+    & > p {
+      @apply before:content-['"'] after:content-['"'];
+    }
+  }
+}
+
+
+@layer utilities {
   .display-1,
   .display-2,
   .display-3,
@@ -87,14 +101,4 @@
     }
   }
 
-  mark {
-    @apply bg-warning-100 dark:bg-warning-200 px-[.5em] rounded-sm;
-  }
-
-  .blockquote {
-    @apply font-medium italic text-slate-500 dark:text-slate-300 border-l-[.25rem] border-l-slate-200 dark:border-l-slate-800 pl-4;
-    & > p {
-      @apply before:content-['"'] after:content-['"'];
-    }
-  }
 }
