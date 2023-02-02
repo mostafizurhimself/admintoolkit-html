@@ -618,7 +618,7 @@
               <!-- Card: Basic Modal Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="-cardtitle">Basic Modal</h4>
+                  <h4 class="card-title">Basic Modal</h4>
 
                   <p class="card-subtitle">
                     Basic usage of <code>Modal</code> component
@@ -628,8 +628,8 @@
                     <button 
                       type="button" 
                       class="btn btn-primary btn-md" 
-                      data-component-trigger="modal"
-                      data-component-id="#modal-basic"
+                      data-toggle="modal"
+                      data-target="#modal-basic"
                     >
                       Open Basic Modal
                     </button>
@@ -643,7 +643,7 @@
                               <button
                                 type="button"
                                 class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 <i data-feather="x" width="1em" height="1em"></i>
                               </button>
@@ -659,7 +659,7 @@
                               <button 
                                 type="button" 
                                 class="btn btn-md btn-plain-secondary" 
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 Cancel
                               </button>
@@ -667,7 +667,7 @@
                               <button 
                                 type="button" 
                                 class="btn btn-md btn-primary" 
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 Done
                               </button>
@@ -694,13 +694,28 @@
 
                   <div class="code-viewer mt-4">
                     <div class="flex gap-2">
-                      <button type="button" class="btn btn-primary btn-md" data-component-trigger="modal" data-component-id="#modal-small">
+                      <button 
+                        type="button" 
+                        class="btn btn-primary btn-md" 
+                        data-toggle="modal" 
+                        data-target="#modal-small"
+                      >
                         Small Modal
                       </button>
-                      <button type="button" class="btn btn-primary btn-md" data-component-trigger="modal" data-component-id="#modal-large">
+                      <button 
+                        type="button" 
+                        class="btn btn-primary btn-md" 
+                        data-toggle="modal" 
+                        data-target="#modal-large"
+                      >
                         Large Modal
                       </button>
-                      <button type="button" class="btn btn-primary btn-md" data-component-trigger="modal" data-component-id="#modal-custom-size">
+                      <button 
+                        type="button" 
+                        class="btn btn-primary btn-md" 
+                        data-toggle="modal" 
+                        data-target="#modal-custom-size"
+                      >
                         Custom Size Modal
                       </button>
                     </div>
@@ -715,7 +730,7 @@
                               <button
                                 type="button"
                                 class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 <i data-feather="x" width="1em" height="1em"></i>
                               </button>
@@ -733,14 +748,14 @@
                               <button
                                 type="button"
                                 class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 Cancel
                               </button>
                               <button 
                                 type="button" 
                                 class="btn btn-md btn-primary" 
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 Done
                               </button>
@@ -759,7 +774,7 @@
                               <button
                                 type="button"
                                 class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 <i data-feather="x" width="1em" height="1em"></i>
                               </button>
@@ -777,14 +792,14 @@
                               <button
                                 type="button"
                                 class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 Cancel
                               </button>
                               <button 
                                 type="button" 
                                 class="btn btn-md btn-primary" 
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 Done
                               </button>
@@ -803,7 +818,7 @@
                               <button
                                 type="button"
                                 class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 <i data-feather="x" width="1em" height="1em"></i>
                               </button>
@@ -821,14 +836,14 @@
                               <button
                                 type="button"
                                 class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 Cancel
                               </button>
                               <button 
                                 type="button" 
                                 class="btn btn-md btn-primary" 
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 Done
                               </button>
@@ -855,8 +870,8 @@
                     <button 
                       type="button" 
                       class="btn btn-primary btn-md" 
-                      data-component-trigger="modal" 
-                      data-component-id="#modal-full-screen"
+                      data-toggle="modal" 
+                      data-target="#modal-full-screen"
                     >
                       Open Full Screen Modal
                     </button>
@@ -870,7 +885,7 @@
                               <button
                                 type="button"
                                 class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 <i data-feather="x" width="1em" height="1em"></i>
                               </button>
@@ -888,14 +903,14 @@
                               <button
                                 type="button"
                                 class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 Cancel
                               </button>
                               <button 
                                 type="button" 
                                 class="btn btn-md btn-primary" 
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 Done
                               </button>
@@ -922,8 +937,8 @@
                     <button 
                       type="button" 
                       class="btn btn-primary btn-md" 
-                      data-component-trigger="modal" 
-                      data-component-id="#modal-centered"
+                      data-toggle="modal" 
+                      data-target="#modal-centered"
                     >
                       Open Centered Modal
                     </button>
@@ -937,7 +952,7 @@
                               <button
                                 type="button"
                                 class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 <i data-feather="x" width="1em" height="1em"></i>
                               </button>
@@ -955,14 +970,14 @@
                               <button
                                 type="button"
                                 class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 Cancel
                               </button>
                               <button 
                                 type="button" 
                                 class="btn btn-md btn-primary" 
-                                data-component-dismisss="modal"
+                                data-dismisss="modal"
                               >
                                 Done
                               </button>
@@ -990,8 +1005,8 @@
                       <button
                         type="button"
                         class="btn btn-primary btn-md"
-                        data-component-trigger="modal"
-                        data-component-id="#modal-scrollable"
+                        data-toggle="modal"
+                        data-target="#modal-scrollable"
                       >
                         Open Scrollable Modal
                       </button>
@@ -1005,7 +1020,7 @@
                                 <button
                                   type="button"
                                   class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                  data-component-dismisss="modal"
+                                  data-dismisss="modal"
                                 >
                                   <i data-feather="x" width="1em" height="1em"></i>
                                 </button>
@@ -1021,14 +1036,14 @@
                                 <button
                                   type="button"
                                   class="btn btn-md btn-plain-secondary"
-                                  data-component-dismisss="modal"
+                                  data-dismisss="modal"
                                 >
                                   Cancel
                                 </button>
                                 <button 
                                   type="button" 
                                   class="btn btn-md btn-primary" 
-                                  data-component-dismisss="modal"
+                                  data-dismisss="modal"
                                 >
                                   Done
                                 </button>
@@ -1043,8 +1058,8 @@
                       <button
                         type="button"
                         class="btn btn-primary btn-md"
-                        data-component-trigger="modal"
-                        data-component-id="#modal-scrollable"
+                        data-trigger="modal"
+                        data-id="#modal-scrollable"
                       >
                         Open Scrollable Modal
                       </button>
@@ -1058,7 +1073,7 @@
                                 <button
                                   type="button"
                                   class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                  data-component-dismisss="modal"
+                                  data-dismisss="modal"
                                 >
                                   <i data-feather="x" width="1em" height="1em"></i>
                                 </button>
@@ -1072,14 +1087,14 @@
                                 <button
                                   type="button"
                                   class="btn btn-md btn-plain-secondary"
-                                  data-component-dismisss="modal"
+                                  data-dismisss="modal"
                                 >
                                   Cancel
                                 </button>
                                 <button 
                                   type="button" 
                                   class="btn btn-md btn-primary" 
-                                  data-component-dismisss="modal"
+                                  data-dismisss="modal"
                                 >
                                   Done
                                 </button>
@@ -1094,6 +1109,72 @@
               </div>
               <!-- Card: Scrollable Modal Ends -->
 
+              <!-- Card: Controlled Modal Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Controlled Modal</h4>
+
+                  <p class="card-subtitle">
+                    You can controll the modal via javascript
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <button 
+                      type="button" 
+                      class="btn btn-primary btn-md" 
+                      id="modal-controlled-toggle" 
+                    >
+                      Open Controlled Modal
+                    </button>
+
+                    <div class="modal" id="modal-controlled">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <div class="flex items-center justify-between">
+                              <h6>Controlled Modal</h6>
+                              <button
+                                type="button"
+                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
+                                data-dismisss="modal"
+                              >
+                                <i data-feather="x" width="1em" height="1em"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="modal-body">
+                            <p class="text-sm text-slate-500 dark:text-slate-300">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
+                              eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
+                              tenetur laudantium ex obcaecati, porro doloribus cumque.
+                            </p>
+                          </div>
+                          <div class="modal-footer">
+                            <div class="flex items-center justify-end gap-2">
+                              <button
+                                type="button"
+                                class="btn btn-md btn-plain-secondary"
+                                data-dismisss="modal"
+                              >
+                                Cancel
+                              </button>
+                              <button 
+                                type="button" 
+                                class="btn btn-md btn-primary" 
+                                data-dismisss="modal"
+                              >
+                                Done
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Control Modal Ends -->
+
               <!-- Card: Disabled Backdrop Modal Starts -->
               <div class="card">
                 <div class="card-body">
@@ -1107,13 +1188,13 @@
                       <button
                         type="button"
                         class="btn btn-primary btn-md"
-                        data-component-trigger="modal"
-                        data-component-id="#modal-backdrop"
+                        data-toggle="modal"
+                        data-target="#modal-backdrop"
                       >
                         Open Modal
                       </button>
 
-                      <div class="modal" id="modal-backdrop" data-component-backdrop="false">
+                      <div class="modal" id="modal-backdrop" data-backdrop="false" data-keyboard="false">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -1122,7 +1203,7 @@
                                 <button
                                   type="button"
                                   class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                  data-component-dismisss="modal"
+                                  data-dismisss="modal"
                                 >
                                   <i data-feather="x" width="1em" height="1em"></i>
                                 </button>
@@ -1140,14 +1221,14 @@
                                 <button
                                   type="button"
                                   class="btn btn-md btn-plain-secondary"
-                                  data-component-dismisss="modal"
+                                  data-dismisss="modal"
                                 >
                                   Cancel
                                 </button>
                                 <button 
                                   type="button" 
                                   class="btn btn-md btn-primary" 
-                                  data-component-dismisss="modal"
+                                  data-dismisss="modal"
                                 >
                                   Done
                                 </button>
@@ -1183,5 +1264,22 @@
       <!-- Wrapper Ends -->
     </div>
     <script src="./js/app.js"></script>
+    <script>
+        const modalControlledToggle = document.querySelector('#modal-controlled-toggle');
+        
+        if(modalControlledToggle) {
+
+          modalControlledToggle.addEventListener('click', () => {
+
+            const modalControlled = createModal('#modal-controlled', {
+              backdrop: true,
+              keyboard: false,
+            });
+
+            modalControlled.open();
+            
+          });
+        }
+    </script>
   </body>
 </html>
