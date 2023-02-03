@@ -1,10 +1,10 @@
 class Modal {
 
   constructor (target, options = {}) {
-    //Store  modal element
+    //Store the target element
     this.target = null;
 
-    //Store  modal element
+    //Store modal element
     this.modal = null;
     
     //Store modal toggle
@@ -12,6 +12,9 @@ class Modal {
 
     //Store modal dismisses
     this.dismisses = null;
+
+    // Store the function for calling on keydown
+    this.documentOnKeydown = (e) => this.hideOnKeydown({e, modal: this});
 
     //Store the modal options
     this.options  = {
@@ -50,7 +53,7 @@ class Modal {
           }
         }
 
-        this.toggle.addEventListener('click', () => this.open());
+        this.toggle.addEventListener('click', () => this.show());
       }
     
     }else {
@@ -63,11 +66,11 @@ class Modal {
     this.dismisses = this.modal.querySelectorAll('[data-dismisss="modal"]');
 
     if(this.dismisses.length) {
-      [...this.dismisses].forEach((dismiss) => dismiss.addEventListener('click', () => this.close()));
+      [...this.dismisses].forEach((dismiss) => dismiss.addEventListener('click', () => this.hide()));
     }
   }
 
-  open() {
+  show() {
     const modal = this.modal;
 
     if (!modal.classList.contains('show')) {
@@ -84,13 +87,13 @@ class Modal {
         // Append the overlay
         modal.appendChild(overlay);
         
-        document.addEventListener('keydown', this.enableEscClose.bind(this));
-
+        // Add event listener to listen ESC keypress
+        document.addEventListener('keydown', this.documentOnKeydown);
       }, 15);
     }
   }
 
-  close() {
+  hide() {
     const modal = this.modal;
 
     if(modal.classList.contains('show')) {
@@ -105,16 +108,21 @@ class Modal {
         modal.querySelector('.modal-backdrop').remove();
 
         // Remove keydown eventListener from document
-        document.removeEventListener('keydown', this.enableEscClose);
-
+        document.removeEventListener('keydown', this.documentOnKeydown);
       }, 300);
     }
   }
 
-  enableEscClose(e) {
-    console.log(this);
-    if(this.options.keyboard && e.key === 'Escape') {
-      this.close();
+  hideOnKeydown(args) {
+    // Store the event listener
+    const e     = args.e;
+
+    // Store the Modal instance
+    const modal = args.modal;
+    
+    if(e.key === 'Escape' && modal.options.keyboard) {
+      // Hide the modal on keypress
+      modal.hide();
     }
   }
 
@@ -133,7 +141,7 @@ class Modal {
     // Add Event Listener to overlay
     overlay.addEventListener('click', () => {
       if(this.options.backdrop) {
-        this.close();
+        this.hide();
       }
     });
 
