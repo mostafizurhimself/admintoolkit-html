@@ -36,6 +36,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@floating-ui/dom": "^1.1.1",
     "feather-icons": "^4.29.0",
     "highlight.js": "^11.7.0",
     "js-beautify": "^1.14.7"
