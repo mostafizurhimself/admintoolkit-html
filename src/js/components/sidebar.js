@@ -1,8 +1,9 @@
 const sidebar = {
   wrapper: document.querySelector('.wrapper'),
   sidebar: document.querySelector('.sidebar'),
-  menuItems: document.querySelectorAll('.sidebar-menu'),
   sidebarToggle: document.querySelector('.sidebar-toggle'),
+  content: document.querySelector('.sidebar-content'),
+  menuItems: document.querySelectorAll('.sidebar-menu'),
 
   init() {
     this.initMenuItems();
