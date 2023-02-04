@@ -44,14 +44,14 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="home"></i>
               </span>
-              <span class="sidebar-menu--text">Dashboard</span>
+              <span class="">Dashboard</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="./ecommerce.html" class="sidebar-submenu-item">Ecommerce</a>
+                <a href="/" class="sidebar-submenu-item">Ecommerce</a>
               </li>
               <li>
                 <a href="javascript:void(0);" class="sidebar-submenu-item">Analytics</a>
@@ -67,7 +67,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="mail"></i>
               </span>
-              <span class="sidebar-menu--text">Email</span>
+              <span class="">Email</span>
             </a>
           </li>
 
@@ -77,7 +77,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="file-text"></i>
               </span>
-              <span class="sidebar-menu--text">Invoice</span>
+              <span class="">Invoice</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -100,7 +100,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="shopping-bag"></i>
               </span>
-              <span class="sidebar-menu--text">Ecommerce</span>
+              <span class="">Ecommerce</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -129,7 +129,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="users"></i>
               </span>
-              <span class="sidebar-menu--text">Users</span>
+              <span class="">Users</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -151,7 +151,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="box"></i>
               </span>
-              <span class="sidebar-menu--text">Common</span>
+              <span class="">Common</span>
               <span class="sidebar-menu-arrow rotate">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -220,7 +220,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="edit"></i>
               </span>
-              <span class="sidebar-menu--text">Forms</span>
+              <span class="">Forms</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -273,7 +273,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="list"></i>
               </span>
-              <span class="sidebar-menu--text">Tables</span>
+              <span class="">Tables</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -293,7 +293,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="pie-chart"></i>
               </span>
-              <span class="sidebar-menu--text">Charts</span>
+              <span class="">Charts</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -332,7 +332,7 @@
                   <path d="M14 14h7v7h-7z"></path>
                 </svg>
               </span>
-              <span class="sidebar-menu--text">Icons</span>
+              <span class="">Icons</span>
             </a>
           </li>
           <!-- icons-->
@@ -360,7 +360,7 @@
                   <polyline points="5 20 11 4 13 4 20 20"></polyline>
                 </svg>
               </span>
-              <span class="sidebar-menu--text">Typography</span>
+              <span class="">Typography</span>
             </a>
           </li>
           <!--  all pages link  -->
@@ -371,7 +371,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="lock"></i>
               </span>
-              <span class="sidebar-menu--text">Authentication</span>
+              <span class="">Authentication</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -406,7 +406,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="grid"></i>
               </span>
-              <span class="sidebar-menu--text">Miscellaneous</span>
+              <span class="">Miscellaneous</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -932,8 +932,8 @@
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
             <!-- Page Title Start -->
-            <div class="flex">
-              <h1 class="text-xl font-semibold dark:text-slate-300">Badges</h1>
+            <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+              <h5>Badges</h5>
               <ol class="breadcrumb ml-auto">
                 <li class="breadcrumb-item"><a href="">Home</a></li>
                 <li class="breadcrumb-item"><a href="">Components</a></li>
@@ -942,145 +942,149 @@
             </div>
             <!-- Page Title End -->
 
-            <!-- Color Badge Starts -->
-            <div class="card mt-6">
-              <div class="card-body">
-                <h4 class="card-title">Color Badges</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">
+            <!-- Badge Starts -->
+            <div class="space-y-6">
+              <!-- Card: Badge Color Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Color Badges</h4>
+
+                  <p class="card-subtitle">
                     Used to <code>color</code> class <code>badge-solid--primary</code>,
                     <code>badge-solid--secondary</code>, <code>badge-solid--success</code>,
                     <code>badge-solid--danger</code>, <code>badge-solid--warning</code>,
                     <code>badge-solid--info</code> &amp; <code>badge-solid--dark</code> to create a badge color.
                   </p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-2">
-                    <div class="badge badge-primary">Primary</div>
-                    <div class="badge badge-secondary">Secondary</div>
-                    <div class="badge badge-success">Success</div>
-                    <div class="badge badge-danger">Danger</div>
-                    <div class="badge badge-warning">Warning</div>
-                    <div class="badge badge-info">Info</div>
-                    <div class="badge badge-dark">Dark</div>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <div class="badge badge-primary">Primary</div>
+                      <div class="badge badge-secondary">Secondary</div>
+                      <div class="badge badge-success">Success</div>
+                      <div class="badge badge-danger">Danger</div>
+                      <div class="badge badge-warning">Warning</div>
+                      <div class="badge badge-info">Info</div>
+                      <div class="badge badge-dark">Dark</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Color Badge Ends -->
+              <!-- Card: Badge Color Ends -->
 
-            <!-- Outline Badge Starts -->
-            <div class="card mt-6">
-              <div class="card-body">
-                <h4 class="card-title">Outline Badges</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">
+              <!-- Card: Badge Outlined Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Outline Badges</h4>
+
+                  <p class="card-subtitle">
                     Use <code>outline</code> class <code>badge-outline-primary</code>,
                     <code>badge-outline-secondary</code>, <code>badge-outline-success</code>,
                     <code>badge-outline-warning</code>, <code>badge-outline-info</code>,
                     <code>badge-outline-dark</code> to create a outlined badge.
                   </p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-2">
-                    <div class="badge badge-outline-primary">Primary</div>
-                    <div class="badge badge-outline-secondary">Secondary</div>
-                    <div class="badge badge-outline-success">Success</div>
-                    <div class="badge badge-outline-danger">Danger</div>
-                    <div class="badge badge-outline-warning">Warning</div>
-                    <div class="badge badge-outline-info">Info</div>
-                    <div class="badge badge-outline-dark">Dark</div>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <div class="badge badge-outline-primary">Primary</div>
+                      <div class="badge badge-outline-secondary">Secondary</div>
+                      <div class="badge badge-outline-success">Success</div>
+                      <div class="badge badge-outline-danger">Danger</div>
+                      <div class="badge badge-outline-warning">Warning</div>
+                      <div class="badge badge-outline-info">Info</div>
+                      <div class="badge badge-outline-dark">Dark</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Outline Badge Ends -->
+              <!-- Card: Badge Outlined Ends -->
 
-            <!-- Soft Badge Starts -->
-            <div class="card mt-6">
-              <div class="card-body">
-                <h4 class="card-title">Soft Badges</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">
+              <!-- Card: Badge Soft Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Soft Badges</h4>
+
+                  <p class="card-subtitle">
                     Use <code>soft</code> class <code>badge-soft-primary</code>, <code>badge-secondar--soft</code>,
                     <code>badge-soft-success</code>, <code>badge-soft-danger</code>, <code>badge-soft-warning</code>,
                     <code>badge-soft-info</code> &amp; <code>badge-soft-dark</code> to create a soft badge.
                   </p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-2">
-                    <div class="badge badge-soft-primary">Primary</div>
-                    <div class="badge badge-soft-secondary">Secondary</div>
-                    <div class="badge badge-soft-success">Success</div>
-                    <div class="badge badge-soft-danger">Danger</div>
-                    <div class="badge badge-soft-warning">Warning</div>
-                    <div class="badge badge-soft-info">Info</div>
-                    <div class="badge badge-soft-dark">Dark</div>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <div class="badge badge-soft-primary">Primary</div>
+                      <div class="badge badge-soft-secondary">Secondary</div>
+                      <div class="badge badge-soft-success">Success</div>
+                      <div class="badge badge-soft-danger">Danger</div>
+                      <div class="badge badge-soft-warning">Warning</div>
+                      <div class="badge badge-soft-info">Info</div>
+                      <div class="badge badge-soft-dark">Dark</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Soft Badge Ends -->
+              <!-- Card: Badge Soft Ends -->
 
-            <!-- Rounded Badge Starts -->
-            <div class="card mt-6">
-              <div class="card-body">
-                <h4 class="card-title">Rounded Badges</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">
+              <!-- Card: Badge Rounded Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Rounded Badges</h4>
+
+                  <p class="card-subtitle">
                     Use <code>rounded</code> class <code>badge-primary--rounded</code>,
                     <code>badge-secondary--rounded</code>, <code>badge-success--rounded</code>,
                     <code>badge-warning--rounded</code>, <code>badge-info--rounded</code> &amp;
                     <code>badge-dark--rounded</code> to create a rounded badge.
                   </p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-2">
-                    <div class="badge badge-primary badge-rounded">Primary</div>
-                    <div class="badge badge-secondary badge-rounded">Secondary</div>
-                    <div class="badge badge-success badge-rounded">Success</div>
-                    <div class="badge badge-danger badge-rounded">Danger</div>
-                    <div class="badge badge-warning badge-rounded">Warning</div>
-                    <div class="badge badge-info badge-rounded">Info</div>
-                    <div class="badge badge-dark badge-rounded">Dark</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Rounded Badge Ends -->
 
-            <!-- Icon Badge Starts -->
-            <div class="card mt-6">
-              <div class="card-body">
-                <h4 class="card-title">Badge With Icon</h4>
-                <div class="card-subtitle">
-                  <p class="text-sm text-slate-400">Use <code>icon</code> class to create a icon badge.</p>
-                </div>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-2">
-                    <div
-                      class="inline-flex items-center gap-1 rounded-primary bg-success-100 px-2 py-0.5 text-xs text-success-500"
-                    >
-                      <i data-feather="check-circle" height="1em" width="1em"></i>
-                      <span>Completed</span>
-                    </div>
-                    <div
-                      class="inline-flex items-center gap-1 rounded-primary bg-info-100 px-2 py-0.5 text-xs text-info-500"
-                    >
-                      <i data-feather="clock" height="1em" width="1em"></i>
-                      <span>2 minutes ago</span>
-                    </div>
-                    <div
-                      class="inline-flex items-center gap-1 rounded-primary bg-danger-100 px-2 py-0.5 text-xs text-danger-500"
-                    >
-                      <i data-feather="alert-circle" height="1em" width="1em"></i>
-                      <span>Failed</span>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <div class="badge badge-primary badge-rounded">Primary</div>
+                      <div class="badge badge-secondary badge-rounded">Secondary</div>
+                      <div class="badge badge-success badge-rounded">Success</div>
+                      <div class="badge badge-danger badge-rounded">Danger</div>
+                      <div class="badge badge-warning badge-rounded">Warning</div>
+                      <div class="badge badge-info badge-rounded">Info</div>
+                      <div class="badge badge-dark badge-rounded">Dark</div>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- Card: Badge Rounded Ends -->
+
+              <!-- Card: Badge Icon Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Badge With Icon</h4>
+
+                  <p class="card-subtitle">Use <code>icon</code> class to create a icon badge.</p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <div
+                        class="inline-flex items-center gap-1 rounded-primary bg-success-100 px-2 py-0.5 text-xs text-success-500"
+                      >
+                        <i data-feather="check-circle" height="1em" width="1em"></i>
+                        <span>Completed</span>
+                      </div>
+                      <div
+                        class="inline-flex items-center gap-1 rounded-primary bg-info-100 px-2 py-0.5 text-xs text-info-500"
+                      >
+                        <i data-feather="clock" height="1em" width="1em"></i>
+                        <span>2 minutes ago</span>
+                      </div>
+                      <div
+                        class="inline-flex items-center gap-1 rounded-primary bg-danger-100 px-2 py-0.5 text-xs text-danger-500"
+                      >
+                        <i data-feather="alert-circle" height="1em" width="1em"></i>
+                        <span>Failed</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Badge Icon Ends -->
             </div>
-            <!-- Icon Badge Ends -->
+            <!-- Badge Ends -->
           </main>
           <!-- Main Content Ends -->
 

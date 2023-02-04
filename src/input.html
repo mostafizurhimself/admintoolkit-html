@@ -44,14 +44,14 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="home"></i>
               </span>
-              <span class="sidebar-menu--text">Dashboard</span>
+              <span class="">Dashboard</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="./ecommerce.html" class="sidebar-submenu-item">Ecommerce</a>
+                <a href="/" class="sidebar-submenu-item">Ecommerce</a>
               </li>
               <li>
                 <a href="javascript:void(0);" class="sidebar-submenu-item">Analytics</a>
@@ -67,7 +67,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="mail"></i>
               </span>
-              <span class="sidebar-menu--text">Email</span>
+              <span class="">Email</span>
             </a>
           </li>
 
@@ -77,7 +77,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="file-text"></i>
               </span>
-              <span class="sidebar-menu--text">Invoice</span>
+              <span class="">Invoice</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -100,7 +100,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="shopping-bag"></i>
               </span>
-              <span class="sidebar-menu--text">Ecommerce</span>
+              <span class="">Ecommerce</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -129,7 +129,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="users"></i>
               </span>
-              <span class="sidebar-menu--text">Users</span>
+              <span class="">Users</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -151,7 +151,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="box"></i>
               </span>
-              <span class="sidebar-menu--text">Common</span>
+              <span class="">Common</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -216,7 +216,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="edit"></i>
               </span>
-              <span class="sidebar-menu--text">Forms</span>
+              <span class="">Forms</span>
               <span class="sidebar-menu-arrow rotate">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -269,7 +269,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="list"></i>
               </span>
-              <span class="sidebar-menu--text">Tables</span>
+              <span class="">Tables</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -289,7 +289,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="pie-chart"></i>
               </span>
-              <span class="sidebar-menu--text">Charts</span>
+              <span class="">Charts</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -328,7 +328,7 @@
                   <path d="M14 14h7v7h-7z"></path>
                 </svg>
               </span>
-              <span class="sidebar-menu--text">Icons</span>
+              <span class="">Icons</span>
             </a>
           </li>
           <!-- icons-->
@@ -356,7 +356,7 @@
                   <polyline points="5 20 11 4 13 4 20 20"></polyline>
                 </svg>
               </span>
-              <span class="sidebar-menu--text">Typography</span>
+              <span class="">Typography</span>
             </a>
           </li>
           <!--  all pages link  -->
@@ -367,7 +367,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="lock"></i>
               </span>
-              <span class="sidebar-menu--text">Authentication</span>
+              <span class="">Authentication</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -402,7 +402,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="grid"></i>
               </span>
-              <span class="sidebar-menu--text">Miscellaneous</span>
+              <span class="">Miscellaneous</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -928,8 +928,8 @@
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
-            <div class="flex">
-              <h1 class="text-xl font-semibold dark:text-slate-300">Inputs</h1>
+            <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+              <h5>Inputs</h5>
               <ol class="breadcrumb ml-auto">
                 <li class="breadcrumb-item"><a href="">Home</a></li>
                 <li class="breadcrumb-item"><a href="">Components</a></li>
@@ -938,93 +938,99 @@
             </div>
             <!-- Page Title Endd -->
 
-            <!-- Basic Input Starts -->
-            <div class="card mt-6">
-              <div class="card-body">
-                <h4 class="card-title">Basic Input</h4>
-                <p class="card-subtitle">You can create a input by using the<code>input</code> component</p>
-                <div class="code-viewer mt-6">
-                  <input type="text" class="input" placeholder="Basic Input" />
-                  <div class="mt-4">
-                    <input type="text" class="input" placeholder="Helper Text" />
-                    <div class="help-text mt-1">Here you can provide some helper text to fill the input</div>
+            <!-- Input Starts -->
+            <div class="space-y-6">
+              <!-- Card: Basic Input Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Basic Input</h4>
+                  <p class="card-subtitle">You can create a input by using the<code>input</code> component</p>
+                  <div class="code-viewer mt-6">
+                    <input type="text" class="input" placeholder="Basic Input" />
+                    <div class="mt-4">
+                      <input type="text" class="input" placeholder="Helper Text" />
+                      <div class="help-text mt-1">Here you can provide some helper text to fill the input</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Basic Input Ends -->
+              <!-- Card: Basic Input Ends -->
 
-            <!-- Input With Label Starts -->
-            <div class="card mt-6">
-              <div class="card-body">
-                <h4 class="card-title">Input With Label</h4>
-                <p class="card-subtitle">You can create a input with label by using the<code>Label</code> component</p>
-                <div class="code-viewer mt-6">
-                  <label for="email" class="label">
-                    <span>Email</span>
-                    <span class="ml-1 text-danger-500">*</span>
-                  </label>
-                  <input type="email" class="input mt-1" id="email" placeholder="Enter your email" />
+              <!-- Card: Input With Label Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Input With Label</h4>
+                  <p class="card-subtitle">
+                    You can create a input with label by using the<code>Label</code> component
+                  </p>
+                  <div class="code-viewer mt-6">
+                    <label for="email" class="label">
+                      <span>Email</span>
+                      <span class="ml-1 text-danger-500">*</span>
+                    </label>
+                    <input type="email" class="input mt-1" id="email" placeholder="Enter your email" />
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Input With Label Ends -->
+              <!-- Card: Input With Label Ends -->
 
-            <!-- Input Size Starts -->
-            <div class="card mt-6">
-              <div class="card-body">
-                <h4 class="card-title">Input Sizes</h4>
-                <p class="card-subtitle">
-                  Use the<code>inputSize</code> class <code>text-xs</code>, <code>text-sm</code>,
-                  <code>text-base</code>.The Default Size is <code>text-sm</code>
-                  <code>text-sm</code>
-                </p>
-                <div class="code-viewer mt-6">
-                  <input type="text" class="input input-sm leading-5 placeholder:text-xs" placeholder="Small Input" />
-                  <input type="text" class="input mt-4" placeholder="Default Input" />
-                  <input type="text" class="input input-lg mt-4" placeholder="Large Input" />
+              <!-- Card: Input Size Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Input Sizes</h4>
+                  <p class="card-subtitle">
+                    Use the<code>inputSize</code> class <code>text-xs</code>, <code>text-sm</code>,
+                    <code>text-base</code>.The Default Size is <code>text-sm</code>
+                    <code>text-sm</code>
+                  </p>
+                  <div class="code-viewer mt-6">
+                    <input type="text" class="input input-sm leading-5 placeholder:text-xs" placeholder="Small Input" />
+                    <input type="text" class="input mt-4" placeholder="Default Input" />
+                    <input type="text" class="input input-lg mt-4" placeholder="Large Input" />
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Input Size Ends -->
+              <!-- Card: Input Size Ends -->
 
-            <!-- Disabled Input Start -->
-            <div class="card mt-6">
-              <div class="card-body">
-                <h4 class="card-title">Disabled Input</h4>
-                <p class="card-subtitle">You can disable the input by using the<code>disabled</code> component</p>
-                <div class="code-viewer mt-6">
-                  <input type="text" class="input" disabled="true" placeholder="Disabled Input" />
+              <!-- Card: Disabled Input Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Disabled Input</h4>
+                  <p class="card-subtitle">You can disable the input by using the<code>disabled</code> component</p>
+                  <div class="code-viewer mt-6">
+                    <input type="text" class="input" disabled="true" placeholder="Disabled Input" />
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Disabled Input End -->
+              <!-- Card: Disabled Input Ends -->
 
-            <!-- Valid Input Starts -->
-            <div class="card mt-6">
-              <div class="card-body">
-                <h4 class="card-title">Valid Input</h4>
-                <p class="card-subtitle">Use <code>isValid</code> class create a valid input</p>
-                <div class="code-viewer mt-6">
-                  <input type="text" class="input input-valid" placeholder="Valid Input" value="John Doe" />
-                  <p class="success-message mt-1">Looks good</p>
+              <!-- Card: Valid Input Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Valid Input</h4>
+                  <p class="card-subtitle">Use <code>isValid</code> class create a valid input</p>
+                  <div class="code-viewer mt-6">
+                    <input type="text" class="input input-valid" placeholder="Valid Input" value="John Doe" />
+                    <p class="success-message mt-1">Looks good</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Valid Input Ends -->
+              <!-- Card: Valid Input Ends -->
 
-            <!-- Invalid Input Start -->
-            <div class="card mt-6">
-              <div class="card-body">
-                <h4 class="card-title">Invalid Input</h4>
-                <p class="card-subtitle">Use <code>inValid</code> create a invalid input</p>
-                <div class="code-viewer mt-6">
-                  <input type="text" class="input invalid" placeholder="Invalid Input" />
-                  <div class="error-message mt-1">This field is required</div>
+              <!-- Card: Invalid Input Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Invalid Input</h4>
+                  <p class="card-subtitle">Use <code>inValid</code> create a invalid input</p>
+                  <div class="code-viewer mt-6">
+                    <input type="text" class="input invalid" placeholder="Invalid Input" />
+                    <div class="error-message mt-1">This field is required</div>
+                  </div>
                 </div>
               </div>
+              <!-- Card: Invalid Input Ends -->
             </div>
-            <!-- Invalid Input End -->
+            <!-- Input Ends -->
           </main>
           <!-- Main Content Ends -->
 

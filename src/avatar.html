@@ -44,14 +44,14 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="home"></i>
               </span>
-              <span class="sidebar-menu--text">Dashboard</span>
+              <span class="">Dashboard</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="./ecommerce.html" class="sidebar-submenu-item">Ecommerce</a>
+                <a href="/" class="sidebar-submenu-item">Ecommerce</a>
               </li>
               <li>
                 <a href="javascript:void(0);" class="sidebar-submenu-item">Analytics</a>
@@ -67,7 +67,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="mail"></i>
               </span>
-              <span class="sidebar-menu--text">Email</span>
+              <span class="">Email</span>
             </a>
           </li>
 
@@ -77,7 +77,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="file-text"></i>
               </span>
-              <span class="sidebar-menu--text">Invoice</span>
+              <span class="">Invoice</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -100,7 +100,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="shopping-bag"></i>
               </span>
-              <span class="sidebar-menu--text">Ecommerce</span>
+              <span class="">Ecommerce</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -129,7 +129,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="users"></i>
               </span>
-              <span class="sidebar-menu--text">Users</span>
+              <span class="">Users</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -151,7 +151,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="box"></i>
               </span>
-              <span class="sidebar-menu--text">Common</span>
+              <span class="">Common</span>
               <span class="sidebar-menu-arrow rotate">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -219,7 +219,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="edit"></i>
               </span>
-              <span class="sidebar-menu--text">Forms</span>
+              <span class="">Forms</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -272,7 +272,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="list"></i>
               </span>
-              <span class="sidebar-menu--text">Tables</span>
+              <span class="">Tables</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -292,7 +292,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="pie-chart"></i>
               </span>
-              <span class="sidebar-menu--text">Charts</span>
+              <span class="">Charts</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -331,7 +331,7 @@
                   <path d="M14 14h7v7h-7z"></path>
                 </svg>
               </span>
-              <span class="sidebar-menu--text">Icons</span>
+              <span class="">Icons</span>
             </a>
           </li>
           <!-- icons-->
@@ -359,7 +359,7 @@
                   <polyline points="5 20 11 4 13 4 20 20"></polyline>
                 </svg>
               </span>
-              <span class="sidebar-menu--text">Typography</span>
+              <span class="">Typography</span>
             </a>
           </li>
           <!--  all pages link  -->
@@ -370,7 +370,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="lock"></i>
               </span>
-              <span class="sidebar-menu--text">Authentication</span>
+              <span class="">Authentication</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -405,7 +405,7 @@
               <span class="sidebar-menu-icon">
                 <i data-feather="grid"></i>
               </span>
-              <span class="sidebar-menu--text">Miscellaneous</span>
+              <span class="">Miscellaneous</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
@@ -930,8 +930,8 @@
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
-            <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h1 class="text-xl font-semibold dark:text-slate-300">Avatar</h1>
+            <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+              <h5>Avatar</h5>
 
               <ol class="breadcrumb ml-auto">
                 <li class="breadcrumb-item">
@@ -949,144 +949,217 @@
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Avatar Shapes Starts -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Avatar Shapes</h4>
+            <!-- Avatar Starts -->
+            <div class="space-y-6">
+              <!-- Card: Avatar Shape Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Avatar Shapes</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use <code>.avatar-square</code>, <code>.avatar-rounded</code> and <code>.avatar-circle</code> to
                     shape avatars. Default is <code>.avatar-square</code>
                   </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex flex-wrap items-center gap-6">
-                        <div class="avatar avatar-square">
-                          <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
-                        </div>
-                        <div class="avatar avatar-rounded">
-                          <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 2" />
-                        </div>
-                        <div class="avatar avatar-circle">
-                          <img class="avatar-img" src="./images/women-avatar-01.jpg" alt="Avatar 3" />
-                        </div>
+                  <div class="code-viewer">
+                    <div class="flex flex-wrap items-center gap-6">
+                      <div class="avatar avatar-square">
+                        <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
+                      </div>
+                      <div class="avatar avatar-rounded">
+                        <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 2" />
+                      </div>
+                      <div class="avatar avatar-circle">
+                        <img class="avatar-img" src="./images/women-avatar-01.jpg" alt="Avatar 3" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Avatar Shapes Ends -->
+              <!-- Card: Avatar Shape Ends -->
 
-            <!-- Avatar Size Starts -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Avatar Sizes</h4>
+              <!-- Card: Avatar Size Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Avatar Sizes</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
                     Default is <code>.avatar-md</code>
                   </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex flex-wrap items-center gap-6">
-                        <div class="avatar avatar-circle avatar-xs">
-                          <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
-                        </div>
-                        <div class="avatar avatar-circle avatar-sm">
-                          <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 1" />
-                        </div>
-                        <div class="avatar avatar-circle avatar-md">
-                          <img class="avatar-img" src="./images/men-avatar-03.jpg" alt="Avatar 2" />
-                        </div>
-                        <div class="avatar avatar-circle avatar-lg">
-                          <img class="avatar-img" src="./images/men-avatar-04.jpg" alt="Avatar 3" />
-                        </div>
-                        <div class="avatar avatar-circle avatar-xl">
-                          <img class="avatar-img" src="./images/women-avatar-01.jpg" alt="Avatar 1" />
-                        </div>
+                  <div class="code-viewer">
+                    <div class="flex flex-wrap items-center gap-6">
+                      <div class="avatar avatar-circle avatar-xs">
+                        <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
+                      </div>
+                      <div class="avatar avatar-circle avatar-sm">
+                        <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 1" />
+                      </div>
+                      <div class="avatar avatar-circle avatar-md">
+                        <img class="avatar-img" src="./images/men-avatar-03.jpg" alt="Avatar 2" />
+                      </div>
+                      <div class="avatar avatar-circle avatar-lg">
+                        <img class="avatar-img" src="./images/men-avatar-04.jpg" alt="Avatar 3" />
+                      </div>
+                      <div class="avatar avatar-circle avatar-xl">
+                        <img class="avatar-img" src="./images/women-avatar-01.jpg" alt="Avatar 1" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Avatar Size Ends -->
+              <!-- Card: Avatar Size Ends -->
 
-            <!-- Avatar With Placeholder Icons Starts -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Avatar With Placeholder Icons</h4>
+              <!-- Card: Avatar With Placeholder Icon Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Avatar With Placeholder Icons</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
                     Default is <code>.avatar-md</code>
                   </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
+                  <div class="code-viewer">
+                    <div class="flex flex-wrap items-center gap-6">
+                      <div class="avatar avatar-square">
+                        <span class="avatar-icon">
+                          <i data-feather="user"></i>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-rounded">
+                        <span class="avatar-icon">
+                          <i data-feather="user"></i>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle">
+                        <span class="avatar-icon">
+                          <i data-feather="user"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Avatar With Placeholder Icon Ends -->
+
+              <!-- Card: Avatar With Placeholder Text Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Avatar With Placeholder Text</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
+                    Default is <code>.avatar-md</code>
+                  </p>
+
+                  <div class="code-viewer">
+                    <div class="flex flex-wrap items-center gap-6">
+                      <div class="avatar avatar-square">
+                        <span class="avatar-text">
+                          <span>AB</span>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-rounded">
+                        <span class="avatar-text">
+                          <span>AB</span>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle">
+                        <span class="avatar-text">
+                          <span>AB</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Avatar With Placeholder Text Ends -->
+
+              <!-- Card: Avatar With Theme Color Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Avatar With Theme Color</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
+                    Default is <code>.avatar-md</code>
+                  </p>
+
+                  <div class="code-viewer">
+                    <div class="flex flex-col justify-center gap-6">
+                      <!-- Icon Avatars -->
                       <div class="flex flex-wrap items-center gap-6">
-                        <div class="avatar avatar-square">
+                        <div class="avatar avatar-circle avatar-primary">
                           <span class="avatar-icon">
                             <i data-feather="user"></i>
                           </span>
                         </div>
-                        <div class="avatar avatar-rounded">
+                        <div class="avatar avatar-circle avatar-secondary">
                           <span class="avatar-icon">
                             <i data-feather="user"></i>
                           </span>
                         </div>
-                        <div class="avatar avatar-circle">
+                        <div class="avatar avatar-circle avatar-success">
+                          <span class="avatar-icon">
+                            <i data-feather="user"></i>
+                          </span>
+                        </div>
+                        <div class="avatar avatar-circle avatar-danger">
+                          <span class="avatar-icon">
+                            <i data-feather="user"></i>
+                          </span>
+                        </div>
+                        <div class="avatar avatar-circle avatar-warning">
+                          <span class="avatar-icon">
+                            <i data-feather="user"></i>
+                          </span>
+                        </div>
+                        <div class="avatar avatar-circle avatar-info">
+                          <span class="avatar-icon">
+                            <i data-feather="user"></i>
+                          </span>
+                        </div>
+                        <div class="avatar avatar-circle avatar-dark">
                           <span class="avatar-icon">
                             <i data-feather="user"></i>
                           </span>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Avatar With Placeholder Icons Ends -->
-
-            <!-- Avatar With Placeholder Text Starts -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Avatar With Placeholder Text</h4>
-
-                  <p class="text-sm text-slate-400">
-                    Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
-                    Default is <code>.avatar-md</code>
-                  </p>
-
-                  <div class="mt-4">
-                    <div class="code-viewer">
+                      <!-- Text Avatars -->
                       <div class="flex flex-wrap items-center gap-6">
-                        <div class="avatar avatar-square">
+                        <div class="avatar avatar-circle avatar-primary">
                           <span class="avatar-text">
                             <span>AB</span>
                           </span>
                         </div>
-                        <div class="avatar avatar-rounded">
+                        <div class="avatar avatar-circle avatar-secondary">
                           <span class="avatar-text">
                             <span>AB</span>
                           </span>
                         </div>
-                        <div class="avatar avatar-circle">
+                        <div class="avatar avatar-circle avatar-success">
+                          <span class="avatar-text">
+                            <span>AB</span>
+                          </span>
+                        </div>
+                        <div class="avatar avatar-circle avatar-danger">
+                          <span class="avatar-text">
+                            <span>AB</span>
+                          </span>
+                        </div>
+                        <div class="avatar avatar-circle avatar-warning">
+                          <span class="avatar-text">
+                            <span>AB</span>
+                          </span>
+                        </div>
+                        <div class="avatar avatar-circle avatar-info">
+                          <span class="avatar-text">
+                            <span>AB</span>
+                          </span>
+                        </div>
+                        <div class="avatar avatar-circle avatar-dark">
                           <span class="avatar-text">
                             <span>AB</span>
                           </span>
@@ -1096,188 +1169,77 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Avatar With Placeholder Text Ends -->
+              <!-- Card: Avatar With Theme Color Ends -->
 
-            <!-- Avatar With Theme Color Starts -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Avatar With Theme Color</h4>
+              <!-- Card: Avatar With Status Indicator Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Avatar With Status Indicator</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
                     Default is <code>.avatar-md</code>
                   </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex flex-col justify-center gap-6">
-                        <!-- Icon Avatars -->
-                        <div class="flex flex-wrap items-center gap-6">
-                          <div class="avatar avatar-circle avatar-primary">
-                            <span class="avatar-icon">
-                              <i data-feather="user"></i>
-                            </span>
-                          </div>
-                          <div class="avatar avatar-circle avatar-secondary">
-                            <span class="avatar-icon">
-                              <i data-feather="user"></i>
-                            </span>
-                          </div>
-                          <div class="avatar avatar-circle avatar-success">
-                            <span class="avatar-icon">
-                              <i data-feather="user"></i>
-                            </span>
-                          </div>
-                          <div class="avatar avatar-circle avatar-danger">
-                            <span class="avatar-icon">
-                              <i data-feather="user"></i>
-                            </span>
-                          </div>
-                          <div class="avatar avatar-circle avatar-warning">
-                            <span class="avatar-icon">
-                              <i data-feather="user"></i>
-                            </span>
-                          </div>
-                          <div class="avatar avatar-circle avatar-info">
-                            <span class="avatar-icon">
-                              <i data-feather="user"></i>
-                            </span>
-                          </div>
-                          <div class="avatar avatar-circle avatar-dark">
-                            <span class="avatar-icon">
-                              <i data-feather="user"></i>
-                            </span>
-                          </div>
-                        </div>
-                        <!-- Text Avatars -->
-                        <div class="flex flex-wrap items-center gap-6">
-                          <div class="avatar avatar-circle avatar-primary">
-                            <span class="avatar-text">
-                              <span>AB</span>
-                            </span>
-                          </div>
-                          <div class="avatar avatar-circle avatar-secondary">
-                            <span class="avatar-text">
-                              <span>AB</span>
-                            </span>
-                          </div>
-                          <div class="avatar avatar-circle avatar-success">
-                            <span class="avatar-text">
-                              <span>AB</span>
-                            </span>
-                          </div>
-                          <div class="avatar avatar-circle avatar-danger">
-                            <span class="avatar-text">
-                              <span>AB</span>
-                            </span>
-                          </div>
-                          <div class="avatar avatar-circle avatar-warning">
-                            <span class="avatar-text">
-                              <span>AB</span>
-                            </span>
-                          </div>
-                          <div class="avatar avatar-circle avatar-info">
-                            <span class="avatar-text">
-                              <span>AB</span>
-                            </span>
-                          </div>
-                          <div class="avatar avatar-circle avatar-dark">
-                            <span class="avatar-text">
-                              <span>AB</span>
-                            </span>
-                          </div>
-                        </div>
+                  <div class="code-viewer">
+                    <div class="flex gap-6">
+                      <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                        <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
+                      </div>
+                      <div class="avatar avatar-circle avatar-indicator avatar-indicator-offline">
+                        <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 1" />
+                      </div>
+                      <div class="avatar avatar-circle avatar-indicator avatar-indicator-top avatar-indicator-busy">
+                        <img class="avatar-img" src="./images/men-avatar-03.jpg" alt="Avatar 1" />
+                      </div>
+                      <div class="avatar avatar-circle avatar-indicator avatar-indicator-top avatar-indicator-away">
+                        <img class="avatar-img" src="./images/men-avatar-04.jpg" alt="Avatar 1" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Avatar With Theme Color Ends -->
+              <!-- Card: Avatar With Status Indicator Ends -->
 
-            <!-- Avatar With Status Indicator Starts -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Avatar With Status Indicator</h4>
+              <!-- Card: Avatar Group Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Avatar Group</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
                     Default is <code>.avatar-md</code>
                   </p>
 
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="flex gap-6">
-                        <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
-                          <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
-                        </div>
-                        <div class="avatar avatar-circle avatar-indicator avatar-indicator-offline">
-                          <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 1" />
-                        </div>
-                        <div class="avatar avatar-circle avatar-indicator avatar-indicator-top avatar-indicator-busy">
-                          <img class="avatar-img" src="./images/men-avatar-03.jpg" alt="Avatar 1" />
-                        </div>
-                        <div class="avatar avatar-circle avatar-indicator avatar-indicator-top avatar-indicator-away">
-                          <img class="avatar-img" src="./images/men-avatar-04.jpg" alt="Avatar 1" />
-                        </div>
+                  <div class="code-viewer">
+                    <div class="avatar-group">
+                      <div class="avatar avatar-circle avatar-md">
+                        <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
+                      </div>
+                      <div class="avatar avatar-circle avatar-md">
+                        <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 1" />
+                      </div>
+                      <div class="avatar avatar-circle avatar-md">
+                        <img class="avatar-img" src="./images/men-avatar-03.jpg" alt="Avatar 2" />
+                      </div>
+                      <div class="avatar avatar-circle avatar-md">
+                        <img class="avatar-img" src="./images/men-avatar-04.jpg" alt="Avatar 3" />
+                      </div>
+                      <div class="avatar avatar-circle avatar-md">
+                        <img class="avatar-img" src="./images/women-avatar-01.jpg" alt="Avatar 1" />
+                      </div>
+                      <div class="avatar avatar-circle">
+                        <span class="avatar-text">
+                          <span>2+</span>
+                        </span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- Card: Avatar Group Ends -->
             </div>
-            <!-- Avatar With Status Indicator Ends -->
-
-            <!-- Avatar Group Starts -->
-            <div class="mt-6 space-y-6">
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Avatar Group</h4>
-
-                  <p class="text-sm text-slate-400">
-                    Use <code>.avatar-sm</code>, <code>.avatar-md</code> and <code>.avatar-lg</code> to size avatars.
-                    Default is <code>.avatar-md</code>
-                  </p>
-
-                  <div class="mt-4">
-                    <div class="code-viewer">
-                      <div class="avatar-group">
-                        <div class="avatar avatar-circle avatar-md">
-                          <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
-                        </div>
-                        <div class="avatar avatar-circle avatar-md">
-                          <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 1" />
-                        </div>
-                        <div class="avatar avatar-circle avatar-md">
-                          <img class="avatar-img" src="./images/men-avatar-03.jpg" alt="Avatar 2" />
-                        </div>
-                        <div class="avatar avatar-circle avatar-md">
-                          <img class="avatar-img" src="./images/men-avatar-04.jpg" alt="Avatar 3" />
-                        </div>
-                        <div class="avatar avatar-circle avatar-md">
-                          <img class="avatar-img" src="./images/women-avatar-01.jpg" alt="Avatar 1" />
-                        </div>
-                        <div class="avatar avatar-circle">
-                          <span class="avatar-text">
-                            <span>2+</span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Avatar Group Ends -->
+            <!-- Avatar Ends -->
           </main>
           <!-- Main Content Ends -->
 
