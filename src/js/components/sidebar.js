@@ -15,6 +15,8 @@ const sidebar = {
   },
 
   initMenuItems() {
+    const currentPath = window.location.pathname;
+
     if (this.menuItems.length) {
       this.menuItems.forEach((menuItem) => {
         const parent = menuItem.parentElement;

@@ -91,11 +91,11 @@
       @apply text-primary-500 dark:text-slate-200;
     }
 
-    #{$sidebar}.collapsed &--text {
+    #{$sidebar}.collapsed &-text {
       @apply hidden;
     }
 
-    #{$sidebar}.collapsed.hovered &--text {
+    #{$sidebar}.collapsed.hovered &-text {
       @apply block;
     }
 
