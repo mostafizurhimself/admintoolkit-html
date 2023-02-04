@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modal - Admin Toolkit</title>
+  <title>Progress Bar - Admin Toolkit</title>
   <link rel="stylesheet" href="./css/app.css" />
 </head>
 
@@ -31,9 +31,9 @@
             <span class="font-bold text-slate-800 dark:text-slate-200">Admin</span>
             <span class="font-semibold text-primary-500">Toolkit</span>
           </h1>
+
+          <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
         </div>
-        <!-- Wrapper Ends -->
-        <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
       </div>
       <!-- Sidebar Header Ends -->
 
@@ -169,10 +169,10 @@
               <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
             </li>
             <li>
-              <a href="./button.html" class="sidebar-submenu-item ">Button</a>
+              <a href="./button.html" class="sidebar-submenu-item">Button</a>
             </li>
             <li>
-              <a href="./modal.html" class="sidebar-submenu-item active">Modal</a>
+              <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
             </li>
             <li>
               <a href="./card.html" class="sidebar-submenu-item">Card</a>
@@ -184,7 +184,7 @@
               <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
             </li>
             <li>
-              <a href="./progressbar.html" class="sidebar-submenu-item">Progress</a>
+              <a href="./progress-bar.html" class="sidebar-submenu-item active">Progress</a>
             </li>
             <li>
               <a href="#" class="sidebar-submenu-item">Carousel</a>
@@ -775,225 +775,52 @@
             </div>
             <!-- Profile Dropdown Ends -->
           </div>
+          <!-- Header Options Ends -->
         </div>
       </header>
       <!-- Header Ends -->
 
-      <!-- Page Content Starts -->
-      <div class="content">
-        <!-- Main Content Starts -->
-        <main class="flex-grow p-6">
-          <!-- Page Title Starts -->
-          <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-            <h1 class="text-xl font-semibold dark:text-slate-300">Modals</h1>
+        <!-- Page Content Starts -->
+        <div class="content">
+          <!-- Main Content Starts -->
+          <main class="flex-grow p-6">
+            <!-- Page Title Starts -->
+            <div class="flex items-center justify-between mb-6">
+              <h3>Progress</h3>
 
-            <ol class="breadcrumb ml-auto">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#">Home</a>
+                </li>
+
               <li class="breadcrumb-item">
-                <a href="./index.html">Home</a>
+                <a href="#">Components</a>
               </li>
 
               <li class="breadcrumb-item">
-                <a href="./alert.html">Components</a>
-              </li>
-
-              <li class="breadcrumb-item">
-                <a href="#">Modal</a>
+                <a href="#">Progress</a>
               </li>
             </ol>
           </div>
           <!-- Page Title Ends -->
 
-          <!-- Basic Modal Stars -->
+          <!-- Basic Progress Bar Stars -->
           <div class="mt-6 space-y-6">
             <div
               class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800">
               <div class="p-6">
-                <h4 class="text-lg font-semibold">Basic Modal</h4>
-
-                <p class="text-sm text-slate-400">Basic usage of <code>Modal</code> component</p>
-
-                <div class="mt-4">
-                  <div class="code-viewer">
-                    <button type="button" class="btn btn-primary btn-md" data-component-trigger="modal"
-                      data-component-id="#modal-basic">
-                      Open Basic Modal
-                    </button>
-
-                    <div class="modal" id="modal-basic">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h2 class="text-base font-semibold">Basic Modal</h2>
-                              <button type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal">
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
-                              eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
-                              tenetur laudantium ex obcaecati, porro doloribus cumque.
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-md btn-primary" data-component-dismisss="modal">
-                                Done
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Basic Modal Ends -->
-
-          <!-- Modal Sizes Stars -->
-          <div class="mt-6 space-y-6">
-            <div
-              class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800">
-              <div class="p-6">
-                <h4 class="text-lg font-semibold">Modal Sizes</h4>
+                <h4 class="text-lg font-semibold">Basic Progress Bar</h4>
 
                 <p class="text-sm text-slate-400">
-                  Use <code>size</code> prop to change the size of the modal. Available sizes are <code>sm</code>,
-                  <code>md</code>, <code>lg</code>. Default size is <code>md</code>. You can also set a custom
-                  <code>max-width</code> class in <code>.modal-dialog</code>
+                  You can use the <code>Checkbox</code> component to render a checkbox input.
                 </p>
 
                 <div class="mt-4">
                   <div class="code-viewer">
-                    <div class="flex flex-wrap gap-2">
-                      <button type="button" class="btn btn-primary btn-md" data-component-trigger="modal"
-                        data-component-id="#modal-small">
-                        Small Modal
-                      </button>
-                      <button type="button" class="btn btn-primary btn-md" data-component-trigger="modal"
-                        data-component-id="#modal-large">
-                        Large Modal
-                      </button>
-                      <button type="button" class="btn btn-primary btn-md" data-component-trigger="modal"
-                        data-component-id="#modal-custom-size">
-                        Custom Size Modal
-                      </button>
-                    </div>
-
-                    <!-- Small Modal -->
-                    <div class="modal modal-sm" id="modal-small">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h2 class="text-base font-semibold">Basic Modal</h2>
-                              <button type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal">
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
-                              eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
-                              tenetur laudantium ex obcaecati, porro doloribus cumque.
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-md btn-primary" data-component-dismisss="modal">
-                                Done
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Large Modal -->
-                    <div class="modal modal-lg" id="modal-large">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h2 class="text-base font-semibold">Basic Modal</h2>
-                              <button type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal">
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
-                              eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
-                              tenetur laudantium ex obcaecati, porro doloribus cumque.
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-md btn-primary" data-component-dismisss="modal">
-                                Done
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Custom Size Modal -->
-                    <div class="modal" id="modal-custom-size">
-                      <div class="modal-dialog max-w-5xl">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h2 class="text-base font-semibold">Basic Modal</h2>
-                              <button type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal">
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
-                              eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
-                              tenetur laudantium ex obcaecati, porro doloribus cumque.
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-md btn-primary" data-component-dismisss="modal">
-                                Done
-                              </button>
-                            </div>
-                          </div>
+                    <div class="progress" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-line">
+                        <div class="progress-line-track">
+                          <div class="progress-line-thumb" style="width: 10%"></div>
                         </div>
                       </div>
                     </div>
@@ -1001,301 +828,597 @@
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Modal Sizes Endss -->
+            <!-- Page Title Ends -->
+            
+            <!-- Progressbar Starts -->
+            <div class="space-y-6">
+                <!-- Card: Basic Progressbar Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Basic Progress Bar</h4>
 
-          <!-- Full Screen Modal Stars -->
-          <div class="mt-6 space-y-6">
-            <div
-              class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800">
-              <div class="p-6">
-                <h4 class="text-lg font-semibold">Fullscreen Modal</h4>
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
 
-                <p class="text-sm text-slate-400">
-                  Use <code>fullScreen</code> prop to open modal in fullscreen mode.
-                </p>
-
-                <div class="mt-4">
-                  <div class="code-viewer">
-                    <button type="button" class="btn btn-primary btn-md" data-component-trigger="modal"
-                      data-component-id="#modal-full-screen">
-                      Open Full Screen Modal
-                    </button>
-
-                    <div class="modal modal-full" id="modal-full-screen">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h2 class="text-base font-semibold">Full Screen Modal</h2>
-                              <button type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal">
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
-                              eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
-                              tenetur laudantium ex obcaecati, porro doloribus cumque.
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-md btn-primary" data-component-dismisss="modal">
-                                Done
-                              </button>
+                      <div class="code-viewer mt-4">
+                        <div class="progress" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-line">
+                            <div class="progress-line-track">
+                              <div class="progress-line-thumb" style="width: 10%"></div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- Full Screen Modal Ends -->
+                <!-- Card: Basic Progressbar Ends -->
 
-          <!-- Centered Modal Stars -->
-          <div class="mt-6 space-y-6">
-            <div
-              class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800">
-              <div class="p-6">
-                <h4 class="text-lg font-semibold">Centered Modal</h4>
+                <!-- Card: Progressbar With Label Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Progress Bar With Label</h4>
 
-                <p class="text-sm text-slate-400">Use <code>centered</code> prop to center the modal</p>
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
 
-                <div class="mt-4">
-                  <div class="code-viewer">
-                    <button type="button" class="btn btn-primary btn-md" data-component-trigger="modal"
-                      data-component-id="#modal-centered">
-                      Open Centered Modal
-                    </button>
+                      <div class="code-viewer mt-4">
+                        <div class="progress" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-line">
+                            <div class="progress-line-track">
+                              <div class="progress-line-thumb" style="width: 15%"></div>
+                            </div>
+                            <span class="progress-line-label">15%</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Card: Progressbar With Label Ends -->
 
-                    <div class="modal modal-centered" id="modal-centered">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h2 class="text-base font-semibold">Centered Modal</h2>
-                              <button type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal">
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
+                <!-- Card: Progressbar Size Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Progress Bar Sizes</h4>
+
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+
+                      <div class="code-viewer mt-4">
+                        <div class="flex flex-col gap-6">
+                          <div
+                            class="progress progress-sm"
+                            role="progressbar"
+                            aria-valuenow="10"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 10%"></div>
+                              </div>
                             </div>
                           </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
-                              eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
-                              tenetur laudantium ex obcaecati, porro doloribus cumque.
-                            </p>
+                          <div
+                            class="progress progress-md"
+                            role="progressbar"
+                            aria-valuenow="15"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 15%"></div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-md btn-primary" data-component-dismisss="modal">
-                                Done
-                              </button>
+                          <div
+                            class="progress progress-lg"
+                            role="progressbar"
+                            aria-valuenow="20"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 20%"></div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- Centered Modal Ends -->
+                <!-- Card: Progressbar Size Ends -->
 
-          <!-- Scrollable Modal Stars -->
-          <div class="mt-6 space-y-6">
-            <div
-              class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800">
-              <div class="p-6">
-                <h4 class="text-lg font-semibold">Scrollable Modal</h4>
+                <!-- Card: Striped Progressbar Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Striped Progress Bar</h4>
 
-                <p class="text-sm text-slate-400">
-                  Add a <code>.h-*(e.g: h-96)</code> class in <code>.modal-body</code> to make it scrollable.
-                </p>
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
 
-                <div class="mt-4">
-                  <div class="code-viewer">
-                    <button type="button" class="btn btn-primary btn-md" data-component-trigger="modal"
-                      data-component-id="#modal-scrollable">
-                      Open Scrollable Modal
-                    </button>
-
-                    <div class="modal" id="modal-scrollable">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h2 class="text-base font-semibold">Scrollable Modal</h2>
-                              <button type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal">
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="modal-body h-96">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus illum sapiente veniam
-                              rerum, sunt eius fuga! Quod in eum recusandae officiis quos, dolorum molestias
-                              aspernatur consequuntur cum quas. Totam iusto quas ex delectus alias quaerat beatae
-                              placeat magnam vero? Provident rerum asperiores ipsa aut exercitationem eius ea deleniti
-                              voluptas doloremque! Quasi doloremque ex veritatis ipsum, consequuntur ipsam nihil
-                              repudiandae, iure quisquam expedita ducimus repellat, nesciunt reprehenderit tenetur
-                              repellendus exercitationem eaque itaque laborum. Officiis eveniet soluta hic, culpa
-                              autem, deleniti facere nihil aliquam aut voluptas perferendis repellat dolore excepturi.
-                              Labore porro, ex fuga atque sed odit, corporis iure repellendus facere nam aliquid
-                              quisquam dolorem. Provident molestias voluptatibus cupiditate hic, ex, illum ullam rem
-                              quos similique porro quam earum! Dolor eum dolorem natus. Fugiat enim harum asperiores!
-                              Libero illo, doloremque ad similique minima ullam inventore dicta architecto doloribus
-                              ut dignissimos odio quibusdam molestias? Deserunt ratione tenetur nesciunt facilis
-                              molestias maiores obcaecati nobis iure ad? Dignissimos consequuntur libero nesciunt a,
-                              quam nihil et, quis nisi sunt iure dolorem excepturi illum autem animi rerum, laborum
-                              vero totam placeat ullam numquam est fuga. Reprehenderit beatae, deleniti tempore atque
-                              aperiam doloremque fugiat debitis officiis ratione aliquid, asperiores, sequi modi ut
-                              voluptate tempora similique dolores incidunt provident distinctio nihil! Tenetur, aut
-                              deleniti natus ipsam consectetur veniam, quos reprehenderit culpa, nesciunt eum
-                              mollitia. Facere quidem nostrum dicta rerum ab voluptates repudiandae soluta impedit
-                              eligendi necessitatibus laboriosam provident, fugit quibusdam veritatis eius, ipsam aut
-                              optio dolor laudantium omnis. Voluptates molestias fuga adipisci fugit sint magnam id
-                              animi in ex, est maxime fugiat non eos vel ad! Repellendus sit veniam voluptate earum
-                              laudantium quod aliquam error omnis. Blanditiis aut perferendis, voluptatum odio tempora
-                              adipisci corporis repellendus molestiae. Aliquam deserunt est, quos similique nam ex.
-                              Ipsam quos corrupti doloremque ut nisi, quasi et dolore nemo quidem eveniet dicta
-                              tenetur voluptatem ratione?
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-md btn-primary" data-component-dismisss="modal">
-                                Done
-                              </button>
+                      <div class="code-viewer mt-4">
+                        <div
+                          class="progress progress-striped"
+                          role="progressbar"
+                          aria-valuenow="30"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div class="progress-line">
+                            <div class="progress-line-track">
+                              <div class="progress-line-thumb" style="width: 30%"></div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- Scrollable Modal Ends -->
+                <!-- Card: Striped Progressbar Ends -->
 
-          <!-- Scrollable Modal Stars -->
-          <div class="mt-6 space-y-6">
-            <div
-              class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800">
-              <div class="p-6">
-                <h4 class="text-lg font-semibold">Disabled Backdrop Click</h4>
+                <!-- Card: Animated Striped Progressbar Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Animated Striped Progress Bar</h4>
 
-                <p class="text-sm text-slate-400">
-                  Use <code>disableBackdropClick</code> prop to prevent closing modal when backdrop is clicked.
-                </p>
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
 
-                <div class="mt-4">
-                  <div class="code-viewer">
-                    <button type="button" class="btn btn-primary btn-md" data-component-trigger="modal"
-                      data-component-id="#modal-backdrop">
-                      Open Modal
-                    </button>
-
-                    <div class="modal" id="modal-backdrop" data-component-backdrop="false">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h2 class="text-base font-semibold">Disabled Backdrop Click</h2>
-                              <button type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-component-dismisss="modal">
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ducimus distinctio
-                              recusandae vitae, in ullam, sapiente praesentium nam architecto fugiat dolor alias
-                              voluptatum, nemo necessitatibus veniam quis obcaecati. Mollitia, eaque.
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary"
-                                data-component-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-md btn-primary" data-component-dismisss="modal">
-                                Done
-                              </button>
+                      <div class="code-viewer mt-4">
+                        <div
+                          class="progress progress-striped progress-animated"
+                          role="progressbar"
+                          aria-valuenow="30"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div class="progress-line">
+                            <div class="progress-line-track">
+                              <div class="progress-line-thumb" style="width: 30%"></div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                   </div>
                 </div>
-              </div>
+                <!-- Card: Animated Striped Progressbar Ends -->
+
+                <!-- Card: Progressbar Color Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Progress Bar colors</h4>
+
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+
+                      <div class="code-viewer mt-4">
+                        <div class="flex flex-col gap-6">
+                          <div
+                            class="progress progress-primary"
+                            role="progressbar"
+                            aria-valuenow="10"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 10%"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-secondary"
+                            role="progressbar"
+                            aria-valuenow="20"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 20%"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-success"
+                            role="progressbar"
+                            aria-valuenow="30"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 30%"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-danger"
+                            role="progressbar"
+                            aria-valuenow="40"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 40%"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-warning"
+                            role="progressbar"
+                            aria-valuenow="50"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 50%"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-info"
+                            role="progressbar"
+                            aria-valuenow="60"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 60%"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-dark"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 70%"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Card: Progressbar Color Ends -->
+
+                <!-- Card: Step Progressbar Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Step Progress Bar</h4>
+
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+                      
+                      <div class="code-viewer mt-4">
+                        <div class="progress" role="progressbar">
+                          <div class="progress-step">
+                            <button class="progress-step-btn progress-step-btn-complete" type="button">1</button>
+                            <div class="progress-step-line"></div>
+                            <button class="progress-step-btn progress-step-btn-complete" type="button">2</button>
+                            <div class="progress-step-line"></div>
+                            <button class="progress-step-btn progress-step-btn-active" type="button">3</button>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Card: Step Progressbar Ends -->
+                
+                <!-- Card: Circle Progressbar Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Circle Progress Bar</h4>
+
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+                      
+                      <div class="code-viewer mt-4">
+                        <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-circle">
+                            <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                              <circle cx="70" cy="70" r="70"></circle>
+                              <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                              <circle
+                                cx="70"
+                                cy="70"
+                                r="70"
+                                style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1);"
+                              ></circle>
+                            </svg>
+                            <span class="progress-circle-label">70%</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Card: Circle Progressbar Ends -->
+
+                <!-- Card: Circle Progressbar Size Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Circle Progress Bar Sizes</h4>
+
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+                      
+                      <div class="code-viewer mt-4">
+                        <div class="flex items-center gap-6">
+                            <div
+                              class="progress progress-sm"
+                              role="progressbar"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            >
+                              <div class="progress-circle">
+                                <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                  <circle cx="70" cy="70" r="70"></circle>
+                                  <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                  <circle
+                                    cx="70"
+                                    cy="70"
+                                    r="70"
+                                    style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                  ></circle>
+                                </svg>
+                                <span class="progress-circle-label">70%</span>
+                              </div>
+                            </div>
+                            <div
+                              class="progress progress-md"
+                              role="progressbar"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            >
+                              <div class="progress-circle">
+                                <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                  <circle cx="70" cy="70" r="70"></circle>
+                                  <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                  <circle
+                                    cx="70"
+                                    cy="70"
+                                    r="70"
+                                    style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                  ></circle>
+                                </svg>
+                                <span class="progress-circle-label">70%</span>
+                              </div>
+                            </div>
+                            <div
+                              class="progress progress-lg"
+                              role="progressbar"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            >
+                              <div class="progress-circle">
+                                <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                  <circle cx="70" cy="70" r="70"></circle>
+                                  <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                  <circle
+                                    cx="70"
+                                    cy="70"
+                                    r="70"
+                                    style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                  ></circle>
+                                </svg>
+                                <span class="progress-circle-label">70%</span>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Card: Circle Progressbar Size Ends -->
+
+                <!-- Card: Circle Progressbar Color Starts -->
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Circle Progress Bar Colors</h4>
+
+                      <p class="card-subtitle">
+                        You can use the <code>Checkbox</code> component to render a checkbox input.
+                      </p>
+                    
+                      <div class="code-viewer mt-4">
+                        <div class="flex items-center gap-6">
+                          <div
+                            class="progress progress-primary"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-secondary"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-success"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-danger"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-warning"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-info"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                          <div
+                            class="progress progress-dark"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div class="progress-circle">
+                              <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                                <circle
+                                  cx="70"
+                                  cy="70"
+                                  r="70"
+                                  style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                                ></circle>
+                              </svg>
+                              <span class="progress-circle-label">70%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Card: Circle Progressbar Color Ends -->
             </div>
-          </div>
-          <!-- Scrollable Modal Ends -->
-        </main>
-        <!-- Main Content Ends -->
+            <!-- Progressbar Ends -->
+          </main>
+          <!-- Main Content Ends -->
 
-        <!-- Footer Starts -->
-        <footer class="footer">
-          <p class="text-sm">
-            Copyright © 2023 <a class="text-primary-500 hover:underline" href="https://bdlancers.com">Bdlancers</a>,
-            All right Reserved
-          </p>
+          <!-- Footer Starts -->
+          <footer class="footer">
+            <p class="text-sm">
+              Copyright © 2023 <a class="text-primary-500 hover:underline" href="https://bdlancers.com">Bdlancers</a>,
+              All right Reserved
+            </p>
 
-          <p class="flex items-center gap-1 text-sm">
-            Hand-crafted &amp; Made with <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
-          </p>
-        </footer>
-        <!-- Footer Ends -->
+            <p class="flex items-center gap-1 text-sm">
+              Hand-crafted &amp; Made with <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
+            </p>
+          </footer>
+          <!-- Footer Ends -->
+        </div>
+        <!-- Page Content Ends -->
       </div>
       <!-- Page Content Ends -->
     </div>
-    <script src="./js/app.js"></script>
-    <script>
-        const modalControlledToggle = document.querySelector('#modal-controlled-toggle');
-        
-        if(modalControlledToggle) {
+    <!-- Wrapper Ends -->
+  </div>
+  <script src="./js/app.js"></script>
+</body>
 
-          modalControlledToggle.addEventListener('click', () => {
-
-            const modalControlled = createModal('#modal-controlled', {
-              backdrop: true,
-              keyboard: true,
-            });
-
-            modalControlled.show();
-            
-          });
-        }
-    </script>
-  </body>
 </html>

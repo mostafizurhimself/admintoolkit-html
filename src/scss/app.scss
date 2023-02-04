@@ -5,6 +5,7 @@
 // Base
 @import 'fonts';
 @import 'base';
+@import 'typography';
 @import 'utilities';
 @import 'sidebar';
 @import 'wrapper';
@@ -19,13 +20,13 @@
 @import 'components/dropdown';
 @import 'components/accordion';
 @import 'components/badge';
-@import 'components/input.scss';
+@import 'components/input';
 @import 'components/textarea';
-@import 'components/alert.scss';
-@import 'components/radio.scss';
-@import 'components/checkbox.scss';
+@import 'components/alert';
+@import 'components/radio';
+@import 'components/checkbox';
 @import 'components/modal';
 @import 'components/pagination';
 @import 'components/avatar';
 @import 'components/progressbar';
-@import './components/tabs';
+@import 'components/tabs';

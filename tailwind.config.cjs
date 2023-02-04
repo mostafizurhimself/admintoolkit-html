@@ -77,6 +77,7 @@ module.exports = {
       borderRadius: {
         primary: '0.4rem',
       },
+      
     },
   },
   plugins: [

@@ -1,43 +1,45 @@
-.checkbox {
-  @apply h-4 w-4 rounded border-slate-300 bg-transparent text-primary-500 shadow-sm transition-all duration-150 checked:hover:shadow-none focus:ring-0 focus:ring-offset-0 enabled:hover:shadow disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-600;
-
-  &-primary {
-    @apply border-primary-500 text-primary-500 enabled:hover:text-primary-600;
-  }
-
-  &-secondary {
-    @apply border-secondary-500 text-secondary-500 enabled:hover:text-secondary-600;
-  }
-
-  &-success {
-    @apply border-success-500 text-success-500 enabled:hover:text-success-600;
-  }
-
-  &-danger {
-    @apply border-danger-500 text-danger-500 enabled:hover:text-danger-600;
-  }
-
-  &-warning {
-    @apply border-warning-500 text-warning-500 enabled:hover:text-warning-600;
-  }
-
-  &-info {
-    @apply border-info-500 text-info-500 enabled:hover:text-info-600;
-  }
-
-  &-dark {
-    @apply border-dark-500 text-dark-500 enabled:hover:text-dark-600;
-  }
-
-  &-sm {
-    @apply h-4 w-4;
-  }
-
-  &-md {
-    @apply h-5 w-5;
-  }
-
-  &-lg {
-    @apply h-6 w-6;
+@layer components {
+  .checkbox {
+    @apply h-4 w-4 rounded border-slate-300 bg-transparent text-primary-500 shadow-sm transition-all duration-150 checked:hover:shadow-none focus:ring-0 focus:ring-offset-0 enabled:hover:shadow disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-600;
+  
+    &-primary {
+      @apply border-primary-500 text-primary-500 enabled:hover:text-primary-600;
+    }
+  
+    &-secondary {
+      @apply border-secondary-500 text-secondary-500 enabled:hover:text-secondary-600;
+    }
+  
+    &-success {
+      @apply border-success-500 text-success-500 enabled:hover:text-success-600;
+    }
+  
+    &-danger {
+      @apply border-danger-500 text-danger-500 enabled:hover:text-danger-600;
+    }
+  
+    &-warning {
+      @apply border-warning-500 text-warning-500 enabled:hover:text-warning-600;
+    }
+  
+    &-info {
+      @apply border-info-500 text-info-500 enabled:hover:text-info-600;
+    }
+  
+    &-dark {
+      @apply border-dark-500 text-dark-500 enabled:hover:text-dark-600;
+    }
+  
+    &-sm {
+      @apply h-4 w-4;
+    }
+  
+    &-md {
+      @apply h-5 w-5;
+    }
+  
+    &-lg {
+      @apply h-6 w-6;
+    }
   }
 }

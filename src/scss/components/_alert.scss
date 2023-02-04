@@ -1,95 +1,99 @@
-.alert {
-  $alert: &;
-
-  @apply relative flex items-center gap-2 rounded-primary p-4 text-sm font-medium;
-
-  &-primary {
-    @apply bg-primary-100 text-primary-500 dark:bg-primary-500 dark:text-primary-100;
-  }
-
-  &-secondary {
-    @apply bg-secondary-100 text-secondary-500 dark:bg-secondary-500 dark:text-secondary-100;
-  }
-
-  &-success {
-    @apply bg-success-100 text-success-500 dark:bg-success-500 dark:text-success-100;
-  }
-
-  &-danger {
-    @apply bg-danger-100 text-danger-500 dark:bg-danger-500 dark:text-danger-100;
-  }
-
-  &-warning {
-    @apply bg-warning-100 text-warning-500 dark:bg-warning-500 dark:text-warning-100;
-  }
-
-  &-info {
-    @apply bg-info-100 text-info-500 dark:bg-info-500 dark:text-info-100;
-  }
-
-  &-dark {
-    @apply bg-dark-200 text-dark-500 dark:bg-dark-500 dark:text-dark-100;
-  }
-
-  &-outline {
+@layer components {
+  
+  .alert {
+    $alert: &;
+  
+    @apply relative flex items-center gap-2 rounded-primary p-4 text-sm font-medium;
+  
     &-primary {
-      @apply border border-primary-500 bg-transparent text-primary-500 dark:bg-transparent dark:text-primary-500;
+      @apply bg-primary-100 text-primary-500 dark:bg-primary-500 dark:text-primary-100;
     }
-
+  
     &-secondary {
-      @apply border border-secondary-500 bg-transparent text-secondary-500 dark:bg-transparent dark:text-secondary-500;
+      @apply bg-secondary-100 text-secondary-500 dark:bg-secondary-500 dark:text-secondary-100;
     }
-
+  
     &-success {
-      @apply border border-success-500 bg-transparent text-success-500 dark:bg-transparent dark:text-success-500;
+      @apply bg-success-100 text-success-500 dark:bg-success-500 dark:text-success-100;
     }
-
+  
     &-danger {
-      @apply border border-danger-500 bg-transparent text-danger-500 dark:bg-transparent dark:text-danger-500;
+      @apply bg-danger-100 text-danger-500 dark:bg-danger-500 dark:text-danger-100;
     }
-
+  
     &-warning {
-      @apply border border-warning-500 bg-transparent text-warning-500 dark:bg-transparent dark:text-warning-500;
+      @apply bg-warning-100 text-warning-500 dark:bg-warning-500 dark:text-warning-100;
     }
-
+  
     &-info {
-      @apply border border-info-500 bg-transparent text-info-500 dark:bg-transparent dark:text-info-500;
+      @apply bg-info-100 text-info-500 dark:bg-info-500 dark:text-info-100;
     }
-
+  
     &-dark {
-      @apply border border-dark-500 bg-transparent text-dark-500 dark:bg-transparent dark:text-dark-500;
+      @apply bg-dark-200 text-dark-500 dark:bg-dark-500 dark:text-dark-100;
+    }
+  
+    &-outline {
+      &-primary {
+        @apply border border-primary-500 bg-transparent text-primary-500 dark:bg-transparent dark:text-primary-500;
+      }
+  
+      &-secondary {
+        @apply border border-secondary-500 bg-transparent text-secondary-500 dark:bg-transparent dark:text-secondary-500;
+      }
+  
+      &-success {
+        @apply border border-success-500 bg-transparent text-success-500 dark:bg-transparent dark:text-success-500;
+      }
+  
+      &-danger {
+        @apply border border-danger-500 bg-transparent text-danger-500 dark:bg-transparent dark:text-danger-500;
+      }
+  
+      &-warning {
+        @apply border border-warning-500 bg-transparent text-warning-500 dark:bg-transparent dark:text-warning-500;
+      }
+  
+      &-info {
+        @apply border border-info-500 bg-transparent text-info-500 dark:bg-transparent dark:text-info-500;
+      }
+  
+      &-dark {
+        @apply border border-dark-500 bg-transparent text-dark-500 dark:bg-transparent dark:text-dark-500;
+      }
+    }
+  
+    &-dismiss {
+      @apply absolute right-2 top-3 rounded-primary p-1.5 transition-colors duration-150;
+  
+      #{$alert}-primary & {
+        @apply text-primary-500 hover:bg-primary-200 dark:text-primary-100 dark:hover:bg-primary-600;
+      }
+  
+      #{$alert}-secondary & {
+        @apply text-secondary-500 hover:bg-secondary-200 dark:text-secondary-100 dark:hover:bg-secondary-600;
+      }
+  
+      #{$alert}-success & {
+        @apply text-success-500 hover:bg-success-200 dark:text-success-100 dark:hover:bg-success-600;
+      }
+  
+      #{$alert}-danger & {
+        @apply text-danger-500 hover:bg-danger-200 dark:text-danger-100 dark:hover:bg-danger-600;
+      }
+  
+      #{$alert}-warning & {
+        @apply text-warning-500 hover:bg-warning-200 dark:text-warning-100 dark:hover:bg-warning-600;
+      }
+  
+      #{$alert}-info & {
+        @apply text-info-500 hover:bg-info-200 dark:text-info-100 dark:hover:bg-info-600;
+      }
+  
+      #{$alert}-dark & {
+        @apply text-dark-500 hover:bg-dark-300 dark:text-dark-100 dark:hover:bg-dark-600;
+      }
     }
   }
 
-  &-dismiss {
-    @apply absolute right-2 top-3 rounded-primary p-1.5 transition-colors duration-150;
-
-    #{$alert}-primary & {
-      @apply text-primary-500 hover:bg-primary-200 dark:text-primary-100 dark:hover:bg-primary-600;
-    }
-
-    #{$alert}-secondary & {
-      @apply text-secondary-500 hover:bg-secondary-200 dark:text-secondary-100 dark:hover:bg-secondary-600;
-    }
-
-    #{$alert}-success & {
-      @apply text-success-500 hover:bg-success-200 dark:text-success-100 dark:hover:bg-success-600;
-    }
-
-    #{$alert}-danger & {
-      @apply text-danger-500 hover:bg-danger-200 dark:text-danger-100 dark:hover:bg-danger-600;
-    }
-
-    #{$alert}-warning & {
-      @apply text-warning-500 hover:bg-warning-200 dark:text-warning-100 dark:hover:bg-warning-600;
-    }
-
-    #{$alert}-info & {
-      @apply text-info-500 hover:bg-info-200 dark:text-info-100 dark:hover:bg-info-600;
-    }
-
-    #{$alert}-dark & {
-      @apply text-dark-500 hover:bg-dark-300 dark:text-dark-100 dark:hover:bg-dark-600;
-    }
-  }
 }
