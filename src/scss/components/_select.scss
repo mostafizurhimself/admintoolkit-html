@@ -412,18 +412,18 @@
 .ts-wrapper.single .ts-control {
   --ts-pr-caret: 2rem;
 }
-.ts-wrapper.single .ts-control:after {
-  content: " ";
+.ts-wrapper .ts-control::after {
+  content: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20' fill='none' stroke='%23ccc' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   display: block;
   position: absolute;
   top: 50%;
-  right: 15px;
-  margin-top: -3px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 5px 5px 0 5px;
-  border-color: #808080 transparent transparent transparent;
+  transform: translateY(-50%);
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  // border-style: solid;
+  // border-width: 5px 5px 0 5px;
+  // border-color: #808080 transparent transparent transparent;
 }
 .ts-wrapper.single.dropdown-active .ts-control::after {
   margin-top: -4px;
