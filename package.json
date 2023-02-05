@@ -38,6 +38,7 @@
   "dependencies": {
     "feather-icons": "^4.29.0",
     "highlight.js": "^11.7.0",
-    "js-beautify": "^1.14.7"
+    "js-beautify": "^1.14.7",
+    "tom-select": "^2.2.2"
   }
 }

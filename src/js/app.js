@@ -7,6 +7,7 @@ import modal from './components/modal';
 import themeSwitcher from './components/theme-switcher';
 import sidebar from './components/sidebar';
 import tabs from './components/tabs';
+import select from './components/select';
 
 //Import third party packages
 import feather from 'feather-icons';
@@ -34,6 +35,9 @@ sidebar.init();
 
 // Initialize tabs
 tabs.init();
+
+// Initialize Select
+select.init();
 
 // Initialize feather icons Icons should be replaced at the end
 feather.replace();
