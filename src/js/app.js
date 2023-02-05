@@ -16,6 +16,10 @@ import select from './components/select';
 
 //Import third party packages
 import themeSwitcher from './components/theme-switcher';
+import select from './components/select';
+
+//Import third party packages
+import feather from 'feather-icons';
 
 // Initialize code highlighting
 codeViewer.init();
