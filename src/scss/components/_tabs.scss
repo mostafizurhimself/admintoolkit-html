@@ -52,7 +52,7 @@
                }
 
                &.active {
-                    @apply border-b-primary-500 bg-primary-100 text-primary-500 dark:bg-primary-500/10;
+                    @apply border-b-primary-500 text-primary-500;
                     
                     #{$tabs}-vertical & {
                          @apply border-b-transparent border-r-primary-500;
