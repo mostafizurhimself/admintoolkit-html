@@ -1,60 +1,60 @@
 @layer components {
+
   .accordion {
     $accordion: &;
+    $accordion-btn-active-icon: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 5.5L12.5 10.5L7.5 15.5' stroke='%235d596c' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.5 5.5L12.5 10.5L7.5 15.5' stroke='white' stroke-opacity='0.1' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+
+    @apply flex flex-col gap-4;
+
+    &-item {
+      @apply bg-white dark:bg-slate-800 shadow;      
+    }
 
     &-btn {
-      @apply flex w-full items-center gap-2 rounded-[.4rem] p-1 text-sm leading-5 transition-colors duration-150 ease-in-out hover:bg-primary-50 hover:text-primary-500 hover:dark:bg-primary-500;
+      @apply w-full p-4 text-sm font-medium inline-flex items-center justify-between text-slate-600 dark:text-slate-300;
+      
+      &:after {
+        content: '';
+        width: 1.125rem;
+        height: 1.125rem;
+        display: inline-block;
+        background-image: $accordion-btn-active-icon;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: rotate(0);
+        transition: transform 150ms ease-in-out;
 
-      &-icon {
-        &--left {
-          @apply flex h-9 w-9 items-center justify-center rounded-[.4rem] text-slate-500 dark:text-slate-400;
-        }
-
-        &--right {
-          @apply ml-auto mr-2 rotate-0 text-slate-600;
-        }
-      }
-
-      &-text {
-        @apply text-slate-700 dark:text-slate-200;
-      }
-
-      &:hover &-icon,
-      &:hover &-text {
-        @apply text-primary-500 dark:text-slate-200;
-      }
-
-      #{$accordion}.active & {
-        @apply bg-primary-50 dark:bg-slate-700;
-      }
-
-      #{$accordion}.active &-icon {
-        &--left {
-          @apply bg-primary-500 text-slate-200 dark:text-slate-200;
-        }
-
-        &--right {
-          @apply text-primary-500 dark:text-slate-200;
-        }
-      }
-
-      #{$accordion}.active &-text {
-        @apply text-primary-500 dark:text-slate-200;
-      }
-
-      #{$accordion}.open &-icon {
-        &--right {
-          @apply rotate-90;
+        #{$accordion}-item.active & {
+          transform: rotate(90deg);
         }
       }
     }
 
     &-content {
-      @apply h-0 w-full overflow-hidden transition-height duration-300 ease-in-out;
+        @apply overflow-hidden transition-height duration-300 ease-in-out;
+        
+        #{$accordion}-item:not(.active) & {
+          @apply hidden;
+        }
+    }
+  
+    &-body {
+      @apply px-4 pb-4  text-slate-500 dark:text-slate-400 text-sm;
+    }
 
-      #{$accordion}.open & {
-        @apply h-auto;
+    &.accordion-outlined {
+      @apply gap-0 border border-slate-300 dark:border-slate-600 rounded-primary overflow-hidden;
+      
+      #{$accordion}-item {
+        @apply shadow-none;
+
+        &:not(:last-child) {
+          @apply border-b border-slate-300 dark:border-slate-600;
+        }
+
       }
     }
+
   }
 }
