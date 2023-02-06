@@ -3,17 +3,41 @@
     .list{
         $list: &;
         &-group{
-            @apply  w-48 rounded-primary border bg-white font-medium dark:bg-slate-800  border-slate-300 dark:border-slate-600;
+            @apply   rounded-primary border bg-white font-medium dark:bg-slate-800  border-slate-300 dark:border-slate-600;
         }
         &-item{
             @apply py-2 px-4  w-full text-left border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
-        
+            & > h5{
+                @apply text-sm font-normal;
+            }
         }
         &-item-icon{
             @apply relative inline-flex items-center w-full px-4 py-2   border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
         }
-        &-group-avatar{
-            @apply  w-[350px] rounded-primary border bg-white font-medium dark:bg-slate-800  border-slate-300 dark:border-slate-600;
+        &-group-avatar,
+        &-group-content{
+            @apply  w-[300px] rounded-primary border bg-white font-medium dark:bg-slate-800  border-slate-300 dark:border-slate-600;
+        }
+        &-group-content{
+            @apply w-[400px];
+        }
+        &-group-content-item{
+            & > h5{
+                @apply  text-sm tracking-tighter font-normal ;
+            }
+            
+        }
+        // &-primary{
+        //     @apply bg-
+        // }
+        &-content-header{
+            @apply flex w-full justify-between items-center pb-2 px-0;
+            & > h6{
+                @apply text-2xl font-medium; 
+            }
+            & > small{
+                @apply text-xs font-medium; 
+            }
         }
         &-item-avatar{
             @apply py-2 px-4  w-full flex items-center font-light border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
@@ -27,6 +51,7 @@
                 @apply text-sm tracking-tighter font-normal;
             }
         }
+
         &-item.active,
         &-item-icon.active,
         &-item-avatar.active{
