@@ -1,72 +1,71 @@
 @layer components {
-     .tabs {
-          $tabs: &;
+  .tabs {
+    $tabs: &;
+    @apply flex flex-col gap-4;
 
-          @apply flex flex-col gap-4 p-4 rounded bg-white dark:bg-slate-800;
+    &-vertical {
+      @apply flex-row gap-0;
+    }
 
-          &-vertical {
-               @apply flex-row gap-0;
+    &-list {
+      @apply flex items-center border-b border-r border-r-transparent border-b-slate-200/80 dark:border-b-slate-700/80;
+
+      #{$tabs}-vertical & {
+           @apply flex-col gap-2 border-b-transparent border-r-slate-200/80 dark:border-r-slate-700/80;
+           
+           & > li {
+                @apply w-full;
+           }
+      }
+
+      #{$tabs}-pill & {
+           @apply border-b-transparent dark:border-b-transparent;
+      }
+    }
+
+    &-panel {
+      @apply hidden px-4 py-2 tracking-wide text-sm text-slate-500 dark:text-slate-400;
+
+      &.active {
+           @apply block;
+      }
+    }
+
+    &-btn {
+          @apply w-full inline-flex items-center gap-2 px-5 py-3 relative font-medium tracking-wide text-sm bg-transparent transition-colors duration-150 ease-in-out;
+
+          &:not(.active, .disabled) {
+              @apply text-slate-500  hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-500;
           }
 
-          &-list {
-               @apply flex items-center gap-4 border-b border-r border-r-transparent border-b-slate-200/80 dark:border-b-slate-700/80;
-
-               #{$tabs}-vertical & {
-                    @apply flex-col border-b-transparent border-r-slate-200/80 dark:border-r-slate-700/80;
-                    
-                    & > li {
-                         @apply w-full;
-                    }
-               }
-
-               #{$tabs}-pill & {
-                    @apply border-b-transparent dark:border-b-transparent;
-               }
+          #{$tabs}-pill & {
+              @apply py-2 rounded-primary;
           }
 
-          // &-content {
-          //      @apply border-0 border-black
-          // }
-
-          &-panel {
-               @apply hidden px-4 py-2 tracking-wide text-sm text-slate-500 dark:text-slate-400;
-
-               &.active {
-                    @apply block;
-               }
+          #{$tabs}:not(#{$tabs}-pill) &::after {
+              @apply content-[''] inline-block w-full h-[2px] rounded-full bg-transparent absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2;
           }
 
-          &-btn {
-               @apply w-full inline-flex items-center gap-2 px-4 py-3  rounded-t-primary font-medium tracking-wide text-sm bg-transparent border-b-2 border-r-2 border-b-transparent border-r-transparent transition-colors duration-150 ease-in-out;
-
-               &:not(.active, .disabled) {
-                    @apply text-slate-500 hover:bg-slate-100  hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300 dark:hover:bg-slate-700;
-               }
-
-               #{$tabs}-pill & {
-                    @apply rounded-primary;
-               }
-
-               #{$tabs}-vertical & {
-                    @apply rounded-t-none rounded-l-primary;
-               }
-
-               &.active {
-                    @apply border-b-primary-500 text-primary-500;
-                    
-                    #{$tabs}-vertical & {
-                         @apply border-b-transparent border-r-primary-500;
-                    }
-
-                    #{$tabs}-pill & {
-                         @apply bg-primary-500 text-slate-100;
-                    }
-               }
-               
-               &.disabled {
-                    @apply bg-transparent opacity-40 cursor-not-allowed;
-               }
+          #{$tabs}#{$tabs}-vertical &::after {
+              @apply w-[2px] h-[100%] top-1/2 left-full -translate-x-1/2 -translate-y-1/2;
           }
 
-     }
+          &.active {
+              @apply text-primary-500;
+
+              &::after {
+                    background-color: theme('colors.primary.500') !important;
+              }
+              
+              #{$tabs}-pill & {
+                    @apply bg-primary-500 text-slate-100;
+              }
+          }
+    
+          &.disabled {
+              @apply bg-transparent opacity-40 cursor-not-allowed;
+          }
+    }
+
+  }
 }
