@@ -3,19 +3,26 @@
     .list{
         $list: &;
         &-group{
-            @apply  w-48 rounded-primary border bg-white border-slate-300 dark:border-slate-600;
+            @apply  w-48 rounded-primary border bg-white dark:bg-slate-800 shadow-lg border-slate-300 dark:border-slate-600;
         }
         &-item{
-            @apply py-2 px-4  w-full text-left border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-300 duration-100 ease-in cursor-pointer;
+            @apply py-2 px-4  w-full text-left border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
         
         }
-        &-item.active{
-           
-            @apply bg-primary-500 text-slate-100;
+        &-item-icon{
+            @apply relative inline-flex items-center w-full px-4 py-2  font-medium  border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
         }
-        &-item.disabled{
+        &-item.active,
+        &-item-icon.active{
            
-            @apply bg-gray-100 text-gray-500 hover:bg-gray-100 cursor-not-allowed;
+            @apply bg-primary-500 hover:bg-primary-500 text-slate-100;
+        }
+        
+        &-item.disabled,
+        &-item-icon.disabled{
+           
+
+            @apply bg-[rgba(90,90,90,0.2)] hover:bg-[rgba(90,90,90,0.2)] text-gray-400   cursor-not-allowed;
         }
         &-item:last-child{
             @apply border-b-0 rounded-b-primary;
