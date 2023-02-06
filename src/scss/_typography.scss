@@ -45,17 +45,20 @@
   }
 
   mark {
-    @apply bg-warning-100 dark:bg-warning-200 px-[.5em] rounded-sm;
+    @apply rounded-sm bg-warning-100 px-[.5em] dark:bg-warning-200;
   }
 
   .blockquote {
-    @apply font-medium italic text-slate-500 dark:text-slate-300 border-l-[.25rem] border-l-slate-200 dark:border-l-slate-800 pl-4;
+    @apply border-l-[.25rem] border-l-slate-200 pl-4 font-medium italic text-slate-500 dark:border-l-slate-800 dark:text-slate-300;
     & > p {
       @apply before:content-['"'] after:content-['"'];
     }
   }
-}
 
+  code {
+    @apply rounded bg-slate-100 p-1 text-xs tracking-wide text-slate-500 dark:bg-slate-600 dark:text-slate-300;
+  }
+}
 
 @layer components {
   .display-1,
@@ -68,37 +71,55 @@
   }
 
   .display-1 {
-    font-size: 80px; //80px(100%) 
+    font-size: 80px; //80px(100%)
   }
 
   .display-2 {
-    font-size: 72px; //72px(90%) 
+    font-size: 72px; //72px(90%)
   }
 
   .display-3 {
-    font-size: 64px; //64px(80%) 
+    font-size: 64px; //64px(80%)
   }
 
   .display-4 {
-    font-size: 56px; //56px(70%) 
+    font-size: 56px; //56px(70%)
   }
 
   .display-5 {
-    font-size: 48px; //48px(60%) 
+    font-size: 48px; //48px(60%)
   }
 
   .display-6 {
-    font-size: 40px; //40px(50%) 
+    font-size: 40px; //40px(50%)
   }
 
   .text {
     &-lead {
       @apply text-lg text-slate-600 dark:text-slate-200;
     }
-  
+
     &-muted {
       @apply text-slate-400/80 dark:text-slate-600;
     }
   }
 
+  .help-text {
+    @apply text-xs font-light text-slate-400;
+  }
+
+  .success-message {
+    @apply text-xs text-success-500;
+  }
+  .error-message {
+    @apply text-xs text-danger-600;
+  }
+
+  .label {
+    @apply inline-block text-sm font-medium text-slate-700 dark:text-slate-300;
+
+    &[aria-disabled='true'] {
+      @apply cursor-not-allowed opacity-50;
+    }
+  }
 }
