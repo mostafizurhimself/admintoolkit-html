@@ -1,81 +1,32 @@
-class Accordion {
-
-  constructor(accordion) {
-    this.accordionItems   = accordion.querySelectorAll('.accordion-item');
-
-    [...this.accordionItems].forEach((accordionItem) => {
-        const accordionBtn = accordionItem.querySelector('.accordion-btn');
-
-        accordionBtn.addEventListener('click', () => {
-          [...this.accordionItems].forEach((accordionItem) => {
-            if(accordionItem.classList.contains('active')) {
-              this.hide(accordionItem);
-            }
-          });
-
-          this.toggle(accordionItem);
-        })
-    });
-
-  }
-
-  toggle(accordionItem) {
-
-    if(!accordionItem.classList.contains('active')) {
-
-      this.show(accordionItem);
-
-    }else {
-
-      this.hide(accordionItem);
-    }
-  }
-
-  show(accordionItem) {
-    const accordionContent = accordionItem.querySelector('.accordion-content');
-
-    accordionItem.classList.add('active');
-    accordionContent.style.height = '0px';
-
-    setTimeout(() => {
-
-      accordionContent.style.height = accordionContent.scrollHeight + 'px';
-
-    }, 5);
-
-    setTimeout(() => {
-
-      accordionContent.removeAttribute('style');
-
-    }, 300);
-  }
-
-  hide(accordionItem) {
-    const accordionContent = accordionItem.querySelector('.accordion-content');
-
-    accordionContent.style.height = accordionContent.scrollHeight + 'px';
-
-    setTimeout(() => {
-
-      accordionContent.style.height = '0px';
-
-    }, 5)
-
-    setTimeout(() => {
-      
-      accordionItem.classList.remove('active');
-      accordionContent.removeAttribute('style');
-
-    }, 300)
-  }
-}
+import Accordion from 'accordion-js';
 
 const accordion = {
   init() {
-    const accordions = document.querySelectorAll('.accordion');
+    const accordions     = [...document.querySelectorAll('.accordion')];
+    const defaultOptions = {
+      elementClass : 'accordion-item',
+      triggerClass : 'accordion-header',
+      panelClass   : 'accordion-content',
+      activeClass  : 'active',
+      duration     : 300
+    }
 
     if(accordions.length) {
-      [...accordions].forEach((accordion) => new Accordion(accordion));
+      accordions.forEach((accordion) => {
+        // Store accordion items
+        const accordionItems = [...accordion.querySelectorAll(`.${defaultOptions.elementClass}`)];
+        // Store accordion option for each accordion
+        const accordionOptions = { ...defaultOptions, openOnInit: [] };
+        
+        accordionItems.forEach((item, index) => {
+          if(item.classList.contains('active')) {
+            // Push default active .accordion-item index 
+            accordionOptions.openOnInit.push(index);
+          }
+        });
+        
+        new Accordion(accordion, accordionOptions);
+      });
     }
   }
 }

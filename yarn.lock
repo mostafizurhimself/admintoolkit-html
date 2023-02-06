@@ -1730,6 +1730,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"accordion-js@npm:^3.3.2":
+  version: 3.3.2
+  resolution: "accordion-js@npm:3.3.2"
+  checksum: 71d4d7d03b6c38c493d0b2ca59364e920fd2530fc9af799bdd822d0331b684b5723526ea2bc8a3908e6057bbaa0e1377c50396d1766e435ae53a192089b9da01
+  languageName: node
+  linkType: hard
+
 "acorn-import-assertions@npm:^1.7.6":
   version: 1.8.0
   resolution: "acorn-import-assertions@npm:1.8.0"
@@ -6802,6 +6809,7 @@ __metadata:
     "@mertasan/tailwindcss-variables": ^2.5.1
     "@tailwindcss/forms": ^0.5.3
     "@tailwindcss/typography": ^0.5.9
+    accordion-js: ^3.3.2
     babel-loader: ^9.1.2
     browser-sync: ^2.27.11
     feather-icons: ^4.29.0
