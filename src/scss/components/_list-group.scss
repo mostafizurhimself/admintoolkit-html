@@ -3,31 +3,49 @@
     .list{
         $list: &;
         &-group{
-            @apply  w-48 rounded-primary border bg-white dark:bg-slate-800 shadow-lg border-slate-300 dark:border-slate-600;
+            @apply  w-48 rounded-primary border bg-white font-medium dark:bg-slate-800  border-slate-300 dark:border-slate-600;
         }
         &-item{
             @apply py-2 px-4  w-full text-left border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
         
         }
         &-item-icon{
-            @apply relative inline-flex items-center w-full px-4 py-2  font-medium  border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
+            @apply relative inline-flex items-center w-full px-4 py-2   border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
+        }
+        &-group-avatar{
+            @apply  w-[350px] rounded-primary border bg-white font-medium dark:bg-slate-800  border-slate-300 dark:border-slate-600;
+        }
+        &-item-avatar{
+            @apply py-2 px-4  w-full flex items-center font-light border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
+        }
+        &-desciption{
+            @apply ml-2;
+            & > h6{
+                @apply text-xl font-normal;
+            }
+            & > p{
+                @apply text-sm tracking-tighter font-normal;
+            }
         }
         &-item.active,
-        &-item-icon.active{
-           
+        &-item-icon.active,
+        &-item-avatar.active{
             @apply bg-primary-500 hover:bg-primary-500 text-slate-100;
         }
         
         &-item.disabled,
-        &-item-icon.disabled{
-           
-
-            @apply bg-[rgba(90,90,90,0.2)] hover:bg-[rgba(90,90,90,0.2)] text-gray-400   cursor-not-allowed;
+        &-item-icon.disabled,
+        &-item-avatar.disabled{
+            @apply  text-[#6C757D]  bg-slate-50 dark:bg-slate-800 dark:hover:bg-slate-800 hover:bg-slate-50  cursor-not-allowed;
         }
-        &-item:last-child{
+        &-item:last-child,
+        &-item-icon:last-child,
+        &-item-avatar:last-child{
             @apply border-b-0 rounded-b-primary;
         }
-        &-item:first-child{
+        &-item:first-child,
+        &-item-icon:first-child,
+        &-item-avatar:first-child{
             @apply rounded-t-primary;
         }
     }
