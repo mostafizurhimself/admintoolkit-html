@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+// Vendor
+@import 'simplebar/dist/simplebar.css';
+
 // Base
 @import 'fonts';
 @import 'base';

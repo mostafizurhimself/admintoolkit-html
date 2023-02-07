@@ -1,7 +1,6 @@
 @import 'highlight.js/styles/atom-one-dark.css';
 
 @layer components {
-  
   .code-viewer {
     @apply w-full rounded-primary border bg-white duration-300 dark:border-slate-700 dark:bg-slate-800;
 
@@ -33,5 +32,4 @@
       }
     }
   }
-  
 }
