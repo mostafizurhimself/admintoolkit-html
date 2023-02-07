@@ -3,33 +3,50 @@
     .list{
         $list: &;
         &-group{
-            @apply   rounded-primary border bg-white font-medium dark:bg-slate-800  border-slate-300 dark:border-slate-600;
+            @apply inline-block w-auto rounded-primary text-sm border  bg-white font-medium dark:bg-slate-800  border-slate-300 dark:border-slate-600;
+            li:first-child{
+                @apply rounded-t-primary;
+            }
+            li:last-child{
+                @apply border-b-0 rounded-b-primary;
+            }
         }
         &-item{
-            @apply py-2 px-4  w-full text-left border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
+            @apply py-2 px-4 min-w-[10rem] text-left border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-150 ease-in cursor-pointer;
             & > h5{
                 @apply text-sm font-normal;
             }
         }
         &-item-icon{
-            @apply relative inline-flex items-center w-full px-4 py-2   border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
+            @apply py-2 px-4 min-w-[10rem] flex items-center text-left border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
+        }
+        &-item-primary{
+            @apply py-2 px-4 min-w-[10rem] text-left hover:bg-primary-600 hover:text-white duration-150 ease-in cursor-pointer bg-primary-300 text-primary-600 ;
+        }
+        &-item-success{
+            @apply py-2 px-4 min-w-[10rem] text-left hover:bg-success-600 hover:text-white duration-150 ease-in cursor-pointer  bg-success-300 text-success-600 ;
+        }
+        &-item-secondary{
+            @apply py-2 px-4 min-w-[10rem] text-left hover:bg-secondary-600 hover:text-white duration-150 ease-in cursor-pointer  bg-secondary-300 text-secondary-600 ;
+        }
+        &-item-warning{
+            @apply py-2 px-4 min-w-[10rem] text-left hover:bg-warning-600 hover:text-white duration-150 ease-in cursor-pointer  bg-warning-300 text-warning-600;
+        }
+        &-item-danger{
+            @apply py-2 px-4 min-w-[10rem] text-left hover:bg-danger-600 hover:text-white duration-150 ease-in cursor-pointer  bg-danger-300 text-danger-600 ;
+        }
+        &-item-dark{
+            @apply  py-2 px-4 min-w-[10rem] text-left hover:bg-dark-600 hover:text-white duration-150 ease-in cursor-pointer bg-dark-300 text-dark-600 ;
         }
         &-group-avatar,
         &-group-content{
-            @apply  w-[300px] rounded-primary border bg-white font-medium dark:bg-slate-800  border-slate-300 dark:border-slate-600;
-        }
-        &-group-content{
-            @apply w-[400px];
+            @apply  inline-block w-auto rounded-primary border bg-white font-medium dark:bg-slate-800  border-slate-300 dark:border-slate-600;
         }
         &-group-content-item{
             & > h5{
                 @apply  text-sm tracking-tighter font-normal ;
             }
-            
         }
-        // &-primary{
-        //     @apply bg-
-        // }
         &-content-header{
             @apply flex w-full justify-between items-center pb-2 px-0;
             & > h6{
@@ -63,15 +80,15 @@
         &-item-avatar.disabled{
             @apply  text-[#6C757D]  bg-slate-50 dark:bg-slate-800 dark:hover:bg-slate-800 hover:bg-slate-50  cursor-not-allowed;
         }
-        &-item:last-child,
-        &-item-icon:last-child,
-        &-item-avatar:last-child{
-            @apply border-b-0 rounded-b-primary;
-        }
-        &-item:first-child,
-        &-item-icon:first-child,
-        &-item-avatar:first-child{
-            @apply rounded-t-primary;
-        }
+        // &-item:last-child,
+        // &-item-icon:last-child,
+        // &-item-avatar:last-child{
+        //     @apply border-b-0 rounded-b-primary;
+        // }
+        // &-item:first-child,
+        // &-item-icon:first-child,
+        // &-item-avatar:first-child{
+        //     @apply rounded-t-primary;
+        // }
     }
 }
