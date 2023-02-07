@@ -1240,6 +1240,11 @@ accepts@~1.3.4:
     mime-types "~2.1.34"
     negotiator "0.6.3"
 
+accordion-js@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/accordion-js/-/accordion-js-3.3.2.tgz#a2d220ec5d8512363f514732fd3298b4bbf645b4"
+  integrity sha512-Lu0fnrHy6BG6K+t7LdQxSfxMAnergGGYUxHNo5ESN9GdNWflKxJFyrXgc3PWrqkGysadrUpdOQFUs4KMSPtVag==
+
 acorn-import-assertions@^1.7.6:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/acorn-import-assertions/-/acorn-import-assertions-1.8.0.tgz#ba2b5939ce62c238db6d93d81c9b111b29b855e9"
@@ -1928,6 +1933,11 @@ camelcase@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
   integrity sha512-4nhGqUkc4BqbBBB4Q6zLuD7lzzrHYrjKGeYaEji/3tFR5VdJu9v+LilhGIVe8wxEJPPOeWo7eg8dwY13TZ1BNg==
+
+can-use-dom@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/can-use-dom/-/can-use-dom-0.1.0.tgz#22cc4a34a0abc43950f42c6411024a3f6366b45a"
+  integrity sha512-ceOhN1DL7Y4O6M0j9ICgmTYziV89WMd96SvSl0REd8PMgrY0B/WBOPoed5S1KUmJqXgUXh8gzSe6E3ae27upsQ==
 
 caniuse-lite@^1.0.30001449:
   version "1.0.30001450"
@@ -5790,6 +5800,11 @@ requires-port@^1.0.0:
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
 
+resize-observer-polyfill@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
+
 resolve-dir@^1.0.0, resolve-dir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/resolve-dir/-/resolve-dir-1.0.1.tgz#79a40644c362be82f26effe739c9bb5382046f43"
@@ -6077,6 +6092,22 @@ signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
+
+simplebar-core@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/simplebar-core/-/simplebar-core-1.2.0.tgz#3f109ba472f9c576032564d0fabb6013847f2160"
+  integrity sha512-OgF3poOTi3mzj6HmNvuJfPtvMH/7OsMC+2H3HXQUzddyRDxUifpjHx1/3ozziWWAGTrJejLtu4E8h/kK3eboWQ==
+  dependencies:
+    can-use-dom "^0.1.0"
+    lodash "^4.17.21"
+
+simplebar@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/simplebar/-/simplebar-6.2.0.tgz#a7c1494b31eadad0622b93d455edd6a40e08f6db"
+  integrity sha512-KiXO9hGg0wK7Oh5zbcdHKEPGlyem3IWA27HLKqolrhpToP0SA8iLf5tbXFBS4qRH4QTXiUn87wh9zCd4GnCZeQ==
+  dependencies:
+    can-use-dom "^0.1.0"
+    simplebar-core "^1.2.0"
 
 slash@^3.0.0:
   version "3.0.0"
