@@ -3,33 +3,22 @@
   .accordion {
     $accordion: &;
     $accordion-btn-icon: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 5.5L12.5 10.5L7.5 15.5' stroke='%235d596c' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.5 5.5L12.5 10.5L7.5 15.5' stroke='white' stroke-opacity='0.1' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-    @apply flex flex-col gap-4;
+    @apply flex flex-col rounded-primary divide-y divide-slate-200 border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700 dark:divide-slate-700;
 
-    &-outlined {
-      @apply gap-0 rounded-primary overflow-hidden border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700;
-    }
-    
     &-item {
-      @apply rounded-primary shadow shadow-slate-300 bg-white dark:bg-slate-800 dark:shadow-slate-800;
-
-      #{$accordion}-outlined & {
-        @apply shadow-none rounded-none;
-        &:not(:last-child) {
-          @apply border-b border-slate-200 dark:border-slate-700;
-        }
-      }
+      @apply bg-transparent;
     }
 
     &-btn {
-      @apply w-full inline-flex items-center justify-between p-4 font-medium text-slate-600 dark:text-slate-300 transition-colors duration-150 ease-in-out;
+      @apply w-full inline-flex items-center justify-between p-4 text-sm font-medium text-slate-600 dark:text-slate-300 transition-colors duration-100 ease-in-out;
     
       #{$accordion}:not(#{$accordion}-without-icon) &::after {
         background-image: $accordion-btn-icon;
-        @apply content-[''] w-5 h-5 inline-block bg-cover bg-center bg-no-repeat rotate-0 transition-transform duration-150;
+        @apply content-[''] w-4 h-4 inline-block bg-cover bg-center bg-no-repeat rotate-0 transition-transform duration-150;
       }
 
       #{$accordion}-item.active &::after {
-        @apply rotate-90;
+        @apply rotate-90 text-primary-500;
       }
     }
 
@@ -46,7 +35,7 @@
     }
 
     &-body {
-      @apply px-4 pb-4;
+      @apply px-4 pb-4 text-sm;
     }
   }
 
