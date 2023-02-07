@@ -11,10 +11,10 @@
       @apply flex items-center border-b border-r border-r-transparent border-b-slate-200/80 dark:border-b-slate-700/80;
 
       #{$tabs}-vertical & {
-           @apply flex-col gap-2 border-b-transparent border-r-slate-200/80 dark:border-r-slate-700/80;
+           @apply flex-col border-b-transparent border-r-slate-200/80 dark:border-r-slate-700/80;
            
            & > li {
-                @apply w-full;
+                @apply w-full border-0 border-black;
            }
       }
 
@@ -23,8 +23,12 @@
       }
     }
 
+    &-content {
+      @apply border-0 border-black;
+    }
+
     &-panel {
-      @apply hidden px-4 py-2 tracking-wide text-sm text-slate-500 dark:text-slate-400;
+      @apply w-full h-full hidden px-4 py-2 tracking-wide text-sm text-slate-500 dark:text-slate-400;
 
       &.active {
            @apply block;
@@ -32,7 +36,7 @@
     }
 
     &-btn {
-          @apply w-full inline-flex items-center gap-2 px-5 py-3 relative font-medium tracking-wide text-sm bg-transparent transition-colors duration-150 ease-in-out;
+          @apply w-full inline-flex items-center gap-2 px-6 py-4 relative font-medium tracking-wide text-sm bg-transparent transition-colors duration-150 ease-in-out;
 
           &:not(.active, .disabled) {
               @apply text-slate-500  hover:text-primary-500 dark:text-slate-400 dark:hover:text-primary-500;
@@ -40,6 +44,10 @@
 
           #{$tabs}-pill & {
               @apply py-2 rounded-primary;
+          }
+
+          #{$tabs}-vertical & {
+              @apply py-3;
           }
 
           #{$tabs}:not(#{$tabs}-pill) &::after {
