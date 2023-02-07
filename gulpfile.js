@@ -54,7 +54,10 @@ gulp.task('images', function () {
 
 // Copy fonts to dist folder
 gulp.task('fonts', function () {
-  return gulp.src(paths.src.fonts).pipe(gulp.dest(paths.dist.fonts)).pipe(browserSync.stream());
+  return gulp
+    .src([paths.src.fonts, 'node_modules/@tabler/icons-webfont/fonts/**/*', 'node_modules/boxicons/fonts/**/*'])
+    .pipe(gulp.dest(paths.dist.fonts))
+    .pipe(browserSync.stream());
 });
 
 // Compile SASS for development
@@ -62,7 +65,9 @@ gulp.task('scss', function () {
   return gulp
     .src(paths.src.scss)
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: ['node_modules']
+    }).on('error', sass.logError))
     .pipe(
       cssimport({
         includePaths: ['node_modules'],
@@ -78,7 +83,9 @@ gulp.task('scss', function () {
 gulp.task('scss:prod', function () {
   return gulp
     .src(paths.src.scss)
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: ['node_modules']
+    }))
     .pipe(
       cssimport({
         includePaths: ['node_modules'],
