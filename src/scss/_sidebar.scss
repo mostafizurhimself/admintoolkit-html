@@ -36,10 +36,18 @@
   }
 
   &-content {
-    @apply mt-2 h-full w-full space-y-0.5 overflow-auto;
+    @apply mt-1 overflow-auto;
+    height: calc(100vh - 4rem);
 
     > li {
       @apply px-[18px];
+    }
+
+    .simplebar-content {
+      @apply space-y-0.5;
+      > li {
+        @apply px-[18px];
+      }
     }
   }
 
@@ -83,11 +91,11 @@
       @apply text-primary-500 dark:text-slate-200;
     }
 
-    #{$sidebar}.collapsed &--text {
+    #{$sidebar}.collapsed &-text {
       @apply hidden;
     }
 
-    #{$sidebar}.collapsed.hovered &--text {
+    #{$sidebar}.collapsed.hovered &-text {
       @apply block;
     }
 
