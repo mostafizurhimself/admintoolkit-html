@@ -14,7 +14,6 @@ import tabs from './components/tabs';
 import select from './components/select';
 
 //Import third party packages
-import feather from 'feather-icons';
 import themeSwitcher from './components/theme-switcher';
 
 // Initialize code highlighting
