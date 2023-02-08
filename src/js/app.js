@@ -1,7 +1,8 @@
 //Import third party packages
+import 'simplebar';
+import '@fortawesome/fontawesome-free/js/all';
 import feather from 'feather-icons';
 import ResizeObserver from 'resize-observer-polyfill';
-import 'simplebar';
 
 //Import core components
 import accordion from './components/accordion';
