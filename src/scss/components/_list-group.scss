@@ -10,10 +10,8 @@
             li:last-child{
                 @apply border-b-0 rounded-b-primary;
             }
-            & > .active{
-                @apply bg-primary-500 hover:bg-primary-500 text-slate-100;
-            }
-            & > .disabled{
+            
+            li.disabled{
                 @apply  text-[#6C757D]  bg-slate-50 dark:bg-slate-800 dark:hover:bg-slate-800 hover:bg-slate-50  cursor-not-allowed;
             }
         }
@@ -22,7 +20,24 @@
             & > h5{
                 @apply text-sm font-normal;
             }
+            & > small{
+                @apply text-xs font-normal;
+            }
+            &.active{
+                @apply bg-primary-500 hover:bg-primary-500 text-slate-100;
+            
+            }
+            .custom-content-head{
+                @apply flex justify-between mb-2;
+                & > h6{
+                    @apply text-xl font-medium my-1;
+                }
+                & >small{
+                    @apply text-xs;
+                }
+            }
         }
+        
         &-item-avatar{
             @apply  flex items-center py-2 px-4 min-w-[14rem] text-left  border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-150 ease-in cursor-pointer;
             & > h5{
@@ -52,12 +67,6 @@
         }
         &-item-dark{
             @apply  py-2 px-4 min-w-[10rem] text-left hover:bg-dark-600 hover:text-white duration-150 ease-in cursor-pointer bg-dark-300 text-dark-600 ;
-        }
-
-        &-group-content-item{
-            & > h5{
-                @apply  text-sm tracking-tighter font-normal ;
-            }
         }
         &-desciption{
             @apply ml-2;
