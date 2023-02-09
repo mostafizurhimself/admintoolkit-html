@@ -40,7 +40,7 @@
         <ul class="sidebar-content" data-simplebar>
           <!-- Dashboard -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu ">
+            <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="home"></i>
               </span>
@@ -51,7 +51,7 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="/" class="sidebar-submenu-item ">Ecommerce</a>
+                <a href="/" class="sidebar-submenu-item">Ecommerce</a>
               </li>
               <li>
                 <a href="./analytics.html" class="sidebar-submenu-item">Analytics</a>
@@ -213,7 +213,7 @@
               <li>
                 <a href="./progress-bar.html" class="sidebar-submenu-item">Progress</a>
               </li>
-               <li>
+              <li>
                 <a href="./skeleton.html" class="sidebar-submenu-item">Skeleton</a>
               </li>
               <li>
@@ -248,7 +248,7 @@
               <li>
                 <a href="./textarea.html" class="sidebar-submenu-item">Textarea</a>
               </li>
-               <li>
+              <li>
                 <a href="./checkbox.html" class="sidebar-submenu-item">Checkbox</a>
               </li>
               <li>
@@ -327,7 +327,7 @@
           <li>
             <a href="./icons.html" class="sidebar-menu">
               <span class="sidebar-menu-icon">
-                 <i data-feather="italic"></i>
+                <i data-feather="italic"></i>
               </span>
               <span class="sidebar-menu-text">Icons</span>
             </a>
@@ -336,7 +336,7 @@
           <li>
             <a href="./typography.html" class="sidebar-menu">
               <span class="sidebar-menu-icon">
-                 <i data-feather="type"></i>
+                <i data-feather="type"></i>
               </span>
               <span class="sidebar-menu-text">Typography</span>
             </a>
@@ -956,7 +956,7 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Active Item</h4>
-                  <p class="card-subtitle">Use <code>active</code> class to make an active item.</p>
+                  <p class="card-subtitle">Use <code>active</code> class to make an item active.</p>
                   <div class="code-viewer mt-4">
                     <ul class="list-group max-w-xs">
                       <li class="list-group-item active">Profile</li>
@@ -973,7 +973,7 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Disabled Item</h4>
-                  <p class="card-subtitle">Use <code>disabled</code> class to make a Disabled item.</p>
+                  <p class="card-subtitle">Use <code>disabled</code> class to make an item disabled.</p>
                   <div class="code-viewer mt-4">
                     <ul class="list-group max-w-xs">
                       <li class="list-group-item">Profile</li>
@@ -996,20 +996,20 @@
                   </p>
                   <div class="code-viewer mt-4">
                     <ul class="list-group max-w-xs">
-                      <li class="list-group-item flex items-center">
-                        <i data-feather="user" class="mr-2 h-4 w-4"></i>
+                      <li class="list-group-item flex items-center gap-2">
+                        <i data-feather="user" class="h-4 w-4"></i>
                         Profile
                       </li>
-                      <li class="list-group-item flex items-center">
-                        <i data-feather="sliders" class="mr-2 h-4 w-4"></i>
+                      <li class="list-group-item flex items-center gap-2">
+                        <i data-feather="sliders" class="h-4 w-4"></i>
                         Settings
                       </li>
-                      <li class="list-group-item flex items-center">
-                        <i data-feather="message-square" class="mr-2 h-4 w-4"></i>
+                      <li class="list-group-item flex items-center gap-2">
+                        <i data-feather="message-square" class="h-4 w-4"></i>
                         Messages
                       </li>
-                      <li class="list-group-item flex items-center">
-                        <i data-feather="download-cloud" class="mr-2 h-4 w-4"></i>
+                      <li class="list-group-item flex items-center gap-2">
+                        <i data-feather="download-cloud" class="h-4 w-4"></i>
                         Download
                       </li>
                     </ul>
@@ -1023,18 +1023,17 @@
                 <div class="card-body">
                   <h4 class="card-title">List Group With Color</h4>
                   <p class="card-subtitle mb-1">
-                    use <code>list-group-item-default</code>, <code>list-group-item-primary</code>,
-                    <code>list-group-item-secondary</code>, <code>list-group-item-success</code>,
-                    <code>list-group-item-danger</code>, <code>list-group-item-warning</code> &
-                    <code>list-group-item-dark</code> class to make a List Group with color.
+                    Use <code>list-group-item-{color}</code> class to add color. Available colors are -
+                    <code>primary</code>, <code>secondary</code>, <code>success</code>, <code>danger</code>,
+                    <code>info</code>, <code>warning</code>, <code>dark</code>.
                   </p>
                   <div class="code-viewer mt-4">
                     <ul class="list-group max-w-xs">
-                      <li class="list-group-item list-group-item-default">A simple default list group item</li>
                       <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
                       <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
                       <li class="list-group-item list-group-item-success">A simple success list group item</li>
                       <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+                      <li class="list-group-item list-group-item-info">A simple danger list group item</li>
                       <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
                       <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
                     </ul>
@@ -1069,37 +1068,43 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">List Group Avatar</h4>
-                  <p class="card-subtitle">
-                    Use any tailwind classes to make a list group with avatar, like this example.
-                  </p>
+                  <p class="card-subtitle">Example of List Group with avatar.</p>
                   <div class="code-viewer mt-4">
                     <ul class="list-group max-w-xs">
-                      <li class="list-group-item flex items-center">
-                        <img class="h-8 w-8 rounded-full" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
-                        <div class="ml-2">
+                      <li class="list-group-item flex items-center gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img" src="./images/men-avatar-01.jpg" alt="Avatar 1" />
+                        </div>
+                        <div>
                           <h6 class="text-sm font-semibold">Calvin Hawkins</h6>
-                          <p class="text-xs">hawkins@example.com</p>
+                          <p class="text-xs text-slate-500">hawkins@example.com</p>
                         </div>
                       </li>
-                      <li class="list-group-item flex items-center">
-                        <img class="h-8 w-8 rounded-full" src="./images/men-avatar-02.jpg" alt="Avatar 2" />
-                        <div class="ml-2">
+                      <li class="list-group-item flex items-center gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img" src="./images/men-avatar-02.jpg" alt="Avatar 2" />
+                        </div>
+                        <div>
                           <h6 class="text-sm font-semibold">Calvin Hawkins</h6>
-                          <p class="text-xs">hawkins@email.com</p>
+                          <p class="text-xs text-slate-500">hawkins@email.com</p>
                         </div>
                       </li>
-                      <li class="list-group-item flex items-center">
-                        <img class="h-8 w-8 rounded-full" src="./images/men-avatar-03.jpg" alt="Avatar 3" />
-                        <div class="ml-2">
+                      <li class="list-group-item flex items-center gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img" src="./images/men-avatar-03.jpg" alt="Avatar 3" />
+                        </div>
+                        <div>
                           <h6 class="text-sm font-semibold">Calvin Hawkins</h6>
-                          <p class="text-xs">calvin@example.com</p>
+                          <p class="text-xs text-slate-500">calvin@example.com</p>
                         </div>
                       </li>
-                      <li class="list-group-item flex items-center">
-                        <img class="h-8 w-8 rounded-full" src="./images/men-avatar-04.jpg" alt="Avatar 4" />
-                        <div class="ml-2">
+                      <li class="list-group-item flex items-center gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img" src="./images/men-avatar-04.jpg" alt="Avatar 4" />
+                        </div>
+                        <div>
                           <h6 class="font-sem text-sm">Calvin Hawkins</h6>
-                          <p class="text-xs">calvin.hawkins@example.com</p>
+                          <p class="text-xs text-slate-500">calvin.hawkins@example.com</p>
                         </div>
                       </li>
                     </ul>
@@ -1112,9 +1117,7 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">List Group Custom Content</h4>
-                  <p class="card-subtitle">
-                    Use any Tailwind custom classes to make a list group custom content, like this example.
-                  </p>
+                  <p class="card-subtitle">Example of List Group with custom contend and utility classes</p>
                   <div class="code-viewer mt-4">
                     <ul class="list-group max-w-sm">
                       <li class="list-group-item active">
@@ -1122,7 +1125,7 @@
                           <p class="text-sm font-semibold">List group item heading</p>
                           <small class="text-xs font-light">1 day ago</small>
                         </div>
-                        <p class="text-xs font-normal">
+                        <p class="text-xs font-normal text-primary-200">
                           Lorem Ipsum is simply dummy text of the printing and of the printing and...
                         </p>
                       </li>
@@ -1131,7 +1134,7 @@
                           <p class="text-sm font-semibold">List group item heading</p>
                           <small class="text-xs font-light">1 day ago</small>
                         </div>
-                        <p class="text-xs font-normal">
+                        <p class="text-xs font-normal text-slate-500">
                           Lorem Ipsum is simply dummy text of the printing and of the printing and...
                         </p>
                       </li>
@@ -1140,7 +1143,7 @@
                           <p class="text-sm font-semibold">List group item heading</p>
                           <small class="text-xs font-light">1 day ago</small>
                         </div>
-                        <p class="text-xs font-normal">
+                        <p class="text-xs font-normal text-slate-500">
                           Lorem Ipsum is simply dummy text of the printing and of the printing and...
                         </p>
                       </li>
@@ -1149,7 +1152,6 @@
                 </div>
               </div>
               <!-- Card: List Group Custom Content Item End -->
-
             </div>
             <!-- List Group Ends -->
           </main>
@@ -1175,15 +1177,3 @@
     <script src="./js/app.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
