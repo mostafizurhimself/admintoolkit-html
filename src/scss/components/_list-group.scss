@@ -14,7 +14,7 @@
                         
                     }
                     &.disabled{
-                        @apply  text-[#6C757D] cursor-not-allowed bg-white hover:bg-white;
+                        @apply  text-[#6C757D] cursor-not-allowed dark:bg-slate-800 bg-white hover:bg-white dark:hover:bg-slate-800;
                     }
                 }
                 &-default{
@@ -43,7 +43,7 @@
                     
                 }
                 &.disabled{
-                    @apply  text-[#6C757D] cursor-not-allowed bg-white hover:bg-white;
+                    @apply  text-[#6C757D] cursor-not-allowed bg-white dark:bg-slate-800 dark:hover:bg-slate-800 hover:bg-white;
                 }
             }
             &-item:first-child{
