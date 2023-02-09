@@ -3,79 +3,123 @@
     .list{
         $list: &;
         &-group{
-            @apply inline-block w-auto rounded-primary text-sm border  bg-white font-medium dark:bg-slate-800  border-slate-300 dark:border-slate-600;
-            li:first-child{
+            @apply  rounded-primary text-sm border  bg-white font-medium dark:bg-slate-800  border-slate-300 dark:border-slate-600;
+            &-item{
+                @apply  py-2 px-4  text-left  border-b border-b-slate-300 dark:border-slate-600;
+
+                &-action{
+                    @apply cursor-pointer block w-full hover:bg-slate-100 dark:hover:bg-slate-600 duration-150 ease-in;
+                    &.active{
+                        @apply bg-primary-500 hover:bg-primary-500  text-slate-50;
+                        
+                    }
+                    &.disabled{
+                        @apply  text-[#6C757D] cursor-not-allowed bg-white hover:bg-white;
+                    }
+                }
+                &-default{
+                    @apply bg-white text-black;
+                }
+                &-primary{
+                    @apply bg-primary-100 text-primary-500;
+                }
+                &-secondary{
+                    @apply bg-secondary-100 text-secondary-500;
+                }
+                &-success{
+                    @apply bg-success-100 text-success-500;
+                }
+                &-danger{
+                    @apply bg-danger-100 text-danger-500;
+                }
+                &-warning{
+                    @apply bg-warning-100 text-warning-500;
+                }
+                &-dark{
+                    @apply bg-dark-100 text-dark-500;
+                }
+                &.active{
+                    @apply bg-primary-500 hover:bg-primary-500  text-slate-50;
+                    
+                }
+                &.disabled{
+                    @apply  text-[#6C757D] cursor-not-allowed bg-white hover:bg-white;
+                }
+            }
+            &-item:first-child{
                 @apply rounded-t-primary;
             }
-            li:last-child{
+            &-item:last-child{
                 @apply border-b-0 rounded-b-primary;
             }
             
-            li.disabled{
-                @apply  text-[#6C757D]  bg-slate-50 dark:bg-slate-800 dark:hover:bg-slate-800 hover:bg-slate-50  cursor-not-allowed;
-            }
         }
-        &-item{
-            @apply  py-2 px-4 min-w-[10rem] text-left  border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-150 ease-in cursor-pointer;
-            & > h5{
-                @apply text-sm font-normal;
-            }
-            & > small{
-                @apply text-xs font-normal;
-            }
-            &.active{
-                @apply bg-primary-500 hover:bg-primary-500 text-slate-100;
+
+
+
+
+
+        // &-item{
+        //     @apply  py-2 px-4 min-w-[10rem] text-left  border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-150 ease-in cursor-pointer;
+        //     & > h5{
+        //         @apply text-sm font-normal;
+        //     }
+        //     & > small{
+        //         @apply text-xs font-normal;
+        //     }
+        //     &.active{
+        //         @apply bg-primary-500 hover:bg-primary-500 text-slate-100;
             
-            }
-            .custom-content-head{
-                @apply flex justify-between mb-2;
-                & > h6{
-                    @apply text-xl font-medium my-1;
-                }
-                & >small{
-                    @apply text-xs;
-                }
-            }
-        }
+        //     }
+        //     .custom-content-head{
+        //         @apply flex justify-between mb-2;
+        //         & > h6{
+        //             @apply text-xl font-medium my-1;
+        //         }
+        //         & >small{
+        //             @apply text-xs;
+        //         }
+        //     }
+        // }
         
-        &-item-avatar{
-            @apply  flex items-center py-2 px-4 min-w-[14rem] text-left  border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-150 ease-in cursor-pointer;
-            & > h5{
-                @apply text-sm font-normal;
-            }
-            & > img{
-                @apply w-8 rounded-full ; 
-            }
-        }
-        &-item-icon{
-            @apply py-2 px-4 min-w-[10rem] flex items-center text-left border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
-        }
-        &-item-primary{
-            @apply py-2 px-4 min-w-[10rem] text-left hover:bg-primary-600 hover:text-white duration-150 ease-in cursor-pointer bg-primary-300 text-primary-600 ;
-        }
-        &-item-success{
-            @apply py-2 px-4 min-w-[10rem] text-left hover:bg-success-600 hover:text-white duration-150 ease-in cursor-pointer  bg-success-300 text-success-600 ;
-        }
-        &-item-secondary{
-            @apply py-2 px-4 min-w-[10rem] text-left hover:bg-secondary-600 hover:text-white duration-150 ease-in cursor-pointer  bg-secondary-300 text-secondary-600 ;
-        }
-        &-item-warning{
-            @apply py-2 px-4 min-w-[10rem] text-left hover:bg-warning-600 hover:text-white duration-150 ease-in cursor-pointer  bg-warning-300 text-warning-600;
-        }
-        &-item-danger{
-            @apply py-2 px-4 min-w-[10rem] text-left hover:bg-danger-600 hover:text-white duration-150 ease-in cursor-pointer  bg-danger-300 text-danger-600 ;
-        }
-        &-item-dark{
-            @apply  py-2 px-4 min-w-[10rem] text-left hover:bg-dark-600 hover:text-white duration-150 ease-in cursor-pointer bg-dark-300 text-dark-600 ;
-        }
-        &-desciption{
-            @apply ml-2;
-            & > h6{
-                @apply text-sm;
-            }
-            & > p{
-                @apply text-xs tracking-tighter;
-            }
-        }
+        // &-item-avatar{
+        //     @apply  flex items-center py-2 px-4 min-w-[14rem] text-left  border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-150 ease-in cursor-pointer;
+        //     & > h5{
+        //         @apply text-sm font-normal;
+        //     }
+        //     & > img{
+        //         @apply w-8 rounded-full ; 
+        //     }
+        // }
+        // &-item-icon{
+        //     @apply py-2 px-4 min-w-[10rem] flex items-center text-left border-b border-b-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600 duration-100 ease-in cursor-pointer;
+        // }
+        // &-item-primary{
+        //     @apply py-2 px-4 min-w-[10rem] text-left hover:bg-primary-600 hover:text-white duration-150 ease-in cursor-pointer bg-primary-300 text-primary-600 ;
+        // }
+        // &-item-success{
+        //     @apply py-2 px-4 min-w-[10rem] text-left hover:bg-success-600 hover:text-white duration-150 ease-in cursor-pointer  bg-success-300 text-success-600 ;
+        // }
+        // &-item-secondary{
+        //     @apply py-2 px-4 min-w-[10rem] text-left hover:bg-secondary-600 hover:text-white duration-150 ease-in cursor-pointer  bg-secondary-300 text-secondary-600 ;
+        // }
+        // &-item-warning{
+        //     @apply py-2 px-4 min-w-[10rem] text-left hover:bg-warning-600 hover:text-white duration-150 ease-in cursor-pointer  bg-warning-300 text-warning-600;
+        // }
+        // &-item-danger{
+        //     @apply py-2 px-4 min-w-[10rem] text-left hover:bg-danger-600 hover:text-white duration-150 ease-in cursor-pointer  bg-danger-300 text-danger-600 ;
+        // }
+        // &-item-dark{
+        //     @apply  py-2 px-4 min-w-[10rem] text-left hover:bg-dark-600 hover:text-white duration-150 ease-in cursor-pointer bg-dark-300 text-dark-600 ;
+        // }
+        // &-desciption{
+        //     @apply ml-2;
+        //     & > h6{
+        //         @apply text-sm;
+        //     }
+        //     & > p{
+        //         @apply text-xs tracking-tighter;
+        //     }
+        // }
     }
 }
