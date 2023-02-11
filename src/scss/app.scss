@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+// Variables
+$ti-font-path: '../fonts';
+
 // Vendor
 @import 'simplebar/dist/simplebar.css';
+@import 'boxicons/css/boxicons.css';
+@import '@tabler/icons-webfont/tabler-icons.scss';
 
 // Base
 @import 'fonts';
@@ -33,4 +38,8 @@
 @import 'components/avatar';
 @import 'components/progressbar';
 @import 'components/tabs';
+<<<<<<< HEAD
 @import 'components/select';
+=======
+@import 'components/list-group';
+>>>>>>> 512e8dd9c339cca236292830a893adb7b974f489
