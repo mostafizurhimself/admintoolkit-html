@@ -43,12 +43,13 @@
             @apply w-16 h-16;
         }
     }
-    
+
     // Pulse Spinner Styles
     .spinner-pulse{
         @apply relative flex items-center justify-center;
         &-item{
             @apply absolute w-full h-full rounded-full border-4 border-primary-500;
+            // Custom css 
             backface-visibility: hidden;
             animation: loader 1500ms linear infinite;
         }
