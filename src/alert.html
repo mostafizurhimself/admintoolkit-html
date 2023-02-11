@@ -7,7 +7,6 @@
     <title>Alerts - Admin Toolkit</title>
     <link rel="stylesheet" href="./css/app.css" />
   </head>
-
   <body>
     <div id="app" class="min-h-screen w-full">
       <!-- Sidebar Starts -->
@@ -37,24 +36,24 @@
         <!-- Sidebar Header Ends -->
 
         <!-- Sidebar Menu Starts -->
-        <ul class="sidebar-content">
+        <ul class="sidebar-content" data-simplebar>
           <!-- Dashboard -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu active">
+            <a href="javascript:void(0);" class="sidebar-menu ">
               <span class="sidebar-menu-icon">
                 <i data-feather="home"></i>
               </span>
-              <span class="sidebar-menu--text">Dashboard</span>
+              <span class="sidebar-menu-text">Dashboard</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="javascript:void(0);" class="sidebar-submenu-item active">Ecommerce</a>
+                <a href="/" class="sidebar-submenu-item ">Ecommerce</a>
               </li>
               <li>
-                <a href="javascript:void(0);" class="sidebar-submenu-item">Analytics</a>
+                <a href="./analytics.html" class="sidebar-submenu-item">Analytics</a>
               </li>
             </ul>
           </li>
@@ -63,34 +62,353 @@
 
           <!-- Email -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
+            <a href="./email.html" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="mail"></i>
               </span>
-              <span class="sidebar-menu--text">Email</span>
+              <span class="sidebar-menu-text">Email</span>
             </a>
           </li>
-
+          <!-- Chat -->
+          <li>
+            <a href="./chat.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="message-square"></i>
+              </span>
+              <span class="sidebar-menu-text">Chat</span>
+            </a>
+          </li>
+          <!-- Calendar -->
+          <li>
+            <a href="./calendar.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="calendar"></i>
+              </span>
+              <span class="sidebar-menu-text">Calendar</span>
+            </a>
+          </li>
           <!-- Invoice -->
           <li>
             <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="file-text"></i>
               </span>
-              <span class="sidebar-menu--text">Invoice</span>
+              <span class="sidebar-menu-text">Invoice</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="javascript:void(0);" class="sidebar-submenu-item">Create</a>
+                <a href="./create.html" class="sidebar-submenu-item">Create</a>
               </li>
               <li>
-                <a href="javascript:void(0);" class="sidebar-submenu-item">Listing</a>
+                <a href="./listing.html" class="sidebar-submenu-item">Listing</a>
               </li>
               <li>
-                <a href="javascript:void(0);" class="sidebar-submenu-item">Details</a>
+                <a href="./details.html" class="sidebar-submenu-item">Details</a>
+              </li>
+            </ul>
+          </li>
+          <!-- ecommnerce -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="shopping-bag"></i>
+              </span>
+              <span class="sidebar-menu-text">Ecommerce</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./products.html" class="sidebar-submenu-item">Products</a>
+              </li>
+              <li>
+                <a href="./products-details.html" class="sidebar-submenu-item">Products Details</a>
+              </li>
+              <li>
+                <a href="./orders.html" class="sidebar-submenu-item">Orders</a>
+              </li>
+              <li>
+                <a href="./order-details.html" class="sidebar-submenu-item">Order Details</a>
+              </li>
+              <li>
+                <a href="./customers.html" class="sidebar-submenu-item">Customers</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Users -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="users"></i>
+              </span>
+              <span class="sidebar-menu-text">Users</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./list.html" class="sidebar-submenu-item">List</a>
+              </li>
+              <li>
+                <a href="./profile.html" class="sidebar-submenu-item">Profile</a>
+              </li>
+            </ul>
+          </li>
+          <!--  Commponents  -->
+          <div class="sidebar-menu-header">Components</div>
+          <!-- Common  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu active">
+              <span class="sidebar-menu-icon">
+                <i data-feather="box"></i>
+              </span>
+              <span class="sidebar-menu-text">Common</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./alert.html" class="sidebar-submenu-item active">Alert</a>
+              </li>
+              <li>
+                <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
+              </li>
+              <li>
+                <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
+              </li>
+              <li>
+                <a href="./button.html" class="sidebar-submenu-item">Button</a>
+              </li>
+              <li>
+                <a href="./card.html" class="sidebar-submenu-item">Card</a>
+              </li>
+              <li>
+                <a href="./carousel.html" class="sidebar-submenu-item">Carousel</a>
+              </li>
+              <li>
+                <a href="./collapse.html" class="sidebar-submenu-item">Collapse</a>
+              </li>
+              <li>
+                <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
+              </li>
+              <li>
+                <a href="./dropdown.html" class="sidebar-submenu-item">Dropdown</a>
+              </li>
+              <li>
+                <a href="./list-group.html" class="sidebar-submenu-item">List Group</a>
+              </li>
+              <li>
+                <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
+              </li>
+              <li>
+                <a href="./pagination.html" class="sidebar-submenu-item">Pagination</a>
+              </li>
+              <li>
+                <a href="./progress-bar.html" class="sidebar-submenu-item">Progress</a>
+              </li>
+               <li>
+                <a href="./skeleton.html" class="sidebar-submenu-item">Skeleton</a>
+              </li>
+              <li>
+                <a href="./spinner.html" class="sidebar-submenu-item">Spinner</a>
+              </li>
+              <li>
+                <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
+              </li>
+              <li>
+                <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
+              </li>
+              <li>
+                <a href="./tooltip.html" class="sidebar-submenu-item">Tooltip</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Forms  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="edit"></i>
+              </span>
+              <span class="sidebar-menu-text">Forms</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./input.html" class="sidebar-submenu-item">Input</a>
+              </li>
+              <li>
+                <a href="./textarea.html" class="sidebar-submenu-item">Textarea</a>
+              </li>
+               <li>
+                <a href="./checkbox.html" class="sidebar-submenu-item">Checkbox</a>
+              </li>
+              <li>
+                <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
+              </li>
+              <li>
+                <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
+              </li>
+              <li>
+                <a href="./select.html" class="sidebar-submenu-item">Select</a>
+              </li>
+              <li>
+                <a href="./range.html" class="sidebar-submenu-item">Range</a>
+              </li>
+              <li>
+                <a href="./datepicker.html" class="sidebar-submenu-item">Datepicker</a>
+              </li>
+              <li>
+                <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
+              </li>
+              <li>
+                <a href="./uploader.html" class="sidebar-submenu-item">Uploader</a>
+              </li>
+              <li>
+                <a href="./layout.html" class="sidebar-submenu-item">Layout</a>
+              </li>
+              <li>
+                <a href="./validation.html" class="sidebar-submenu-item">Validation</a>
+              </li>
+              <li>
+                <a href="./wizard.html" class="sidebar-submenu-item">Wizard</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Tables  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="list"></i>
+              </span>
+              <span class="sidebar-menu-text">Tables</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./basic-table.html" class="sidebar-submenu-item">Basic Table</a>
+              </li>
+              <li>
+                <a href="./data-table.html" class="sidebar-submenu-item">Data Table</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Charts  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="pie-chart"></i>
+              </span>
+              <span class="sidebar-menu-text">Charts</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./apex.html" class="sidebar-submenu-item">Apex</a>
+              </li>
+              <li>
+                <a href="./chartjs.html" class="sidebar-submenu-item">Chartjs</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Icons-->
+          <li>
+            <a href="./icons.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                 <i data-feather="italic"></i>
+              </span>
+              <span class="sidebar-menu-text">Icons</span>
+            </a>
+          </li>
+          <!-- Typography-->
+          <li>
+            <a href="./typography.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                 <i data-feather="type"></i>
+              </span>
+              <span class="sidebar-menu-text">Typography</span>
+            </a>
+          </li>
+          <!--  Pages  -->
+          <div class="sidebar-menu-header">Pages</div>
+          <!-- Authentication  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="lock"></i>
+              </span>
+              <span class="sidebar-menu-text">Authentication</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./login.html" class="sidebar-submenu-item">Login v1</a>
+              </li>
+              <li>
+                <a href="./login-v2.html" class="sidebar-submenu-item">Login v2</a>
+              </li>
+              <li>
+                <a href="./register.html" class="sidebar-submenu-item">Register v1</a>
+              </li>
+              <li>
+                <a href="./register-v2.html" class="sidebar-submenu-item">Register v2</a>
+              </li>
+              <li>
+                <a href="./recover-password.html" class="sidebar-submenu-item">Forgot Password v1</a>
+              </li>
+              <li>
+                <a href="./recover-password-v2.html" class="sidebar-submenu-item">Forgot Password v2</a>
+              </li>
+              <li>
+                <a href="./reset-password.html" class="sidebar-submenu-item">Reset Password v1</a>
+              </li>
+              <li>
+                <a href="./reset-password-v2.html" class="sidebar-submenu-item">Reset Password v2</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Miscellaneous  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="grid"></i>
+              </span>
+              <span class="sidebar-menu-text">Miscellaneous</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./start-page.html" class="sidebar-submenu-item">Start Page</a>
+              </li>
+              <li>
+                <a href="./comming-soon.html" class="sidebar-submenu-item">Coming Soon</a>
+              </li>
+              <li>
+                <a href="./maintenance.html" class="sidebar-submenu-item">Maintenance</a>
+              </li>
+              <li>
+                <a href="./404-error.html" class="sidebar-submenu-item">Error 404</a>
+              </li>
+              <li>
+                <a href="./500-error.html" class="sidebar-submenu-item">Error 500</a>
+              </li>
+              <li>
+                <a href="./not-authorized.html" class="sidebar-submenu-item">Not Authorized</a>
               </li>
             </ul>
           </li>
@@ -190,7 +508,6 @@
                             fill="#FFF"
                           ></path>
                         </svg>
-
                         <span>English</span>
                       </button>
                     </li>
@@ -204,7 +521,6 @@
                           <path d="M0 85.331h512v113.775H0z"></path>
                           <path fill="#FFDA44" d="M0 312.882h512v113.775H0z"></path>
                         </svg>
-
                         <span>German</span>
                       </button>
                     </li>
@@ -218,7 +534,6 @@
                           <path fill="#0052B4" d="M0 85.331h170.663v341.337H0z"></path>
                           <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z"></path>
                         </svg>
-
                         <span>French</span>
                       </button>
                     </li>
@@ -239,7 +554,6 @@
                             <path d="M207.093 248.57h32.601v22.261h-32.601z"></path>
                           </g>
                         </svg>
-
                         <span>Arabic</span>
                       </button>
                     </li>
@@ -255,7 +569,6 @@
                             fill="#FFDA44"
                           ></path>
                         </svg>
-
                         <span>Chinese</span>
                       </button>
                     </li>
@@ -268,7 +581,6 @@
                           <path fill="#2d6e41" d="M0 85.331h513v342H0z"></path>
                           <circle fill="#F40B32" cx="218.902" cy="256.5" r="115"></circle>
                         </svg>
-
                         <span>Bangla</span>
                       </button>
                     </li>
@@ -308,7 +620,6 @@
                     class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
                   >
                     <i width="24" height="24" data-feather="bell"></i>
-
                     <span
                       class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200"
                     >
@@ -512,7 +823,6 @@
                               <circle cx="12" cy="12" r="10"></circle>
                               <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
-
                             <span>1 hour ago</span>
                           </p>
                         </div>
@@ -560,7 +870,6 @@
                       >
                         John Doe
                       </span>
-
                       <span class="inline-block text-left text-xs text-slate-400">Admin</span>
                     </div>
                   </button>
@@ -568,24 +877,24 @@
 
                 <div class="dropdown-content right-0 mt-5 w-[180px]">
                   <a
-                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
                     href="/dashboard/ecommerce"
+                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
                   >
                     <i class="text-slate-600 dark:text-slate-400" width="18" height="18" data-feather="user"></i>
                     <span>Profile</span>
                   </a>
 
                   <a
-                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
                     href="/dashboard/ecommerce"
+                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
                   >
                     <i class="text-slate-600 dark:text-slate-400" width="18" height="18" data-feather="settings"></i>
                     <span>Settings</span>
                   </a>
 
                   <a
-                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
                     href="/dashboard/ecommerce"
+                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
                   >
                     <i class="text-slate-600 dark:text-slate-400" width="18" height="18" data-feather="log-out"></i>
                     <span>Sign out</span>
@@ -594,7 +903,6 @@
               </div>
               <!-- Profile Dropdown Ends -->
             </div>
-            <!-- Header Options Ends -->
           </div>
         </header>
         <!-- Header Ends -->
@@ -604,10 +912,10 @@
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
-            <div class="flex items-center justify-between mb-6">
-              <h3>Alerts</h3>
+            <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+              <h5>Alerts</h5>
 
-              <ol class="breadcrumb">
+              <ol class="breadcrumb ml-auto">
                 <li class="breadcrumb-item">
                   <a href="#">Home</a>
                 </li>
@@ -617,69 +925,76 @@
                 </li>
 
                 <li class="breadcrumb-item">
-                  <a href="#">Alerts</a>
+                  <a href="#">alerts</a>
                 </li>
               </ol>
             </div>
             <!-- Page Title Ends -->
-            
+
             <!-- Alert Starts -->
-            <div class="space-y-6">
-              <!-- Card: Basic Alert Starts -->
-              <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Basic Alert</h4>
+            <div class="mt-6 space-y-6">
+              <!-- Basic Alert Starts -->
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
+                <div class="p-6">
+                  <h4 class="text-lg font-semibold">Basic Alert</h4>
 
-                    <p class="card-subtitle">
-                      For styling an alert, use <code>alert</code> and <code>alert-*</code> clasess.
-                    </p>
+                  <p class="text-sm text-slate-400">
+                    For styling an alert, use <code>alert</code> and <code>alert-*</code> clasess.
+                  </p>
 
-                    <div class="code-viewer mt-4">
-                        <div class="flex flex-col gap-4">
-                          <div class="alert alert-primary" role="alert">
-                            <p class="alert-text">This is a primary alert with addtional information and content.</p>
-                          </div>
-                          <div class="alert alert-secondary" role="alert">
-                            <p class="alert-text">This is a secondary alert with addtional information and content.</p>
-                          </div>
-                          <div class="alert alert-success" role="alert">
-                            <p class="alert-text">This is a success alert with addtional information and content.</p>
-                          </div>
-                          <div class="alert alert-danger" role="alert">
-                            <p class="alert-text">This is a danger alert with addtional information and content.</p>
-                          </div>
-                          <div class="alert alert-warning" role="alert">
-                            <p class="alert-text">This is a warning alert with addtional information and content.</p>
-                          </div>
-                          <div class="alert alert-info" role="alert">
-                            <p class="alert-text">This is a info alert with addtional information and content.</p>
-                          </div>
-                          <div class="alert alert-dark" role="alert">
-                            <p class="alert-text">This is a dark alert with addtional information and content.</p>
-                          </div>
+                  <div class="mt-6">
+                    <div class="code-viewer">
+                      <div class="flex flex-col gap-4">
+                        <div class="alert alert-primary" role="alert">
+                          <p class="alert-text">This is a primary alert with addtional information and content.</p>
                         </div>
+                        <div class="alert alert-secondary" role="alert">
+                          <p class="alert-text">This is a secondary alert with addtional information and content.</p>
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                          <p class="alert-text">This is a success alert with addtional information and content.</p>
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                          <p class="alert-text">This is a danger alert with addtional information and content.</p>
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                          <p class="alert-text">This is a warning alert with addtional information and content.</p>
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                          <p class="alert-text">This is a info alert with addtional information and content.</p>
+                        </div>
+                        <div class="alert alert-dark" role="alert">
+                          <p class="alert-text">This is a dark alert with addtional information and content.</p>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
               </div>
-              <!-- Card: Basic Alert Ends -->
+              <!-- Basic Alert Ends -->
 
-              <!-- Card: Icon Alert Starts -->
-              <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Alert with icon</h4>
+              <!-- Icon Alert Start -->
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
+                <div class="p-6">
+                  <h4 class="text-lg font-semibold">Alert with icon</h4>
 
-                    <p class="card-subtitle">
-                      Use
-                      <a
-                        class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
-                        href="https://feathericons.com"
-                        target="_blank"
-                        >Feather Icons</a
-                      >
-                      to create alerts with icons.
-                    </p>
+                  <p class="text-sm text-slate-400">
+                    Use
+                    <a
+                      class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
+                      href="https://feathericons.com"
+                      target="_blank"
+                      >Feather Icons</a
+                    >
+                    to create alerts with icons.
+                  </p>
 
-                    <div class="code-viewer mt-4">
+                  <div class="mt-6">
+                    <div class="code-viewer">
                       <div class="flex flex-col gap-4">
                         <div class="alert alert-primary" role="alert">
                           <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-circle"></i></span>
@@ -711,20 +1026,24 @@
                         </div>
                       </div>
                     </div>
+                  </div>
                 </div>
               </div>
-              <!-- Card: Icon Alert Ends -->
+              <!-- Icon Alert End -->
 
-              <!-- Card: Icon Alert Starts -->
-              <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Outlined Alert</h4>
+              <!-- Outlined Alert Starts -->
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
+                <div class="p-6">
+                  <h4 class="text-lg font-semibold">Outlined Alert</h4>
 
-                    <p class="card-subtitle">
-                      Use <code>alert-outlined</code> class with our contextual classes to create an oulined alert
-                    </p>
+                  <p class="text-sm text-slate-400">
+                    Use <code>alert-outlined</code> class with our contextual classes to create an oulined alert
+                  </p>
 
-                    <div class="code-viewer mt-4">
+                  <div class="mt-6">
+                    <div class="code-viewer">
                       <div class="flex flex-col gap-4">
                         <div class="alert alert-outline-primary" role="alert">
                           <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-circle"></i></span>
@@ -756,20 +1075,24 @@
                         </div>
                       </div>
                     </div>
+                  </div>
                 </div>
               </div>
-              <!-- Card: Icon Alert Ends -->
+              <!-- Outlined Alert Ends -->
 
-              <!-- Card: Dismissable Alert Starts -->
-              <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Dismissable Alert</h4>
+              <!-- Dismissable Alert Starts -->
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
+                <div class="p-6">
+                  <h4 class="text-lg font-semibold">Dismissable Alert</h4>
 
-                    <p class="card-subtitle">
-                      Use <code>dismissable</code> class with our theme classes to create an outline alert
-                    </p>
+                  <p class="text-sm text-slate-400">
+                    Use <code>dismissable</code> class with our theme classes to create an outline alert
+                  </p>
 
-                    <div class="code-viewer mt-4">
+                  <div class="mt-6">
+                    <div class="code-viewer">
                       <div class="flex flex-col gap-4">
                         <div class="alert alert-primary alert-dismissible" role="alert">
                           <p class="alert-text">This is a primary alert with addtional information and content.</p>
@@ -815,22 +1138,26 @@
                         </div>
                       </div>
                     </div>
+                  </div>
                 </div>
               </div>
-              <!-- Card: Dismissable Alert Ends -->
-              
-              <!-- Card: Controlled Alert Starts -->
-              <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Controlled Alert</h4>
+              <!-- Dismissable Alert Ends -->
 
-                    <p class="card-subtitle">
-                      If you want to manually hide the alert, you need to use
-                      <code>createDismissableAlert</code> function. This function is available globally. Then you can call
-                      the <code>dismiss()</code> method to hide the alert.
-                    </p>
+              <!-- Controlled Alert Start -->
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
+                <div class="p-6">
+                  <h4 class="text-lg font-semibold">Controlled Alert</h4>
 
-                    <div class="code-viewer mt-4">
+                  <p class="text-sm text-slate-400">
+                    If you want to manually hide the alert, you need to use
+                    <code>createDismissableAlert</code> function. This function is available globally. Then you can call
+                    the <code>dismiss()</code> method to hide the alert.
+                  </p>
+
+                  <div class="mt-6">
+                    <div id="controlled-code-viewer" class="code-viewer" data-render-source="false">
                       <div class="flex flex-col gap-4">
                         <div class="alert alert-success" role="alert" id="controlled-alert">
                           <span class="alert-icon"><i width="1em" height="1em" data-feather="check-circle"></i></span>
@@ -843,25 +1170,31 @@
                         </div>
                       </div>
                     </div>
+                  </div>
                 </div>
               </div>
-              <!-- Card: Controlled Alert Ends -->
+              <!-- Controlled Alert Ends -->
 
-              <!-- Card: Additional Content Alert Starts -->
-              <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Additional Content</h4>
+              <!-- Additional Content Alert Starts -->
+              <div
+                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
+              >
+                <div class="p-6">
+                  <h4 class="text-lg font-semibold">Additional Content</h4>
 
-                    <p class="card-subtitle">
-                      Use the <code>show</code> class to control the visibility of the alert
-                    </p>
+                  <p class="text-sm text-slate-400">
+                    Use the <code>show</code> class to control the visibility of the alert
+                  </p>
 
-                    <div class="code-viewer mt-4">
+                  <div class="mt-6">
+                    <div class="code-viewer">
                       <div class="flex flex-col gap-4">
                         <div class="alert alert-success alert-dismissible" role="alert">
                           <div>
                             <div class="flex items-center gap-2 text-base font-medium">
-                              <span class="alert-icon"><i width="1em" height="1em" data-feather="check-circle"></i></span>
+                              <span class="alert-icon"
+                                ><i width="1em" height="1em" data-feather="check-circle"></i
+                              ></span>
                               <span>Order completed</span>
                             </div>
                             <div class="mt-3 font-normal">
@@ -881,10 +1214,12 @@
                         <div class="alert alert-danger alert-dismissible" role="alert">
                           <div>
                             <div class="flex items-center gap-2 text-base font-medium">
-                              <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-triangle"></i></span>
+                              <span class="alert-icon"
+                                ><i width="1em" height="1em" data-feather="alert-triangle"></i
+                              ></span>
                               <span> There were some errors with your submission</span>
                             </div>
-                            <div class="pl-10 mt-3 font-normal">
+                            <div class="ps-10 mt-3 font-normal">
                               <ul class="list-disc space-y-1" role="list">
                                 <li>Your password must be at least 8 characters</li>
                                 <li>Your password must include at least one pro wrestling finishing move</li>
@@ -897,11 +1232,12 @@
                         </div>
                       </div>
                     </div>
+                  </div>
                 </div>
               </div>
-              <!-- Card: Additional Content Alert Ends -->
+              <!-- Additional Content Alert Ends -->
             </div>
-            <!-- Alert Ends -->
+            <!-- Alert Starts -->
           </main>
           <!-- Main Content Ends -->
 

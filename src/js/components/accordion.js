@@ -1,41 +1,34 @@
+import Accordion from 'accordion-js';
+
 const accordion = {
   init() {
-    const accordions = document.querySelectorAll('.accordion');
+    const accordions     = [...document.querySelectorAll('.accordion')];
+    const defaultOptions = {
+      elementClass : 'accordion-item',
+      triggerClass : 'accordion-header',
+      panelClass   : 'accordion-content',
+      activeClass  : 'active',
+      duration     : 300
+    }
 
-    accordions.forEach((accordion) => {
-      const accordionBtn = accordion.querySelector('.accordion-btn');
-
-      accordionBtn.addEventListener('click', () => {
-        const accordionContent = accordion.querySelector('.accordion-content');
-
-        if (accordionContent) {
-          if (!accordion.classList.contains('open')) {
-            //open the accordion
-            accordion.classList.add('open');
-
-            accordionContent.style.height = 0;
-
-            setTimeout(() => {
-              accordionContent.style.height = accordionContent.scrollHeight + 'px';
-            }, 10);
-          } else {
-            //close the accordion
-            accordionContent.style.height = accordionContent.scrollHeight + 'px';
-
-            setTimeout(() => {
-              accordionContent.style.height = 0;
-            }, 10);
-
-            setTimeout(() => {
-              accordion.classList.remove('open');
-
-              accordionContent.removeAttribute('style');
-            }, 10);
+    if(accordions.length) {
+      accordions.forEach((accordion) => {
+        // Store accordion items
+        const accordionItems = [...accordion.querySelectorAll(`.${defaultOptions.elementClass}`)];
+        // Store accordion option for each accordion
+        const accordionOptions = { ...defaultOptions, openOnInit: [] };
+        
+        accordionItems.forEach((item, index) => {
+          if(item.classList.contains('active')) {
+            // Push default active .accordion-item index 
+            accordionOptions.openOnInit.push(index);
           }
-        }
+        });
+        
+        new Accordion(accordion, accordionOptions);
       });
-    });
-  },
-};
+    }
+  }
+}
 
 export default accordion;

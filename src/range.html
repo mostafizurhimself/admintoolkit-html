@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecommerce - Admin Toolkit</title>
+    <title> Range - Admin Toolkit</title>
     <link rel="stylesheet" href="./css/app.css" />
   </head>
+
   <body>
     <div id="app" class="min-h-screen w-full">
       <!-- Sidebar Starts -->
@@ -36,24 +37,24 @@
         <!-- Sidebar Header Ends -->
 
         <!-- Sidebar Menu Starts -->
-        <ul class="sidebar-content">
+        <ul class="sidebar-content" data-simplebar>
           <!-- Dashboard -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu active">
+            <a href="javascript:void(0);" class="sidebar-menu ">
               <span class="sidebar-menu-icon">
                 <i data-feather="home"></i>
               </span>
-              <span class="sidebar-menu--text">Dashboard</span>
+              <span class="sidebar-menu-text">Dashboard</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="javascript:void(0);" class="sidebar-submenu-item active">Ecommerce</a>
+                <a href="/" class="sidebar-submenu-item ">Ecommerce</a>
               </li>
               <li>
-                <a href="javascript:void(0);" class="sidebar-submenu-item">Analytics</a>
+                <a href="./analytics.html" class="sidebar-submenu-item">Analytics</a>
               </li>
             </ul>
           </li>
@@ -62,34 +63,353 @@
 
           <!-- Email -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
+            <a href="./email.html" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="mail"></i>
               </span>
-              <span class="sidebar-menu--text">Email</span>
+              <span class="sidebar-menu-text">Email</span>
             </a>
           </li>
-
+          <!-- Chat -->
+          <li>
+            <a href="./chat.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="message-square"></i>
+              </span>
+              <span class="sidebar-menu-text">Chat</span>
+            </a>
+          </li>
+          <!-- Calendar -->
+          <li>
+            <a href="./calendar.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="calendar"></i>
+              </span>
+              <span class="sidebar-menu-text">Calendar</span>
+            </a>
+          </li>
           <!-- Invoice -->
           <li>
             <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="file-text"></i>
               </span>
-              <span class="sidebar-menu--text">Invoice</span>
+              <span class="sidebar-menu-text">Invoice</span>
               <span class="sidebar-menu-arrow">
                 <i data-feather="chevron-right"></i>
               </span>
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="javascript:void(0);" class="sidebar-submenu-item">Create</a>
+                <a href="./create.html" class="sidebar-submenu-item">Create</a>
               </li>
               <li>
-                <a href="javascript:void(0);" class="sidebar-submenu-item">Listing</a>
+                <a href="./listing.html" class="sidebar-submenu-item">Listing</a>
               </li>
               <li>
-                <a href="javascript:void(0);" class="sidebar-submenu-item">Details</a>
+                <a href="./details.html" class="sidebar-submenu-item">Details</a>
+              </li>
+            </ul>
+          </li>
+          <!-- ecommnerce -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="shopping-bag"></i>
+              </span>
+              <span class="sidebar-menu-text">Ecommerce</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./products.html" class="sidebar-submenu-item">Products</a>
+              </li>
+              <li>
+                <a href="./products-details.html" class="sidebar-submenu-item">Products Details</a>
+              </li>
+              <li>
+                <a href="./orders.html" class="sidebar-submenu-item">Orders</a>
+              </li>
+              <li>
+                <a href="./order-details.html" class="sidebar-submenu-item">Order Details</a>
+              </li>
+              <li>
+                <a href="./customers.html" class="sidebar-submenu-item">Customers</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Users -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="users"></i>
+              </span>
+              <span class="sidebar-menu-text">Users</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./list.html" class="sidebar-submenu-item">List</a>
+              </li>
+              <li>
+                <a href="./profile.html" class="sidebar-submenu-item">Profile</a>
+              </li>
+            </ul>
+          </li>
+          <!--  Commponents  -->
+          <div class="sidebar-menu-header">Components</div>
+          <!-- Common  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu ">
+              <span class="sidebar-menu-icon">
+                <i data-feather="box"></i>
+              </span>
+              <span class="sidebar-menu-text">Common</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
+              </li>
+              <li>
+                <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
+              </li>
+              <li>
+                <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
+              </li>
+              <li>
+                <a href="./button.html" class="sidebar-submenu-item">Button</a>
+              </li>
+              <li>
+                <a href="./card.html" class="sidebar-submenu-item">Card</a>
+              </li>
+              <li>
+                <a href="./carousel.html" class="sidebar-submenu-item">Carousel</a>
+              </li>
+              <li>
+                <a href="./collapse.html" class="sidebar-submenu-item">Collapse</a>
+              </li>
+              <li>
+                <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
+              </li>
+              <li>
+                <a href="./dropdown.html" class="sidebar-submenu-item">Dropdown</a>
+              </li>
+              <li>
+                <a href="./list-group.html" class="sidebar-submenu-item">List Group</a>
+              </li>
+              <li>
+                <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
+              </li>
+              <li>
+                <a href="./pagination.html" class="sidebar-submenu-item">Pagination</a>
+              </li>
+              <li>
+                <a href="./progress-bar.html" class="sidebar-submenu-item">Progress</a>
+              </li>
+               <li>
+                <a href="./skeleton.html" class="sidebar-submenu-item">Skeleton</a>
+              </li>
+              <li>
+                <a href="./spinner.html" class="sidebar-submenu-item">Spinner</a>
+              </li>
+              <li>
+                <a href="./tabs.html" class="sidebar-submenu-item ">Tab</a>
+              </li>
+              <li>
+                <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
+              </li>
+              <li>
+                <a href="./tooltip.html" class="sidebar-submenu-item">Tooltip</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Forms  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu active">
+              <span class="sidebar-menu-icon">
+                <i data-feather="edit"></i>
+              </span>
+              <span class="sidebar-menu-text">Forms</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./input.html" class="sidebar-submenu-item">Input</a>
+              </li>
+              <li>
+                <a href="./textarea.html" class="sidebar-submenu-item">Textarea</a>
+              </li>
+               <li>
+                <a href="./checkbox.html" class="sidebar-submenu-item">Checkbox</a>
+              </li>
+              <li>
+                <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
+              </li>
+              <li>
+                <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
+              </li>
+              <li>
+                <a href="./select.html" class="sidebar-submenu-item">Select</a>
+              </li>
+              <li>
+                <a href="./range.html" class="sidebar-submenu-item active">Range</a>
+              </li>
+              <li>
+                <a href="./datepicker.html" class="sidebar-submenu-item">Datepicker</a>
+              </li>
+              <li>
+                <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
+              </li>
+              <li>
+                <a href="./uploader.html" class="sidebar-submenu-item">Uploader</a>
+              </li>
+              <li>
+                <a href="./layout.html" class="sidebar-submenu-item">Layout</a>
+              </li>
+              <li>
+                <a href="./validation.html" class="sidebar-submenu-item">Validation</a>
+              </li>
+              <li>
+                <a href="./wizard.html" class="sidebar-submenu-item">Wizard</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Tables  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="list"></i>
+              </span>
+              <span class="sidebar-menu-text">Tables</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./basic-table.html" class="sidebar-submenu-item">Basic Table</a>
+              </li>
+              <li>
+                <a href="./data-table.html" class="sidebar-submenu-item">Data Table</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Charts  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="pie-chart"></i>
+              </span>
+              <span class="sidebar-menu-text">Charts</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./apex.html" class="sidebar-submenu-item">Apex</a>
+              </li>
+              <li>
+                <a href="./chartjs.html" class="sidebar-submenu-item">Chartjs</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Icons-->
+          <li>
+            <a href="./icons.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                 <i data-feather="italic"></i>
+              </span>
+              <span class="sidebar-menu-text">Icons</span>
+            </a>
+          </li>
+          <!-- Typography-->
+          <li>
+            <a href="./typography.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                 <i data-feather="type"></i>
+              </span>
+              <span class="sidebar-menu-text">Typography</span>
+            </a>
+          </li>
+          <!--  Pages  -->
+          <div class="sidebar-menu-header">Pages</div>
+          <!-- Authentication  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="lock"></i>
+              </span>
+              <span class="sidebar-menu-text">Authentication</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./login.html" class="sidebar-submenu-item">Login v1</a>
+              </li>
+              <li>
+                <a href="./login-v2.html" class="sidebar-submenu-item">Login v2</a>
+              </li>
+              <li>
+                <a href="./register.html" class="sidebar-submenu-item">Register v1</a>
+              </li>
+              <li>
+                <a href="./register-v2.html" class="sidebar-submenu-item">Register v2</a>
+              </li>
+              <li>
+                <a href="./recover-password.html" class="sidebar-submenu-item">Forgot Password v1</a>
+              </li>
+              <li>
+                <a href="./recover-password-v2.html" class="sidebar-submenu-item">Forgot Password v2</a>
+              </li>
+              <li>
+                <a href="./reset-password.html" class="sidebar-submenu-item">Reset Password v1</a>
+              </li>
+              <li>
+                <a href="./reset-password-v2.html" class="sidebar-submenu-item">Reset Password v2</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Miscellaneous  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="grid"></i>
+              </span>
+              <span class="sidebar-menu-text">Miscellaneous</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./start-page.html" class="sidebar-submenu-item">Start Page</a>
+              </li>
+              <li>
+                <a href="./comming-soon.html" class="sidebar-submenu-item">Coming Soon</a>
+              </li>
+              <li>
+                <a href="./maintenance.html" class="sidebar-submenu-item">Maintenance</a>
+              </li>
+              <li>
+                <a href="./404-error.html" class="sidebar-submenu-item">Error 404</a>
+              </li>
+              <li>
+                <a href="./500-error.html" class="sidebar-submenu-item">Error 500</a>
+              </li>
+              <li>
+                <a href="./not-authorized.html" class="sidebar-submenu-item">Not Authorized</a>
               </li>
             </ul>
           </li>
@@ -97,7 +417,6 @@
         <!-- Sidebar Menu Ends -->
       </aside>
       <!-- Sidebar Ends -->
-
       <!-- Wrapper Starts -->
       <div class="wrapper">
         <!-- Header Starts -->
@@ -593,7 +912,44 @@
         <div class="content">
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
-            <h1 class="text-3xl font-semibold">Ecommerce Dashboard</h1>
+            <!-- Page Title Starts -->
+            <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+              <h5>Range</h5>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#">Home</a>
+                </li>
+
+                <li class="breadcrumb-item">
+                  <a href="#">Components</a>
+                </li>
+
+                <li class="breadcrumb-item">
+                  <a href="#">Range</a>
+                </li>
+              </ol>
+            </div>
+            <!-- Page Title Ends -->
+
+            <!-- Tabs Starts -->
+            <div class="space-y-6">
+              <!-- Card: Basic Tab Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Range</h4>
+
+                  <p class="card-subtitle">
+                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <!-- Code Here  -->
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Basic Tab Ends -->
+            </div>
+            <!-- Tabs Ends -->
           </main>
           <!-- Main Content Ends -->
 

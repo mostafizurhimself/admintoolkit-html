@@ -1,15 +1,18 @@
+//Import third party packages
+import 'simplebar';
+import '@fortawesome/fontawesome-free/js/all';
+import feather from 'feather-icons';
+import ResizeObserver from 'resize-observer-polyfill';
+
 //Import core components
-import alert from './components/alert';
 import accordion from './components/accordion';
-import dropdown from './components/dropdown';
+import alert from './components/alert';
 import codeViewer from './components/code-viewer';
+import dropdown from './components/dropdown';
 import modal from './components/modal';
-import themeSwitcher from './components/theme-switcher';
 import sidebar from './components/sidebar';
 import tabs from './components/tabs';
-
-//Import third party packages
-import feather from 'feather-icons';
+import themeSwitcher from './components/theme-switcher';
 
 // Initialize code highlighting
 codeViewer.init();
@@ -37,3 +40,6 @@ tabs.init();
 
 // Initialize feather icons Icons should be replaced at the end
 feather.replace();
+
+// Polyfill for ResizeObserver
+window.ResizeObserver = ResizeObserver;

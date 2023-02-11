@@ -15,10 +15,14 @@
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
+    "@fortawesome/fontawesome-free": "^6.2.1",
     "@mertasan/tailwindcss-variables": "^2.5.1",
+    "@tabler/icons-webfont": "^2.2.0",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
+    "accordion-js": "^3.3.2",
     "babel-loader": "^9.1.2",
+    "boxicons": "^2.1.4",
     "browser-sync": "^2.27.11",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
@@ -39,6 +43,8 @@
     "@floating-ui/dom": "^1.1.1",
     "feather-icons": "^4.29.0",
     "highlight.js": "^11.7.0",
-    "js-beautify": "^1.14.7"
+    "js-beautify": "^1.14.7",
+    "resize-observer-polyfill": "^1.5.1",
+    "simplebar": "^6.2.0"
   }
 }
