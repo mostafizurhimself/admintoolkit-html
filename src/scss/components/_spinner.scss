@@ -1,7 +1,9 @@
 @layer components{
 
     .spinner{
-        @apply  inline-block rounded-full border-4 animate-spin border-slate-500 dark:border-slate-100  border-r-transparent dark:border-r-transparent align-[-0.125em];
+        @apply  inline-block rounded-full border-4 animate-spin border-slate-600 dark:border-slate-100  border-r-transparent dark:border-r-transparent align-[-0.125em];
+
+        // Spinner Color Styles 
         &-primary{
             @apply border-primary-500 dark:border-primary-500  border-r-transparent dark:border-r-transparent;
         }
@@ -23,7 +25,22 @@
         &-dark{
             @apply border-dark-500 dark:border-dark-500  border-r-transparent dark:border-r-transparent;
         }
+
+        // Spinner Size Stlyes 
+        &-xs{
+            @apply w-6 h-6;
+        }
+        &-sm{
+            @apply w-8 h-8;
+        }
+        &-md{
+            @apply w-10 h-10;
+        }
+        &-lg{
+            @apply w-12 h-12;
+        }
+        &-xlg{
+            @apply w-16 h-16;
+        }
     }
-
-
 }
