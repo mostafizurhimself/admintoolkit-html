@@ -29,13 +29,13 @@ class Dropdown {
   }
 
   init() {
-    this.renderContent();
+    this.registerEvents();
   }
 
-  renderContent() {
-    computePosition(this.toggle, this.content, {
+  computePosition() {
+    computePosition(this.target, this.content, {
       placement: 'bottom-end',
-      strategy: 'fixed',
+      strategy: 'absolute',
       middleware: [flip(), shift(), offset(6)],
     }).then((position) => {
       Object.assign(this.content.style, {
@@ -45,7 +45,26 @@ class Dropdown {
     });
   }
 
-  registerEvents() {}
+  registerEvents() {
+    const outsideClickListener = (e) => {
+      if (!this.target.contains(e.target)) {
+        this.content.classList.remove('show');
+        this.content.classList.remove('animate-fade-in-up');
+        removeClickListener();
+      }
+    };
+
+    const removeClickListener = () => {
+      document.removeEventListener('click', outsideClickListener);
+    };
+
+    this.toggle.addEventListener('click', () => {
+      this.computePosition();
+      this.content.classList.toggle('show');
+      this.content.classList.toggle('animate-fade-in-up');
+      document.addEventListener('click', outsideClickListener);
+    });
+  }
 }
 
 const dropdown = {
