@@ -12,14 +12,10 @@ import dropdown from './components/dropdown';
 import modal from './components/modal';
 import sidebar from './components/sidebar';
 import tabs from './components/tabs';
-import select from './components/select';
 
 //Import third party packages
 import themeSwitcher from './components/theme-switcher';
 import select from './components/select';
-
-//Import third party packages
-import feather from 'feather-icons';
 
 // Initialize code highlighting
 codeViewer.init();
