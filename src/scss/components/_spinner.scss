@@ -43,4 +43,27 @@
             @apply w-16 h-16;
         }
     }
+    
+    // Pulse Spinner Styles
+    .spinner-pulse{
+        @apply relative flex items-center justify-center;
+        &-item{
+            @apply absolute w-full h-full rounded-full border-4 border-primary-500;
+            backface-visibility: hidden;
+            animation: loader 1500ms linear infinite;
+        }
+        &-item:last-child{
+            animation-delay: 500ms;
+        }
+        @keyframes loader {
+            0%{
+              transform: scale(0);
+              opacity: 1;  
+            }
+            100%{
+                transform: scale(1.3);
+                opacity: 0;  
+            }
+        }
+    }
 }
