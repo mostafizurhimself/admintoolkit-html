@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Icons- Admin Toolkit</title>
+    <title>Icons- Admin Toolkit</title>
     <link rel="stylesheet" href="./css/app.css" />
   </head>
 
@@ -40,7 +40,7 @@
         <ul class="sidebar-content" data-simplebar>
           <!-- Dashboard -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu ">
+            <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="home"></i>
               </span>
@@ -51,7 +51,7 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="/" class="sidebar-submenu-item ">Ecommerce</a>
+                <a href="/" class="sidebar-submenu-item">Ecommerce</a>
               </li>
               <li>
                 <a href="./analytics.html" class="sidebar-submenu-item">Analytics</a>
@@ -164,7 +164,7 @@
           <div class="sidebar-menu-header">Components</div>
           <!-- Common  -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu ">
+            <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="box"></i>
               </span>
@@ -213,14 +213,14 @@
               <li>
                 <a href="./progress-bar.html" class="sidebar-submenu-item">Progress</a>
               </li>
-               <li>
+              <li>
                 <a href="./skeleton.html" class="sidebar-submenu-item">Skeleton</a>
               </li>
               <li>
                 <a href="./spinner.html" class="sidebar-submenu-item">Spinner</a>
               </li>
               <li>
-                <a href="./tabs.html" class="sidebar-submenu-item ">Tab</a>
+                <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
               </li>
               <li>
                 <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
@@ -248,7 +248,7 @@
               <li>
                 <a href="./textarea.html" class="sidebar-submenu-item">Textarea</a>
               </li>
-               <li>
+              <li>
                 <a href="./checkbox.html" class="sidebar-submenu-item">Checkbox</a>
               </li>
               <li>
@@ -327,7 +327,7 @@
           <li>
             <a href="./icons.html" class="sidebar-menu active">
               <span class="sidebar-menu-icon">
-                 <i data-feather="italic"></i>
+                <i data-feather="italic"></i>
               </span>
               <span class="sidebar-menu-text">Icons</span>
             </a>
@@ -336,7 +336,7 @@
           <li>
             <a href="./typography.html" class="sidebar-menu">
               <span class="sidebar-menu-icon">
-                 <i data-feather="type"></i>
+                <i data-feather="type"></i>
               </span>
               <span class="sidebar-menu-text">Typography</span>
             </a>
@@ -470,7 +470,7 @@
             <!-- Header Options Starts -->
             <div class="flex items-center space-x-6">
               <!-- Language Dropdown Starts -->
-              <div class="dropdown">
+              <div class="dropdown" data-strategy="absolute">
                 <div class="dropdown-toggle">
                   <button type="button" class="flex items-center space-x-2 text-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
@@ -614,7 +614,7 @@
               <!-- Dark Mood Toggle Ends -->
 
               <!-- Notification Dropdown Starts -->
-              <div class="dropdown -mt-0.5">
+              <div class="dropdown -mt-0.5" data-strategy="absolute">
                 <div class="dropdown-toggle">
                   <button
                     class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
@@ -855,7 +855,7 @@
               <!-- Notification Dropdown Ends -->
 
               <!-- Profile Dropdown Starts -->
-              <div class="dropdown">
+              <div class="dropdown" data-strategy="absolute">
                 <div class="dropdown-toggle">
                   <button class="group relative flex items-center space-x-1.5" type="button">
                     <img
@@ -875,7 +875,7 @@
                   </button>
                 </div>
 
-                <div class="dropdown-content right-0 mt-5 w-[180px]">
+                <div class="dropdown-content w-[180px]">
                   <a
                     href="/dashboard/ecommerce"
                     class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
@@ -939,18 +939,25 @@
                   <h4 class="card-title">Feather Icons</h4>
 
                   <p class="card-subtitle">
-                    Checkout <a class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline" href="https://feathericons.com" target="_blank">Feather Icons</a> to discover more.
+                    Checkout
+                    <a
+                      class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
+                      href="https://feathericons.com"
+                      target="_blank"
+                      >Feather Icons</a
+                    >
+                    to discover more.
                   </p>
 
                   <div class="code-viewer mt-4">
-                      <div class="flex items-center gap-6">
-                        <i data-feather="home"></i>
-                        <i data-feather="mail"></i>
-                        <i data-feather="calendar"></i>
-                        <i data-feather="users"></i>
-                        <i data-feather="settings"></i>
-                        <i data-feather="message-square"></i>
-                      </div>
+                    <div class="flex items-center gap-6">
+                      <i data-feather="home"></i>
+                      <i data-feather="mail"></i>
+                      <i data-feather="calendar"></i>
+                      <i data-feather="users"></i>
+                      <i data-feather="settings"></i>
+                      <i data-feather="message-square"></i>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -962,26 +969,33 @@
                   <h4 class="card-title">Box Icons</h4>
 
                   <p class="card-subtitle">
-                    Checkout <a class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline" href="https://feathericons.com" target="_blank">Box Icons</a> to discover more.
+                    Checkout
+                    <a
+                      class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
+                      href="https://feathericons.com"
+                      target="_blank"
+                      >Box Icons</a
+                    >
+                    to discover more.
                   </p>
-                
+
                   <div class="code-viewer mt-4">
                     <div class="flex flex-col gap-6">
                       <div class="flex items-center gap-6 text-2xl">
-                        <i class='bx bxs-home'></i>
-                        <i class='bx bxs-envelope' ></i>
-                        <i class='bx bxs-calendar-alt' ></i>
-                        <i class='bx bxs-user' ></i>
-                        <i class='bx bxs-cog' ></i>
-                        <i class='bx bxs-message-dots' ></i>
+                        <i class="bx bxs-home"></i>
+                        <i class="bx bxs-envelope"></i>
+                        <i class="bx bxs-calendar-alt"></i>
+                        <i class="bx bxs-user"></i>
+                        <i class="bx bxs-cog"></i>
+                        <i class="bx bxs-message-dots"></i>
                       </div>
                       <div class="flex items-center gap-6 text-2xl">
-                        <i class='bx bx-home'></i>
-                        <i class='bx bx-envelope' ></i>
-                        <i class='bx bx-calendar-alt' ></i>
-                        <i class='bx bx-user' ></i>
-                        <i class='bx bx-cog' ></i>
-                        <i class='bx bx-message-dots'></i>
+                        <i class="bx bx-home"></i>
+                        <i class="bx bx-envelope"></i>
+                        <i class="bx bx-calendar-alt"></i>
+                        <i class="bx bx-user"></i>
+                        <i class="bx bx-cog"></i>
+                        <i class="bx bx-message-dots"></i>
                       </div>
                     </div>
                   </div>
@@ -995,9 +1009,15 @@
                   <h4 class="card-title">Fontawesome Icons</h4>
 
                   <p class="card-subtitle">
-                    Checkout <a class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline" href="https://fontawesome.com" target="_blank">Fontawesome</a> to discover more.
+                    Checkout
+                    <a
+                      class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
+                      href="https://fontawesome.com"
+                      target="_blank"
+                      >Fontawesome</a
+                    >
+                    to discover more.
                   </p>
-                  
 
                   <div class="code-viewer mt-4">
                     <div class="flex items-center gap-6 text-xl">
@@ -1019,7 +1039,14 @@
                   <h4 class="card-title">Tabler Icons</h4>
 
                   <p class="card-subtitle">
-                    Checkout <a class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline" href="https://tabler-icons.io/" target="_blank">Tabler Icons</a> to discover more.
+                    Checkout
+                    <a
+                      class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
+                      href="https://tabler-icons.io/"
+                      target="_blank"
+                      >Tabler Icons</a
+                    >
+                    to discover more.
                   </p>
 
                   <div class="code-viewer mt-4">
