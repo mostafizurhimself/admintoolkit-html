@@ -3,7 +3,7 @@
     @apply relative inline-flex items-center;
 
     &-toggle {
-      @apply inline-block cursor-pointer;
+      @apply inline-flex cursor-pointer;
     }
 
     &-content {
@@ -12,6 +12,10 @@
 
     &-content.show {
       @apply block;
+    }
+
+    &-item {
+      @apply block cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-slate-700;
     }
   }
 }

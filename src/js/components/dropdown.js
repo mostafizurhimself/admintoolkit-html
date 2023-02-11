@@ -56,7 +56,7 @@ class Dropdown {
       this.content.style.position = 'absolute';
     }
     computePosition(this.target, this.content, {
-      placement: this.options.placement || 'bottom-end',
+      placement: this.options.placement || 'bottom-start',
       strategy: this.options.strategy || 'fixed',
       middleware: [flip(), shift(), offset(6), hide()],
     }).then((position) => {
