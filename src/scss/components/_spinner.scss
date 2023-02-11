@@ -1,0 +1,29 @@
+@layer components{
+
+    .spinner{
+        @apply  inline-block rounded-full border-4 animate-spin border-slate-500 dark:border-slate-100  border-r-transparent dark:border-r-transparent align-[-0.125em];
+        &-primary{
+            @apply border-primary-500 dark:border-primary-500  border-r-transparent dark:border-r-transparent;
+        }
+        &-secondary{
+            @apply border-secondary-500 dark:border-secondary-500  border-r-transparent dark:border-r-transparent;
+        }
+        &-success{
+            @apply border-success-500 dark:border-success-500  border-r-transparent dark:border-r-transparent;
+        }
+        &-info{
+            @apply border-info-500 dark:border-info-500  border-r-transparent dark:border-r-transparent;
+        }
+        &-danger{
+            @apply border-danger-500 dark:border-danger-500  border-r-transparent dark:border-r-transparent;
+        }
+        &-warning{
+            @apply border-warning-500 dark:border-warning-500  border-r-transparent dark:border-r-transparent;
+        }
+        &-dark{
+            @apply border-dark-500 dark:border-dark-500  border-r-transparent dark:border-r-transparent;
+        }
+    }
+
+
+}
