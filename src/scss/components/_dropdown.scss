@@ -1,13 +1,13 @@
 @layer components {
   .dropdown {
-    @apply relative items-center;
+    @apply relative inline-flex items-center;
 
     &-toggle {
       @apply inline-block cursor-pointer;
     }
 
     &-content {
-      @apply absolute top-0 left-0 z-10 hidden rounded-primary border bg-white shadow-lg dark:border-slate-800 dark:bg-slate-800;
+      @apply fixed top-0 left-0 z-20 hidden rounded-primary border bg-white shadow-lg dark:border-slate-800 dark:bg-slate-800;
     }
 
     &-content.show {

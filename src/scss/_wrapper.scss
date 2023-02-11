@@ -1,8 +1,8 @@
 .wrapper {
-  @apply flex flex-1 flex-col transition-margin duration-300 ease-in-out lg:ml-72;
+  @apply flex flex-1 flex-col transition-margin duration-300 ease-in-out lg:pl-72;
 
   &.expanded {
-    @apply lg:ml-20;
+    @apply lg:pl-20;
   }
 
   .header {

@@ -1,7 +1,7 @@
-import { computePosition, offset, flip, shift } from '@floating-ui/dom';
+import { computePosition, offset, flip, shift, autoUpdate, hide } from '@floating-ui/dom';
 
 class Dropdown {
-  constructor(target) {
+  constructor(target, options = {}) {
     if (typeof target === 'string') {
       this.target = document.querySelector(target);
     }
@@ -25,27 +25,11 @@ class Dropdown {
       throw new Error('No content element found');
     }
 
+    this.options = options;
     this.init();
   }
 
   init() {
-    this.registerEvents();
-  }
-
-  computePosition() {
-    computePosition(this.target, this.content, {
-      placement: 'bottom-end',
-      strategy: 'absolute',
-      middleware: [flip(), shift(), offset(6)],
-    }).then((position) => {
-      Object.assign(this.content.style, {
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-      });
-    });
-  }
-
-  registerEvents() {
     const outsideClickListener = (e) => {
       if (!this.target.contains(e.target)) {
         this.content.classList.remove('show');
@@ -55,15 +39,39 @@ class Dropdown {
     };
 
     const removeClickListener = () => {
+      this.cleanup();
       document.removeEventListener('click', outsideClickListener);
     };
 
     this.toggle.addEventListener('click', () => {
-      this.computePosition();
+      this.updatePosition();
       this.content.classList.toggle('show');
       this.content.classList.toggle('animate-fade-in-up');
       document.addEventListener('click', outsideClickListener);
     });
+  }
+
+  computePosition() {
+    if (this.options.strategy === 'absolute') {
+      this.content.style.position = 'absolute';
+    }
+    computePosition(this.target, this.content, {
+      placement: this.options.placement || 'bottom-end',
+      strategy: this.options.strategy || 'fixed',
+      middleware: [flip(), shift(), offset(6), hide()],
+    }).then((position) => {
+      const { referenceHidden } = position.middlewareData.hide;
+      Object.assign(this.content.style, {
+        visibility: referenceHidden ? 'hidden' : 'visible',
+        left: `${position.x}px`,
+        top: `${position.y}px`,
+      });
+    });
+  }
+
+  updatePosition() {
+    const cleanup = autoUpdate(this.target, this.content, this.computePosition.bind(this));
+    this.cleanup = cleanup;
   }
 }
 
@@ -71,22 +79,7 @@ const dropdown = {
   init() {
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach((dropdown) => {
-      new Dropdown(dropdown);
-
-      // const toggle = dropdown.querySelector('.dropdown-toggle');
-      // const content = dropdown.querySelector('.dropdown-content');
-
-      // toggle.addEventListener('click', () => {
-      //   content.classList.toggle('show');
-      //   content.classList.toggle('animate-fade-in-up');
-      // });
-
-      // document.addEventListener('click', (e) => {
-      //   if (!dropdown.contains(e.target)) {
-      //     content.classList.remove('show');
-      //     content.classList.remove('animate-fade-in-up');
-      //   }
-      // });
+      new Dropdown(dropdown, dropdown.dataset);
     });
   },
 };
