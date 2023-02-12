@@ -39,7 +39,7 @@
         <ul class="sidebar-content" data-simplebar>
           <!-- Dashboard -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu ">
+            <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="home"></i>
               </span>
@@ -50,7 +50,7 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="/" class="sidebar-submenu-item ">Ecommerce</a>
+                <a href="/" class="sidebar-submenu-item">Ecommerce</a>
               </li>
               <li>
                 <a href="./analytics.html" class="sidebar-submenu-item">Analytics</a>
@@ -212,7 +212,7 @@
               <li>
                 <a href="./progress-bar.html" class="sidebar-submenu-item">Progress</a>
               </li>
-               <li>
+              <li>
                 <a href="./skeleton.html" class="sidebar-submenu-item">Skeleton</a>
               </li>
               <li>
@@ -247,7 +247,7 @@
               <li>
                 <a href="./textarea.html" class="sidebar-submenu-item">Textarea</a>
               </li>
-               <li>
+              <li>
                 <a href="./checkbox.html" class="sidebar-submenu-item">Checkbox</a>
               </li>
               <li>
@@ -326,7 +326,7 @@
           <li>
             <a href="./icons.html" class="sidebar-menu">
               <span class="sidebar-menu-icon">
-                 <i data-feather="italic"></i>
+                <i data-feather="italic"></i>
               </span>
               <span class="sidebar-menu-text">Icons</span>
             </a>
@@ -335,7 +335,7 @@
           <li>
             <a href="./typography.html" class="sidebar-menu">
               <span class="sidebar-menu-icon">
-                 <i data-feather="type"></i>
+                <i data-feather="type"></i>
               </span>
               <span class="sidebar-menu-text">Typography</span>
             </a>
@@ -469,7 +469,7 @@
             <!-- Header Options Starts -->
             <div class="flex items-center space-x-6">
               <!-- Language Dropdown Starts -->
-              <div class="dropdown">
+              <div class="dropdown" data-strategy="absolute">
                 <div class="dropdown-toggle">
                   <button type="button" class="flex items-center space-x-2 text-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
@@ -613,7 +613,7 @@
               <!-- Dark Mood Toggle Ends -->
 
               <!-- Notification Dropdown Starts -->
-              <div class="dropdown -mt-0.5">
+              <div class="dropdown -mt-0.5" data-strategy="absolute">
                 <div class="dropdown-toggle">
                   <button
                     class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
@@ -854,7 +854,7 @@
               <!-- Notification Dropdown Ends -->
 
               <!-- Profile Dropdown Starts -->
-              <div class="dropdown">
+              <div class="dropdown" data-strategy="absolute">
                 <div class="dropdown-toggle">
                   <button class="group relative flex items-center space-x-1.5" type="button">
                     <img
@@ -874,7 +874,7 @@
                   </button>
                 </div>
 
-                <div class="dropdown-content right-0 mt-5 w-[180px]">
+                <div class="dropdown-content w-[180px]">
                   <a
                     href="/dashboard/ecommerce"
                     class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
@@ -941,7 +941,7 @@
                   <p class="card-subtitle">Basic usage of <code>Modal</code> component</p>
 
                   <div class="code-viewer mt-4">
-                    <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modal-basic">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-basic">
                       Open Basic Modal
                     </button>
 
@@ -969,11 +969,11 @@
                           </div>
                           <div class="modal-footer">
                             <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary" data-dismisss="modal">
+                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
                                 Cancel
                               </button>
 
-                              <button type="button" class="btn btn-md btn-primary" data-dismisss="modal">Done</button>
+                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
                             </div>
                           </div>
                         </div>
@@ -997,25 +997,15 @@
 
                   <div class="code-viewer mt-4">
                     <div class="flex gap-2">
-                      <button
-                        type="button"
-                        class="btn btn-primary btn-md"
-                        data-toggle="modal"
-                        data-target="#modal-small"
-                      >
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-small">
                         Small Modal
                       </button>
-                      <button
-                        type="button"
-                        class="btn btn-primary btn-md"
-                        data-toggle="modal"
-                        data-target="#modal-large"
-                      >
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-large">
                         Large Modal
                       </button>
                       <button
                         type="button"
-                        class="btn btn-primary btn-md"
+                        class="btn btn-primary"
                         data-toggle="modal"
                         data-target="#modal-custom-size"
                       >
@@ -1048,10 +1038,10 @@
                           </div>
                           <div class="modal-footer">
                             <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary" data-dismisss="modal">
+                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
                                 Cancel
                               </button>
-                              <button type="button" class="btn btn-md btn-primary" data-dismisss="modal">Done</button>
+                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
                             </div>
                           </div>
                         </div>
@@ -1082,10 +1072,10 @@
                           </div>
                           <div class="modal-footer">
                             <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary" data-dismisss="modal">
+                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
                                 Cancel
                               </button>
-                              <button type="button" class="btn btn-md btn-primary" data-dismisss="modal">Done</button>
+                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
                             </div>
                           </div>
                         </div>
@@ -1116,10 +1106,10 @@
                           </div>
                           <div class="modal-footer">
                             <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary" data-dismisss="modal">
+                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
                                 Cancel
                               </button>
-                              <button type="button" class="btn btn-md btn-primary" data-dismisss="modal">Done</button>
+                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
                             </div>
                           </div>
                         </div>
@@ -1138,12 +1128,7 @@
                   <p class="card-subtitle">Use <code>fullScreen</code> prop to open modal in fullscreen mode.</p>
 
                   <div class="code-viewer mt-4">
-                    <button
-                      type="button"
-                      class="btn btn-primary btn-md"
-                      data-toggle="modal"
-                      data-target="#modal-full-screen"
-                    >
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-full-screen">
                       Open Full Screen Modal
                     </button>
 
@@ -1171,10 +1156,10 @@
                           </div>
                           <div class="modal-footer">
                             <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary" data-dismisss="modal">
+                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
                                 Cancel
                               </button>
-                              <button type="button" class="btn btn-md btn-primary" data-dismisss="modal">Done</button>
+                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
                             </div>
                           </div>
                         </div>
@@ -1193,12 +1178,7 @@
                   <p class="card-subtitle">Use <code>centered</code> prop to center the modal</p>
 
                   <div class="code-viewer mt-4">
-                    <button
-                      type="button"
-                      class="btn btn-primary btn-md"
-                      data-toggle="modal"
-                      data-target="#modal-centered"
-                    >
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-centered">
                       Open Centered Modal
                     </button>
 
@@ -1226,10 +1206,10 @@
                           </div>
                           <div class="modal-footer">
                             <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary" data-dismisss="modal">
+                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
                                 Cancel
                               </button>
-                              <button type="button" class="btn btn-md btn-primary" data-dismisss="modal">Done</button>
+                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
                             </div>
                           </div>
                         </div>
@@ -1251,12 +1231,7 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content">
-                      <button
-                        type="button"
-                        class="btn btn-primary btn-md"
-                        data-toggle="modal"
-                        data-target="#modal-scrollable"
-                      >
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-scrollable">
                         Open Scrollable Modal
                       </button>
 
@@ -1326,10 +1301,10 @@
                             </div>
                             <div class="modal-footer">
                               <div class="flex items-center justify-end gap-2">
-                                <button type="button" class="btn btn-md btn-plain-secondary" data-dismisss="modal">
+                                <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
                                   Cancel
                                 </button>
-                                <button type="button" class="btn btn-md btn-primary" data-dismisss="modal">Done</button>
+                                <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
                               </div>
                             </div>
                           </div>
@@ -1338,12 +1313,7 @@
                     </div>
 
                     <div class="code-viewer-source">
-                      <button
-                        type="button"
-                        class="btn btn-primary btn-md"
-                        data-trigger="modal"
-                        data-id="#modal-scrollable"
-                      >
+                      <button type="button" class="btn btn-primary" data-trigger="modal" data-id="#modal-scrollable">
                         Open Scrollable Modal
                       </button>
 
@@ -1365,10 +1335,10 @@
                             <div class="modal-body h-96">lorem ipsum...</div>
                             <div class="modal-footer">
                               <div class="flex items-center justify-end gap-2">
-                                <button type="button" class="btn btn-md btn-plain-secondary" data-dismisss="modal">
+                                <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
                                   Cancel
                                 </button>
-                                <button type="button" class="btn btn-md btn-primary" data-dismisss="modal">Done</button>
+                                <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
                               </div>
                             </div>
                           </div>
@@ -1388,7 +1358,7 @@
                   <p class="card-subtitle">You can controll the modal via javascript</p>
 
                   <div class="code-viewer mt-4">
-                    <button type="button" class="btn btn-primary btn-md" id="modal-controlled-toggle">
+                    <button type="button" class="btn btn-primary" id="modal-controlled-toggle">
                       Open Controlled Modal
                     </button>
 
@@ -1416,10 +1386,10 @@
                           </div>
                           <div class="modal-footer">
                             <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary" data-dismisss="modal">
+                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
                                 Cancel
                               </button>
-                              <button type="button" class="btn btn-md btn-primary" data-dismisss="modal">Done</button>
+                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
                             </div>
                           </div>
                         </div>
@@ -1440,12 +1410,7 @@
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <button
-                      type="button"
-                      class="btn btn-primary btn-md"
-                      data-toggle="modal"
-                      data-target="#modal-backdrop"
-                    >
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-backdrop">
                       Open Modal
                     </button>
 
@@ -1473,10 +1438,10 @@
                           </div>
                           <div class="modal-footer">
                             <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-md btn-plain-secondary" data-dismisss="modal">
+                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
                                 Cancel
                               </button>
-                              <button type="button" class="btn btn-md btn-primary" data-dismisss="modal">Done</button>
+                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
                             </div>
                           </div>
                         </div>

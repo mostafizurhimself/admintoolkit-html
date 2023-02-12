@@ -1,17 +1,21 @@
 @layer components {
   .dropdown {
-    @apply relative flex items-center;
+    @apply relative inline-flex items-center;
 
     &-toggle {
-      @apply inline-block cursor-pointer;
+      @apply inline-flex cursor-pointer;
     }
 
     &-content {
-      @apply absolute top-full mt-7 hidden rounded-primary border bg-white shadow-lg dark:border-slate-800 dark:bg-slate-800;
+      @apply fixed top-0 left-0 z-20 hidden rounded-primary border bg-white shadow-lg dark:border-slate-800 dark:bg-slate-800;
     }
 
     &-content.show {
       @apply block;
+    }
+
+    &-item {
+      @apply block cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-slate-700;
     }
   }
 }
