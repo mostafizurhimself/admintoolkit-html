@@ -811,7 +811,7 @@
                 <h4 class="card-title">Basic Select</h4>
 
                 <p class="card-subtitle">
-                  Use the <code>select</code> component to create a select input.
+                  Use the <code>select</code> class to create a select input.
                 </p>
 
                 
@@ -841,7 +841,7 @@
                 <h4 class="card-title">Select Size</h4>
 
                 <p class="card-subtitle">
-                  Use the <code>select-size</code> class to change the size of the select. You can use <code>sm</code> <code>md</code> or <code>lg</code>
+                  Use the <code>select-[size]</code> class to change the size of the select. You can use <code>sm</code> <code>md</code> or <code>lg</code>
                 </p>
 
                 <div class="code-viewer mt-4">
@@ -993,7 +993,7 @@
                 
                 <div class="code-viewer mt-4">
 
-                  <select class="select" data-placeholder="Select a color..." autocomplete="off">
+                  <select class="select searchable" data-placeholder="Select a color..." autocomplete="off">
                     <option value="">Red</option>
                     <option value="1">Green</option>
                     <option value="2">Blue</option>
@@ -1007,6 +1007,66 @@
               </div>
             </div>
             <!-- Card: Searchable Select Ends -->
+
+            <!-- Card: Multiple Select Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Multiple Select</h4>
+
+                <p class="card-subtitle">
+                  Set the <code>multiple</code> attribute to select multiple item.
+                </p>
+
+                
+                <div class="code-viewer mt-4">
+                  <select class="select" multiple data-placeholder="Select a color..." autocomplete="off">
+                    <option value="">Red</option>
+                    <option value="1">Green</option>
+                    <option value="2">Blue</option>
+                    <option value="3">Yellow</option>
+                    <option value="4">Orange</option>
+                    <option value="5">Purple</option>
+                    <option value="6">Pink</option>
+                    <option value="6">Grey</option>
+                    <option value="6">Teal</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Multiple Select Ends -->
+
+            <!-- Card: Option Group Select Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Group Select</h4>
+
+                <p class="card-subtitle">
+                  Set the <code>optgroup</code> tag to select multiple item.
+                </p>
+
+                
+                <div class="code-viewer mt-4">
+                  <select class="select" data-placeholder="Select a color..." autocomplete="off">
+                    <optgroup label="Colors">
+                      <option value="">Red</option>
+                      <option value="1">Green</option>
+                      <option value="2">Blue</option>
+                      <option value="3">Yellow</option>
+                      <option value="4">Orange</option>
+                    </optgroup>
+                    <optgroup label="Countries">
+                      <option value="">Bangladesh</option>
+                      <option value="1">Indea</option>
+                      <option value="2">Pakistan</option>
+                      <option value="3">USA</option>
+                      <option value="4">German</option>
+                      <option value="5">Nepal</option>                     
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Group Select Ends -->
 
           </div>
           <!-- Select Ends -->
