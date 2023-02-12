@@ -151,7 +151,7 @@
             <!-- Header Options Starts -->
             <div class="flex items-center space-x-6">
               <!-- Language Dropdown Starts -->
-              <div class="dropdown">
+              <div class="dropdown" data-strategy="absolute">
                 <div class="dropdown-toggle">
                   <button type="button" class="flex items-center space-x-2 text-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
@@ -295,7 +295,7 @@
               <!-- Dark Mood Toggle Ends -->
 
               <!-- Notification Dropdown Starts -->
-              <div class="dropdown -mt-0.5">
+              <div class="dropdown -mt-0.5" data-strategy="absolute">
                 <div class="dropdown-toggle">
                   <button
                     class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
@@ -536,7 +536,7 @@
               <!-- Notification Dropdown Ends -->
 
               <!-- Profile Dropdown Starts -->
-              <div class="dropdown">
+              <div class="dropdown" data-strategy="absolute">
                 <div class="dropdown-toggle">
                   <button class="group relative flex items-center space-x-1.5" type="button">
                     <img
@@ -556,7 +556,7 @@
                   </button>
                 </div>
 
-                <div class="dropdown-content right-0 mt-5 w-[180px]">
+                <div class="dropdown-content w-[180px]">
                   <a
                     href="/dashboard/ecommerce"
                     class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
@@ -594,7 +594,7 @@
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
-            <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 mb-4">
+            <div class="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
               <h3>Accordion</h3>
 
               <ol class="breadcrumb">
@@ -620,54 +620,58 @@
                 <div class="card-body">
                   <h4 class="card-title">Basic Accordion</h4>
 
-                  <p class="card-subtitle">
-                    Basic usage of <code>Modal</code> component
-                  </p>
+                  <p class="card-subtitle">Basic usage of <code>Modal</code> component</p>
 
                   <div class="code-viewer mt-4">
                     <div class="accordion">
-                        <div class="accordion-item">
-                          <div class="accordion-header">
-                            <button class="accordion-btn">
-                              <span>Accordion Item 1</span>
-                            </button>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-body">
-                              <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore doloribus nemo, vel aut animi.
-                              </p>
-                            </div>
+                      <div class="accordion-item">
+                        <div class="accordion-header">
+                          <button class="accordion-btn">
+                            <span>Accordion Item 1</span>
+                          </button>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente
+                              eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore
+                              doloribus nemo, vel aut animi.
+                            </p>
                           </div>
                         </div>
-                        <div class="accordion-item">
-                          <div class="accordion-header">
-                            <button class="accordion-btn">
-                              <span>Accordion Item 2</span>
-                            </button>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-body">
-                              <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore doloribus nemo, vel aut animi.
-                              </p>
-                            </div>
+                      </div>
+                      <div class="accordion-item">
+                        <div class="accordion-header">
+                          <button class="accordion-btn">
+                            <span>Accordion Item 2</span>
+                          </button>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente
+                              eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore
+                              doloribus nemo, vel aut animi.
+                            </p>
                           </div>
                         </div>
-                        <div class="accordion-item">
-                          <div class="accordion-header">
-                            <button class="accordion-btn">
-                              <span>Accordion Item 3</span>
-                            </button>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-body">
-                              <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore doloribus nemo, vel aut animi.
-                              </p>
-                            </div>
+                      </div>
+                      <div class="accordion-item">
+                        <div class="accordion-header">
+                          <button class="accordion-btn">
+                            <span>Accordion Item 3</span>
+                          </button>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente
+                              eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore
+                              doloribus nemo, vel aut animi.
+                            </p>
                           </div>
                         </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -679,54 +683,58 @@
                 <div class="card-body">
                   <h4 class="card-title">Flush Accordion</h4>
 
-                  <p class="card-subtitle">
-                    Basic usage of <code>Modal</code> component
-                  </p>
+                  <p class="card-subtitle">Basic usage of <code>Modal</code> component</p>
 
                   <div class="code-viewer mt-4">
                     <div class="accordion">
-                        <div class="accordion-item active">
-                          <div class="accordion-header">
-                            <button class="accordion-btn">
-                              <span>Accordion Item 1</span>
-                            </button>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-body">
-                              <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore doloribus nemo, vel aut animi.
-                              </p>
-                            </div>
+                      <div class="accordion-item active">
+                        <div class="accordion-header">
+                          <button class="accordion-btn">
+                            <span>Accordion Item 1</span>
+                          </button>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente
+                              eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore
+                              doloribus nemo, vel aut animi.
+                            </p>
                           </div>
                         </div>
-                        <div class="accordion-item">
-                          <div class="accordion-header">
-                            <button class="accordion-btn">
-                              <span>Accordion Item 2</span>
-                            </button>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-body">
-                              <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore doloribus nemo, vel aut animi.
-                              </p>
-                            </div>
+                      </div>
+                      <div class="accordion-item">
+                        <div class="accordion-header">
+                          <button class="accordion-btn">
+                            <span>Accordion Item 2</span>
+                          </button>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente
+                              eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore
+                              doloribus nemo, vel aut animi.
+                            </p>
                           </div>
                         </div>
-                        <div class="accordion-item">
-                          <div class="accordion-header">
-                            <button class="accordion-btn">
-                              <span>Accordion Item 3</span>
-                            </button>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-body">
-                              <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore doloribus nemo, vel aut animi.
-                              </p>
-                            </div>
+                      </div>
+                      <div class="accordion-item">
+                        <div class="accordion-header">
+                          <button class="accordion-btn">
+                            <span>Accordion Item 3</span>
+                          </button>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente
+                              eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore
+                              doloribus nemo, vel aut animi.
+                            </p>
                           </div>
                         </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -738,54 +746,58 @@
                 <div class="card-body">
                   <h4 class="card-title">Accordion Without Icon</h4>
 
-                  <p class="card-subtitle">
-                    Basic usage of <code>Modal</code> component
-                  </p>
+                  <p class="card-subtitle">Basic usage of <code>Modal</code> component</p>
 
                   <div class="code-viewer mt-4">
                     <div class="accordion accordion-without-icon">
-                        <div class="accordion-item">
-                          <div class="accordion-header">
-                            <button class="accordion-btn">
-                              <span>Accordion Item 1</span>
-                            </button>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-body">
-                              <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore doloribus nemo, vel aut animi.
-                              </p>
-                            </div>
+                      <div class="accordion-item">
+                        <div class="accordion-header">
+                          <button class="accordion-btn">
+                            <span>Accordion Item 1</span>
+                          </button>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente
+                              eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore
+                              doloribus nemo, vel aut animi.
+                            </p>
                           </div>
                         </div>
-                        <div class="accordion-item">
-                          <div class="accordion-header">
-                            <button class="accordion-btn">
-                              <span>Accordion Item 2</span>
-                            </button>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-body">
-                              <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore doloribus nemo, vel aut animi.
-                              </p>
-                            </div>
+                      </div>
+                      <div class="accordion-item">
+                        <div class="accordion-header">
+                          <button class="accordion-btn">
+                            <span>Accordion Item 2</span>
+                          </button>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente
+                              eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore
+                              doloribus nemo, vel aut animi.
+                            </p>
                           </div>
                         </div>
-                        <div class="accordion-item">
-                          <div class="accordion-header">
-                            <button class="accordion-btn">
-                              <span>Accordion Item 3</span>
-                            </button>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-body">
-                              <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore doloribus nemo, vel aut animi.
-                              </p>
-                            </div>
+                      </div>
+                      <div class="accordion-item">
+                        <div class="accordion-header">
+                          <button class="accordion-btn">
+                            <span>Accordion Item 3</span>
+                          </button>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis minus dolor sapiente
+                              eveniet? Tempora quia dicta esse placeat dolor, aperiam incidunt numquam veniam at dolore
+                              doloribus nemo, vel aut animi.
+                            </p>
                           </div>
                         </div>
+                      </div>
                     </div>
                   </div>
                 </div>
