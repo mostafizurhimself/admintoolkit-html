@@ -213,6 +213,7 @@
   box-sizing: border-box;
   // box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
   // border-radius: 3px;
+  background-color: transparent;
   @apply rounded-primary border;
   display: flex;
   flex-wrap: wrap;
@@ -492,4 +493,33 @@
 .ts-dropdown .optgroup:first-child {
   border-top: 0 none;
 }
+}
+
+// Custom Css
+// It will override avobe code
+.ts-wrapper.select {  
+  &.select-sm .ts-control{
+      @apply py-0;
+      input {
+        @apply placeholder:text-xs;
+    }
+  }
+
+  &.select-lg .ts-control {
+      @apply py-4;
+      input {
+        @apply placeholder:text-base;
+      }
+  }
+}
+.ts-wrapper.select.is-invalid {
+  .ts-control {
+    @apply border-danger-500;
+  }
+}
+
+.ts-wrapper.select.is-valid {
+  .ts-control {
+    @apply border-success-500;
+  }
 }

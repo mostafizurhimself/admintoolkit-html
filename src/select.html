@@ -785,7 +785,7 @@
         <main class="flex-grow p-6">
           <!-- Page Title Starts -->
           <div class="flex items-center justify-between mb-6">
-            <h3>Select</h3>
+            <h5>Select Components</h5>
 
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
@@ -811,23 +811,202 @@
                 <h4 class="card-title">Basic Select</h4>
 
                 <p class="card-subtitle">
-                  For styling an select, use <code>select</code> and <code>select-*</code> clasess.
+                  Use the <code>select</code> component to create a select input.
                 </p>
 
+                
                 <div class="code-viewer mt-4">
-                  <select class="select" data-placeholder="Select a person..." autocomplete="off">
-                    <option value="">None</option>
-                    <option value="4">Thomas Edison</option>
-                    <option value="1">Nikola</option>
-                    <option value="3">Nikola Tesla</option>
-                    <option value="5">Arnold Schwarzenegger</option>
+                  <label  class="label mb-1">
+                    <span>Color</span>
+                    <span class="ml-1 text-danger-500">*</span>
+                  </label>
+                  <select class="select" data-placeholder="Select a color..." autocomplete="off">
+                    <option value="">Red</option>
+                    <option value="1">Green</option>
+                    <option value="2">Blue</option>
+                    <option value="3">Yellow</option>
+                    <option value="4">Orange</option>
+                    <option value="5">Purple</option>
+                    <option value="6">Pink</option>
                   </select>
 
-                  <div class="py-32"></div>
                 </div>
               </div>
             </div>
             <!-- Card: Basic Select Ends -->
+
+            <!-- Card: Select Size Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Select Size</h4>
+
+                <p class="card-subtitle">
+                  Use the <code>select-size</code> class to change the size of the select. You can use <code>sm</code> <code>md</code> or <code>lg</code>
+                </p>
+
+                <div class="code-viewer mt-4">
+                  <!-- Small -->
+                  <select class="select select-sm" data-placeholder="Select a color..." autocomplete="off">
+                    <option value="">Red</option>
+                    <option value="1">Green</option>
+                    <option value="2">Blue</option>
+                    <option value="3">Yellow</option>
+                    <option value="4">Orange</option>
+                    <option value="5">Purple</option>
+                    <option value="6">Pink</option>
+                  </select>
+                  <!-- Medium -->
+                  <select class="select mt-3" data-placeholder="Select a color..." autocomplete="off">
+                    <option value="">Red</option>
+                    <option value="1">Green</option>
+                    <option value="2">Blue</option>
+                    <option value="3">Yellow</option>
+                    <option value="4">Orange</option>
+                    <option value="5">Purple</option>
+                    <option value="6">Pink</option>
+                  </select>
+                  <!-- Large -->
+                  <select class="select select-lg mt-3" data-placeholder="Select a color..." autocomplete="off">
+                    <option value="">Red</option>
+                    <option value="1">Green</option>
+                    <option value="2">Blue</option>
+                    <option value="3">Yellow</option>
+                    <option value="4">Orange</option>
+                    <option value="5">Purple</option>
+                    <option value="6">Pink</option>
+                  </select>
+
+                  <!-- <div class="py-32"></div> -->
+                </div>
+              </div>
+            </div>
+            <!-- Card: Select Size Ends -->
+
+            <!-- Card: Valid Select Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Valid Select</h4>
+
+                <p class="card-subtitle">
+                  Set the <code>is-valid</code> class to change the valid state of the select.
+                </p>
+
+                <div class="code-viewer mt-4">                  
+                  <select class="select is-valid" data-placeholder="Select a color..." autocomplete="off">
+                    <option value="">Red</option>
+                    <option value="1">Green</option>
+                    <option value="2">Blue</option>
+                    <option value="3">Yellow</option>
+                    <option value="4">Orange</option>
+                    <option value="5">Purple</option>
+                    <option value="6">Pink</option>
+                  </select>
+
+                  <p class="success-message mt-1">Looks good</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Valid Select Ends -->
+            
+            <!-- Card: Invalid Select Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Invalid Select</h4>
+
+                <p class="card-subtitle">
+                  Set the <code>is-invalid</code> class to invalid state of the select.
+                </p>
+
+                <div class="code-viewer mt-4">                  
+                  <select class="select is-invalid" data-placeholder="Select a color..." autocomplete="off">
+                    <option value="">Red</option>
+                    <option value="1">Green</option>
+                    <option value="2">Blue</option>
+                    <option value="3">Yellow</option>
+                    <option value="4">Orange</option>
+                    <option value="5">Purple</option>
+                    <option value="6">Pink</option>
+                  </select>
+                  <div class="error-message mt-1">This field is required</div>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Invalid Select Ends -->            
+            
+            <!-- Card: Disabled Select Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Disabled Select</h4>
+
+                <p class="card-subtitle">
+                  Set the <code>disabled</code> attribute to disable the size of the select.
+                </p>
+
+                <div class="code-viewer mt-4">                  
+                  <select disabled class="select" data-placeholder="Select a color..." autocomplete="off">
+                    <option value="">Red</option>
+                    <option value="1">Green</option>
+                    <option value="2">Blue</option>
+                    <option value="3">Yellow</option>
+                    <option value="4">Orange</option>
+                    <option value="5">Purple</option>
+                    <option value="6">Pink</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Disabled Select Ends -->   
+            
+             <!-- Card: Option Disabled Select Starts -->
+             <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Option Disabled Select</h4>
+
+                <p class="card-subtitle">
+                  Set the <code>disabled</code> to Option.
+                </p>
+
+                <div class="code-viewer mt-4">                  
+                  <select class="select" data-placeholder="Select a color..." autocomplete="off">
+                    <option value="">Red</option>
+                    <option value="1">Green</option>
+                    <option disabled value="2">Blue</option>
+                    <option value="3">Yellow</option>
+                    <option value="4">Orange</option>
+                    <option disabled value="5">Purple</option>
+                    <option value="6">Pink</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Option Disabled Select Ends -->   
+            
+             <!-- Card: Searchable Select Starts -->
+             <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Searchable Select</h4>
+
+                <p class="card-subtitle">
+                  Searchable is the default behaviour.
+                </p>
+
+                
+                <div class="code-viewer mt-4">
+
+                  <select class="select" data-placeholder="Select a color..." autocomplete="off">
+                    <option value="">Red</option>
+                    <option value="1">Green</option>
+                    <option value="2">Blue</option>
+                    <option value="3">Yellow</option>
+                    <option value="4">Orange</option>
+                    <option value="5">Purple</option>
+                    <option value="6">Pink</option>
+                  </select>
+
+                </div>
+              </div>
+            </div>
+            <!-- Card: Searchable Select Ends -->
 
           </div>
           <!-- Select Ends -->
