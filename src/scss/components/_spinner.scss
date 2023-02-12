@@ -48,7 +48,7 @@
       @apply w-12 h-12;
     }
 
-    &-xlg {
+    &-xl {
       @apply w-16 h-16;
     }
   }
@@ -58,7 +58,37 @@
     @apply relative flex items-center justify-center;
 
     &-item {
-      @apply absolute w-full h-full rounded-full border-4 border-primary-500;
+      @apply absolute w-full h-full rounded-full border-4 ;
+      // Spinner Color Styles
+    &-primary {
+        @apply border-primary-500 ;
+    }
+
+    &-secondary {
+        @apply border-secondary-500;
+    }
+
+    &-success {
+        @apply border-success-500;
+    }
+
+    &-info {
+        @apply border-info-500;
+    }
+
+    &-danger {
+        @apply border-danger-500;
+    }
+
+    &-warning {
+        @apply border-warning-500;
+    }
+
+    &-dark {
+        @apply border-dark-500;
+    }
+
+
       // Custom css 
       backface-visibility: hidden;
       animation: loader 1500ms linear infinite;
