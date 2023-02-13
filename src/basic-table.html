@@ -446,7 +446,7 @@
               </button>
 
               <form
-                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
+                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 -sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
                 action=""
               >
                 <div class="flex h-full items-center px-3">
@@ -944,7 +944,7 @@
                    
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
-                      <div class="max-w-3xl min-w-max shadow">
+                      <div class="max-w-3xl min-w-max">
                         <table class="table">
                             <thead>
                               <tr>
@@ -1050,7 +1050,7 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
-                      <div class="max-w-3xl min-w-max shadow">
+                      <div class="max-w-3xl min-w-max">
                         <table class="table table-striped">
                             <thead>
                               <tr>
@@ -1116,7 +1116,7 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
-                      <div class="max-w-3xl min-w-max shadow">               
+                      <div class="max-w-3xl min-w-max">               
                         <table class="table table-striped-columns">
                             <thead>
                               <tr>
@@ -1182,7 +1182,7 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
-                      <div class="max-w-3xl min-w-max shadow">
+                      <div class="max-w-3xl min-w-max">
                           <table class="table table-hover">
                               <thead>
                                 <tr>
@@ -1249,7 +1249,7 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
-                      <div class="max-w-3xl min-w-max shadow">
+                      <div class="max-w-3xl min-w-max">
                         <table class="table table-bordered">
                             <thead>
                               <tr>
@@ -1305,6 +1305,73 @@
               </div>
               <!-- Card: Bordered Table Ends -->
 
+              <!-- Card: Borderless Table Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Borderless Table</h4>
+
+                  <p class="card-subtitle">
+                    use <code>table</code> class to design a table
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
+                      <div class="max-w-3xl min-w-max">
+                        <table class="table table-borderless">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Product name</th>
+                                <th>Color</th>
+                                <th>Catagory</th>
+                                <th>Available</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>01</td>
+                                <td>Apple MacBook Pro 17"</td>
+                                <td>White</td>
+                                <td>Laptop</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$2999 </td>
+                              </tr>
+                              <tr>
+                                <td>02</td>
+                                <td>LG22MK600 21.5" Monitor</td>
+                                <td>Black</td>
+                                <td>Monitor</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$1999</td>
+                              </tr>
+                              <tr>
+                                <td>03</td>
+                                <td>Magic Mouse 2</td>
+                                <td>Sliver</td>
+                                <td>Accessories</td>
+                                <td>No</td>
+                                <td>1</td>
+                                <td>$99</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <table class="table table-borderless">
+                        <!-- ..... -->
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Borderless Table Ends -->
+
               <!-- Card: Responsive Table Starts -->
               <div class="card">
                 <div class="card-body">
@@ -1316,7 +1383,7 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content">
-                      <div class="max-w-3xl shadow">
+                      <div class="max-w-3xl">
                         <div class="table-responsive whitespace-nowrap">
                           <table class="table">
                             <thead>
@@ -1386,7 +1453,7 @@
                    
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
-                      <div class="max-w-3xl shadow">
+                      <div class="max-w-3xl">
                         <table class="table">
                             <thead>
                               <tr>
@@ -1455,6 +1522,73 @@
                 </div>
               </div>
               <!-- Card: Table With Footer Ends -->
+
+              <!-- Card: Compact Table Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Compact Table</h4>
+
+                  <p class="card-subtitle">
+                    use <code>table</code> class to design a table
+                  </p>
+                  
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
+                      <div class="max-w-3xl min-w-max">
+                        <table class="table table-compact">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Product name</th>
+                                <th>Color</th>
+                                <th>Catagory</th>
+                                <th>Available</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>01</td>
+                                <td>Apple MacBook 17"</td>
+                                <td>White</td>
+                                <td>Laptop</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$2999</td>
+                              </tr>
+                              <tr>
+                                <td>02</td>
+                                <td>LG22MK600 21.5" Monitor</td>
+                                <td>Black</td>
+                                <td>Monitor</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$1999</td>
+                              </tr>
+                              <tr>
+                                <td>03</td>
+                                <td>Magic Mouse 2</td>
+                                <td>Sliver</td>
+                                <td>Accessories</td>
+                                <td>No</td>
+                                <td>1</td>
+                                <td>$99</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <table class="table table-compact">
+                         <!-- ...... -->
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Compact Table Ends -->
 
               <!-- Card: Color Table Starts -->
               <div class="card">

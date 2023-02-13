@@ -1,6 +1,8 @@
 @layer components {
   .table {
     $table: &;
+    // $table-variants: ('primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark');
+    
     --table-bg: theme(colors.white);
     --table-dark-bg: theme(colors.slate.800);
     --table-thead-color: theme(colors.slate.700);
@@ -14,7 +16,22 @@
     --table-hover-bg: theme(colors.slate.200);
     --table-hover-dark-bg: theme(colors.slate.600);
 
-    @apply w-full align-top border-collapse;
+    // @each $variant in $table-variants {
+    //   &-#{$variant} {
+    //     --table-bg: theme('colors.#{$variant}.100');
+    //     --table-dark-bg: theme('colors.#{$variant}.800');
+    //     --table-thead-color: theme('colors.#{$variant}.500');
+    //     --table-thead-dark-color: theme('colors.#{$variant}.200');
+    //     --table-tbody-color: theme('colors.#{$variant}.500');
+    //     --table-tbody-dark-color: theme('colors.#{$variant}.200');
+    //     --table-border-color: theme('colors.#{$variant}.200');
+    //     --table-border-dark-color: theme('colors.#{$variant}.700');
+    //     --table-striped-bg: theme('colors.#{$variant}.200');
+    //     --table-striped-dark-bg: theme('colors.#{$variant}.900');
+    //     --table-hover-bg: theme('colors.#{$variant}.300' / 80%);
+    //     --table-hover-dark-bg: theme('colors.#{$variant}.700');
+    //   }
+    // }
 
     &-primary {
       --table-bg: theme(colors.primary.100);
@@ -121,6 +138,8 @@
       --table-hover-dark-bg: theme(colors.dark.700);
     }
 
+    @apply w-full border-collapse rounded-primary overflow-hidden shadow;
+
     & > thead {
       @apply align-bottom;
     }
@@ -154,9 +173,27 @@
     }
 
     &-bordered {
+      @apply shadow-none;
       & > thead th,
-      & > tbody td {
+      & > tbody td,
+      & > tfoot th {
         @apply border border-[var(--table-border-color)] dark:border-[var(--table-border-dark-color)];
+      }
+    }
+
+    &-borderless {
+      & > thead th,
+      & > tbody td,
+      & > tfoot th {
+        border-width: 0 !important;
+      }
+    }
+
+    &-compact {
+      & > thead th,
+      & > tbody td,
+      & > tfoot th {
+        @apply px-4 py-2;
       }
     }
 
@@ -173,7 +210,7 @@
       }
     }
 
-    &#{$table}-hover {
+    &#{$table}-hover:not(#{$table}-striped-columns) {
       & > tbody > tr:hover > * {
         @apply bg-[var(--table-hover-bg)] dark:bg-[var(--table-hover-dark-bg)];
       }
