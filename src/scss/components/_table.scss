@@ -1,8 +1,6 @@
 @layer components {
   .table {
     $table: &;
-    // $table-variants: ('primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark');
-    
     --table-bg: theme(colors.white);
     --table-dark-bg: theme(colors.slate.800);
     --table-thead-color: theme(colors.slate.700);
@@ -16,22 +14,80 @@
     --table-hover-bg: theme(colors.slate.200);
     --table-hover-dark-bg: theme(colors.slate.600);
 
-    // @each $variant in $table-variants {
-    //   &-#{$variant} {
-    //     --table-bg: theme('colors.#{$variant}.100');
-    //     --table-dark-bg: theme('colors.#{$variant}.800');
-    //     --table-thead-color: theme('colors.#{$variant}.500');
-    //     --table-thead-dark-color: theme('colors.#{$variant}.200');
-    //     --table-tbody-color: theme('colors.#{$variant}.500');
-    //     --table-tbody-dark-color: theme('colors.#{$variant}.200');
-    //     --table-border-color: theme('colors.#{$variant}.200');
-    //     --table-border-dark-color: theme('colors.#{$variant}.700');
-    //     --table-striped-bg: theme('colors.#{$variant}.200');
-    //     --table-striped-dark-bg: theme('colors.#{$variant}.900');
-    //     --table-hover-bg: theme('colors.#{$variant}.300' / 80%);
-    //     --table-hover-dark-bg: theme('colors.#{$variant}.700');
-    //   }
-    // }
+    @apply w-full rounded-primary overflow-hidden shadow border-[var(--table-border-color)] dark:border-[var(--table-border-dark-color)];
+
+    thead, 
+    tbody, 
+    tfoot, 
+    td, 
+    th, 
+    tr {
+      @apply border-inherit border-solid border-0;
+    }
+
+    th {
+      @apply font-semibold text-[var(--table-thead-color)] dark:text-[var(--table-thead-dark-color)];
+    }
+
+    td {
+      @apply font-normal text-[var(--table-tbody-color)] dark:text-[var(--table-tbody-dark-color)];
+    }
+
+    & > thead > tr:first-child > *,
+    & > tbody > tr:not(:last-child) > * {
+      @apply border-b;
+    }
+    
+    & > tfoot > tr:first-child > * {
+      @apply border-t;
+    }
+
+    & > :not(caption) > * > * {
+      @apply text-sm text-left px-6 py-3 bg-[var(--table-bg)] dark:bg-[var(--table-dark-bg)];
+    }
+
+    &-striped {
+      & > tbody > tr:nth-of-type(odd) > * {
+        @apply bg-[var(--table-striped-bg)] dark:bg-[var(--table-striped-dark-bg)];
+      }
+
+      &-columns {
+        & > :not(caption) > tr > :nth-child(odd) {
+          @apply bg-[var(--table-striped-bg)] dark:bg-[var(--table-striped-dark-bg)];
+        }
+      }
+    }
+
+    &-hover {
+      &:not(#{$table}-striped-columns) > tbody > tr:hover > * {
+        @apply bg-[var(--table-hover-bg)] dark:bg-[var(--table-hover-dark-bg)];
+      }
+    }
+
+    &-bordered {
+      @apply shadow-none border border-separate border-spacing-0;
+
+      & > :not(caption) > * > *:not(:last-child) {
+        @apply border-r;
+      }
+    }
+
+    &-borderless {
+      & > :not(caption) > * > * {
+        border-width: 0 !important;
+      }
+    }
+
+    &-responsive {
+      @apply overflow-x-auto rounded-primary;
+    }
+
+    &-compact {
+      & > :not(caption) > * > * {
+        @apply px-4 py-2;
+        
+      }
+    }
 
     &-primary {
       --table-bg: theme(colors.primary.100);
@@ -137,84 +193,5 @@
       --table-hover-bg: theme(colors.dark.300 / 80%);
       --table-hover-dark-bg: theme(colors.dark.700);
     }
-
-    @apply w-full border-collapse rounded-primary overflow-hidden shadow;
-
-    & > thead {
-      @apply align-bottom;
-    }
-
-    & > thead th,
-    & > tbody td,
-    & > tfoot th {
-      @apply text-sm text-left px-6 py-3 bg-[var(--table-bg)] dark:bg-[var(--table-dark-bg)];
-    }
-
-    & > thead th,
-    & > tfoot th {
-      @apply font-semibold text-[var(--table-thead-color)] dark:text-[var(--table-thead-dark-color)];
-    }
-    
-    & > tbody td {
-      @apply font-normal text-[var(--table-tbody-color)] dark:text-[var(--table-tbody-dark-color)];
-    }
-
-    & > thead > tr:first-child th,
-    & > tbody > tr:not(:last-child) td {
-      @apply border-b border-b-[var(--table-border-color)] dark:border-b-[var(--table-border-dark-color)];
-    }
-
-    & > tfoot > tr:first-child th {
-      @apply border-t border-t-[var(--table-border-color)] dark:border-t-[var(--table-border-dark-color)];
-    }
-
-    &-responsive {
-      @apply overflow-x-auto;
-    }
-
-    &-bordered {
-      @apply shadow-none;
-      & > thead th,
-      & > tbody td,
-      & > tfoot th {
-        @apply border border-[var(--table-border-color)] dark:border-[var(--table-border-dark-color)];
-      }
-    }
-
-    &-borderless {
-      & > thead th,
-      & > tbody td,
-      & > tfoot th {
-        border-width: 0 !important;
-      }
-    }
-
-    &-compact {
-      & > thead th,
-      & > tbody td,
-      & > tfoot th {
-        @apply px-4 py-2;
-      }
-    }
-
-    &-striped {
-      & > tbody > tr:nth-of-type(odd) td {
-        @apply bg-[var(--table-striped-bg)] dark:bg-[var(--table-striped-dark-bg)];
-      }
-
-      &-columns {
-        & > thead > tr > *:nth-of-type(odd),
-        & > tbody > tr > *:nth-of-type(odd) {
-          @apply bg-[var(--table-striped-bg)] dark:bg-[var(--table-striped-dark-bg)];
-        }
-      }
-    }
-
-    &#{$table}-hover:not(#{$table}-striped-columns) {
-      & > tbody > tr:hover > * {
-        @apply bg-[var(--table-hover-bg)] dark:bg-[var(--table-hover-dark-bg)];
-      }
-    }
-
   }
 }
