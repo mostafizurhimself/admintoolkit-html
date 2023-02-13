@@ -6992,6 +6992,7 @@ __metadata:
     resize-observer-polyfill: ^1.5.1
     sass: ^1.57.1
     simplebar: ^6.2.0
+    spinkit: ^2.0.1
     tailwindcss: ^3.2.4
     webpack: ^5.75.0
     webpack-stream: ^7.0.0
@@ -9195,6 +9196,13 @@ __metadata:
   version: 3.0.12
   resolution: "spdx-license-ids@npm:3.0.12"
   checksum: 92a4dddce62ce1db6fe54a7a839cf85e06abc308fc83b776a55b44e4f1906f02e7ebd506120847039e976bbbad359ea8bdfafb7925eae5cd7e73255f02e0b7d6
+  languageName: node
+  linkType: hard
+
+"spinkit@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "spinkit@npm:2.0.1"
+  checksum: 6b02ec4cb0381f08ad8ba8ec18dd25f9615f75f3ce55a202cd80e761feb034000d40919069cdb2db89f31909981091081c3425c8b49e259f03cec1f8bd4b4351
   languageName: node
   linkType: hard
 
