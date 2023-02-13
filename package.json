@@ -45,6 +45,7 @@
     "js-beautify": "^1.14.7",
     "resize-observer-polyfill": "^1.5.1",
     "simplebar": "^6.2.0",
-    "tom-select": "^2.2.2"
+    "tom-select": "^2.2.2",
+    "spinkit": "^2.0.1"
   }
 }
