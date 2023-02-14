@@ -24,6 +24,7 @@
     "babel-loader": "^9.1.2",
     "boxicons": "^2.1.4",
     "browser-sync": "^2.27.11",
+    "flag-icons": "^6.6.6",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-cssimport": "^7.0.0",
@@ -45,6 +46,7 @@
     "js-beautify": "^1.14.7",
     "resize-observer-polyfill": "^1.5.1",
     "simplebar": "^6.2.0",
+    "spinkit": "^2.0.1",
     "tom-select": "^2.2.2"
   }
 }

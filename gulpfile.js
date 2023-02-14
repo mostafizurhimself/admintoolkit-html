@@ -49,7 +49,14 @@ const webpackConfig = {
 
 // Copy images to dist folder
 gulp.task('images', function () {
-  return gulp.src(paths.src.images).pipe(gulp.dest(paths.dist.images)).pipe(browserSync.stream());
+  return gulp
+    .src([paths.src.images, 'node_modules/flag-icons/flags/**/*'])
+    .pipe(gulp.dest((opt) => {
+      return opt.base.includes('flags') ? 
+            paths.dist.images + 'flags' : 
+            paths.dist.images;
+    }))
+    .pipe(browserSync.stream());
 });
 
 // Copy fonts to dist folder

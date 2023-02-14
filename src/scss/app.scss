@@ -1,16 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 // Variables
 $ti-font-path: '../fonts';
+$flag-icons-path: "../images/flags";
 
 // Vendor
 @import 'simplebar/dist/simplebar.css';
 @import 'boxicons/css/boxicons.css';
 @import '@tabler/icons-webfont/tabler-icons.scss';
+@import 'spinkit/spinkit.css';
+@import "flag-icons/sass/flag-icons.scss";
 
 // Base
+@import 'tailwind';
 @import 'fonts';
 @import 'base';
 @import 'typography';
@@ -40,3 +40,6 @@ $ti-font-path: '../fonts';
 @import 'components/tabs';
 @import 'components/list-group';
 @import 'components/select';
+@import 'components/table';
+@import 'components/spinner';
+// @import 'components/spinkit-spinner';
