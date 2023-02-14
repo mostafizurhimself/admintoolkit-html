@@ -1,0 +1,11 @@
+@layer components{
+    .basic-carousel{
+        @apply h-96 w-full relative;
+    }
+    .swiper-wrapper{
+        @apply w-full;
+    }
+    .swiper-wrapper > img{
+        @apply w-full;
+    }
+}

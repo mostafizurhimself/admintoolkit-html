@@ -13,6 +13,8 @@ import modal from './components/modal';
 import sidebar from './components/sidebar';
 import tabs from './components/tabs';
 import themeSwitcher from './components/theme-switcher';
+import carousel from './components/carousel';
+
 
 // Initialize code highlighting
 codeViewer.init();
@@ -37,6 +39,8 @@ sidebar.init();
 
 // Initialize tabs
 tabs.init();
+// Initialize carousels
+carousel.init();
 
 // Initialize feather icons Icons should be replaced at the end
 feather.replace();

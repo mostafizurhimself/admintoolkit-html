@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Table - Admin Toolkit</title>
+    <title>Carousel - Admin Toolkit</title>
     <link rel="stylesheet" href="./css/app.css" />
   </head>
 
@@ -914,7 +914,7 @@
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>--Title--</h5>
+              <h5>Carousel</h5>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
@@ -931,25 +931,66 @@
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Tabs Starts -->
+            <!-- Carousel Starts -->
             <div class="space-y-6">
-              <!-- Card: Basic Tab Starts -->
+              <!-- Card: Basic Carousel Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Carousel</h4>
+                  <h4 class="card-title">Basic Carousel</h4>
 
                   <p class="card-subtitle">
                     You can use the <code>Checkbox</code> component to render a checkbox input.
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <!-- Code Here  -->
+                    <!-- Slider main container -->
+                    <div class="swiper mx-10">
+                      <!-- Additional required wrapper -->
+                      <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                          <img src="./images/garlic-bread.jpg" alt="carousel-image" >
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./images/garlic-bread.jpg" alt="carousel-image" >
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./images/garlic-bread.jpg" alt="carousel-image" >
+                        </div>
+                        ...
+                      </div>
+                      <!-- If we need pagination -->
+                      <div class="swiper-pagination"></div>
+
+                      <!-- If we need navigation buttons -->
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+
+                      <!-- If we need scrollbar -->
+                      <div class="swiper-scrollbar"></div>
+                    </div>
+                    <!-- <div class="basic-carousel shadow-lg max-w-lg mx-auto max-h-min">
+                      <div class="carousel-item">
+                        <img src="./images/garlic-bread.jpg" alt="carousel-image" >
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/garlic-bread.jpg" alt="carousel-image" >
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/garlic-bread.jpg" alt="carousel-image" >
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/garlic-bread.jpg" alt="carousel-image" >
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div> -->
+                    
                   </div>
                 </div>
               </div>
-              <!-- Card: Basic Tab Ends -->
+              <!-- Card: Carousel Ends -->
             </div>
-            <!-- Tabs Ends -->
+            <!-- Carousel Ends -->
           </main>
           <!-- Main Content Ends -->
 
