@@ -4565,6 +4565,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"flag-icons@npm:^6.6.6":
+  version: 6.6.6
+  resolution: "flag-icons@npm:6.6.6"
+  checksum: 50b60ac6e4cd945092f57718ebaf024888212c968bea03d8cf9cca533b8b151edc9a6cd4566b50c4af844f18e0ec7ab92b6c64bff96e2d5b86ceb19e622dfe0a
+  languageName: node
+  linkType: hard
+
 "flagged-respawn@npm:^1.0.0":
   version: 1.0.1
   resolution: "flagged-respawn@npm:1.0.1"
@@ -6977,6 +6984,7 @@ __metadata:
     boxicons: ^2.1.4
     browser-sync: ^2.27.11
     feather-icons: ^4.29.0
+    flag-icons: ^6.6.6
     gulp: ^4.0.2
     gulp-clean-css: ^4.3.0
     gulp-cssimport: ^7.0.0

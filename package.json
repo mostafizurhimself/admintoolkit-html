@@ -24,6 +24,7 @@
     "babel-loader": "^9.1.2",
     "boxicons": "^2.1.4",
     "browser-sync": "^2.27.11",
+    "flag-icons": "^6.6.6",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-cssimport": "^7.0.0",
