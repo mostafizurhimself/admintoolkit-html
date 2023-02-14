@@ -1,11 +1,13 @@
 // Variables
 $ti-font-path: '../fonts';
+$flag-icons-path: "../images/flags";
 
 // Vendor
 @import 'simplebar/dist/simplebar.css';
 @import 'boxicons/css/boxicons.css';
 @import '@tabler/icons-webfont/tabler-icons.scss';
 @import 'spinkit/spinkit.css';
+@import "flag-icons/sass/flag-icons.scss";
 
 // Base
 @import 'tailwind';
