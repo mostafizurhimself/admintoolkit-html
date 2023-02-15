@@ -29,7 +29,7 @@ const editor  = {
         const quill = new Quill('#editor', {
           placeholder: 'Compose an epic...',
           modules: {
-            toolbar: toolbarOptions
+            toolbar:toolbarOptions
           },
           theme: 'snow'
         });
