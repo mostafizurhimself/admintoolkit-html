@@ -7,6 +7,7 @@ const minifyCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
 const browserSync = require('browser-sync').create();
+const glob = require('glob');
 
 // Define the paths for the project
 const paths = {
@@ -14,14 +15,20 @@ const paths = {
     fonts: 'src/fonts/**/*',
     images: 'src/images/**/*',
     scss: 'src/scss/**/*.scss',
-    js: 'src/js/**/*.js',
+    js: {
+      app: ['src/js/**/*.js', '!src/js/pages/**/*.js'],
+      pages: './src/js/pages/**/*.js',
+    },
     html: 'src/**/*.html',
   },
   dist: {
     fonts: 'dist/fonts/',
     images: 'dist/images/',
     css: 'dist/css/',
-    js: 'dist/js/',
+    js: {
+      app: 'dist/js/',
+      pages: 'dist/js/pages/',
+    },
     html: 'dist/',
   },
 };
@@ -51,11 +58,11 @@ const webpackConfig = {
 gulp.task('images', function () {
   return gulp
     .src([paths.src.images, 'node_modules/flag-icons/flags/**/*'])
-    .pipe(gulp.dest((opt) => {
-      return opt.base.includes('flags') ? 
-            paths.dist.images + 'flags' : 
-            paths.dist.images;
-    }))
+    .pipe(
+      gulp.dest((opt) => {
+        return opt.base.includes('flags') ? paths.dist.images + 'flags' : paths.dist.images;
+      })
+    )
     .pipe(browserSync.stream());
 });
 
@@ -72,9 +79,11 @@ gulp.task('scss', function () {
   return gulp
     .src(paths.src.scss)
     .pipe(sourcemaps.init())
-    .pipe(sass({
-      includePaths: ['node_modules']
-    }).on('error', sass.logError))
+    .pipe(
+      sass({
+        includePaths: ['node_modules'],
+      }).on('error', sass.logError)
+    )
     .pipe(
       cssimport({
         includePaths: ['node_modules'],
@@ -90,9 +99,11 @@ gulp.task('scss', function () {
 gulp.task('scss:prod', function () {
   return gulp
     .src(paths.src.scss)
-    .pipe(sass({
-      includePaths: ['node_modules']
-    }))
+    .pipe(
+      sass({
+        includePaths: ['node_modules'],
+      })
+    )
     .pipe(
       cssimport({
         includePaths: ['node_modules'],
@@ -101,14 +112,13 @@ gulp.task('scss:prod', function () {
     .pipe(postcss())
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.dist.css))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest(paths.dist.css));
 });
 
-// Compile JS for development
+// Compile App JS for development
 gulp.task('js', function () {
   return gulp
-    .src(paths.src.js)
+    .src(paths.src.js.app)
     .pipe(sourcemaps.init())
     .pipe(
       webpack({
@@ -117,18 +127,58 @@ gulp.task('js', function () {
       })
     )
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.dist.js))
+    .pipe(gulp.dest(paths.dist.js.app))
     .pipe(browserSync.stream());
 });
 
-// Compile JS for production
+// Compile App JS for production
 gulp.task('js:prod', function () {
+  return gulp.src(paths.src.js.app).pipe(webpack(webpackConfig)).pipe(uglify()).pipe(gulp.dest(paths.dist.js.app));
+});
+
+// Compile Page JS for development
+gulp.task('js:pages', function () {
   return gulp
-    .src(paths.src.js)
-    .pipe(webpack(webpackConfig))
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.dist.js))
+    .src(paths.src.js.pages)
+    .pipe(sourcemaps.init())
+    .pipe(
+      webpack({
+        ...webpackConfig,
+        mode: 'development',
+        entry: glob.sync(paths.src.js.pages).reduce((acc, path) => {
+          const name = path.split('/').pop().split('.').shift();
+          acc[name] = path;
+          return acc;
+        }, {}),
+        output: {
+          filename: '[name].js',
+        },
+      })
+    )
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(paths.dist.js.pages))
     .pipe(browserSync.stream());
+});
+
+// Compile Page JS for production
+gulp.task('js:pages:prod', function () {
+  return gulp
+    .src(paths.src.js.pages)
+    .pipe(
+      webpack({
+        ...webpackConfig,
+        entry: glob.sync(paths.src.js.pages).reduce((acc, path) => {
+          const name = path.split('/').pop().split('.').shift();
+          acc[name] = path;
+          return acc;
+        }, {}),
+        output: {
+          filename: '[name].js',
+        },
+      })
+    )
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.dist.js.pages));
 });
 
 // Copy HTML files to dist folder
@@ -149,14 +199,15 @@ gulp.task('watch', function () {
   gulp.watch(paths.src.fonts, gulp.series('fonts'));
   gulp.watch(paths.src.images, gulp.series('images'));
   gulp.watch(paths.src.scss, gulp.series('scss'));
-  gulp.watch(paths.src.js, gulp.series('js'));
+  gulp.watch(paths.src.js.app, gulp.series('js'));
+  gulp.watch(paths.src.js.pages, gulp.series('js:pages'));
   gulp.watch(paths.src.html, gulp.series('html', 'scss'));
 
   gulp.watch('src/**/*').on('change', browserSync.reload);
 });
 
 // Default task
-gulp.task('default', gulp.series('fonts', 'images', 'scss', 'js', 'html', 'watch'));
+gulp.task('default', gulp.series('fonts', 'images', 'scss', 'js', 'js:pages', 'html', 'watch'));
 
 // Build task
-gulp.task('build', gulp.series('fonts', 'images', 'scss:prod', 'js:prod', 'html'));
+gulp.task('build', gulp.series('fonts', 'images', 'scss:prod', 'js:prod', 'js:pages:prod', 'html'));
