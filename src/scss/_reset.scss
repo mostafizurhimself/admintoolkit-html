@@ -1,3 +1,9 @@
 .simplebar-scrollbar:before {
   @apply w-1.5 bg-slate-300 dark:bg-slate-900;
 }
+.ql-container{
+  @apply  min-h-[20rem] rounded-b-primary border border-slate-300  bg-white text-sm font-medium  dark:border-slate-600 dark:bg-slate-800;
+}
+.ql-toolbar{
+  @apply rounded-t-primary text-slate-700 border border-slate-300  bg-white text-sm font-medium  dark:border-slate-600 dark:bg-slate-800;
+}
