@@ -4,11 +4,14 @@
 
 // Rich Text Editor  
 .ql-container{
-  @apply  min-h-[20rem] font-[Poppins]  rounded-b-primary border border-slate-300  bg-white text-sm font-normal  dark:border-slate-600 dark:bg-slate-800;  
+  @apply  min-h-[20rem] font-[Poppins]  rounded-b-primary border z-20 border-slate-300  bg-white text-sm font-normal  dark:border-slate-600 dark:bg-slate-800 ;  
+
 }
 
+// Quill Toolbar Styles Reset
 .ql-toolbar{
   @apply rounded-t-primary  border text-primary-500 border-slate-300  bg-white text-sm font-medium  dark:border-slate-600 dark:bg-slate-800;
+
 }
 .ql-stroke,
 .ql-fill,
@@ -19,7 +22,7 @@
   @apply dark:text-slate-50 text-slate-600;
 }
 .ql-picker-label{
-  @apply dark:text-slate-50 text-slate-600 bg-slate-50 dark:bg-slate-800 border border-slate-300;
+  @apply dark:text-slate-50 text-slate-600 z-20 bg-slate-50 dark:bg-slate-800 border border-slate-300;
 }
 .ql-picker-options{
   @apply dark:text-slate-50 text-slate-600 bg-slate-50 dark:bg-slate-800 border border-slate-300;
@@ -44,7 +47,7 @@
 .ql-snow .ql-toolbar .ql-picker-item:hover,
 .ql-snow.ql-toolbar .ql-picker-item.ql-selected,
 .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
-  color: #8B5CF6;
+  @apply text-primary-500;
 }
 .ql-snow.ql-toolbar button:hover .ql-fill,
 .ql-snow .ql-toolbar button:hover .ql-fill,
@@ -74,7 +77,7 @@
 .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
 .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,
 .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill {
-  fill: #8B5CF6;
+  @apply fill-primary-500;
 }
 .ql-snow.ql-toolbar button:hover .ql-stroke,
 .ql-snow .ql-toolbar button:hover .ql-stroke,
@@ -104,6 +107,6 @@
 .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
 .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter,
 .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
-  stroke: #8B5CF6;
+ @apply stroke-primary-500;
 }
 
