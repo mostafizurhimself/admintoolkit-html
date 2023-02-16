@@ -2,12 +2,20 @@ import TomSelect from 'tom-select'
 
 const select = {
   init() {
-    document.querySelectorAll('.select:not(.searchable)').forEach(el => {
-      new TomSelect(el, {})
-    })
-    document.querySelectorAll('.select.searchable').forEach(el => {
-      new TomSelect(el, { searchField: false })
-    })
+    
+    const tomSelects = document.querySelectorAll('.tom-select');
+    
+    if(tomSelects.length) {
+
+      [...tomSelects].forEach((select) => {
+
+        new TomSelect(select, {
+            plugins: ['dropdown_input'],
+            highlight: false
+        });
+      });
+      
+    }
   }
 }
 
