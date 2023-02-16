@@ -24,15 +24,17 @@ const toolbarOptions = [
   ];
 const editor  = {
     init(){
-      const editors = document.querySelectorAll('.quill-editor')
-          
-        const quill = new Quill('#editor', {
-          placeholder: 'Compose an epic...',
+      const editors = document.querySelectorAll('.quill-editor');
+      editors.forEach(editor => {
+        const quill = new Quill(editor, {
           modules: {
             toolbar:toolbarOptions
           },
           theme: 'snow'
         });
+        
+      })
+          
     }
       
 }
