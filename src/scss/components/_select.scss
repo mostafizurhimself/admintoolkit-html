@@ -14,6 +14,10 @@
       @apply h-11;
     }
 
+    &-valid {
+      @apply border-success-500  focus:border-success-500 focus:ring-success-500 dark:focus:border-success-500 dark:border-success-500;
+    }
+
     &-invalid {
       @apply border-danger-500  focus:border-danger-500 focus:ring-danger-500 dark:focus:border-danger-500 dark:border-danger-500;
     }
@@ -26,7 +30,8 @@
       @apply text-slate-400 bg-slate-100 dark:text-slate-500 dark:bg-slate-700;
     }
   }
-
+  
+  //Prevent multiple scrollbar appearing
   select.tom-select {
     display: none !important;
   }
