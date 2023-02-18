@@ -41,11 +41,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "@editorjs/editorjs": "^2.26.5",
     "@floating-ui/dom": "^1.1.1",
-    "@tiptap/core": "^2.0.0-beta.217",
-    "@tiptap/pm": "^2.0.0-beta.217",
-    "@tiptap/starter-kit": "^2.0.0-beta.217",
     "feather-icons": "^4.29.0",
     "highlight.js": "^11.7.0",
     "js-beautify": "^1.14.7",

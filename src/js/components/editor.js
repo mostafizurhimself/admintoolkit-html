@@ -1,8 +1,5 @@
 import Quill from "quill";
-// class Editor {
-//     constructor()
-// }
-
+// Rich Text Editor Toolbar Options
 const toolbarOptions = [
     ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
     ['blockquote', 'code-block'],
@@ -22,19 +19,42 @@ const toolbarOptions = [
   
     ['clean']                                         // remove formatting button
   ];
+// spimple markdown 
+
+
+
 const editor  = {
     init(){
-      const editors = document.querySelectorAll('.quill-editor');
-      editors.forEach(editor => {
+      const snowEditors = document.querySelectorAll('.quill-editor-snow');
+      const bubbleEditors = document.querySelectorAll('.quill-editor-bubble');
+      // snow text editor 
+      snowEditors?.forEach(editor => {
         const quill = new Quill(editor, {
           modules: {
             toolbar:toolbarOptions
           },
           theme: 'snow'
         });
-        
       })
-          
+      // bubble text editor 
+      bubbleEditors?.forEach(editor => {
+        const quill = new Quill(editor, {
+          modules: {
+            toolbar:[
+              ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+              ['blockquote', 'code-block'],
+              [{ 'align': [] }],
+              [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+              [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+              [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+              [{ 'indent': '-1'}, { 'indent': '+1' }],
+              [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+              [{ 'font': [] }],
+            ]
+          },
+          theme: 'bubble'
+        });
+      })
     }
       
 }

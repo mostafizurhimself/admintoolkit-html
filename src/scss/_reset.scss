@@ -2,15 +2,19 @@
   @apply w-1.5 bg-slate-300 dark:bg-slate-900;
 }
 
-// Rich Text Editor  
+// =======Quill Styles Start==========
+
+
+
+// Snow Theme  
 .ql-container{
-  @apply  min-h-[20rem] font-[Poppins]  rounded-b-primary border z-20 border-slate-300  bg-white text-sm font-normal  dark:border-slate-600 dark:bg-slate-800 ;  
+  @apply  min-h-[20rem] font-[Poppins]   border  border-slate-300  bg-white text-sm font-normal  dark:border-slate-600 dark:bg-slate-800 ;  
 
 }
 
-// Quill Toolbar Styles Reset
+// Quill Toolbar 
 .ql-toolbar{
-  @apply rounded-t-primary  border text-primary-500 border-slate-300  bg-white text-sm font-medium  dark:border-slate-600 dark:bg-slate-800;
+  @apply  border text-primary-500 border-slate-300  bg-white text-sm font-medium  dark:border-slate-600 dark:bg-slate-800;
 
 }
 .ql-stroke,
@@ -109,4 +113,7 @@
 .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
  @apply stroke-primary-500;
 }
+// =======Quill Styles End==========
+
+
 
