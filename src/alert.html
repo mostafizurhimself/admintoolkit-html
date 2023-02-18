@@ -990,7 +990,7 @@
                               <span> There were some errors with your submission</span>
                             </div>
                             <div class="ps-10 mt-3 font-normal">
-                              <ul class="list-disc space-y-1" role="list">
+                              <ul class="list-disc space-y-1 px-4" role="list">
                                 <li>Your password must be at least 8 characters</li>
                                 <li>Your password must include at least one pro wrestling finishing move</li>
                               </ul>
@@ -1032,12 +1032,6 @@
     <!-- Scripts Starts -->
     <script src="./js/app.js"></script>
     <script>
-      const controlledAlert = createDismissableAlert('#controlled-alert');
-
-      function dismissControlledAlert() {
-        controlledAlert.dismiss();
-      }
-
       const controlledAlertSource = `
         <div class="flex flex-col gap-4">
           <div class="alert alert-success" role="alert" id="controlled-alert">
@@ -1059,8 +1053,12 @@
           }
         \<\/script\>
        `;
-
       const controlledCodeViewer = createCodeViewer('#controlled-code-viewer', controlledAlertSource);
+
+      function dismissControlledAlert() {
+        createDismissableAlert('#controlled-alert').dismiss();
+      }
+
       controlledCodeViewer.render();
     </script>
   </body>
