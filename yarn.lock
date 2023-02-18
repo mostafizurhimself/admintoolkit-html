@@ -1262,6 +1262,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/core@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@floating-ui/core@npm:1.2.1"
+  checksum: 7a263e15abad4cd98ce3938075c90f76bafef71c67964c83dd7cf1e1916c92ccfa46a4f2b95b403bb180f70b3e7ded118db1cbc3426269ec70e948edf0d19ae2
+  languageName: node
+  linkType: hard
+
+"@floating-ui/dom@npm:^1.1.1":
+  version: 1.2.1
+  resolution: "@floating-ui/dom@npm:1.2.1"
+  dependencies:
+    "@floating-ui/core": ^1.2.1
+  checksum: ad6928d5dd934ca8b3dcffdfcacde9d147afc0db4db0c0294b23d5f897224d73c7f0ae578b46d813f0d7ae22a86e7a3f8914fdbcdf4a8d42a1b430d0518f45be
+  languageName: node
+  linkType: hard
+
 "@fortawesome/fontawesome-free@npm:^6.2.1":
   version: 6.3.0
   resolution: "@fortawesome/fontawesome-free@npm:6.3.0"
@@ -6980,6 +6996,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.20.12
     "@babel/preset-env": ^7.20.2
+    "@floating-ui/dom": ^1.1.1
     "@fortawesome/fontawesome-free": ^6.2.1
     "@mertasan/tailwindcss-variables": ^2.5.1
     "@tabler/icons-webfont": ^2.2.0
