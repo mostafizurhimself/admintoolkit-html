@@ -90,6 +90,7 @@ gulp.task('scss', function () {
       })
     )
     .pipe(postcss())
+    .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.dist.css))
     .pipe(browserSync.stream());
@@ -126,6 +127,7 @@ gulp.task('js', function () {
         mode: 'development',
       })
     )
+    .pipe(uglify())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.dist.js.app))
     .pipe(browserSync.stream());
