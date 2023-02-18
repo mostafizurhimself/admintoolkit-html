@@ -5,9 +5,10 @@ $flag-icons-path: "../images/flags";
 // Vendor
 @import 'simplebar/dist/simplebar.css';
 @import 'boxicons/css/boxicons.css';
-@import '@tabler/icons-webfont/tabler-icons.scss';
 @import 'spinkit/spinkit.css';
+@import '@tabler/icons-webfont/tabler-icons.scss';
 @import "flag-icons/sass/flag-icons.scss";
+@import "tom-select/dist/scss/tom-select.scss";
 
 // Base
 @import 'tailwind';
@@ -39,6 +40,7 @@ $flag-icons-path: "../images/flags";
 @import 'components/progressbar';
 @import 'components/tabs';
 @import 'components/list-group';
+@import 'components/select';
 @import 'components/table';
 @import 'components/spinner';
 // @import 'components/spinkit-spinner';

@@ -40,7 +40,7 @@
         <ul class="sidebar-content" data-simplebar>
           <!-- Dashboard -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
+            <a href="javascript:void(0);" class="sidebar-menu active">
               <span class="sidebar-menu-icon">
                 <i data-feather="home"></i>
               </span>
@@ -51,7 +51,7 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="/" class="sidebar-submenu-item">Ecommerce</a>
+                <a href="/" class="sidebar-submenu-item active">Ecommerce</a>
               </li>
               <li>
                 <a href="./analytics.html" class="sidebar-submenu-item">Analytics</a>
@@ -232,7 +232,7 @@
           </li>
           <!-- Forms  -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu active">
+            <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="edit"></i>
               </span>
@@ -258,7 +258,7 @@
                 <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
               </li>
               <li>
-                <a href="./select.html" class="sidebar-submenu-item active">Select</a>
+                <a href="./select.html" class="sidebar-submenu-item">Select</a>
               </li>
               <li>
                 <a href="./range.html" class="sidebar-submenu-item">Range</a>
@@ -683,11 +683,12 @@
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
-            <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>Select</h5>
+            <div class="flex items-center justify-between mb-6">
+              <h5>Select Components</h5>
+
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="/">Home</a>
+                  <a href="#">Home</a>
                 </li>
 
                 <li class="breadcrumb-item">
@@ -701,25 +702,306 @@
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Tabs Starts -->
+            <!-- Select Starts -->
             <div class="space-y-6">
-              <!-- Card: Basic Tab Starts -->
+              <!-- Card: Basic Select Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Select</h4>
+                  <h4 class="card-title">Basic Select</h4>
 
                   <p class="card-subtitle">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                    Use <code>.select</code> class to create a basic select input.
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <!-- Code Here  -->
+                      <select class="select" >
+                        <option value="">Select a color</option>
+                        <option value="1">Green</option>
+                        <option value="2">Blue</option>
+                        <option value="3">Yellow</option>
+                        <option value="4">Orange</option>
+                        <option value="5">Red</option>
+                      </select>
                   </div>
                 </div>
               </div>
-              <!-- Card: Basic Tab Ends -->
+              <!-- Card: Basic Select Ends -->
+
+              <!-- Card: Select Size Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Select Sizes</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.select-sm</code>, <code>.select-md</code>, and <code>.select-lg</code> classes to customize the size of select input. Default is <code>.select-md</code>.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="flex flex-col gap-4">
+                        <select class="select select-sm">
+                          <option value="" selected>Select a color</option>
+                          <option value="1">Green</option>
+                          <option value="2">Blue</option>
+                          <option value="3">Yellow</option>
+                          <option value="4">Orange</option>
+                          <option value="5">Red</option>
+                        </select>
+
+                        <select class="select select-md">
+                          <option value="" selected>Select a color</option>
+                          <option value="1">Green</option>
+                          <option value="2">Blue</option>
+                          <option value="3">Yellow</option>
+                          <option value="4">Orange</option>
+                          <option value="5">Red</option>
+                        </select>
+
+                        <select class="select select-lg">
+                          <option value="" selected>Select a color</option>
+                          <option value="1">Green</option>
+                          <option value="2">Blue</option>
+                          <option value="3">Yellow</option>
+                          <option value="4">Orange</option>
+                          <option value="5">Red</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="code-viewer-source">
+                      <select class="select-sm">
+                        <!-- <option value="value">label</option> -->
+                      </select>
+                      <select class="select-md">
+                        <!-- <option value="value">label</option> -->
+                      </select>
+
+                      <select class="select-lg">
+                        <!-- <option value="value">label</option> -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Select Size Ends -->
+              
+              <!-- Card: Valid Select Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Valid Select</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.select-valid</code> class to indicate a valid select input.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <select class="select select-valid">
+                        <option value="">Select a color</option>
+                        <option value="1">Green</option>
+                        <option value="2">Blue</option>
+                        <option value="3">Yellow</option>
+                        <option value="4">Orange</option>
+                        <option value="5">Red</option>
+                      </select>
+                      <div class="success-message mt-1">Looks great</div>
+                    </div>
+                    <div class="code-viewer-source">
+                      <select class="select select-valid">
+                        <!-- <option value="value">label</option> -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Valid Select Ends -->       
+
+              <!-- Card: Invalid Select Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Invalid Select</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.select-invalid</code> class to indicate an invalid select input.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <select class="select select-invalid">
+                        <option value="">Select a color</option>
+                        <option value="1">Green</option>
+                        <option value="2">Blue</option>
+                        <option value="3">Yellow</option>
+                        <option value="4">Orange</option>
+                        <option value="5">Red</option>
+                      </select>
+                      <div class="error-message mt-1">This field is required</div>
+                    </div>
+                    <div class="code-viewer-source">
+                      <select class="select-invalid">
+                        <!-- <option value="value">label</option> -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Invalid Select Ends -->         
+
+              <!-- Card: Disabled Select Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Disabled Select</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>disabled</code> attribute to disable a select input.
+                  </p>
+
+                  <div class="code-viewer mt-4">                  
+                    <div class="code-viewer-content">
+                      <select class="select" disabled>
+                        <option value="">Select a color</option>
+                        <option value="1">Green</option>
+                        <option value="2">Blue</option>
+                        <option value="3">Yellow</option>
+                        <option value="4">Orange</option>
+                        <option value="5">Red</option>
+                      </select>
+                    </div>
+                    <div class="code-viewer-source">
+                      <select class="select" disabled>
+                        <!-- <option value="value">label</option> -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Disabled Select Ends -->   
+              
+              <!-- Card: Disabled Select Option Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Disabled Select Option</h4>
+
+                  <p class="card-subtitle">
+                    To disable a select option, use <code>disabled</code> attribute on that.
+                  </p>
+
+                  <div class="code-viewer mt-4">                  
+                    <div class="code-viewer-content">
+                      <select class="select">
+                        <option value="">Select a color</option>
+                        <option value="1">Green</option>
+                        <option value="2">Blue</option>
+                        <option value="3" disabled>Yellow</option>
+                        <option value="4">Orange</option>
+                        <option value="5">Red</option>
+                      </select>
+                    </div>
+                    <div class="code-viewer-source">
+                      <select class="select">
+                        <option value="3" disabled>Yellow</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Disabled Select Option Ends -->
+
+              <!-- Card: Searchable Select Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Searchable Select</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.tom-select</code> class to create searchable select inputs with autocomplete and native-feeling keyboard navigation. To learn more, check out <a class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline" href="https://tom-select.js.org/" target="_blank">Tom Select's</a> official documenation.
+                  </p>
+
+                  <div class="code-viewer mt-4">                  
+                    <div class="code-viewer-content">
+                      <select class="tom-select" autocomplete="off">
+                        <option value="">Select a color</option>
+                        <option value="1">Green</option>
+                        <option value="2">Blue</option>
+                        <option value="3">Yellow</option>
+                        <option value="4">Orange</option>
+                        <option value="5">Red</option>
+                      </select>
+                    </div>
+                    <div class="code-viewer-source">
+                      <select class="tom-select" autocomplete="off">
+                        <!-- <option value="">Placeholder</option> -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Searchable Select Ends -->
+
+              <!-- Card: Mutiple Select Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Multiple Select</h4>
+
+                  <p class="card-subtitle">
+                    The <code>multiple</code> attribute is also supported
+                  </p>
+
+                  <div class="code-viewer mt-4">                  
+                    <div class="code-viewer-content">
+                      <select class="tom-select" multiple autocomplete="off">
+                        <option value="">Select a color</option>
+                        <option value="1">Green</option>
+                        <option value="2">Blue</option>
+                        <option value="3">Yellow</option>
+                        <option value="4">Orange</option>
+                        <option value="5">Red</option>
+                      </select>
+                    </div>
+                    <div class="code-viewer-source">
+                      <select class="tom-select" multiple autocomplete="off">
+                        <!-- <option value="">Placeholder</option> -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Mutiple Select Ends -->
+
+              <!-- Card: Group Select Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Group Select</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>optgroup</code> to group multiple option togather.
+                  </p>
+
+                  <div class="code-viewer mt-4">                  
+                    <div class="code-viewer-content">
+                      <select class="tom-select" autocomplete="off">
+                        <option value="">Select a color</option>
+                        <optgroup label="Colors">
+                          <option value="1">Green</option>
+                          <option value="2">Blue</option>
+                          <option value="3">Yellow</option>
+                          <option value="4">Orange</option>
+                          <option value="5">Red</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                    <div class="code-viewer-source">
+                      <select class="tom-select" autocomplete="off">
+                        <!-- <option value="">Placeholder</option> -->
+                        <optgroup label="Colors">
+                          <!-- <option value="value">label</option> -->
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Group Select Ends -->
             </div>
-            <!-- Tabs Ends -->
+            <!-- Select Ends -->
           </main>
           <!-- Main Content Ends -->
 
@@ -740,6 +1022,7 @@
       </div>
       <!-- Wrapper Ends -->
     </div>
+    
     <script src="./js/app.js"></script>
   </body>
 </html>
