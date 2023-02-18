@@ -15,6 +15,7 @@ import tabs from './components/tabs';
 
 //Import third party packages
 import themeSwitcher from './components/theme-switcher';
+import editor from './components/editor';
 import select from './components/select';
 
 // Initialize code highlighting
@@ -40,6 +41,8 @@ sidebar.init();
 
 // Initialize tabs
 tabs.init();
+// Initialize editor
+editor.init();
 
 // Initialize Select
 select.init();
