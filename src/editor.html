@@ -459,7 +459,7 @@
                   </button>
                 </div>
         
-                <div class="dropdown-content w-[150px]">
+                <div class="dropdown-content w-[150px] mt-6">
                   <ul>
                     <li class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
                       <button type="button" class="h-full w-full flex items-center gap-2 px-4 py-2">
@@ -535,7 +535,7 @@
                   </button>
                 </div>
         
-                <div class="dropdown-content w-[280px] divide-y dark:divide-slate-700 sm:w-80">
+                <div class="dropdown-content w-[280px] mt-6 divide-y dark:divide-slate-700 sm:w-80">
                   <div class="flex items-center justify-between py-4 px-4">
                     <h6 class="text-slate-800 dark:text-slate-300">
                       Notifications
@@ -651,7 +651,7 @@
                   </button>
                 </div>
         
-                <div class="dropdown-content w-[180px]">
+                <div class="dropdown-content w-[180px] mt-6">
                   <a href="/dashboard/ecommerce"
                     class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700">
                     <i class="text-slate-600 dark:text-slate-400" width="18" height="18" data-feather="user"></i>
@@ -701,25 +701,73 @@
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Tabs Starts -->
+            <!-- Editors Starts -->
             <div class="space-y-6">
-              <!-- Card: Basic Tab Starts -->
+              <!-- Card: Snow Theme Editor Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Editor</h4>
+                  <h4 class="card-title">Snow Theme Editor</h4>
 
                   <p class="card-subtitle">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                    Use <code>quill-editor-snow</code> class to create a rich text editor.
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <!-- Code Here  -->
+                    <div class="quill-editor-snow">
+                      <h3>Quill snow Text Editor</h3>
+                      <p>
+                        Cupcake ipsum dolor sit amet. Halvah cheesecake chocolate bar gummi bears cupcake. Pie macaroon bear claw. Soufflé I love candy canes I love cotton candy I love.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Basic Tab Ends -->
+              <!-- Card: Snow Theme Text Editor Ends -->
+
+              <!-- Card: Bubble Theme Text Editor Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Bubble Theme Editor</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>quill-editor-bubble</code> class to create a markdown text editor.
+                  </p>
+
+                  <div class="code-viewer mt-4 relative">
+
+                    <div class="quill-editor-bubble">
+                      <h3>Quill Bubble Text Editor</h3>
+                      <p>
+                        Cupcake ipsum dolor sit amet. Halvah cheesecake chocolate bar gummi bears cupcake. Pie macaroon bear claw. Soufflé I love candy canes I love cotton candy I love.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Bubble Theme Text Editor Ends -->
+
+              <!-- Card: Controled Text Editor Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Controled Text Editor</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>editor-container</code> id to create a markdown text editor.
+                  </p>
+
+                  <div id="controled-text-editor" class="code-viewer mt-4" data-render-source="false">
+                    <div id="editor-container">
+                      <h3>Quill Controled Text Editor</h3>
+                      <p>
+                        Cupcake ipsum dolor sit amet. Halvah cheesecake chocolate bar gummi bears cupcake. Pie macaroon bear claw. Soufflé I love candy canes I love cotton candy I love.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Controled Text Editor Ends -->
             </div>
-            <!-- Tabs Ends -->
+            <!-- Editor Ends -->
           </main>
           <!-- Main Content Ends -->
 
@@ -741,5 +789,27 @@
       <!-- Wrapper Ends -->
     </div>
     <script src="./js/app.js"></script>
+    <!-- Include the Quill library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js"></script>
+    <script defer>
+      const quill = new Quill("#editor-container", { theme: 'snow' });
+    const controlledEditorSource = `
+      <div id="editor-container">
+        <h3>Quill Controled Text Editor</h3>
+        <p>
+          Cupcake ipsum dolor sit amet. Halvah cheesecake chocolate bar gummi bears cupcake. Pie macaroon bear claw. Soufflé I love candy canes I love cotton candy I love.
+        </p>
+      </div>
+
+      \<script\>
+        const quill = new Quill("#editor-container", { theme: 'snow' });
+      \<\/script\>
+     `;
+
+    const controlledCodeViewer = createCodeViewer('#controled-text-editor', controlledEditorSource);
+    controlledCodeViewer.render();
+  </script>
+   
+    
   </body>
 </html>
