@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buttons - Admin Toolkit</title>
+    <title>Basic Table - Admin Toolkit</title>
     <link rel="stylesheet" href="./css/app.css" />
   </head>
 
@@ -164,7 +164,7 @@
           <div class="sidebar-menu-header">Components</div>
           <!-- Common  -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu active">
+            <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="box"></i>
               </span>
@@ -184,7 +184,7 @@
                 <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
               </li>
               <li>
-                <a href="./button.html" class="sidebar-submenu-item active">Button</a>
+                <a href="./button.html" class="sidebar-submenu-item">Button</a>
               </li>
               <li>
                 <a href="./card.html" class="sidebar-submenu-item">Card</a>
@@ -285,7 +285,7 @@
           </li>
           <!-- Tables  -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
+            <a href="javascript:void(0);" class="sidebar-menu active">
               <span class="sidebar-menu-icon">
                 <i data-feather="list"></i>
               </span>
@@ -296,7 +296,7 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="./basic-table.html" class="sidebar-submenu-item">Basic Table</a>
+                <a href="./basic-table.html" class="sidebar-submenu-item active">Basic Table</a>
               </li>
               <li>
                 <a href="./data-table.html" class="sidebar-submenu-item">Data Table</a>
@@ -677,419 +677,1047 @@
           </div>
         </header>
         <!-- Header Ends -->
-
+        
         <!-- Page Content Starts -->
         <div class="content">
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>Buttons</h5>
-              <ol class="breadcrumb ml-auto">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Components</a></li>
-                <li class="breadcrumb-item"><a href="#">Buttons</a></li>
+              <h5>Basic Table</h5>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="/">Home</a>
+                </li>
+
+                <li class="breadcrumb-item">
+                  <a href="#">Components</a>
+                </li>
+
+                <li class="breadcrumb-item">
+                  <a href="#">Basic Table</a>
+                </li>
               </ol>
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Button Starts -->
+            <!-- Table Starts -->
             <div class="space-y-6">
-              <!-- Card: Button Color Starts -->
+              <!-- Card: Basic Table Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Color Buttons</h4>
-                  <div class="card-subtitle">
-                    <p class="text-sm text-slate-400">
-                      Use <code>color</code> class to <code>btn-primary-solid</code>, <code>btn-secondary-solid</code>,
-                      <code>btn-success-solid</code>, <code>btn-danger-solid</code>, <code>btn-warning-solid</code>
-                      <code>btn-info-solid</code> &amp; <code>btn-dark-solid</code>.
-                    </p>
-                  </div>
+                  <h4 class="card-title">Basic Table</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.table</code> base class to any <code>&lt;table&gt;</code> for basic styling
+                  </p>
+                   
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-primary">Primary</button>
-                      <button class="btn btn-secondary">Secondary</button>
-                      <button class="btn btn-success">Success</button>
-                      <button class="btn btn-danger">Danger</button>
-                      <button class="btn btn-warning">Warning</button>
-                      <button class="btn btn-info">Info</button>
-                      <button class="btn btn-dark">Dark</button>
+                    <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
+                      <div class="max-w-3xl min-w-max">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Product name</th>
+                                <th>Color</th>
+                                <th>Catagory</th>
+                                <th>Available</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>01</td>
+                                <td>Apple MacBook 17"</td>
+                                <td>White</td>
+                                <td>Laptop</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$2999</td>
+                              </tr>
+                              <tr>
+                                <td>02</td>
+                                <td>LG22MK600 21.5" Monitor</td>
+                                <td>Black</td>
+                                <td>Monitor</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$1999</td>
+                              </tr>
+                              <tr>
+                                <td>03</td>
+                                <td>Magic Mouse 2</td>
+                                <td>Sliver</td>
+                                <td>Accessories</td>
+                                <td>No</td>
+                                <td>1</td>
+                                <td>$99</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <table class="table">
+                          <thead>
+                            <tr>
+                              <th>ID</th>
+                              <th>Product name</th>
+                              <th>Color</th>
+                              <th>Catagory</th>
+                              <th>Available</th>
+                              <th>Qty</th>
+                              <th>Price</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>01</td>
+                              <td>Apple MacBook Pro 17"</td>
+                              <td>White</td>
+                              <td>Laptop</td>
+                              <td>Yes</td>
+                              <td>1</td>
+                              <td>$2999 </td>
+                            </tr>
+                            <tr>
+                              <td>02</td>
+                              <td>LG22MK600 21.5" Monitor</td>
+                              <td>Black</td>
+                              <td>Monitor</td>
+                              <td>Yes</td>
+                              <td>1</td>
+                              <td>$1999</td>
+                            </tr>
+                            <tr>
+                              <td>03</td>
+                              <td>Magic Mouse 2</td>
+                              <td>Sliver</td>
+                              <td>Accessories</td>
+                              <td>No</td>
+                              <td>1</td>
+                              <td>$99</td>
+                            </tr>
+                          </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Button Color Ends -->
+              <!-- Card: Basic Table Ends -->
 
-              <!-- Card: Button Size Starts -->
+              <!-- Card: Striped Table Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Button Sizes</h4>
-                  <div class="card-subtitle">
-                    <p class="text-sm text-slate-400">
-                      Use <code>size</code> class to <code>btn-xs</code>, <code>btn-sm</code>, <code></code>,
-                      <code>btn-lg</code> &amp; <code>btn-xl</code> Default Value is <code></code>.
-                    </p>
-                  </div>
+                  <h4 class="card-title">Striped Table Rows</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.table-striped</code> class to add row-striping to any table row within the <code>&lt;tbody&gt;</code>.
+                  </p>
+
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-primary btn-xs">Extra Small</button>
-                      <button class="btn btn-primary btn-sm">Small</button>
-                      <button class="btn btn-primary">Medium</button>
-                      <button class="btn btn-primary btn-lg">Large</button>
-                      <button class="btn btn-primary btn-xl">Extra Large</button>
+                    <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
+                      <div class="max-w-3xl min-w-max">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Product name</th>
+                                <th>Color</th>
+                                <th>Catagory</th>
+                                <th>Available</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>01</td>
+                                <td>Apple MacBook Pro 17"</td>
+                                <td>White</td>
+                                <td>Laptop</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$2999 </td>
+                              </tr>
+                              <tr>
+                                <td>02</td>
+                                <td>LG22MK600 21.5" Monitor</td>
+                                <td>Black</td>
+                                <td>Monitor</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$1999</td>
+                              </tr>
+                              <tr>
+                                <td>03</td>
+                                <td>Magic Mouse 2</td>
+                                <td>Sliver</td>
+                                <td>Accessories</td>
+                                <td>No</td>
+                                <td>1</td>
+                                <td>$99</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="code-viewer-source">
+                      <table class="table table-striped">
+                        <!-- ..... -->
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Button Size Ends -->
+              <!-- Card: Striped Table Ends -->
 
-              <!-- Card: Button Outline Starts -->
+              <!-- Card: Striped Columns Of Table Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Outline Buttons</h4>
-                  <div class="card-subtitle">
-                    <p class="text-sm text-slate-400">
-                      Use <code>outline</code> class to <code>btn-primary-outline</code>,
-                      <code>btn-secondary-outline</code>, <code>btn-success-outline</code>,
-                      <code>btn-danger-outline</code>, <code>btn-warning-outline</code>,
-                      <code>btn-info-outline</code> &amp; <code>btn-dark-outline</code> create a outlined button.
-                    </p>
-                  </div>
+                  <h4 class="card-title">Striped Table Columns</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.table-striped-columns</code> to add column-striping to any table column.
+                  </p>
+
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-outline-primary">Primary</button>
-                      <button class="btn btn-outline-secondary">Secondary</button>
-                      <button class="btn btn-outline-success">Success</button>
-                      <button class="btn btn-outline-danger">Danger</button>
-                      <button class="btn btn-outline-warning">Warning</button>
-                      <button class="btn btn-outline-info">Info</button>
-                      <button class="btn btn-outline-dark">Dark</button>
+                    <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
+                      <div class="max-w-3xl min-w-max">               
+                        <table class="table table-striped-columns">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Product name</th>
+                                <th>Color</th>
+                                <th>Catagory</th>
+                                <th>Available</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>01</td>
+                                <td>Apple MacBook Pro 17"</td>
+                                <td>White</td>
+                                <td>Laptop</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$2999 </td>
+                              </tr>
+                              <tr>
+                                <td>02</td>
+                                <td>LG22MK600 21.5" Monitor</td>
+                                <td>Black</td>
+                                <td>Monitor</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$1999</td>
+                              </tr>
+                              <tr>
+                                <td>03</td>
+                                <td>Magic Mouse 2</td>
+                                <td>Sliver</td>
+                                <td>Accessories</td>
+                                <td>No</td>
+                                <td>1</td>
+                                <td>$99</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="code-viewer-source">
+                      <table class="table table-striped-columns">
+                        <!-- ...... -->
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Button Outline Ends -->
+              <!-- Card: Striped Columns Of Table Ends -->
 
-              <!-- Card: Button Soft Starts -->
+              <!-- Card: Hoverable Table Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Soft Buttons</h4>
-                  <div class="card-subtitle">
-                    <p class="text-sm text-slate-400">
-                      use <code>soft</code> class to <code>btn-primary-soft</code>, <code>btn-secondary-soft</code>,
-                      <code>btn-success-soft</code>, <code>btn-danger-soft</code>, <code>btn-warning-soft</code>,
-                      <code>btn-info-soft</code> &amp; <code>btn-info-soft</code> create a soft button.
-                    </p>
-                  </div>
+                  <h4 class="card-title">Hoverable Table Rows</h4>
+
+                  <p class="card-subtitle">
+                    User <code>.table-hover</code> class to enable a hover state on table rows within <code>&lt;tbody&gt;</code>.
+                  </p>
+
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-soft-primary">Primary</button>
-                      <button class="btn btn-soft-secondary">Secondary</button>
-                      <button class="btn btn-soft-success">Success</button>
-                      <button class="btn btn-soft-danger">Danger</button>
-                      <button class="btn btn-soft-warning">Warning</button>
-                      <button class="btn btn-soft-info">Info</button>
-                      <button class="btn btn-soft-dark">Dark</button>
+                    <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
+                      <div class="max-w-3xl min-w-max">
+                          <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Product name</th>
+                                  <th>Color</th>
+                                  <th>Catagory</th>
+                                  <th>Available</th>
+                                  <th>Qty</th>
+                                  <th>Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>01</td>
+                                  <td>Apple MacBook Pro 17"</td>
+                                  <td>White</td>
+                                  <td>Laptop</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$2999 </td>
+                                </tr>
+                                <tr>
+                                  <td>02</td>
+                                  <td>LG22MK600 21.5" Monitor</td>
+                                  <td>Black</td>
+                                  <td>Monitor</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$1999</td>
+                                </tr>
+                                <tr>
+                                  <td>03</td>
+                                  <td>Magic Mouse 2</td>
+                                  <td>Sliver</td>
+                                  <td>Accessories</td>
+                                  <td>No</td>
+                                  <td>1</td>
+                                  <td>$99</td>
+                                </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <table class="table table-hover">
+                        <!-- ..... -->
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Button Soft Ends -->
+              <!-- Card: Hoverable Table Ends -->
 
-              <!-- Card: Button Plain Starts -->
+              <!-- Card: Bordered Table Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Plain Buttons</h4>
-                  <div class="card-subtitle">
-                    <p class="text-sm text-slate-400">
-                      Use <code>plain</code> class to <code>btn-primary-plain</code>, <code>btn-secondary-plain</code>,
-                      <code>btn-success-plain</code>, <code>btn-danger-plain</code>, <code>btn-warning-plain</code>,
-                      <code>btn-info-plain</code> &amp; <code>btn-dark-plain</code> create a soft button.
-                    </p>
-                  </div>
+                  <h4 class="card-title">Bordered Table</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.table-bordered</code> class to add borders on all sides of the table and cells.
+                  </p>
+
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-plain-primary">Primary</button>
-                      <button class="btn btn-plain-secondary">Secondary</button>
-                      <button class="btn btn-plain-success">Success</button>
-                      <button class="btn btn-plain-danger">Danger</button>
-                      <button class="btn btn-plain-warning">Warning</button>
-                      <button class="btn btn-plain-info">Info</button>
-                      <button class="btn btn-plain-dark">Dark</button>
+                    <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
+                      <div class="max-w-3xl min-w-max">
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Product name</th>
+                                <th>Color</th>
+                                <th>Catagory</th>
+                                <th>Available</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>01</td>
+                                <td>Apple MacBook Pro 17"</td>
+                                <td>White</td>
+                                <td>Laptop</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$2999 </td>
+                              </tr>
+                              <tr>
+                                <td>02</td>
+                                <td>LG22MK600 21.5" Monitor</td>
+                                <td>Black</td>
+                                <td>Monitor</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$1999</td>
+                              </tr>
+                              <tr>
+                                <td>03</td>
+                                <td>Magic Mouse 2</td>
+                                <td>Sliver</td>
+                                <td>Accessories</td>
+                                <td>No</td>
+                                <td>1</td>
+                                <td>$99</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <table class="table table-bordered">
+                        <!-- ..... -->
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Button Plain Ends -->
+              <!-- Card: Bordered Table Ends -->
 
-              <!-- Card: Button Rounded Starts -->
+              <!-- Card: Borderless Table Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Rounded Buttons</h4>
-                  <div class="card-subtitle">
-                    <p class="text-sm text-slate-400">Use<code>rounded-full</code> class to create a rounded button.</p>
-                  </div>
+                  <h4 class="card-title">Borderless Table</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.table-borderless</code> class to remove borders on all sides of the table and cells.
+                  </p>
+
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-primary rounded-full">Primary</button>
-                      <button class="btn btn-secondary rounded-full">Secondary</button>
-                      <button class="btn btn-success rounded-full">Success</button>
-                      <button class="btn btn-danger rounded-full">Danger</button>
-                      <button class="btn btn-warning rounded-full">Warning</button>
-                      <button class="btn btn-info rounded-full">Info</button>
-                      <button class="btn btn-dark rounded-full">Dark</button>
+                    <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
+                      <div class="max-w-3xl min-w-max">
+                        <table class="table table-borderless">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Product name</th>
+                                <th>Color</th>
+                                <th>Catagory</th>
+                                <th>Available</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>01</td>
+                                <td>Apple MacBook Pro 17"</td>
+                                <td>White</td>
+                                <td>Laptop</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$2999 </td>
+                              </tr>
+                              <tr>
+                                <td>02</td>
+                                <td>LG22MK600 21.5" Monitor</td>
+                                <td>Black</td>
+                                <td>Monitor</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$1999</td>
+                              </tr>
+                              <tr>
+                                <td>03</td>
+                                <td>Magic Mouse 2</td>
+                                <td>Sliver</td>
+                                <td>Accessories</td>
+                                <td>No</td>
+                                <td>1</td>
+                                <td>$99</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <table class="table table-borderless">
+                        <!-- ..... -->
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Button Rounded Ends -->
+              <!-- Card: Borderless Table Ends -->
 
-              <!-- Card: Button Icon Starts -->
+              <!-- Card: Responsive Table Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Icon Buttons</h4>
-                  <div class="card-subtitle">
-                    <p class="text-sm text-slate-400">
-                      By adding <code>icon</code> to the button, you can create icon buttons
-                    </p>
-                  </div>
+                  <h4 class="card-title">Responsive Table</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.table-responsive</code> class to wrap tables for horizontally scrolling.
+                  </p>
+
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-primary gap-2">
-                        <i data-feather="home" height="1em" width="1em"></i>
-                        <span>Home</span>
-                      </button>
-                      <button class="btn btn-outline-warning gap-2 rounded-full">
-                        <i data-feather="user-plus" height="1em" width="1em"></i>
-                        <span>Users</span>
-                      </button>
-                      <button class="btn btn-soft-danger gap-2">
-                        <i data-feather="trash" height="1em" width="1em"></i>
-                        <span>Delete</span>
-                      </button>
-                      <button class="btn btn-outline-info gap-2">
-                        <i data-feather="edit" height="1em" width="1em"></i>
-                        <span>Edit</span>
-                      </button>
-                      <button class="btn btn-plain-success gap-2">
-                        <i data-feather="check-circle" height="1em" width="1em"></i>
-                        <span>Done</span>
-                      </button>
+                    <div class="code-viewer-content">
+                      <div class="max-w-3xl">
+                        <div class="table-responsive rounded-primary whitespace-nowrap">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Product name</th>
+                                <th>Color</th>
+                                <th>Catagory</th>
+                                <th>Available</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>01</td>
+                                <td>Apple MacBook Pro 17"</td>
+                                <td>White</td>
+                                <td>Laptop</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$2999</td>
+                              </tr>
+                              <tr>
+                                <td>02</td>
+                                <td>LG22MK600 21.5" Monitor</td>
+                                <td>Black</td>
+                                <td>Monitor</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$1999</td>
+                              </tr>
+                              <tr>
+                                <td>03</td>
+                                <td>Magic Mouse 2</td>
+                                <td>Sliver</td>
+                                <td>Accessories</td>
+                                <td>No</td>
+                                <td>1</td>
+                                <td>$99</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Button Icon Ends -->
-
-              <!-- Card: Button Loading Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Loading Buttons</h4>
-                  <div class="card-subtitle">
-                    <p class="text-sm text-slate-400">
-                      By adding a loading icon with <code>disabled</code>class, you can create loading buttons.
-                    </p>
-                  </div>
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-primary gap-2" disabled="true">
-                        <svg
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          class="animate-spin"
-                          height="20"
-                          width="20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.2"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                            fill="currentColor"
-                          ></path>
-                          <path
-                            d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                        <span>Loading</span>
-                      </button>
-                      <button class="btn btn-outline-success gap-2" disabled="true">
-                        <svg
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          class="animate-spin"
-                          height="20"
-                          width="20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.2"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                            fill="currentColor"
-                          ></path>
-                          <path
-                            d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                        <span>Loading</span>
-                      </button>
-                      <button class="btn btn-soft-info gap-2" disabled="true">
-                        <svg
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          class="animate-spin"
-                          height="20"
-                          width="20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.2"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                            fill="currentColor"
-                          ></path>
-                          <path
-                            d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                        <span>Loading</span>
-                      </button>
-                      <button class="btn btn-plain-danger gap-2" disabled="true">
-                        <svg
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          class="animate-spin"
-                          height="20"
-                          width="20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.2"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                            fill="currentColor"
-                          ></path>
-                          <path
-                            d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                        <span>Loading</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Button Loading Ends -->
-
-              <!-- Card: Button Disabled Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Disabled Buttons</h4>
-                  <div class="card-subtitle">
-                    <p class="text-sm text-slate-400">
-                      Use <code>disabled</code>, class to create a disable button.
-                      <a
-                        class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
-                        href="https://react-icons.github.io/react-icons/"
-                        target="_blank"
-                        rel="noreferrer"
-                        >React Icons</a
-                      >
-                    </p>
-                  </div>
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <div class="flex flex-wrap items-center gap-4">
-                        <button class="btn btn-primary" disabled="true">Primary</button>
-                        <button class="btn btn-secondary" disabled="true">Secondary</button>
-                        <button class="btn btn-success" disabled="true">Success</button>
-                        <button class="btn btn-danger" disabled="true">Danger</button>
-                        <button class="btn btn-warning" disabled="true">Warning</button>
-                        <button class="btn btn-info" disabled="true">Info</button>
-                        <button class="btn btn-dark" disabled="true">Dark</button>
+                    <div class="code-viewer-source">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <!-- ...... -->
+                        </table>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Button Disabled Ends -->
+              <!-- Card: Responsive Table Ends -->
 
-              <!-- Card: Button Block Starts -->
+              <!-- Card: Table With Footer Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Block Buttons</h4>
-                  <div class="card-subtitle">
-                    <p class="text-sm text-slate-400">Use <code>w-full</code>, class to create block button.</p>
-                  </div>
+                  <h4 class="card-title">Table With Footer</h4>
+
+                  <p class="card-subtitle">
+                    <code>&lt;tfoot&gt;</code> can also be used inside tables.
+                  </p>
+                   
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-col gap-y-4">
-                      <button class="btn btn-primary w-full">Block Button</button>
-                      <button class="btn btn-outline-primary w-full">Block Button</button>
-                      <button class="btn btn-soft-primary w-full">Block Button</button>
+                    <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
+                      <div class="max-w-3xl">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Product name</th>
+                                <th>Color</th>
+                                <th>Catagory</th>
+                                <th>Available</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>01</td>
+                                <td>Apple MacBook 17"</td>
+                                <td>White</td>
+                                <td>Laptop</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$2999</td>
+                              </tr>
+                              <tr>
+                                <td>02</td>
+                                <td>LG22MK600 21.5" Monitor</td>
+                                <td>Black</td>
+                                <td>Monitor</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$1999</td>
+                              </tr>
+                              <tr>
+                                <td>03</td>
+                                <td>Magic Mouse 2</td>
+                                <td>Sliver</td>
+                                <td>Accessories</td>
+                                <td>No</td>
+                                <td>1</td>
+                                <td>$99</td>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <th colspan="6">Total</th>
+                                <th>$10000</th>
+                              </tr>
+                            </tfoot>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <table class="table">
+                          <thead>
+                            <!-- ..... -->
+                          </thead>
+                          <tbody>
+                            <!-- ..... -->
+                          </tbody>
+                          <tfoot>
+                              <!-- ..... -->
+                          </tfoot>
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Button Block Ends -->
+              <!-- Card: Table With Footer Ends -->
 
-              <!-- Card: Button Group Starts -->
+              <!-- Card: Compact Table Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Group Buttons</h4>
-                  <div class="card-subtitle">
-                    <p class="text-sm text-slate-400">
-                      Use <code>ButtonGroup</code> class to create a group of buttons.
-                    </p>
-                  </div>
+                  <h4 class="card-title">Compact Table</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.table-compact</code> class to make any <code>&lt;table&gt;</code> more compact by cutting all cell padding in half.
+                  </p>
+                  
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <div class="btn-group">
-                        <button class="btn btn-primary">HTML</button>
-                        <button class="btn btn-primary">CSS</button>
-                        <button class="btn btn-primary">Javascript</button>
-                        <button class="btn btn-primary">PHP</button>
-                        <button class="btn btn-primary">Python</button>
+                    <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
+                      <div class="max-w-3xl min-w-max">
+                        <table class="table table-compact">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Product name</th>
+                                <th>Color</th>
+                                <th>Catagory</th>
+                                <th>Available</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>01</td>
+                                <td>Apple MacBook 17"</td>
+                                <td>White</td>
+                                <td>Laptop</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$2999</td>
+                              </tr>
+                              <tr>
+                                <td>02</td>
+                                <td>LG22MK600 21.5" Monitor</td>
+                                <td>Black</td>
+                                <td>Monitor</td>
+                                <td>Yes</td>
+                                <td>1</td>
+                                <td>$1999</td>
+                              </tr>
+                              <tr>
+                                <td>03</td>
+                                <td>Magic Mouse 2</td>
+                                <td>Sliver</td>
+                                <td>Accessories</td>
+                                <td>No</td>
+                                <td>1</td>
+                                <td>$99</td>
+                              </tr>
+                            </tbody>
+                        </table>
                       </div>
-                      <div class="btn-group">
-                        <button class="btn btn-outline-primary gap-2">
-                          <i data-feather="thumbs-up" height="1em" width="1em"></i>
-                          <span>120k</span>
-                        </button>
-                        <button class="btn btn-outline-primary gap-2">
-                          <i data-feather="heart" height="1em" width="1em"></i>
-                          <span>200k</span>
-                        </button>
-                      </div>
-                      <div class="btn-group rounded">
-                        <button class="btn btn-soft-primary">Years</button>
-                        <button class="btn btn-soft-primary">Months</button>
-                        <button class="btn btn-soft-primary">Days</button>
-                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <table class="table table-compact">
+                         <!-- ...... -->
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Button Group Ends -->
+              <!-- Card: Compact Table Ends -->
+
+              <!-- Card: Color Table Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Color Table</h4>
+
+                  <p class="card-subtitle">
+                    Use contextual classes with base <code>.table</code> class to color tables. Example: <code>.table-primary</code>, <code>.table-secondary</code>, <code>.table-success</code>, <code>.table-danger</code>, <code>.table-warning</code>, <code>.table-info</code>, <code>.table-dark</code>.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content overflow-x-auto whitespace-nowrap">
+                      <div class="flex flex-col gap-8">
+                        <div class="max-w-3xl min-w-max">
+                          <table class="table table-primary">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Product name</th>
+                                  <th>Color</th>
+                                  <th>Catagory</th>
+                                  <th>Available</th>
+                                  <th>Qty</th>
+                                  <th>Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>01</td>
+                                  <td>Apple MacBook 17"</td>
+                                  <td>White</td>
+                                  <td>Laptop</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$2999</td>
+                                </tr>
+                                <tr>
+                                  <td>02</td>
+                                  <td>LG22MK600 21.5" Monitor</td>
+                                  <td>Black</td>
+                                  <td>Monitor</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$1999</td>
+                                </tr>
+                                <tr>
+                                  <td>03</td>
+                                  <td>Magic Mouse 2</td>
+                                  <td>Sliver</td>
+                                  <td>Accessories</td>
+                                  <td>No</td>
+                                  <td>1</td>
+                                  <td>$99</td>
+                                </tr>
+                              </tbody>
+                          </table>
+                        </div>
+
+                        <div class="max-w-3xl min-w-max">
+                          <table class="table table-secondary">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Product name</th>
+                                  <th>Color</th>
+                                  <th>Catagory</th>
+                                  <th>Available</th>
+                                  <th>Qty</th>
+                                  <th>Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>01</td>
+                                  <td>Apple MacBook 17"</td>
+                                  <td>White</td>
+                                  <td>Laptop</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$2999</td>
+                                </tr>
+                                <tr>
+                                  <td>02</td>
+                                  <td>LG22MK600 21.5" Monitor</td>
+                                  <td>Black</td>
+                                  <td>Monitor</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$1999</td>
+                                </tr>
+                                <tr>
+                                  <td>03</td>
+                                  <td>Magic Mouse 2</td>
+                                  <td>Sliver</td>
+                                  <td>Accessories</td>
+                                  <td>No</td>
+                                  <td>1</td>
+                                  <td>$99</td>
+                                </tr>
+                              </tbody>
+                          </table>
+                        </div>
+
+                        <div class="max-w-3xl min-w-max">
+                          <table class="table table-success">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Product name</th>
+                                  <th>Color</th>
+                                  <th>Catagory</th>
+                                  <th>Available</th>
+                                  <th>Qty</th>
+                                  <th>Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>01</td>
+                                  <td>Apple MacBook 17"</td>
+                                  <td>White</td>
+                                  <td>Laptop</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$2999</td>
+                                </tr>
+                                <tr>
+                                  <td>02</td>
+                                  <td>LG22MK600 21.5" Monitor</td>
+                                  <td>Black</td>
+                                  <td>Monitor</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$1999</td>
+                                </tr>
+                                <tr>
+                                  <td>03</td>
+                                  <td>Magic Mouse 2</td>
+                                  <td>Sliver</td>
+                                  <td>Accessories</td>
+                                  <td>No</td>
+                                  <td>1</td>
+                                  <td>$99</td>
+                                </tr>
+                              </tbody>
+                          </table>
+                        </div>
+
+                        <div class="max-w-3xl min-w-max">
+                          <table class="table table-danger">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Product name</th>
+                                  <th>Color</th>
+                                  <th>Catagory</th>
+                                  <th>Available</th>
+                                  <th>Qty</th>
+                                  <th>Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>01</td>
+                                  <td>Apple MacBook 17"</td>
+                                  <td>White</td>
+                                  <td>Laptop</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$2999</td>
+                                </tr>
+                                <tr>
+                                  <td>02</td>
+                                  <td>LG22MK600 21.5" Monitor</td>
+                                  <td>Black</td>
+                                  <td>Monitor</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$1999</td>
+                                </tr>
+                                <tr>
+                                  <td>03</td>
+                                  <td>Magic Mouse 2</td>
+                                  <td>Sliver</td>
+                                  <td>Accessories</td>
+                                  <td>No</td>
+                                  <td>1</td>
+                                  <td>$99</td>
+                                </tr>
+                              </tbody>
+                          </table>
+                        </div>
+
+                        <div class="max-w-3xl min-w-max">
+                          <table class="table table-warning">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Product name</th>
+                                  <th>Color</th>
+                                  <th>Catagory</th>
+                                  <th>Available</th>
+                                  <th>Qty</th>
+                                  <th>Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>01</td>
+                                  <td>Apple MacBook 17"</td>
+                                  <td>White</td>
+                                  <td>Laptop</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$2999</td>
+                                </tr>
+                                <tr>
+                                  <td>02</td>
+                                  <td>LG22MK600 21.5" Monitor</td>
+                                  <td>Black</td>
+                                  <td>Monitor</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$1999</td>
+                                </tr>
+                                <tr>
+                                  <td>03</td>
+                                  <td>Magic Mouse 2</td>
+                                  <td>Sliver</td>
+                                  <td>Accessories</td>
+                                  <td>No</td>
+                                  <td>1</td>
+                                  <td>$99</td>
+                                </tr>
+                              </tbody>
+                          </table>
+                        </div>
+
+                        <div class="max-w-3xl min-w-max">
+                          <table class="table table-info">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Product name</th>
+                                  <th>Color</th>
+                                  <th>Catagory</th>
+                                  <th>Available</th>
+                                  <th>Qty</th>
+                                  <th>Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>01</td>
+                                  <td>Apple MacBook 17"</td>
+                                  <td>White</td>
+                                  <td>Laptop</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$2999</td>
+                                </tr>
+                                <tr>
+                                  <td>02</td>
+                                  <td>LG22MK600 21.5" Monitor</td>
+                                  <td>Black</td>
+                                  <td>Monitor</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$1999</td>
+                                </tr>
+                                <tr>
+                                  <td>03</td>
+                                  <td>Magic Mouse 2</td>
+                                  <td>Sliver</td>
+                                  <td>Accessories</td>
+                                  <td>No</td>
+                                  <td>1</td>
+                                  <td>$99</td>
+                                </tr>
+                              </tbody>
+                          </table>
+                        </div>
+
+                        <div class="max-w-3xl min-w-max">
+                          <table class="table table-dark">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Product name</th>
+                                  <th>Color</th>
+                                  <th>Catagory</th>
+                                  <th>Available</th>
+                                  <th>Qty</th>
+                                  <th>Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>01</td>
+                                  <td>Apple MacBook 17"</td>
+                                  <td>White</td>
+                                  <td>Laptop</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$2999</td>
+                                </tr>
+                                <tr>
+                                  <td>02</td>
+                                  <td>LG22MK600 21.5" Monitor</td>
+                                  <td>Black</td>
+                                  <td>Monitor</td>
+                                  <td>Yes</td>
+                                  <td>1</td>
+                                  <td>$1999</td>
+                                </tr>
+                                <tr>
+                                  <td>03</td>
+                                  <td>Magic Mouse 2</td>
+                                  <td>Sliver</td>
+                                  <td>Accessories</td>
+                                  <td>No</td>
+                                  <td>1</td>
+                                  <td>$99</td>
+                                </tr>
+                              </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                        <table class="table table-primary">
+                          <!-- ..... -->
+                        </table>
+                        <table class="table table-secondary">
+                          <!-- ..... -->
+                        </table>
+                        <table class="table table-success">
+                          <!-- ..... -->
+                        </table>
+                        <table class="table table-danger">
+                          <!-- ..... -->
+                        </table>
+                        <table class="table table-warning">
+                          <!-- ..... -->
+                        </table>
+                        <table class="table table-info">
+                          <!-- ..... -->
+                        </table>
+                        <table class="table table-dark">
+                          <!-- ..... -->
+                        </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Color Table Ends -->
             </div>
-            <!-- Button Ends -->
+            <!-- Table Ends -->
           </main>
           <!-- Main Content Ends -->
 
