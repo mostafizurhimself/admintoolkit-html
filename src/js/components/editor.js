@@ -1,6 +1,6 @@
 import Quill from "quill";
 // Rich Text Editor Toolbar Options
-const toolbarOptions = [
+const snowToolbarOptions = [
     ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
     ['blockquote', 'code-block'],
   
@@ -19,9 +19,14 @@ const toolbarOptions = [
   
     ['clean']                                         // remove formatting button
   ];
-// spimple markdown 
-
-
+const bubbleToolbarOptions = [
+  ['bold', 'italic', 'underline', 'strike'],
+  ['blockquote', 'code-block'],
+  [{ 'header': 1 }, { 'header': 2 }],
+  [{ 'list': 'bullet' }],
+  [{ 'script': 'sub'}, { 'script': 'super' }],
+  [{ 'direction': 'rtl' }], 
+]
 
 const editor  = {
     init(){
@@ -31,7 +36,7 @@ const editor  = {
       snowEditors?.forEach(editor => {
         const quill = new Quill(editor, {
           modules: {
-            toolbar:toolbarOptions
+            toolbar:snowToolbarOptions
           },
           theme: 'snow'
         });
@@ -40,16 +45,7 @@ const editor  = {
       bubbleEditors?.forEach(editor => {
         const quill = new Quill(editor, {
           modules: {
-            toolbar:[
-              ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-              ['blockquote', 'code-block'],
-            
-              [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-              [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-              [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
-              [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
-              [{ 'direction': 'rtl' }], 
-            ]
+            toolbar:bubbleToolbarOptions
           },
           theme: 'bubble'
         });

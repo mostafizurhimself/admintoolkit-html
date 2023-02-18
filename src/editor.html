@@ -734,7 +734,7 @@
                   </p>
 
                   <div class="code-viewer mt-4 relative">
-                    
+
                     <div class="quill-editor-bubble">
                       <h3>Quill Bubble Text Editor</h3>
                       <p>
@@ -747,16 +747,16 @@
               <!-- Card: Bubble Theme Text Editor Ends -->
 
               <!-- Card: Controled Text Editor Starts -->
-              <!-- <div class="card">
+              <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Bubble Theme Editor</h4>
+                  <h4 class="card-title">Controled Text Editor</h4>
 
                   <p class="card-subtitle">
-                    Use <code>quill-editor-bubble</code> class to create a markdown text editor.
+                    Use <code>editor-container</code> id to create a markdown text editor.
                   </p>
 
-                  <div class="code-viewer mt-4">
-                    <div class="quill-editor-bubble">
+                  <div id="controled-text-editor" class="code-viewer mt-4" data-render-source="false">
+                    <div id="editor-container">
                       <h3>Quill Controled Text Editor</h3>
                       <p>
                         Cupcake ipsum dolor sit amet. Halvah cheesecake chocolate bar gummi bears cupcake. Pie macaroon bear claw. Soufflé I love candy canes I love cotton candy I love.
@@ -764,7 +764,7 @@
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
               <!-- Card: Controled Text Editor Ends -->
             </div>
             <!-- Editor Ends -->
@@ -789,6 +789,27 @@
       <!-- Wrapper Ends -->
     </div>
     <script src="./js/app.js"></script>
+    <!-- Include the Quill library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js"></script>
+    <script defer>
+      const quill = new Quill("#editor-container", { theme: 'snow' });
+    const controlledEditorSource = `
+      <div id="editor-container">
+        <h3>Quill Controled Text Editor</h3>
+        <p>
+          Cupcake ipsum dolor sit amet. Halvah cheesecake chocolate bar gummi bears cupcake. Pie macaroon bear claw. Soufflé I love candy canes I love cotton candy I love.
+        </p>
+      </div>
+
+      \<script\>
+        const quill = new Quill("#editor-container", { theme: 'snow' });
+      \<\/script\>
+     `;
+
+    const controlledCodeViewer = createCodeViewer('#controled-text-editor', controlledEditorSource);
+    controlledCodeViewer.render();
+  </script>
+   
     
   </body>
 </html>
