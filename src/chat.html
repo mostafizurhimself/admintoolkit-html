@@ -684,7 +684,7 @@
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>--Title--</h5>
+              <h5>Chat</h5>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
@@ -704,18 +704,27 @@
             <!-- Tabs Starts -->
             <div class="space-y-6">
               <!-- Card: Basic Tab Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Chat</h4>
-
-                  <p class="card-subtitle">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <!-- Code Here  -->
-                  </div>
+              <div class="grid  gap-y-4 md:gap-x-8  grid-cols-1 place-items-center  md:grid-cols-3 bg-transparent">
+                <!-- Users Start  -->
+                <div class="card users col-span-1 rounded-primary py-6 px-5 shadow ">
+                  <form action="" class="group hidden h-10 w-full items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex">
+                    <div class="flex h-full items-center px-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search text-slate-400 group-focus-within:text-primary-500"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                    <input class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0" type="text" placeholder="Search">
+                  </form>
                 </div>
+                <!-- Users End  -->
+                <!-- Converstion Start -->
+                <div class="converstion card p-4 col-span-2 rounded-primary ">
+                  <form action="" class="group hidden h-10 w-full items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex">
+                    <div class="flex h-full items-center px-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search text-slate-400 group-focus-within:text-primary-500"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                    <input class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0" type="text" placeholder="Search">
+                  </form>
+                </div>
+                <!-- Converstion Start -->
               </div>
               <!-- Card: Basic Tab Ends -->
             </div>
