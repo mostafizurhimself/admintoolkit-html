@@ -2,6 +2,10 @@
   @apply w-1.5 bg-slate-300 dark:bg-slate-900;
 }
 
+.simplebar-content-wrapper {
+  @apply scroll-smooth;
+}
+
 // =======Quill Styles Start==========
 
 .ql-container {
