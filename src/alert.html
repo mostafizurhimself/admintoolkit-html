@@ -174,6 +174,9 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
+                <a href="./accordion.html" class="sidebar-submenu-item">Accordion</a>
+              </li>
+              <li>
                 <a href="./alert.html" class="sidebar-submenu-item active">Alert</a>
               </li>
               <li>
@@ -682,7 +685,7 @@
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
-            <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+            <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
               <h5>Alerts</h5>
 
               <ol class="breadcrumb ml-auto">
@@ -695,64 +698,58 @@
                 </li>
 
                 <li class="breadcrumb-item">
-                  <a href="#">alerts</a>
+                  <a href="#">Alerts</a>
                 </li>
               </ol>
             </div>
             <!-- Page Title Ends -->
 
             <!-- Alert Starts -->
-            <div class="mt-6 space-y-6">
-              <!-- Basic Alert Starts -->
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Basic Alert</h4>
+            <div class="space-y-6">
+              <!-- Card: Basic Alert Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Basic Alert</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     For styling an alert, use <code>alert</code> and <code>alert-*</code> clasess.
                   </p>
-
-                  <div class="mt-6">
-                    <div class="code-viewer">
-                      <div class="flex flex-col gap-4">
-                        <div class="alert alert-primary" role="alert">
-                          <p class="alert-text">This is a primary alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-secondary" role="alert">
-                          <p class="alert-text">This is a secondary alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-success" role="alert">
-                          <p class="alert-text">This is a success alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-danger" role="alert">
-                          <p class="alert-text">This is a danger alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-warning" role="alert">
-                          <p class="alert-text">This is a warning alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-info" role="alert">
-                          <p class="alert-text">This is a info alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-dark" role="alert">
-                          <p class="alert-text">This is a dark alert with addtional information and content.</p>
-                        </div>
+                  
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-col gap-4">
+                      <div class="alert alert-primary" role="alert">
+                        <p>This is a primary alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-secondary" role="alert">
+                        <p>This is a secondary alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-success" role="alert">
+                        <p>This is a success alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-danger" role="alert">
+                        <p>This is a danger alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-warning" role="alert">
+                        <p>This is a warning alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-info" role="alert">
+                        <p>This is a info alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-dark" role="alert">
+                        <p>This is a dark alert with addtional information and content.</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Basic Alert Ends -->
+              <!-- Card: Basic Alert Ends -->
 
-              <!-- Icon Alert Start -->
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Alert with icon</h4>
+              <!-- Card: Icon Alert Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Alert with icon</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use
                     <a
                       class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline"
@@ -763,208 +760,189 @@
                     to create alerts with icons.
                   </p>
 
-                  <div class="mt-6">
-                    <div class="code-viewer">
-                      <div class="flex flex-col gap-4">
-                        <div class="alert alert-primary" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-circle"></i></span>
-                          <p class="alert-text">This is a primary alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-secondary" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-circle"></i></span>
-                          <p class="alert-text">This is a secondary alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-success" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="check-circle"></i></span>
-                          <p class="alert-text">This is a success alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-danger" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-triangle"></i></span>
-                          <p class="alert-text">This is a danger alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-warning" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-triangle"></i></span>
-                          <p class="alert-text">This is a warning alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-info" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-circle"></i></span>
-                          <p class="alert-text">This is a info alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-dark" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-circle"></i></span>
-                          <p class="alert-text">This is a dark alert with addtional information and content.</p>
-                        </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-col gap-4">
+                      <div class="alert alert-primary" role="alert">
+                        <i width="1rem" height="1rem" data-feather="alert-circle"></i>
+                        <p>This is a primary alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-secondary" role="alert">
+                        <i width="1rem" height="1rem" data-feather="alert-circle"></i>
+                        <p>This is a secondary alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-success" role="alert">
+                        <i width="1rem" height="1rem" data-feather="check-circle"></i>
+                        <p>This is a success alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-danger" role="alert">
+                        <i width="1rem" height="1rem" data-feather="alert-triangle"></i>
+                        <p>This is a danger alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-warning" role="alert">
+                        <i width="1rem" height="1rem" data-feather="alert-triangle"></i>
+                        <p>This is a warning alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-info" role="alert">
+                        <i width="1rem" height="1rem" data-feather="alert-circle"></i>
+                        <p>This is a info alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-dark" role="alert">
+                        <i width="1rem" height="1rem" data-feather="alert-circle"></i>
+                        <p>This is a dark alert with addtional information and content.</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Icon Alert End -->
+              <!-- Card: Icon Alert Ends -->
 
-              <!-- Outlined Alert Starts -->
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Outlined Alert</h4>
+              <!-- Card: Outlined Alert Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Outlined Alert</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use <code>alert-outlined</code> class with our contextual classes to create an oulined alert
                   </p>
 
-                  <div class="mt-6">
-                    <div class="code-viewer">
-                      <div class="flex flex-col gap-4">
-                        <div class="alert alert-outline-primary" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-circle"></i></span>
-                          <p class="alert-text">This is a primary alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-outline-secondary" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-circle"></i></span>
-                          <p class="alert-text">This is a secondary alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-outline-success" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="check-circle"></i></span>
-                          <p class="alert-text">This is a success alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-outline-danger" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-triangle"></i></span>
-                          <p class="alert-text">This is a danger alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-outline-warning" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-triangle"></i></span>
-                          <p class="alert-text">This is a warning alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-outline-info" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-circle"></i></span>
-                          <p class="alert-text">This is a info alert with addtional information and content.</p>
-                        </div>
-                        <div class="alert alert-outline-danger" role="alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="alert-circle"></i></span>
-                          <p class="alert-text">This is a dark alert with addtional information and content.</p>
-                        </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-col gap-4">
+                      <div class="alert alert-outline-primary" role="alert">
+                        <i width="1rem" height="1rem" data-feather="alert-circle"></i>
+                        <p>This is a primary alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-outline-secondary" role="alert">
+                        <i width="1rem" height="1rem" data-feather="alert-circle"></i>
+                        <p>This is a secondary alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-outline-success" role="alert">
+                        <i width="1rem" height="1rem" data-feather="check-circle"></i>
+                        <p>This is a success alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-outline-danger" role="alert">
+                        <i width="1rem" height="1rem" data-feather="alert-triangle"></i>
+                        <p>This is a danger alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-outline-warning" role="alert">
+                        <i width="1rem" height="1rem" data-feather="alert-triangle"></i>
+                        <p>This is a warning alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-outline-info" role="alert">
+                        <i width="1rem" height="1rem" data-feather="alert-circle"></i>
+                        <p>This is a info alert with addtional information and content.</p>
+                      </div>
+                      <div class="alert alert-outline-danger" role="alert">
+                        <i width="1rem" height="1rem" data-feather="alert-circle"></i>
+                        <p>This is a dark alert with addtional information and content.</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Outlined Alert Ends -->
+              <!-- Card: Outlined Alert Ends -->
 
-              <!-- Dismissable Alert Starts -->
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Dismissable Alert</h4>
+              <!-- Card: Dismissable Alert Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Dismissable Alert</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     Use <code>dismissable</code> class with our theme classes to create an outline alert
                   </p>
 
-                  <div class="mt-6">
-                    <div class="code-viewer">
-                      <div class="flex flex-col gap-4">
-                        <div class="alert alert-primary alert-dismissible" role="alert">
-                          <p class="alert-text">This is a primary alert with addtional information and content.</p>
-                          <button class="alert-dismiss" type="button">
-                            <i width="16" height="16" data-feather="x"></i>
-                          </button>
-                        </div>
-                        <div class="alert alert-secondary alert-dismissible" role="alert">
-                          <p class="alert-text">This is a secondary alert with addtional information and content.</p>
-                          <button class="alert-dismiss" type="button">
-                            <i width="16" height="16" data-feather="x"></i>
-                          </button>
-                        </div>
-                        <div class="alert alert-success alert-dismissible" role="alert">
-                          <p class="alert-text">This is a success alert with addtional information and content.</p>
-                          <button class="alert-dismiss" type="button">
-                            <i width="16" height="16" data-feather="x"></i>
-                          </button>
-                        </div>
-                        <div class="alert alert-danger alert-dismissible" role="alert">
-                          <p class="alert-text">This is a danger alert with addtional information and content.</p>
-                          <button class="alert-dismiss" type="button">
-                            <i width="16" height="16" data-feather="x"></i>
-                          </button>
-                        </div>
-                        <div class="alert alert-warning alert-dismissible" role="alert">
-                          <p class="alert-text">This is a warning alert with addtional information and content.</p>
-                          <button class="alert-dismiss" type="button">
-                            <i width="16" height="16" data-feather="x"></i>
-                          </button>
-                        </div>
-                        <div class="alert alert-info alert-dismissible" role="alert">
-                          <p class="alert-text">This is a info alert with addtional information and content.</p>
-                          <button class="alert-dismiss" type="button">
-                            <i width="16" height="16" data-feather="x"></i>
-                          </button>
-                        </div>
-                        <div class="alert alert-dark alert-dismissible" role="alert">
-                          <p class="alert-text">This is a dark alert with addtional information and content.</p>
-                          <button class="alert-dismiss" type="button">
-                            <i width="16" height="16" data-feather="x"></i>
-                          </button>
-                        </div>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-col gap-4">
+                      <div class="alert alert-primary alert-dismissible" role="alert">
+                        <p>This is a primary alert with addtional information and content.</p>
+                        <button class="alert-dismiss" type="button">
+                          <i width="1rem" height="1rem" data-feather="x"></i>
+                        </button>
+                      </div>
+                      <div class="alert alert-secondary alert-dismissible" role="alert">
+                        <p>This is a secondary alert with addtional information and content.</p>
+                        <button class="alert-dismiss" type="button">
+                          <i width="1rem" height="1rem" data-feather="x"></i>
+                        </button>
+                      </div>
+                      <div class="alert alert-success alert-dismissible" role="alert">
+                        <p>This is a success alert with addtional information and content.</p>
+                        <button class="alert-dismiss" type="button">
+                          <i width="1rem" height="1rem" data-feather="x"></i>
+                        </button>
+                      </div>
+                      <div class="alert alert-danger alert-dismissible" role="alert">
+                        <p>This is a danger alert with addtional information and content.</p>
+                        <button class="alert-dismiss" type="button">
+                          <i width="1rem" height="1rem" data-feather="x"></i>
+                        </button>
+                      </div>
+                      <div class="alert alert-warning alert-dismissible" role="alert">
+                        <p>This is a warning alert with addtional information and content.</p>
+                        <button class="alert-dismiss" type="button">
+                          <i width="1rem" height="1rem" data-feather="x"></i>
+                        </button>
+                      </div>
+                      <div class="alert alert-info alert-dismissible" role="alert">
+                        <p>This is a info alert with addtional information and content.</p>
+                        <button class="alert-dismiss" type="button">
+                          <i width="1rem" height="1rem" data-feather="x"></i>
+                        </button>
+                      </div>
+                      <div class="alert alert-dark alert-dismissible" role="alert">
+                        <p>This is a dark alert with addtional information and content.</p>
+                        <button class="alert-dismiss" type="button">
+                          <i width="1rem" height="1rem" data-feather="x"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Dismissable Alert Ends -->
+              <!-- Card: Dismissable Alert Ends -->
 
-              <!-- Controlled Alert Start -->
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Controlled Alert</h4>
+              <!-- Card: Controlled Alert Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Controlled Alert</h4>
 
-                  <p class="text-sm text-slate-400">
+                  <p class="card-subtitle">
                     If you want to manually hide the alert, you need to use
                     <code>createDismissableAlert</code> function. This function is available globally. Then you can call
                     the <code>dismiss()</code> method to hide the alert.
                   </p>
 
-                  <div class="mt-6">
-                    <div id="controlled-code-viewer" class="code-viewer" data-render-source="false">
-                      <div class="flex flex-col gap-4">
-                        <div class="alert alert-success" role="alert" id="controlled-alert">
-                          <span class="alert-icon"><i width="1em" height="1em" data-feather="check-circle"></i></span>
-                          <p class="alert-text">This is a success alert with addtional information and content.</p>
-                        </div>
-                        <div>
-                          <button class="btn btn-primary" type="button" onclick="dismissControlledAlert()">
-                            Hide dismissable alert
-                          </button>
-                        </div>
+                  <div id="controlled-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <div class="flex flex-col gap-4">
+                      <div class="alert alert-success" role="alert" id="controlled-alert">
+                        <i width="1em" height="1em" data-feather="check-circle"></i>
+                        <p>This is a success alert with addtional information and content.</p>
+                      </div>
+                      <div>
+                        <button class="btn btn-primary" type="button" onclick="dismissControlledAlert()">
+                          Hide dismissable alert
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Controlled Alert Ends -->
+              <!-- Card: Controlled Alert Ends -->
 
-              <!-- Additional Content Alert Starts -->
-              <div
-                class="w-full overflow-hidden rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800"
-              >
-                <div class="p-6">
-                  <h4 class="text-lg font-semibold">Additional Content</h4>
+              <!-- Card: Additional Content Alert Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Additional Content</h4>
 
-                  <p class="text-sm text-slate-400">
-                    Use the <code>show</code> class to control the visibility of the alert
+                  <p class="card-subtitle">
+                    Use the <code>show</code> class to control the visibility of the alert.
                   </p>
 
-                  <div class="mt-6">
-                    <div class="code-viewer">
+                  <div class="code-viewer mt-4">
                       <div class="flex flex-col gap-4">
                         <div class="alert alert-success alert-dismissible" role="alert">
                           <div>
                             <div class="flex items-center gap-2 text-base font-medium">
-                              <span class="alert-icon"
-                                ><i width="1em" height="1em" data-feather="check-circle"></i
-                              ></span>
+                              <i width="1em" height="1em" data-feather="check-circle"></i>
                               <span>Order completed</span>
                             </div>
                             <div class="mt-3 font-normal">
@@ -984,9 +962,7 @@
                         <div class="alert alert-danger alert-dismissible" role="alert">
                           <div>
                             <div class="flex items-center gap-2 text-base font-medium">
-                              <span class="alert-icon"
-                                ><i width="1em" height="1em" data-feather="alert-triangle"></i
-                              ></span>
+                              <i width="1em" height="1em" data-feather="alert-triangle"></i>
                               <span> There were some errors with your submission</span>
                             </div>
                             <div class="ps-10 mt-3 font-normal">
@@ -1002,10 +978,9 @@
                         </div>
                       </div>
                     </div>
-                  </div>
                 </div>
               </div>
-              <!-- Additional Content Alert Ends -->
+              <!-- Card: Additional Content Alert Ends -->
             </div>
             <!-- Alert Starts -->
           </main>
