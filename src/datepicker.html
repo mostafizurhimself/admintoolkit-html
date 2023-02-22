@@ -687,7 +687,7 @@
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>--Title--</h5>
+              <h5>Datepicker</h5>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
@@ -704,25 +704,196 @@
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Tabs Starts -->
+            <!-- Datepicker Starts -->
             <div class="space-y-6">
-              <!-- Card: Basic Tab Starts -->
+              <!-- Card: Basic Date picker Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Datepicker</h4>
+                  <h4 class="card-title">Basic Date Picker</h4>
 
                   <p class="card-subtitle">
                     You can use the <code>Checkbox</code> component to render a checkbox input.
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <!-- Code Here  -->
+                    <div class="code-viewer-content">
+                      <div class="max-w-md">
+                        <input class="input bg-white dark:bg-slate-800 flatpickr-input-date" type="text" placeholder="YYYY-MM-DD" />
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <input class="flatpickr-input-date" type="text" placeholder="YYYY-MM-DD" />
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Basic Tab Ends -->
+              <!-- Card: Basic Date picker Ends -->
+
+              <!-- Card: Date And Time Picker Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Date and Time Picker</h4>
+
+                  <p class="card-subtitle">
+                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="max-w-md">
+                        <input class="input bg-white dark:bg-slate-800 flatpickr-input-datetime" type="text" placeholder="YYYY-MM-DD HH:MM" />
+                      </div>
+                    </div>
+                    <div class="code-viewer-source">
+                      <input class="flatpickr-input-datetime" type="text" placeholder="YYYY-MM-DD HH:MM" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Date And Time Picker Ends -->
+
+              <!-- Card: Date Range Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Range Date Picker</h4>
+
+                  <p class="card-subtitle">
+                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="max-w-md">
+                        <input class="input bg-white dark:bg-slate-800 flatpickr-input-range" type="text" placeholder="YYYY-MM-DD to YYYY-MM-DD" />
+                      </div>
+                    </div>
+                    
+                    <div class="code-viewer-source">
+                      <input class="flatpickr-input-range" type="text" placeholder="YYYY-MM-DD to YYYY-MM-DD" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Date Range Ends -->
+
+              <!-- Card: Disabled Range Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Disabled Range</h4>
+
+                  <p class="card-subtitle">
+                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="max-w-md">
+                        <input class="input bg-white dark:bg-slate-800 flatpickr-input-disabled-range" type="text" placeholder="YYYY-MM-DD" />
+                      </div>
+                    </div>
+                    <div class="code-viewer-source">
+                      <input class="flatpickr-input-disabled-range" type="text" placeholder="YYYY-MM-DD" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Disabled Range Ends -->
+
+              <!-- Card: Time Picker Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Time Picker</h4>
+
+                  <p class="card-subtitle">
+                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="max-w-md">
+                        <input class="input bg-white dark:bg-slate-800 flatpickr-input-time" type="text" placeholder="HH:MM" />
+                      </div>
+                    </div>
+                    <div class="code-viewer-source">
+                      <input class="flatpickr-input-time" type="text" placeholder="HH:MM" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Time Picker Ends -->
+
+              <!-- Card: Mulitple Date Picker Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Multiple Date Picker</h4>
+
+                  <p class="card-subtitle">
+                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="max-w-md">
+                        <input class="input bg-white dark:bg-slate-800 flatpickr-input-multiple" type="text" placeholder="YYYY-MM-DD" />
+                      </div>
+                    </div>
+                    <div class="code-viewer-source">
+                      <input class="flatpickr-input-multiple" type="text" placeholder="YYYY-MM-DD" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Mulitple Date Picker Ends -->
+
+              <!-- Card: Human Friendly Date Picker Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Human Friendly Date Picker</h4>
+
+                  <p class="card-subtitle">
+                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="max-w-md">
+                        <input class="input bg-white dark:bg-slate-800 flatpickr-input-human-friendly" type="text" placeholder="Month DD, YYYY" />
+                      </div>
+                    </div>
+                    <div class="code-viewer-source">
+                      <input class="flatpickr-input-human-friendly" type="text" placeholder="Month DD, YYYY" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Human Friendly Date Picker Ends -->
+
+              <!-- Card: Inline Date Picker Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Inline Date Picker</h4>
+
+                  <p class="card-subtitle">
+                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="max-w-md">
+                        <input class="input bg-white dark:bg-slate-800 flatpickr-input-inline" type="text" placeholder="Month DD, YYYY" />
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <input class="flatpickr-input-inline" type="text" placeholder="Month DD, YYYY" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Inline Date Picker Ends -->
             </div>
-            <!-- Tabs Ends -->
+            <!-- Datepicker Ends -->
           </main>
           <!-- Main Content Ends -->
 
