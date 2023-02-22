@@ -14,7 +14,7 @@ const sidebar = {
     this.initOverlay();
     this.handleWindowResize();
     this.initSidebarHover();
-    this.scrollToView();
+    this.initScrollBar();
   },
 
   initMenuItems() {
@@ -116,15 +116,15 @@ const sidebar = {
     }
   },
 
-  scrollToView() {
-    const simplebar = new SimpleBar(this.content, {});
+  initScrollBar() {
+    new SimpleBar(this.content);
     const activeMenu = this.content.querySelector('.sidebar-menu.active');
     const activeSubmenu = this.content.querySelector('.sidebar-submenu-item.active');
     window.addEventListener('load', () => {
       if (activeSubmenu) {
-        simplebar.contentWrapperEl.scroll(0, activeSubmenu.offsetTop);
+        activeSubmenu.scrollIntoView({block: 'center', behavior: 'smooth'})
       } else {
-        simplebar.contentWrapperEl.scroll(0, activeMenu.offsetTop);
+        activeMenu.scrollIntoView({block: 'center', behavior: 'smooth'})
       }
     });
   },
