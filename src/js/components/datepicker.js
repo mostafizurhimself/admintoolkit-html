@@ -48,6 +48,22 @@ const datepicker = {
 
     }
 
+    if(flatpickrDisabledRangeInputs.length) {
+
+      [...flatpickrDisabledRangeInputs].forEach(input => {
+        flatpickr(input, {
+          ...flatpickrDefaultOptions,
+          disable: [
+            {
+              from: '2023-02-10',
+              to: '2023-02-17'
+            },
+          ]
+        })
+      });
+
+    }
+
     if(flatpickrTimeInputs.length) {
 
       [...flatpickrTimeInputs].forEach(input => {
@@ -91,22 +107,6 @@ const datepicker = {
         flatpickr(input, {
           ...flatpickrDefaultOptions,
           inline: true
-        })
-      });
-
-    }
-
-    if(flatpickrDisabledRangeInputs.length) {
-
-      [...flatpickrDisabledRangeInputs].forEach(input => {
-        flatpickr(input, {
-          ...flatpickrDefaultOptions,
-          disable: [
-            {
-              from: '2023-02-10',
-              to: '2023-02-17'
-            },
-          ]
         })
       });
 
