@@ -7,13 +7,12 @@ const datepicker = {
     const flatpickrDatetimeInputs       = document.querySelectorAll('.flatpickr-input-datetime');
     const flatpickrRangeInputs          = document.querySelectorAll('.flatpickr-input-range');
     const flatpickrDisabledRangeInputs  = document.querySelectorAll('.flatpickr-input-disabled-range');
-    const flatpickrDisabledPastInputs   = document.querySelectorAll('.flatpickr-input-disabled-past');
     const flatpickrTimeInputs           = document.querySelectorAll('.flatpickr-input-time');
     const flatpickrMultipleInputs       = document.querySelectorAll('.flatpickr-input-multiple');
     const flatpickrHumanFriendlyInputs  = document.querySelectorAll('.flatpickr-input-human-friendly');
     const flatpickrInlineInputs         = document.querySelectorAll('.flatpickr-input-inline');
     const flatpickrDefaultOptions       = {
-      monthSelectorType: 'static',
+      monthSelectorType: 'dropdown',
       nextArrow: feather.icons['arrow-right'].toSvg(),
       prevArrow: feather.icons['arrow-left'].toSvg()
     }
@@ -31,7 +30,7 @@ const datepicker = {
       [...flatpickrDatetimeInputs].forEach(input => {
         flatpickr(input, {
           ...flatpickrDefaultOptions,
-          enableTime: true
+          enableTime: true,
         })
       });
 
