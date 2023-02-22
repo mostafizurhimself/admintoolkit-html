@@ -41,6 +41,7 @@ sidebar.init();
 
 // Initialize tabs
 tabs.init();
+
 // Initialize editor
 editor.init();
 
