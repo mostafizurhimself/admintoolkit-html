@@ -12,9 +12,13 @@ import dropdown from './components/dropdown';
 import modal from './components/modal';
 import sidebar from './components/sidebar';
 import tabs from './components/tabs';
+
+//Import third party packages
 import themeSwitcher from './components/theme-switcher';
 import carousel from './components/carousel';
 
+import editor from './components/editor';
+import select from './components/select';
 
 // Initialize code highlighting
 codeViewer.init();
@@ -41,6 +45,12 @@ sidebar.init();
 tabs.init();
 // Initialize carousels
 carousel.init();
+
+// Initialize editor
+editor.init();
+
+// Initialize Select
+select.init();
 
 // Initialize feather icons Icons should be replaced at the end
 feather.replace();

@@ -1,3 +1,5 @@
+import SimpleBar from 'simplebar';
+
 const sidebar = {
   wrapper: document.querySelector('.wrapper'),
   sidebar: document.querySelector('.sidebar'),
@@ -12,11 +14,10 @@ const sidebar = {
     this.initOverlay();
     this.handleWindowResize();
     this.initSidebarHover();
+    this.initScrollBar();
   },
 
   initMenuItems() {
-    const currentPath = window.location.pathname;
-
     if (this.menuItems.length) {
       this.menuItems.forEach((menuItem) => {
         const parent = menuItem.parentElement;
@@ -113,6 +114,19 @@ const sidebar = {
         }
       });
     }
+  },
+
+  initScrollBar() {
+    new SimpleBar(this.content);
+    const activeMenu = this.content.querySelector('.sidebar-menu.active');
+    const activeSubmenu = this.content.querySelector('.sidebar-submenu-item.active');
+    window.addEventListener('load', () => {
+      if (activeSubmenu) {
+        activeSubmenu.scrollIntoView({block: 'center', behavior: 'smooth'})
+      } else {
+        activeMenu.scrollIntoView({block: 'center', behavior: 'smooth'})
+      }
+    });
   },
 };
 
