@@ -2,16 +2,17 @@
 $ti-font-path: '../fonts';
 $flag-icons-path: "../images/flags";
 
-// Vendor
+// Vendor css files.
 @import 'simplebar/dist/simplebar.css';
 @import 'boxicons/css/boxicons.css';
 @import 'spinkit/spinkit.css';
-@import '@tabler/icons-webfont/tabler-icons.scss';
-@import 'swiper/swiper.scss';
-@import 'swiper/scss/autoplay';
-@import 'flag-icons/sass/flag-icons.scss';
+@import 'flatpickr/dist/flatpickr.css';
 @import 'quill/dist/quill.snow.css';
 @import 'quill/dist/quill.bubble.css';
+
+//Vendor scss files.
+@import '@tabler/icons-webfont/tabler-icons.scss';
+@import 'flag-icons/sass/flag-icons.scss';
 @import 'tom-select/dist/scss/tom-select.scss';
 
 // Base
@@ -47,4 +48,5 @@ $flag-icons-path: "../images/flags";
 @import 'components/select';
 @import 'components/table';
 @import 'components/spinner';
+@import 'components/datepicker';
 // @import 'components/spinkit-spinner';

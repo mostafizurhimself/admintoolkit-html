@@ -12,6 +12,7 @@ import dropdown from './components/dropdown';
 import modal from './components/modal';
 import sidebar from './components/sidebar';
 import tabs from './components/tabs';
+import datepicker from './components/datepicker';
 
 //Import third party packages
 import themeSwitcher from './components/theme-switcher';
@@ -51,6 +52,9 @@ editor.init();
 
 // Initialize Select
 select.init();
+
+// Initialize Datepicker
+datepicker.init();
 
 // Initialize feather icons Icons should be replaced at the end
 feather.replace();
