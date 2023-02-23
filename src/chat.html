@@ -717,7 +717,7 @@
                     <input class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0" type="text" placeholder="Search">
                   </form>
                   </div>
-                  <div class="users max-h-[calc(100vh-19.1rem)]  overflow-auto" data-simplebar>
+                  <div class="users max-h-[calc(100vh-19.04rem)] p-0 m-0  overflow-auto" data-simplebar>
                     <!-- User -->
                     <div class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
                       <div class="profile-img w-10 relative">
@@ -895,7 +895,14 @@
                 <div class="converstion card p-0 m-0 col-span-2 rounded-primary ">
                   <!-- Chat Header Start  -->
                     <div class="flex justify-between items-center p-4 border-b border-slate-300 dark:border-slate-700 ">
-                        <div class="flex gap-x-2 items-center">
+                        <div class="flex gap-x-2 items-center justify-start">
+                          <!-- Menu Button Start -->
+                          <div class="mx-2 block lg:hidden">
+                            <button class="text-slate-700 transition duration-150 ease-in-out hover:text-slate-800 ">
+                              <i width="1rem" height="1rem" data-feather="menu"></i>
+                            </button>
+                          </div>
+                          <!-- Menu Button End -->
                           <div class="profile-img w-10 h-10 relative">
                             <img src="./images/avatar1.png" class="h-10 w-10 rounded-full " alt="profile-img">
                             <div class="active absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
@@ -905,7 +912,7 @@
                             <p class="text-sm text-slate-500 dark:text-slate-400 font-normal">Sales Executive</p>
                            </div>
                         </div>
-                        <div class="flex gap-6 items-center">
+                        <div class=" gap-6 items-center hidden md:flex">
                           <button class=" text-slate-400  hover:text-primary-500 duration-150 ease-in-out">
                             <i  width="1.125rem" height="1.125rem" data-feather="phone-call"></i>
                           </button>
@@ -929,7 +936,7 @@
                       </div>
                       <!-- Message  -->
                       <div class="flex flex-col gap-2">
-                        <div class="flex gap-3 items-center">
+                        <div class="flex flex-col lg:flex-row gap-1 lg:gap-3 lg:items-center items-start">
                           <div class="bg-slate-100 dark:bg-slate-700 max-w-sm p-2 rounded-primary">
                             <p class="text-sm font-normal text-slate-500 dark:text-slate-100">Hello!, Max</p>
                           </div>
@@ -944,7 +951,7 @@
                       </div>
                       <!-- Message  -->
                       <div class="flex flex-col gap-2">
-                        <div class="flex gap-3 items-center flex-row-reverse">
+                        <div class="flex  gap-1 lg:gap-3 flex-col  lg:flex-row-reverse lg:items-center items-end">
                           <div class="bg-primary-500 text-slate-50 max-w-sm p-2 rounded-primary">
                             <p class="text-sm font-normal">Hi, How can I help you?</p>
                           </div>
@@ -959,14 +966,14 @@
                       </div>
                       <!-- Message  -->
                       <div class="flex flex-col gap-2">
-                        <div class="flex gap-3 items-center">
+                        <div class="flex flex-col lg:flex-row gap-1 lg:gap-3 lg:items-center items-start">
                           <div class="bg-slate-100 dark:bg-slate-700 max-w-sm p-2 rounded-primary">
                             <p class="text-sm font-normal text-slate-500 dark:text-slate-100">Hi Max, I’m interested to purchase a template. Do you have any available?
                             </p>
                           </div>
                           <p class="text-xs font-normal text-slate-400">09:00AM</p>
                         </div>
-                        <div class="flex gap-3 items-center">
+                        <div class="flex flex-col lg:flex-row gap-1 lg:gap-3 lg:items-center items-start">
                           <div class="bg-slate-100 dark:bg-slate-700 max-w-sm p-2 rounded-primary">
                             <p class="text-sm font-normal text-slate-500 dark:text-slate-100">It should be base on TailwindCSS.
                             </p>
@@ -982,7 +989,7 @@
                       </div>
                       <!-- Message  -->
                       <div class="flex flex-col gap-2">
-                        <div class="flex gap-3 items-center flex-row-reverse">
+                        <div class="flex gap-1 lg:gap-3 flex-col lg:flex-row-reverse lg:items-center items-end">
                           <div class="bg-primary-500 text-slate-50 max-w-sm p-2 rounded-primary">
                             <p class="text-sm font-normal">Yes, we have a few templates that matches your description. Admin Toolkit is one the best of them.</p>
                           </div>
@@ -997,7 +1004,7 @@
                       </div>
                       <!-- Message  -->
                       <div class="flex flex-col gap-2">
-                        <div class="flex gap-3 items-center">
+                        <div class="flex flex-col lg:flex-row gap-1 lg:gap-3 lg:items-center items-start">
                           <div class="bg-slate-100 dark:bg-slate-700 max-w-sm p-2 rounded-primary">
                             <p class="text-sm font-normal text-slate-500 dark:text-slate-100">Sounds great, Could you please tell me a little bit more about this template?</p>
                           </div>
@@ -1012,7 +1019,7 @@
                       </div>
                       <!-- Message  -->
                       <div class="flex flex-col gap-2">
-                        <div class="flex gap-3 items-center flex-row-reverse">
+                        <div class="flex gap-1 lg:gap-3 flex-col lg:flex-row-reverse lg:items-center items-end">
                           <div class="bg-primary-500 text-slate-50 max-w-sm p-2 rounded-primary">
                             <p class="text-sm font-normal">Of course, In this template you can fully customize fonts, colours, component, layouts and everything else that you need.</p>
                           </div>
@@ -1027,7 +1034,7 @@
                       </div>
                       <!-- Message  -->
                       <div class="flex flex-col gap-2">
-                        <div class="flex gap-3 items-center">
+                        <div class="flex flex-col lg:flex-row gap-1 lg:gap-3 lg:items-center items-start">
                           <div class="bg-slate-100 dark:bg-slate-700 max-w-sm p-2 rounded-primary">
                             <p class="text-sm font-normal text-slate-500 dark:text-slate-100">Sounds great, Could you please tell me a little bit more about this template?</p>
                           </div>
@@ -1042,7 +1049,7 @@
                       </div>
                       <!-- Message  -->
                       <div class="flex flex-col gap-2">
-                        <div class="flex gap-3 items-center flex-row-reverse">
+                        <div class="flex gap-1 lg:gap-3 flex-col lg:flex-row-reverse lg:items-center items-end">
                           <div class="bg-primary-500 text-slate-50 max-w-sm p-2 rounded-primary">
                             <p class="text-sm font-normal">Of course, In this template you can fully customize fonts, colours, component, layouts and everything else that you need.</p>
                           </div>
