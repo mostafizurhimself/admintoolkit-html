@@ -685,32 +685,14 @@
         <div class="content">
           <!-- Main Content Starts -->
           <main class="flex flex-col h-screen flex-grow-1 p-6">
-            <!-- Page Title Starts -->
-            <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>Chat</h5>
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="/">Home</a>
-                </li>
-
-                <li class="breadcrumb-item">
-                  <a href="#">Components</a>
-                </li>
-
-                <li class="breadcrumb-item">
-                  <a href="#">Chat</a>
-                </li>
-              </ol>
-            </div>
-            <!-- Page Title Ends -->
 
             <!-- Chat Container Starts -->
             <div class="space-y-6 flex flex-grow ">
-              <div class="grid relative flex-grow-1 w-full gap-x-0 lg:gap-x-8  grid-cols-1 place-items-center overflow-hidden lg:place-items-start lg:grid-cols-3 bg-transparent">
+              <div class="grid p-0 m-0 relative flex-grow-1 w-full gap-x-0 lg:gap-x-8  grid-cols-1 place-items-center overflow-hidden lg:place-items-start lg:grid-cols-3 bg-transparent">
                 <!-- Chat List Start  -->
-                <div class="w-full absolute flex z-10 rounded-primary lg:relative bg-slate-600 bg-opacity-75 lg:bg-transparent inset-0 lg:col-span-1">
-                  <div class="card rounded-l-primary rounded-r-none lg:rounded-primary p-0 max-w-[18rem] lg:max-w-none ">
-                    <div class="p-5 border-b border-slate-300 dark:border-slate-700 ">
+                <div id="chat-list" class="w-full -translate-x-full lg:translate-x-0 absolute lg:relative transition duration-300 ease-in-out flex z-10 rounded-primary  bg-black bg-opacity-0 lg:bg-transparent inset-0 lg:col-span-1">
+                  <div class="card rounded-l-primary rounded-r-none lg:rounded-primary p-0 m-0 max-w-[18rem] lg:max-w-none ">
+                    <div class="p-3 lg:p-5 border-b border-slate-300 dark:border-slate-700 ">
                       <form action="" class="group  h-10 w-full  items-center  overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex">
                       <div class="flex h-full items-center px-3">
                         <i class="text-slate-400 group-focus-within:text-primary-500" width="1em" height="1em" data-feather="search"></i>
@@ -718,7 +700,7 @@
                       <input class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0" type="text" placeholder="Search">
                     </form>
                     </div>
-                    <div class="users max-h-[calc(100vh-19.04rem)] p-0 m-0  overflow-auto" data-simplebar>
+                    <div class="users max-h-[calc(100vh-18rem)] md:max-h-[calc(100vh-16.7rem)] p-0 m-0 overflow-auto" data-simplebar>
                       <!-- User -->
                       <div class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
                         <div class="profile-img w-10 relative">
@@ -891,22 +873,23 @@
                     
                     
                   </div>
-                  <div class="p-2 block lg:hidden">
-                    <button class="text-slate-200 transition duration-150 ease-in-out hover:text-slate-50">
+                  <!-- Chat List Hide  -->
+                  <div class="px-2 block lg:hidden">
+                    <button id="hide-chat-list" class="text-slate-200 transition duration-150 ease-in-out hover:text-slate-50">
                       <i data-feather="x"></i>
                     </button>
                   </div>
                 </div>
                 <!-- Chat List End  -->
                 <!-- Chat Start -->
-                <div class="converstion card p-0 m-0 lg:col-span-2 rounded-primary ">
+                <div class="card p-0 m-0 lg:col-span-2 rounded-primary ">
                   <!-- Chat Header Start  -->
                     <div class="flex justify-between items-center p-4 border-b border-slate-300 dark:border-slate-700 ">
                         <div class="flex gap-x-2 items-center justify-start">
                           <!-- Menu Button Start -->
-                          <div class="mx-2 block lg:hidden">
-                            <button class="text-slate-700 transition duration-150 ease-in-out hover:text-slate-800 ">
-                              <i width="1rem" height="1rem" data-feather="menu"></i>
+                          <div class="m-0 p-0 flex justify-center items-center lg:hidden ">
+                            <button id="open-chat-list" class="text-slate-700 m-0 p-0 dark:text-slate-100 transition duration-150 ease-in-out hover:text-slate-800 ">
+                              <i width="1.75rem" height="1.75rem" data-feather="menu"></i>
                             </button>
                           </div>
                           <!-- Menu Button End -->
@@ -919,14 +902,14 @@
                             <p class="text-sm text-slate-500 dark:text-slate-400 font-normal">Sales Executive</p>
                            </div>
                         </div>
-                        <div class=" gap-6 items-center hidden md:flex">
-                          <button class=" text-slate-400  hover:text-primary-500 duration-150 ease-in-out">
+                        <div class=" flex gap-6 items-center">
+                          <button class="hidden md:block text-slate-400  hover:text-primary-500 duration-150 ease-in-out">
                             <i  width="1.125rem" height="1.125rem" data-feather="phone-call"></i>
                           </button>
-                          <button class=" text-slate-400  hover:text-primary-500 duration-150 ease-in-out">
+                          <button class="hidden md:block text-slate-400  hover:text-primary-500 duration-150 ease-in-out">
                             <i  width="1.125rem" height="1.125rem" data-feather="video"></i>
                           </button>
-                          <button class=" text-slate-400  hover:text-primary-500 duration-150 ease-in-out">
+                          <button class="hidden md:block text-slate-400  hover:text-primary-500 duration-150 ease-in-out">
                             <i  width="1.125rem" height="1.125rem" data-feather="search"></i>
                           </button>
                           <button class=" text-slate-400  hover:text-primary-500 duration-150 ease-in-out">
@@ -935,7 +918,7 @@
                         </div>
                     </div>
                   <!-- Chat Header End  -->
-                  <div id="chats" class="conversion relative h-[calc(100vh-25.5rem)] overflow-y-auto">
+                  <div id="chats" class="conversion relative h-[calc(100vh-23.5rem)] md:h-[calc(100vh-23rem)] overflow-y-auto">
                     <!-- Friend Chat -->
                     <div class="flex items-start justify-start p-4 gap-2">
                       <div class="rounded-full h-[1.875rem] w-[1.875rem]">
@@ -1069,10 +1052,10 @@
                   <!-- Chat Footer Start  -->
                   <div class="relative m-4 p-4 border shadow border-slate-300 dark:border-slate-700 rounded-primary">
                     <form action="" class=" w-full grid grid-cols-4">
-                      <div class="col-span-3">
+                      <div class=" col-span-2 md:col-span-3">
                         <input type="text" class="input border-none outline-none focus:ring-0 focus:outline-none" name="message"  placeholder="Type you message here"/>
                       </div>
-                      <div class="col-span-1 flex justify-end gap-x-3">
+                      <div class=" col-span-2 md:col-span-1  flex justify-end gap-x-3">
                         <button class=" text-slate-400  hover:text-primary-500 duration-150 ease-in-out">
                           <i  width="1.125rem" height="1.125rem" data-feather="mic"></i>
                         </button>
@@ -1081,7 +1064,7 @@
                         </button>
                         <button class="btn btn-primary btn-sm sm:text-xs">
                           <i  width="1.125rem" height="1.125rem" data-feather="send"></i>
-                          Send
+                          <span class="hidden md:inline-block">Send</span>
                         </button>
                     </div>
                   </form>
