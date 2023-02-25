@@ -25,6 +25,7 @@
     "boxicons": "^2.1.4",
     "browser-sync": "^2.27.11",
     "flag-icons": "^6.6.6",
+    "flatpickr": "^4.6.13",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-cssimport": "^7.0.0",
