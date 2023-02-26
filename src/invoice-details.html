@@ -777,10 +777,10 @@
 
             <!-- Invoice Details Starts -->
             <div class="space-y-6">
-              <div class="grid grid-cols-1 md:grid-cols-4 gap-y-3 md:gap-x-5">
-              <div class=" card col-span-1 md:col-span-3 p-4 rounded-primary ">
+              <div class="grid grid-cols-1 lg:grid-cols-4 gap-y-3 md:gap-x-5">
+              <div class=" card col-span-1 lg:col-span-3 p-4 rounded-primary ">
                 <!-- Invoice Header  Start -->
-                <div class="flex justify-between mb-6">
+                <div class="flex flex-col lg:flex-row justify-between mb-6">
                   <div class="flex justify-center items-center md:justify-start">
                     <div class="sidebar-header !ml-0 !pl-0">
                       <span class="sidebar-logo-icon">
@@ -805,7 +805,7 @@
                     </div>
 
                   </div>
-                  <div class="flex justify-center items-end flex-col">
+                  <div class="flex justify-center items-start lg:items-end flex-col">
                     <h2 class="text-2xl font-semibold my-5 mx-0 p-0">Invoice #1001</h2>
                     <p class="text-sm text-slate-700 font-medium dark:text-slate-300 py-0 my-0">Date Issued: <span class="font-normal text-slate-600 dark:text-slate-300">Jan 25, 2023</span></p>
                     <p class="text-sm text-slate-700 font-medium dark:text-slate-300 py-0 my-0">Due Date: <span class="font-normal text-slate-600 dark:text-slate-300">Feb 01, 2023</span></p>
@@ -814,15 +814,15 @@
                 <!-- Invoice Header  End -->
 
                 <!-- Invoice Info Start  -->
-                <div class="flex justify-between mb-6">
-                  <div class="flex justify-center items-start w-2/3 flex-col md:justify-center jus">
+                <div class="flex flex-col lg:flex-row justify-between mb-6">
+                  <div class="flex justify-center mb-4 lg:mb-0 items-start w-full lg:w-2/3 flex-col md:justify-center jus">
                     <h4 class="text-secondary-400 text-xs font-medium uppercase  m-0 p-0">BILLED FROM</h4>
                     <h5 class="text-sm font-semibold text-slate-700 my-1">Admin Toolkit</h5>
                     <p class="text-sm text-slate-600 font-normal dark:text-slate-300 py-0 my-0">123 Example Road, Example - 1234</p>
                     <p class="text-sm text-slate-600 font-normal dark:text-slate-300 py-0 my-0">Tel No: 123 123 123 123</p>
                     <p class="text-sm text-slate-600 font-normal dark:text-slate-300 py-0 my-0">Email: johndoe@example.com</p>
                   </div>
-                  <div class="flex justify-center items-start w-1/3 flex-col">
+                  <div class="flex justify-center items-start w-full lg:w-1/3 flex-col">
                     <h4 class="text-secondary-400 text-xs font-medium uppercase  m-0 p-0">BILLED TO</h4>
                     <h5 class="text-sm font-semibold text-slate-700 my-1">John Doe</h5>
                     <p class="text-sm text-slate-600 font-normal dark:text-slate-300 py-0 my-0">123 Example Road, Example - 1234</p>
@@ -833,118 +833,120 @@
                 <!-- Invoice Info End  -->
 
                 <!-- Product Table Start -->
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead>
+                <div class="w-full overflow-x-auto" >
+                  <div class="table-responsive min-w-[600px]">
+                    <table class="table">
+                      <thead>
                         <tr>
                             <th>Product Name</th>
                             <th><p class="text-right">Price</p></th>
                             <th><p class="text-right">Quantity</p></th>
                             <th><p class="text-right">Line Total</p></th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/product1.png" class="h-12 w-12 rounded-primary"  alt="product-img">
-                                <div class="flex flex-col justify-center items-start">
-                                  <h4 class="text-slate-700 text-sm font-medium m-0 p-0">Product One</h4>
-                                  <p class="text-xs text-slate-400 dark:text-slate-400 font-normal">Delivery Date: 31/01/3023</p>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>
+                                <div class="flex items-center gap-2">
+                                  <img src="./images/product1.png" class="h-12 w-12 rounded-primary"  alt="product-img">
+                                  <div class="flex flex-col justify-center items-start">
+                                    <h4 class="text-slate-700 text-sm font-medium m-0 p-0">Product One</h4>
+                                    <p class="text-xs text-slate-400 dark:text-slate-400 font-normal">Delivery Date: 31/01/3023</p>
+                                  </div>
                                 </div>
-                              </div>
-                            </td>
-                            <td >
-                              <p class="text-xs text-right text-slate-400 dark:text-slate-400 font-normal">$24.00</p>
-                            </td>
-                            <td >
-                              <p class="text-xs text-right text-slate-400 dark:text-slate-400 font-normal">1 pcs</p>
-                            </td>
-                            <td >
-                              <p class="text-xs text-right text-slate-700 font-semibold dark:text-slate-200">$24.00</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/product2.png" class="h-12 w-12 rounded-primary"  alt="product-img">
-                                <div class="flex flex-col justify-center items-start">
-                                  <h4 class="text-slate-700 text-sm font-medium m-0 p-0">Product Two</h4>
-                                  <p class="text-xs text-slate-400 dark:text-slate-400 font-normal">Delivery Date: 31/01/3023</p>
+                              </td>
+                              <td >
+                                <p class="text-xs text-right text-slate-400 dark:text-slate-400 font-normal">$24.00</p>
+                              </td>
+                              <td >
+                                <p class="text-xs text-right text-slate-400 dark:text-slate-400 font-normal">1 pcs</p>
+                              </td>
+                              <td >
+                                <p class="text-xs text-right text-slate-700 font-semibold dark:text-slate-200">$24.00</p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                <div class="flex items-center gap-2">
+                                  <img src="./images/product2.png" class="h-12 w-12 rounded-primary"  alt="product-img">
+                                  <div class="flex flex-col justify-center items-start">
+                                    <h4 class="text-slate-700 text-sm font-medium m-0 p-0">Product Two</h4>
+                                    <p class="text-xs text-slate-400 dark:text-slate-400 font-normal">Delivery Date: 31/01/3023</p>
+                                  </div>
                                 </div>
-                              </div>
-                            </td>
-                            <td>
-                              <p class="text-xs text-right text-slate-400 dark:text-slate-400 font-normal">$24.00</p>
-                            </td>
-                            <td>
-                              <p class="text-xs text-right text-slate-400 dark:text-slate-400 font-normal">1 pcs</p>
-                            </td>
-                            <td>
-                              <p class="text-xs text-right text-slate-700 font-semibold dark:text-slate-200">$24.00</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/product3.png" class="h-12 w-12 rounded-primary"  alt="product-img">
-                                <div class="flex flex-col justify-center items-start">
-                                  <h4 class="text-slate-700 text-sm font-medium m-0 p-0">Product Three</h4>
-                                  <p class="text-xs text-slate-400 dark:text-slate-400 font-normal">Delivery Date: 31/01/3023</p>
+                              </td>
+                              <td>
+                                <p class="text-xs text-right text-slate-400 dark:text-slate-400 font-normal">$24.00</p>
+                              </td>
+                              <td>
+                                <p class="text-xs text-right text-slate-400 dark:text-slate-400 font-normal">1 pcs</p>
+                              </td>
+                              <td>
+                                <p class="text-xs text-right text-slate-700 font-semibold dark:text-slate-200">$24.00</p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                <div class="flex items-center gap-2">
+                                  <img src="./images/product3.png" class="h-12 w-12 rounded-primary"  alt="product-img">
+                                  <div class="flex flex-col justify-center items-start">
+                                    <h4 class="text-slate-700 text-sm font-medium m-0 p-0">Product Three</h4>
+                                    <p class="text-xs text-slate-400 dark:text-slate-400 font-normal">Delivery Date: 31/01/3023</p>
+                                  </div>
                                 </div>
-                              </div>
-                            </td>
-                            <td>
-                              <p class="text-xs text-right text-slate-400 dark:text-slate-400 font-normal">$24.00</p>
-                            </td>
-                            <td>
-                              <p class="text-xs text-right text-slate-400 dark:text-slate-400 font-normal">1 pcs</p>
-                            </td>
-                            <td>
-                              <p class="text-xs text-right text-slate-700 font-semibold dark:text-slate-200">$24.00</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="flex justify-between items-center my-6 ">
-                  <div class="w-2/3">
-                    <p class="text-xs text-slate-700 font-semibold dark:text-slate-300 py-0 my-2">Payment Method: <span class="font-normal text-slate-600 dark:text-slate-300">Bank Transfer</span></p>
-                    <p class="text-xs text-slate-700 font-semibold dark:text-slate-300 p-0 m-0">Note:</p>
-                    <blockquote class="text-xs font-normal text-slate-600 dark:text-slate-300">
-                      It was a pleasure working with you and your team. <br>
-                      We hope you will keep us in mind for future freelance <br>
-                      projects. Thank You!
-                    </blockquote>
+                              </td>
+                              <td>
+                                <p class="text-xs text-right text-slate-400 dark:text-slate-400 font-normal">$24.00</p>
+                              </td>
+                              <td>
+                                <p class="text-xs text-right text-slate-400 dark:text-slate-400 font-normal">1 pcs</p>
+                              </td>
+                              <td>
+                                <p class="text-xs text-right text-slate-700 font-semibold dark:text-slate-200">$24.00</p>
+                              </td>
+                          </tr>
+                      </tbody>
+                    </table>
+                    <div class="flex justify-between items-center my-6 ">
+                      <div class="w-2/3">
+                        <p class="text-xs text-slate-700 font-semibold dark:text-slate-300 py-0 my-2">Payment Method: <span class="font-normal text-slate-600 dark:text-slate-300">Bank Transfer</span></p>
+                        <p class="text-xs text-slate-700 font-semibold dark:text-slate-300 p-0 m-0">Note:</p>
+                        <blockquote class="text-xs font-normal text-slate-600 dark:text-slate-300">
+                          It was a pleasure working with you and your team. <br>
+                          We hope you will keep us in mind for future freelance <br>
+                          projects. Thank You!
+                        </blockquote>
+                      </div>
+                      <div class="w-1/3 flex flex-col items-end ">
+                        <h4 class=" pr-6 my-1 text-sm font-medium text-slate-400 dark:text-slate-400">Subtotal: <span class="text-slate-600 dark:text-slate-200">$72.00</span></h4>
+                        <h4 class=" pr-6 my-1 text-sm font-medium text-slate-400 dark:text-slate-400">Discount: <span class="text-slate-600 dark:text-slate-200">$00.00</span></h4>
+                        <h4 class=" pr-6 my-1 text-sm font-medium text-slate-400 dark:text-slate-400">Tax: <span class="text-slate-600 dark:text-slate-200">$02.00</span></h4>
+                        <div class="h-[1px] bg-slate-300 dark:bg-slate-400 w-full"></div>
+                        <h4 class="pr-6 my-1 text-sm font-medium text-slate-400 dark:text-slate-500">Total: <span class="text-slate-600 dark:text-slate-200">$74.00</span></h4>
+                      </div>
+                    </div>
                   </div>
-                  <div class="w-1/3 flex flex-col items-end ">
-                    <h4 class=" pr-6 my-1 text-sm font-medium text-slate-400 dark:text-slate-400">Subtotal: <span class="text-slate-600 dark:text-slate-200">$72.00</span></h4>
-                    <h4 class=" pr-6 my-1 text-sm font-medium text-slate-400 dark:text-slate-400">Discount: <span class="text-slate-600 dark:text-slate-200">$00.00</span></h4>
-                    <h4 class=" pr-6 my-1 text-sm font-medium text-slate-400 dark:text-slate-400">Tax: <span class="text-slate-600 dark:text-slate-200">$02.00</span></h4>
-                    <div class="h-[1px] bg-slate-300 dark:bg-slate-400 w-full"></div>
-                    <h4 class="pr-6 my-1 text-sm font-medium text-slate-400 dark:text-slate-500">Total: <span class="text-slate-600 dark:text-slate-200">$74.00</span></h4>
-                  </div>
-                </div>
                 </div>
                 <!-- Product Table End -->
+
                 <p class="text-sm font-normal text-slate-700 text-center dark:text-slate-200">Thanks for your Business</p>
-                
               </div>
-              <div class="col-span-1 ">
+              <div class="lg:col-span-1">
                 <div class="card flex flex-col gap-4 p-4">
                   <button class="btn btn-primary w-full">
-                    <i data-feather="send"></i>
+                    <i data-feather="send" width="1.125rem" height="1.125rem"></i>
                     Send Invoice
                   </button>
                   <button class="btn btn-outline-primary w-full">
-                    <i data-feather="printer"></i>
+                    <i data-feather="printer" width="1.125rem" height="1.125rem"></i>
                     Print Invoice
                   </button>
                   <button class="btn btn-outline-primary w-full">
-                    <i data-feather="download"></i>
+                    <i data-feather="download" width="1.125rem" height="1.125rem"></i>
                     Download Invoice
                   </button>
                   <button class="btn btn-outline-primary w-full">
-                    <i data-feather="dollar-sign"></i>
+                    <i data-feather="dollar-sign" width="1.125rem" height="1.125rem"></i>
                     Add Payment
                   </button>
                 </div>
