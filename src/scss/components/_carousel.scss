@@ -1,11 +1,36 @@
-@layer components{
-    .basic-carousel{
-        @apply h-96 w-full relative;
+@layer components {
+  .swiper {
+    &-button-prev,
+    &-button-next {
+      @apply after:text-2xl after:font-medium after:text-slate-100;
     }
-    .swiper-wrapper{
-        @apply w-full;
+
+    &-button-prev {
+      @apply after:content-['prev'];
     }
-    .swiper-wrapper > img{
-        @apply w-full;
+    &-button-next {
+      @apply after:content-['next'];
     }
+  
+    &-pagination {
+      & > span {
+        @apply w-2 h-2 inline-block;
+  
+        &.swiper-pagination-bullet-active {
+          @apply bg-primary-500;
+        }
+      }
+    }
+  
+    &-pagination-custom {
+      & > span {
+        @apply w-4 h-4 text-xs font-medium text-slate-100 inline-flex items-center justify-center;
+      }
+    }
+
+    &-pagination-progressbar > &-pagination-progressbar-fill {
+      @apply bg-primary-500;
+    }
+    
+  }
 }

@@ -783,56 +783,270 @@
                   <h4 class="card-title">Basic Carousel</h4>
 
                   <p class="card-subtitle">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                    Use <code>.swiper-basic</code> class to create a basic carousel.
                   </p>
 
-                  <div class="code-viewer mt-4">
-                    <!-- Slider main container -->
-                    <div class="swiper mx-10">
-                      <!-- Additional required wrapper -->
-                      <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                          <img src="./images/garlic-bread.jpg" alt="carousel-image" >
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./images/garlic-bread.jpg" alt="carousel-image" >
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./images/garlic-bread.jpg" alt="carousel-image" >
-                        </div>
-                        ...
-                      </div>
-                      <!-- If we need pagination -->
-                      <div class="swiper-pagination"></div>
+                  <div id="basic-carousel-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <div class="code-viewer-content">
+                      <div class="max-w-5xl mx-auto">
+                        <div class="swiper swiper-basic">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-1.jpg" alt="">
+                            </div>
 
-                      <!-- If we need navigation buttons -->
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-button-next"></div>
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-2.jpg" alt="">
+                            </div>
 
-                      <!-- If we need scrollbar -->
-                      <div class="swiper-scrollbar"></div>
-                    </div>
-                    <!-- <div class="basic-carousel shadow-lg max-w-lg mx-auto max-h-min">
-                      <div class="carousel-item">
-                        <img src="./images/garlic-bread.jpg" alt="carousel-image" >
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./images/garlic-bread.jpg" alt="carousel-image" >
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./images/garlic-bread.jpg" alt="carousel-image" >
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./images/garlic-bread.jpg" alt="carousel-image" >
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-3.jpg" alt="">
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="swiper-pagination"></div> -->
-                    
                   </div>
                 </div>
               </div>
-              <!-- Card: Carousel Ends -->
+              <!-- Card: Basic Carousel Ends -->
+
+              <!-- Card: Carousel With Control Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Carousel With Control</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.swiper-with-control</code> class to create a carousel with control.
+                  </p>
+
+                  <div id="carousel-with-control-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <div class="code-viewer-content">
+                      <div class="max-w-5xl mx-auto">
+                        <div class="swiper swiper-with-control">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-1.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-2.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-3.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="swiper-button-prev"></div>
+                          <div class="swiper-button-next"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Carousel With Control Ends -->
+
+              <!-- Card: Carousel With Pagination Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Carousel With Pagination</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.swiper-with-pagination</code> class to create a carousel with pagination.
+                  </p>
+
+                  <div id="carousel-with-pagination-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <div class="code-viewer-content">
+                      <div class="max-w-5xl mx-auto">
+                        <div class="swiper swiper-with-pagination">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-3.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-2.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Carousel With Pagination Ends -->
+
+              <!-- Card: Carousel With Custom Pagination Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Carousel With Custom Pagination</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.swiper-with-custom-pagination</code> class to create a carousel with custom pagination.
+                  </p>
+
+                  <div id="carousel-with-custom-pagination-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <div class="code-viewer-content">
+                      <div class="max-w-5xl mx-auto">
+                        <div class="swiper swiper-with-custom-pagination">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-1.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-2.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-3.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="swiper-pagination swiper-pagination-custom"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Carousel With Custom Pagination Ends -->
+
+              <!-- Card: Carousel With Progres Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Carousel With Progress</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.swiper-with-progress</code> class to create a carousel with progressbar.
+                  </p>
+
+                  <div id="carousel-with-progress-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <div class="code-viewer-content">
+                      <div class="max-w-5xl mx-auto">
+                        <div class="swiper swiper-with-progress">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-1.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-2.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-3.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Carousel With Progres Ends -->
+
+              <!-- Card: Carousel With Autoplay Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Carousel With Autoplay</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.swiper-with-autoplay</code> class to enable autoplay.
+                  </p>
+
+                  <div id="carousel-with-autoplay-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <div class="code-viewer-content">
+                      <div class="max-w-5xl mx-auto">
+                        <div class="swiper swiper-with-autoplay">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-1.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-2.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-3.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Carousel With Autoplay Ends -->
+
+              <!-- Card: Carousel With Multiple Item Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Carousel With Multiple Items</h4>
+
+                  <p class="card-subtitle">
+                    Use <code>.swiper-multiple</code> class to create a carousel with multiple items.
+                  </p>
+
+                  <div id="carousel-with-multiple-items-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <div class="code-viewer-content">
+                      <div class="max-w-5xl mx-auto">
+                        <div class="swiper swiper-multiple">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-1.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-2.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-3.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-1.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-2.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-3.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-1.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-2.jpg" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                              <img class="w-full h-full max-h-[35rem] object-cover object-center" src="./images/slider-3.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Carousel With Multiple Item Ends -->
             </div>
             <!-- Carousel Ends -->
           </main>
@@ -856,5 +1070,252 @@
       <!-- Wrapper Ends -->
     </div>
     <script src="./js/app.js"></script>
+    <script>
+      const basicCarouselSourceCode = `
+        <div class="swiper swiper-basic">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+          </div>
+        </div>
+
+        \<script\>
+          import Swiper from 'swiper';
+          const basic = new Swiper('.swiper-basic');
+        \<\/script\>
+      `;
+      const carouselWithControlSourceCode = `
+        <div class="swiper swiper-with-control">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          \<script\>
+            import Swiper, { Navigation } from 'swiper';
+            
+            const control = new Swiper('.swiper-with-control', {
+              modules: [Navigation],
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              }
+            });
+          \<\/script\>
+        </div>
+      `;
+      const carouselWithPaginationSourceCode = `
+        <div class="swiper swiper-with-pagination">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+          </div>
+          
+          <div class="swiper-pagination"></div>
+        </div>
+
+        \<script\>
+          import Swiper, { Pagination } from 'swiper';
+          const pagination = new Swiper('.swiper-with-pagination', {
+            modules: [Pagination],
+            pagination: {
+              el: '.swiper-pagination',
+              type: 'bullets',
+              clickable: true
+              
+            }
+          });
+        \<\/script\>
+       
+      `;
+      const carouselWithCustomPaginationSourceCode = `
+        <div class="swiper swiper-with-custom-pagination">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination-custom"></div>
+        </div>
+
+        \<script\>
+            import Swiper, { Pagination } from 'swiper';
+            const customPagination = new Swiper('.swiper-with-custom-pagination', {
+              modules: [Pagination],
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                  return '<span class="' + className + '">' + (index + 1) + "</span>";
+                },
+              }
+            });
+        \<\/script\>
+      `;
+      const carouselWithProgressSourceCode = `
+        <div class="swiper swiper-with-progress">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        \<script\>
+            import Swiper, { Pagination } from 'swiper';
+            const progress = new Swiper('.swiper-with-progress', {
+              modules: [Pagination],
+              pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+              }
+            });
+        \<\/script\>
+      `;  
+      const carouselWithAutoplaySourceCode = `
+        <div class="swiper swiper swiper-with-autoplay">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        \<script\>
+            import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
+
+            const autoplay = new Swiper('.swiper-with-autoplay', {
+              loop: true,
+              modules: [Autoplay, Navigation, Pagination],
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              pagination: {
+                el: '.swiper-pagination',
+              }
+            });
+        \<\/script\>
+      `;
+      const carouselWithMultipleItemsSourceCode = `
+        <div class="swiper swiper-multiple">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-slide">
+              <!-- ... -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        \<script\>
+            import Swiper, { Navigation, Pagination } from 'swiper';
+
+            const autoplay = new Swiper('.swiper-multiple', {
+              slidesPerView: 5,
+              centeredSlides: true,
+              spaceBetween: 30,
+              grabCursor: true,
+              centeredSlides: true,
+              modules: [Navigation, Pagination],
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              pagination: {
+                el: '.swiper-pagination',
+              }
+            });
+        \<\/script\>
+      `;
+
+      const basicCodeViewer = createCodeViewer('#basic-carousel-code-viewer', basicCarouselSourceCode);
+      const carouselWithControlCodeViewer = createCodeViewer('#carousel-with-control-code-viewer', carouselWithControlSourceCode);
+      const carouselWithPaginationCodeViewer = createCodeViewer('#carousel-with-pagination-code-viewer', carouselWithPaginationSourceCode);
+      const carouselWithCustomPaginationCodeViewer = createCodeViewer('#carousel-with-custom-pagination-code-viewer', carouselWithCustomPaginationSourceCode);
+      const carouselWithProgressCodeViewer = createCodeViewer('#carousel-with-progress-code-viewer', carouselWithProgressSourceCode);
+      const carouselWithAutoplayCodeViewer = createCodeViewer('#carousel-with-autoplay-code-viewer', carouselWithAutoplaySourceCode);
+      const carouselWithMultipleItemsCodeViewer = createCodeViewer('#carousel-with-multiple-items-code-viewer', carouselWithMultipleItemsSourceCode);
+      
+      basicCodeViewer.render();
+      carouselWithControlCodeViewer.render();
+      carouselWithPaginationCodeViewer.render();
+      carouselWithCustomPaginationCodeViewer.render();
+      carouselWithProgressCodeViewer.render();
+      carouselWithAutoplayCodeViewer.render();
+      carouselWithMultipleItemsCodeViewer.render();
+    </script>
   </body>
 </html>
