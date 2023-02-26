@@ -761,194 +761,196 @@
             <div class="space-y-6 flex flex-grow ">
               <div class="grid p-0 m-0 relative flex-grow-1 w-full gap-x-0 lg:gap-x-8  grid-cols-1 place-items-center overflow-hidden lg:place-items-start lg:grid-cols-3 bg-transparent">
                 <!-- Chat List Start  -->
-                <div id="chat-list" class="w-full -translate-x-full lg:translate-x-0 absolute lg:relative transition duration-300 ease-in-out flex z-10 rounded-primary  bg-black bg-opacity-0 lg:bg-transparent inset-0 lg:col-span-1">
-                  <div class="card rounded-l-primary rounded-r-none lg:rounded-primary p-0 m-0 max-w-[18rem] lg:max-w-none ">
-                    <div class="p-3 lg:p-5 border-b border-slate-300 dark:border-slate-700 ">
-                      <form action="" class="group  h-10 w-full  items-center  overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex">
-                      <div class="flex h-full items-center px-3">
-                        <i class="text-slate-400 group-focus-within:text-primary-500" width="1em" height="1em" data-feather="search"></i>
+                <div class="w-full hidden lg:block absolute lg:relative transition-display ease-linear duration-300 z-10 rounded-primary bg-opacity-50 bg-black lg:bg-transparent inset-0 lg:col-span-1">
+                  <div id="chat-list" class="h-full flex bg-transparent -translate-x-full lg:translate-x-0 transition ease-in-out duration-300 transform ">
+                    <div  class="card rounded-l-primary rounded-r-none lg:rounded-primary p-0 m-0 max-w-[18rem] lg:max-w-none ">
+                      <div  class="p-3 lg:p-5 border-b border-slate-300 dark:border-slate-700 ">
+                        <form action="" class="group  h-10 w-full  items-center  overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex">
+                        <div class="flex h-full items-center px-3">
+                          <i class="text-slate-400 group-focus-within:text-primary-500" width="1em" height="1em" data-feather="search"></i>
+                        </div>
+                        <input class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0" type="text" placeholder="Search">
+                      </form>
                       </div>
-                      <input class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0" type="text" placeholder="Search">
-                    </form>
+                      <ul class="users max-h-[calc(100vh-18rem)] md:max-h-[calc(100vh-16.7rem)] p-0 m-0 overflow-auto" data-simplebar>
+                        <!-- User -->
+                        <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
+                          <div class="profile-img w-10 relative">
+                            <img src="./images/avatar1.png" class="h-10 w-10 rounded-full " alt="profile-img">
+                            <div class="active  absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
+                          </div>
+                          <div class="user-info w-[calc(100%-2.5rem)]">
+                            <div class="flex justify-between w-full items-center">
+                              <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Max Simth</h5>
+                              <span class="text-xs text-slate-400 font-normal">5 min ago</span>
+                            </div>
+                            <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Hi Jhon how are you?</p>
+                          </div>
+                        </li>
+                        <!-- User -->
+                        <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
+                          <div class="profile-img w-10 relative">
+                            <img src="./images/avatar2.png" class="h-10 w-10 rounded-full " alt="profile-img">
+                            <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
+                          </div>
+                          <div class="user-info w-[calc(100%-2.5rem)]">
+                            <div class="flex justify-between w-full items-center">
+                              <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">James Cook</h5>
+                              <span class="text-xs text-slate-400 font-normal">1 day ago</span>
+                            </div>
+                            <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">I will purchase this template...</p>
+                          </div>
+                        </li>
+                        <!-- User -->
+                        <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
+                          <div class="profile-img w-10 relative">
+                            <img src="./images/avatar3.png" class="h-10 w-10 rounded-full " alt="profile-img">
+                            <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
+                          </div>
+                          <div class="user-info w-[calc(100%-2.5rem)]">
+                            <div class="flex justify-between w-full items-center">
+                              <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Maxwell Alston</h5>
+                              <span class="text-xs text-slate-400 font-normal">May 7</span>
+                            </div>
+                            <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Learn something interesting...</p>
+                          </div>
+                        </li>
+                        <!-- User -->
+                        <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
+                          <div class="profile-img w-10 relative">
+                            <img src="./images/avatar4.png" class="h-10 w-10 rounded-full " alt="profile-img">
+                            <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
+                          </div>
+                          <div class="user-info w-[calc(100%-2.5rem)]">
+                            <div class="flex justify-between w-full items-center">
+                              <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
+                              <span class="text-xs text-slate-400 font-normal">30 min ago</span>
+                            </div>
+                            <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Are you available now?</p>
+                          </div>
+                        </li>
+                        <!-- User -->
+                        <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
+                          <div class="profile-img w-10 relative">
+                            <img src="./images/avatar5.png" class="h-10 w-10 rounded-full " alt="profile-img">
+                            <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
+                          </div>
+                          <div class="user-info w-[calc(100%-2.5rem)]">
+                            <div class="flex justify-between w-full items-center">
+                              <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Francis Nicola</h5>
+                              <span class="text-xs text-slate-400 font-normal">10 min ago</span>
+                            </div>
+                            <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Tour plan ready, let’s explore...</p>
+                          </div>
+                        </li>
+                        <!-- User -->
+                        <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
+                          <div class="profile-img w-10 relative">
+                            <img src="./images/avatar6.png" class="h-10 w-10 rounded-full " alt="profile-img">
+                            <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
+                          </div>
+                          <div class="user-info w-[calc(100%-2.5rem)]">
+                            <div class="flex justify-between w-full items-center">
+                              <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Calvin Moore</h5>
+                              <span class="text-xs text-slate-400 font-normal">50 min ago</span>
+                            </div>
+                            <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Your order is delivered</p>
+                          </div>
+                        </li>
+                        <!-- User -->
+                        <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
+                          <div class="profile-img w-10 relative">
+                            <img src="./images/avatar7.png" class="h-10 w-10 rounded-full " alt="profile-img">
+                            <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
+                          </div>
+                          <div class="user-info w-[calc(100%-2.5rem)]">
+                            <div class="flex justify-between w-full items-center">
+                              <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Neil Amstrong</h5>
+                              <span class="text-xs text-slate-400 font-normal">2 day ago</span>
+                            </div>
+                            <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">It will take some time</p>
+                          </div>
+                        </li>
+                        <!-- User -->
+                        <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
+                          <div class="profile-img w-10 relative">
+                            <img src="./images/avatar8.png" class="h-10 w-10 rounded-full " alt="profile-img">
+                            <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
+                          </div>
+                          <div class="user-info w-[calc(100%-2.5rem)]">
+                            <div class="flex justify-between w-full items-center">
+                              <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
+                              <span class="text-xs text-slate-400 font-normal">6 min ago</span>
+                            </div>
+                            <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Are you there?</p>
+                          </div>
+                        </li>
+                        <!-- User -->
+                        <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
+                          <div class="profile-img w-10 relative">
+                            <img src="./images/avatar9.png" class="h-10 w-10 rounded-full " alt="profile-img">
+                            <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
+                          </div>
+                          <div class="user-info w-[calc(100%-2.5rem)]">
+                            <div class="flex justify-between w-full items-center">
+                              <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Calvin Moore</h5>
+                              <span class="text-xs text-slate-400 font-normal">50 min ago</span>
+                            </div>
+                            <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Your order is delivered</p>
+                          </div>
+                        </li>
+                        <!-- User -->
+                        <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
+                          <div class="profile-img w-10 relative">
+                            <img src="./images/avatar10.png" class="h-10 w-10 rounded-full " alt="profile-img">
+                            <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
+                          </div>
+                          <div class="user-info w-[calc(100%-2.5rem)]">
+                            <div class="flex justify-between w-full items-center">
+                              <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Neil Amstrong</h5>
+                              <span class="text-xs text-slate-400 font-normal">2 day ago</span>
+                            </div>
+                            <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">It will take some time</p>
+                          </div>
+                        </li>
+                        <!-- User -->
+                        <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
+                          <div class="profile-img w-10 relative">
+                            <img src="./images/avatar11.png" class="h-10 w-10 rounded-full " alt="profile-img">
+                            <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
+                          </div>
+                          <div class="user-info w-[calc(100%-2.5rem)]">
+                            <div class="flex justify-between w-full items-center">
+                              <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
+                              <span class="text-xs text-slate-400 font-normal">6 min ago</span>
+                            </div>
+                            <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Are you there?</p>
+                          </div>
+                        </li>
+                        <!-- User -->
+                        <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
+                          <div class="profile-img w-10 relative">
+                            <img src="./images/avatar12.png" class="h-10 w-10 rounded-full " alt="profile-img">
+                            <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
+                          </div>
+                          <div class="user-info w-[calc(100%-2.5rem)]">
+                            <div class="flex justify-between w-full items-center">
+                              <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
+                              <span class="text-xs text-slate-400 font-normal">6 min ago</span>
+                            </div>
+                            <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Are you there?</p>
+                          </div>
+                        </li>
+                      </ul>
+                      
+                      
                     </div>
-                    <ul class="users max-h-[calc(100vh-18rem)] md:max-h-[calc(100vh-16.7rem)] p-0 m-0 overflow-auto" data-simplebar>
-                      <!-- User -->
-                      <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <div class="profile-img w-10 relative">
-                          <img src="./images/avatar1.png" class="h-10 w-10 rounded-full " alt="profile-img">
-                          <div class="active  absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
-                        </div>
-                        <div class="user-info w-[calc(100%-2.5rem)]">
-                          <div class="flex justify-between w-full items-center">
-                            <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Max Simth</h5>
-                            <span class="text-xs text-slate-400 font-normal">5 min ago</span>
-                          </div>
-                          <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Hi Jhon how are you?</p>
-                        </div>
-                      </li>
-                      <!-- User -->
-                      <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <div class="profile-img w-10 relative">
-                          <img src="./images/avatar2.png" class="h-10 w-10 rounded-full " alt="profile-img">
-                          <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
-                        </div>
-                        <div class="user-info w-[calc(100%-2.5rem)]">
-                          <div class="flex justify-between w-full items-center">
-                            <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">James Cook</h5>
-                            <span class="text-xs text-slate-400 font-normal">1 day ago</span>
-                          </div>
-                          <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">I will purchase this template...</p>
-                        </div>
-                      </li>
-                      <!-- User -->
-                      <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <div class="profile-img w-10 relative">
-                          <img src="./images/avatar3.png" class="h-10 w-10 rounded-full " alt="profile-img">
-                          <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
-                        </div>
-                        <div class="user-info w-[calc(100%-2.5rem)]">
-                          <div class="flex justify-between w-full items-center">
-                            <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Maxwell Alston</h5>
-                            <span class="text-xs text-slate-400 font-normal">May 7</span>
-                          </div>
-                          <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Learn something interesting...</p>
-                        </div>
-                      </li>
-                      <!-- User -->
-                      <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <div class="profile-img w-10 relative">
-                          <img src="./images/avatar4.png" class="h-10 w-10 rounded-full " alt="profile-img">
-                          <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
-                        </div>
-                        <div class="user-info w-[calc(100%-2.5rem)]">
-                          <div class="flex justify-between w-full items-center">
-                            <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
-                            <span class="text-xs text-slate-400 font-normal">30 min ago</span>
-                          </div>
-                          <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Are you available now?</p>
-                        </div>
-                      </li>
-                      <!-- User -->
-                      <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <div class="profile-img w-10 relative">
-                          <img src="./images/avatar5.png" class="h-10 w-10 rounded-full " alt="profile-img">
-                          <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
-                        </div>
-                        <div class="user-info w-[calc(100%-2.5rem)]">
-                          <div class="flex justify-between w-full items-center">
-                            <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Francis Nicola</h5>
-                            <span class="text-xs text-slate-400 font-normal">10 min ago</span>
-                          </div>
-                          <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Tour plan ready, let’s explore...</p>
-                        </div>
-                      </li>
-                      <!-- User -->
-                      <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <div class="profile-img w-10 relative">
-                          <img src="./images/avatar6.png" class="h-10 w-10 rounded-full " alt="profile-img">
-                          <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
-                        </div>
-                        <div class="user-info w-[calc(100%-2.5rem)]">
-                          <div class="flex justify-between w-full items-center">
-                            <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Calvin Moore</h5>
-                            <span class="text-xs text-slate-400 font-normal">50 min ago</span>
-                          </div>
-                          <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Your order is delivered</p>
-                        </div>
-                      </li>
-                      <!-- User -->
-                      <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <div class="profile-img w-10 relative">
-                          <img src="./images/avatar7.png" class="h-10 w-10 rounded-full " alt="profile-img">
-                          <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
-                        </div>
-                        <div class="user-info w-[calc(100%-2.5rem)]">
-                          <div class="flex justify-between w-full items-center">
-                            <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Neil Amstrong</h5>
-                            <span class="text-xs text-slate-400 font-normal">2 day ago</span>
-                          </div>
-                          <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">It will take some time</p>
-                        </div>
-                      </li>
-                      <!-- User -->
-                      <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <div class="profile-img w-10 relative">
-                          <img src="./images/avatar8.png" class="h-10 w-10 rounded-full " alt="profile-img">
-                          <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
-                        </div>
-                        <div class="user-info w-[calc(100%-2.5rem)]">
-                          <div class="flex justify-between w-full items-center">
-                            <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
-                            <span class="text-xs text-slate-400 font-normal">6 min ago</span>
-                          </div>
-                          <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Are you there?</p>
-                        </div>
-                      </li>
-                      <!-- User -->
-                      <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <div class="profile-img w-10 relative">
-                          <img src="./images/avatar9.png" class="h-10 w-10 rounded-full " alt="profile-img">
-                          <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
-                        </div>
-                        <div class="user-info w-[calc(100%-2.5rem)]">
-                          <div class="flex justify-between w-full items-center">
-                            <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Calvin Moore</h5>
-                            <span class="text-xs text-slate-400 font-normal">50 min ago</span>
-                          </div>
-                          <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Your order is delivered</p>
-                        </div>
-                      </li>
-                      <!-- User -->
-                      <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <div class="profile-img w-10 relative">
-                          <img src="./images/avatar10.png" class="h-10 w-10 rounded-full " alt="profile-img">
-                          <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
-                        </div>
-                        <div class="user-info w-[calc(100%-2.5rem)]">
-                          <div class="flex justify-between w-full items-center">
-                            <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Neil Amstrong</h5>
-                            <span class="text-xs text-slate-400 font-normal">2 day ago</span>
-                          </div>
-                          <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">It will take some time</p>
-                        </div>
-                      </li>
-                      <!-- User -->
-                      <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <div class="profile-img w-10 relative">
-                          <img src="./images/avatar11.png" class="h-10 w-10 rounded-full " alt="profile-img">
-                          <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
-                        </div>
-                        <div class="user-info w-[calc(100%-2.5rem)]">
-                          <div class="flex justify-between w-full items-center">
-                            <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
-                            <span class="text-xs text-slate-400 font-normal">6 min ago</span>
-                          </div>
-                          <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Are you there?</p>
-                        </div>
-                      </li>
-                      <!-- User -->
-                      <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
-                        <div class="profile-img w-10 relative">
-                          <img src="./images/avatar12.png" class="h-10 w-10 rounded-full " alt="profile-img">
-                          <div class="active hidden absolute bottom-[0.1rem] right-[0.1rem] h-2 w-2 rounded-full bg-success-500"></div>
-                        </div>
-                        <div class="user-info w-[calc(100%-2.5rem)]">
-                          <div class="flex justify-between w-full items-center">
-                            <h5 class="text-[0.875rem] font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
-                            <span class="text-xs text-slate-400 font-normal">6 min ago</span>
-                          </div>
-                          <p class="text-sm text-slate-500  dark:text-slate-400 font-normal">Are you there?</p>
-                        </div>
-                      </li>
-                    </ul>
-                    
-                    
-                  </div>
-                  <!-- Chat List Hide  -->
-                  <div class="px-2 block lg:hidden">
-                    <button id="hide-chat-list" class="text-slate-200 transition duration-150 ease-in-out hover:text-slate-50">
-                      <i data-feather="x"></i>
-                    </button>
+                    <!-- Chat List Hide  -->
+                    <div class="p-2 block lg:hidden">
+                      <button id="hide-chat-list" class="text-slate-200 transition duration-150 ease-in-out hover:text-slate-50">
+                        <i data-feather="x"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <!-- Chat List End  -->
