@@ -763,7 +763,6 @@
                 <div id="overly" class="invisible opacity-100 absolute inset-0 lg:hidden h-full w-full bg-black transition-opacity duration-500 ease-in-out bg-opacity-50 z-10 rounded-primary">
                 </div>
                 <!-- Chat List Start  -->
-                <!-- <div class="w-full hidden lg:block absolute lg:relative transition-display ease-linear duration-300 z-10 rounded-primary bg-opacity-50 bg-black lg:bg-transparent inset-0 lg:col-span-1"> -->
                   <div id="chat-list" class="h-full w-full z-20 flex bg-transparent -translate-x-full lg:translate-x-0 transition lg:relative absolute lg:col-span-1 ease-in-out duration-300 transform ">
                     <div  class="card rounded-l-primary rounded-r-none lg:rounded-primary p-0 m-0 max-w-[18rem] lg:max-w-none ">
                       <div  class="p-3 lg:p-5 border-b border-slate-300 dark:border-slate-700 ">
@@ -774,7 +773,7 @@
                         <input class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0" type="text" placeholder="Search">
                       </form>
                       </div>
-                      <ul class="users max-h-[calc(100vh-18rem)] md:max-h-[calc(100vh-16.7rem)] p-0 m-0 overflow-auto" data-simplebar>
+                      <ul class="users max-h-[calc(100vh-16rem)] md:max-h-[calc(100vh-15rem)] lg:max-h-[calc(100vh-16rem)] p-0 m-0 overflow-auto" data-simplebar>
                         <!-- User -->
                         <li class="user w-full flex gap-4 items-center p-4 cursor-pointer duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700">
                           <div class="profile-img w-10 relative">
@@ -948,16 +947,15 @@
                       
                     </div>
                     <!-- Chat List Hide  -->
-                    <div class="p-2 block lg:hidden">
+                    <div class="p-2 block h-auto lg:hidden">
                       <button id="hide-chat-list" class="text-slate-200 transition duration-150 ease-in-out hover:text-slate-50">
                         <i data-feather="x"></i>
                       </button>
                     </div>
                   </div>
-                <!-- </div> -->
                 <!-- Chat List End  -->
                 <!-- Chat Start -->
-                <div class="card p-0 m-0 h-full lg:col-span-2 rounded-primary ">
+                <div class="relative card p-0 m-0 h-full lg:col-span-2 rounded-primary ">
                   <!-- Chat Header Start  -->
                     <div class="flex justify-between items-center p-4 border-b border-slate-300 dark:border-slate-700 ">
                         <div class="flex gap-x-2 items-center justify-start">
@@ -1011,7 +1009,7 @@
                         </div>
                     </div>
                   <!-- Chat Header End  -->
-                  <div id="chats" class="conversion relative h-[calc(100vh-23.5rem)] md:h-[calc(100vh-23rem)] overflow-y-auto">
+                  <div id="chats" class="conversion relative h-[calc(100vh-23.5rem)] md:h-[calc(100vh-23rem)] lg:h-[calc(100vh-22rem)] overflow-y-auto">
                     <!-- Friend Chat -->
                     <div class="flex items-start justify-start p-4 gap-2">
                       <div class="rounded-full h-[1.875rem] w-[1.875rem]">
@@ -1143,7 +1141,7 @@
                   </div>
                   
                   <!-- Chat Footer Start  -->
-                  <div class="relative m-4 p-4 border shadow border-slate-300 dark:border-slate-700 rounded-primary">
+                  <div class="absolute right-4 left-4 bottom-4 p-4 border shadow border-slate-300 dark:border-slate-700 rounded-primary">
                     <form action="" class=" w-full grid grid-cols-4">
                       <div class=" col-span-2 md:col-span-3">
                         <input type="text" class="input border-none outline-none focus:ring-0 focus:outline-none" name="message"  placeholder="Type you message here"/>
