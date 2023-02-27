@@ -945,10 +945,10 @@
 
                 </div>
                 <!-- Chat List Hide  -->
-                <div class="p-2 block h-auto lg:hidden">
+                <div class="px-2 py-5 block h-auto lg:hidden">
                   <button id="hide-chat-list"
-                    class="text-slate-200 transition duration-150 ease-in-out hover:text-slate-50">
-                    <i data-feather="x"></i>
+                    class="text-slate-200 dark:text-slate-400 transition duration-150 ease-in-out hover:text-slate-50">
+                    <i width="1.5rem" height="1.5rem" data-feather="x"></i>
                   </button>
                 </div>
               </div>
@@ -961,7 +961,7 @@
                     <!-- Menu Button Start -->
                     <div id="open-chat-list" class="m-0 p-0 flex justify-center items-center lg:hidden ">
                       <button
-                        class="text-slate-700 m-0 p-0 dark:text-slate-100 transition duration-150 ease-in-out hover:text-slate-800 ">
+                        class="text-slate-700 m-0 p-0 dark:text-slate-400 transition duration-150 ease-in-out hover:text-slate-800 ">
                         <i width="1.125rem" height="1.125rem" data-feather="menu"></i>
                       </button>
                     </div>
@@ -979,31 +979,55 @@
                   </div>
                   <div class=" flex gap-6 items-center">
                     <button class="hidden md:block text-slate-400  hover:text-primary-500 duration-150 ease-in-out">
-                      <i width="1.125rem" height="1.125rem" data-feather="phone-call"></i>
+                      <i width="1rem" height="1rem" class="mr-2" data-feather="phone-call"></i>
                     </button>
                     <button class="hidden md:block text-slate-400  hover:text-primary-500 duration-150 ease-in-out">
-                      <i width="1.125rem" height="1.125rem" data-feather="video"></i>
+                      <i width="1rem" height="1rem" class="mr-2" data-feather="video"></i>
                     </button>
                     <button class="hidden md:block text-slate-400  hover:text-primary-500 duration-150 ease-in-out">
-                      <i width="1.125rem" height="1.125rem" data-feather="search"></i>
+                      <i width="1rem" height="1rem" class="mr-2" data-feather="search"></i>
                     </button>
                     <!-- Dropdown  -->
                     <div class="flex flex-wrap items-center gap-6">
                       <div class="dropdown">
                         <div class="dropdown-toggle">
-                          <i width="1.125rem" height="1.125rem" class="text-slate-500" data-feather="more-vertical"></i>
+                          <i width="1rem" height="1rem" class="mr-2" class="text-slate-400  hover:text-primary-500 duration-150 ease-in-out" data-feather="more-vertical"></i>
                         </div>
                         <div class="dropdown-content w-[200px]">
                           <div class="block md:hidden">
-                            <a href="javascript:void(0)" class="dropdown-item ">Audio Call</a>
-                            <a href="javascript:void(0)" class="dropdown-item">Video Call</a>
-                            <a href="javascript:void(0)" class="dropdown-item">Search</a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center">
+                              <i width="1rem" height="1rem" class="mr-2" data-feather="phone-call"></i>
+                              Audio Call
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center">
+                              <i width="1rem" height="1rem" class="mr-2" data-feather="video"></i>
+                              Video Call
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center">
+                              <i width="1rem" height="1rem" class="mr-2" data-feather="search"></i>
+                              Search
+                            </a>
                           </div>
-                          <a href="javascript:void(0)" class="dropdown-item ">View Contact</a>
-                          <a href="javascript:void(0)" class="dropdown-item ">Mute Notification</a>
-                          <a href="javascript:void(0)" class="dropdown-item ">Block Contact</a>
-                          <a href="javascript:void(0)" class="dropdown-item ">Clear Chat</a>
-                          <a href="javascript:void(0)" class="dropdown-item ">Report</a>
+                          <a href="javascript:void(0)" class="dropdown-item flex items-center">
+                            <i width="1rem" height="1rem" class="mr-2" data-feather="eye"></i>
+                            View Contact
+                          </a>
+                          <a href="javascript:void(0)" class="dropdown-item flex items-center">
+                            <i width="1rem" height="1rem" class="mr-2" data-feather="bell-off"></i>
+                            Mute Notification
+                          </a>
+                          <a href="javascript:void(0)" class="dropdown-item  flex items-center">
+                            <i width="1rem" height="1rem" class="mr-2" data-feather="slash"></i>
+                            Block Contact
+                          </a>
+                          <a href="javascript:void(0)" class="dropdown-item flex items-center">
+                            <i width="1rem" height="1rem" class="mr-2" data-feather="trash"></i>
+                            Clear Chat
+                          </a>
+                          <a href="javascript:void(0)" class="dropdown-item flex items-center">
+                            <i width="1rem" height="1rem" class="mr-2" data-feather="flag"></i>
+                            Report
+                          </a>
                         </div>
                       </div>
                     </div>
