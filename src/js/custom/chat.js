@@ -8,25 +8,24 @@ window.addEventListener('load',()=>{
 const chatList = document.getElementById('chat-list');
 const hideChatList = document.getElementById('hide-chat-list');
 const openChatList = document.getElementById('open-chat-list');
-const chatListContainer = chatList.parentNode;
+const overly = document.getElementById('overly');
 // Open Chat List
 const getOpenChatList = () => {
-    console.log(chatListContainer);
-    chatListContainer.classList.add("block")
-    chatListContainer.classList.remove("hidden")
-    setTimeout(()=>{
-        chatList.classList.remove("-translate-x-full");
-        chatList.classList.add("translate-x-0");
-    },0)
+    chatList.classList.remove("-translate-x-full");
+    chatList.classList.add("translate-x-0");
+    overly.classList.remove('invisible','opacity-0')
+    overly.classList.add('visible','opacity-100')
 }
 
 // Hide Chat List
 const getHideChatList = () => {
+    overly.classList.remove('opacity-100')
+    overly.classList.add('opacity-0')
+    overly.classList.remove('visible')
+    setTimeout(() => {
     chatList.classList.remove("translate-x-0");
     chatList.classList.add("-translate-x-full");
-    setTimeout(() => {
-        chatListContainer.classList.add("hidden")
-        chatListContainer.classList.remove("block")
+    overly.classList.add('invisible')
     },100);
 } 
 
