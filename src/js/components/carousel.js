@@ -6,6 +6,7 @@ const carousel = {
     const swiperWithControl           = document.querySelectorAll('.swiper-with-control');
     const swiperWithPagination        = document.querySelectorAll('.swiper-with-pagination');    
     const swiperWithCustomPagination  = document.querySelectorAll('.swiper-with-custom-pagination');   
+    const swiperWithContent           = document.querySelectorAll('.swiper-with-content');   
     const swiperWithProgress          = document.querySelectorAll('.swiper-with-progress');    
     const swiperWithAutoplay          = document.querySelectorAll('.swiper-with-autoplay');    
     const swiperMultiple              = document.querySelectorAll('.swiper-multiple');    
@@ -31,7 +32,6 @@ const carousel = {
           el: '.swiper-pagination',
           type: 'bullets',
           clickable: true
-          
         }
       }));
     }
@@ -45,6 +45,21 @@ const carousel = {
           renderBullet: function (index, className) {
             return `<span class="${className}">${index + 1}</span>`;
           },
+        }
+      }));
+    }
+
+    if(swiperWithContent.length) {
+      [...swiperWithContent].forEach(swiperElement => new Swiper(swiperElement, {
+        modules: [Navigation, Pagination],
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
         }
       }));
     }
@@ -79,18 +94,32 @@ const carousel = {
 
     if(swiperMultiple.length) {
       [...swiperMultiple].forEach(swiperElement => new Swiper(swiperElement, {
-        slidesPerView: 5,
         centeredSlides: true,
-        spaceBetween: 30,
+        centeredSlidesBounds: true,
         grabCursor: true,
         centeredSlides: true,
-        modules: [Navigation, Pagination],
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 0
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 25
+          },
+          1536: {
+            slidesPerView: 4,
+            spaceBetween: 30
+          }
+        },
+        modules: [Navigation],
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
         }
       }));
     }

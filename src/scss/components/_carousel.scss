@@ -1,5 +1,6 @@
 @layer components {
   .swiper {
+    $swiper: &;
     &-button-prev,
     &-button-next {
       @apply after:text-2xl after:font-medium after:text-slate-100;
@@ -13,6 +14,11 @@
     }
   
     &-pagination {
+      
+      #{$swiper} &-progressbar > &-progressbar-fill {
+        @apply bg-primary-500;
+      }
+
       & > span {
         @apply w-2 h-2 inline-block;
   
@@ -20,17 +26,18 @@
           @apply bg-primary-500;
         }
       }
-    }
-  
-    &-pagination-custom {
-      & > span {
-        @apply w-4 h-4 text-xs font-medium text-slate-100 inline-flex items-center justify-center;
+
+      #{$swiper} &-custom {
+        & > span {
+          @apply w-4 h-4 text-xs font-medium text-slate-100 inline-flex items-center justify-center;
+        }
       }
     }
 
-    &-pagination-progressbar > &-pagination-progressbar-fill {
-      @apply bg-primary-500;
-    }
-    
+    // &-pagination-custom {
+    //   & > span {
+    //     @apply w-4 h-4 text-xs font-medium text-slate-100 inline-flex items-center justify-center;
+    //   }
+    // }
   }
 }
