@@ -775,25 +775,147 @@
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Tabs Starts -->
-            <div class="space-y-6">
-              <!-- Card: Basic Tab Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Listing</h4>
-
-                  <p class="card-subtitle">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <!-- Code Here  -->
+            <!-- Invoice Listing Starts -->
+            <div class="grid grid-cols-1">
+              <!-- Invoice Header Start -->
+             <div class="w-full flex flex-col md:flex-row gap-y-4 md:gap-0 justify-between items-center">
+              <div class="w-full md:w-1/2">
+                  <form
+                  action=""
+                  class="group h-10 w-full md:w-72 items-center overflow-hidden rounded-primary border border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
+                >
+                  <div class="flex h-full items-center px-3">
+                    <i
+                      class="text-slate-400 group-focus-within:text-primary-500"
+                      width="1em"
+                      height="1em"
+                      data-feather="search"
+                    ></i>
+                  </div>
+                  <input
+                    class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                    type="text"
+                    placeholder="Search"
+                  />
+                </form>
+              </div>
+              <div class="w-full flex gap-5 justify-between md:justify-end md:w-1/2">
+                <div class="dropdown bg-white py-2 px-4 max-w-[10rem] shadow-sm rounded-primary">
+                  <div class="dropdown-toggle text-slate-600 dark:text-slate-300 flex gap-1 ">
+                      <i class="w-4" data-feather="filter"></i>
+                      <span class="flex items-center gap-1 text-sm font-medium">Filter</span>
+                      <i class="w-4" data-feather="chevron-down"></i>
+                  </div>
+                  <div class="dropdown-content">
+                      <a href="javascript:void(0)" class="dropdown-item">Action</a>
+                      <a href="javascript:void(0)" class="dropdown-item">Another action</a>
+                      <a href="javascript:void(0)" class="dropdown-item">Something else here</a>
                   </div>
                 </div>
+                <a class="btn btn-primary" href="#" role="button">Create Invoice</a>
               </div>
-              <!-- Card: Basic Tab Ends -->
+             </div>
+              <!-- Invoice Header End -->
+              <div class="w-full my-4 bg-white shadow-sm">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Customer name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Issued Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Albert Flores</td>
+                            <td>firstname.secoundname@gmail.com</td>
+                            <td>(342) 555-0116</td>
+                            <td>October 30, 2017</td>
+                            <td>September 9, 2019</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Annette Black</td>
+                            <td>firstname.secoundname@gmail.com</td>
+                            <td>(342) 555-0116</td>
+                            <td>February 30, 2017</td>
+                            <td>March 23, 2019</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Bessi Cooper</td>
+                            <td>firstname.secoundname@gmail.com</td>
+                            <td>(342) 555-0116</td>
+                            <td>June 25, 2020</td>
+                            <td>September 9, 2019</td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>Cameron Williamson</td>
+                            <td>firstname.secoundname@gmail.com</td>
+                            <td>(342) 555-0116</td>
+                            <td>October 30, 2017</td>
+                            <td>September 9, 2019</td>
+                        </tr>
+                        <tr>
+                            <td>05</td>
+                            <td>Cody Fisher</td>
+                            <td>firstname.secoundname@gmail.com</td>
+                            <td>(342) 555-0116</td>
+                            <td>January 27, 2017</td>
+                            <td>December 9, 2021</td>
+                        </tr>
+                        <tr>
+                            <td>06</td>
+                            <td>Albert Flores</td>
+                            <td>firstname.secoundname@gmail.com</td>
+                            <td>(342) 555-0116</td>
+                            <td>October 30, 2017</td>
+                            <td>September 9, 2019</td>
+                        </tr>
+                        <tr>
+                            <td>07</td>
+                            <td>Annette Black</td>
+                            <td>firstname.secoundname@gmail.com</td>
+                            <td>(342) 555-0116</td>
+                            <td>February 30, 2017</td>
+                            <td>March 23, 2019</td>
+                        </tr>
+                        <tr>
+                            <td>08</td>
+                            <td>Bessi Cooper</td>
+                            <td>firstname.secoundname@gmail.com</td>
+                            <td>(342) 555-0116</td>
+                            <td>June 25, 2020</td>
+                            <td>September 9, 2019</td>
+                        </tr>
+                        <tr>
+                            <td>09</td>
+                            <td>Cameron Williamson</td>
+                            <td>firstname.secoundname@gmail.com</td>
+                            <td>(342) 555-0116</td>
+                            <td>October 30, 2017</td>
+                            <td>September 9, 2019</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Cody Fisher</td>
+                            <td>firstname.secoundname@gmail.com</td>
+                            <td>(342) 555-0116</td>
+                            <td>January 27, 2017</td>
+                            <td>December 9, 2021</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+              </div>
             </div>
-            <!-- Tabs Ends -->
+            <!-- Invoice Listing Ends -->
           </main>
           <!-- Main Content Ends -->
 
