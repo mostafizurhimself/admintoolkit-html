@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Listing - Admin Toolkit</title>
+    <title>Create Invoice - Admin Toolkit</title>
     <link rel="stylesheet" href="./css/app.css" />
   </head>
 
@@ -101,13 +101,13 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="./create.html" class="sidebar-submenu-item">Create</a>
+                <a href="./invoice-create.html" class="sidebar-submenu-item active">Create</a>
               </li>
               <li>
-                <a href="./listing.html" class="sidebar-submenu-item active">Listing</a>
+                <a href="./invoice-listing.html" class="sidebar-submenu-item">Listing</a>
               </li>
               <li>
-                <a href="./details.html" class="sidebar-submenu-item">Details</a>
+                <a href="./invoice-details.html" class="sidebar-submenu-item">Details</a>
               </li>
             </ul>
           </li>
@@ -758,7 +758,7 @@
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5 class="px-2 md:px-0">Listing</h5>
+              <h5>--Title--</h5>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
@@ -769,440 +769,31 @@
                 </li>
 
                 <li class="breadcrumb-item">
-                  <a href="#">Listing</a>
+                  <a href="#">Create</a>
                 </li>
               </ol>
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Invoice Listing Starts -->
-            <div class="grid grid-cols-1">
-              <!-- Invoice Header Start -->
-             <div class="w-full flex flex-col md:flex-row gap-y-4 md:gap-0 justify-between items-center">
-              <div class="w-full md:w-1/2">
-                  <form
-                  action=""
-                  class="group h-10 w-full md:w-72 items-center rounded-primary border border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500 flex"
-                >
-                  <div class="flex h-full items-center px-3">
-                    <i
-                      class="text-slate-400 group-focus-within:text-primary-500"
-                      width="1em"
-                      height="1em"
-                      data-feather="search"
-                    ></i>
-                  </div>
-                  <input
-                    class="h-full bg-transparent w-full border-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                    type="text"
-                    placeholder="Search"
-                  />
-                </form>
-              </div>
-              <div class="w-full flex gap-5 justify-between md:justify-end md:w-1/2">
-                <div data-placement="bottom-center" class="dropdown bg-white dark:bg-slate-800 py-2 px-4 max-w-sm shadow-sm rounded-primary">
-                  <div class="dropdown-toggle text-slate-600 dark:text-slate-300 flex gap-2 px-2">
-                      <i class="w-4" data-feather="filter"></i>
-                      <span class="text-sm font-medium">Filter</span>
-                      <i class="w-4" data-feather="chevron-down"></i>
-                  </div>
-                  <div class="dropdown-content min-w-sm md:min-w-[300px]">
-                      <a href="javascript:void(0)" class="dropdown-item">
-                        <h2 class="font-medium text-sm">Status</h2>
-                        <select class="select select-sm w-full">
-                          <option value="">Select a Status</option>
-                          <option value="1">Success</option>
-                          <option value="2">Pending</option>
-                          <option value="3">Processing</option>
-                          <option value="4">Refounded</option>
-                      </select>
-                      </a>
-                      <a href="javascript:void(0)" class="dropdown-item">
-                        <h2 class="font-medium text-sm">Email</h2>
-                        <select class="tom-select" autocomplete="off">
-                          <option value="">Search Email</option>
-                      </select>
-                      </a>
-                      <a href="javascript:void(0)" class="dropdown-item">
-                        <h2 class="font-medium text-sm">Invoice</h2>
-                        <select class="tom-select" autocomplete="off">
-                          <option value="">Search Invoice</option>
-                      </select>
-                      </a>
+            <!-- Tabs Starts -->
+            <div class="space-y-6">
+              <!-- Card: Basic Tab Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Create</h4>
+
+                  <p class="card-subtitle">
+                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <!-- Code Here  -->
                   </div>
                 </div>
-                <a class="btn btn-primary" href="#" role="button">Create Invoice</a>
               </div>
-             </div>
-              <!-- Invoice Header End -->
-              <div class="w-full my-4 bg-white dark:bg-slate-800 shadow-sm">
-                <div class="table-responsive">
-                  <table class="table w-[1200px]">
-                    <thead>
-                        <tr>
-                            <th>
-                              <label for="checkbox-sm" class="label">
-                                <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                              </label>
-                            </th>
-                            <th>Invoice</th>
-                            <th>Customer name</th>
-                            <th>Email</th>
-                            <th>Issued Date</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-normal duration-150 ease-in-out hover:underline transition" href="#">AT220700156</a></td>
-                            <td>Albert Flores</td>
-                            <td>albert@example.com</td>
-                            <td>October 30, 2017</td>
-                            <td><div class="badge badge-success">Delivered</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-vertical"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Invoice Details
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                      Invoice PDF
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                      Invoice Delete
-                                  </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-normal duration-150 ease-in-out hover:underline transition" href="#">AT220704687</a></td>
-                            <td>Annette Black</td>
-                            <td>Annette@example.com</td>
-                            <td>December 31, 2018</td>
-                            <td><div class="badge badge-warning">Pending</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-vertical"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Invoice Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        Invoice PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Invoice Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-normal duration-150 ease-in-out hover:underline transition" href="#">AT220700564</a></td>
-                            <td>Ariene mcCoy</td>
-                            <td>Ariene@example.com</td>
-                            <td>June 10, 2020</td>
-                            <td><div class="badge badge-success">Delivered</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-vertical"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Invoice Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        Invoice PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Invoice Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-normal duration-150 ease-in-out hover:underline transition" href="#">AT220701648</a></td>
-                            <td>Bessie Cooper</td>
-                            <td>bessie@example.com</td>
-                            <td>October 30, 2019</td>
-                            <td><div class="badge badge-primary">Processing</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-vertical"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Invoice Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        Invoice PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Invoice Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-normal duration-150 ease-in-out hover:underline transition" href="#">AT220700164</a></td>
-                            <td>Brooklyn Simmons</td>
-                            <td>brooklyn@example.com</td>
-                            <td>Jully 25, 2021</td>
-                            <td><div class="badge badge-secondary">Refounded</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-vertical"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Invoice Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        Invoice PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Invoice Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-normal duration-150 ease-in-out hover:underline transition" href="#">AT220700155</a></td>
-                            <td>Cameron Williamson</td>
-                            <td>cameron@example.com</td>
-                            <td>October 30, 2017</td>
-                            <td><div class="badge badge-primary">Processing</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-vertical"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Invoice Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        Invoice PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Invoice Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-normal duration-150 ease-in-out hover:underline transition" href="#">AT220701654</a></td>
-                            <td>Cody Fisher</td>
-                            <td>cody@example.com</td>
-                            <td>February 15, 2018</td>
-                            <td><div class="badge badge-warning">Pending</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-vertical"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Invoice Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        Invoice PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Invoice Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-normal duration-150 ease-in-out hover:underline transition" href="#">AT220700456</a></td>
-                            <td>Courtney Henry</td>
-                            <td>courtney@example.com</td>
-                            <td>January 21, 2020</td>
-                            <td><div class="badge badge-warning">Pending</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-vertical"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Invoice Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        Invoice PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Invoice Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-normal duration-150 ease-in-out hover:underline transition" href="#">AT220700156</a></td>
-                            <td>Darlene Robertson</td>
-                            <td>darlene@example.com</td>
-                            <td>March 22, 2023</td>
-                            <td><div class="badge badge-secondary">Refounded</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-vertical"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Invoice Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        Invoice PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Invoice Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-normal duration-150 ease-in-out hover:underline transition" href="#">AT220700045</a></td>
-                            <td>Darell Steward</td>
-                            <td>darell@example.com</td>
-                            <td>October 30, 2017</td>
-                            <td><div class="badge badge-primary">Processing</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-vertical"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Invoice Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        Invoice PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Invoice Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                </div>
-              </div>
-              <div class="flex flex-col md:flex-row gap-y-4 justify-between items-center">
-                <p class="text-xs text-slate-400 font-normal">Showing 1 to 10 of 100 result</p>
-                <!-- Pagination -->
-                <nav class="pagination">
-                  <ul class="pagination-list">
-                      <li class="pagination-item">
-                          <a class="pagination-link pagination-link-prev-icon" href="#">
-                              <i data-feather="chevron-left" width="1em" height="1em"></i>
-                          </a>
-                      </li>
-                      <li class="pagination-item active">
-                          <a class="pagination-link" href="#">1</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a class="pagination-link" href="#">2</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a class="pagination-link" href="#">...</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a class="pagination-link" href="#">9</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a class="pagination-link" href="#">10</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a class="pagination-link pagination-link-next-icon" href="#">
-                              <i data-feather="chevron-right" width="1em" height="1em"></i>
-                          </a>
-                      </li>
-                  </ul>
-              </nav>
-              </div>
+              <!-- Card: Basic Tab Ends -->
             </div>
-            <!-- Invoice Listing Ends -->
+            <!-- Tabs Ends -->
           </main>
           <!-- Main Content Ends -->
 

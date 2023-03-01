@@ -7,7 +7,7 @@
     }
 
     &-content {
-      @apply fixed top-0 left-0 z-20 hidden rounded-primary border bg-white shadow-lg dark:border-slate-800 dark:bg-slate-800;
+      @apply fixed top-0 left-0 z-20 hidden overflow-hidden rounded-primary border bg-white shadow-lg dark:border-slate-800 dark:bg-slate-800;
     }
 
     &-content.show {
