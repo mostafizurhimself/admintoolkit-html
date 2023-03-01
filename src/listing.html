@@ -1152,17 +1152,35 @@
               <div class="flex flex-col md:flex-row gap-y-2 justify-between items-center">
                 <p class="text-xs text-slate-400 font-normal">Showing 1 to 10 of 100 result</p>
                 <!-- Pagination -->
-                <div class="flex gap-2">
-                  <button class="btn btn-xs bg-white"><i class="text-slate-400 dark:text-slate-400" width="18" height="18" data-feather="chevron-left"></i></button>
-                  
-                  <button class="btn btn-xs btn-primary">1</button>
-                  <button class="btn btn-xs bg-white">2</button>
-                  <button class="btn btn-xs bg-white">...</button>
-                  <button class="btn btn-xs bg-white">9</button>
-                  <button class="btn btn-xs bg-white">10</button>
-
-                  <button class="btn btn-xs bg-white"><i class="text-slate-400 dark:text-slate-400" width="18" height="18" data-feather="chevron-right"></i></button>
-                </div>
+                <nav class="pagination">
+                  <ul class="pagination-list">
+                      <li class="pagination-item">
+                          <a class="pagination-link pagination-link-prev-icon" href="#">
+                              <i data-feather="chevron-left" width="1em" height="1em"></i>
+                          </a>
+                      </li>
+                      <li class="pagination-item active">
+                          <a class="pagination-link" href="#">1</a>
+                      </li>
+                      <li class="pagination-item">
+                          <a class="pagination-link" href="#">2</a>
+                      </li>
+                      <li class="pagination-item">
+                          <a class="pagination-link" href="#">...</a>
+                      </li>
+                      <li class="pagination-item">
+                          <a class="pagination-link" href="#">9</a>
+                      </li>
+                      <li class="pagination-item">
+                          <a class="pagination-link" href="#">10</a>
+                      </li>
+                      <li class="pagination-item">
+                          <a class="pagination-link pagination-link-next-icon" href="#">
+                              <i data-feather="chevron-right" width="1em" height="1em"></i>
+                          </a>
+                      </li>
+                  </ul>
+              </nav>
               </div>
             </div>
             <!-- Invoice Listing Ends -->
