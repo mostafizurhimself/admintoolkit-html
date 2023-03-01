@@ -2,4 +2,12 @@
   .container-fluid {
     @apply w-full px-6;
   }
+  /* Chrome, Safari and Opera */
+  #chats::-webkit-scrollbar {
+    display: none;
+  }
+  #chats {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
