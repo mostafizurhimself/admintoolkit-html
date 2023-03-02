@@ -838,7 +838,7 @@
              </div>
               <!-- Invoice Header End -->
                 <div class="table-responsive my-4">
-                  <table class="table min-w-[1100px]">
+                  <table class="table min-w-[1300px]">
                     <thead>
                         <tr>
                             <th>
@@ -846,12 +846,13 @@
                                 <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
                               </label>
                             </th>
-                            <th class="text-xs uppercase">Invoice</th>
-                            <th class="text-xs uppercase">Customer</th>
-                            <th class="text-xs uppercase">Email</th>
-                            <th class="text-xs uppercase">Issued Date</th>
+                            <th class="text-xs uppercase">Product</th>
+                            <th class="text-xs uppercase">SKU</th>
+                            <th class="text-xs uppercase">Price</th>
+                            <th class="text-xs uppercase">Quantity</th>
+                            <th class="text-xs uppercase">Last Ordered</th>
                             <th class="text-xs uppercase">Status</th>
-                            <th class="text-xs uppercase">Action</th>
+                            <th class="text-xs uppercase">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -859,11 +860,20 @@
                             <td>
                               <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
                             </td>
-                            <td><a class="text-primary-500 text-sm font-medium duration-150 ease-in-out hover:underline transition" href="#">AT220700156</a></td>
-                            <td>Albert Flores</td>
-                            <td>albert@example.com</td>
-                            <td>October 30, 2017</td>
-                            <td><div class="badge badge-soft-success">Delivered</div></td>
+                            <td>
+                              <div class="flex gap-3 ">
+                                <img src="../src/images/product5.png" class="h-10 w-10" alt="product">
+                                <div>
+                                  <h3 class="text-sm font-normal m-0 p-0">Apple Watch 2023</h3>
+                                  <p class="text-xs text-slate-400">Electronics > Accessories</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>APLW001</td>
+                            <td>$200.00</td>
+                            <td>150 pcs</td>
+                            <td>19 Aug 2022</td>
+                            <td><div class="badge badge-soft-success">Available</div></td>
                             <td>
                               <div class="dropdown" data-placement="bottom-start">
                                   <div class="dropdown-toggle">
@@ -875,292 +885,13 @@
                                       Details
                                   </a>
                                   <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                      PDF
+                                      <i class="h-5 text-slate-400" data-feather="edit"></i>
+                                      Edit
                                   </a>
                                   <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
                                       <i class="h-5 text-slate-400" data-feather="trash"></i>
                                       Delete
                                   </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-medium duration-150 ease-in-out hover:underline transition" href="#">AT220704687</a></td>
-                            <td>Annette Black</td>
-                            <td>Annette@example.com</td>
-                            <td>December 31, 2018</td>
-                            <td><div class="badge badge-soft-warning">Pending</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-medium duration-150 ease-in-out hover:underline transition" href="#">AT220700564</a></td>
-                            <td>Ariene mcCoy</td>
-                            <td>Ariene@example.com</td>
-                            <td>June 10, 2020</td>
-                            <td><div class="badge badge-soft-success">Delivered</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-medium duration-150 ease-in-out hover:underline transition" href="#">AT220701648</a></td>
-                            <td>Bessie Cooper</td>
-                            <td>bessie@example.com</td>
-                            <td>October 30, 2019</td>
-                            <td><div class="badge badge-soft-primary">Processing</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-medium duration-150 ease-in-out hover:underline transition" href="#">AT220700164</a></td>
-                            <td>Brooklyn Simmons</td>
-                            <td>brooklyn@example.com</td>
-                            <td>Jully 25, 2021</td>
-                            <td><div class="badge badge-soft-secondary">Refounded</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-medium duration-150 ease-in-out hover:underline transition" href="#">AT220700155</a></td>
-                            <td>Cameron Williamson</td>
-                            <td>cameron@example.com</td>
-                            <td>October 30, 2017</td>
-                            <td><div class="badge badge-soft-primary">Processing</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-medium duration-150 ease-in-out hover:underline transition" href="#">AT220701654</a></td>
-                            <td>Cody Fisher</td>
-                            <td>cody@example.com</td>
-                            <td>February 15, 2018</td>
-                            <td><div class="badge badge-soft-warning">Pending</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-medium duration-150 ease-in-out hover:underline transition" href="#">AT220700456</a></td>
-                            <td>Courtney Henry</td>
-                            <td>courtney@example.com</td>
-                            <td>January 21, 2020</td>
-                            <td><div class="badge badge-soft-warning">Pending</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-medium duration-150 ease-in-out hover:underline transition" href="#">AT220700156</a></td>
-                            <td>Darlene Robertson</td>
-                            <td>darlene@example.com</td>
-                            <td>March 22, 2023</td>
-                            <td><div class="badge badge-soft-secondary">Refounded</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Delete
-                                    </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td><a class="text-primary-500 text-sm font-medium duration-150 ease-in-out hover:underline transition" href="#">AT220700045</a></td>
-                            <td>Darell Steward</td>
-                            <td>darell@example.com</td>
-                            <td>October 30, 2017</td>
-                            <td><div class="badge badge-soft-primary">Processing</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                        PDF
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                        <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                        Delete
-                                    </a>
                                   </div>
                               </div>
                             </td>
