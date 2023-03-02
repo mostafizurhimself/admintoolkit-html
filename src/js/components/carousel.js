@@ -1,22 +1,25 @@
-import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay, Thumbs, Scrollbar } from 'swiper';
 
 const carousel = {
   init () {
-    const swiperBasic                 = document.querySelectorAll('.swiper-basic');
-    const swiperWithControl           = document.querySelectorAll('.swiper-with-control');
-    const swiperWithPagination        = document.querySelectorAll('.swiper-with-pagination');    
-    const swiperWithCustomPagination  = document.querySelectorAll('.swiper-with-custom-pagination');   
-    const swiperWithContent           = document.querySelectorAll('.swiper-with-content');   
-    const swiperWithProgress          = document.querySelectorAll('.swiper-with-progress');    
-    const swiperWithAutoplay          = document.querySelectorAll('.swiper-with-autoplay');    
-    const swiperMultiple              = document.querySelectorAll('.swiper-multiple');    
-  
+    const swiperBasic                = this.querySelectors('.swiper-basic');
+    const swiperWithNavigation       = this.querySelectors('.swiper-with-navigation');
+    const swiperWithPagination       = this.querySelectors('.swiper-with-pagination');     
+    const swiperWithCustomPagination = this.querySelectors('.swiper-with-custom-pagination');   
+    const swiperWithProgress         = this.querySelectors('.swiper-with-progress');    
+    const swiperWithScrollbar        = this.querySelectors('.swiper-with-scrollbar');    
+    const swiperWithThumbnailPreview = this.querySelectors('.swiper-with-thumbnail-preview');   
+    const swiperWithAutoplay         = this.querySelectors('.swiper-with-autoplay');    
+    const swiperMultiple             = this.querySelectors('.swiper-multiple');     
+    const swiperCustom               = this.querySelectors('.swiper-custom');    
+
     if(swiperBasic.length) {
-      [...swiperBasic].forEach(swiperElement => new Swiper(swiperElement));
+      swiperBasic.forEach(swiperElement => new Swiper(swiperElement));
     }
 
-    if(swiperWithControl.length) {
-      [...swiperWithControl].forEach(swiperElement => new Swiper(swiperElement, {
+    if(swiperWithNavigation.length) {
+      swiperWithNavigation.forEach(swiperElement => new Swiper(swiperElement, {
+        hideOnClick: true,
         modules: [Navigation],
         navigation: {
           nextEl: '.swiper-button-next',
@@ -26,18 +29,17 @@ const carousel = {
     }
     
     if(swiperWithPagination.length) {
-      [...swiperWithPagination].forEach(swiperElement => new Swiper(swiperElement, {
+      swiperWithPagination.forEach(swiperElement => new Swiper(swiperElement, {
         modules: [Pagination],
         pagination: {
           el: '.swiper-pagination',
-          type: 'bullets',
           clickable: true
         }
       }));
     }
 
     if(swiperWithCustomPagination.length) {
-      [...swiperWithCustomPagination].forEach(swiperElement => new Swiper(swiperElement, {
+      swiperWithCustomPagination.forEach(swiperElement => new Swiper(swiperElement, {
         modules: [Pagination],
         pagination: {
           el: '.swiper-pagination',
@@ -49,23 +51,8 @@ const carousel = {
       }));
     }
 
-    if(swiperWithContent.length) {
-      [...swiperWithContent].forEach(swiperElement => new Swiper(swiperElement, {
-        modules: [Navigation, Pagination],
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-          clickable: true
-        }
-      }));
-    }
-
     if(swiperWithProgress.length) {
-      [...swiperWithProgress].forEach(swiperElement => new Swiper(swiperElement, {
+      swiperWithProgress.forEach(swiperElement => new Swiper(swiperElement, {
         modules: [Pagination],
         pagination: {
           el: '.swiper-pagination',
@@ -74,8 +61,54 @@ const carousel = {
       }));
     }
 
+    if(swiperWithScrollbar.length) {
+      swiperWithScrollbar.forEach(swiperElement => new Swiper(swiperElement, {
+        modules: [Scrollbar],
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          hide: true,
+        },
+      }));
+    }
+    
+    if(swiperWithThumbnailPreview.length) {
+      swiperWithThumbnailPreview.forEach(swiperElement => {
+        const swiperPreview = swiperElement.nextElementSibling;
+  
+        if(swiperPreview && swiperPreview.classList.contains('swiper-preview')) {
+          const swiperPreviewInstance = new Swiper(swiperPreview, {
+            spaceBetween: 16,
+            freeMode: true,
+            watchSlidesProgress: true,
+            breakpoints: {
+              320: {
+                slidesPerView: 2,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 4,
+              }
+            }
+          });
+
+          new Swiper(swiperElement, {
+            modules: [Navigation, Thumbs],
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+              swiper: swiperPreviewInstance,
+            },
+          });
+        }
+      });
+    }
+
     if(swiperWithAutoplay.length) {
-      [...swiperWithAutoplay].forEach(swiperElement => new Swiper(swiperElement, {
+      swiperWithAutoplay.forEach(swiperElement => new Swiper(swiperElement, {
         loop: true,
         modules: [Autoplay, Navigation, Pagination],
         autoplay: {
@@ -93,28 +126,18 @@ const carousel = {
     }
 
     if(swiperMultiple.length) {
-      [...swiperMultiple].forEach(swiperElement => new Swiper(swiperElement, {
-        centeredSlides: true,
-        centeredSlidesBounds: true,
+      swiperMultiple.forEach(swiperElement => new Swiper(swiperElement, {
         grabCursor: true,
-        centeredSlides: true,
         breakpoints: {
           320: {
-            slidesPerView: 1,
-            spaceBetween: 0
-          },
-          640: {
             slidesPerView: 2,
-            spaceBetween: 20
+            spaceBetween: 15
           },
-          1280: {
+          
+          768: {
             slidesPerView: 3,
-            spaceBetween: 25
-          },
-          1536: {
-            slidesPerView: 4,
             spaceBetween: 30
-          }
+          },
         },
         modules: [Navigation],
         navigation: {
@@ -123,8 +146,36 @@ const carousel = {
         }
       }));
     }
+
+    if(swiperCustom.length) {
+      swiperCustom.forEach(swiperElement => new Swiper(swiperElement, {
+        loop: true,
+        modules: [Pagination, Navigation],
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+      }))
+    }
+  },
+
+  querySelectors(selectors) {
+    let output = [];
+
+    if(selectors) {
+      output = [...document.querySelectorAll(selectors)].filter((selectorElement) => {
+        // Return all the elements except .code-viewer-source children elements
+        return !selectorElement.parentElement.classList.contains('code-viewer-source');
+      });
+    }
+    
+    return output;
   }
 };
-
 
 export default carousel;
