@@ -17,6 +17,9 @@ module.exports = {
   darkMode: 'class',
   content: ['./src/**/*.{html,css,scss,js}'],
   theme: {
+    container: {
+      center: true
+    },
     extend: {
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans],
