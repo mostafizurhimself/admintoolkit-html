@@ -758,14 +758,14 @@
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>--Title--</h5>
+              <h5 class="px-2 md:px-0">Invoice Create</h5>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
                 </li>
 
                 <li class="breadcrumb-item">
-                  <a href="#">Components</a>
+                  <a href="#">Invoice</a>
                 </li>
 
                 <li class="breadcrumb-item">
@@ -775,25 +775,40 @@
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Tabs Starts -->
-            <div class="space-y-6">
-              <!-- Card: Basic Tab Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Create</h4>
-
-                  <p class="card-subtitle">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <!-- Code Here  -->
+            <!-- Invoice Create Start -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <!--Left Side Div Start -->
+                <div class="card col-span-1 lg:col-span-2 p-6">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                  <div class="sidebar-header">
+                    <span class="sidebar-logo-icon">
+                      <svg fill="currentColor" width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                        <path
+                          d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z"
+                        ></path>
+                        <path
+                          d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z"
+                        ></path>
+                      </svg>
+                    </span>
+          
+                    <div class="sidebar-logo-text">
+                      <h1 class="flex text-xl">
+                        <span class="font-bold text-slate-800 dark:text-slate-200">Admin</span>
+                        <span class="font-semibold text-primary-500">Toolkit</span>
+                      </h1>
+          
+                      <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!-- Card: Basic Tab Ends -->
+                </div>
+                <div class="card col-span-1"></div>
+                <!--Left Side Div End -->
+
             </div>
-            <!-- Tabs Ends -->
+            <!-- Invoice Create End -->
+
           </main>
           <!-- Main Content Ends -->
 
