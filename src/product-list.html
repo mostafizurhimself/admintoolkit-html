@@ -124,22 +124,19 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="./products.html" class="sidebar-submenu-item">Products</a>
+                <a href="./product-list.html" class="sidebar-submenu-item active">Product List</a>
               </li>
               <li>
-                <a href="./product-list.html" class="sidebar-submenu-item active">Products List</a>
+                <a href="./product-edit.html" class="sidebar-submenu-item">Product Edit</a>
               </li>
               <li>
-                <a href="./products-details.html" class="sidebar-submenu-item">Products Details</a>
-              </li>
-              <li>
-                <a href="./orders.html" class="sidebar-submenu-item">Orders</a>
+                <a href="./order-list.html" class="sidebar-submenu-item">Order List</a>
               </li>
               <li>
                 <a href="./order-details.html" class="sidebar-submenu-item">Order Details</a>
               </li>
               <li>
-                <a href="./customers.html" class="sidebar-submenu-item">Customers</a>
+                <a href="./customer-list.html" class="sidebar-submenu-item">Customer List</a>
               </li>
             </ul>
           </li>
@@ -780,479 +777,482 @@
             <!-- Product List Starts -->
             <div class="grid grid-cols-1">
               <!-- Invoice Header Start -->
-             <div class="w-full flex flex-col md:flex-row gap-y-4 md:gap-0 justify-between items-center">
-              <div class="w-full md:w-1/2">
+              <div class="flex w-full flex-col items-center justify-between gap-y-4 md:flex-row md:gap-0">
+                <div class="w-full md:w-1/2">
                   <form
-                  action=""
-                  class="group input h-10 w-full md:w-72 items-center rounded-primary border-2 border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500 flex"
-                >
-                  <div class="flex h-full items-center px-3">
-                    <i
-                      class="text-slate-400 group-focus-within:text-primary-500"
-                      width="1em"
-                      height="1em"
-                      data-feather="search"
-                    ></i>
-                  </div>
-                  <input
-                    class="h-full bg-transparent w-full border-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                    type="text"
-                    placeholder="Search"
-                  />
-                </form>
-              </div>
-              <div class="w-full flex gap-2 md:gap-5  justify-between md:justify-end md:w-1/2">
-                <div data-placement="bottom-center" class="dropdown bg-white dark:bg-slate-800 py-2 px-4 max-w-sm shadow-sm rounded-primary">
-                  <div class="dropdown-toggle text-slate-600 dark:text-slate-300 flex gap-2 px-2">
+                    action=""
+                    class="input group flex h-10 w-full items-center rounded-primary border-2 border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500 md:w-72"
+                  >
+                    <div class="flex h-full items-center px-3">
+                      <i
+                        class="text-slate-400 group-focus-within:text-primary-500"
+                        width="1em"
+                        height="1em"
+                        data-feather="search"
+                      ></i>
+                    </div>
+                    <input
+                      class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                      type="text"
+                      placeholder="Search"
+                    />
+                  </form>
+                </div>
+                <div class="flex w-full justify-between gap-2 md:w-1/2 md:justify-end md:gap-5">
+                  <div
+                    data-placement="bottom-center"
+                    class="dropdown max-w-sm rounded-primary bg-white py-2 px-4 shadow-sm dark:bg-slate-800"
+                  >
+                    <div class="dropdown-toggle flex gap-2 px-2 text-slate-600 dark:text-slate-300">
                       <i class="w-4" data-feather="filter"></i>
                       <span class="text-sm font-medium">Filter</span>
                       <i class="w-4" data-feather="chevron-down"></i>
-                  </div>
-                  <div class="dropdown-content min-w-sm md:min-w-[300px]">
+                    </div>
+                    <div class="dropdown-content min-w-sm md:min-w-[300px]">
                       <a href="javascript:void(0)" class="dropdown-item hover:!bg-transparent">
-                        <h2 class="font-medium text-sm">Status</h2>
+                        <h2 class="text-sm font-medium">Status</h2>
                         <select class="select select-sm w-full">
                           <option value="">Select a Status</option>
                           <option value="1">Available</option>
                           <option value="2">Disabled</option>
-                      </select>
+                        </select>
                       </a>
                       <a href="javascript:void(0)" class="dropdown-item hover:!bg-transparent">
-                        <h2 class="font-medium text-sm">Date</h2>
+                        <h2 class="text-sm font-medium">Date</h2>
                         <select class="tom-select" autocomplete="off">
                           <option value="">Search Date</option>
-                      </select>
+                        </select>
                       </a>
+                    </div>
                   </div>
+                  <button class="btn bg-white px-4 dark:bg-slate-800">
+                    <i data-feather="log-out" class="-rotate-90" height="1rem" width="1rem"></i>
+                    Export
+                  </button>
+                  <a class="btn btn-primary" href="#" role="button">
+                    <i data-feather="plus" height="1rem" width="1rem"></i>
+                    Add <span class="hidden md:inline-block">Product</span>
+                  </a>
                 </div>
-                <button class="btn bg-white dark:bg-slate-800 px-4">
-                  <i data-feather="log-out" class="-rotate-90"  height="1rem" width="1rem"></i>
-                  Export</button>
-                <a class="btn btn-primary" href="#" role="button">
-                  <i data-feather="plus" height="1rem" width="1rem"></i>
-                  Add <span class="hidden md:inline-block">Product</span>
-                </a>
               </div>
-             </div>
               <!-- Invoice Header End -->
-                <div class="table-responsive my-4">
-                  <table class="table min-w-[1300px]">
-                    <thead>
-                        <tr>
-                            <th>
-                              <label for="checkbox-sm" class="label">
-                                <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                              </label>
-                            </th>
-                            <th class="text-xs uppercase">Product</th>
-                            <th class="text-xs uppercase">SKU</th>
-                            <th class="text-xs uppercase">Price</th>
-                            <th class="text-xs uppercase">Quantity</th>
-                            <th class="text-xs uppercase">Last Ordered</th>
-                            <th class="text-xs uppercase">Status</th>
-                            <th class="text-xs uppercase">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td>
-                              <div class="flex gap-3 items-center">
-                                <img src="./images/product5.jpg" class="h-10 w-10" alt="product">
-                                <div>
-                                  <h3 class="text-sm font-normal m-0 p-0">Apple Watch 2023</h3>
-                                  <p class="text-xs text-slate-400">Electronics > Accessories</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>APLW001</td>
-                            <td>$200.00</td>
-                            <td>150 pcs</td>
-                            <td>19 Aug 2022</td>
-                            <td><div class="badge badge-soft-success">Available</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                      Edit
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                      Delete
-                                  </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td>
-                              <div class="flex gap-3 items-center">
-                                <img src="./images/product7.jpg" class="h-10 w-10" alt="product">
-                                <div>
-                                  <h3 class="text-sm font-normal m-0 p-0">Wireless Headphone</h3>
-                                  <p class="text-xs text-slate-400">Electronics > Gadget</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>WLHP008</td>
-                            <td>$50.00</td>
-                            <td>100 pcs</td>
-                            <td>15 Jul 2022</td>
-                            <td><div class="badge badge-soft-success">Available</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                      Edit
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                      Delete
-                                  </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td>
-                              <div class="flex gap-3 items-center">
-                                <img src="./images/product8.jpg" class="h-10 w-10" alt="product">
-                                <div>
-                                  <h3 class="text-sm font-normal m-0 p-0">Styllish Sunglass</h3>
-                                  <p class="text-xs text-slate-400">Electronics > Accessories</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>SSG038</td>
-                            <td>$20.00</td>
-                            <td>200 pcs</td>
-                            <td>23 Apr 2022</td>
-                            <td><div class="badge badge-soft-danger">Disabled</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                      Edit
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                      Delete
-                                  </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td>
-                              <div class="flex gap-3 items-center">
-                                <img src="./images/product9.jpg" class="h-10 w-10" alt="product">
-                                <div>
-                                  <h3 class="text-sm font-normal m-0 p-0">Nike Sports Shoe</h3>
-                                  <p class="text-xs text-slate-400">Fashion > Shoes</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>NSS068</td>
-                            <td>$70.00</td>
-                            <td>130 pcs</td>
-                            <td>02 Feb 2022</td>
-                            <td><div class="badge badge-soft-success">Available</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                      Edit
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                      Delete
-                                  </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td>
-                              <div class="flex gap-3 items-center">
-                                <img src="./images/product10.jpg" class="h-10 w-10" alt="product">
-                                <div>
-                                  <h3 class="text-sm font-normal m-0 p-0">Branded Coconut Oil</h3>
-                                  <p class="text-xs text-slate-400">Health Care > Body Oil</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>BCCO078</td>
-                            <td>$80.00</td>
-                            <td>300 pcs</td>
-                            <td>10 Mar 2022</td>
-                            <td><div class="badge badge-soft-success">Available</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                      Edit
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                      Delete
-                                  </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td>
-                              <div class="flex gap-3 items-center">
-                                <img src="./images/product11.jpg" class="h-10 w-10" alt="product">
-                                <div>
-                                  <h3 class="text-sm font-normal m-0 p-0">JBL Wireless Earbud</h3>
-                                  <p class="text-xs text-slate-400">Electronics > Gadget</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>JWEO098</td>
-                            <td>$250.00</td>
-                            <td>220 pcs</td>
-                            <td>10 Mar 2022</td>
-                            <td><div class="badge badge-soft-danger">Disabled</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                      Edit
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                      Delete
-                                  </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td>
-                              <div class="flex gap-3 items-center">
-                                <img src="./images/product12.jpg" class="h-10 w-10" alt="product">
-                                <div>
-                                  <h3 class="text-sm font-normal m-0 p-0">McBook Pro 2023</h3>
-                                  <p class="text-xs text-slate-400">Electronics > Laptop</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>MBP098</td>
-                            <td>$2000.00</td>
-                            <td>20 pcs</td>
-                            <td>15 Feb 2022</td>
-                            <td><div class="badge badge-soft-success">Available</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                      Edit
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                      Delete
-                                  </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td>
-                              <div class="flex gap-3 items-center">
-                                <img src="./images/product13.jpg" class="h-10 w-10" alt="product">
-                                <div>
-                                  <h3 class="text-sm font-normal m-0 p-0">Ladies Handbag</h3>
-                                  <p class="text-xs text-slate-400">Fashion > Women's Fashion</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>LHB098</td>
-                            <td>$40.00</td>
-                            <td>160 pcs</td>
-                            <td>31 Dec 2022</td>
-                            <td><div class="badge badge-soft-danger">Disabled</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                      Edit
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                      Delete
-                                  </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size">
-                            </td>
-                            <td>
-                              <div class="flex gap-3 items-center">
-                                <img src="./images/product14.jpg" class="h-10 w-10" alt="product">
-                                <div>
-                                  <h3 class="text-sm font-normal m-0 p-0">Iphone 13 Pro Max</h3>
-                                  <p class="text-xs text-slate-400">Electronics > Mobile</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>IPPM032</td>
-                            <td>$820.00</td>
-                            <td>150 pcs</td>
-                            <td>25 Nov 2022</td>
-                            <td><div class="badge badge-soft-success">Available</div></td>
-                            <td>
-                              <div class="dropdown" data-placement="bottom-start">
-                                  <div class="dropdown-toggle">
-                                      <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
-                                  </div>
-                                  <div class="dropdown-content min-w-[200px]">
-                                    <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                      Details
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                      Edit
-                                  </a>
-                                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                      <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                      Delete
-                                  </a>
-                                  </div>
-                              </div>
-                            </td>
-                        </tr>
-                    </tbody>
+              <div class="table-responsive my-4">
+                <table class="table min-w-[1300px]">
+                  <thead>
+                    <tr>
+                      <th>
+                        <label for="checkbox-sm" class="label">
+                          <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        </label>
+                      </th>
+                      <th class="text-xs uppercase">Product</th>
+                      <th class="text-xs uppercase">SKU</th>
+                      <th class="text-xs uppercase">Price</th>
+                      <th class="text-xs uppercase">Quantity</th>
+                      <th class="text-xs uppercase">Last Ordered</th>
+                      <th class="text-xs uppercase">Status</th>
+                      <th class="text-xs uppercase">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img src="./images/product5.jpg" class="h-10 w-10" alt="product" />
+                          <div>
+                            <h3 class="m-0 p-0 text-sm font-normal">Apple Watch 2023</h3>
+                            <p class="text-xs text-slate-400">Electronics > Accessories</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>APLW001</td>
+                      <td>$200.00</td>
+                      <td>150 pcs</td>
+                      <td>19 Aug 2022</td>
+                      <td><div class="badge badge-soft-success">Available</div></td>
+                      <td>
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                              Details
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="edit"></i>
+                              Edit
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="trash"></i>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img src="./images/product7.jpg" class="h-10 w-10" alt="product" />
+                          <div>
+                            <h3 class="m-0 p-0 text-sm font-normal">Wireless Headphone</h3>
+                            <p class="text-xs text-slate-400">Electronics > Gadget</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>WLHP008</td>
+                      <td>$50.00</td>
+                      <td>100 pcs</td>
+                      <td>15 Jul 2022</td>
+                      <td><div class="badge badge-soft-success">Available</div></td>
+                      <td>
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                              Details
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="edit"></i>
+                              Edit
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="trash"></i>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img src="./images/product8.jpg" class="h-10 w-10" alt="product" />
+                          <div>
+                            <h3 class="m-0 p-0 text-sm font-normal">Styllish Sunglass</h3>
+                            <p class="text-xs text-slate-400">Electronics > Accessories</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>SSG038</td>
+                      <td>$20.00</td>
+                      <td>200 pcs</td>
+                      <td>23 Apr 2022</td>
+                      <td><div class="badge badge-soft-danger">Disabled</div></td>
+                      <td>
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                              Details
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="edit"></i>
+                              Edit
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="trash"></i>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img src="./images/product9.jpg" class="h-10 w-10" alt="product" />
+                          <div>
+                            <h3 class="m-0 p-0 text-sm font-normal">Nike Sports Shoe</h3>
+                            <p class="text-xs text-slate-400">Fashion > Shoes</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>NSS068</td>
+                      <td>$70.00</td>
+                      <td>130 pcs</td>
+                      <td>02 Feb 2022</td>
+                      <td><div class="badge badge-soft-success">Available</div></td>
+                      <td>
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                              Details
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="edit"></i>
+                              Edit
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="trash"></i>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img src="./images/product10.jpg" class="h-10 w-10" alt="product" />
+                          <div>
+                            <h3 class="m-0 p-0 text-sm font-normal">Branded Coconut Oil</h3>
+                            <p class="text-xs text-slate-400">Health Care > Body Oil</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>BCCO078</td>
+                      <td>$80.00</td>
+                      <td>300 pcs</td>
+                      <td>10 Mar 2022</td>
+                      <td><div class="badge badge-soft-success">Available</div></td>
+                      <td>
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                              Details
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="edit"></i>
+                              Edit
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="trash"></i>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img src="./images/product11.jpg" class="h-10 w-10" alt="product" />
+                          <div>
+                            <h3 class="m-0 p-0 text-sm font-normal">JBL Wireless Earbud</h3>
+                            <p class="text-xs text-slate-400">Electronics > Gadget</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>JWEO098</td>
+                      <td>$250.00</td>
+                      <td>220 pcs</td>
+                      <td>10 Mar 2022</td>
+                      <td><div class="badge badge-soft-danger">Disabled</div></td>
+                      <td>
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                              Details
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="edit"></i>
+                              Edit
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="trash"></i>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img src="./images/product12.jpg" class="h-10 w-10" alt="product" />
+                          <div>
+                            <h3 class="m-0 p-0 text-sm font-normal">McBook Pro 2023</h3>
+                            <p class="text-xs text-slate-400">Electronics > Laptop</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>MBP098</td>
+                      <td>$2000.00</td>
+                      <td>20 pcs</td>
+                      <td>15 Feb 2022</td>
+                      <td><div class="badge badge-soft-success">Available</div></td>
+                      <td>
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                              Details
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="edit"></i>
+                              Edit
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="trash"></i>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img src="./images/product13.jpg" class="h-10 w-10" alt="product" />
+                          <div>
+                            <h3 class="m-0 p-0 text-sm font-normal">Ladies Handbag</h3>
+                            <p class="text-xs text-slate-400">Fashion > Women's Fashion</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>LHB098</td>
+                      <td>$40.00</td>
+                      <td>160 pcs</td>
+                      <td>31 Dec 2022</td>
+                      <td><div class="badge badge-soft-danger">Disabled</div></td>
+                      <td>
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                              Details
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="edit"></i>
+                              Edit
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="trash"></i>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img src="./images/product14.jpg" class="h-10 w-10" alt="product" />
+                          <div>
+                            <h3 class="m-0 p-0 text-sm font-normal">Iphone 13 Pro Max</h3>
+                            <p class="text-xs text-slate-400">Electronics > Mobile</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>IPPM032</td>
+                      <td>$820.00</td>
+                      <td>150 pcs</td>
+                      <td>25 Nov 2022</td>
+                      <td><div class="badge badge-soft-success">Available</div></td>
+                      <td>
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-4 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                              Details
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="edit"></i>
+                              Edit
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                              <i class="h-5 text-slate-400" data-feather="trash"></i>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
-                </div>
-              <div class="flex flex-col md:flex-row gap-y-4 justify-between items-center">
-                <p class="text-xs text-slate-400 font-normal">Showing 1 to 10 of 50 result</p>
+              </div>
+              <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row">
+                <p class="text-xs font-normal text-slate-400">Showing 1 to 10 of 50 result</p>
                 <!-- Pagination -->
                 <nav class="pagination">
                   <ul class="pagination-list">
-                      <li class="pagination-item">
-                          <a class="pagination-link pagination-link-prev-icon" href="#">
-                              <i data-feather="chevron-left" width="1em" height="1em"></i>
-                          </a>
-                      </li>
-                      <li class="pagination-item active">
-                          <a class="pagination-link" href="#">1</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a class="pagination-link" href="#">2</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a class="pagination-link" href="#">3</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a class="pagination-link" href="#">4</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a class="pagination-link" href="#">5</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a class="pagination-link pagination-link-next-icon" href="#">
-                              <i data-feather="chevron-right" width="1em" height="1em"></i>
-                          </a>
-                      </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link pagination-link-prev-icon" href="#">
+                        <i data-feather="chevron-left" width="1em" height="1em"></i>
+                      </a>
+                    </li>
+                    <li class="pagination-item active">
+                      <a class="pagination-link" href="#">1</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">2</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">3</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">4</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">5</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link pagination-link-next-icon" href="#">
+                        <i data-feather="chevron-right" width="1em" height="1em"></i>
+                      </a>
+                    </li>
                   </ul>
-              </nav>
+                </nav>
               </div>
             </div>
             <!-- Invoice List Ends -->
-
           </main>
           <!-- Main Content Ends -->
 
