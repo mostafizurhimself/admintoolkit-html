@@ -17,6 +17,8 @@ import drawer from './components/drawer';
 
 //Import third party packages
 import themeSwitcher from './components/theme-switcher';
+import carousel from './components/carousel';
+
 import editor from './components/editor';
 import select from './components/select';
 
@@ -43,6 +45,8 @@ sidebar.init();
 
 // Initialize tabs
 tabs.init();
+// Initialize carousels
+carousel.init();
 
 // Initialize editor
 editor.init();
