@@ -781,7 +781,7 @@
                 <div class="w-full md:w-1/2">
                   <form
                     action=""
-                    class="input group flex h-10 w-full items-center rounded-primary border-2 border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500 md:w-72"
+                    class="input group flex h-10 w-full items-center rounded-primary border border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500 md:w-72"
                   >
                     <div class="flex h-full items-center px-3">
                       <i
@@ -808,20 +808,21 @@
                       <span class="text-sm font-medium">Filter</span>
                       <i class="w-4" data-feather="chevron-down"></i>
                     </div>
-                    <div class="dropdown-content h-auto min-w-sm md:min-w-[300px]">
+                    <div class="dropdown-content !overflow-visible min-w-sm md:min-w-[300px]">
                       <a href="javascript:void(0)" class="dropdown-item hover:!bg-transparent">
                         <h2 class="text-sm font-medium my-1">Category</h2>
-                        <select class="tom-select" autocomplete="off">
+                        <select class="tom-select w-full" autocomplete="off">
                           <option value="">Select a Category</option>
                           <option value="1">Electronics</option>
                           <option value="2">Fashion</option>
+                          <option value="3">Accessories</option>
                         </select>
                       </a>
                       <a href="javascript:void(0)" class="dropdown-item hover:!bg-transparent">
                         <h2 class="text-sm font-medium my-1">Status</h2>
                         <select class="select" >
                           <option value="">Select to Status</option>
-                          <option value="2">Available</option>
+                          <option value="1">Available</option>
                           <option value="2">Disabled</option>
                         </select>
                       </a>
