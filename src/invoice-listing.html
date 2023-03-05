@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invoice List - Admin Toolkit</title>
+    <title>Orders List - Admin Toolkit</title>
     <link rel="stylesheet" href="./css/app.css" />
   </head>
 
@@ -758,7 +758,7 @@
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5 class="px-2 md:px-0">Listing</h5>
+              <h5 class="px-2 md:px-0">Orders List</h5>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
@@ -800,34 +800,38 @@
                 </form>
               </div>
               <div class="w-full flex gap-5 justify-between md:justify-end md:w-1/2">
-                <div data-placement="bottom-center" class="dropdown bg-white dark:bg-slate-800 py-2 px-4 max-w-sm shadow-sm rounded-primary">
+                <div data-placement="bottom-end" class="dropdown bg-white dark:bg-slate-800 py-2 px-4 max-w-sm shadow-sm rounded-primary">
                   <div class="dropdown-toggle text-slate-600 dark:text-slate-300 flex gap-2 px-2">
                       <i class="w-4" data-feather="filter"></i>
                       <span class="text-sm font-medium">Filter</span>
                       <i class="w-4" data-feather="chevron-down"></i>
                   </div>
-                  <div class="dropdown-content min-w-sm md:min-w-[300px]">
+                  <div class="dropdown-content !overflow-visible min-w-sm md:min-w-[300px]">
                       <a href="javascript:void(0)" class="dropdown-item hover:!bg-transparent">
-                        <h2 class="font-medium text-sm">Status</h2>
+                        <h2 class="font-medium text-sm my-1">Status</h2>
                         <select class="select select-sm w-full">
                           <option value="">Select a Status</option>
-                          <option value="1">Success</option>
-                          <option value="2">Pending</option>
+                          <option value="1">Delivered</option>
+                          <option value="2">Shipped</option>
                           <option value="3">Processing</option>
                           <option value="4">Refounded</option>
+                          <option value="5">Canceled</option>
                       </select>
                       </a>
                       <a href="javascript:void(0)" class="dropdown-item hover:!bg-transparent">
-                        <h2 class="font-medium text-sm">Issued Date</h2>
+                        <h2 class="font-medium text-sm my-1">Ordered Date</h2>
                         <select class="tom-select" autocomplete="off">
                           <option value="">Search Date</option>
+                          <option value="1">01 May 2022</option>
+                          <option value="2">20 Jun 2022</option>
+                          <option value="3">19 Aug 2022</option>
                       </select>
                       </a>
                   </div>
                 </div>
                 <a class="btn btn-primary" href="#" role="button">
                   <i data-feather="plus" height="1rem" width="1rem"></i>
-                  Create Invoice
+                  New Order
                 </a>
               </div>
              </div>
