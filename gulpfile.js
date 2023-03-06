@@ -90,7 +90,7 @@ gulp.task('scss', function () {
       })
     )
     .pipe(postcss())
-    .pipe(minifyCSS())
+    .pipe(minifyCSS({ level: 0 }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.dist.css))
     .pipe(browserSync.stream());
@@ -111,7 +111,7 @@ gulp.task('scss:prod', function () {
       })
     )
     .pipe(postcss())
-    .pipe(minifyCSS())
+    .pipe(minifyCSS({ level: 0 }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.dist.css));
 });

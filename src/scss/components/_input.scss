@@ -1,21 +1,25 @@
 @layer components {
   .input {
-    @apply inline-flex w-full items-center overflow-hidden rounded-primary border border-slate-300 text-slate-700 bg-transparent px-4 py-2 text-sm placeholder-slate-400 placeholder:text-sm focus:border-primary-500 focus:ring-1 focus:ring-primary-500 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 dark:border-slate-600 dark:text-slate-300 dark:placeholder-slate-500 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
-  
-    &-valid {
-      @apply border-success-500 focus:border-success-500 focus:ring-1 focus:ring-success-500 dark:border-success-500 dark:placeholder-slate-500 dark:focus:border-success-500 dark:focus:ring-success-500;
-    }
-  
-    &-invalid {
-      @apply border-danger-500 focus:border-danger-500 focus:ring-1 focus:ring-danger-500 dark:border-danger-500 dark:placeholder-slate-500 dark:focus:border-danger-500 dark:focus:ring-danger-500;
-    }
-  
+    @apply w-full inline-block rounded-primary border border-slate-300 text-slate-600 bg-transparent px-4 py-2 text-sm placeholder:text-slate-500 focus:ring-1 focus:border-primary-500 focus:ring-primary-500 disabled:cursor-not-allowed disabled:bg-slate-200 disabled:opacity-50 dark:border-slate-600 dark:placeholder:text-slate-400 dark:text-slate-300 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
+    
     &-sm {
-      @apply px-4 py-1 text-xs leading-5 placeholder:text-xs;
+      @apply px-4 py-1.5 text-xs;
+    }
+
+    &-md {
+      @apply px-4 py-2 text-sm;
     }
   
     &-lg {
-      @apply px-4 py-2 text-base placeholder:text-base;
+      @apply px-4 py-3 text-base;
+    }
+
+    &-valid {
+      @apply border-success-500 focus:border-success-500 focus:ring-1 focus:ring-success-500 dark:border-success-500 dark:focus:border-success-500 dark:focus:ring-success-500;
+    }
+  
+    &-invalid {
+      @apply border-danger-500 focus:border-danger-500 focus:ring-1 focus:ring-danger-500 dark:border-danger-500 dark:focus:border-danger-500 dark:focus:ring-danger-500;
     }
   }
 }
