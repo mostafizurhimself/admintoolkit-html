@@ -774,29 +774,18 @@
                 <div class="card-body">
                   <h4 class="card-title">Basic Textarea</h4>
 
-                  <p class="card-subtitle">You can create a input. Use <code>textarea</code> class</p>
+                  <p class="card-subtitle">
+                    Example of a basic textarea. 
+                  </p>
 
                   <div class="code-viewer mt-4">
-                    <textarea class="textarea" rows="3" placeholder="Enter your message"></textarea>
+                    <div class="code-viewer-content bg-white">
+                      <textarea class="textarea" placeholder="Write message"></textarea>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- Card: Basic Textarea Ends -->
-
-              <!-- Card: Textarea With Helper Text Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Textarea With Helper Text</h4>
-
-                  <p class="card-subtitle">You can create a HelpText in input. Use <code>help-text</code> class.</p>
-
-                  <div class="code-viewer mt-4">
-                    <textarea class="textarea" rows="3" placeholder="Enter your message"></textarea>
-                    <div class="help-text">Here you can provide some helper text to fill the field</div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Textarea With Helper Text Ends -->
 
               <!-- Card: Textarea With Label Starts -->
               <div class="card">
@@ -804,20 +793,40 @@
                   <h4 class="card-title">Textarea With Label</h4>
 
                   <p class="card-subtitle">
-                    You can add a label with your<code>Textarea</code> use class <code>label</code>
+                    Example of a textarea with label.
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <label class="label">
-                      <span>Comment</span>
-                      <span class="text-danger-500">*</span>
-                    </label>
-                    <textarea class="textarea mt-1" rows="3" placeholder="Enter your comment"></textarea>
-                    <div class="help-text">Here you can provide some helper text to fill the field</div>
+                    <div class="code-viewer-content bg-white">
+                      <label class="label mb-1">
+                        <span>Message</span>
+                        <span class="text-danger-500">*</span>
+                      </label>
+                      <textarea class="textarea" placeholder="Write message"></textarea>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- Card: Textarea With Label Ends -->
+
+              <!-- Card: Textarea With Helper Text Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Textarea With Helper Text</h4>
+
+                  <p class="card-subtitle">
+                    Example of a textarea with helper text. 
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content bg-white">
+                      <textarea class="textarea" placeholder="Write message"></textarea>
+                      <p class="help-text mt-1">Here you can provide some helper text to fill the field</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Textarea With Helper Text Ends -->
 
               <!-- Card: Textarea Size Starts -->
               <div class="card">
@@ -825,34 +834,21 @@
                   <h4 class="card-title">Textarea Sizes</h4>
 
                   <p class="card-subtitle">
-                    You can change the size of your <code>Textarea</code> class <code>textarea-md</code>,
-                    <code>textarea-lg</code>The textarea default is <code>textarea</code>
+                    Example of different sizes of textareas. Default is <code>.textarea-md</code>
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-col gap-y-4">
-                      <textarea class="textarea" rows="2" placeholder="Small textarea" spellcheck="false"></textarea>
-                      <textarea class="textarea textarea-md" rows="3" placeholder="Medium textarea"></textarea>
-                      <textarea class="textarea textarea-lg" rows="4" placeholder="Large textarea"></textarea>
+                    <div class="code-viewer-content bg-white">
+                      <div class="flex flex-col gap-y-4">
+                        <textarea class="textarea textarea-sm" placeholder="Write message"></textarea>
+                        <textarea class="textarea textarea-md" placeholder="Write message"></textarea>
+                        <textarea class="textarea textarea-lg" placeholder="Write message"></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- Card: Textarea Size Ends -->
-
-              <!-- Card: Disabled Textarea Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Disabled Textarea</h4>
-
-                  <p class="card-subtitle">Use the <code>disabled</code> class. You can disabled your textarea</p>
-
-                  <div class="code-viewer mt-4">
-                    <textarea class="textarea" rows="2" placeholder="Disabled Textarea" disabled></textarea>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Disabled Textarea Ends -->
 
               <!-- Card: Valid Textarea Starts -->
               <div class="card">
@@ -860,11 +856,14 @@
                   <h4 class="card-title">Valid Textarea</h4>
 
                   <p class="card-subtitle">
-                    Use the <code>textarea-valid</code> class. You can set your <code>textarea</code> valid
+                    Example of a valid textarea. 
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <textarea class="textarea textarea-valid" rows="3" placeholder="Valid Textarea"></textarea>
+                    <div class="code-viewer-content bg-white">
+                      <textarea class="textarea textarea-valid" placeholder="Write message"></textarea>
+                      <p class="success-message mt-1">Looks good</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -876,15 +875,36 @@
                   <h4 class="card-title">Invalid Textarea</h4>
 
                   <p class="card-subtitle">
-                    Use the <code>textarea-invalid</code> class. You can set your <code>textarea</code> invalid
+                    Example of a invalid textarea. 
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <textarea class="textarea textarea-invalid" rows="3" placeholder="Invalid Textarea"></textarea>
+                    <div class="code-viewer-content bg-white">
+                      <textarea class="textarea textarea-invalid" placeholder="Write message"></textarea>
+                      <p class="error-message mt-1">This field is required</p>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- Card: Invalid Textarea Ends -->
+
+              <!-- Card: Disabled Textarea Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Disabled Textarea</h4>
+
+                  <p class="card-subtitle">
+                    Example of a disabled textarea. 
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content bg-white">
+                      <textarea class="textarea" placeholder="Write message" disabled></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Disabled Textarea Ends -->
             </div>
             <!-- Textarea Ends -->
           </main>
