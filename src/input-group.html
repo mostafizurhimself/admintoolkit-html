@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Textareas - Admin Toolkit</title>
+    <title>Input Group - Admin Toolkit</title>
     <link rel="stylesheet" href="./css/app.css" />
   </head>
+
   <body>
     <div id="app" class="min-h-screen w-full">
       <!-- Sidebar Starts -->
@@ -60,13 +61,13 @@
 
           <div class="sidebar-menu-header">Applications</div>
 
-          <!-- Email -->
+          <!-- Phone -->
           <li>
             <a href="./email.html" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="mail"></i>
               </span>
-              <span class="sidebar-menu-text">Email</span>
+              <span class="sidebar-menu-text">Phone</span>
             </a>
           </li>
           <!-- Chat -->
@@ -125,7 +126,6 @@
               <li>
                 <a href="./product-list.html" class="sidebar-submenu-item">Product List</a>
               </li>
-
               <li>
                 <a href="./product-edit.html" class="sidebar-submenu-item">Product Edit</a>
               </li>
@@ -249,7 +249,10 @@
                 <a href="./input.html" class="sidebar-submenu-item">Input</a>
               </li>
               <li>
-                <a href="./textarea.html" class="sidebar-submenu-item active">Textarea</a>
+                <a href="./input-group.html" class="sidebar-submenu-item active">Input Group</a>
+              </li>
+              <li>
+                <a href="./textarea.html" class="sidebar-submenu-item">Textarea</a>
               </li>
               <li>
                 <a href="./checkbox.html" class="sidebar-submenu-item">Checkbox</a>
@@ -756,157 +759,216 @@
         <div class="content">
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
-            <!-- Page Title Start -->
+            <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>Textareas</h5>
-              <ol class="breadcrumb">
+              <h5>Inputs</h5>
+              <ol class="breadcrumb ml-auto">
                 <li class="breadcrumb-item"><a href="">Home</a></li>
                 <li class="breadcrumb-item"><a href="">Components</a></li>
-                <li class="breadcrumb-item"><a href="">Textareas</a></li>
+                <li class="breadcrumb-item"><a href="">Inputs</a></li>
               </ol>
             </div>
             <!-- Page Title End -->
-
-            <!-- Textarea Starts -->
+            
+            <!-- Input Starts -->
             <div class="space-y-6">
-              <!-- Card: Basic Textarea Starts -->
+              <!-- Card: Basic Input Group Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Basic Textarea</h4>
+                  <h4 class="card-title">Basic Input Groups</h4>
 
                   <p class="card-subtitle">
-                    Example of a basic textarea. 
+                    Example of basic input groups.
                   </p>
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
-                      <textarea class="textarea" placeholder="Write message"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Basic Textarea Ends -->
-
-              <!-- Card: Textarea With Label Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Textarea With Label</h4>
-
-                  <p class="card-subtitle">
-                    Example of a textarea with label.
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="code-viewer-content bg-white">
-                      <label class="label mb-1">
-                        <span>Message</span>
-                        <span class="text-danger-500">*</span>
-                      </label>
-                      <textarea class="textarea" placeholder="Write message"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Textarea With Label Ends -->
-
-              <!-- Card: Textarea With Helper Text Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Textarea With Helper Text</h4>
-
-                  <p class="card-subtitle">
-                    Example of a textarea with helper text. 
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="code-viewer-content bg-white">
-                      <textarea class="textarea" placeholder="Write message"></textarea>
-                      <p class="help-text mt-1">Here you can provide some helper text to fill the field</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Textarea With Helper Text Ends -->
-
-              <!-- Card: Textarea Size Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Textarea Sizes</h4>
-
-                  <p class="card-subtitle">
-                    Example of different sizes of textareas. Default is <code>.textarea-md</code>
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="code-viewer-content bg-white">
-                      <div class="flex flex-col gap-y-4">
-                        <textarea class="textarea textarea-sm" placeholder="Write message"></textarea>
-                        <textarea class="textarea textarea-md" placeholder="Write message"></textarea>
-                        <textarea class="textarea textarea-lg" placeholder="Write message"></textarea>
+                      <div class="flex flex-col gap-4">
+                        <div class="input-group">
+                          <span class="input-group-text">@</span>
+                          <input class="input" type="text" placeholder="Username">
+                        </div>
+                        <div class="input-group">
+                          <span class="input-group-text">https://example.com/users/</span>
+                          <input class="input" type="text" placeholder="Username">
+                        </div>
+                        <div class="input-group">
+                          <input class="input" type="text" placeholder="Username">
+                          <span class="input-group-text">@example.com</span>
+                        </div>
+                        <div class="input-group">
+                          <input class="input" type="password" placeholder="Password">
+                          <span class="input-group-text">
+                            <i width="1rem" height="1rem" data-feather="lock"></i>
+                          </span>
+                        </div>
+                        <div class="input-group">
+                          <span class="input-group-text">
+                            <i width="1rem" heigt="1rem" data-feather="message-circle"></i>
+                            <span>Message</span>
+                          </span>
+                          <textarea class="textarea"></textarea>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Textarea Size Ends -->
+              <!-- Card: Basic Input Group Ends -->
 
-              <!-- Card: Valid Textarea Starts -->
+              <!-- Card: Input Group Size Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Valid Textarea</h4>
+                  <h4 class="card-title">Input Group Sizes</h4>
 
                   <p class="card-subtitle">
-                    Example of a valid textarea. 
+                    Example of different sizes input group.
                   </p>
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
-                      <textarea class="textarea textarea-valid" placeholder="Write message"></textarea>
+                      <div class="flex flex-col gap-4">
+                        <div class="input-group">
+                          <span class="input-group-text">@</span>
+                          <input class="input input-sm" type="text" placeholder="Username">
+                        </div>
+                        <div class="input-group input-group-md">
+                          <span class="input-group-text">@</span>
+                          <input class="input input-md" type="text" placeholder="Username">
+                        </div>
+                        <div class="input-group input-group-lg">
+                          <span class="input-group-text">@</span>
+                          <input class="input input-lg" type="text" placeholder="Username">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Input Group Size Ends -->
+
+              <!-- Card: Input Group With Mutitple Input Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Multiple Inputs</h4>
+
+                  <p class="card-subtitle">
+                    Example of multiple inputs in input group.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content bg-white">
+                      <div class="input-group">
+                        <span class="input-group-text">Full name</span>
+                        <input class="input" type="text" placeholder="First name">
+                        <input class="input" type="text" placeholder="Last name">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Input Group With Mutitple Input Ends -->
+
+              <!-- Card: Input Group With Mutitple Addon Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Multiple Addons</h4>
+
+                  <p class="card-subtitle">
+                    Example of addons in input group.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content bg-white">
+                      <div class="flex flex-col gap-4">
+                        <div class="input-group">
+                          <span class="input-group-text">$</span>
+                          <span class="input-group-text">0.00</span>
+                          <input class="input" type="text" placeholder="Price">
+                        </div>
+                        <div class="input-group">
+                          <input class="input" type="text" placeholder="Price">
+                          <span class="input-group-text">$</span>
+                          <span class="input-group-text">0.00</span>
+                        </div>
+                        <div class="input-group">
+                          <span class="input-group-text">$</span>
+                          <input class="input" type="text" placeholder="Price">
+                          <span class="input-group-text">0.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Input Group With Mutitple Addon Ends -->
+
+              <!-- Card: Input Group Valid Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Input Group Valid</h4>
+
+                  <p class="card-subtitle">
+                    Example of valid input in input group.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content bg-white">
+                      <div class="input-group">
+                        <span class="input-group-text">@</span>
+                        <input class="input input-valid" type="text" placeholder="Username">
+                      </div>
                       <p class="success-message mt-1">Looks good</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Valid Textarea Ends -->
+              <!-- Card: Input Group Valid Ends -->
 
-              <!-- Card: Invalid Textarea Stars -->
+              <!-- Card: Input Group Invalid Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Invalid Textarea</h4>
+                  <h4 class="card-title">Input Group Invalid</h4>
 
                   <p class="card-subtitle">
-                    Example of an invalid textarea. 
+                    Example of invalid input group.
                   </p>
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
-                      <textarea class="textarea textarea-invalid" placeholder="Write message"></textarea>
+                      <div class="input-group">
+                        <span class="input-group-text">@</span>
+                        <input class="input input-invalid" type="text" placeholder="Username">
+                      </div>
                       <p class="error-message mt-1">This field is required</p>
-                    </div>
+                    </div>    
                   </div>
                 </div>
               </div>
-              <!-- Card: Invalid Textarea Ends -->
-
-              <!-- Card: Disabled Textarea Starts -->
+              <!-- Card: Input Group Invalid Ends -->
+              
+              <!-- Card: Input Group Disabled Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Disabled Textarea</h4>
+                  <h4 class="card-title">Input Group Disabled</h4>
 
                   <p class="card-subtitle">
-                    Example of a disabled textarea. 
+                    You can create a input by using the<code>input</code> component
                   </p>
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
-                      <textarea class="textarea" placeholder="Write message" disabled></textarea>
+                      <div class="input-group input-group-disabled">
+                        <span class="input-group-text">@</span>
+                        <input class="input" type="text" placeholder="Username" disabled>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Disabled Textarea Ends -->
+              <!-- Card: Input Group Disabled Ends -->              
             </div>
-            <!-- Textarea Ends -->
+            <!-- Input Ends -->
           </main>
           <!-- Main Content Ends -->
 
