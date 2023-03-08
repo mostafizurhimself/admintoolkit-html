@@ -860,33 +860,53 @@
                   </div>
                 </div>
                 </div>
-                <div class="card col-span-1 flex flex-col gap-4 py-3 px-6">
-                  <!-- Payment Method  -->
-                  <div class="w-full">
-                    <select class="select">
-                      <option value="">Payment Method</option>
-                      <option value="1">Bank Account</option>
-                      <option value="2">Paypal</option>
-                      <option value="2">Credit/Debit Card</option>
-                      <option value="2">UPI Transfer</option>
-                    </select>
+                <div class="col-span-1">
+                  <div class="card flex flex-col gap-2 p-6 max-h-min">
+                    <!-- Payment Method  -->
+                    <div class="w-full">
+                      <select class="select">
+                        <option value="">Payment Method</option>
+                        <option value="1">Bank Account</option>
+                        <option value="2">Paypal</option>
+                        <option value="2">Credit/Debit Card</option>
+                        <option value="2">UPI Transfer</option>
+                      </select>
+                    </div>
+                    <!-- Send Email  -->
+                  <div class="w-full flex justify-between">
+                      <span class="label text-sm text-slate-400 font-medium">Send Email</span>
+                      <label for="send-email" class="toggle">
+                        <input class="toggle-input peer sr-only" id="send-email" type="checkbox" checked="true" name="send-email">
+                        <div class="toggle-body"></div>
+                      </label>
                   </div>
-                  <!-- Send Email  -->
-                 <div class="w-full flex justify-between">
-                    <span class="label text-sm text-slate-400 font-medium">Send Email</span>
-                    <label for="send-email" class="toggle">
-                      <input class="toggle-input peer sr-only" id="send-email" type="checkbox" checked="true" name="send-email">
-                      <div class="toggle-body"></div>
-                    </label>
-                 </div>
-                 <!-- Charge Fee  -->
-                 <div class="w-full flex justify-between">
-                    <span class="label text-sm text-slate-400 font-medium">Charge Late Fee</span>
-                    <label for="charge-late-fee" class="toggle">
-                      <input class="toggle-input peer sr-only" id="charge-late-fee" type="checkbox"  name="charge-late-fee">
-                      <div class="toggle-body"></div>
-                    </label>
-                 </div>
+                  <!-- Charge Fee  -->
+                  <div class="w-full flex justify-between">
+                      <span class="label text-sm text-slate-400 font-medium">Charge Late Fee</span>
+                      <label for="charge-late-fee" class="toggle">
+                        <input class="toggle-input peer sr-only" id="charge-late-fee" type="checkbox"  name="charge-late-fee">
+                        <div class="toggle-body"></div>
+                      </label>
+                  </div>
+                  <!-- Save Invoice  -->
+                  <div class="w-full">
+                    <button class="btn w-full btn-primary font-medium">
+                      <i class="h-4" data-feather="save"></i>
+                      Save invoice</button>
+                  </div>
+                  <!-- Save & Print Invoice  -->
+                  <div class="w-full">
+                    <button class="btn w-full btn-success font-medium">
+                      <i class="h-4" data-feather="printer"></i>
+                      Save & Print</button>
+                  </div>
+                  <!-- Preview Invoice  -->
+                  <div class="w-full">
+                    <button class="btn w-full btn-outline-primary font-medium">
+                      <i class="h-4" data-feather="file-text"></i>
+                      Preview Invoice</button>
+                  </div>
+                  </div>
                 </div>
                 <!--Left Side Div End -->
 
