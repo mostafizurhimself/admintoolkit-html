@@ -820,7 +820,7 @@
                           <th><p class="text-right">Line Total</p></th>
                         </tr>
                       </thead>
-                      <tbody id="invoice-table-body">
+                      <tbody>
                         <tr>
                           <td>
                             <select class="select" autocomplete="off">
@@ -837,8 +837,8 @@
                           </td>
                           <td>
                             <div class="flex justify-end gap-1 items-center">
-                              <p class="text-right text-xs font-semibold text-slate-700 dark:text-slate-200 p-0 m-0">$24.00</p>
-                              <button class="invoice-remove-table-row cursor-pointer p-2 rounded-full focus:bg-slate-400 focus:bg-opacity-50"><i class="h-4 w-4" data-feather="x" ></i></button>
+                              <p class="text-right text-xs font-semibold text-slate-700 dark:text-slate-200 p-0 m-0">$00.00</p>
+                              <button class="cursor-pointer p-2 rounded-full font-medium focus:bg-slate-400 focus:bg-opacity-50"><i class="h-4 w-4" data-feather="x" ></i></button>
                             </div>
                           </td>
                         </tr>
@@ -848,7 +848,7 @@
                   <div class="my-6 flex items-center justify-between">
                     <div class="w-2/3 flex flex-col gap-2 items-start">
                       <div class="w-full">
-                        <button id="invoice-add-table-row" class="btn btn-plain-primary"><i class="h-4" data-feather="plus"></i> New Item</button>
+                        <button class="btn btn-plain-primary"><i class="h-4" data-feather="plus"></i> New Item</button>
                       </div>
                       <div class="w-2/3">
                         <textarea class="textarea" rows="3" placeholder="Write some note"></textarea>
@@ -956,7 +956,6 @@
     <!-- Wrapper Ends -->
   </div>
   <script src="./js/app.js"></script>
-  <script src="./js/custom/invoice-create.js"></script>
 </body>
 
 </html>
