@@ -824,7 +824,7 @@
                       </a>
                     </div>
                   </div>
-                  <button class="btn btn-soft-dark"><i class="h-4" data-feather="upload"></i> Export</button>
+                  <button class="btn btn-soft-dark bg-white dark:bg-slate-800"><i class="h-4" data-feather="upload"></i> Export</button>
                   <a class="btn btn-primary" href="#" role="button">
                     <i data-feather="plus" height="1rem" width="1rem"></i>
                     Add <span class="hidden md:inline-block">Customer</span>
@@ -834,7 +834,7 @@
               <!-- Customer Header End -->
               
               <div class="table-responsive my-4 shadow-sm">
-                <!-- <table class="table min-w-[1300px]">
+                <table class="table">
                   <thead>
                     <tr>
                       <th>
@@ -842,11 +842,10 @@
                           <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
                         </label>
                       </th>
-                      <th class="text-xs uppercase">Product</th>
-                      <th class="text-xs uppercase">SKU</th>
-                      <th class="text-xs uppercase">Price</th>
-                      <th class="text-xs uppercase">Quantity</th>
-                      <th class="text-xs uppercase">Last Ordered</th>
+                      <th class="text-xs uppercase">User</th>
+                      <th class="text-xs uppercase">Email</th>
+                      <th class="text-xs uppercase">Phone</th>
+                      <th class="text-xs uppercase">Joined Date</th>
                       <th class="text-xs uppercase">Status</th>
                       <th class="text-xs uppercase"><p class="text-right">Actions</p></th>
                     </tr>
@@ -859,21 +858,20 @@
                       <td>
                         <div class="flex items-center gap-3">
                           <img
-                            src="./images/product5.jpg"
-                            class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
+                            src="./images/avatar1.png"
+                            class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400"
                             alt="product"
                           />
                           <div>
-                            <h3 class="m-0 p-0 text-sm font-normal">Apple Watch 2023</h3>
-                            <p class="text-xs text-slate-400">Electronics > Accessories</p>
+                            <h3 class="m-0 p-0 text-sm font-normal">Ahmed Shakil</h3>
+                            <p class="text-xs text-slate-400">Project Manager</p>
                           </div>
                         </div>
                       </td>
-                      <td>APLW001</td>
-                      <td>$200.00</td>
-                      <td>150 pcs</td>
+                      <td><p class="text-sm">shakil@example.com</p></td>
+                      <td>+1 080-123-4567</td>
                       <td>19 Aug 2022</td>
-                      <td><div class="badge badge-soft-success">Available</div></td>
+                      <td><div class="badge badge-soft-success">Active</div></td>
                       <td>
                         <div class="flex justify-end">
                           <div class="dropdown" data-placement="bottom-start">
@@ -886,10 +884,6 @@
                                 Details
                               </a>
                               <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                Edit
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
                                 <i class="h-5 text-slate-400" data-feather="trash"></i>
                                 Delete
                               </a>
@@ -899,7 +893,7 @@
                       </td>
                     </tr>
                   </tbody>
-                </table> -->
+                </table>
               </div>
               <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row">
                 <p class="text-xs font-normal text-slate-400">Showing 1 to 10 of 50 result</p>
