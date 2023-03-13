@@ -16,8 +16,8 @@ const paths = {
     images: 'src/images/**/*',
     scss: 'src/scss/**/*.scss',
     js: {
-      app: ['src/js/**/*.js', '!src/js/pages/**/*.js'],
-      pages: './src/js/pages/**/*.js',
+      app: ['src/js/**/*.js', '!src/js/custom/**/*.js'],
+      custom: './src/js/custom/**/*.js',
     },
     html: 'src/**/*.html',
   },
@@ -27,7 +27,7 @@ const paths = {
     css: 'dist/css/',
     js: {
       app: 'dist/js/',
-      pages: 'dist/js/pages/',
+      custom: 'dist/js/custom/',
     },
     html: 'dist/',
   },
@@ -138,16 +138,16 @@ gulp.task('js:prod', function () {
   return gulp.src(paths.src.js.app).pipe(webpack(webpackConfig)).pipe(uglify()).pipe(gulp.dest(paths.dist.js.app));
 });
 
-// Compile Page JS for development
-gulp.task('js:pages', function () {
+// Compile Custom JS for development
+gulp.task('js:custom', function () {
   return gulp
-    .src(paths.src.js.pages)
+    .src(paths.src.js.custom)
     .pipe(sourcemaps.init())
     .pipe(
       webpack({
         ...webpackConfig,
         mode: 'development',
-        entry: glob.sync(paths.src.js.pages).reduce((acc, path) => {
+        entry: glob.sync(paths.src.js.custom).reduce((acc, path) => {
           const name = path.split('/').pop().split('.').shift();
           acc[name] = path;
           return acc;
@@ -158,18 +158,18 @@ gulp.task('js:pages', function () {
       })
     )
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.dist.js.pages))
+    .pipe(gulp.dest(paths.dist.js.custom))
     .pipe(browserSync.stream());
 });
 
-// Compile Page JS for production
-gulp.task('js:pages:prod', function () {
+// Compile Custom JS for production
+gulp.task('js:custom:prod', function () {
   return gulp
-    .src(paths.src.js.pages)
+    .src(paths.src.js.custom)
     .pipe(
       webpack({
         ...webpackConfig,
-        entry: glob.sync(paths.src.js.pages).reduce((acc, path) => {
+        entry: glob.sync(paths.src.js.custom).reduce((acc, path) => {
           const name = path.split('/').pop().split('.').shift();
           acc[name] = path;
           return acc;
@@ -180,7 +180,7 @@ gulp.task('js:pages:prod', function () {
       })
     )
     .pipe(uglify())
-    .pipe(gulp.dest(paths.dist.js.pages));
+    .pipe(gulp.dest(paths.dist.js.custom));
 });
 
 // Copy HTML files to dist folder
@@ -202,14 +202,14 @@ gulp.task('watch', function () {
   gulp.watch(paths.src.images, gulp.series('images'));
   gulp.watch(paths.src.scss, gulp.series('scss'));
   gulp.watch(paths.src.js.app, gulp.series('js'));
-  gulp.watch(paths.src.js.pages, gulp.series('js:pages'));
+  gulp.watch(paths.src.js.custom, gulp.series('js:custom'));
   gulp.watch(paths.src.html, gulp.series('html', 'scss'));
 
   gulp.watch('src/**/*').on('change', browserSync.reload);
 });
 
 // Default task
-gulp.task('default', gulp.series('fonts', 'images', 'scss', 'js', 'js:pages', 'html', 'watch'));
+gulp.task('default', gulp.series('fonts', 'images', 'scss', 'js', 'js:custom', 'html', 'watch'));
 
 // Build task
-gulp.task('build', gulp.series('fonts', 'images', 'scss:prod', 'js:prod', 'js:pages:prod', 'html'));
+gulp.task('build', gulp.series('fonts', 'images', 'scss:prod', 'js:prod', 'js:custom:prod', 'html'));

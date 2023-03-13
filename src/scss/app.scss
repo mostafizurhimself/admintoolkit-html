@@ -9,8 +9,9 @@ $flag-icons-path: "../images/flags";
 @import 'flatpickr/dist/flatpickr.css';
 @import 'quill/dist/quill.snow.css';
 @import 'quill/dist/quill.bubble.css';
+@import 'swiper/swiper-bundle.css';
 
-//V endor scss files.
+//Vendor scss files.
 @import '@tabler/icons-webfont/tabler-icons.scss';
 @import 'flag-icons/sass/flag-icons.scss';
 @import 'tom-select/dist/scss/tom-select.scss';
@@ -49,4 +50,6 @@ $flag-icons-path: "../images/flags";
 @import 'components/table';
 @import 'components/spinner';
 @import 'components/datepicker';
+@import 'components/carousel';
+@import 'components/drawer';
 // @import 'components/spinkit-spinner';

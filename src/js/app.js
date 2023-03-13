@@ -13,9 +13,12 @@ import modal from './components/modal';
 import sidebar from './components/sidebar';
 import tabs from './components/tabs';
 import datepicker from './components/datepicker';
+import drawer from './components/drawer';
 
 //Import third party packages
 import themeSwitcher from './components/theme-switcher';
+import carousel from './components/carousel';
+
 import editor from './components/editor';
 import select from './components/select';
 
@@ -42,6 +45,8 @@ sidebar.init();
 
 // Initialize tabs
 tabs.init();
+// Initialize carousels
+carousel.init();
 
 // Initialize editor
 editor.init();
@@ -51,6 +56,9 @@ select.init();
 
 // Initialize Datepicker
 datepicker.init();
+
+// Initialize Drawer
+drawer.init();
 
 // Initialize feather icons Icons should be replaced at the end
 feather.replace();
