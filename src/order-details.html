@@ -759,37 +759,23 @@
         <div class="content">
           <!-- Main Content Starts -->
           <main class="flex-grow p-6">
-            <!-- Page Title Starts -->
-            <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5 class="px-2 md:px-0">Order Details</h5>
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="/">Home</a>
-                </li>
-
-                <li class="breadcrumb-item">
-                  <a href="#">Ecommerce</a>
-                </li>
-
-                <li class="breadcrumb-item">
-                  <a href="#">Order Details</a>
-                </li>
-              </ol>
-            </div>
-            <!-- Page Title Ends -->
             <!-- Order Details Start  -->
             <!-- Order Details Header Start -->
-            <div class="flex justify-between py-4">
+            <a class="flex items-center text-slate-400 duration-150 ease-in-out transition hover:text-primary-500 gap-0" href="#">
+              <i class=" h-4 w-4 p-0 m-0" data-feather="chevron-left"></i>
+              <p class="text-xs">Orders</p>
+            </a>
+            <div class="flex justify-between ">
               <div class="flex flex-col gap-1">
                 <div class="flex items-center gap-1">
-                  <h2 class="text-xl font-normal">Order#1001</h2>
+                  <h2 class="text-xl font-medium">Order#1001</h2>
                  <div>
                   <div class="badge badge-soft-primary">Processing</div>
                  </div>
                 </div>
                 <!-- Date -->
-                <div class="flex gap-1">
-                  <i class="h-4 text-slate-400" data-feather="calendar"></i>
+                <div class="flex gap-1 items-center">
+                  <i class="h-4 w-4 text-slate-400" data-feather="calendar"></i>
                   <span class="text-slate-400 text-xs">Fri 04 Mar 2023, 06:15 PM</span>
                 </div>
               </div>
@@ -818,15 +804,52 @@
             </div>
             </div>
             <!-- Order Details Header End -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 my-4">
               <div class="col-span-1 lg:col-span-2 flex flex-col gap-4">
                 <div class="card p-6">
 skjfsdk
                 </div>
               </div>
               <div class="lg:col-span-1">
-                <div class="card p-6 min-h-max">
-sdfsdf
+                <div class="bg-white rounded-primary dark:bg-slate-800 min-h-max">
+                  <!-- User  -->
+                    <div class="flex gap-2 items-center border-b border-slate-200 dark:border-slate-700 px-6 py-4">
+                      <img src="./images/avatar1.png" class="h-10 w-10 rounded-full" alt="avatar-img">
+                      <div class="flex flex-col gap-0">
+                        <h4 class="text-sm font-medium">John William</h4>
+                        <p class="text-xs text-slate-400">Dhaka, Bnagladesh</p>
+                      </div>
+                    </div>
+                    <!-- Contact Adress  -->
+                    <div class="px-6 py-4 flex flex-col gap-2 border-b border-slate-200 dark:border-slate-700">
+                      <div class="flex items-center text-slate-700 dark:text-slate-300 gap-2">
+                        <i class="h-4 w-4 " data-feather="mail"></i>
+                        <p class="text-sm font-normal">john@example.com</p>
+                      </div>
+                      <div class="flex items-center text-slate-700 dark:text-slate-300 gap-2">
+                        <i class="h-4 w-4 " data-feather="phone-call"></i>
+                        <p class="text-sm font-normal">+(386)-259-8589</p>
+                      </div>
+                    </div>
+                    <!-- shipping Adress  -->
+                    <div class="px-6 py-4 flex flex-col gap-2 border-b border-slate-200 dark:border-slate-700">
+                      <h6 class="text-slate-700 text-sm dark:text-slate-300 font-semibold uppercase">SHIPPING ADDRESS</h6>
+                      <p class=" text-sm font-normal leading-5">
+                        4517 Washington Ave. <br/> Manchester, <br/> 
+                        Kentucky 39495,<br/>
+                        United States of America
+                      </p>
+                    </div>
+                    <!-- shipping Adress  -->
+                    <div class="px-6 py-4 flex flex-col gap-2">
+                      <h6 class="text-slate-700 text-sm dark:text-slate-300 font-semibold uppercase"> BILLING ADDRESS</h6>
+                      <p class=" text-sm font-normal leading-5">
+                        2972 Westheimer Rd. <br />
+                        Santa Ana, <br />
+                        Illinois 85486,<br />
+                        United States of America
+                      </p>
+                    </div>
                 </div>
               </div>
             </div>
