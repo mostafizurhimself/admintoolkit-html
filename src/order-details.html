@@ -761,14 +761,14 @@
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>Order Details</h5>
+              <h5 class="px-2 md:px-0">Order Details</h5>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
                 </li>
 
                 <li class="breadcrumb-item">
-                  <a href="#">Components</a>
+                  <a href="#">Ecommerce</a>
                 </li>
 
                 <li class="breadcrumb-item">
@@ -777,26 +777,60 @@
               </ol>
             </div>
             <!-- Page Title Ends -->
-
-            <!-- Tabs Starts -->
-            <div class="space-y-6">
-              <!-- Card: Basic Tab Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Order Details</h4>
-
-                  <p class="card-subtitle">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <!-- Code Here  -->
-                  </div>
+            <!-- Order Details Start  -->
+            <!-- Order Details Header Start -->
+            <div class="flex justify-between py-4">
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-1">
+                  <h2 class="text-xl font-normal">Order#1001</h2>
+                 <div>
+                  <div class="badge badge-soft-primary">Processing</div>
+                 </div>
+                </div>
+                <!-- Date -->
+                <div class="flex gap-1">
+                  <i class="h-4 text-slate-400" data-feather="calendar"></i>
+                  <span class="text-slate-400 text-xs">Fri 04 Mar 2023, 06:15 PM</span>
                 </div>
               </div>
-              <!-- Card: Basic Tab Ends -->
+              <div class="dropdown">
+                <button class="dropdown-toggle btn btn-primary flex gap-2">
+                    Actions <i class="w-4" data-feather="chevron-down"></i>
+                </button>
+                <div class="dropdown-content  w-[200px]">
+                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                    <i class="h-5 text-slate-500" data-feather="printer"></i>
+                    Print Invoice
+                </a>
+                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                    <i class="h-5 text-slate-500" data-feather="credit-card"></i>
+                    Add Payment
+                </a>
+                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                    <i class="h-5 text-slate-500" data-feather="truck"></i>
+                    Add Shipment
+                </a>
+                  <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
+                    <i class="h-5 text-slate-500" data-feather="corner-up-left"></i>
+                    Add Refound
+                </a>
+                </div>
             </div>
-            <!-- Tabs Ends -->
+            </div>
+            <!-- Order Details Header End -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="col-span-1 lg:col-span-2 flex flex-col gap-4">
+                <div class="card p-6">
+skjfsdk
+                </div>
+              </div>
+              <div class="lg:col-span-1">
+                <div class="card p-6 min-h-max">
+sdfsdf
+                </div>
+              </div>
+            </div>
+            <!-- Order Details End  -->
           </main>
           <!-- Main Content Ends -->
 
