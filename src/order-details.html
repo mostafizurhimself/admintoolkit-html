@@ -769,13 +769,13 @@
               <div class="flex flex-col gap-1">
                 <div class="flex items-center gap-1">
                   <h2 class="text-xl font-medium">Order#1001</h2>
-                 <div>
+                 <div class="flex items-center">
                   <div class="badge badge-soft-primary">Processing</div>
                  </div>
                 </div>
                 <!-- Date -->
                 <div class="flex gap-1 items-center">
-                  <i class="h-4 w-4 text-slate-400" data-feather="calendar"></i>
+                  <i class="h-4 w-6 text-slate-400" data-feather="calendar"></i>
                   <span class="text-slate-400 text-xs">Fri 04 Mar 2023, 06:15 PM</span>
                 </div>
               </div>
@@ -806,8 +806,87 @@
             <!-- Order Details Header End -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 my-4">
               <div class="col-span-1 lg:col-span-2 flex flex-col gap-4">
-                <div class="card p-6">
-skjfsdk
+                <div class="card">
+                  <div class="table-responsive">
+                    <table class="table min-w-[35rem]">
+                      <thead>
+                        <tr>
+                          <th>Product Name</th>
+                          <th><p class="text-right uppercase">Price</p></th>
+                          <th><p class="text-right uppercase">Qty</p></th>
+                          <th><p class="text-right uppercase">Line Total</p></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <img src="./images/product1.png" class="h-12 w-12 rounded-primary" alt="product-img" />
+                              <div class="flex flex-col items-start justify-center">
+                                <h4 class="m-0 p-0 text-sm font-medium text-slate-700">Product One</h4>
+                                <p class="text-xs font-normal text-slate-400 dark:text-slate-400">
+                                  Delivery Date: 31/01/3023
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-right text-xs font-normal text-slate-400 dark:text-slate-400">$24.00</p>
+                          </td>
+                          <td>
+                            <p class="text-right text-xs font-normal text-slate-400 dark:text-slate-400">1 pcs</p>
+                          </td>
+                          <td>
+                            <p class="text-right text-xs font-semibold text-slate-700 dark:text-slate-200">$24.00</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <img src="./images/product2.png" class="h-12 w-12 rounded-primary" alt="product-img" />
+                              <div class="flex flex-col items-start justify-center">
+                                <h4 class="m-0 p-0 text-sm font-medium text-slate-700">Product Two</h4>
+                                <p class="text-xs font-normal text-slate-400 dark:text-slate-400">
+                                  Delivery Date: 31/01/3023
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-right text-xs font-normal text-slate-400 dark:text-slate-400">$24.00</p>
+                          </td>
+                          <td>
+                            <p class="text-right text-xs font-normal text-slate-400 dark:text-slate-400">1 pcs</p>
+                          </td>
+                          <td>
+                            <p class="text-right text-xs font-semibold text-slate-700 dark:text-slate-200">$24.00</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <img src="./images/product3.png" class="h-12 w-12 rounded-primary" alt="product-img" />
+                              <div class="flex flex-col items-start justify-center">
+                                <h4 class="m-0 p-0 text-sm font-medium text-slate-700">Product Three</h4>
+                                <p class="text-xs font-normal text-slate-400 dark:text-slate-400">
+                                  Delivery Date: 31/01/3023
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-right text-xs font-normal text-slate-400 dark:text-slate-400">$24.00</p>
+                          </td>
+                          <td>
+                            <p class="text-right text-xs font-normal text-slate-400 dark:text-slate-400">1 pcs</p>
+                          </td>
+                          <td>
+                            <p class="text-right text-xs font-semibold text-slate-700 dark:text-slate-200">$24.00</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
               <div class="lg:col-span-1">
