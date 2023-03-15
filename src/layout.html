@@ -814,10 +814,24 @@
                           <label class="label label-required mb-1" for="form-basic-phone">Phone</label>
                           <input class="input" id="form-basic-phone" name="phone" type="text" placeholder="Phone">
                         </div> 
+                         <!-- Form Row: Resume -->
+                         <div class="w-full">
+                          <label class="label label-required mb-1" for="form-basic-resume">Resume</label>
+                          <input class="input" type="file" name="resume" id="form-basic-resume">
+                        </div>   
                         <!-- Form Row: Message -->
                         <div class="w-full">
                           <label class="label label-required mb-1" for="form-basic-message">Message</label>
                           <textarea class="textarea" id="form-basic-message" name="message" placeholder="Message"></textarea>
+                        </div> 
+                        <!-- Form Row: TOS -->
+                        <div class="w-full">
+                          <div class="flex items-center gap-1.5">
+                            <input class="checkbox" type="checkbox" name="tos" id="form-basic-tos">
+                            <label class="label" for="form-basic-tos">
+                              I agree with the <a class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline focus:outline-none focus:text-primary-600" href="#" target="_blank">term of services</a>
+                            </label>
+                          </div>
                         </div>      
                       </div>
                       <!-- Form Footer -->
@@ -883,6 +897,11 @@
                             <input class="input" id="form-with-icon-phone" name="phone" type="text" placeholder="Phone">
                           </div>
                         </div> 
+                        <!-- Form Row: Resume -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-with-icon-resume">Resume</label>
+                          <input class="input" id="form-with-icon-resume" name="resume" type="file">
+                        </div> 
                         <!-- Form Row: Message -->
                         <div class="w-full">
                           <label class="label label-required mb-1" for="form-with-icon-message">Message</label>
@@ -892,7 +911,16 @@
                             </span>
                             <textarea class="textarea" id="form-with-icon-message" name="message" placeholder="Message"></textarea>
                           </div>
-                        </div>      
+                        </div>   
+                        <!-- Form Row: TOS -->
+                        <div class="w-full">
+                          <div class="flex items-center gap-1.5">
+                            <input class="checkbox" type="checkbox" name="tos" id="form-basic-tos">
+                            <label class="label" for="form-basic-tos">
+                              I agree with the <a class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline focus:outline-none focus:text-primary-600" href="#" target="_blank">term of services</a>
+                            </label>
+                          </div>
+                        </div>   
                       </div>
                       <!-- Form Footer -->
                       <div class="w-full flex items-center justify-end mt-6">
@@ -935,7 +963,7 @@
                             <input class="input" id="form-horizontal-company" name="company" type="text" placeholder="Company">
                           </div>
                         </div>
-                        <!-- Form Row: Company -->
+                        <!-- Form Row: Email -->
                         <div class="w-full flex flex-col md:flex-row items-center gap-1 md:gap-2">
                           <div class="w-full md:w-1/4">
                             <label class="label label-required" for="form-horizontal-email">Email</label>
@@ -953,6 +981,15 @@
                             <input class="input" id="form-horizontal-phone" name="phone" type="text" placeholder="Phone">
                           </div>
                         </div>
+                        <!-- Form Row: Resume -->
+                        <div class="w-full flex flex-col md:flex-row items-center gap-1 md:gap-2">
+                          <div class="w-full md:w-1/4">
+                            <label class="label label-required" for="form-horizontal-resume">Resume</label>
+                          </div>
+                          <div class="w-full md:w-3/4">
+                            <input class="input" id="form-horizontal-resume" name="resume" type="file">
+                          </div>
+                        </div>
                         <!-- Form Row: Message -->
                         <div class="w-full flex flex-col md:flex-row items-center gap-1 md:gap-2">
                           <div class="w-full md:w-1/4">
@@ -960,8 +997,15 @@
                           </div>
                           <div class="w-full md:w-3/4">
                             <textarea class="textarea" id="form-horizontal-message" name="message" placeholder="Message"></textarea>
+                            
+                            <div class="flex items-center gap-1.5 mt-2">
+                              <input class="checkbox" type="checkbox" name="tos" id="form-basic-tos">
+                              <label class="label" for="form-basic-tos">
+                                I agree with the <a class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline focus:outline-none focus:text-primary-600" href="#" target="_blank">term of services</a>
+                              </label>
+                            </div>
                           </div>
-                        </div>        
+                        </div>      
                       </div>
                       <!-- Form Footer -->
                       <div class="w-full flex items-center justify-end mt-6">
@@ -1019,6 +1063,21 @@
                               <span class="input-group-text">
                                 <i width="1rem" height="1rem" data-feather="lock"></i>
                               </span>
+                            </div>
+                          </div>
+                        </div>    
+                        <!-- Form Row: Three -->
+                        <div class="w-full">
+                          <div class="dropzone dropzone-basic">
+                            <div class="dz-message">
+                                <i width="2rem" height="2rem" data-feather="image"></i>
+                                <p class="text-sm text-slate-400">
+                                  Choose a profile picture or drag & drop here.
+                                </p>
+                            </div>
+                            <!-- Fallback for no JavaScript -->
+                            <div class="fallback">
+                                <input name="file" type="file">
                             </div>
                           </div>
                         </div>    
