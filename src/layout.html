@@ -791,7 +791,7 @@
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <form id="form-basic" class="max-w-lg p-4 bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" action="">
+                    <form id="form-basic" class="max-w-lg p-4 mx-auto bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" action="">
                       <!-- Form Body -->
                       <div class="flex flex-col gap-4">
                         <!-- Form Row: Full name -->
@@ -814,15 +814,10 @@
                           <label class="label label-required mb-1" for="form-basic-phone">Phone</label>
                           <input class="input" id="form-basic-phone" name="phone" type="text" placeholder="Phone">
                         </div> 
-                         <!-- Form Row: Resume -->
-                         <div class="w-full">
-                          <label class="label label-required mb-1" for="form-basic-resume">Resume</label>
-                          <input class="input" type="file" name="resume" id="form-basic-resume">
-                        </div>   
                         <!-- Form Row: Message -->
                         <div class="w-full">
                           <label class="label label-required mb-1" for="form-basic-message">Message</label>
-                          <textarea class="textarea" id="form-basic-message" name="message" placeholder="Message"></textarea>
+                          <textarea class="textarea" name="message" id="form-basic-message" placeholder="Message"></textarea>
                         </div> 
                         <!-- Form Row: TOS -->
                         <div class="w-full">
@@ -844,17 +839,17 @@
               </div>
               <!-- Card: Basic Form Layout  Ends -->
 
-              <!-- Card: Basic Form With Icon Starts -->
+              <!-- Card: Form With Icon Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Basic Form With Icon</h4>
+                  <h4 class="card-title">Form With Icon</h4>
                   
                   <p class="card-subtitle">
-                    Example of basic form with icon.
+                    Example of form with icon.
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <form id="form-with-icon" class="max-w-lg p-4 bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" action="">
+                    <form id="form-with-icon" class="max-w-lg p-4 mx-auto bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" action="">
                       <!-- Form Body -->
                       <div class="flex flex-col gap-4">
                         <!-- Form Row: Full name -->
@@ -901,16 +896,6 @@
                         <div class="w-full">
                           <label class="label label-required mb-1" for="form-with-icon-resume">Resume</label>
                           <input class="input" id="form-with-icon-resume" name="resume" type="file">
-                        </div> 
-                        <!-- Form Row: Message -->
-                        <div class="w-full">
-                          <label class="label label-required mb-1" for="form-with-icon-message">Message</label>
-                          <div class="input-group">
-                            <span class="input-group-text">
-                              <i width="1rem" height="1rem" data-feather="message-square"></i>
-                            </span>
-                            <textarea class="textarea" id="form-with-icon-message" name="message" placeholder="Message"></textarea>
-                          </div>
                         </div>   
                         <!-- Form Row: TOS -->
                         <div class="w-full">
@@ -930,8 +915,69 @@
                   </div>
                 </div>
               </div>
-              <!-- Card: Basic Form With Icon Ends -->
-              
+              <!-- Card: Form With Icon Ends -->
+
+              <!-- Card: Form With Dropzone Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Form With Dropzone</h4>
+                  
+                  <p class="card-subtitle">
+                    Example of form with dropzone.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <form id="form-with-dropzone" class="max-w-lg p-4 mx-auto bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" action="">
+                      <!-- Form Body -->
+                      <div class="flex flex-col gap-4">
+                        <!-- Form Row: Thumbnail -->
+                        <div class="w-full">
+                          <div class="dropzone dropzone-multiple">
+                            <div class="dz-message">
+                                <i class="text-slate-600 dark:text-slate-300" width="2rem" height="2rem" data-feather="image"></i>
+                                <p class="text-sm text-slate-600 dark:text-slate-300">
+                                  Choose thumbnails or drag & drop here.
+                                </p>
+                            </div>
+                            <!-- Fallback for no JavaScript -->
+                            <div class="fallback">
+                                <input name="file" type="thumbnails">
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Form Row: Post title -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-with-dropzone-title">Post title</label>
+                          <input class="input" id="form-with-dropzone-title" name="title" type="text" placeholder="Post title">
+                        </div>
+                        <!-- Form Row: Post category -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-with-dropzone-category">Post category</label>
+                          <select class="tom-select" name="category" id="form-with-dropzone-category">
+                            <option value="">Select category</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="skills">Skills development</option>
+                            <option value="communication">Communication</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="technology">Technology</option>
+                          </select>
+                        </div>
+                        <!-- Form Row: Post Content -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-with-dropzone-content">Post content</label>
+                          <textarea class="textarea" name="content" id="form-with-dropzone-content" placeholder="Post content"></textarea>
+                        </div>
+                      </div>
+                      <!-- Form Footer -->
+                      <div class="w-full flex items-center justify-end mt-6">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Form With Dropzone Ends -->
+
               <!-- Card: Horizontal Form Starts -->
               <div class="card">
                 <div class="card-body">
@@ -942,7 +988,7 @@
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <form id="form-horizontal" class="max-w-lg p-4 bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" action="">
+                    <form id="form-horizontal" class="max-w-lg p-4 mx-auto bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" action="">
                       <!-- Form Body -->
                       <div class="flex flex-col gap-4">
                         <!-- Form Row: Full name -->
@@ -980,32 +1026,16 @@
                           <div class="w-full md:w-3/4">
                             <input class="input" id="form-horizontal-phone" name="phone" type="text" placeholder="Phone">
                           </div>
-                        </div>
-                        <!-- Form Row: Resume -->
-                        <div class="w-full flex flex-col md:flex-row items-center gap-1 md:gap-2">
-                          <div class="w-full md:w-1/4">
-                            <label class="label label-required" for="form-horizontal-resume">Resume</label>
-                          </div>
-                          <div class="w-full md:w-3/4">
-                            <input class="input" id="form-horizontal-resume" name="resume" type="file">
-                          </div>
-                        </div>
+                        </div>    
                         <!-- Form Row: Message -->
                         <div class="w-full flex flex-col md:flex-row items-center gap-1 md:gap-2">
-                          <div class="w-full md:w-1/4">
-                            <label class="label label-required" for="form-horizontal-message">Message</label>
+                          <div class="w-full md:w-1/4 self-start">
+                            <label class="label label-required mt-2" for="form-horizontal-message">Message</label>
                           </div>
                           <div class="w-full md:w-3/4">
-                            <textarea class="textarea" id="form-horizontal-message" name="message" placeholder="Message"></textarea>
-                            
-                            <div class="flex items-center gap-1.5 mt-2">
-                              <input class="checkbox" type="checkbox" name="tos" id="form-basic-tos">
-                              <label class="label" for="form-basic-tos">
-                                I agree with the <a class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline focus:outline-none focus:text-primary-600" href="#" target="_blank">term of services</a>
-                              </label>
-                            </div>
+                            <textarea class="textarea" name="message" id="form-horizontal-message" placeholder="Message"></textarea>
                           </div>
-                        </div>      
+                        </div>    
                       </div>
                       <!-- Form Footer -->
                       <div class="w-full flex items-center justify-end mt-6">
@@ -1065,22 +1095,7 @@
                               </span>
                             </div>
                           </div>
-                        </div>    
-                        <!-- Form Row: Three -->
-                        <div class="w-full">
-                          <div class="dropzone dropzone-basic">
-                            <div class="dz-message">
-                                <i width="2rem" height="2rem" data-feather="image"></i>
-                                <p class="text-sm text-slate-400">
-                                  Choose a profile picture or drag & drop here.
-                                </p>
-                            </div>
-                            <!-- Fallback for no JavaScript -->
-                            <div class="fallback">
-                                <input name="file" type="file">
-                            </div>
-                          </div>
-                        </div>    
+                        </div>      
                       </div>
                       <!-- Form Footer -->
                       <div class="w-full flex items-center justify-end gap-2 mt-6">
