@@ -126,6 +126,7 @@
               <li>
                 <a href="./product-list.html" class="sidebar-submenu-item">Product List</a>
               </li>
+
               <li>
                 <a href="./product-edit.html" class="sidebar-submenu-item">Product Edit</a>
               </li>
@@ -247,6 +248,9 @@
             <ul class="sidebar-submenu">
               <li>
                 <a href="./input.html" class="sidebar-submenu-item">Input</a>
+              </li>
+              <li>
+                <a href="./input-group.html" class="sidebar-submenu-item">Input Group</a>
               </li>
               <li>
                 <a href="./textarea.html" class="sidebar-submenu-item">Textarea</a>
@@ -775,25 +779,557 @@
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Tabs Starts -->
+            <!-- Form Layout Starts -->
             <div class="space-y-6">
-              <!-- Card: Basic Tab Starts -->
+              <!-- Card: Basic Form Layout Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Layout</h4>
-
+                  <h4 class="card-title">Basic Form Layout</h4>
+                  
                   <p class="card-subtitle">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                    Example of basic form layout.
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <!-- Code Here  -->
+                    <form id="form-basic" class="max-w-lg p-4 bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" action="">
+                      <!-- Form Body -->
+                      <div class="flex flex-col gap-4">
+                        <!-- Form Row: Full name -->
+                        <div class="w-full">
+                          <label class="label mb-1" for="form-basic-full-name">
+                              <span>Full name</span>
+                              <span class="text-danger-500">*</span>
+                          </label>
+                          <input class="input" id="form-basic-full-name" name="full-name" type="text" placeholder="Full name">
+                        </div>
+
+                        <!-- Form Row: Company -->
+                        <div class="w-full">
+                          <label class="label mb-1" for="form-basic-company">
+                              <span>Company</span>
+                              <span class="text-danger-500">*</span>
+                          </label>
+                          <input class="input" id="form-basic-company" name="company" type="text" placeholder="Company">
+                        </div> 
+
+                        <!-- Form Row: Email -->
+                        <div class="w-full">
+                          <label class="label mb-1" for="form-basic-email">
+                              <span>Email</span>
+                              <span class="text-danger-500">*</span>
+                          </label>
+                          <input class="input" id="form-basic-email" name="email" type="text" placeholder="Email">
+                        </div>     
+
+                        <!-- Form Row: Phone -->
+                        <div class="w-full">
+                          <label class="label mb-1" for="form-basic-phone">
+                              <span>Phone</span>
+                              <span class="text-danger-500">*</span>
+                          </label>
+                          <input class="input" id="form-basic-phone" name="phone" type="text" placeholder="Phone">
+                        </div> 
+
+                        <!-- Form Row: Message -->
+                        <div class="w-full">
+                          <label class="label mb-1" for="form-basic-message">
+                              <span>Message</span>
+                              <span class="text-danger-500">*</span>
+                          </label>
+                          <textarea class="textarea" id="form-basic-message" name="message" placeholder="Message"></textarea>
+                        </div>      
+                      </div>
+
+                      <!-- Form Footer -->
+                      <div class="w-full flex items-center justify-end mt-6">
+                        <button class="btn btn-primary" type="submit">
+                          <span>Submit</span>
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
-              <!-- Card: Basic Tab Ends -->
+              <!-- Card: Basic Form Layout  Ends -->
+
+              <!-- Card: Basic Form With Icon Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Basic Form With Icon</h4>
+                  
+                  <p class="card-subtitle">
+                    Example of basic form with icon.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <form id="form-with-icon" class="max-w-lg p-4 bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" action="">
+                      <!-- Form Body -->
+                      <div class="flex flex-col gap-4">
+                        <!-- Form Row: Full name -->
+                        <div class="w-full">
+                          <label class="label mb-1" for="form-with-icon-full-name">
+                              <span>Full name</span>
+                              <span class="text-danger-500">*</span>
+                          </label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i width="1rem" height="1rem" data-feather="user"></i>
+                            </span>
+                            <input class="input" id="form-with-icon-full-name" name="full-name" type="text" placeholder="Full name">
+                          </div>
+                        </div>
+
+                        <!-- Form Row: Company -->
+                        <div class="w-full">
+                          <label class="label mb-1" for="form-with-icon-company">
+                              <span>Company</span>
+                              <span class="text-danger-500">*</span>
+                          </label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i width="1rem" height="1rem" data-feather="map-pin"></i>
+                            </span>
+                            <input class="input" id="form-with-icon-company" name="company" type="text" placeholder="Company">
+                          </div>
+                        </div> 
+
+                        <!-- Form Row: Email -->
+                        <div class="w-full">
+                          <label class="label mb-1" for="form-with-icon-email">
+                              <span>Email</span>
+                              <span class="text-danger-500">*</span>
+                          </label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i width="1rem" height="1rem" data-feather="mail"></i>
+                            </span>
+                            <input class="input" id="form-with-icon-email" name="email" type="text" placeholder="Email">
+                          </div>
+                        </div>     
+
+                        <!-- Form Row: Phone -->
+                        <div class="w-full">
+                          <label class="label mb-1" for="form-with-icon-phone">
+                              <span>Phone</span>
+                              <span class="text-danger-500">*</span>
+                          </label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i width="1rem" height="1rem" data-feather="phone"></i>
+                            </span>
+                            <input class="input" id="form-with-icon-phone" name="phone" type="text" placeholder="Phone">
+                          </div>
+                        </div> 
+
+                        <!-- Form Row: Message -->
+                        <div class="w-full">
+                          <label class="label mb-1" for="form-with-icon-message">
+                              <span>Message</span>
+                              <span class="text-danger-500">*</span>
+                          </label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i width="1rem" height="1rem" data-feather="message-square"></i>
+                            </span>
+                            <textarea class="textarea" id="form-with-icon-message" name="message" placeholder="Message"></textarea>
+                          </div>
+                        </div>      
+                      </div>
+
+                      <!-- Form Footer -->
+                      <div class="w-full flex items-center justify-end mt-6">
+                        <button class="btn btn-primary" type="submit">
+                          <span>Submit</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Basic Form With Icon Ends -->
+              
+              <!-- Card: Horizontal Form Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Horizontal Form</h4>
+                  
+                  <p class="card-subtitle">
+                    Example of Horizontal Form.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <form id="form-horizontal" class="max-w-lg p-4 bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" action="">
+                      <!-- Form Body -->
+                      <div class="flex flex-col gap-4">
+                        <!-- Form Row: Full name -->
+                        <div class="w-full flex flex-col md:flex-row items-center gap-1 md:gap-2">
+                          <div class="w-full md:w-1/4">
+                            <label class="label" for="form-horizontal-full-name">
+                                <span>Full name</span>
+                                <span class="text-danger-500">*</span>
+                            </label>
+                          </div>
+                          <div class="w-full md:w-3/4">
+                            <input class="input" id="form-horizontal-full-name" name="full-name" type="text" placeholder="Full name">
+                          </div>
+                        </div>
+
+                        <!-- Form Row: Company -->
+                        <div class="w-full flex flex-col md:flex-row items-center gap-1 md:gap-2">
+                          <div class="w-full md:w-1/4">
+                            <label class="label" for="form-horizontal-company">
+                                <span>Company</span>
+                                <span class="text-danger-500">*</span>
+                            </label>
+                          </div>
+                          <div class="w-full md:w-3/4">
+                            <input class="input" id="form-horizontal-company" name="company" type="text" placeholder="Company">
+                          </div>
+                        </div>
+
+                        <!-- Form Row: Company -->
+                        <div class="w-full flex flex-col md:flex-row items-center gap-1 md:gap-2">
+                          <div class="w-full md:w-1/4">
+                            <label class="label" for="form-horizontal-email">
+                                <span>Email</span>
+                                <span class="text-danger-500">*</span>
+                            </label>
+                          </div>
+                          <div class="w-full md:w-3/4">
+                            <input class="input" id="form-horizontal-email" name="email" type="text" placeholder="Email">
+                          </div>
+                        </div>
+
+                        <!-- Form Row: Phone -->
+                        <div class="w-full flex flex-col md:flex-row items-center gap-1 md:gap-2">
+                          <div class="w-full md:w-1/4">
+                            <label class="label" for="form-horizontal-phone">
+                                <span>Phone</span>
+                                <span class="text-danger-500">*</span>
+                            </label>
+                          </div>
+                          <div class="w-full md:w-3/4">
+                            <input class="input" id="form-horizontal-phone" name="phone" type="text" placeholder="Phone">
+                          </div>
+                        </div>
+
+                        <!-- Form Row: Message -->
+                        <div class="w-full flex flex-col md:flex-row items-center gap-1 md:gap-2">
+                          <div class="w-full md:w-1/4">
+                            <label class="label" for="form-horizontal-message">
+                                <span>Message</span>
+                                <span class="text-danger-500">*</span>
+                            </label>
+                          </div>
+                          <div class="w-full md:w-3/4">
+                            <textarea class="textarea" id="form-horizontal-message" name="message" placeholder="Message"></textarea>
+                          </div>
+                        </div>        
+                      </div>
+
+                      <!-- Form Footer -->
+                      <div class="w-full flex items-center justify-end mt-6">
+                        <button class="btn btn-primary" type="submit">
+                          <span>Submit</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Horizontal Form Ends -->
+
+              <!-- Card: Form With Multiple Column Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Form With Multiple Column</h4>
+                  
+                  <p class="card-subtitle">
+                    Example of form with multiple column.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <form id="form-with-multiple-column" class="max-w-full p-4 bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" action="">
+                      <!-- Form Body -->
+                      <div class="flex flex-col gap-4">
+                        <!-- Form Row: One -->
+                        <div class="w-full flex flex-col md:flex-row items-center gap-4">
+                          <!-- Form Column: Username -->
+                          <div class="w-full md:w-1/2">
+                            <label class="label mb-1" for="form-with-multiple-column-username">
+                                <span>Username</span>
+                                <span class="text-danger-500">*</span>
+                            </label>
+                            <input class="input" id="form-with-multiple-column-username" name="username" type="text" placeholder="Username">
+                          </div>
+                          <!-- Form Column: Email -->
+                          <div class="w-full md:w-1/2">
+                            <label class="label mb-1" for="form-with-multiple-column-email">
+                                <span>Email</span>
+                                <span class="text-danger-500">*</span>
+                            </label>
+                            <input class="input" id="form-with-multiple-column-email" name="email" type="text" placeholder="Email">
+                          </div>
+                        </div>   
+                        <!-- Form Row: Two -->
+                        <div class="w-full flex flex-col md:flex-row items-center gap-4">
+                          <!-- Form Column: Password -->
+                          <div class="w-full md:w-1/2">
+                            <label class="label mb-1" for="form-with-multiple-column-password">
+                                <span>Password</span>
+                                <span class="text-danger-500">*</span>
+                            </label>
+                            <div class="input-group">
+                              <input class="input" id="form-with-multiple-column-password" name="password" type="password" placeholder="Password">
+                              <span class="input-group-text">
+                                <i width="1rem" height="1rem" data-feather="lock"></i>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- Form Column: Confirm Password -->
+                          <div class="w-full md:w-1/2">
+                            <label class="label mb-1" for="form-with-multiple-column-confirm-password">
+                                <span>Confirm Password</span>
+                                <span class="text-danger-500">*</span>
+                            </label>
+                            <div class="input-group">
+                              <input class="input" id="form-with-multiple-column-confirm-password" name="confirm-password" type="password" placeholder="Confirm Password">
+                              <span class="input-group-text">
+                                <i width="1rem" height="1rem" data-feather="lock"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>    
+                      </div>
+                      <!-- Form Footer -->
+                      <div class="w-full flex items-center justify-end gap-2 mt-6">
+                        <button class="btn btn-soft-secondary" type="button">
+                          <span>Cancel</span>
+                        </button>
+
+                        <button class="btn btn-primary" type="submit">
+                          <span>Submit</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Form With Multiple Column Ends -->
+
+              <!-- Card: Form in Tab Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Form In Tab</h4>
+                  
+                  <p class="card-subtitle">
+                    Example of form in tab.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="bg-white dark:bg-slate-800 rounded-primary shadow">
+                      <div class="tabs">
+                        <ul class="tabs-list">
+                          <li class="tabs-item">
+                            <button class="tabs-btn active" data-panel-id="#tabs-panel-personal-info" type="button">
+                              Personal Info
+                            </button>
+                          </li>
+                          <li class="tabs-item">
+                            <button class="tabs-btn" data-panel-id="#tabs-panel-account-info" type="button">
+                              Account Info
+                            </button>
+                          </li>
+                          <li class="tabs-item">
+                            <button class="tabs-btn" data-panel-id="#tabs-panel-social-info" type="button">
+                              Social Info
+                            </button>
+                          </li>
+                        </ul>
+
+                        <div class="tabs-content">
+                          <div id="tabs-panel-personal-info" class="tabs-panel active">
+                            <form id="form-personal-info" class="max-w-full p-4" action="">
+                              <!-- Form Body -->
+                              <div class="flex flex-col gap-4">
+                                <!-- Form Row: One -->
+                                <div class="w-full flex flex-col md:flex-row items-center gap-4">
+                                  <!-- Form Column: First name -->
+                                  <div class="w-full md:w-1/2">
+                                    <label class="label mb-1" for="form-personal-info-first-name">
+                                        <span>First name</span>
+                                        <span class="text-danger-500">*</span>
+                                    </label>
+                                    <input class="input" id="form-personal-info-first-name" name="first-name" type="text" placeholder="First name">
+                                  </div>
+                                  <!-- Form Column: Last name -->
+                                  <div class="w-full md:w-1/2">
+                                    <label class="label mb-1" for="form-personal-info-last-name">
+                                        <span>Last name</span>
+                                        <span class="text-danger-500">*</span>
+                                    </label>
+                                    <input class="input" id="form-personal-info-last-name" name="last-name" type="text" placeholder="Last name">
+                                  </div>
+                                </div>   
+                                <!-- Form Row: Two -->
+                                <div class="w-full flex flex-col md:flex-row items-center gap-4">
+                                  <!-- Form Column: Country -->
+                                  <div class="w-full md:w-1/2">
+                                    <label class="label mb-1" for="form-personal-info-country">
+                                        <span>Country</span>
+                                        <span class="text-danger-500">*</span>
+                                    </label>
+                                    <select class="tom-select" name="country" id="form-personal-info-country">
+                                      <option value="">Select Country</option>
+                                      <option value="BD">Bangladesh</option>
+                                      <option value="IN">India</option>
+                                      <option value="PK">Pakistan</option>
+                                    </select>
+                                  </div>
+                                  <!-- Form Column: Language -->
+                                  <div class="w-full md:w-1/2">
+                                    <label class="label mb-1" for="form-personal-info-country">
+                                        <span>Language</span>
+                                        <span class="text-danger-500">*</span>
+                                    </label>
+                                    <select class="tom-select" name="language" multiple id="form-personal-info-language">
+                                      <option value="">Select Language</option>
+                                      <option value="BN">Bangla</option>
+                                      <option value="EN">English</option>
+                                      <option value="EN-UK">English (UK)</option>
+                                    </select>
+                                  </div>
+                                </div>    
+                              </div>
+                              <!-- Form Footer -->
+                              <div class="w-full flex items-center justify-end gap-2 mt-6">
+                                <button class="btn btn-soft-secondary" type="button">
+                                  <span>Cancel</span>
+                                </button>
+        
+                                <button class="btn btn-primary" type="submit">
+                                  <span>Submit</span>
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div id="tabs-panel-account-info" class="tabs-panel">
+                            <form id="form-account-info" class="max-w-full p-4" action="">
+                              <!-- Form Body -->
+                              <div class="flex flex-col gap-4">
+                                <!-- Form Row: One -->
+                                <div class="w-full flex flex-col md:flex-row items-center gap-4">
+                                  <!-- Form Column: Username -->
+                                  <div class="w-full md:w-1/2">
+                                    <label class="label mb-1" for="form-account-info-username">
+                                        <span>Username</span>
+                                        <span class="text-danger-500">*</span>
+                                    </label>
+                                    <input class="input" id="form-account-info-username" name="username" type="text" placeholder="Username">
+                                  </div>
+                                  <!-- Form Column: Email -->
+                                  <div class="w-full md:w-1/2">
+                                    <label class="label mb-1" for="form-account-info-email">
+                                        <span>Email</span>
+                                        <span class="text-danger-500">*</span>
+                                    </label>
+                                    <input class="input" id="form-account-info-email" name="email" type="text" placeholder="Email">
+                                  </div>
+                                </div>   
+                                <!-- Form Row: Two -->
+                                <div class="w-full flex flex-col md:flex-row items-center gap-4">
+                                  <!-- Form Column: Password -->
+                                  <div class="w-full md:w-1/2">
+                                    <label class="label mb-1" for="form-account-info-password">
+                                        <span>Password</span>
+                                        <span class="text-danger-500">*</span>
+                                    </label>
+                                    <div class="input-group">
+                                      <input class="input" id="form-account-info-password" name="password" type="password" placeholder="Password">
+                                      <span class="input-group-text">
+                                        <i width="1rem" height="1rem" data-feather="lock"></i>
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <!-- Form Column: Confirm Password -->
+                                  <div class="w-full md:w-1/2">
+                                    <label class="label mb-1" for="form-account-info-confirm-password">
+                                        <span>Confirm Password</span>
+                                        <span class="text-danger-500">*</span>
+                                    </label>
+                                    <div class="input-group">
+                                      <input class="input" id="form-account-info-confirm-password" name="confirm-password" type="password" placeholder="Confirm Password">
+                                      <span class="input-group-text">
+                                        <i width="1rem" height="1rem" data-feather="lock"></i>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>    
+                              </div>
+                              <!-- Form Footer -->
+                              <div class="w-full flex items-center justify-end gap-2 mt-6">
+                                <button class="btn btn-soft-secondary" type="button">
+                                  <span>Cancel</span>
+                                </button>
+        
+                                <button class="btn btn-primary" type="submit">
+                                  <span>Submit</span>
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div id="tabs-panel-social-info" class="tabs-panel">
+                            <form id="form-social-info" class="max-w-full p-4" action="">
+                              <!-- Form Body -->
+                              <div class="flex flex-col gap-4">
+                                <!-- Form Row: One -->
+                                <div class="w-full flex flex-col md:flex-row items-center gap-4">
+                                  <!-- Form Column: Twitter -->
+                                  <div class="w-full md:w-1/2">
+                                    <label class="label mb-1" for="form-social-info-twitter">Twitter</label>
+                                    <input class="input" id="form-social-info-twitter" name="twitter" type="text" placeholder="https://twitter.com/abc">
+                                  </div>
+                                  <!-- Form Column: Facebook -->
+                                  <div class="w-full md:w-1/2">
+                                    <label class="label mb-1" for="form-social-info-facebook">Facebook</label>
+                                    <input class="input" id="form-social-info-facebook" name="facebook" type="text" placeholder="https://facebook.com/abc">
+                                  </div>
+                                </div>     
+
+                                <!-- Form Row: Two -->
+                                <div class="w-full flex flex-col md:flex-row items-center gap-4">
+                                  <!-- Form Column: Instagram -->
+                                  <div class="w-full md:w-1/2">
+                                    <label class="label mb-1" for="form-social-info-instagram">Instagram</label>
+                                    <input class="input" id="form-social-info-instagram" name="instagram" type="text" placeholder="https://instagram.com/abc">
+                                  </div>
+                                  <!-- Form Column: Linkedin -->
+                                  <div class="w-full md:w-1/2">
+                                    <label class="label mb-1" for="form-social-info-linkedin">Linkedin</label>
+                                    <input class="input" id="form-social-info-linkedin" name="linkedin" type="text" placeholder="https://linkedin.com/abc">
+                                  </div>
+                                </div>     
+                              </div>
+                              <!-- Form Footer -->
+                              <div class="w-full flex items-center justify-end gap-2 mt-6">
+                                <button class="btn btn-soft-secondary" type="button">
+                                  <span>Cancel</span>
+                                </button>
+                                <button class="btn btn-primary" type="submit">
+                                  <span>Submit</span>
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Form in Tab Ends -->
             </div>
-            <!-- Tabs Ends -->
+            <!-- Form Layout Ends -->
           </main>
           <!-- Main Content Ends -->
 
