@@ -1,6 +1,14 @@
 @layer components {
   .select {
-    @apply w-full h-10 px-4 text-sm rounded-primary border bg-white border-slate-200 text-slate-500 focus:ring-1 focus:border-primary-500 focus:ring-primary-500 dark:focus:border-primary-500 dark:text-slate-400 dark:bg-slate-800 dark:border-slate-600;
+    @apply w-full h-10 px-4 text-sm rounded-primary bg-transparent border border-slate-300 text-slate-700 focus:ring-1 focus:border-primary-500 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-slate-100 dark:focus:border-primary-500 dark:disabled:bg-slate-700 dark:text-slate-400 dark:bg-transparent dark:border-slate-600;
+
+    & > option {
+      @apply text-slate-700;
+    }
+
+    & > option[disabled] {
+      @apply text-slate-400 bg-slate-100 dark:text-slate-500 dark:bg-slate-700;
+    }
 
     &-sm {
       @apply h-9;
@@ -21,14 +29,6 @@
     &-invalid {
       @apply border-danger-500  focus:border-danger-500 focus:ring-danger-500 dark:focus:border-danger-500 dark:border-danger-500;
     }
-
-    &[disabled] {
-      @apply cursor-not-allowed opacity-50 bg-slate-100 dark:bg-slate-700;
-    }
-
-    & > option[disabled] {
-      @apply text-slate-400 bg-slate-100 dark:text-slate-500 dark:bg-slate-700;
-    }
   }
   
   //Prevent multiple scrollbar appearing
@@ -41,7 +41,7 @@
     &.ts-wrapper.single.input-active .ts-control,
     &.ts-wrapper.multi.input-active .ts-control,
     .ts-control {
-      @apply bg-white border border-slate-200 dark:border-slate-600 dark:bg-slate-800;
+      @apply bg-transparent border border-slate-200 dark:border-slate-600 dark:bg-transparent;
     }
 
     &.ts-wrapper.input-active .ts-control{
@@ -49,11 +49,11 @@
     }
 
     & > .ts-control {
-      @apply h-10 rounded-primary px-4 text-slate-500 dark:text-slate-400 after:content-['\ea5f'] after:font-['tabler-icons'] after:text-base after:inline-flex after:text-slate-500 after:dark:text-slate-400/60 after:justify-center after:items-center after:w-4 after:h-4 after:absolute after:top-0 after:bottom-0 after:right-2 after:m-auto;
+      @apply h-10 rounded-primary px-4 text-slate-700 dark:text-slate-300 after:content-['\ea5f'] after:font-['tabler-icons'] after:text-base after:inline-flex after:text-slate-500 after:dark:text-slate-400/60 after:justify-center after:items-center after:w-4 after:h-4 after:absolute after:top-0 after:bottom-0 after:right-2 after:m-auto;
     }
 
     & > .ts-control > input {
-      @apply placeholder:text-sm placeholder:text-slate-500 dark:placeholder:text-slate-400;
+      @apply placeholder:text-sm placeholder:text-slate-400;
     }
 
     &.ts-wrapper.single > .ts-control > .item {
@@ -72,7 +72,7 @@
       @apply w-full rounded-primary p-2 border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-600;
 
       .dropdown-input-wrap > input {
-        @apply text-sm text-slate-500 border border-slate-200 rounded focus-visible:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 dark:text-slate-400 placeholder:text-slate-500 dark:placeholder:text-slate-400;
+        @apply text-sm text-slate-700 border border-slate-200 rounded placeholder:text-slate-400 focus-visible:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 dark:text-slate-300;
       }
 
       & > .ts-dropdown-content {
@@ -86,7 +86,7 @@
         & > .optgroup > .option {
           @apply p-2 rounded text-sm text-slate-500 dark:text-slate-400;
 
-          &:not(:last-child) {
+          &:not(:last-child) {  
             @apply mb-1;
           }
 

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buttons - Admin Toolkit</title>
+    <title>Input Group - Admin Toolkit</title>
     <link rel="stylesheet" href="./css/app.css" />
   </head>
 
@@ -61,13 +61,13 @@
 
           <div class="sidebar-menu-header">Applications</div>
 
-          <!-- Email -->
+          <!-- Phone -->
           <li>
             <a href="./email.html" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="mail"></i>
               </span>
-              <span class="sidebar-menu-text">Email</span>
+              <span class="sidebar-menu-text">Phone</span>
             </a>
           </li>
           <!-- Chat -->
@@ -126,7 +126,6 @@
               <li>
                 <a href="./product-list.html" class="sidebar-submenu-item">Product List</a>
               </li>
-
               <li>
                 <a href="./product-edit.html" class="sidebar-submenu-item">Product Edit</a>
               </li>
@@ -165,7 +164,7 @@
           <div class="sidebar-menu-header">Components</div>
           <!-- Common  -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu active">
+            <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="box"></i>
               </span>
@@ -188,7 +187,7 @@
                 <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
               </li>
               <li>
-                <a href="./button.html" class="sidebar-submenu-item active">Button</a>
+                <a href="./button.html" class="sidebar-submenu-item">Button</a>
               </li>
               <li>
                 <a href="./card.html" class="sidebar-submenu-item">Card</a>
@@ -236,7 +235,7 @@
           </li>
           <!-- Forms  -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
+            <a href="javascript:void(0);" class="sidebar-menu active">
               <span class="sidebar-menu-icon">
                 <i data-feather="edit"></i>
               </span>
@@ -250,7 +249,7 @@
                 <a href="./input.html" class="sidebar-submenu-item">Input</a>
               </li>
               <li>
-                <a href="./input-group.html" class="sidebar-submenu-item">Input Group</a>
+                <a href="./input-group.html" class="sidebar-submenu-item active">Input Group</a>
               </li>
               <li>
                 <a href="./textarea.html" class="sidebar-submenu-item">Textarea</a>
@@ -762,330 +761,214 @@
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>Buttons</h5>
+              <h5>Inputs</h5>
               <ol class="breadcrumb ml-auto">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Components</a></li>
-                <li class="breadcrumb-item"><a href="#">Buttons</a></li>
+                <li class="breadcrumb-item"><a href="">Home</a></li>
+                <li class="breadcrumb-item"><a href="">Components</a></li>
+                <li class="breadcrumb-item"><a href="">Inputs</a></li>
               </ol>
             </div>
-            <!-- Page Title Ends -->
-
-            <!-- Button Starts -->
+            <!-- Page Title End -->
+            
+            <!-- Input Starts -->
             <div class="space-y-6">
-              <!-- Card: Basic Button Starts -->
+              <!-- Card: Basic Input Group Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Basic Button</h4>
-                  <p class="card-subtitle text-sm text-slate-400">
-                    The <code>.btn</code> classes are designed to be used with the<code>&lt;/button&gt;</code> element.
-                    However, you can also use these classes on <code>&lt;/a&gt;</code> or
-                    <code>&lt;input&gt;</code> elements.
-                  </p>
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <a href="#" class="btn btn-primary"  role="button">Link</a>
-                      <button class="btn btn-primary" type="submit">Button</button>
-                      <input class="btn btn-primary" type="button" value="Input" />
-                      <input class="btn btn-primary" type="submit" value="Submit" />
-                      <input class="btn btn-primary" type="reset" value="Reset" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Basic Button Ends -->
-
-              <!-- Card: Button Color Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Color Buttons</h4>
-                  <p class="card-subtitle">
-                    Use color modifier classes to change the button style. Example: <code>.btn-primary</code>,
-                    <code>.btn-secondary</code>, <code>.btn-success</code>, <code>.btn-danger</code>,
-                    <code>.btn-warning</code>, <code>.btn-info</code> and <code>.btn-dark</code>
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-primary">Primary</button>
-                      <button class="btn btn-secondary">Secondary</button>
-                      <button class="btn btn-success">Success</button>
-                      <button class="btn btn-danger">Danger</button>
-                      <button class="btn btn-warning">Warning</button>
-                      <button class="btn btn-info">Info</button>
-                      <button class="btn btn-dark">Dark</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Button Color Ends -->
-
-              <!-- Card: Button Size Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Button Sizes</h4>
+                  <h4 class="card-title">Basic Input Groups</h4>
 
                   <p class="card-subtitle">
-                    Use size modifier classes to change the button size. Example: <code>.btn-xs</code>,
-                    <code>.btn-sm</code>, <code>.btn-md</code>, <code>.btn-lg</code>, <code>.btn-xl</code>. Default is
-                    <code>.btn-md</code>
+                    Example of basic input groups.
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-primary btn-xs">Extra Small</button>
-                      <button class="btn btn-primary btn-sm">Small</button>
-                      <button class="btn btn-primary btn-md">Medium</button>
-                      <button class="btn btn-primary btn-lg">Large</button>
-                      <button class="btn btn-primary btn-xl">Extra Large</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Button Size Ends -->
-
-              <!-- Card: Button Outline Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Outline Buttons</h4>
-
-                  <p class="card-subtitle">
-                    Use default classes with the <code>.btn-outline-*</code> ones to create an outline button.
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-outline-primary">Primary</button>
-                      <button class="btn btn-outline-secondary">Secondary</button>
-                      <button class="btn btn-outline-success">Success</button>
-                      <button class="btn btn-outline-danger">Danger</button>
-                      <button class="btn btn-outline-warning">Warning</button>
-                      <button class="btn btn-outline-info">Info</button>
-                      <button class="btn btn-outline-dark">Dark</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Button Outline Ends -->
-
-              <!-- Card: Button Soft Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Soft Buttons</h4>
-
-                  <p class="card-subtitle">
-                    Use default classes with the <code>.btn-soft-*</code> ones to create a soft button.
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-soft-primary">Primary</button>
-                      <button class="btn btn-soft-secondary">Secondary</button>
-                      <button class="btn btn-soft-success">Success</button>
-                      <button class="btn btn-soft-danger">Danger</button>
-                      <button class="btn btn-soft-warning">Warning</button>
-                      <button class="btn btn-soft-info">Info</button>
-                      <button class="btn btn-soft-dark">Dark</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Button Soft Ends -->
-
-              <!-- Card: Button Plain Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Plain Buttons</h4>
-
-                  <p class="card-subtitle">
-                    Use default classes with the <code>.btn-plain-*</code> ones to create a plain button.
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-plain-primary">Primary</button>
-                      <button class="btn btn-plain-secondary">Secondary</button>
-                      <button class="btn btn-plain-success">Success</button>
-                      <button class="btn btn-plain-danger">Danger</button>
-                      <button class="btn btn-plain-warning">Warning</button>
-                      <button class="btn btn-plain-info">Info</button>
-                      <button class="btn btn-plain-dark">Dark</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Button Plain Ends -->
-
-              <!-- Card: Button Rounded Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Rounded Buttons</h4>
-
-                  <p class="card-subtitle">Use <code>.rounded-full</code> class to create a rounded button.</p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-primary rounded-full">Primary</button>
-                      <button class="btn btn-secondary rounded-full">Secondary</button>
-                      <button class="btn btn-success rounded-full">Success</button>
-                      <button class="btn btn-danger rounded-full">Danger</button>
-                      <button class="btn btn-warning rounded-full">Warning</button>
-                      <button class="btn btn-info rounded-full">Info</button>
-                      <button class="btn btn-dark rounded-full">Dark</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Button Rounded Ends -->
-
-              <!-- Card: Button Icon Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Icon Buttons</h4>
-
-                  <p class="card-subtitle">By adding <code>icon</code> to the button, you can create icon buttons</p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-primary">
-                        <i data-feather="home" height="1rem" width="1rem"></i>
-                        <span>Home</span>
-                      </button>
-                      <button class="btn btn-warning">
-                        <i data-feather="user-plus" height="1rem" width="1rem"></i>
-                        <span>Users</span>
-                      </button>
-                      <button class="btn btn-danger">
-                        <i data-feather="trash" height="1rem" width="1rem"></i>
-                        <span>Delete</span>
-                      </button>
-                      <button class="btn btn-info">
-                        <i data-feather="edit" height="1rem" width="1rem"></i>
-                        <span>Edit</span>
-                      </button>
-                      <button class="btn btn-success">
-                        <i data-feather="check-circle" height="1rem" width="1rem"></i>
-                        <span>Done</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Button Icon Ends -->
-
-              <!-- Card: Button Loading Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Loading Buttons</h4>
-
-                  <p class="card-subtitle">
-                    By adding a loading icon with <code>disabled</code> attribute, you can create loading button.
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-primary" disabled="true">
-                        <i class="animate-spin" data-feather="loader" height="1rem" width="1rem"></i>
-                        <span>Loading</span>
-                      </button>
-                      <button class="btn btn-success" disabled="true">
-                        <i class="animate-spin" data-feather="loader" height="1rem" width="1rem"></i>
-                        <span>Loading</span>
-                      </button>
-                      <button class="btn btn-info" disabled="true">
-                        <i class="animate-spin" data-feather="loader" height="1rem" width="1rem"></i>
-                        <span>Loading</span>
-                      </button>
-                      <button class="btn btn-danger" disabled="true">
-                        <i class="animate-spin" data-feather="loader" height="1rem" width="1rem"></i>
-                        <span>Loading</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Button Loading Ends -->
-
-              <!-- Card: Button Disabled Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Disabled Buttons</h4>
-
-                  <p class="card-subtitle">To disable a button, use <code>disable="true"</code> attribute on it.</p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <button class="btn btn-primary" disabled="true">Primary</button>
-                      <button class="btn btn-secondary" disabled="true">Secondary</button>
-                      <button class="btn btn-success" disabled="true">Success</button>
-                      <button class="btn btn-danger" disabled="true">Danger</button>
-                      <button class="btn btn-warning" disabled="true">Warning</button>
-                      <button class="btn btn-info" disabled="true">Info</button>
-                      <button class="btn btn-dark" disabled="true">Dark</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Button Disabled Ends -->
-
-              <!-- Card: Button Block Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Block Buttons</h4>
-
-                  <p class="card-subtitle">Use <code>.w-full</code> class to create a block button.</p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="space-y-4">
-                      <button class="btn btn-primary w-full">Block Button</button>
-                      <button class="btn btn-secondary w-full">Block Button</button>
-                      <button class="btn btn-success w-full">Block Button</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Button Block Ends -->
-
-              <!-- Card: Button Group Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Group Buttons</h4>
-
-                  <p class="card-subtitle">
-                    To create button groups, wrap all the buttons with a <code>.btn-group</code> class.
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <div class="btn-group">
-                        <button class="btn btn-primary">HTML</button>
-                        <button class="btn btn-primary">CSS</button>
-                        <button class="btn btn-primary">Javascript</button>
-                        <button class="btn btn-primary">PHP</button>
-                        <button class="btn btn-primary">Python</button>
-                      </div>
-                      <div class="btn-group">
-                        <button class="btn btn-outline-primary gap-2">
-                          <i data-feather="thumbs-up" height="1rem" width="1rem"></i>
-                          <span>120k</span>
-                        </button>
-                        <button class="btn btn-outline-primary gap-2">
-                          <i data-feather="heart" height="1rem" width="1rem"></i>
-                          <span>200k</span>
-                        </button>
-                      </div>
-                      <div class="btn-group rounded">
-                        <button class="btn btn-soft-primary">Years</button>
-                        <button class="btn btn-soft-primary">Months</button>
-                        <button class="btn btn-soft-primary">Days</button>
+                    <div class="code-viewer-content bg-white">
+                      <div class="flex flex-col gap-4">
+                        <div class="input-group">
+                          <span class="input-group-text">@</span>
+                          <input class="input" type="text" placeholder="Username">
+                        </div>
+                        <div class="input-group">
+                          <span class="input-group-text">https://example.com/users/</span>
+                          <input class="input" type="text" placeholder="Username">
+                        </div>
+                        <div class="input-group">
+                          <input class="input" type="text" placeholder="Username">
+                          <span class="input-group-text">@example.com</span>
+                        </div>
+                        <div class="input-group">
+                          <input class="input" type="password" placeholder="Password">
+                          <span class="input-group-text">
+                            <i width="1rem" height="1rem" data-feather="lock"></i>
+                          </span>
+                        </div>
+                        <div class="input-group">
+                          <span class="input-group-text">
+                            <i width="1rem" heigt="1rem" data-feather="message-circle"></i>
+                            <span>Message</span>
+                          </span>
+                          <textarea class="textarea"></textarea>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Button Group Ends -->
+              <!-- Card: Basic Input Group Ends -->
+
+              <!-- Card: Input Group Size Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Input Group Sizes</h4>
+
+                  <p class="card-subtitle">
+                    Example of different sizes input group.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content bg-white">
+                      <div class="flex flex-col gap-4">
+                        <div class="input-group">
+                          <span class="input-group-text">@</span>
+                          <input class="input input-sm" type="text" placeholder="Username">
+                        </div>
+                        <div class="input-group input-group-md">
+                          <span class="input-group-text">@</span>
+                          <input class="input input-md" type="text" placeholder="Username">
+                        </div>
+                        <div class="input-group input-group-lg">
+                          <span class="input-group-text">@</span>
+                          <input class="input input-lg" type="text" placeholder="Username">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Input Group Size Ends -->
+
+              <!-- Card: Input Group With Mutitple Input Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Multiple Inputs</h4>
+
+                  <p class="card-subtitle">
+                    Example of multiple inputs in input group.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content bg-white">
+                      <div class="input-group">
+                        <span class="input-group-text">Full name</span>
+                        <input class="input" type="text" placeholder="First name">
+                        <input class="input" type="text" placeholder="Last name">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Input Group With Mutitple Input Ends -->
+
+              <!-- Card: Input Group With Mutitple Addon Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Multiple Addons</h4>
+
+                  <p class="card-subtitle">
+                    Example of addons in input group.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content bg-white">
+                      <div class="flex flex-col gap-4">
+                        <div class="input-group">
+                          <span class="input-group-text">$</span>
+                          <span class="input-group-text">0.00</span>
+                          <input class="input" type="text" placeholder="Price">
+                        </div>
+                        <div class="input-group">
+                          <input class="input" type="text" placeholder="Price">
+                          <span class="input-group-text">$</span>
+                          <span class="input-group-text">0.00</span>
+                        </div>
+                        <div class="input-group">
+                          <span class="input-group-text">$</span>
+                          <input class="input" type="text" placeholder="Price">
+                          <span class="input-group-text">0.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Input Group With Mutitple Addon Ends -->
+
+              <!-- Card: Input Group Valid Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Input Group Valid</h4>
+
+                  <p class="card-subtitle">
+                    Example of valid input in input group.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content bg-white">
+                      <div class="input-group">
+                        <span class="input-group-text">@</span>
+                        <input class="input input-valid" type="text" placeholder="Username">
+                      </div>
+                      <p class="success-message mt-1">Looks good</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Input Group Valid Ends -->
+
+              <!-- Card: Input Group Invalid Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Input Group Invalid</h4>
+
+                  <p class="card-subtitle">
+                    Example of invalid input group.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content bg-white">
+                      <div class="input-group">
+                        <span class="input-group-text">@</span>
+                        <input class="input input-invalid" type="text" placeholder="Username">
+                      </div>
+                      <p class="error-message mt-1">This field is required</p>
+                    </div>    
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Input Group Invalid Ends -->
+              
+              <!-- Card: Input Group Disabled Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Input Group Disabled</h4>
+
+                  <p class="card-subtitle">
+                    You can create a input by using the<code>input</code> component
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content bg-white">
+                      <div class="input-group input-group-disabled">
+                        <span class="input-group-text">@</span>
+                        <input class="input" type="text" placeholder="Username" disabled>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Input Group Disabled Ends -->              
             </div>
-            <!-- Button Ends -->
+            <!-- Input Ends -->
           </main>
           <!-- Main Content Ends -->
 
