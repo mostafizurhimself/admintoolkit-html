@@ -21,6 +21,7 @@ import carousel from './components/carousel';
 
 import editor from './components/editor';
 import select from './components/select';
+import uploader from './components/uploader';
 
 // Initialize code highlighting
 codeViewer.init();
@@ -53,6 +54,9 @@ editor.init();
 
 // Initialize Select
 select.init();
+
+// Initialize Uploader
+uploader.init();
 
 // Initialize Datepicker
 datepicker.init();

@@ -3,28 +3,81 @@
     @apply relative inline-flex cursor-pointer items-center gap-2;
 
     &-body {
-      @apply h-5 w-9 rounded-full bg-slate-200 transition-colors duration-100 after:absolute 
-      after:top-[2px] after:left-[2px] after:h-4 after:w-4 after:rounded-full after:bg-slate-50 after:transition-all after:content-[''] peer-checked:bg-primary-500 
-      peer-checked:after:translate-x-full group-[.toggle-primary]:peer-checked:bg-primary-500 group-[.toggle-secondary]:peer-checked:bg-slate-500 group-[.toggle-success]:peer-checked:bg-success-500 group-[.toggle-danger]:peer-checked:bg-danger-500
-      group-[.toggle-warning]:peer-checked:bg-warning-500
-      group-[.toggle-info]:peer-checked:bg-info-500
-      group-[.toggle-dark]:peer-checked:bg-dark-500
+      @apply 
+      w-9 h-5 
+      rounded-full 
+      bg-slate-200 
+      transition-colors 
+      duration-100 
+
+      after:content-[''] 
+      after:absolute 
+      after:top-[2px] 
+      after:left-[2px] 
+      after:w-4 after:h-4 
+      after:rounded-full 
+      after:transition-all 
+      after:bg-slate-50 
+
       peer-focus:outline-none
+      peer-focus:ring
+      peer-focus:ring-opacity-50
+      peer-focus:ring-primary-500
+
+      peer-checked:after:translate-x-full 
+      peer-checked:bg-primary-500 
+
       peer-disabled:cursor-not-allowed
       peer-disabled:opacity-50
+      
+      group-[.toggle-primary]:peer-focus:ring 
+      group-[.toggle-primary]:peer-focus:ring-opacity-50 
+      group-[.toggle-primary]:peer-focus:ring-primary-500 
+      group-[.toggle-primary]:peer-checked:bg-primary-500 
+      
+      group-[.toggle-secondary]:peer-focus:ring 
+      group-[.toggle-secondary]:peer-focus:ring-opacity-50 
+      group-[.toggle-secondary]:peer-focus:ring-slate-500 
+      group-[.toggle-secondary]:peer-checked:bg-slate-500 
+      
+      group-[.toggle-success]:peer-focus:ring 
+      group-[.toggle-success]:peer-focus:ring-opacity-50 
+      group-[.toggle-success]:peer-focus:ring-success-500 
+      group-[.toggle-success]:peer-checked:bg-success-500 
+
+      group-[.toggle-danger]:peer-focus:ring
+      group-[.toggle-danger]:peer-focus:ring-opacity-50
+      group-[.toggle-danger]:peer-focus:ring-danger-500
+      group-[.toggle-danger]:peer-checked:bg-danger-500
+
+      group-[.toggle-warning]:peer-focus:ring
+      group-[.toggle-warning]:peer-focus:ring-opacity-50
+      group-[.toggle-warning]:peer-focus:ring-warning-500
+      group-[.toggle-warning]:peer-checked:bg-warning-500
+
+      group-[.toggle-info]:peer-focus:ring
+      group-[.toggle-info]:peer-focus:ring-opacity-50
+      group-[.toggle-info]:peer-focus:ring-info-500
+      group-[.toggle-info]:peer-checked:bg-info-500
+
+      group-[.toggle-dark]:peer-focus:ring
+      group-[.toggle-dark]:peer-focus:ring-opacity-50
+      group-[.toggle-dark]:peer-focus:ring-dark-500
+      group-[.toggle-dark]:peer-checked:bg-dark-500
+
       dark:bg-slate-700;
     }
 
     &-sm &-body {
-      @apply h-5 w-9 after:h-4 after:w-4;
+      @apply w-9 h-5 after:w-4 after:h-4;
     }
 
     &-md &-body {
-      @apply h-6 w-11 after:h-5 after:w-5;
+      @apply w-11 h-6 after:w-5 after:h-5;
     }
 
     &-lg &-body {
-      @apply h-[28px] w-[52px] after:h-6 after:w-6;
+      @apply w-[3.25rem] h-[1.75rem] after:w-6 after:h-6;
     }
   }
 }

@@ -10,6 +10,7 @@ $flag-icons-path: "../images/flags";
 @import 'quill/dist/quill.snow.css';
 @import 'quill/dist/quill.bubble.css';
 @import 'swiper/swiper-bundle.css';
+@import 'dropzone/dist/dropzone.css';
 
 //Vendor scss files.
 @import '@tabler/icons-webfont/tabler-icons.scss';
@@ -53,4 +54,5 @@ $flag-icons-path: "../images/flags";
 @import 'components/datepicker';
 @import 'components/carousel';
 @import 'components/drawer';
+@import 'components/uploader';
 // @import 'components/spinkit-spinner';

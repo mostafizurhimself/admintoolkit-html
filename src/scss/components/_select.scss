@@ -1,6 +1,6 @@
 @layer components {
   .select {
-    @apply w-full h-10 px-4 text-sm rounded-primary bg-transparent border border-slate-300 text-slate-700 focus:ring-1 focus:border-primary-500 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-slate-100 dark:focus:border-primary-500 dark:disabled:bg-slate-700 dark:text-slate-400 dark:bg-transparent dark:border-slate-600;
+    @apply w-full h-10 px-4 text-sm rounded-primary bg-transparent border border-slate-300 text-slate-700 focus:ring-1 focus:border-primary-500 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-80 disabled:bg-slate-100 disabled:text-slate-500 dark:bg-transparent dark:focus:border-primary-500 dark:text-slate-400 dark:border-slate-600 dark:disabled:bg-slate-700;
 
     & > option {
       @apply text-slate-700;
@@ -31,9 +31,9 @@
     }
   }
   
-  //Prevent multiple scrollbar appearing
   select.tom-select {
-    display: none !important;
+    //Prevent multiple scrollbar appearing in chrome using custom utility.
+    @apply zero-sr-only;
   }
 
   .tom-select {

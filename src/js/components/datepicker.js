@@ -1,85 +1,79 @@
 import flatpickr from "flatpickr";
 
 const datepicker = {
-  init() {    
-    const flatpickrDateInputs           = document.querySelectorAll('.flatpickr-input-date');
-    const flatpickrDatetimeInputs       = document.querySelectorAll('.flatpickr-input-datetime');
-    const flatpickrRangeInputs          = document.querySelectorAll('.flatpickr-input-range');
-    const flatpickrDisabledRangeInputs  = document.querySelectorAll('.flatpickr-input-disabled-range');
-    const flatpickrTimeInputs           = document.querySelectorAll('.flatpickr-input-time');
-    const flatpickrMultipleInputs       = document.querySelectorAll('.flatpickr-input-multiple');
-    const flatpickrHumanFriendlyInputs  = document.querySelectorAll('.flatpickr-input-human-friendly');
-    const flatpickrInlineInputs         = document.querySelectorAll('.flatpickr-input-inline');
+  init() {
+    const inputDate             = document.querySelectorAll('.input-date');
+    const inputDatetime         = document.querySelectorAll('.input-datetime');
+    const inputDateRange        = document.querySelectorAll('.input-date-range');
+    const inputTime             = document.querySelectorAll('.input-time');
+    const inputDateMultiple     = document.querySelectorAll('.input-date-multiple');
+    const inputDateFormated     = document.querySelectorAll('.input-date-formated');
+    const inputDateInline       = document.querySelectorAll('.input-date-inline');
+    const inputDateRangeDisabled = document.querySelectorAll('.input-date-range-disabled');
+    const inputDateCustom       = document.querySelectorAll('.input-date-custom');
 
-    if(flatpickrDateInputs.length) {
-      [...flatpickrDateInputs].forEach(input => {
-        flatpickr(input)
-      });
-    }
-    
-    if(flatpickrDatetimeInputs.length) {
-      [...flatpickrDatetimeInputs].forEach(input => {
-        flatpickr(input, {
-          enableTime: true,
-        })
-      });
+    if(inputDate.length) {
+      [...inputDate].forEach(input => flatpickr(input));
     }
 
-    if(flatpickrRangeInputs.length) {
-      [...flatpickrRangeInputs].forEach(input => {
-        flatpickr(input, {
-          mode: 'range'
-        })
-      });
+    if(inputDatetime.length) {
+      [...inputDatetime].forEach(input => flatpickr(input, {
+        enableTime: true
+      }));
     }
 
-    if(flatpickrDisabledRangeInputs.length) {
-      [...flatpickrDisabledRangeInputs].forEach(input => {
-        flatpickr(input, {
-          disable: [
-            {
-              from: '2023-02-10',
-              to: '2023-02-17'
-            }
-          ]
-        })
-      });
+    if(inputDateRange.length) {
+      [...inputDateRange].forEach(input => flatpickr(input, {
+        mode: 'range'
+      }));
     }
 
-    if(flatpickrTimeInputs.length) {
-      [...flatpickrTimeInputs].forEach(input => {
-        flatpickr(input, {
-          enableTime: true,
-          noCalendar: true,
-          dateFormat: 'H:i',
-        })
-      });
+    if(inputTime.length) {
+      [...inputTime].forEach(input => flatpickr(input, {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: 'H:i',
+      }));
     }
 
-    if(flatpickrMultipleInputs.length) {
-      [...flatpickrMultipleInputs].forEach(input => {
-        flatpickr(input, {
-          mode: 'multiple',
-        })
-      });
+    if(inputDateMultiple.length) {
+      [...inputDateMultiple].forEach(input => flatpickr(input, {
+        mode: 'multiple',
+      }));
     }
 
-    if(flatpickrHumanFriendlyInputs.length) {
-      [...flatpickrHumanFriendlyInputs].forEach(input => {
-        flatpickr(input, {
-          altInput: true,
-          altFormat: "F j, Y",
-          dateFormat: "Y-m-d",
-        })
-      });
+    if(inputDateFormated.length) {
+      [...inputDateFormated].forEach(input => flatpickr(input, {
+        altInput: true,
+        altFormat: 'F j, Y',
+        dateFormat: 'Y-m-d',
+      }));
     }
 
-    if(flatpickrInlineInputs.length) {
-      [...flatpickrInlineInputs].forEach(input => {
-        flatpickr(input, {
-          inline: true
-        })
-      });
+    if(inputDateInline.length) {
+      [...inputDateInline].forEach(input => flatpickr(input, {
+        inline: true
+      }));
+    }
+
+    if(inputDateRangeDisabled.length) {
+      const fromDate  = new Date(Date.now() + 3600 * 1000 * 24);
+      const toDate    = new Date(Date.now() + 3600 * 1000 * 168);
+
+      [...inputDateRangeDisabled].forEach(input => flatpickr(input, {
+        dateFormat: 'Y-m-d',
+        disable: [
+          {
+            // Disable from tomorrow to next 7 days
+            from: fromDate.toISOString().split('T')[0],
+            to: toDate.toISOString().split('T')[0]
+          }
+        ]
+      }));
+    }
+
+    if(inputDateCustom.length) {
+      [...inputDateCustom].forEach(input => flatpickr(input));
     }
   }
 }
