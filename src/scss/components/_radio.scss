@@ -1,7 +1,19 @@
 @layer components {
   .radio {
-    @apply h-4 w-4 border-slate-400 bg-transparent text-primary-500 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-50;
+    @apply w-4 h-4 bg-transparent text-primary-500 border-slate-300 focus:ring-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-80 dark:focus:ring-offset-slate-900;
   
+    &-sm {
+      @apply w-3.5 h-3.5;
+    }
+  
+    &-md {
+      @apply w-4 h-4;
+    }
+  
+    &-lg {
+      @apply w-5 h-5;
+    }
+
     &-primary {
       @apply text-primary-500 focus:ring-primary-500;
     }
@@ -28,18 +40,6 @@
   
     &-dark {
       @apply text-dark-500 focus:ring-dark-500;
-    }
-  
-    &-sm {
-      @apply h-4 w-4;
-    }
-  
-    &-md {
-      @apply h-5 w-5;
-    }
-  
-    &-lg {
-      @apply h-6 w-6;
     }
   }  
 }

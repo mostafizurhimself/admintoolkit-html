@@ -783,21 +783,19 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Basic Radio</h4>
-                  <p class="card-subtitle">You can use the <code>Radio</code> component to render a checkbox input.</p>
+                  <p class="card-subtitle">
+                    Example of basic radio.
+                  </p>
 
                   <div class="code-viewer mt-4">
                     <div class="flex flex-wrap gap-4">
                       <div class="flex items-center gap-1.5">
-                        <input id="checked" class="radio" type="radio" name="basic-radio" checked="true" />
+                        <input id="checked" class="radio" type="radio" name="basic-radio" checked>
                         <label for="checked" class="label">Checked</label>
                       </div>
                       <div class="flex items-center gap-1.5">
-                        <input id="unchecked" type="radio" class="radio" name="basic-radio" />
+                        <input id="unchecked" type="radio" class="radio" name="basic-radio">
                         <label for="unchecked" class="label">Unchecked</label>
-                      </div>
-                      <div class="flex items-center gap-1.5">
-                        <input id="disabled" type="radio" class="radio" name="basic-radio" disabled="true" />
-                        <label for="disabled" aria-disabled="true" class="label">Disable</label>
                       </div>
                     </div>
                   </div>
@@ -810,29 +808,21 @@
                 <div class="card-body">
                   <h4 class="card-title">Radio Colors</h4>
                   <p class="card-subtitle">
-                    Use the <code>color</code> prop to change the color of the checkbox. You can use the following
-                    colors: <code>primary</code>, <code>secondary</code>, <code>success</code>, <code>danger</code>,
-                    <code>warning</code>, <code>info</code>, <code>dark</code>. Default color is <code>primary</code>.
+                    Example of different colors of radios. The default is <code>.radio-primary</code>
                   </p>
 
                   <div class="code-viewer mt-4">
                     <div class="flex flex-wrap gap-4">
                       <div class="flex items-center gap-1.5">
-                        <input
-                          id="radio-primary"
-                          class="radio radio-primary"
-                          type="radio"
-                          name="radio-color"
-                          checked="true"
-                        />
+                        <input id="radio-primary" class="radio radio-primary" type="radio" name="radio-color" checked>
                         <label for="radio-primary" class="label">Primary</label>
                       </div>
                       <div class="flex items-center gap-1.5">
-                        <input id="radio-secondary" class="radio radio-secondary" type="radio" name="radio-color" />
+                        <input id="radio-secondary" class="radio radio-secondary" type="radio" name="radio-color">
                         <label for="radio-secondary" class="label">Secondary</label>
                       </div>
                       <div class="flex items-center gap-1.5">
-                        <input id="radio-success" class="radio radio-success" type="radio" name="radio-color" />
+                        <input id="radio-success" class="radio radio-success" type="radio" name="radio-color">
                         <label for="radio-success" class="label">Success</label>
                       </div>
                       <div class="flex items-center gap-1.5">
@@ -840,15 +830,15 @@
                         <label for="radio-danager" class="label">Danger</label>
                       </div>
                       <div class="flex items-center gap-1.5">
-                        <input id="radio-warning" class="radio radio-warning" type="radio" name="radio-color" />
+                        <input id="radio-warning" class="radio radio-warning" type="radio" name="radio-color">
                         <label for="radio-warning" class="label">Warning</label>
                       </div>
                       <div class="flex items-center gap-1.5">
-                        <input id="radio-info" class="radio radio-info" type="radio" name="radio-color" />
+                        <input id="radio-info" class="radio radio-info" type="radio" name="radio-color">
                         <label for="radio-info" class="label">Info</label>
                       </div>
                       <div class="flex items-center gap-1.5">
-                        <input id="radio-dark" class="radio radio-dark" type="radio" name="radio-color" />
+                        <input id="radio-dark" class="radio radio-dark" type="radio" name="radio-color">
                         <label for="radio-dark" class="label">Dark</label>
                       </div>
                     </div>
@@ -862,23 +852,22 @@
                 <div class="card-body">
                   <h4 class="card-title">Radio Sizes</h4>
                   <p class="card-subtitle">
-                    Use the <code>radioSize</code> prop to change the size of the checkbox. You can use the following
-                    sizes: <code>sm</code>, <code>md</code>, <code>lg</code>. Default size is <code>sm</code>.
+                    Example of different sizes of radios. The Default is <code>.radio-md</code>.
                   </p>
 
                   <div class="code-viewer mt-4">
                     <div class="flex flex-wrap gap-4">
                       <div class="flex items-center gap-1.5">
-                        <input id="radio-sm" class="radio radio-sm" type="radio" name="radio-size" />
-                        <label for="radio-sm" class="label">Small</label>
+                        <input id="radio-sm" class="radio radio-sm" type="radio" name="radio-size" checked>
+                        <label for="radio-sm" class="label label-sm">Small</label>
                       </div>
                       <div class="flex items-center gap-1.5">
-                        <input id="radio-md" class="radio radio-md" type="radio" name="radio-size" />
+                        <input id="radio-md" class="radio radio-md" type="radio" name="radio-size">
                         <label for="radio-md" class="label">Medium</label>
                       </div>
                       <div class="flex items-center gap-1.5">
-                        <input id="radio-lg" class="radio radio-lg" type="radio" name="radio-size" />
-                        <label for="radio-lg" class="label">Large</label>
+                        <input id="radio-lg" class="radio radio-lg" type="radio" name="radio-size">
+                        <label for="radio-lg" class="label label-lg">Large</label>
                       </div>
                     </div>
                   </div>
@@ -886,124 +875,81 @@
               </div>
               <!-- Card: Radio Size Ends -->
 
+              <!-- Card: Disabled Radio Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Disabled Radio</h4>
+                  <p class="card-subtitle">
+                    Example of disabled radio. 
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap gap-4">
+                      <div class="flex items-center gap-1.5">
+                        <input id="disabled" type="radio" class="radio" name="disabled-radio" disabled checked />
+                        <label for="disabled" class="label label-disabled">Checked Disabled</label>
+                      </div>
+                      <div class="flex items-center gap-1.5">
+                        <input id="disabled" type="radio" class="radio" name="disabled-radio" disabled />
+                        <label for="disabled" class="label label-disabled">Unchecked Disabled</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Disabled Radio Ends -->
+
               <!-- Card: Custom Radio Starts -->
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Custom Radio</h4>
                   <p class="card-subtitle">
-                    Use <code>RadioGroup</code> component from headless UI to create a custom radio. Checkout the
-                    <a
-                      class="text-primary-500 hover:underline"
-                      href="https://headlessui.dev/react/radio-group"
-                      target="_blank"
-                      rel="noreferrer"
-                      >Headless UI documentation</a
-                    >
-                    documentation for more details.
+                    Example of custom radio. 
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-col flex-wrap gap-4">
-                      <label class="text-base font-medium text-gray-900"> Select Plan </label>
-                      <div class="mt-4 grid max-w-4xl grid-cols-1 gap-y-6 sm:grid-cols-3 sm:gap-x-4">
-                        <label
-                          for="custom-radio-card-startup"
-                          class="relative flex cursor-pointer rounded-lg border-transparent bg-white p-4 shadow-sm focus:outline-none dark:bg-slate-800"
-                        >
-                          <input
-                            id="custom-radio-card-startup"
-                            class="peer hidden"
-                            type="radio"
-                            checked="true"
-                            name="custom-radio-card"
-                          />
-                          <span class="flex flex-1">
-                            <span class="flex flex-col">
-                              <span class="block text-sm font-medium text-gray-900 dark:text-white">Startup</span>
-                              <span class="mt-1 flex items-center text-sm text-gray-500 dark:text-gray-400"
-                                >12GB/6 CPUs</span
-                              >
-                              <span class="mt-6 text-sm font-medium text-gray-900 dark:text-white"
-                                >160 GB SSD disk</span
-                              >
-                            </span>
-                          </span>
-                          <i
-                            class="hidden h-5 w-5 text-primary-600 peer-checked:block"
-                            data-feather="check-circle"
-                            height="1em"
-                            width="1em"
-                          ></i>
-                          <span
-                            class="pointer-events-none absolute -inset-px hidden rounded-lg border-2 border-primary-500 peer-checked:block"
-                            aria-hidden="true"
-                          ></span>
-                        </label>
-                        <label
-                          for="custom-radio-card-business"
-                          class="relative flex cursor-pointer rounded-lg border-transparent bg-white p-4 shadow-sm focus:outline-none dark:bg-slate-800"
-                        >
-                          <input
-                            id="custom-radio-card-business"
-                            class="peer hidden"
-                            type="radio"
-                            name="custom-radio-card"
-                          />
-                          <span class="flex flex-1">
-                            <span class="flex flex-col">
-                              <span class="block text-sm font-medium text-gray-900 dark:text-white">Business</span>
-                              <span class="mt-1 flex items-center text-sm text-gray-500 dark:text-gray-400"
-                                >16GB/8 CPUs</span
-                              >
-                              <span class="mt-6 text-sm font-medium text-gray-900 dark:text-white"
-                                >512 GB SSD disk</span
-                              >
-                            </span>
-                          </span>
-                          <i
-                            class="hidden h-5 w-5 text-primary-600 peer-checked:block"
-                            data-feather="check-circle"
-                            height="1em"
-                            width="1em"
-                          ></i>
-                          <span
-                            class="pointer-events-none absolute -inset-px hidden rounded-lg border-2 border-primary-500 peer-checked:block"
-                            aria-hidden="true"
-                          ></span>
-                        </label>
-                        <label
-                          for="custom-radio-card-enterprise"
-                          class="relative flex cursor-pointer rounded-lg border-transparent bg-white p-4 shadow-sm focus:outline-none dark:bg-slate-800"
-                        >
-                          <input
-                            id="custom-radio-card-enterprise"
-                            class="peer hidden"
-                            type="radio"
-                            name="custom-radio-card"
-                          />
-                          <span class="flex flex-1">
-                            <span class="flex flex-col">
-                              <span class="block text-sm font-medium text-gray-900 dark:text-white">Enterprise</span>
-                              <span class="mt-1 flex items-center text-sm text-gray-500 dark:text-gray-400"
-                                >32GB/12 CPUs</span
-                              >
-                              <span class="mt-6 text-sm font-medium text-gray-900 dark:text-white"
-                                >1024 GB SSD disk</span
-                              >
-                            </span>
-                          </span>
-                          <i
-                            class="hidden h-5 w-5 text-primary-600 peer-checked:block"
-                            data-feather="check-circle"
-                            height="1em"
-                            width="1em"
-                          ></i>
-                          <span
-                            class="pointer-events-none absolute -inset-px hidden rounded-lg border-2 border-primary-500 peer-checked:block"
-                            aria-hidden="true"
-                          ></span>
-                        </label>
-                      </div>
+                    <h6>Select Plane</h6>
+
+                    <div class="max-w-5xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-4">
+                      <label for="custom-radio-card-startup" class="relative">
+                        <input id="custom-radio-card-startup" class="peer zero-sr-only" type="radio" name="custom-radio-card" checked>
+                        <div class="rounded-primary p-4 shadow cursor-pointer bg-white border border-slate-300 peer-checked:ring-1 peer-checked:ring-primary-500 peer-checked:border-primary-500 dark:border-slate-600 dark:bg-slate-800">
+                          <div class="flex flex-col">
+                            <h6>Startup</h6>
+                            <span class="mt-1 text-sm text-gray-500 dark:text-gray-400">12GB/6 CPUs</span>
+                            <span class="mt-6 text-sm font-medium text-gray-600 dark:text-slate-300">160 GB SSD disk</span>
+                          </div>
+                        </div>
+                        <div class="w-5 h-5 absolute top-4 right-4 hidden peer-checked:block">
+                          <i class="text-primary-600" data-feather="check-circle" height="100%" width="100%"></i>
+                        </div>
+                      </label>
+                      <label for="custom-radio-card-business" class="relative">
+                        <input id="custom-radio-card-business" class="peer zero-sr-only" type="radio" name="custom-radio-card">
+                        <div class="rounded-primary p-4 shadow cursor-pointer bg-white border border-slate-300 peer-checked:ring-1 peer-checked:ring-primary-500 peer-checked:border-primary-500 dark:border-slate-600 dark:bg-slate-800">
+                          <div class="flex flex-col">
+                            <h6>Business</h6>
+                            <span class="mt-1 text-sm text-gray-500 dark:text-gray-400">16GB/8 CPUs</span>
+                            <span class="mt-6 text-sm font-medium text-gray-600 dark:text-slate-300">512 GB SSD disk</span>
+                          </div>
+                        </div>
+                        <div class="w-5 h-5 absolute top-4 right-4 hidden peer-checked:block">
+                          <i class="text-primary-600" data-feather="check-circle" height="100%" width="100%"></i>
+                        </div>
+                      </label>
+                      <label for="custom-radio-card-enterprise" class="relative">
+                        <input id="custom-radio-card-enterprise" class="peer zero-sr-only" type="radio" name="custom-radio-card">
+                        <div class="rounded-primary p-4 shadow cursor-pointer bg-white border border-slate-300 peer-checked:ring-1 peer-checked:ring-primary-500 peer-checked:border-primary-500 dark:border-slate-600 dark:bg-slate-800">
+                          <div class="flex flex-col">
+                            <h6>Enterprise</h6>
+                            <span class="mt-1 text-sm text-gray-500 dark:text-gray-400">32GB/12 CPUs</span>
+                            <span class="mt-6 text-sm font-medium text-gray-600 dark:text-slate-300">1024 GB SSD disk</span>
+                          </div>
+                        </div>
+                        <div class="w-5 h-5 absolute top-4 right-4 hidden peer-checked:block">
+                          <i class="text-primary-600" data-feather="check-circle" height="100%" width="100%"></i>
+                        </div>
+                      </label>
                     </div>
                   </div>
                 </div>

@@ -784,30 +784,21 @@
                 <div class="card-body">
                   <h4 class="card-title">Basic Toggle</h4>
 
-                  <p class="card-subtitle">Use the <code>Toggle</code> component to create a toggle switch.</p>
+                  <p class="card-subtitle">
+                    Example of basic toggle. 
+                  </p>
 
                   <div class="code-viewer mt-4">
                     <div class="flex flex-wrap items-center gap-4">
-                      <label for="toggle-checked-input" class="toggle">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="toggle-checked-input"
-                          type="checkbox"
-                          name="toggle-checked-input"
-                        />
+                      <label for="toggle-unchecked-input" class="toggle">
+                        <input class="toggle-input peer sr-only" id="toggle-unchecked-input" type="checkbox" checked>
                         <div class="toggle-body"></div>
                         <span class="label">Toggle Me</span>
                       </label>
-                      <label for="toggle-unchecked-input" class="toggle">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="toggle-unchecked-input"
-                          type="checkbox"
-                          name="toggle-unchecked-input"
-                          checked="true"
-                        />
+                      <label for="toggle-checked-input" class="toggle">
+                        <input class="toggle-input peer sr-only" id="toggle-checked-input" type="checkbox">
                         <div class="toggle-body"></div>
-                        <span class="label">Checked Toggle</span>
+                        <span class="label">Toggle Me</span>
                       </label>
                     </div>
                   </div>
@@ -821,87 +812,43 @@
                   <h4 class="card-title">Toggle Color</h4>
 
                   <p class="card-subtitle">
-                    Use the <code>color</code> prop to change the color of the toggle. You can use the following colors:
-                    <code>primary</code>, <code>secondary</code>, <code>success</code>, <code>danger</code>,
-                    <code>warning</code>, <code>info</code>, <code>dark</code>. Default color is <code>primary</code>.
+                    Example of different colors of toggles. The default is <code>.toggle-primary </code>
                   </p>
 
                   <div class="code-viewer mt-4">
                     <div class="flex flex-wrap items-center gap-4">
                       <label for="toggle-primary" class="toggle toggle-primary group">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="toggle-primary"
-                          type="checkbox"
-                          name="toggle-primary"
-                          checked="true"
-                        />
+                        <input class="toggle-input peer sr-only" id="toggle-primary" type="checkbox" checked>
                         <div class="toggle-body"></div>
                         <span class="label">Primary</span>
                       </label>
                       <label for="toggle-secondary" class="toggle toggle-secondary group">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="toggle-secondary"
-                          type="checkbox"
-                          name="toggle-secondary"
-                          checked="true"
-                        />
+                        <input class="toggle-input peer sr-only" id="toggle-secondary" type="checkbox" checked>
                         <div class="toggle-body"></div>
                         <span class="label">Secondary</span>
                       </label>
                       <label for="toggle-success" class="toggle toggle-success group">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="toggle-success"
-                          type="checkbox"
-                          name="toggle-success"
-                          checked="true"
-                        />
+                        <input class="toggle-input peer sr-only" id="toggle-success" type="checkbox" checked>
                         <div class="toggle-body"></div>
                         <span class="label">Success</span>
                       </label>
                       <label for="toggle-danger" class="toggle toggle-danger group">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="toggle-danger"
-                          type="checkbox"
-                          name="toggle-danger"
-                          checked="true"
-                        />
+                        <input class="toggle-input peer sr-only" id="toggle-danger" type="checkbox" checked>
                         <div class="toggle-body"></div>
                         <span class="label">Danger</span>
                       </label>
                       <label for="toggle-warning" class="toggle toggle-warning group">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="toggle-warning"
-                          type="checkbox"
-                          name="toggle-warning"
-                          checked="true"
-                        />
+                        <input class="toggle-input peer sr-only" id="toggle-warning" type="checkbox" checked>
                         <div class="toggle-body"></div>
                         <span class="label">Warning</span>
                       </label>
                       <label for="toggle-info" class="toggle toggle-info group">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="toggle-info"
-                          type="checkbox"
-                          name="toggle-info"
-                          checked="true"
-                        />
+                        <input class="toggle-input peer sr-only" id="toggle-info" type="checkbox" checked>
                         <div class="toggle-body"></div>
                         <span class="label">Info</span>
                       </label>
                       <label for="toggle-dark" class="toggle toggle-dark group">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="toggle-dark"
-                          type="checkbox"
-                          name="toggle-dark"
-                          checked="true"
-                        />
+                        <input class="toggle-input peer sr-only" id="toggle-dark" type="checkbox" checked>
                         <div class="toggle-body"></div>
                         <span class="label">Dark</span>
                       </label>
@@ -917,26 +864,25 @@
                   <h4 class="card-title">Toggle Size</h4>
 
                   <p class="card-subtitle">
-                    Use the <code>size</code> prop to change the size of the toggle. You can use the following sizes:
-                    <code>sm</code>, <code>md</code>, <code>lg</code>. Default size is md.
+                    Example of different sizes of toggles. The Default is <code>.toggle-md</code>. 
                   </p>
 
                   <div class="code-viewer mt-4">
                     <div class="flex flex-wrap items-center gap-4">
                       <label for="toggle-sm" class="toggle toggle-sm">
-                        <input class="toggle-input peer sr-only" id="toggle-sm" type="checkbox" name="toggle-primary" />
+                        <input class="toggle-input peer sr-only" id="toggle-sm" type="checkbox" checked>
                         <div class="toggle-body"></div>
-                        <span class="label">Smail</span>
+                        <span class="label label-sm">Smail</span>
                       </label>
                       <label for="toggle-md" class="toggle toggle-md">
-                        <input class="toggle-input peer sr-only" id="toggle-md" type="checkbox" name="toggle-primary" />
+                        <input class="toggle-input peer sr-only" id="toggle-md" type="checkbox">
                         <div class="toggle-body"></div>
                         <span class="label">Medium</span>
                       </label>
                       <label for="toggle-lg" class="toggle toggle-lg">
-                        <input class="toggle-input peer sr-only" id="toggle-lg" type="checkbox" name="toggle-primary" />
+                        <input class="toggle-input peer sr-only" id="toggle-lg" type="checkbox">
                         <div class="toggle-body"></div>
-                        <span class="label">Large</span>
+                        <span class="label label-lg">Large</span>
                       </label>
                     </div>
                   </div>
@@ -949,32 +895,21 @@
                 <div class="card-body">
                   <h4 class="card-title">Disabled Toggle</h4>
 
-                  <p class="card-subtitle">Use the <code>disabled</code> prop to disable the toggle.</p>
+                  <p class="card-subtitle">
+                    Example of disabled toggle. 
+                  </p>
 
                   <div class="code-viewer mt-4">
                     <div class="flex flex-wrap items-center gap-4">
-                      <label for="disabled-unchecked-toggle" class="toggle">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="disabled-unchecked-toggle"
-                          type="checkbox"
-                          name="disabled-unchecked-toggle"
-                          disabled="true"
-                        />
-                        <div class="toggle-body"></div>
-                        <span class="label" aria-disabled="true">Disabled Toggle</span>
-                      </label>
                       <label for="disabled-checked-toggle" class="toggle">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="disabled-checked-toggle"
-                          type="checkbox"
-                          name="disabled-checked-toggle"
-                          checked="true"
-                          disabled="true"
-                        />
+                        <input class="toggle-input peer sr-only" id="disabled-checked-toggle" type="checkbox" checked disabled>
                         <div class="toggle-body"></div>
-                        <span class="label" aria-disabled="true">Disabled Toggle</span>
+                        <span class="label label-disabled">Disabled Toggle</span>
+                      </label>
+                      <label for="disabled-unchecked-toggle" class="toggle">
+                        <input class="toggle-input peer sr-only" id="disabled-unchecked-toggle" type="checkbox" disabled>
+                        <div class="toggle-body"></div>
+                        <span class="label label-disabled">Disabled Toggle</span>
                       </label>
                     </div>
                   </div>
