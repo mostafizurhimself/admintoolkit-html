@@ -71,7 +71,7 @@
     .ql-picker,
     .ql-picker-label,
     .ql-picker-options {
-      @apply text-slate-700 dark:text-slate-50;
+      @apply text-slate-700 dark:text-slate-50 dark:bg-slate-900;
 
       .ql-stroke {
         @apply fill-none stroke-current;
