@@ -1,0 +1,154 @@
+.sidebar {
+  $sidebar: &;
+
+  @apply fixed top-0 bottom-0 z-20 h-screen w-72 -translate-x-full overflow-hidden bg-white shadow-lg transition-all duration-300 ease-in-out dark:bg-slate-800  lg:translate-x-0;
+
+  &.collapsed {
+    @apply lg:w-20;
+
+    &.hovered {
+      @apply w-72;
+    }
+  }
+
+  &.expanded {
+    @apply translate-x-0;
+  }
+
+  &-header {
+    @apply flex h-16 w-full items-center gap-4 px-4;
+  }
+
+  &-logo-icon {
+    @apply inline-block flex-shrink-0 fill-current text-primary-500;
+  }
+
+  &-logo-text {
+    @apply flex flex-col;
+  }
+
+  &.collapsed &-logo-text {
+    @apply hidden;
+  }
+
+  &.collapsed.hovered &-logo-text {
+    @apply flex;
+  }
+
+  &-content {
+    @apply mt-1 overflow-auto;
+    height: calc(100vh - 4rem);
+
+    > li {
+      @apply px-[18px];
+    }
+
+    .simplebar-content {
+      @apply space-y-0.5;
+      > li {
+        @apply px-[18px];
+      }
+    }
+  }
+
+  &-menu {
+    @apply flex w-full items-center gap-2 rounded-primary p-1 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
+
+    &-icon {
+      @apply flex h-9 w-9 min-w-max flex-shrink-0 items-center justify-center text-slate-500 dark:text-slate-400;
+
+      svg {
+        @apply h-5 w-5;
+      }
+    }
+
+    &-arrow {
+      @apply ml-auto mr-2 text-slate-600 transition-transform duration-150;
+
+      svg {
+        @apply h-4 w-4;
+      }
+    }
+
+    &-arrow.rotate {
+      @apply rotate-90 transform;
+    }
+
+    &:hover &-icon,
+    &:hover &-arrow {
+      @apply text-primary-500 dark:text-slate-200;
+    }
+
+    &.active {
+      @apply bg-primary-50 text-primary-500 dark:bg-slate-700 dark:text-slate-200;
+    }
+
+    &.active &-icon {
+      @apply rounded-primary bg-primary-500 text-slate-200 dark:bg-primary-500;
+    }
+
+    &.active &-arrow {
+      @apply text-primary-500 dark:text-slate-200;
+    }
+
+    #{$sidebar}.collapsed &-text {
+      @apply hidden;
+    }
+
+    #{$sidebar}.collapsed.hovered &-text {
+      @apply block;
+    }
+
+    #{$sidebar}.collapsed &-arrow {
+      @apply hidden;
+    }
+
+    #{$sidebar}.collapsed.hovered &-arrow {
+      @apply block;
+    }
+  }
+
+  &-submenu {
+    @apply mt-0.5 h-0 overflow-hidden transition-height duration-300 ease-in-out;
+
+    &-item {
+      @apply block rounded-primary py-2 pl-12 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
+    }
+
+    &-item.active {
+      @apply text-primary-500;
+    }
+  }
+
+  &-menu-header {
+    @apply pt-4 pb-2 pl-7 text-xs uppercase tracking-widest text-slate-400;
+  }
+
+  &-toggle {
+    @apply text-slate-600 dark:text-slate-400;
+  }
+
+  &.collapsed &-submenu {
+    @apply hidden;
+  }
+
+  &.collapsed.hovered &-submenu {
+    @apply block;
+  }
+
+  &.collapsed &-menu-header {
+    @apply hidden;
+  }
+
+  &.collapsed.hovered &-menu-header {
+    @apply block;
+  }
+
+  &-overlay {
+    @apply invisible fixed inset-0 z-10 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out lg:hidden;
+
+    &.active {
+      @apply visible;
+    }
+  }
+}

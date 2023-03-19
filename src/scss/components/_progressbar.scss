@@ -1,0 +1,367 @@
+@layer components {
+  .progress {
+    $progress: &;
+  
+    &-line {
+      @apply flex w-full items-center gap-2 overflow-hidden;
+  
+      &-track {
+        @apply w-full rounded-full bg-slate-200 dark:bg-slate-700;
+      }
+  
+      &-label {
+        @apply text-sm font-medium text-slate-600 dark:text-slate-300;
+  
+        #{$progress}-sm & {
+          @apply text-xs;
+        }
+  
+        #{$progress}-md & {
+          @apply text-sm;
+        }
+  
+        #{$progress}-lg & {
+          @apply text-base;
+        }
+      }
+  
+      &-thumb {
+        @apply flex h-3 max-w-full items-center justify-center rounded-full bg-primary-500;
+  
+        #{$progress}-sm & {
+          @apply h-2;
+        }
+  
+        #{$progress}-md & {
+          @apply h-3;
+        }
+  
+        #{$progress}-lg & {
+          @apply h-4;
+        }
+  
+        #{$progress}-primary & {
+          @apply bg-primary-500;
+        }
+  
+        #{$progress}-secondary & {
+          @apply bg-secondary-500;
+        }
+  
+        #{$progress}-success & {
+          @apply bg-success-500;
+        }
+  
+        #{$progress}-danger & {
+          @apply bg-danger-500;
+        }
+  
+        #{$progress}-warning & {
+          @apply bg-warning-500;
+        }
+  
+        #{$progress}-info & {
+          @apply bg-info-500;
+        }
+  
+        #{$progress}-dark & {
+          @apply bg-dark-500;
+        }
+  
+        #{$progress}-striped & {
+          background-image: linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.15) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.15) 75%,
+            transparent 75%,
+            transparent
+          );
+          background-size: 0.75rem;
+        }
+  
+        #{$progress}-striped#{$progress}-sm & {
+          background-size: 0.5rem;
+        }
+  
+        #{$progress}-striped#{$progress}-md & {
+          background-size: 0.75rem;
+        }
+  
+        #{$progress}-striped#{$progress}-lg & {
+          background-size: 1rem;
+        }
+  
+        #{$progress}-striped#{$progress}-animated & {
+          animation: 1s linear infinite progress-line-default-stripes;
+  
+          @keyframes progress-line-default-stripes {
+            0% {
+              background-position-x: 0.75rem;
+            }
+          }
+        }
+  
+        #{$progress}-striped#{$progress}-animated#{$progress}-sm & {
+          animation: 1s linear infinite progress-line-sm-stripes;
+  
+          @keyframes progress-line-sm-stripes {
+            0% {
+              background-position-x: 0.5rem;
+            }
+          }
+        }
+  
+        #{$progress}-striped#{$progress}-animated#{$progress}-md & {
+          animation: 1s linear infinite progress-line-md-stripes;
+  
+          @keyframes progress-line-md-stripes {
+            0% {
+              background-position-x: 0.75rem;
+            }
+          }
+        }
+  
+        #{$progress}-striped#{$progress}-animated#{$progress}-lg & {
+          animation: 1s linear infinite progress-line-lg-stripes;
+  
+          @keyframes progress-line-lg-stripes {
+            0% {
+              background-position-x: 1rem;
+            }
+          }
+        }
+      }
+    }
+  
+    &-circle {
+      @apply relative flex max-h-[150px] max-w-[150px] items-center justify-center;
+  
+      #{$progress}-sm & {
+        @apply max-h-[130px] max-w-[130px];
+      }
+  
+      #{$progress}-md & {
+        @apply max-h-[150px] max-w-[150px];
+      }
+  
+      #{$progress}-lg & {
+        @apply max-h-[170px] max-w-[170px];
+      }
+  
+      &-label {
+        @apply absolute top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 text-xl font-medium text-primary-500 dark:text-slate-300;
+  
+        #{$progress}-sm & {
+          @apply text-lg;
+        }
+        
+        #{$progress}-md & {
+          @apply text-xl;
+        }
+  
+        #{$progress}-lg & {
+          @apply text-2xl;
+        }
+  
+        #{$progress}-primary & {
+          @apply text-primary-500 dark:text-slate-300;
+        }
+  
+        #{$progress}-secondary & {
+          @apply text-secondary-500 dark:text-slate-300;
+        }
+  
+        #{$progress}-success & {
+          @apply text-success-500 dark:text-slate-300;
+        }
+  
+        #{$progress}-danger & {
+          @apply text-danger-500 dark:text-slate-300;
+        }
+  
+        #{$progress}-warning & {
+          @apply text-warning-500 dark:text-slate-300;
+        }
+  
+        #{$progress}-info & {
+          @apply text-info-500 dark:text-slate-300;
+        }
+  
+        #{$progress}-dark & {
+          @apply text-dark-500 dark:text-slate-300;
+        }
+      }
+  
+      &-svg {
+        @apply h-full w-full;
+  
+        & > circle {
+          @apply translate-x-[6px] translate-y-[6px] fill-none stroke-[12];
+          stroke-dasharray: 440;
+          stroke-dashoffset: 440;
+          stroke-linecap: round;
+  
+          &:nth-child(1) {
+            stroke-dashoffset: 0;
+            @apply stroke-slate-200 dark:stroke-slate-700;
+          }
+  
+          &:nth-child(2) {
+            @apply stroke-primary-500;
+  
+            #{$progress}-primary & {
+              @apply stroke-primary-500;
+            }
+  
+            #{$progress}-secondary & {
+              @apply stroke-secondary-500;
+            }
+  
+            #{$progress}-success & {
+              @apply stroke-success-500;
+            }
+  
+            #{$progress}-danger & {
+              @apply stroke-danger-500;
+            }
+  
+            #{$progress}-warning & {
+              @apply stroke-warning-500;
+            }
+  
+            #{$progress}-info & {
+              @apply stroke-info-500;
+            }
+  
+            #{$progress}-dark & {
+              @apply stroke-dark-500;
+            }
+          }
+        }
+      }
+    }
+  
+    &-step {
+      @apply relative flex w-full max-w-md items-center justify-between;
+  
+      &-line {
+        @apply relative h-[2px] w-full bg-slate-200 after:absolute after:inset-0 after:inline-block after:h-full after:w-0 after:bg-slate-500 after:content-[''];
+      }
+  
+      &-btn {
+        @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-transparent bg-slate-500 text-slate-100  dark:bg-slate-700;
+  
+        #{$progress}-sm & {
+          @apply h-8 w-8;
+        }
+  
+        #{$progress}-md & {
+          @apply h-10 w-10;
+        }
+  
+        #{$progress}-lg & {
+          @apply h-12 w-12;
+        }
+  
+        &-complete {
+          @apply bg-primary-500 text-slate-100 dark:bg-primary-500;
+  
+          & + #{$progress}-step-line {
+            @apply after:w-full after:bg-primary-500;
+          }
+  
+          #{$progress}-primary & {
+            @apply bg-primary-500 text-slate-100 dark:bg-primary-500;
+  
+            & + #{$progress}-step-line {
+              @apply after:w-full after:bg-primary-500;
+            }
+          }
+  
+          #{$progress}-secondary & {
+            @apply bg-secondary-500 text-slate-100 dark:bg-secondary-500;
+  
+            & + #{$progress}-step-line {
+              @apply after:w-full after:bg-secondary-500;
+            }
+          }
+  
+          #{$progress}-success & {
+            @apply bg-success-500 text-slate-100 dark:bg-success-500;
+  
+            & + #{$progress}-step-line {
+              @apply after:w-full after:bg-success-500;
+            }
+          }
+  
+          #{$progress}-danger & {
+            @apply bg-danger-500 text-slate-100 dark:bg-danger-500;
+  
+            & + #{$progress}-step-line {
+              @apply after:w-full after:bg-danger-500;
+            }
+          }
+  
+          #{$progress}-warning & {
+            @apply bg-warning-500 text-slate-100 dark:bg-warning-500;
+  
+            & + #{$progress}-step-line {
+              @apply after:w-full after:bg-warning-500;
+            }
+          }
+  
+          #{$progress}-info & {
+            @apply bg-info-500 text-slate-100 dark:bg-info-500;
+  
+            & + #{$progress}-step-line {
+              @apply after:w-full after:bg-info-500;
+            }
+          }
+  
+          #{$progress}-dark & {
+            @apply bg-dark-500 text-slate-100 dark:bg-dark-500;
+  
+            & + #{$progress}-step-line {
+              @apply after:w-full after:bg-dark-500;
+            }
+          }
+        }
+  
+        &-active {
+          @apply border-primary-500 bg-transparent text-primary-500 dark:bg-primary-900/40;
+  
+          #{$progress}-primary & {
+            @apply border-primary-500 bg-transparent text-primary-500 dark:bg-primary-900/40;
+          }
+  
+          #{$progress}-secondary & {
+            @apply border-secondary-500 bg-transparent text-secondary-500 dark:bg-secondary-900/40;
+          }
+  
+          #{$progress}-success & {
+            @apply border-success-500 bg-transparent text-success-500 dark:bg-success-900/40;
+          }
+  
+          #{$progress}-danger & {
+            @apply border-danger-500 bg-transparent text-danger-500 dark:bg-danger-900/40;
+          }
+  
+          #{$progress}-warning & {
+            @apply border-warning-500 bg-transparent text-warning-500 dark:bg-warning-900/40;
+          }
+  
+          #{$progress}-info & {
+            @apply border-info-500 bg-transparent text-info-500 dark:bg-info-900/40;
+          }
+  
+          #{$progress}-dark & {
+            @apply border-dark-500 bg-transparent text-dark-500 dark:bg-dark-900/40;
+          }
+        }
+      }
+    }
+  }
+}

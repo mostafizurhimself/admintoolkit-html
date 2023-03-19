@@ -1,0 +1,93 @@
+@layer components {
+  .badge {
+    @apply inline-flex items-center rounded-primary px-2 py-0.5 text-xs;
+
+    &-primary {
+      @apply bg-primary-500 text-primary-100;
+    }
+
+    &-secondary {
+      @apply bg-secondary-500 text-secondary-100;
+    }
+
+    &-success {
+      @apply bg-success-500 text-success-100;
+    }
+
+    &-danger {
+      @apply bg-danger-500 text-danger-100;
+    }
+
+    &-warning {
+      @apply bg-warning-500 text-warning-100;
+    }
+
+    &-info {
+      @apply bg-info-500 text-info-100;
+    }
+
+    &-dark {
+      @apply bg-dark-500 text-dark-100;
+    }
+
+    &-outline-primary {
+      @apply border border-primary-500 text-primary-500;
+    }
+
+    &-outline-secondary {
+      @apply border border-secondary-500 text-secondary-500;
+    }
+
+    &-outline-success {
+      @apply border border-success-500 text-success-500;
+    }
+
+    &-outline-danger {
+      @apply border border-danger-500 text-danger-500;
+    }
+
+    &-outline-warning {
+      @apply border border-warning-500 text-warning-500;
+    }
+
+    &-outline-info {
+      @apply border border-info-500 text-info-500;
+    }
+
+    &-outline-dark {
+      @apply border border-dark-500 text-dark-500;
+    }
+
+    &-soft-primary {
+      @apply bg-primary-100 text-primary-500;
+    }
+
+    &-soft-secondary {
+      @apply bg-secondary-100 text-secondary-500;
+    }
+
+    &-soft-success {
+      @apply bg-success-100 text-success-500;
+    }
+
+    &-soft-danger {
+      @apply bg-danger-100 text-danger-500;
+    }
+
+    &-soft-warning {
+      @apply bg-warning-100 text-warning-500;
+    }
+
+    &-soft-info {
+      @apply bg-info-100 text-info-500;
+    }
+
+    &-soft-dark {
+      @apply bg-dark-200 text-dark-500;
+    }
+
+    &-rounded {
+      @apply rounded-full px-3;
+    }
+  }
+}
