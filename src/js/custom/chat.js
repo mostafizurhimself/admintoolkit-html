@@ -1,7 +1,7 @@
 // Default Scroll To Bottom
 window.addEventListener('load', () => {
   const chats = document.getElementById('chats');
-  chatScrollHeight = chats.scrollHeight;
+  let chatScrollHeight = chats.scrollHeight;
   chats.scrollTo({ top: chatScrollHeight, left: 0 });
 });
 //  Chat List Toggle
