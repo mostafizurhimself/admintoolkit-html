@@ -1,14 +1,9 @@
-function openControlledDrawer() {
-  const controlledDrawer = createDrawer('#controlled-drawer');
-  controlledDrawer.show();
-}
-
 const controlledDrawerSourceCode = `
-  <button type="button" class="btn btn-primary" data-toggle="drawer" onclick="openControlledDrawer()">
+  <button class="btn btn-primary" type="button" id="btn-drawer-controlled">
     Controlled Drawer
   </button>
 
-  <div id="controlled-drawer" class="drawer">
+  <div id="drawer-controlled" class="drawer">
     <div class="drawer-header">
       <!-- ..... -->
     </div>
@@ -20,17 +15,28 @@ const controlledDrawerSourceCode = `
     </div>
   </div>
 
-  \<script\>
-    function openControlledDrawer() {
-      const controlledDrawer = createDrawer('#controlled-drawer', {
+  <script>
+    const btnDrawerControlled = document.querySelector('#btn-drawer-controlled');
+
+    btnDrawerControlled.addEventListener('click', () => {
+      const drawerControlled = createDrawer('#drawer-controlled', {
         keyboard: true, //Boolean. Default is true.
-        backdrop: true, //Boolean | 'static'. Default is true.
+        backdrop: true //Boolean | 'static'. Default is true.
       });
-      controlledDrawer.show();
-    }
-  \<\/script\>
+
+      drawerControlled.show();
+    });
+  </script>
 `;
 const controlledDrawerCodeViewer = createCodeViewer('#controlled-drawer-code-viewer', controlledDrawerSourceCode);
-
-
 controlledDrawerCodeViewer.render();
+
+const btnDrawerControlled = document.querySelector('#btn-drawer-controlled');
+btnDrawerControlled.addEventListener('click', () => {
+  const drawerControlled = createDrawer('#drawer-controlled', {
+    keyboard: true,
+    backdrop: true
+  });
+
+  drawerControlled.show();
+});

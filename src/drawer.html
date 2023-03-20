@@ -789,10 +789,10 @@
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <button class="btn btn-primary" type="button" data-toggle="drawer" data-target="#basic-drawer">
+                    <button class="btn btn-primary" type="button" data-toggle="drawer" data-target="#drawer-basic">
                       Basic Drawer
                     </button>
-                    <div id="basic-drawer" class="drawer">
+                    <div id="drawer-basic" class="drawer">
                       <div class="drawer-header">
                         <h5>Basic Drawer</h5>
                         <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismisss="drawer">
@@ -805,13 +805,14 @@
                         </p>
                       </div>
                       <div class="drawer-footer">
-                        <div class="flex flex-col gap-2">
-                          <a href="#" class="btn btn-primary w-full">
-                            <span>Login</span>
-                          </a>
-                          <a href="#" class="btn btn-outline-primary w-full">
-                            <span>Register</span>
-                          </a>
+                        <div class="flex justify-end gap-2">
+                          <button type="button" class="btn btn-secondary" data-dismisss="drawer">
+                            <span>Cancel</span>
+                          </button>
+
+                          <button type="button" class="btn btn-primary">
+                            <span>Confirm</span>
+                          </button>
                         </div>                        
                       </div>
                     </div>
@@ -851,13 +852,14 @@
                         </div>
 
                         <div class="drawer-footer">
-                          <div class="flex flex-col gap-2">
-                            <a href="#" class="btn btn-primary w-full">
-                              <span>Login</span>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary w-full">
-                              <span>Register</span>
-                            </a>
+                          <div class="flex justify-end gap-2">
+                            <button type="button" class="btn btn-secondary" data-dismisss="drawer">
+                              <span>Cancel</span>
+                            </button>
+  
+                            <button type="button" class="btn btn-primary">
+                              <span>Confirm</span>
+                            </button>
                           </div>                        
                         </div>
                       </div>
@@ -918,13 +920,14 @@
                         </div>
   
                         <div class="drawer-footer">
-                          <div class="flex flex-col gap-2">
-                            <a href="#" class="btn btn-primary w-full">
-                              <span>Login</span>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary w-full">
-                              <span>Register</span>
-                            </a>
+                          <div class="flex justify-end gap-2">
+                            <button type="button" class="btn btn-secondary" data-dismisss="drawer">
+                              <span>Cancel</span>
+                            </button>
+  
+                            <button type="button" class="btn btn-primary">
+                              <span>Confirm</span>
+                            </button>
                           </div>                        
                         </div>
                       </div>
@@ -993,13 +996,14 @@
                         </div>
   
                         <div class="drawer-footer">
-                          <div class="flex flex-col gap-2">
-                            <a href="#" class="btn btn-primary w-full">
-                              <span>Login</span>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary w-full">
-                              <span>Register</span>
-                            </a>
+                          <div class="flex justify-end gap-2">
+                            <button type="button" class="btn btn-secondary" data-dismisss="drawer">
+                              <span>Cancel</span>
+                            </button>
+  
+                            <button type="button" class="btn btn-primary">
+                              <span>Confirm</span>
+                            </button>
                           </div>                        
                         </div>
                       </div>
@@ -1017,13 +1021,14 @@
                           </p>
                         </div>
                         <div class="drawer-footer">
-                          <div class="flex flex-col gap-2">
-                            <a href="#" class="btn btn-primary w-full">
-                              <span>Login</span>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary w-full">
-                              <span>Register</span>
-                            </a>
+                          <div class="flex justify-end gap-2">
+                            <button type="button" class="btn btn-primary">
+                              <span>Confirm</span>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary" data-dismisss="drawer">
+                              <span>Cancel</span>
+                            </button>
                           </div>                        
                         </div>
                       </div>
@@ -1044,11 +1049,11 @@
                           </div>
                           <div class="drawer-footer">
                             <div class="flex justify-end gap-2">
+                              <button type="button" class="btn btn-secondary" data-dismisss="drawer">
+                                Cancel
+                              </button>
                               <button type="button" class="btn btn-primary">
                                 Confirm
-                              </button>
-                              <button type="button" class="btn btn-secondary">
-                                Cancel
                               </button>
                             </div>
                           </div>
@@ -1071,11 +1076,11 @@
                           </div>
                           <div class="drawer-footer">
                             <div class="flex justify-end gap-2">
+                              <button type="button" class="btn btn-secondary" data-dismisss="drawer">
+                                Cancel
+                              </button>
                               <button type="button" class="btn btn-primary">
                                 Confirm
-                              </button>
-                              <button type="button" class="btn btn-secondary">
-                                Cancel
                               </button>
                             </div>
                           </div>
@@ -1165,11 +1170,11 @@
 
                   <div id="controlled-drawer-code-viewer" class="code-viewer mt-4" data-render-source="false">
                     <div class="code-viewer-content">
-                      <button onclick="openControlledDrawer()" class="btn btn-primary" type="button" data-toggle="drawer">
+                      <button class="btn btn-primary" type="button" id="btn-drawer-controlled">
                         Controlled Drawer
                       </button>
   
-                      <div id="controlled-drawer" class="drawer">
+                      <div id="drawer-controlled" class="drawer">
                         <div class="drawer-header">
                           <h5>Controlled Drawer</h5>
   
@@ -1185,13 +1190,14 @@
                         </div>
   
                         <div class="drawer-footer">
-                          <div class="flex flex-col gap-2">
-                            <a href="#" class="btn btn-primary w-full">
-                              <span>Login</span>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary w-full">
-                              <span>Register</span>
-                            </a>
+                          <div class="flex justify-end gap-2">
+                            <button type="button" class="btn btn-secondary" data-dismisss="drawer">
+                              <span>Cancel</span>
+                            </button>
+  
+                            <button type="button" class="btn btn-primary">
+                              <span>Confirm</span>
+                            </button>
                           </div>                        
                         </div>
                       </div>
@@ -1232,13 +1238,14 @@
                         </div>
   
                         <div class="drawer-footer">
-                          <div class="flex flex-col gap-2">
-                            <a href="#" class="btn btn-primary w-full">
-                              <span>Login</span>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary w-full">
-                              <span>Register</span>
-                            </a>
+                          <div class="flex justify-end gap-2">
+                            <button type="button" class="btn btn-secondary" data-dismisss="drawer">
+                              <span>Cancel</span>
+                            </button>
+  
+                            <button type="button" class="btn btn-primary">
+                              <span>Confirm</span>
+                            </button>
                           </div>                        
                         </div>
                       </div>

@@ -12,15 +12,15 @@ class Drawer {
     //Store drawer dismisses
     this.dismisses = null;
 
-    // Store the function for calling on keydown
-    this.documentOnKeydown = (e) => this.hideOnKeydown({e, drawer: this});
-
     //Store the modal options
     this.options  = {
       keyboard: true,
       backdrop: true, //Boolean | 'static'. Default is true
       ...options
     };
+
+    // Store the function for calling on keydown
+    this.documentOnKeydown = (e) => this.hideOnKeydown({e, drawer: this});
 
     if(typeof target === 'string') {
 
@@ -35,28 +35,27 @@ class Drawer {
       throw new Error('No target element found');
     }
 
-    if(!this.target.classList.contains('drawer')) {
+    if(this.target.classList.contains('drawer')) {
+
+      this.drawer = this.target;
+
+    }else {
       this.toggle = this.target;
       this.drawer = document.querySelector(this.toggle.dataset.target);
 
-      if(this.drawer) {
-        this.toggle.addEventListener('click', () => {
-          // Store previously open drawers
-          const openDrawers = document.querySelectorAll('.drawer.show');
-          
-          if(openDrawers.length) {
-            // Hide previously open drawers
-            [...openDrawers].forEach(openDrawer => this.hide(openDrawer));
+      this.toggle.addEventListener('click', () => {
+        // Store previously open drawers
+        const openDrawers = document.querySelectorAll('.drawer.show');
+        
+        if(openDrawers.length) {
+          // Hide previously open drawers
+          [...openDrawers].forEach(openDrawer => this.hide(openDrawer));
 
-          }else {
+        }else {
 
-            this.show();
-          }
-        });
-      }
-
-    }else {
-      this.drawer = this.target;
+          this.show();
+        }
+      });
     }
 
     this.dismisses = this.drawer.querySelectorAll('[data-dismisss="drawer"]');
@@ -154,15 +153,14 @@ class Drawer {
 
 const drawer = {
   init () {
-    // Select all the targets except .code-viewer-source.
-    const toggles = [...document.querySelectorAll('[data-toggle="drawer"]')].filter(toggle => {
-      return !toggle.parentNode.classList.contains('code-viewer-source');
-    });
+    const toggles = this.querySelectors('[data-toggle="drawer"]');
 
     if(toggles.length) {
       toggles.forEach(toggle => {
-        if(toggle.dataset.target) {
-          const target = document.querySelector(toggle.dataset.target);
+        const targetId = toggle.dataset.target;
+
+        if(targetId) {
+          const target = document.querySelector(targetId);
           const options = {
             keyboard: target.dataset.keyboard === 'false' ? false : true,
             backdrop: (() => {
@@ -179,12 +177,25 @@ const drawer = {
               return output;
             })(),
           };
-          
+
           new Drawer(toggle, options);
         }
       });
     }
   },
+
+  querySelectors(selectors) {
+    let output = [];
+
+    if(selectors) {
+      output = [...document.querySelectorAll(selectors)].filter((selectorElement) => {
+        // Return all the elements except .code-viewer-source children elements
+        return !selectorElement.parentElement.classList.contains('code-viewer-source');
+      });
+    }
+
+    return output;
+  }
 };
 
 window.createDrawer = function (target, options = {}) {
