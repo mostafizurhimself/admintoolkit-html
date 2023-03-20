@@ -7,20 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-.parcel-cache
 node_modules
 dist
 dist-ssr
 *.local
-
-#yarn logs
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-.yarnrc.yml
 
 # Editor directories and files
 .vscode/*

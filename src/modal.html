@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modal - Admin Toolkit</title>
-    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./scss/app.scss" />
   </head>
   <body>
     <div id="app" class="min-h-screen w-full">
@@ -784,7 +784,9 @@
                 <div class="card-body">
                   <h4 class="card-title">Basic Modal</h4>
 
-                  <p class="card-subtitle">Basic usage of <code>Modal</code> component</p>
+                  <p class="card-subtitle">
+                    Example of basic modal.
+                  </p>
 
                   <div class="code-viewer mt-4">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-basic">
@@ -797,12 +799,8 @@
                           <div class="modal-header">
                             <div class="flex items-center justify-between">
                               <h6>Basic Modal</h6>
-                              <button
-                                type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-dismisss="modal"
-                              >
-                                <i data-feather="x" width="1em" height="1em"></i>
+                              <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="modal">
+                                <i data-feather="x" width="1.5rem" height="1.5rem"></i>
                               </button>
                             </div>
                           </div>
@@ -814,12 +812,13 @@
                             </p>
                           </div>
                           <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
+                            <div class="flex items-center justify-end gap-4">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">
                                 Cancel
                               </button>
-
-                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
+                              <button type="button" class="btn btn-primary">
+                                Done
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -836,126 +835,177 @@
                   <h4 class="card-title">Modal Sizes</h4>
 
                   <p class="card-subtitle">
-                    Use <code>size</code> prop to change the size of the modal. Available sizes are <code>sm</code>,
-                    <code>md</code>, <code>lg</code>. Default size is <code>md</code>. You can also set a custom
-                    <code>max-width</code> class in <code>.modal-dialog</code>
+                    Example of different sizes of modal. Default is <code>.modal-md</code> 
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <div class="flex gap-2">
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-small">
+                    <div class="code-viewer-content">
+                      <div class="flex flex-wrap gap-2">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-sm">
+                          Small Modal
+                        </button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          Large Modal
+                        </button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-custom-size">
+                          Custom Size Modal
+                        </button>
+                      </div>
+
+                      <!-- Small Modal -->
+                      <div class="modal modal-sm" id="modal-sm">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <div class="flex items-center justify-between">
+                                <h6>Small Modal</h6>
+                                <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="modal">
+                                  <i data-feather="x" width="1.5rem" height="1.5rem"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="modal-body">
+                              <p class="text-sm text-slate-500 dark:text-slate-300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
+                                eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
+                                tenetur laudantium ex obcaecati, porro doloribus cumque.
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <div class="flex items-center justify-end gap-4">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                  Cancel
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                  Done
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Large Modal -->
+                      <div class="modal modal-lg" id="modal-lg">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <div class="flex items-center justify-between">
+                                <h6>Large Modal</h6>
+                                <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="modal">
+                                  <i data-feather="x" width="1.5rem" height="1.5rem"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="modal-body">
+                              <p class="text-sm text-slate-500 dark:text-slate-300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
+                                eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
+                                tenetur laudantium ex obcaecati, porro doloribus cumque.
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <div class="flex items-center justify-end gap-4">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                  Cancel
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                  Done
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Custom Size Modal -->
+                      <div class="modal" id="modal-custom-size">
+                        <div class="modal-dialog max-w-5xl">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <div class="flex items-center justify-between">
+                                <h6>Custom Size Modal</h6>
+                                <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="modal">
+                                  <i data-feather="x" width="1.5rem" height="1.5rem"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="modal-body">
+                              <p class="text-sm text-slate-500 dark:text-slate-300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
+                                eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
+                                tenetur laudantium ex obcaecati, porro doloribus cumque.
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <div class="flex items-center justify-end gap-4">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                  Cancel
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                  Done
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="code-viewer-source">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-sm">
                         Small Modal
                       </button>
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-large">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
                         Large Modal
                       </button>
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-toggle="modal"
-                        data-target="#modal-custom-size"
-                      >
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-custom-size">
                         Custom Size Modal
                       </button>
-                    </div>
+                    
 
-                    <!-- Small Modal -->
-                    <div class="modal modal-sm" id="modal-small">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h6>Small Modal</h6>
-                              <button
-                                type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-dismisss="modal"
-                              >
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
+                      <!-- Small Modal -->
+                      <div class="modal modal-sm" id="modal-sm">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- ..... -->
                             </div>
-                          </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
-                              eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
-                              tenetur laudantium ex obcaecati, porro doloribus cumque.
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
+                            <div class="modal-body">
+                                <!-- ..... -->
+                            </div>
+                            <div class="modal-footer">
+                                <!-- ..... -->
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <!-- Large Modal -->
-                    <div class="modal modal-lg" id="modal-large">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h6>Large Modal</h6>
-                              <button
-                                type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-dismisss="modal"
-                              >
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
+                      <!-- Large Modal -->
+                      <div class="modal modal-lg" id="modal-lg">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <!-- ..... -->
                             </div>
-                          </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
-                              eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
-                              tenetur laudantium ex obcaecati, porro doloribus cumque.
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
+                            <div class="modal-body">
+                              <!-- ..... -->
+                            </div>
+                            <div class="modal-footer">
+                              <!-- ..... -->
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <!-- Custom Size Modal -->
-                    <div class="modal" id="modal-custom-size">
-                      <div class="modal-dialog max-w-5xl">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h6>Custom Size Modal</h6>
-                              <button
-                                type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-dismisss="modal"
-                              >
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
+                      <!-- Custom Size Modal -->
+                      <div class="modal" id="modal-custom-size">
+                        <div class="modal-dialog max-w-5xl">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <!-- ..... -->
                             </div>
-                          </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
-                              eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
-                              tenetur laudantium ex obcaecati, porro doloribus cumque.
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
+                            <div class="modal-body">
+                              <!-- ..... -->
+                            </div>
+                            <div class="modal-footer">
+                              <!-- ..... -->
                             </div>
                           </div>
                         </div>
@@ -971,41 +1021,65 @@
                 <div class="card-body">
                   <h4 class="card-title">Fullscreen Modal</h4>
 
-                  <p class="card-subtitle">Use <code>fullScreen</code> prop to open modal in fullscreen mode.</p>
+                  <p class="card-subtitle">
+                    Example of full screen modal.
+                  </p>
 
                   <div class="code-viewer mt-4">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-full-screen">
-                      Open Full Screen Modal
-                    </button>
+                    <div class="code-viewer-content">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-full-screen">
+                        Open Full Screen Modal
+                      </button>
 
-                    <div class="modal modal-full" id="modal-full-screen">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h6>Full Screen Modal</h6>
-                              <button
-                                type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-dismisss="modal"
-                              >
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
+                      <div class="modal modal-full" id="modal-full-screen">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <div class="flex items-center justify-between">
+                                <h6>Full Screen Modal</h6>
+                                <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="modal">
+                                  <i data-feather="x" width="1.5rem" height="1.5rem"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="modal-body">
+                              <p class="text-sm text-slate-500 dark:text-slate-300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
+                                eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
+                                tenetur laudantium ex obcaecati, porro doloribus cumque.
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <div class="flex items-center justify-end gap-4">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                  Cancel
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                  Done
+                                </button>
+                              </div>
                             </div>
                           </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
-                              eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
-                              tenetur laudantium ex obcaecati, porro doloribus cumque.
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-full-screen">
+                        Open Full Screen Modal
+                      </button>
+
+                      <div class="modal modal-full" id="modal-full-screen">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- ..... -->
+                            </div>
+                            <div class="modal-body">
+                              <!-- ..... -->
+                            </div>
+                            <div class="modal-footer">
+                               <!-- ..... -->
                             </div>
                           </div>
                         </div>
@@ -1021,41 +1095,65 @@
                 <div class="card-body">
                   <h4 class="card-title">Centered Modal</h4>
 
-                  <p class="card-subtitle">Use <code>centered</code> prop to center the modal</p>
+                  <p class="card-subtitle">
+                    Example of centered modal.
+                  </p>
 
                   <div class="code-viewer mt-4">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-centered">
-                      Open Centered Modal
-                    </button>
-
-                    <div class="modal modal-centered" id="modal-centered">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h6>Centered Modal</h6>
-                              <button
-                                type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-dismisss="modal"
-                              >
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
+                    <div class="code-viewer-content">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-centered">
+                        Open Centered Modal
+                      </button>
+                      
+                      <div class="modal modal-centered" id="modal-centered">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <div class="flex items-center justify-between">
+                                <h6>Centered Modal</h6>
+                                <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="modal">
+                                  <i data-feather="x" width="1.5rem" height="1.5rem"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="modal-body">
+                              <p class="text-sm text-slate-500 dark:text-slate-300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
+                                eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
+                                tenetur laudantium ex obcaecati, porro doloribus cumque.
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <div class="flex items-center justify-end gap-4">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                  Cancel
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                  Done
+                                </button>
+                              </div>
                             </div>
                           </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae possimus nam,
-                              eaque omnis voluptates, doloremque explicabo aspernatur magnam veniam dolorum dolore id
-                              tenetur laudantium ex obcaecati, porro doloribus cumque.
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-centered">
+                        Open Centered Modal
+                      </button>
+                      
+                      <div class="modal modal-centered" id="modal-centered">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <!-- ..... -->
+                            </div>
+                            <div class="modal-body">
+                              <!-- ..... -->
+                            </div>
+                            <div class="modal-footer">
+                               <!-- ..... -->
                             </div>
                           </div>
                         </div>
@@ -1072,7 +1170,7 @@
                   <h4 class="card-title">Scrollable Modal</h4>
 
                   <p class="card-subtitle">
-                    Add a <code>.h-*(e.g: h-96)</code> class in <code>.modal-body</code> to make it scrollable.
+                    Example of scrollable modal.
                   </p>
 
                   <div class="code-viewer mt-4">
@@ -1087,12 +1185,8 @@
                             <div class="modal-header">
                               <div class="flex items-center justify-between">
                                 <h6>Scrollable Modal</h6>
-                                <button
-                                  type="button"
-                                  class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                  data-dismisss="modal"
-                                >
-                                  <i data-feather="x" width="1em" height="1em"></i>
+                                <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="modal">
+                                  <i data-feather="x" width="1.5rem" height="1.5rem"></i>
                                 </button>
                               </div>
                             </div>
@@ -1146,11 +1240,13 @@
                               </p>
                             </div>
                             <div class="modal-footer">
-                              <div class="flex items-center justify-end gap-2">
-                                <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
+                              <div class="flex items-center justify-end gap-4">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
                                   Cancel
                                 </button>
-                                <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
+                                <button type="button" class="btn btn-primary">
+                                  Done
+                                </button>
                               </div>
                             </div>
                           </div>
@@ -1167,25 +1263,13 @@
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <div class="flex items-center justify-between">
-                                <h2 class="text-base font-semibold">Scrollable Modal</h2>
-                                <button
-                                  type="button"
-                                  class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                  data-dismisss="modal"
-                                >
-                                  <i data-feather="x" width="1em" height="1em"></i>
-                                </button>
-                              </div>
+                              <!-- ..... -->
                             </div>
-                            <div class="modal-body h-96">lorem ipsum...</div>
+                            <div class="modal-body h-96">
+                              <!-- ..... -->
+                            </div>
                             <div class="modal-footer">
-                              <div class="flex items-center justify-end gap-2">
-                                <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
-                                  Cancel
-                                </button>
-                                <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
-                              </div>
+                              <!-- ..... -->
                             </div>
                           </div>
                         </div>
@@ -1201,10 +1285,12 @@
                 <div class="card-body">
                   <h4 class="card-title">Controlled Modal</h4>
 
-                  <p class="card-subtitle">You can controll the modal via javascript</p>
+                  <p class="card-subtitle">
+                    Example of controlled modal.
+                  </p>
 
-                  <div class="code-viewer mt-4">
-                    <button type="button" class="btn btn-primary" id="modal-controlled-toggle">
+                  <div id="controlled-modal-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <button type="button" class="btn btn-primary" id="btn-controlled-modal">
                       Open Controlled Modal
                     </button>
 
@@ -1214,12 +1300,8 @@
                           <div class="modal-header">
                             <div class="flex items-center justify-between">
                               <h6>Controlled Modal</h6>
-                              <button
-                                type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-dismisss="modal"
-                              >
-                                <i data-feather="x" width="1em" height="1em"></i>
+                              <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="modal">
+                                <i data-feather="x" width="1.5rem" height="1.5rem"></i>
                               </button>
                             </div>
                           </div>
@@ -1231,11 +1313,13 @@
                             </p>
                           </div>
                           <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
+                            <div class="flex items-center justify-end gap-4">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">
                                 Cancel
                               </button>
-                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
+                              <button type="button" class="btn btn-primary">
+                                Done
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -1249,50 +1333,71 @@
               <!-- Card: Disabled Backdrop Modal Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Disabled Backdrop Click</h4>
+                  <h4 class="card-title">Disabled Backdrop</h4>
 
                   <p class="card-subtitle">
-                    Use <code>disableBackdropClick</code> prop to prevent closing modal when backdrop is clicked.
+                    Example of modal with disabled backdrop option.
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-backdrop">
-                      Open Modal
-                    </button>
-
-                    <div class="modal" id="modal-backdrop" data-backdrop="false" data-keyboard="false">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <div class="flex items-center justify-between">
-                              <h6>Disabled Backdrop Click</h6>
-                              <button
-                                type="button"
-                                class="inline-block rounded-primary p-1 text-slate-500 outline-none transition-colors duration-150 hover:text-slate-700 focus:outline-none dark:text-slate-400 dark:hover:text-slate-300"
-                                data-dismisss="modal"
-                              >
-                                <i data-feather="x" width="1em" height="1em"></i>
-                              </button>
+                    <div class="code-viewer-content">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-backdrop">
+                        Open Modal
+                      </button>
+                      <div class="modal" id="modal-backdrop" data-backdrop="false" data-keyboard="false">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <div class="flex items-center justify-between">
+                                <h6>Disabled Backdrop Click</h6>
+                                <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="modal">
+                                  <i data-feather="x" width="1.5rem" height="1.5rem"></i>
+                                </button>
+                              </div>
                             </div>
-                          </div>
-                          <div class="modal-body">
-                            <p class="text-sm text-slate-500 dark:text-slate-300">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ducimus distinctio recusandae
-                              vitae, in ullam, sapiente praesentium nam architecto fugiat dolor alias voluptatum, nemo
-                              necessitatibus veniam quis obcaecati. Mollitia, eaque.
-                            </p>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="flex items-center justify-end gap-2">
-                              <button type="button" class="btn btn-plain-secondary" data-dismisss="modal">
-                                Cancel
-                              </button>
-                              <button type="button" class="btn btn-primary" data-dismisss="modal">Done</button>
+                            <div class="modal-body">
+                              <p class="text-sm text-slate-500 dark:text-slate-300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ducimus distinctio recusandae
+                                vitae, in ullam, sapiente praesentium nam architecto fugiat dolor alias voluptatum, nemo
+                                necessitatibus veniam quis obcaecati. Mollitia, eaque.
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <div class="flex items-center justify-end gap-4">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                  Cancel
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                  Done
+                                </button>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+
+                    <div class="code-viewer-source">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-backdrop">
+                        Open Modal
+                      </button>
+
+                      <div class="modal" id="modal-backdrop" data-backdrop="false" data-keyboard="false">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <!-- ..... -->
+                            </div>
+                            <div class="modal-body">
+                              <!-- ..... -->
+                            </div>
+                            <div class="modal-footer">
+                              <!-- ..... -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>                    
                   </div>
                 </div>
               </div>
@@ -1319,20 +1424,7 @@
       </div>
       <!-- Wrapper Ends -->
     </div>
-    <script src="./js/app.js"></script>
-    <script>
-      const modalControlledToggle = document.querySelector('#modal-controlled-toggle');
-
-      if (modalControlledToggle) {
-        modalControlledToggle.addEventListener('click', () => {
-          const modalControlled = createModal('#modal-controlled', {
-            backdrop: true,
-            keyboard: true,
-          });
-
-          modalControlled.show();
-        });
-      }
-    </script>
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/custom/modal.js" type="module"></script>
   </body>
 </html>

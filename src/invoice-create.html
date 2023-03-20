@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Create Invoice - Admin Toolkit</title>
-  <link rel="stylesheet" href="./css/app.css" />
+  <link rel="stylesheet" href="./scss/app.scss" />
 </head>
 
 <body>
@@ -758,14 +757,14 @@
                   <div class="flex justify-end gap-3 items-center">
                     <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Date:</span>
                     <div class="max-w-xs">
-                      <input class="input flatpickr-input-date bg-white dark:bg-slate-800" type="text"
+                      <input class="input input-date bg-white dark:bg-slate-800" type="text"
                         placeholder="YYYY-MM-DD">
                     </div>
                   </div>
                   <div class="flex justify-end gap-3 items-center">
                     <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Due Date:</span>
                     <div class="max-w-xs">
-                      <input class="input flatpickr-input-date bg-white dark:bg-slate-800" type="text"
+                      <input class="input input-date bg-white dark:bg-slate-800" type="text"
                         placeholder="YYYY-MM-DD">
                     </div>
                   </div>
@@ -893,17 +892,17 @@
                     <div class="my-1 flex min-w-1/2 flex-col items-end ">
                       <div
                         class="flex w-full flex-col gap-2 py-2 items-end border-b border-slate-200 dark:border-slate-600 pr-[6.5rem]">
-                        <h4 class="text-sm font-medium text-slate-400">
+                        <h4 class="text-sm font-medium text-slate-400 dark:text-slate-400">
                           Subtotal: <span class="text-slate-600 font-semibold dark:text-slate-200">$00.00</span>
                         </h4>
-                        <h4 class="text-sm font-medium text-slate-400">
+                        <h4 class="text-sm font-medium text-slate-400 dark:text-slate-400">
                           Discount: <span class="text-slate-700 font-semibold dark:text-slate-200">$00.00</span>
                         </h4>
-                        <h4 class="text-sm font-medium text-slate-400">
+                        <h4 class="text-sm font-medium text-slate-400 dark:text-slate-400">
                           Tax: <span class="text-slate-700 font-semibold dark:text-slate-200">$00.00</span>
                         </h4>
                       </div>
-                      <h4 class="text-sm font-medium text-slate-400 pr-[6.5rem]">
+                      <h4 class="text-sm font-medium text-slate-400 dark:text-slate-400 pr-[6.5rem]">
                         Total: <span class="text-slate-700 font-semibold dark:text-slate-200">$00.00</span>
                       </h4>
                     </div>
@@ -992,7 +991,6 @@
     </div>
     <!-- Wrapper Ends -->
   </div>
-  <script src="./js/app.js"></script>
+  <script src="./js/app.js" type="module"></script>
 </body>
-
 </html>

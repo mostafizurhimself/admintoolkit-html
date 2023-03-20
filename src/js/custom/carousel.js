@@ -18,6 +18,7 @@ const customPaginationSourceCode =`
     </div>
   </div>
   <div class="swiper-pagination swiper-pagination-custom"></div>
+
   <script>
     import Swiper, { Pagination } from 'swiper';
 
@@ -73,7 +74,7 @@ const customSwiperSourceCode = `
         prevEl: '.swiper-button-prev',
       }
     });
-  </>
+  </script>
       
 `;
 

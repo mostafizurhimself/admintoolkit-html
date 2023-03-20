@@ -1,7 +1,3 @@
-// Variables
-$ti-font-path: '../fonts';
-$flag-icons-path: "../images/flags";
-
 // Vendor css files.
 @import 'simplebar/dist/simplebar.css';
 @import 'boxicons/css/boxicons.css';
@@ -11,10 +7,8 @@ $flag-icons-path: "../images/flags";
 @import 'quill/dist/quill.bubble.css';
 @import 'swiper/swiper-bundle.css';
 @import 'dropzone/dist/dropzone.css';
-
-//Vendor scss files.
-@import '@tabler/icons-webfont/tabler-icons.scss';
-@import 'flag-icons/sass/flag-icons.scss';
+@import "@tabler/icons-webfont/tabler-icons.min.css";
+@import "flag-icons/css/flag-icons.min.css";
 @import 'tom-select/dist/scss/tom-select.scss';
 
 // Base

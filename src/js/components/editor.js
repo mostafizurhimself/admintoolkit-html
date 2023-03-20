@@ -1,57 +1,66 @@
 import Quill from 'quill';
-// Rich Text Editor Toolbar Options
-const snowToolbarOptions = [
-  ['bold', 'italic', 'underline', 'strike'], // toggled buttons
-  ['blockquote', 'code-block'],
-
-  [{ header: 1 }, { header: 2 }], // custom button values
-  [{ list: 'ordered' }, { list: 'bullet' }],
-  [{ script: 'sub' }, { script: 'super' }], // superscript/subscript
-  [{ indent: '-1' }, { indent: '+1' }], // outdent/indent
-  [{ direction: 'rtl' }], // text direction
-
-  [{ size: ['small', false, 'large', 'huge'] }], // custom dropdown
-  [{ header: [1, 2, 3, 4, 5, 6, false] }],
-
-  [{ color: [] }, { background: [] }], // dropdown with defaults from theme
-  [{ font: [] }],
-  [{ align: [] }],
-
-  ['clean'], // remove formatting button
-];
-const bubbleToolbarOptions = [
-  ['bold', 'italic', 'underline', 'strike'],
-  ['blockquote', 'code-block'],
-  [{ header: 1 }, { header: 2 }],
-  [{ list: 'bullet' }],
-  [{ script: 'sub' }, { script: 'super' }],
-  [{ direction: 'rtl' }],
-];
 
 const editor = {
-  init() {
-    const snowEditors = document.querySelectorAll('.quill-editor-snow');
-    const bubbleEditors = document.querySelectorAll('.quill-editor-bubble');
-    // snow text editor
-    snowEditors?.forEach((editor) => {
-      const quill = new Quill(editor, {
-        modules: {
-          toolbar: snowToolbarOptions,
-        },
-        theme: 'snow',
-      });
-    });
-    // bubble text editor
-    bubbleEditors?.forEach((editor) => {
-      const quill = new Quill(editor, {
-        modules: {
-          toolbar: bubbleToolbarOptions,
-        },
-        bounds: editor,
-        theme: 'bubble',
-      });
-    });
+  theme: {
+    snow: {
+      modules: {
+        toolbar: [ 
+          ['bold', 'italic', 'underline', 'strike'],
+          ['blockquote', 'code-block'],
+          [{ header: 1 }, { header: 2 }], 
+          [{ list: 'ordered' }, { list: 'bullet' }],
+          [{ script: 'sub' }, { script: 'super' }], 
+          [{ indent: '-1' }, { indent: '+1' }], 
+          [{ direction: 'rtl' }], 
+          [{ size: ['small', false, 'large', 'huge'] }], 
+          [{ header: [1, 2, 3, 4, 5, 6, false] }],
+          [{ color: [] }, { background: [] }], 
+          [{ font: [] }],
+          [{ align: [] }],
+          ['clean']
+        ]
+      }
+    },
+    bubble: {
+      modules: {
+        toolbar: [
+          ['bold', 'italic', 'underline', 'strike'],
+          ['blockquote', 'code-block'],
+          [{ header: 1 }, { header: 2 }], 
+          [{ list: 'bullet' }],
+          [{ script: 'sub' }, { script: 'super' }],
+          [{ direction: 'rtl' }]
+        ]
+      }
+    },
   },
+
+  init() {
+    const editors = document.querySelectorAll('.editor');
+    const bubbleEditors = document.querySelectorAll('.editor-bubble');
+
+    // Default editor
+    if(editors.length) {
+      [...editors].forEach(editor => new Quill(editor, {
+        theme: 'snow',
+        bounds: editor,
+        modules: this.theme.snow.modules,
+      }));
+    } 
+
+    // Default editor
+    if(bubbleEditors.length) {
+      [...bubbleEditors].forEach(editor => new Quill(editor, {
+        theme: 'bubble',
+        bounds: editor,
+        modules: this.theme.bubble.modules,
+      }));
+    } 
+  }
+}
+
+window.createEditor = function (target, options = {}) {
+  return new Quill(target, options);
 };
 
 export default editor;

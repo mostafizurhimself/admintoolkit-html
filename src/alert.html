@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alerts - Admin Toolkit</title>
-    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./scss/app.scss" />
   </head>
   <body>
     <div id="app" class="min-h-screen w-full">
@@ -984,14 +984,14 @@
                     the <code>dismiss()</code> method to hide the alert.
                   </p>
 
-                  <div id="controlled-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                  <div id="controlled-alert-code-viewer" class="code-viewer mt-4" data-render-source="false">
                     <div class="flex flex-col gap-4">
                       <div class="alert alert-success" role="alert" id="controlled-alert">
                         <i width="1em" height="1em" data-feather="check-circle"></i>
                         <p>This is a success alert with addtional information and content.</p>
-                      </div>
+                      </div> 
                       <div>
-                        <button class="btn btn-primary" type="button" onclick="dismissControlledAlert()">
+                        <button class="btn btn-primary" type="button" id="btn-hide-alert">
                           Hide dismissable alert
                         </button>
                       </div>
@@ -1076,36 +1076,7 @@
     </div>
 
     <!-- Scripts Starts -->
-    <script src="./js/app.js"></script>
-    <script>
-      const controlledAlertSource = `
-        <div class="flex flex-col gap-4">
-          <div class="alert alert-success" role="alert" id="controlled-alert">
-            <span class="alert-icon"><i width="1em" height="1em" data-feather="check-circle"></i></span>
-            <p class="alert-text">This is a success alert with addtional information and content.</p>
-          </div>
-          <div>
-            <button class="btn btn-primary" type="button" onclick="dismissControlledAlert()">
-              Hide dismissable alert
-            </button>
-          </div>
-        </div>
-
-        \<script\>
-          const controlledAlert = createDismissableAlert('#controlled-alert');
-
-          function dismissControlledAlert() {
-            controlledAlert.dismiss();
-          }
-        \<\/script\>
-       `;
-      const controlledCodeViewer = createCodeViewer('#controlled-code-viewer', controlledAlertSource);
-
-      function dismissControlledAlert() {
-        createDismissableAlert('#controlled-alert').dismiss();
-      }
-
-      controlledCodeViewer.render();
-    </script>
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/custom/alert.js" type="module"></script>
   </body>
 </html>

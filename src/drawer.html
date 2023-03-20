@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drawer - Admin Toolkit</title>
-    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./scss/app.scss" />
   </head>
 
   <body>
@@ -760,7 +760,7 @@
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>Offcanvas</h5>
+              <h5>Drawer</h5>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="#">Home</a>
@@ -789,13 +789,13 @@
                   </p>
 
                   <div class="code-viewer mt-4">
-                    <button class="btn btn-primary" type="button" data-toggle="drawer" data-target="#basic-drawer">
+                    <button class="btn btn-primary" type="button" data-toggle="drawer" data-target="#drawer-basic">
                       Basic Drawer
                     </button>
-                    <div id="basic-drawer" class="drawer">
+                    <div id="drawer-basic" class="drawer">
                       <div class="drawer-header">
                         <h5>Basic Drawer</h5>
-                        <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismisss="drawer">
+                        <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="drawer">
                           <i data-feather="x" width="1.5rem" height="1.5rem"></i>
                         </button>
                       </div>
@@ -805,13 +805,14 @@
                         </p>
                       </div>
                       <div class="drawer-footer">
-                        <div class="flex flex-col gap-2">
-                          <a href="#" class="btn btn-primary w-full">
-                            <span>Login</span>
-                          </a>
-                          <a href="#" class="btn btn-outline-primary w-full">
-                            <span>Register</span>
-                          </a>
+                        <div class="flex justify-end gap-2">
+                          <button type="button" class="btn btn-secondary" data-dismiss="drawer">
+                            <span>Cancel</span>
+                          </button>
+
+                          <button type="button" class="btn btn-primary">
+                            <span>Confirm</span>
+                          </button>
                         </div>                        
                       </div>
                     </div>
@@ -839,7 +840,7 @@
                         <div class="drawer-header">
                           <h5>Drawer Without Backdrop</h5>
 
-                          <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismisss="drawer">
+                          <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="drawer">
                             <i data-feather="x" width="1.5rem" height="1.5rem"></i>
                           </button>
                         </div>
@@ -851,13 +852,14 @@
                         </div>
 
                         <div class="drawer-footer">
-                          <div class="flex flex-col gap-2">
-                            <a href="#" class="btn btn-primary w-full">
-                              <span>Login</span>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary w-full">
-                              <span>Register</span>
-                            </a>
+                          <div class="flex justify-end gap-2">
+                            <button type="button" class="btn btn-secondary" data-dismiss="drawer">
+                              <span>Cancel</span>
+                            </button>
+  
+                            <button type="button" class="btn btn-primary">
+                              <span>Confirm</span>
+                            </button>
                           </div>                        
                         </div>
                       </div>
@@ -906,7 +908,7 @@
                         <div class="drawer-header">
                           <h5>Static Backdrop</h5>
   
-                          <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismisss="drawer">
+                          <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="drawer">
                             <i data-feather="x" width="1.5rem" height="1.5rem"></i>
                           </button>
                         </div>
@@ -918,13 +920,14 @@
                         </div>
   
                         <div class="drawer-footer">
-                          <div class="flex flex-col gap-2">
-                            <a href="#" class="btn btn-primary w-full">
-                              <span>Login</span>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary w-full">
-                              <span>Register</span>
-                            </a>
+                          <div class="flex justify-end gap-2">
+                            <button type="button" class="btn btn-secondary" data-dismiss="drawer">
+                              <span>Cancel</span>
+                            </button>
+  
+                            <button type="button" class="btn btn-primary">
+                              <span>Confirm</span>
+                            </button>
                           </div>                        
                         </div>
                       </div>
@@ -981,7 +984,7 @@
                       <div id="drawer-left" class="drawer drawer-left">
                         <div class="drawer-header">
                           <h5>Drawer Start</h5>
-                          <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismisss="drawer">
+                          <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="drawer">
                             <i data-feather="x" width="1.5rem" height="1.5rem"></i>
                           </button>
                         </div>
@@ -993,13 +996,14 @@
                         </div>
   
                         <div class="drawer-footer">
-                          <div class="flex flex-col gap-2">
-                            <a href="#" class="btn btn-primary w-full">
-                              <span>Login</span>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary w-full">
-                              <span>Register</span>
-                            </a>
+                          <div class="flex justify-end gap-2">
+                            <button type="button" class="btn btn-secondary" data-dismiss="drawer">
+                              <span>Cancel</span>
+                            </button>
+  
+                            <button type="button" class="btn btn-primary">
+                              <span>Confirm</span>
+                            </button>
                           </div>                        
                         </div>
                       </div>
@@ -1007,7 +1011,7 @@
                       <div id="drawer-right" class="drawer drawer-right">
                         <div class="drawer-header">
                           <h5>Drawer End</h5>
-                          <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismisss="drawer">
+                          <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="drawer">
                             <i data-feather="x" width="1.5rem" height="1.5rem"></i>
                           </button>
                         </div>
@@ -1017,13 +1021,14 @@
                           </p>
                         </div>
                         <div class="drawer-footer">
-                          <div class="flex flex-col gap-2">
-                            <a href="#" class="btn btn-primary w-full">
-                              <span>Login</span>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary w-full">
-                              <span>Register</span>
-                            </a>
+                          <div class="flex justify-end gap-2">
+                            <button type="button" class="btn btn-primary">
+                              <span>Confirm</span>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary" data-dismiss="drawer">
+                              <span>Cancel</span>
+                            </button>
                           </div>                        
                         </div>
                       </div>
@@ -1033,7 +1038,7 @@
                           <div class="drawer-header">
                             <h5>Drawer Top</h5>
 
-                            <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismisss="drawer">
+                            <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="drawer">
                               <i data-feather="x" width="1.5rem" height="1.5rem"></i>
                             </button>
                           </div>
@@ -1044,11 +1049,11 @@
                           </div>
                           <div class="drawer-footer">
                             <div class="flex justify-end gap-2">
+                              <button type="button" class="btn btn-secondary" data-dismiss="drawer">
+                                Cancel
+                              </button>
                               <button type="button" class="btn btn-primary">
                                 Confirm
-                              </button>
-                              <button type="button" class="btn btn-secondary">
-                                Cancel
                               </button>
                             </div>
                           </div>
@@ -1060,7 +1065,7 @@
                           <div class="drawer-header">
                             <h5>Drawer Bottom</h5>
 
-                            <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismisss="drawer">
+                            <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="drawer">
                               <i data-feather="x" width="1.5rem" height="1.5rem"></i>
                             </button>
                           </div>
@@ -1071,11 +1076,11 @@
                           </div>
                           <div class="drawer-footer">
                             <div class="flex justify-end gap-2">
+                              <button type="button" class="btn btn-secondary" data-dismiss="drawer">
+                                Cancel
+                              </button>
                               <button type="button" class="btn btn-primary">
                                 Confirm
-                              </button>
-                              <button type="button" class="btn btn-secondary">
-                                Cancel
                               </button>
                             </div>
                           </div>
@@ -1113,7 +1118,7 @@
                       <!-- Offcanvas End -->
                       <div id="drawer-right" class="drawer drawer-right">
                         <div class="drawer-header">
-                          <<!-- ..... -->
+                          <!-- ..... -->
                         </div>
                         <div class="drawer-body">
                           <!-- ..... -->
@@ -1165,15 +1170,15 @@
 
                   <div id="controlled-drawer-code-viewer" class="code-viewer mt-4" data-render-source="false">
                     <div class="code-viewer-content">
-                      <button onclick="openControlledDrawer()" class="btn btn-primary" type="button" data-toggle="drawer">
+                      <button class="btn btn-primary" type="button" id="btn-drawer-controlled">
                         Controlled Drawer
                       </button>
   
-                      <div id="controlled-drawer" class="drawer">
+                      <div id="drawer-controlled" class="drawer">
                         <div class="drawer-header">
                           <h5>Controlled Drawer</h5>
   
-                          <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismisss="drawer">
+                          <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="drawer">
                             <i data-feather="x" width="1.5rem" height="1.5rem"></i>
                           </button>
                         </div>
@@ -1185,13 +1190,14 @@
                         </div>
   
                         <div class="drawer-footer">
-                          <div class="flex flex-col gap-2">
-                            <a href="#" class="btn btn-primary w-full">
-                              <span>Login</span>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary w-full">
-                              <span>Register</span>
-                            </a>
+                          <div class="flex justify-end gap-2">
+                            <button type="button" class="btn btn-secondary" data-dismiss="drawer">
+                              <span>Cancel</span>
+                            </button>
+  
+                            <button type="button" class="btn btn-primary">
+                              <span>Confirm</span>
+                            </button>
                           </div>                        
                         </div>
                       </div>
@@ -1220,7 +1226,7 @@
                         <div class="drawer-header">
                           <h5>Disable Drawer Keypress</h5>
   
-                          <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismisss="drawer">
+                          <button type="button" class="btn btn-plain-secondary dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300" data-dismiss="drawer">
                             <i data-feather="x" width="1.5rem" height="1.5rem"></i>
                           </button>
                         </div>
@@ -1232,13 +1238,14 @@
                         </div>
   
                         <div class="drawer-footer">
-                          <div class="flex flex-col gap-2">
-                            <a href="#" class="btn btn-primary w-full">
-                              <span>Login</span>
-                            </a>
-                            <a href="#" class="btn btn-outline-primary w-full">
-                              <span>Register</span>
-                            </a>
+                          <div class="flex justify-end gap-2">
+                            <button type="button" class="btn btn-secondary" data-dismiss="drawer">
+                              <span>Cancel</span>
+                            </button>
+  
+                            <button type="button" class="btn btn-primary">
+                              <span>Confirm</span>
+                            </button>
                           </div>                        
                         </div>
                       </div>
@@ -1287,42 +1294,7 @@
       </div>
       <!-- Wrapper Ends -->
     </div>
-    <script src="./js/app.js"></script>
-    <script>
-      function openControlledDrawer() {
-        const controlledDrawer = createDrawer('#controlled-drawer');
-        controlledDrawer.show();
-      }
-
-      const controlledDrawerSourceCode = `
-        <button type="button" class="btn btn-primary" data-toggle="drawer" onclick="openControlledDrawer()">
-          Controlled Drawer
-        </button>
-
-        <div id="controlled-drawer" class="drawer">
-          <div class="drawer-header">
-            <!-- ..... -->
-          </div>
-          <div class="drawer-body">
-            <!-- ..... -->
-          </div>
-          <div class="drawer-footer">
-            <!-- ..... -->                       
-          </div>
-        </div>
-
-        \<script\>
-          function openControlledDrawer() {
-            const controlledDrawer = createDrawer('#controlled-drawer', {
-              keyboard: true, //true | false. Default is true.
-              backdrop: true, //true | false | 'static'. Default is true.
-            });
-            controlledDrawer.show();
-          }
-        \<\/script\>
-      `;
-      const controlledDrawerCodeViewer = createCodeViewer('#controlled-drawer-code-viewer', controlledDrawerSourceCode);
-      controlledDrawerCodeViewer.render();
-    </script>
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/custom/drawer.js" type="module"></script>
   </body>
 </html>

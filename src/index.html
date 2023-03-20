@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - Admin Toolkit</title>
-    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./scss/app.scss" />
   </head>
 
   <body>
     <div id="app" class="min-h-screen w-full">
       <!-- Sidebar Starts -->
-      <aside class="sidebar">
+    <aside class="sidebar">
         <!-- Sidebar Header Starts -->
         <div class="sidebar-header">
           <span class="sidebar-logo-icon">
@@ -557,14 +557,48 @@
 
               <!-- Dark Mood Toggle Starts -->
               <div class="flex">
-                <button
+                <!-- <button
                   id="btn-theme-mode"
                   type="button"
                   class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
                 >
                   <i class="block dark:hidden" width="24" height="24" data-feather="moon"></i>
                   <i class="hidden dark:block" width="24" height="24" data-feather="sun"></i>
-                </button>
+                </button> -->
+
+                <div id="dropdown-theme-switcher" class="dropdown">
+                  <div class="dropdown-toggle">
+                    <button type="button">
+                      <i class="block dark:hidden" width="24" height="24" data-feather="moon"></i>
+                      <i class="hidden dark:block" width="24" height="24" data-feather="sun"></i> 
+                    </button>
+                  </div>
+
+                  <div class="dropdown-content w-40 mt-6">
+                      <ul class="dropdown-list">
+                        <li class="dropdown-item p-0" data-theme-mode="light">
+                          <button type="buttton" class="w-full inline-flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-slate-100">
+                            <i width="16" height="16" data-feather="sun"></i>
+                            <span>Light</span>
+                          </button>
+                        </li>
+
+                        <li class="dropdown-item p-0" data-theme-mode="dark">
+                          <button type="buttton" class="w-full inline-flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-slate-100">
+                            <i width="16" height="16" data-feather="moon"></i>
+                            <span>Dark</span>
+                          </button>
+                        </li>
+
+                        <li class="dropdown-item p-0" data-theme-mode="system">
+                          <button type="buttton" class="w-full inline-flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-slate-100">
+                            <i width="16" height="16" data-feather="monitor"></i>
+                            <span>System</span>
+                          </button>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
               </div>
               <!-- Dark Mood Toggle Ends -->
 
@@ -782,6 +816,6 @@
       </div>
       <!-- Wrapper Ends -->
     </div>
-    <script src="./js/app.js"></script>
+    <script src="./js/app.js" type="module"></script>
   </body>
 </html>

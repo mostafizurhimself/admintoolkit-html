@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Editor - Admin Toolkit</title>
-    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./scss/app.scss" />
   </head>
 
   <body>
@@ -787,7 +787,7 @@
                   <p class="card-subtitle">Use <code>quill-editor-snow</code> class to create a rich text editor.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="quill-editor-snow">
+                    <div class="editor">
                       <h3>Quill snow Text Editor</h3>
                       <p>
                         Admin Toolkit dashboard template based on TailwindCSS and Vanilla JavaScript is a sleek and
@@ -810,7 +810,7 @@
                   </p>
 
                   <div class="code-viewer relative mt-4">
-                    <div class="quill-editor-bubble">
+                    <div class="editor-bubble">
                       <h3>Quill Bubble Text Editor</h3>
                       <p>
                         Admin Toolkit dashboard template based on TailwindCSS and Vanilla JavaScript is a sleek and
@@ -826,18 +826,20 @@
               <!-- Card: Controled Text Editor Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Controled Text Editor</h4>
+                  <h4 class="card-title">Controlled Text Editor</h4>
 
                   <p class="card-subtitle">Use <code>editor-container</code> id to create a markdown text editor.</p>
 
                   <div id="controled-text-editor" class="code-viewer mt-4" data-render-source="false">
-                    <div id="editor-container">
-                      <h3>Quill Controled Text Editor</h3>
-                      <p>
-                        Admin Toolkit dashboard template based on TailwindCSS and Vanilla JavaScript is a sleek and
-                        functional web-based interface designed for administrators and developers to manage and monitor
-                        various aspects of their web application
-                      </p>
+                    <div class="code-viewer-content">
+                      <div id="editor-controlled">
+                        <h3>Quill Controled Text Editor</h3>
+                        <p>
+                          Admin Toolkit dashboard template based on TailwindCSS and Vanilla JavaScript is a sleek and
+                          functional web-based interface designed for administrators and developers to manage and monitor
+                          various aspects of their web application
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -865,26 +867,8 @@
       </div>
       <!-- Wrapper Ends -->
     </div>
-    <script src="./js/app.js"></script>
     <!-- Include the Quill library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js"></script>
-    <script defer>
-      const quill = new Quill('#editor-container', { theme: 'snow' });
-      const controlledEditorSource = `
-      <div id="editor-container">
-        <h3>Quill Controled Text Editor</h3>
-        <p>
-          Admin Toolkit dashboard template based on TailwindCSS and Vanilla JavaScript is a sleek and functional web-based interface designed for administrators and developers to manage and monitor various aspects of their web application
-        </p>
-      </div>
-
-      \<script\>
-        const quill = new Quill("#editor-container", { theme: 'snow' });
-      \<\/script\>
-     `;
-
-      const controlledCodeViewer = createCodeViewer('#controled-text-editor', controlledEditorSource);
-      controlledCodeViewer.render();
-    </script>
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/custom/editor.js" type="module"></script>
   </body>
 </html>
