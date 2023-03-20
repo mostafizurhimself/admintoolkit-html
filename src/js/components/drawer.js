@@ -9,17 +9,19 @@ class Drawer {
     //Store drawer toggle
     this.toggle = null;
 
+    //Store drawer transition in miliseconds.
+    this.transition = 500;
+
     //Store drawer dismisses
     this.dismisses = null;
 
-    //Store the modal options
+    //Store the drawer options
     this.options  = {
-      keyboard: true,
+      keyboard: true, //Boolean. Default is true
       backdrop: true, //Boolean | 'static'. Default is true
       ...options
     };
 
-    // Store the function for calling on keydown
     this.documentOnKeydown = (e) => this.hideOnKeydown({e, drawer: this});
 
     if(typeof target === 'string') {
@@ -44,12 +46,11 @@ class Drawer {
       this.drawer = document.querySelector(this.toggle.dataset.target);
 
       this.toggle.addEventListener('click', () => {
-        // Store previously open drawers
         const openDrawers = document.querySelectorAll('.drawer.show');
         
         if(openDrawers.length) {
-          // Hide previously open drawers
-          [...openDrawers].forEach(openDrawer => this.hide(openDrawer));
+
+          [...openDrawers].forEach(drawer => this.hide(drawer));
 
         }else {
 
@@ -58,10 +59,12 @@ class Drawer {
       });
     }
 
-    this.dismisses = this.drawer.querySelectorAll('[data-dismisss="drawer"]');
+    this.dismisses = this.drawer.querySelectorAll('[data-dismiss="drawer"]');
 
     if(this.dismisses.length) {
-      [...this.dismisses].forEach(dismiss => dismiss.addEventListener('click', () => this.hide()));
+      [...this.dismisses].forEach(dismiss => {
+        dismiss.addEventListener('click', () => this.hide())
+      });
     }
   }
 
@@ -73,24 +76,23 @@ class Drawer {
       drawer.classList.add('showing');
 
       if(this.options.backdrop) {
-        let backdropOverlay = this.createBackdrop();
-
-        backdropOverlay.addEventListener('click', () => {
-          if(this.options.backdrop !== 'static') {
-            this.hide();
-          }
-        });
-
-        document.body.appendChild(backdropOverlay);
+        document.body.appendChild(this.createBackdrop());
       }
 
       setTimeout(() => {
+        const drawerBackdrop = document.querySelector('.drawer-backdrop');
         drawer.classList.replace('showing', 'show');
 
-        if(document.querySelector('.drawer-backdrop')) {
-          document.querySelector('.drawer-backdrop').classList.add('show');
-        }
+        if(drawerBackdrop) {
+          drawerBackdrop.classList.add('show');
 
+          drawerBackdrop.addEventListener('click', () => {
+            if(this.options.backdrop !== 'static') {
+              this.hide();
+            }
+          });
+        }
+        
         if(this.options.keyboard) {
           document.addEventListener('keydown', this.documentOnKeydown);
         }
@@ -102,52 +104,46 @@ class Drawer {
     const drawer = element ? element : this.drawer;
 
     if(drawer.classList.contains('show') && !drawer.classList.contains('hiding')) {
+      const drawerBackdrop = document.querySelector('.drawer-backdrop');
+
       drawer.classList.add('hiding');
 
-      if(document.querySelector('.drawer-backdrop')) {
-        document.querySelector('.drawer-backdrop').classList.remove('show')
+      if(drawerBackdrop) {
+        drawerBackdrop.classList.remove('show')
       }
 
       setTimeout(() => {
         drawer.classList.remove('show');
-
         drawer.classList.remove('hiding');
 
-        if(document.querySelector('.drawer-backdrop')) {
-          document.querySelector('.drawer-backdrop').remove();
+        if(drawerBackdrop) {
+          drawerBackdrop.remove();
         }
 
         if(this.options.keyboard) {
           document.removeEventListener('keydown', this.documentOnKeydown);
         }
-      }, 500)
+      }, this.transition)
     }
   }
 
   hideOnKeydown(args) {
-    //Store the event listener
-    const e = args.e;
+    const {e, drawer} = args;
 
-    // Store the Drawer instance
-    const drawer = args.drawer;
-    
     if(e.key === 'Escape' && drawer.options.keyboard) {
-      // Hide the modal on keypress
       drawer.hide();
     }
   }
 
   createBackdrop() {
-    // Remove overlay if it exists
-    if (document.body.querySelector('.drawer-backdrop')) {
-      document.body.querySelector('.drawer-backdrop').remove();
+    if (document.querySelector('.drawer-backdrop')) {
+      document.querySelector('.drawer-backdrop').remove();
     }
 
-    // Create overlay
-    const overlay = document.createElement('div');
-    overlay.setAttribute('class', 'drawer-backdrop');
+    const backdrop = document.createElement('div');
+    backdrop.setAttribute('class', 'drawer-backdrop');
 
-    return overlay;
+    return backdrop;
   }
 }
 

@@ -1,6 +1,5 @@
 class Modal {
-
-  constructor (target, options = {}) {
+  constructor(target, options = {}) {
     //Store the target element
     this.target = null;
 
@@ -8,20 +7,22 @@ class Modal {
     this.modal = null;
     
     //Store modal toggle
-    this.toggle  = null;
+    this.toggle = null;
 
-    //Store modal dismisses
+    //Store drawer dismisses
     this.dismisses = null;
 
-    // Store the function for calling on keydown
-    this.documentOnKeydown = (e) => this.hideOnKeydown({e, modal: this});
+    //Store modal transition in miliseconds.
+    this.transition = 500;
 
     //Store the modal options
     this.options  = {
-      backdrop: true,
-      keyboard: true,
+      keyboard: true, //Boolean. Default is true
+      backdrop: true, //Boolean | 'static'. Default is true
       ...options
     };
+
+    this.documentOnKeydown = (e) => this.hideOnKeydown({e, modal: this});
 
     if(typeof target === 'string') {
 
@@ -36,137 +37,157 @@ class Modal {
       throw new Error('No target element found');
     }
 
-    if(!this.target.classList.contains('modal')) {
-      /**
-       * Passed a modal toggle instance
-       */
-      this.toggle = this.target;
-      this.modal  = document.querySelector(this.toggle.dataset.target);
+    if(this.target.classList.contains('modal')) {
 
-      if(this.modal) {
-  
-        if(Object.keys(options).length === 0) {
-          this.options = { 
-            ...this.options, 
-            backdrop: this.modal.dataset.backdrop === 'false' ? false : true,
-            keyboard: this.modal.dataset.keyboard === 'false' ? false : true,
-          }
-        }
-
-        this.toggle.addEventListener('click', () => this.show());
-      }
-    
-    }else {
-      /**
-       * Passed a modal instance
-       */
       this.modal = this.target;
+
+    }else {
+      this.toggle = this.target;
+      this.modal = document.querySelector(this.toggle.dataset.target);
+
+      this.toggle.addEventListener('click', () => {
+        const openModals = document.querySelectorAll('.modal.show');
+
+        if(openModals.length) {
+
+          [...openModals].forEach(modal => this.hide(modal));
+
+        }else {
+
+          this.show();
+
+        }
+      });
     }
 
-    this.dismisses = this.modal.querySelectorAll('[data-dismisss="modal"]');
+    this.dismisses = this.modal.querySelectorAll('[data-dismiss="modal"]');
 
     if(this.dismisses.length) {
-      [...this.dismisses].forEach((dismiss) => dismiss.addEventListener('click', () => this.hide()));
+      [...this.dismisses].forEach(dismiss => {
+        dismiss.addEventListener('click', () => this.hide())
+      });
     }
+
   }
 
-  show() {
-    const modal = this.modal;
-
+  show(element = null) {
+    const modal = element ? element : this.modal;
+    
     if (!modal.classList.contains('show')) {
-      // Change the display property none to flex
       modal.style.display = 'flex';
 
-      // Create a modal overlay
-      const overlay = this.createOverlay();
+      modal.appendChild(this.createBackdrop());
 
       setTimeout(() => {
-        // Add the show class to the modal
+        const modalBackdrop = modal.querySelector('.modal-backdrop');
         modal.classList.add('show');
 
-        // Append the overlay
-        modal.appendChild(overlay);
-        
-        // Add event listener to listen ESC keypress
-        document.addEventListener('keydown', this.documentOnKeydown);
+        if(modalBackdrop) {
+          modalBackdrop.classList.add('show');
+
+          modalBackdrop.addEventListener('click', () => {
+            if(this.options.backdrop && this.options.backdrop !== 'static') {
+              this.hide();
+            }
+          });
+        }
+
+        if(this.options.keyboard) {
+          document.addEventListener('keydown', this.documentOnKeydown);
+        }
       }, 15);
     }
   }
 
-  hide() {
-    const modal = this.modal;
+  hide(element = null) {
+    const modal = element ? element : this.modal;
 
     if(modal.classList.contains('show')) {
-
+      const modalBackdrop = modal.querySelector('.modal-backdrop');
       modal.classList.remove('show');
 
+      if(modalBackdrop) {
+        modalBackdrop.classList.remove('show')
+      }
+
       setTimeout(() => {
-        // Remove the style attribute to make display none
         modal.removeAttribute('style');
 
-        // Remove the backdrop from modal
-        modal.querySelector('.modal-backdrop').remove();
+        modalBackdrop.remove();
 
-        // Remove keydown eventListener from document
         document.removeEventListener('keydown', this.documentOnKeydown);
-      }, 300);
+      }, this.transition);
     }
   }
 
   hideOnKeydown(args) {
-    // Store the event listener
-    const e     = args.e;
+    const {e, modal} = args;
 
-    // Store the Modal instance
-    const modal = args.modal;
-    
     if(e.key === 'Escape' && modal.options.keyboard) {
-      // Hide the modal on keypress
       modal.hide();
     }
   }
 
-  createOverlay() {
-    const modal = this.modal;
-
-    // Remove overlay if it exists
-    if (modal.querySelector('.modal-backdrop')) {
-      modal.querySelector('.modal-backdrop').remove();
+  createBackdrop() {
+    if (this.modal.querySelector('.modal-backdrop')) {
+      this.modal.querySelector('.modal-backdrop').remove();
     }
 
-    // Create overlay
-    const overlay = document.createElement('div');
-    overlay.setAttribute('class', 'modal-backdrop');
+    const backdrop = document.createElement('div');
+    backdrop.setAttribute('class', 'modal-backdrop');
 
-    // Add Event Listener to overlay
-    overlay.addEventListener('click', () => {
-      if(this.options.backdrop) {
-        this.hide();
-      }
-    });
-
-    return overlay;
+    return backdrop;
   }
 }
 
 const modal = {
   init() {
-  
-    //Store modal element
-    const targets = document.querySelectorAll('[data-toggle="modal"]');
+    const toggles = this.querySelectors('[data-toggle="modal"]');
 
-    // Check if the page contains any modal component
-    if(targets.length) {
-      
-      // Create instance for each modal
-      [...targets].forEach(target => new Modal(target));
-      
+    if(toggles.length) {
+      toggles.forEach(toggle => {
+        const targetId = toggle.dataset.target;
+
+        if(targetId) {
+          const target = document.querySelector(targetId);
+          const options = {
+            keyboard: target.dataset.keyboard === 'false' ? false : true,
+            backdrop: (() => {
+              let output = true;
+
+              if(target.dataset.backdrop === 'static') {
+                output = 'static';
+              }
+
+              if(target.dataset.backdrop === 'false') {
+                output = false;
+              }
+
+              return output;
+            })(),
+          };
+
+          new Modal(toggle, options);
+        }
+      });
     }
+  },
+
+ querySelectors(selectors) {
+    let output = [];
+
+    if(selectors) {
+      output = [...document.querySelectorAll(selectors)].filter((selectorElement) => {
+        // Return all the elements except .code-viewer-source children elements
+        return !selectorElement.parentElement.classList.contains('code-viewer-source');
+      });
+    }
+
+    return output;
   }
 }
 
 window.createModal = function (target, options = {}) {
-  return new Modal(target, options);
+  return new Modal(target, options)
 }
-
-export default modal
+export default modal;
