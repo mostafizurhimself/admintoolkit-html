@@ -1,21 +1,35 @@
 @layer components {
   .dropdown {
-    @apply relative inline-flex items-center;
+    @apply relative flex flex-col;
 
     &-toggle {
-      @apply inline-flex cursor-pointer;
+      @apply flex items-center cursor-pointer;
     }
-
+    
     &-content {
-      @apply fixed top-0 left-0 z-20 hidden overflow-hidden rounded-primary border bg-white shadow-lg dark:border-slate-800 dark:bg-slate-800;
+      @apply fixed top-0 left-0 z-20 hidden overflow-hidden rounded-primary border border-slate-200 bg-white shadow-lg dark:border-slate-700 dark:bg-slate-800;
+      
+      &.show {
+        @apply block;
+      }
     }
 
-    &-content.show {
-      @apply block;
+    // &-list {
+    //   &-item {
+    //     @apply border border-black dark:border-slate-100;
+    //   }
+    // }
+
+    &-link {
+      @apply w-full inline-flex items-center gap-2 cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-slate-700;
     }
 
-    &-item {
-      @apply block cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-slate-700;
+    &-btn {
+      @apply w-full inline-flex items-center gap-2 px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700;
+
+      &.active {
+        @apply text-primary-500 dark:text-primary-500;
+      }
     }
   }
 }
