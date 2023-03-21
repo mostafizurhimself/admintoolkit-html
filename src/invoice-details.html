@@ -573,85 +573,47 @@
               <!-- Language Dropdown Starts -->
               <div class="dropdown" data-strategy="absolute">
                 <div class="dropdown-toggle">
-                  <button
-                    type="button"
-                    class="inline-flex items-center gap-2 text-sm"
-                  >
+                  <button type="button" class="inline-flex items-center gap-2 text-sm">
                     <span class="fi fi-gb"></span>
                     <span class="hidden md:inline-block">English</span>
                     <span class="inline-block md:hidden">EN</span>
                   </button>
                 </div>
 
-                <div class="dropdown-content mt-6 w-[150px]">
-                  <ul>
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button
-                        type="button"
-                        class="flex h-full w-full items-center gap-2 px-4 py-2"
-                      >
+                <div class="dropdown-content w-40 mt-3">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
                         <span class="fi fi-gb"></span>
                         <span>English</span>
                       </button>
                     </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button
-                        type="button"
-                        class="flex h-full w-full items-center gap-2 px-4 py-2"
-                      >
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
                         <span class="fi fi-de"></span>
                         <span>German</span>
                       </button>
                     </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button
-                        type="button"
-                        class="flex h-full w-full items-center gap-2 px-4 py-2"
-                      >
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
                         <span class="fi fi-gf"></span>
                         <span>French</span>
                       </button>
                     </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button
-                        type="button"
-                        class="flex h-full w-full items-center gap-2 px-4 py-2"
-                      >
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
                         <span class="fi fi-sa"></span>
                         <span>Arabic</span>
                       </button>
                     </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button
-                        type="button"
-                        class="flex h-full w-full items-center gap-2 px-4 py-2"
-                      >
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
                         <span class="fi fi-cn"></span>
                         <span>Chinese</span>
                       </button>
                     </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button
-                        type="button"
-                        class="flex h-full w-full items-center gap-2 px-4 py-2"
-                      >
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
                         <span class="fi fi-bd"></span>
                         <span>Bangla</span>
                       </button>
@@ -663,63 +625,61 @@
 
               <!-- Mobile Search Starts -->
               <div class="sm:hidden">
-                <button
-                  type="button"
-                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
-                >
+                <button type="button" class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300">
                   <i width="22" height="22" data-feather="search"></i>
                 </button>
               </div>
               <!-- Mobile Search Ends -->
 
               <!-- Dark Mood Toggle Starts -->
-              <div class="flex">
-                <button
-                  id="btn-theme-mode"
-                  type="button"
-                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
-                >
-                  <i
-                    class="block dark:hidden"
-                    width="24"
-                    height="24"
-                    data-feather="moon"
-                  ></i>
-                  <i
-                    class="hidden dark:block"
-                    width="24"
-                    height="24"
-                    data-feather="sun"
-                  ></i>
+              <div class="dropdown" data-strategy="absolute" id="dropdown-theme-switcher">
+                <button class="dropdown-toggle focus:text-primary-500" type="button">
+                  <i class="block dark:hidden" width="24" height="24" data-feather="moon"></i>
+                  <i class="hidden dark:block" width="24" height="24" data-feather="sun"></i> 
                 </button>
+
+                <div class="dropdown-content w-36 mt-3">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <button type="buttton" class="dropdown-btn" data-theme-mode="light">
+                        <i width="16" height="16" data-feather="sun"></i>
+                        <span>Light</span>
+                      </button>
+                    </li>
+
+                    <li class="dropdown-list-item">
+                      <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
+                        <i width="16" height="16" data-feather="moon"></i>
+                        <span>Dark</span>
+                      </button>
+                    </li>
+
+                    <li class="dropdown-list-item">
+                      <button type="buttton" class="dropdown-btn" data-theme-mode="system">
+                        <i width="16" height="16" data-feather="monitor"></i>
+                        <span>System</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <!-- Dark Mood Toggle Ends -->
 
               <!-- Notification Dropdown Starts -->
               <div class="dropdown -mt-0.5" data-strategy="absolute">
                 <div class="dropdown-toggle">
-                  <button
-                    class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
-                  >
+                  <button class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
                     <i width="24" height="24" data-feather="bell"></i>
-                    <span
-                      class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200"
-                    >
+                    <span class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
                       5
                     </span>
                   </button>
                 </div>
 
-                <div
-                  class="dropdown-content mt-6 w-[280px] divide-y dark:divide-slate-700 sm:w-80"
-                >
+                <div class="dropdown-content w-[17.5rem] mt-3 divide-y dark:divide-slate-700 sm:w-80">
                   <div class="flex items-center justify-between py-4 px-4">
-                    <h6 class="text-slate-800 dark:text-slate-300">
-                      Notifications
-                    </h6>
-                    <button
-                      class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300"
-                    >
+                    <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
+                    <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
                       Clear All
                     </button>
                   </div>
@@ -732,28 +692,14 @@
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500"
                         >
-                          <i
-                            data-feather="alert-circle"
-                            width="20"
-                            height="20"
-                          ></i>
+                          <i data-feather="alert-circle" width="20" height="20"></i>
                         </div>
 
                         <div>
-                          <h6 class="text-sm font-normal">
-                            New order received
-                          </h6>
-                          <p class="text-xs text-slate-400">
-                            Order #1234 has been placed
-                          </p>
-                          <p
-                            class="mt-1 flex items-center gap-1 text-xs text-slate-400"
-                          >
-                            <i
-                              data-feather="clock"
-                              width="1em"
-                              height="1em"
-                            ></i>
+                          <h6 class="text-sm font-normal">New order received</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
                             <span>2 min ago</span>
                           </p>
                         </div>
@@ -765,26 +711,14 @@
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500"
                         >
-                          <i
-                            data-feather="alert-triangle"
-                            width="20"
-                            height="20"
-                          ></i>
+                          <i data-feather="alert-triangle" width="20" height="20"></i>
                         </div>
 
                         <div>
                           <h6 class="text-sm font-normal">High CPU usage</h6>
-                          <p class="text-xs text-slate-400">
-                            CPU usage is at 92%
-                          </p>
-                          <p
-                            class="mt-1 flex items-center gap-1 text-xs text-slate-400"
-                          >
-                            <i
-                              data-feather="clock"
-                              width="1em"
-                              height="1em"
-                            ></i>
+                          <p class="text-xs text-slate-400">CPU usage is at 92%</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
                             <span>5 min ago</span>
                           </p>
                         </div>
@@ -796,28 +730,14 @@
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
                         >
-                          <i
-                            data-feather="check-circle"
-                            width="20"
-                            height="20"
-                          ></i>
+                          <i data-feather="check-circle" width="20" height="20"></i>
                         </div>
 
                         <div>
-                          <h6 class="text-sm font-normal">
-                            Your order has been shipped
-                          </h6>
-                          <p class="text-xs text-slate-400">
-                            Order #1234 has been shipped
-                          </p>
-                          <p
-                            class="mt-1 flex items-center gap-1 text-xs text-slate-400"
-                          >
-                            <i
-                              data-feather="clock"
-                              width="1em"
-                              height="1em"
-                            ></i>
+                          <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
                             <span>10 min ago</span>
                           </p>
                         </div>
@@ -833,20 +753,10 @@
                         </div>
 
                         <div>
-                          <h6 class="text-sm font-normal">
-                            Something went wrong
-                          </h6>
-                          <p class="text-xs text-slate-400">
-                            Order #1234 has been placed
-                          </p>
-                          <p
-                            class="mt-1 flex items-center gap-1 text-xs text-slate-400"
-                          >
-                            <i
-                              data-feather="clock"
-                              width="1em"
-                              height="1em"
-                            ></i>
+                          <h6 class="text-sm font-normal">Something went wrong</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
                             <span>1 hour ago</span>
                           </p>
                         </div>
@@ -858,28 +768,14 @@
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
                         >
-                          <i
-                            data-feather="check-circle"
-                            width="20"
-                            height="20"
-                          ></i>
+                          <i data-feather="check-circle" width="20" height="20"></i>
                         </div>
 
                         <div>
-                          <h6 class="text-sm font-normal">
-                            Your order has been shipped
-                          </h6>
-                          <p class="text-xs text-slate-400">
-                            Order #1234 has been shipped
-                          </p>
-                          <p
-                            class="mt-1 flex items-center gap-1 text-xs text-slate-400"
-                          >
-                            <i
-                              data-feather="clock"
-                              width="1em"
-                              height="1em"
-                            ></i>
+                          <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
                             <span>10 min ago</span>
                           </p>
                         </div>
@@ -888,16 +784,9 @@
                   </div>
 
                   <div class="py-2 px-4">
-                    <button
-                      class="btn btn-primary-plain btn-sm w-full"
-                      type="button"
-                    >
+                    <button class="btn btn-primary-plain btn-sm w-full" type="button">
                       <span>View More</span>
-                      <i
-                        data-feather="arrow-right"
-                        width="1rem"
-                        height="1rem"
-                      ></i>
+                      <i data-feather="arrow-right" width="1rem" height="1rem"></i>
                     </button>
                   </div>
                 </div>
@@ -907,69 +796,41 @@
               <!-- Profile Dropdown Starts -->
               <div class="dropdown" data-strategy="absolute">
                 <div class="dropdown-toggle">
-                  <button
-                    class="group relative flex items-center space-x-1.5"
-                    type="button"
-                  >
-                    <img
-                      class="block h-9 w-9 rounded-full group-focus:ring group-focus:ring-primary-500"
-                      src="https://avatars.githubusercontent.com/u/1164541?v=4"
-                      alt="avatar"
-                    />
+                  <button class="group relative flex items-center gap-x-1.5" type="button">
+                    <div class="avatar avatar-circle">
+                      <img class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500" src="./images/avatar1.png" alt="Avatar 1">
+                    </div>
 
                     <div class="hidden md:flex md:flex-col">
-                      <span
-                        class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300"
-                      >
+                      <span class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
                         John Doe
                       </span>
-                      <span
-                        class="inline-block text-left text-xs text-slate-400"
-                        >Admin</span
-                      >
+                      <span class="inline-block text-left text-xs text-slate-400">Admin</span>
                     </div>
                   </button>
                 </div>
 
-                <div class="dropdown-content mt-6 w-[180px]">
-                  <a
-                    href="/dashboard/ecommerce"
-                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                  >
-                    <i
-                      class="text-slate-600 dark:text-slate-400"
-                      width="18"
-                      height="18"
-                      data-feather="user"
-                    ></i>
-                    <span>Profile</span>
-                  </a>
-
-                  <a
-                    href="/dashboard/ecommerce"
-                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                  >
-                    <i
-                      class="text-slate-600 dark:text-slate-400"
-                      width="18"
-                      height="18"
-                      data-feather="settings"
-                    ></i>
-                    <span>Settings</span>
-                  </a>
-
-                  <a
-                    href="/dashboard/ecommerce"
-                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                  >
-                    <i
-                      class="text-slate-600 dark:text-slate-400"
-                      width="18"
-                      height="18"
-                      data-feather="log-out"
-                    ></i>
-                    <span>Sign out</span>
-                  </a>
+                <div class="dropdown-content w-[11.25rem] mt-1">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-link">
+                        <i width="18" height="18" data-feather="user"></i>    
+                        <span>Profile</span>
+                      </a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-link">
+                        <i width="18" height="18" data-feather="settings"></i>    
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-link">
+                        <i width="18" height="18" data-feather="log-out"></i>    
+                        <span>Sign out</span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <!-- Profile Dropdown Ends -->
