@@ -20,6 +20,9 @@ import editor from './components/editor';
 import select from './components/select';
 import uploader from './components/uploader';
 
+// Initialize themeSwitcher
+themeSwitcher.init();
+
 // Initialize codeViewer
 codeViewer.init();
 
@@ -34,9 +37,6 @@ dropdown.init();
 
 // Initialize modal
 modal.init();
-
-// Initialize themeSwitcher
-themeSwitcher.init();
 
 // Initialize sidebar
 sidebar.init();
