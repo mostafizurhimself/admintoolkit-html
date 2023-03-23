@@ -18,11 +18,11 @@
         <span class="sidebar-logo-icon">
           <svg fill="currentColor" width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
             <path
-              d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z"
-            ></path>
+              d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z"></path>
+            </path>
             <path
-              d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z"
-            ></path>
+              d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z">
+            </path>
           </svg>
         </span>
 
@@ -64,7 +64,7 @@
 
         <!-- Email -->
         <li>
-          <a href="./email.html" class="sidebar-menu">
+          <a href="./email.html" class="sidebar-menu active">
             <span class="sidebar-menu-icon">
               <i data-feather="mail"></i>
             </span>
@@ -164,7 +164,7 @@
         <div class="sidebar-menu-header">Components</div>
         <!-- Common  -->
         <li>
-          <a href="javascript:void(0);" class="sidebar-menu active">
+          <a href="javascript:void(0);" class="sidebar-menu">
             <span class="sidebar-menu-icon">
               <i data-feather="box"></i>
             </span>
@@ -202,7 +202,7 @@
               <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
             </li>
             <li>
-              <a href="./dropdown.html" class="sidebar-submenu-item active">Dropdown</a>
+              <a href="./dropdown.html" class="sidebar-submenu-item ">Dropdown</a>
             </li>
             <li>
               <a href="./list-group.html" class="sidebar-submenu-item">List Group</a>
@@ -433,42 +433,23 @@
           <div class="flex items-center space-x-6">
             <button class="sidebar-toggle">
               <span class="flex space-x-4">
-                <svg
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  height="22"
-                  width="22"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  ></path>
+                <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
+                  </path>
                 </svg>
               </span>
             </button>
 
-            <form
-              action=""
-              class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
-            >
+            <form action=""
+              class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex">
               <div class="flex h-full items-center px-3">
-                <i
-                  class="text-slate-400 group-focus-within:text-primary-500"
-                  width="1em"
-                  height="1em"
-                  data-feather="search"
-                ></i>
+                <i class="text-slate-400 group-focus-within:text-primary-500" width="1em" height="1em"
+                  data-feather="search"></i>
               </div>
               <input
                 class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                type="text"
-                placeholder="Search"
-              />
+                type="text" placeholder="Search" />
             </form>
           </div>
           <!-- Sidebar Toggle & Search Ends -->
@@ -530,7 +511,8 @@
 
             <!-- Mobile Search Starts -->
             <div class="sm:hidden">
-              <button type="button" class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300">
+              <button type="button"
+                class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300">
                 <i width="22" height="22" data-feather="search"></i>
               </button>
             </div>
@@ -540,7 +522,7 @@
             <div class="dropdown" data-strategy="absolute" id="dropdown-theme-switcher">
               <button class="dropdown-toggle focus:text-primary-500" type="button">
                 <i class="block dark:hidden" width="24" height="24" data-feather="moon"></i>
-                <i class="hidden dark:block" width="24" height="24" data-feather="sun"></i> 
+                <i class="hidden dark:block" width="24" height="24" data-feather="sun"></i>
               </button>
 
               <div class="dropdown-content w-36 mt-3">
@@ -573,9 +555,11 @@
             <!-- Notification Dropdown Starts -->
             <div class="dropdown -mt-0.5" data-strategy="absolute">
               <div class="dropdown-toggle">
-                <button class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
+                <button
+                  class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
                   <i width="24" height="24" data-feather="bell"></i>
-                  <span class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
+                  <span
+                    class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
                     5
                   </span>
                 </button>
@@ -592,11 +576,9 @@
                 <div class="h-80 w-full" data-simplebar>
                   <ul>
                     <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                    >
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
                       <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500"
-                      >
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500">
                         <i data-feather="alert-circle" width="20" height="20"></i>
                       </div>
 
@@ -611,11 +593,9 @@
                     </li>
 
                     <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                    >
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
                       <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500"
-                      >
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500">
                         <i data-feather="alert-triangle" width="20" height="20"></i>
                       </div>
 
@@ -630,11 +610,9 @@
                     </li>
 
                     <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                    >
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
                       <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
-                      >
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
                         <i data-feather="check-circle" width="20" height="20"></i>
                       </div>
 
@@ -649,11 +627,9 @@
                     </li>
 
                     <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                    >
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
                       <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500"
-                      >
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500">
                         <i data-feather="x-circle" width="20" height="20"></i>
                       </div>
 
@@ -668,11 +644,9 @@
                     </li>
 
                     <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                    >
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
                       <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
-                      >
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
                         <i data-feather="check-circle" width="20" height="20"></i>
                       </div>
 
@@ -703,11 +677,13 @@
               <div class="dropdown-toggle">
                 <button class="group relative flex items-center gap-x-1.5" type="button">
                   <div class="avatar avatar-circle">
-                    <img class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500" src="./images/avatar1.png" alt="Avatar 1">
+                    <img class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
+                      src="./images/avatar1.png" alt="Avatar 1">
                   </div>
 
                   <div class="hidden md:flex md:flex-col">
-                    <span class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
+                    <span
+                      class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
                       John Doe
                     </span>
                     <span class="inline-block text-left text-xs text-slate-400">Admin</span>
@@ -719,19 +695,19 @@
                 <ul class="dropdown-list">
                   <li class="dropdown-list-item">
                     <a href="javascript:void(0)" class="dropdown-link">
-                      <i width="18" height="18" data-feather="user"></i>    
+                      <i width="18" height="18" data-feather="user"></i>
                       <span>Profile</span>
                     </a>
                   </li>
                   <li class="dropdown-list-item">
                     <a href="javascript:void(0)" class="dropdown-link">
-                      <i width="18" height="18" data-feather="settings"></i>    
+                      <i width="18" height="18" data-feather="settings"></i>
                       <span>Settings</span>
                     </a>
                   </li>
                   <li class="dropdown-list-item">
                     <a href="javascript:void(0)" class="dropdown-link">
-                      <i width="18" height="18" data-feather="log-out"></i>    
+                      <i width="18" height="18" data-feather="log-out"></i>
                       <span>Sign out</span>
                     </a>
                   </li>
@@ -887,19 +863,80 @@
             <!-- Email List End  -->
             <!-- Email Box Start -->
             <div class="card relative m-0 h-full rounded-primary p-0 lg:col-span-2">
-              <div id="open-email-list" class="m-0 flex items-center justify-center p-0 lg:hidden">
-                <button
-                  class="m-0 p-0 text-slate-700 transition duration-150 ease-in-out hover:text-slate-800 dark:text-slate-400">
-                  <i width="1.125rem" height="1.125rem" data-feather="menu"></i>
-                </button>
+              <div class="flex flex-col md:flex-row gap-y-4 justify-start items-start md:items-center p-6 md:justify-between">
+                <div class="flex gap-3 items-center order-2 md:order-1">
+                  <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
+                  <span class="duration-150 ease-in-out transition text-slate-400 cursor-pointer hover:text-slate-600 hover:dark:text-slate-200">
+                    <i class="h-5" data-feather="refresh-cw"></i>
+                  </span>
+                  <span class="duration-150 ease-in-out transition text-slate-400 cursor-pointer hover:text-slate-600 hover:dark:text-slate-200">
+                    <i class="ti text-xl ti-mail-opened" ></i>
+                  </span>
+                  <span class="duration-150 ease-in-out transition text-slate-400  cursor-pointer hover:text-slate-600 hover:dark:text-slate-200">
+                    <i class="h-5" data-feather="trash-2"></i>
+                  </span>
+                  <div class="dropdown">
+                    <div class="dropdown-toggle p-0 m-0">
+                      <i class="h-5 text-slate-400 duration-150 transition ease-in-out hover:dark:text-slate-200 hover:text-slate-600" data-feather="more-vertical"></i>
+                    </div>
+                    <div class="dropdown-content w-[200px]">
+                      <ul class="dropdown-list">
+                        <li class="dropdown-list-item">
+                          <a href="javascript:void(0)" class="dropdown-link">Mark as read</a>
+                          <a href="javascript:void(0)" class="dropdown-link">Mark as unread</a>
+                          <a href="javascript:void(0)" class="dropdown-link">Delete</a>
+                          <a href="javascript:void(0)" class="dropdown-link">Archive</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex w-full md:w-auto justify-between md:justify-end gap-2 order-1 md:order-2">
+                  <div
+                    class="group flex h-10 max-w-[15rem] items-center rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 md:w-72"
+                  >
+                    <div class="flex h-full items-center px-2">
+                      <i class="h-4 text-slate-400 group-focus-within:text-primary-500" data-feather="search"></i>
+                    </div>
+                    <input
+                      class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                      type="text"
+                      placeholder="Search"
+                    />
+                  </div>
+                  <div id="open-email-list" class="m-0 flex items-center justify-center p-0 lg:hidden">
+                    <button
+                      class="m-0 p-0 text-slate-700 transition duration-150 ease-in-out hover:text-slate-800 dark:text-slate-400">
+                      <i width="1.125rem" height="1.125rem" data-feather="menu"></i>
+                    </button>
+                  </div>
+                </div>
+
               </div>
-              <!-- Email Header Start  -->
-              <div class="flex items-center justify-between p-4">
-                <div class="flex items-center justify-start gap-x-2"></div>
-                <div class="flex items-center gap-6 lg:gap-8"></div>
+              <div class="table-responsive">
+                <table class="table-hover table min-w-[35rem]">
+                  <thead>
+                    <tr>
+                      <th>01</th>
+                      <th>01</th>
+                      <th>01</th>
+                      <th>01</th>
+                      <th>01</th>
+                      <th>01</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>01</td>
+                      <td>Apple MacBook Pro 17"</td>
+                      <td>White</td>
+                      <td>Laptop</td>
+                      <td>Yes</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <!-- Email Header End  -->
-              <div id="chats" class="conversion relative flex  flex-col "></div>
             </div>
             <!-- Email Box End -->
           </div>
