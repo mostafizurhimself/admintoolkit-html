@@ -745,7 +745,7 @@
             </div>
             <!-- Email List Start  -->
             <div id="email-list"
-              class="absolute z-20 flex h-full w-full -translate-x-full transform bg-transparent transition duration-300 ease-in-out lg:relative lg:col-span-1 lg:translate-x-0">
+              class="absolute z-20 flex h-full lg:h-auto w-full -translate-x-full transform bg-transparent transition duration-300 ease-in-out lg:relative lg:col-span-1 lg:translate-x-0">
               <div class="card max-w-[18rem] rounded-l-primary rounded-r-none p-4 lg:max-w-none lg:rounded-primary">
                 <button class="btn btn-primary my-4 w-full py-2">
                   Compose
@@ -862,87 +862,222 @@
             </div>
             <!-- Email List End  -->
             <!-- Email Box Start -->
-            <div class="card relative m-0 h-full rounded-primary p-0 lg:col-span-2">
-              <div class="flex flex-col md:flex-row gap-y-4 justify-start items-start md:items-center p-6 md:justify-between">
-                <div class="flex gap-3 items-center order-2 md:order-1">
-                  <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
-                  <span class="duration-150 ease-in-out transition text-slate-400 cursor-pointer hover:text-slate-600 hover:dark:text-slate-200">
-                    <i class="h-5" data-feather="refresh-cw"></i>
-                  </span>
-                  <span class="duration-150 ease-in-out transition text-slate-400 cursor-pointer hover:text-slate-600 hover:dark:text-slate-200">
-                    <i class="ti text-xl ti-mail-opened" ></i>
-                  </span>
-                  <span class="duration-150 ease-in-out transition text-slate-400  cursor-pointer hover:text-slate-600 hover:dark:text-slate-200">
-                    <i class="h-5" data-feather="trash-2"></i>
-                  </span>
-                  <div class="dropdown">
-                    <div class="dropdown-toggle p-0 m-0">
-                      <i class="h-5 text-slate-400 duration-150 transition ease-in-out hover:dark:text-slate-200 hover:text-slate-600" data-feather="more-vertical"></i>
+            <div class="grid grid-cols-1 gap-y-4 lg:col-span-2">
+              <div class="card relative m-0 h-full rounded-primary p-0 ">
+                <div class="flex flex-col md:flex-row gap-y-4 justify-start items-start md:items-center p-4 md:justify-between">
+                  <div class="flex gap-4 items-center order-2 md:order-1">
+                    <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
+                    <span class="duration-150 ease-in-out transition text-slate-400 cursor-pointer hover:text-slate-600 hover:dark:text-slate-200">
+                      <i class="h-5" data-feather="refresh-cw"></i>
+                    </span>
+                    <span class="duration-150 ease-in-out transition text-slate-400 cursor-pointer hover:text-slate-600 hover:dark:text-slate-200">
+                      <i class="ti text-xl ti-mail-opened" ></i>
+                    </span>
+                    <span class="duration-150 ease-in-out transition text-slate-400  cursor-pointer hover:text-slate-600 hover:dark:text-slate-200">
+                      <i class="h-5" data-feather="trash-2"></i>
+                    </span>
+                    <div class="dropdown">
+                      <div class="dropdown-toggle p-0 m-0">
+                        <i class="h-5 text-slate-400 duration-150 transition ease-in-out hover:dark:text-slate-200 hover:text-slate-600" data-feather="more-vertical"></i>
+                      </div>
+                      <div class="dropdown-content w-[200px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link">Mark as read</a>
+                            <a href="javascript:void(0)" class="dropdown-link">Mark as unread</a>
+                            <a href="javascript:void(0)" class="dropdown-link">Delete</a>
+                            <a href="javascript:void(0)" class="dropdown-link">Archive</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                    <div class="dropdown-content w-[200px]">
-                      <ul class="dropdown-list">
-                        <li class="dropdown-list-item">
-                          <a href="javascript:void(0)" class="dropdown-link">Mark as read</a>
-                          <a href="javascript:void(0)" class="dropdown-link">Mark as unread</a>
-                          <a href="javascript:void(0)" class="dropdown-link">Delete</a>
-                          <a href="javascript:void(0)" class="dropdown-link">Archive</a>
-                        </li>
-                      </ul>
+                  </div>
+                  <div class="flex w-full md:w-auto justify-between md:justify-end gap-2 order-1 md:order-2">
+                    <div
+                      class="group flex h-10 max-w-[15rem] items-center rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 md:w-72"
+                    >
+                      <div class="flex h-full items-center px-2">
+                        <i class="h-4 text-slate-400 group-focus-within:text-primary-500" data-feather="search"></i>
+                      </div>
+                      <input
+                        class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                        type="text"
+                        placeholder="Search"
+                      />
+                    </div>
+                    <div id="open-email-list" class="m-0 flex items-center justify-center p-0 lg:hidden">
+                      <button
+                        class="m-0 p-0 text-slate-700 transition duration-150 ease-in-out hover:text-slate-800 dark:text-slate-400">
+                        <i width="1.125rem" height="1.125rem" data-feather="menu"></i>
+                      </button>
                     </div>
                   </div>
                 </div>
-                <div class="flex w-full md:w-auto justify-between md:justify-end gap-2 order-1 md:order-2">
-                  <div
-                    class="group flex h-10 max-w-[15rem] items-center rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 md:w-72"
-                  >
-                    <div class="flex h-full items-center px-2">
-                      <i class="h-4 text-slate-400 group-focus-within:text-primary-500" data-feather="search"></i>
-                    </div>
-                    <input
-                      class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                      type="text"
-                      placeholder="Search"
-                    />
-                  </div>
-                  <div id="open-email-list" class="m-0 flex items-center justify-center p-0 lg:hidden">
-                    <button
-                      class="m-0 p-0 text-slate-700 transition duration-150 ease-in-out hover:text-slate-800 dark:text-slate-400">
-                      <i width="1.125rem" height="1.125rem" data-feather="menu"></i>
-                    </button>
-                  </div>
+                <div class="table-responsive">
+                  <table class="table-hover table min-w-[30rem]">
+                    <tbody>
+                      <tr class="cursor-pointer">
+                        <td class="!px-4" >
+                          <div class="flex items-center gap-3">
+                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
+                            <span class="text-slate-400 duration-150 transition ease-in-out hover:text-warning-400"><i class="h-5 "  data-feather="star"></i></span>
+                            <img src="./images/avatar1.png"  class="h-8 w-8 rounded-full" alt="user-image" >
+                          </div>
+                        </td>
+                        <td><p class="text-slate-700 dark:text-slate-300 md:whitespace-pre">John Doe</p></td>
+                        <td><p class="text-slate-700 dark:text-slate-300 md:whitespace-pre">Your Order #1001 has been delivered successfully</p></td>
+                        <td><p class="text-slate-700 text-xs text-right dark:text-slate-300 whitespace-pre">3 hours ago</p></td>
+                      </tr>
+                      <tr class="cursor-pointer">
+                        <td class="!px-4" >
+                          <div class="flex items-center gap-3">
+                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
+                            <span class="text-warning-400 duration-150 transition ease-in-out hover:text-warning-400"><i class="h-5 "  data-feather="star"></i></span>
+                            <img src="./images/avatar2.png"  class="h-8 w-8 rounded-full" alt="user-image" >
+                          </div>
+                        </td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Stacy Cooper</p></td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Invitation to join a weekly business meeting</p></td>
+                        <td><p class="text-slate-400 text-right text-xs whitespace-pre">July 24</p></td>
+                      </tr>
+                      <tr class="cursor-pointer">
+                        <td class="!px-4" >
+                          <div class="flex items-center gap-3">
+                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
+                            <span class="text-warning-400 duration-150 transition ease-in-out hover:text-warning-400"><i class="h-5 "  data-feather="star"></i></span>
+                            <img src="./images/avatar3.png"  class="h-8 w-8 rounded-full" alt="user-image" >
+                          </div>
+                        </td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Brad Adam</p></td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Congratulation! Your are shortlisted for and interview</p></td>
+                        <td><p class="text-slate-400 text-xs text-right whitespace-pre">10:10 AM</p></td>
+                      </tr>
+                      <tr class="cursor-pointer">
+                        <td class="!px-4" >
+                          <div class="flex items-center gap-3">
+                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
+                            <span class="text-slate-400 duration-150 transition ease-in-out hover:text-warning-400"><i class="h-5 "  data-feather="star"></i></span>
+                            <img src="./images/avatar4.png"  class="h-8 w-8 rounded-full" alt="user-image" >
+                          </div>
+                        </td>
+                        <td><p class="text-slate-400  md:whitespace-pre">John Doe</p></td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Invitation to join a weekly business meeting</p></td>
+                        <td><p class="text-slate-400 text-xs whitespace-pre text-right">2 days ago</p></td>
+                      </tr>
+                      <tr class="cursor-pointer">
+                        <td class="!px-4" >
+                          <div class="flex items-center gap-3">
+                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
+                            <span class="text-warning-400 duration-150 transition ease-in-out hover:text-warning-400"><i class="h-5 "  data-feather="star"></i></span>
+                            <img src="./images/avatar4.png"  class="h-8 w-8 rounded-full" alt="user-image" >
+                          </div>
+                        </td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Stacy Cooper</p></td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Congratulation! Your are shortlisted for and interview</p></td>
+                        <td><p class="text-slate-400 text-xs whitespace-pre text-right">3 days ago</p></td>
+                      </tr>
+                      <tr class="cursor-pointer">
+                        <td class="!px-4" >
+                          <div class="flex items-center gap-3">
+                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
+                            <span class="text-slate-400 duration-150 transition ease-in-out hover:text-warning-400"><i class="h-5 "  data-feather="star"></i></span>
+                            <img src="./images/avatar5.png"  class="h-8 w-8 rounded-full" alt="user-image" >
+                          </div>
+                        </td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Stacy Cooper</p></td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Invitation to join a weekly business meeting</p></td>
+                        <td><p class="text-slate-400 text-right text-xs whitespace-pre">July 24</p></td>
+                      </tr>
+                      <tr class="cursor-pointer">
+                        <td class="!px-4" >
+                          <div class="flex items-center gap-3">
+                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
+                            <span class="text-warning-400 duration-150 transition ease-in-out hover:text-warning-400"><i class="h-5 "  data-feather="star"></i></span>
+                            <img src="./images/avatar6.png"  class="h-8 w-8 rounded-full" alt="user-image" >
+                          </div>
+                        </td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Brad Adam</p></td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Congratulation! Your are shortlisted for and interview</p></td>
+                        <td><p class="text-slate-400 text-xs text-right whitespace-pre">10:10 AM</p></td>
+                      </tr>
+                      <tr class="cursor-pointer">
+                        <td class="!px-4" >
+                          <div class="flex items-center gap-3">
+                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
+                            <span class="text-slate-400 duration-150 transition ease-in-out hover:text-warning-400"><i class="h-5 "  data-feather="star"></i></span>
+                            <img src="./images/avatar7.png"  class="h-8 w-8 rounded-full" alt="user-image" >
+                          </div>
+                        </td>
+                        <td><p class="text-slate-400  md:whitespace-pre">John Doe</p></td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Invitation to join a weekly business meeting</p></td>
+                        <td><p class="text-slate-400 text-xs whitespace-pre text-right">2 days ago</p></td>
+                      </tr>
+                      <tr class="cursor-pointer">
+                        <td class="!px-4" >
+                          <div class="flex items-center gap-3">
+                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
+                            <span class="text-warning-400 duration-150 transition ease-in-out hover:text-warning-400"><i class="h-5 "  data-feather="star"></i></span>
+                            <img src="./images/avatar8.png"  class="h-8 w-8 rounded-full" alt="user-image" >
+                          </div>
+                        </td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Stacy Cooper</p></td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Your Order #1001 has been delivered successfully</p></td>
+                        <td><p class="text-slate-400 text-xs whitespace-pre text-right">10:10 AM</p></td>
+                      </tr>
+                      <tr class="cursor-pointer">
+                        <td class="!px-4" >
+                          <div class="flex items-center gap-3">
+                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox">
+                            <span class="text-slate-400 duration-150 transition ease-in-out hover:text-warning-400"><i class="h-5 "  data-feather="star"></i></span>
+                            <img src="./images/avatar8.png"  class="h-8 w-8 rounded-full" alt="user-image" >
+                          </div>
+                        </td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Brad Adam</p></td>
+                        <td><p class="text-slate-400  md:whitespace-pre">Congratulation! Your are shortlisted for and interview</p></td>
+                        <td><p class="text-slate-400 text-xs whitespace-pre text-right">July 24</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-
               </div>
-              <div class="table-responsive">
-                <table class="table-hover table min-w-[35rem]">
-                  <thead>
-                    <tr>
-                      <th>01</th>
-                      <th>01</th>
-                      <th>01</th>
-                      <th>01</th>
-                      <th>01</th>
-                      <th>01</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>01</td>
-                      <td>Apple MacBook Pro 17"</td>
-                      <td>White</td>
-                      <td>Laptop</td>
-                      <td>Yes</td>
-                      <td>1</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row">
+                <p class="text-xs font-normal text-slate-400">Showing 1 to 10 of 50 result</p>
+                <!-- Pagination -->
+                <nav class="pagination">
+                  <ul class="pagination-list">
+                    <li class="pagination-item">
+                      <a class="pagination-link pagination-link-prev-icon" href="#">
+                        <i data-feather="chevron-left" width="1em" height="1em"></i>
+                      </a>
+                    </li>
+                    <li class="pagination-item active">
+                      <a class="pagination-link" href="#">1</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">2</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">3</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">4</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">5</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link pagination-link-next-icon" href="#">
+                        <i data-feather="chevron-right" width="1em" height="1em"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
             <!-- Email Box End -->
           </div>
         </main>
         <!-- Main Content Ends -->
-
         <!-- Footer Starts -->
         <footer class="footer">
           <p class="text-sm">
