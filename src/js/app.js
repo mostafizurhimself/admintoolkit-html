@@ -19,6 +19,7 @@ import carousel from './components/carousel';
 import editor from './components/editor';
 import select from './components/select';
 import uploader from './components/uploader';
+import dataTable from './components/data-table';
 
 // Initialize themeSwitcher
 themeSwitcher.init();
@@ -55,6 +56,9 @@ select.init();
 
 // Initialize uploader
 uploader.init();
+
+// Initialize dataTable
+dataTable.init();
 
 // Initialize datepicker
 datepicker.init();

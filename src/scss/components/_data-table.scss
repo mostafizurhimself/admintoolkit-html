@@ -1,5 +1,133 @@
 @layer components {
-     .datatable-dropdown {
-          @apply w-20;
-     }
+  .datatable {
+    $datatable: &;
+    
+    #{$datatable}-container {
+      @apply overflow-x-auto;
+    }
+
+    #{$datatable}-top,
+    #{$datatable}-bottom {
+      @apply flex items-center justify-between;
+    }
+
+    #{$datatable}-top {
+      @apply mb-4 px-2 flex-col gap-4 md:flex-row;
+    }
+
+    #{$datatable}-bottom {
+      @apply mt-4 px-2 flex-col gap-4 lg:flex-row;
+    }
+
+    #{$datatable}-search {
+      @apply w-full md:w-[20rem] flex items-center gap-2;
+    }
+
+    #{$datatable}-dropdown {
+      @apply w-full md:w-32 flex items-center gap-2;
+    }
+
+    #{$datatable}-table {
+      @apply w-full rounded-primary overflow-hidden shadow border-slate-200 dark:border-slate-600;
+
+      thead, 
+      tbody, 
+      tfoot, 
+      td, 
+      th, 
+      tr {
+        @apply border-inherit border-solid border-0;
+      }
+  
+      th {
+        @apply font-semibold text-slate-700 dark:text-slate-300;
+      }
+  
+      td {
+        @apply font-normal text-slate-600 dark:text-slate-400;
+      }
+  
+      & > thead > tr:first-child > *,
+      & > tbody > tr:not(:last-child) > * {
+        @apply border-b;
+      }
+      
+      & > tfoot > tr:first-child > * {
+        @apply border-t;
+      }
+  
+      & > :not(caption) > * > * {
+        @apply text-sm text-left px-6 py-3 bg-white dark:bg-slate-800;
+      }
+    
+    }
+
+    #{$datatable}-empty {
+      text-align: center !important;
+    }
+
+    #{$datatable}-info {
+      @apply text-sm font-medium text-slate-500 dark:text-slate-400;
+    }
+
+    #{$datatable}-pagination {
+      @apply flex items-center;
+      
+      & > ul {
+        @apply flex items-center flex-wrap gap-4;
+      }
+  
+      & > ul > li {
+        @apply flex;
+  
+        & > a {
+          @apply w-6 h-6 inline-flex items-center justify-center cursor-pointer rounded bg-slate-200 bg-opacity-50 text-sm font-medium text-slate-500 transition-colors duration-150 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700;
+        }
+  
+        &:first-child > a,
+        &:last-child > a {
+          @apply w-auto h-auto py-1 px-2;
+        }
+    
+        &.datatable-ellipsis a,
+        &.datatable-disabled a {
+          @apply cursor-not-allowed bg-transparent hover:bg-transparent dark:bg-transparent dark:hover:bg-transparent;
+        }
+  
+        &.datatable-ellipsis a {
+          @apply tracking-widest;
+        }
+  
+        &.datatable-disabled a {
+          @apply opacity-50;
+        }
+  
+        &.datatable-active a {
+          @apply bg-primary-500 text-white hover:bg-primary-500 hover:text-white focus:bg-primary-500 focus:text-white;
+        }
+      }
+    }
+
+    #{$datatable}-sorter {
+      @apply w-full h-full relative inline-block;
+    }
+    
+    #{$datatable}-sorter::before,
+    #{$datatable}-sorter::after {
+      @apply content-[''] w-0 h-0 absolute right-1 border-l-4 border-l-transparent border-r-4 border-r-transparent opacity-20;
+    }
+
+    #{$datatable}-sorter::before {
+      @apply bottom-0 border-t-4 border-t-black dark:border-t-slate-300;
+    }
+
+    #{$datatable}-sorter::after {
+      @apply top-0 border-b-4 border-b-black border-t-4 border-t-transparent dark:border-b-slate-300;
+    }
+
+    #{$datatable}-ascending #{$datatable}-sorter::after,
+    #{$datatable}-descending #{$datatable}-sorter::before {
+      @apply opacity-60;
+    }
+  }
 }
