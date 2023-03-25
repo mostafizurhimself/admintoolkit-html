@@ -19,6 +19,7 @@ import carousel from './components/carousel';
 import editor from './components/editor';
 import select from './components/select';
 import uploader from './components/uploader';
+import apexCharts from './components/apex-charts';
 
 // Initialize themeSwitcher
 themeSwitcher.init();
@@ -61,6 +62,8 @@ datepicker.init();
 
 // Initialize drawer
 drawer.init();
+// Initialize apex charts
+apexCharts.init();
 
 // Initialize feather-icons. Must be Initialize at the end.
 feather.replace(); 
