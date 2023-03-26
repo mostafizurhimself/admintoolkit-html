@@ -109,10 +109,11 @@
   }
 
   .success-message {
-    @apply text-xs text-success-500;
+    @apply w-full text-xs hidden mt-1 text-success-500;
   }
+  
   .error-message {
-    @apply text-xs text-danger-600;
+    @apply w-full text-xs hidden mt-1 text-danger-600;
   }
 
   .label {

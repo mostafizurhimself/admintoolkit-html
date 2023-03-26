@@ -833,7 +833,6 @@
               </div>
               <!-- Card: Input Size Ends -->
 
-
               <!-- Card: Input Valid Starts -->
               <div class="card">
                 <div class="card-body">
@@ -845,8 +844,8 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
-                      <input type="text" class="input input-valid" placeholder="Phone" />
-                      <p class="success-message mt-1">Looks good</p>
+                      <input type="text" class="input is-valid" value="+1 080-123-4567" required/>
+                      <div class="success-message">Looks good</div>
                     </div>
                   </div>
                 </div>
@@ -864,8 +863,8 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
-                      <input type="text" class="input input-invalid" placeholder="Phone" />
-                      <p class="error-message mt-1">This field is required</p>
+                      <input type="text" class="input is-invalid" placeholder="Phone" required/>
+                      <div class="error-message">This field is required</div>
                     </div>
                   </div>
                 </div>
