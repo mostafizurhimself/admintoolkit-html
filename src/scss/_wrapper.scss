@@ -6,7 +6,7 @@
   }
 
   .header {
-    @apply flex h-16 w-full items-center bg-white drop-shadow-sm dark:bg-slate-800;
+    @apply flex h-16 w-full relative z-10 items-center bg-white drop-shadow-sm dark:bg-slate-800;
   }
 
   .content {
