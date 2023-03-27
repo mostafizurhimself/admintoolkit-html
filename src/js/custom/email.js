@@ -1,8 +1,10 @@
+import Quill from "quill";
 //  Chat List Toggle
 const emailList = document.getElementById("email-list");
 const hideEmailList = document.getElementById("hide-email-list");
 const openEmailList = document.getElementById("open-email-list");
 const overlay = document.getElementById("overlay");
+const emailEditor = document.getElementById("email-editor");
 // Open Email List
 const getOpenEmailList = () => {
   emailList.classList.remove("-translate-x-full");
@@ -29,4 +31,22 @@ overlay.addEventListener("click", getHideEmailList);
 hideEmailList.addEventListener("click", getHideEmailList);
 emailList.addEventListener("click", (event) => {
   if (event.target === emailList) getHideEmailList();
+});
+
+const editorModules = {
+  toolbar: [
+    ["bold", "italic", "underline", "strike"],
+    ["blockquote", "code-block"],
+    [{ header: 1 }, { header: 2 }],
+    [{ list: "bullet" }],
+    [{ script: "sub" }, { script: "super" }],
+    [{ direction: "rtl" }],
+  ],
+};
+// Email Editor
+const editor = new Quill(emailEditor, {
+  theme: "snow",
+  bounds: emailEditor,
+  placeholder: "write your message",
+  modules: editorModules,
 });
