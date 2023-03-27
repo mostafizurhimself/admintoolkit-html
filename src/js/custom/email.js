@@ -4,7 +4,6 @@ const emailList = document.getElementById("email-list");
 const hideEmailList = document.getElementById("hide-email-list");
 const openEmailList = document.getElementById("open-email-list");
 const overlay = document.getElementById("overlay");
-const emailEditor = document.getElementById("email-editor");
 // Open Email List
 const getOpenEmailList = () => {
   emailList.classList.remove("-translate-x-full");
@@ -33,6 +32,16 @@ emailList.addEventListener("click", (event) => {
   if (event.target === emailList) getHideEmailList();
 });
 
+// Email Compose
+const emailEditor = document.getElementById("email-editor");
+const ccToggle = document.getElementById("cc-toggle");
+const bccToggle = document.getElementById("bcc-toggle");
+bccToggle.addEventListener("click", () => {
+  document.getElementById("bcc-input").classList.toggle("hidden");
+});
+ccToggle.addEventListener("click", () => {
+  document.getElementById("cc-input").classList.toggle("hidden");
+});
 const editorModules = {
   toolbar: [
     ["bold", "italic", "underline", "strike"],
