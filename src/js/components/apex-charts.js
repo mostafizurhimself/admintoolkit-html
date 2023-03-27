@@ -570,6 +570,7 @@ const apexCharts = {
         const columnCharts = document.querySelectorAll('.column-chart');
         const barCharts = document.querySelectorAll('.bar-chart');
         const scatterCharts  =document.querySelectorAll('.scatter-chart');
+        const pieCharts  =document.querySelectorAll('.pie-chart');
         // Line Charts 
         if(lineCharts.length){
             [...lineCharts].forEach(lineChart => {
@@ -605,6 +606,13 @@ const apexCharts = {
                 chart.render();
             })
         }
+        // // pie Charts 
+        // if(pieCharts.length){
+        //     [...pieCharts].forEach(pieChart => {
+        //         const chart = new ApexCharts(pieChart, this.options.pieChart);
+        //         chart.render();
+        //     })
+        // }
 
 
     }
