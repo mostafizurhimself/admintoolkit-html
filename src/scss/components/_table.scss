@@ -11,8 +11,8 @@
     --table-border-dark-color: theme(colors.slate.600);
     --table-striped-bg: theme(colors.slate.100);
     --table-striped-dark-bg: theme(colors.slate.700);
-    --table-hover-bg: theme(colors.slate.200);
-    --table-hover-dark-bg: theme(colors.slate.600);
+    --table-hover-bg: theme(colors.slate.50);
+    --table-hover-dark-bg: theme(colors.slate.700);
 
     @apply w-full rounded-primary overflow-hidden shadow border-[var(--table-border-color)] dark:border-[var(--table-border-dark-color)];
 
