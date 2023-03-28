@@ -772,18 +772,21 @@
                     Example of basic data table.
                   </p>
 
-                  <div class="code-viewer mt-4">
-                    <table class="datatable-basic">
-                      <thead>
-                        <tr>
-                          <th>Name</th>
-                          <th>Email</th>
-                          <th>Phone</th>
-                          <th>Starting Date</th>
-                          <th>Status</th>
-                        </tr>
-                      </thead>
-                    </table>
+                  <div id="datatable-simple-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <div class="code-viewer-content">
+                      <table id="datatable-simple" class="table">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Joining Date</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -798,18 +801,21 @@
                     Example of data table with column filter.
                   </p>
 
-                  <div class="code-viewer mt-4">
-                    <table class="datatable-column-filter">
-                      <thead>
-                        <tr>
-                          <th>Name</th>
-                          <th>Email</th>
-                          <th>Phone</th>
-                          <th>Starting Date</th>
-                          <th>Status</th>
-                        </tr>
-                      </thead>
-                    </table>
+                  <div id="datatable-filter-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <div class="code-viewer-content">
+                      <table id="datatable-filter" class="table">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Joining Date</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -837,53 +843,6 @@
       <!-- Wrapper Ends -->
     </div>
     <script src="./js/app.js" type="module"></script>
-    <!-- <script type="module">
-      import { DataTable } from "../dist/module.js"
-      window.dt = new DataTable("table", {
-        perPageSelect: [5, 10, 15, ["All", -1]],
-        columns: [
-          {
-            select: 2,
-            sortSequence: ["desc", "asc"]
-          },
-          {
-            select: 3,
-            sortSequence: ["desc"]
-          },
-          {
-            select: 4,
-            cellClass: "green",
-            headerClass: "red"
-          }
-        ],
-        tableRender: (_data, table, type) => {
-          if (type === "print") {
-            return table
-          }
-          const tHead = table.childNodes[0]
-          const filterHeaders = {
-            nodeName: "TR",
-            childNodes: tHead.childNodes[0].childNodes.map(
-              (_th, index) => ({
-                nodeName: "TH",
-                childNodes: [
-                  {
-                    nodeName: "INPUT",
-                    attributes: {
-                      class: "datatable-input",
-                      type: "search",
-                      "data-columns": `[${index}]`
-                    }
-                  }
-                ]
-              })
-            )
-          }
-          tHead.childNodes.push(filterHeaders)
-          return table
-        }
-      })
-
-    </script> -->
+    <script src="./js/custom/data-table.js" type="module"></script>
   </body>
 </html>
