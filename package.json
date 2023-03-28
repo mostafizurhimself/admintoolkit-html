@@ -28,6 +28,7 @@
     "accordion-js": "^3.3.2",
     "apexcharts": "^3.37.2",
     "boxicons": "^2.1.4",
+    "chart.js": "^4.2.1",
     "dropzone": "latest",
     "feather-icons": "^4.29.0",
     "flag-icons": "^6.6.6",
