@@ -744,7 +744,7 @@
           <main class="flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>--Title--</h5>
+              <h5>Data Table</h5>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
@@ -761,25 +761,67 @@
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Tabs Starts -->
+            <!-- Data Table Starts -->
             <div class="space-y-6">
-              <!-- Card: Basic Tab Starts -->
+              <!-- Card: Basic Data Table Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Data Table</h4>
+                  <h4 class="card-title">Basic Data Table</h4>
 
                   <p class="card-subtitle">
-                    You can use the <code>Checkbox</code> component to render a checkbox input.
+                    Example of basic data table.
                   </p>
 
-                  <div class="code-viewer mt-4">
-                    <!-- Code Here  -->
+                  <div id="datatable-simple-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <div class="code-viewer-content">
+                      <table id="datatable-simple" class="table">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Joining Date</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Basic Tab Ends -->
+              <!-- Card: Basic Data Table Ends -->
+
+              <!-- Card: Data Table Columns Filter Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Data Table With Column Filter</h4>
+
+                  <p class="card-subtitle">
+                    Example of data table with column filter.
+                  </p>
+
+                  <div id="datatable-filter-code-viewer" class="code-viewer mt-4" data-render-source="false">
+                    <div class="code-viewer-content">
+                      <table id="datatable-filter" class="table">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Joining Date</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Data Table Columns Filter Ends -->
             </div>
-            <!-- Tabs Ends -->
+            <!-- Data Table Ends -->
           </main>
           <!-- Main Content Ends -->
 
@@ -801,5 +843,6 @@
       <!-- Wrapper Ends -->
     </div>
     <script src="./js/app.js" type="module"></script>
+    <script src="./js/custom/data-table.js" type="module"></script>
   </body>
 </html>
