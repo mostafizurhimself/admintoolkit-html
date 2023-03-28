@@ -450,6 +450,29 @@ const chartOptions = {
       },
     ],
   },
+  donutChart: {
+    series: [44, 55, 41, 17, 15],
+    chart: {
+      type: "donut",
+      width: 380,
+      toolbar: {
+        show: false,
+      },
+    },
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
+    ],
+  },
 };
 // Line Chart Start
 const lineChartElement = document.querySelector("#line-chart");
@@ -568,3 +591,15 @@ createCodeViewer(
 ).render();
 
 // pie Chart End
+
+// donut Chart Start
+const donutChartElement = document.querySelector("#donut-chart");
+const donutChart = new ApexCharts(donutChartElement, chartOptions.donutChart);
+donutChart.render();
+
+createCodeViewer(
+  "#donut-chart-code-viewer",
+  sourceCodeTemplate("donut-chart")
+).render();
+
+// donut Chart End
