@@ -15,168 +15,249 @@ const sourceCodeTemplate = (id, options = emptyOption) => {
         `;
 };
 // All Chart Options
-const lineChartOptions = {
-  series: [
-    {
-      name: "Desktops",
-      data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+const chartOptions = {
+  lineChart: {
+    series: [
+      {
+        name: "Desktops",
+        data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+      },
+    ],
+    chart: {
+      height: 350,
+      type: "line",
+      zoom: {
+        enabled: false,
+      },
+      toolbar: {
+        show: false,
+      },
     },
-  ],
-  chart: {
-    height: 350,
-    type: "line",
-    zoom: {
+    dataLabels: {
       enabled: false,
     },
-    toolbar: {
-      show: false,
+    stroke: {
+      curve: "straight",
     },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  stroke: {
-    curve: "straight",
-  },
-  title: {
-    text: "Product Trends by Month",
-    align: "left",
-    style: {
-      color: "#94A3B8",
+    title: {
+      text: "Product Trends by Month",
+      align: "left",
+      style: {
+        color: "#94A3B8",
+      },
     },
-  },
-  grid: {
-    row: {
-      colors: ["#94A3B8", "#fff"],
-      opacity: 0.5,
+    grid: {
+      row: {
+        colors: ["transparent"],
+        opacity: 0.5,
+      },
     },
-  },
-  xaxis: {
-    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
-  },
-};
-const areaChartOptions = {
-  series: [
-    {
-      name: "STOCK ABC",
-      data: [
-        {
-          x: 2010,
-          y: 330,
-        },
-        {
-          x: 2011,
-          y: 355,
-        },
-        {
-          x: 2012,
-          y: 366,
-        },
-        {
-          x: 2013,
-          y: 337,
-        },
-        {
-          x: 2014,
-          y: 352,
-        },
-        {
-          x: 2015,
-          y: 377,
-        },
-        {
-          x: 2016,
-          y: 383,
-        },
-        {
-          x: 2017,
-          y: 344,
-        },
-        {
-          x: 2018,
-          y: 366,
-        },
-        {
-          x: 2019,
-          y: 389,
-        },
-        {
-          x: 2020,
-          y: 334,
-        },
-        {
-          x: 2021,
-          y: 334,
-        },
+    xaxis: {
+      categories: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
       ],
     },
-  ],
-  chart: {
-    type: "area",
-    height: 350,
-    zoom: {
+  },
+  areaChart: {
+    series: [
+      {
+        name: "STOCK ABC",
+        data: [
+          {
+            x: 2010,
+            y: 330,
+          },
+          {
+            x: 2011,
+            y: 355,
+          },
+          {
+            x: 2012,
+            y: 366,
+          },
+          {
+            x: 2013,
+            y: 337,
+          },
+          {
+            x: 2014,
+            y: 352,
+          },
+          {
+            x: 2015,
+            y: 377,
+          },
+          {
+            x: 2016,
+            y: 383,
+          },
+          {
+            x: 2017,
+            y: 344,
+          },
+          {
+            x: 2018,
+            y: 366,
+          },
+          {
+            x: 2019,
+            y: 389,
+          },
+          {
+            x: 2020,
+            y: 334,
+          },
+          {
+            x: 2021,
+            y: 334,
+          },
+        ],
+      },
+    ],
+    chart: {
+      type: "area",
+      height: 350,
+      zoom: {
+        enabled: false,
+      },
+      toolbar: {
+        show: false,
+      },
+    },
+    dataLabels: {
       enabled: false,
     },
-    toolbar: {
-      show: false,
+    stroke: {
+      curve: "straight",
     },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  stroke: {
-    curve: "straight",
-  },
 
-  title: {
-    text: "Fundamental Analysis of Stocks",
-    align: "left",
-    style: {
-      color: "#94A3B8",
+    title: {
+      text: "Fundamental Analysis of Stocks",
+      align: "left",
+      style: {
+        color: "#94A3B8",
+      },
+    },
+    subtitle: {
+      text: "Price Movements",
+      align: "left",
+      style: {
+        color: "#94A3B8",
+      },
+    },
+    labels: [
+      {
+        x: 20,
+        y: 54,
+      },
+      {
+        x: 30,
+        y: 66,
+      },
+      {
+        x: 20,
+        y: 86,
+      },
+      {
+        x: 38,
+        y: 46,
+      },
+      {
+        x: 34,
+        y: 56,
+      },
+    ],
+    xaxis: {
+      type: "datetime",
+    },
+    yaxis: {
+      opposite: true,
+    },
+    legend: {
+      horizontalAlign: "left",
     },
   },
-  subtitle: {
-    text: "Price Movements",
-    align: "left",
-    style: {
-      color: "#94A3B8",
+  columnChart: {
+    series: [
+      {
+        name: "Net Profit",
+        data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+      },
+      {
+        name: "Revenue",
+        data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+      },
+      {
+        name: "Free Cash Flow",
+        data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
+      },
+    ],
+    chart: {
+      type: "bar",
+      height: 350,
+      toolbar: {
+        show: false,
+      },
     },
-  },
-  labels: [
-    {
-      x: 20,
-      y: 54,
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "55%",
+        endingShape: "rounded",
+      },
     },
-    {
-      x: 30,
-      y: 66,
+    dataLabels: {
+      enabled: false,
     },
-    {
-      x: 20,
-      y: 86,
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ["transparent"],
     },
-    {
-      x: 38,
-      y: 46,
+    xaxis: {
+      categories: [
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+      ],
     },
-    {
-      x: 34,
-      y: 56,
+    yaxis: {
+      title: {
+        text: "$ (thousands)",
+        style: {
+          color: "#94A3B8",
+        },
+      },
     },
-  ],
-  xaxis: {
-    type: "datetime",
-  },
-  yaxis: {
-    opposite: true,
-  },
-  legend: {
-    horizontalAlign: "left",
+    fill: {
+      opacity: 1,
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return "$ " + val + " thousands";
+        },
+      },
+    },
   },
 };
 // Line Chart Start
 const lineChartElement = document.querySelector("#line-chart");
-const lineChart = new ApexCharts(lineChartElement, lineChartOptions);
+const lineChart = new ApexCharts(lineChartElement, chartOptions.lineChart);
 lineChart.render();
 const lineChartOptionsTemplate = `
                                   {
@@ -228,7 +309,7 @@ createCodeViewer(
 
 // area Chart Start
 const areaChartElement = document.querySelector("#area-chart");
-const areaChart = new ApexCharts(areaChartElement, areaChartOptions);
+const areaChart = new ApexCharts(areaChartElement, chartOptions.areaChart);
 areaChart.render();
 
 createCodeViewer(
@@ -237,3 +318,18 @@ createCodeViewer(
 ).render();
 
 // area Chart End
+
+// column Chart Start
+const columnChartElement = document.querySelector("#column-chart");
+const columnChart = new ApexCharts(
+  columnChartElement,
+  chartOptions.columnChart
+);
+columnChart.render();
+
+createCodeViewer(
+  "#column-chart-code-viewer",
+  sourceCodeTemplate("column-chart")
+).render();
+
+// column Chart End
