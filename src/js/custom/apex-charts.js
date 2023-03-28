@@ -425,6 +425,31 @@ const chartOptions = {
       tickAmount: 7,
     },
   },
+  pieChart: {
+    series: [44, 55, 13, 43, 22],
+    chart: {
+      width: 380,
+      type: "pie",
+      align: "center",
+      toolbar: {
+        show: false,
+      },
+    },
+    labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
+    ],
+  },
 };
 // Line Chart Start
 const lineChartElement = document.querySelector("#line-chart");
@@ -530,4 +555,16 @@ createCodeViewer(
   sourceCodeTemplate("scatter-chart")
 ).render();
 
-// bar Chart End
+// Scatter Chart End
+
+// pie Chart Start
+const pieChartElement = document.querySelector("#pie-chart");
+const pieChart = new ApexCharts(pieChartElement, chartOptions.pieChart);
+pieChart.render();
+
+createCodeViewer(
+  "#pie-chart-code-viewer",
+  sourceCodeTemplate("pie-chart")
+).render();
+
+// pie Chart End
