@@ -42,20 +42,9 @@ bccToggle.addEventListener("click", () => {
 ccToggle.addEventListener("click", () => {
   document.getElementById("cc-input").classList.toggle("hidden");
 });
-const editorModules = {
-  toolbar: [
-    ["bold", "italic", "underline", "strike"],
-    ["blockquote", "code-block"],
-    [{ header: 1 }, { header: 2 }],
-    [{ list: "bullet" }],
-    [{ script: "sub" }, { script: "super" }],
-    [{ direction: "rtl" }],
-  ],
-};
 // Email Editor
 const editor = new Quill(emailEditor, {
   theme: "snow",
   bounds: emailEditor,
   placeholder: "write your message",
-  modules: editorModules,
 });
