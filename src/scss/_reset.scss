@@ -1,3 +1,119 @@
 .simplebar-scrollbar:before {
   @apply w-1.5 bg-slate-300 dark:bg-slate-900;
 }
+
+.simplebar-content-wrapper {
+  @apply scroll-smooth;
+}
+
+// =======Quill Styles Start==========
+
+.ql-container {
+  @apply min-h-[20rem] bg-white text-sm font-normal  dark:border-slate-600 dark:bg-slate-800;
+  font-family: theme('fontFamily.sans');
+}
+
+// Snow Theme
+.ql-snow {
+  &.ql-container {
+    @apply border border-slate-300;
+  }
+  &.ql-toolbar {
+    @apply border border-slate-300;
+
+    button {
+      @apply text-slate-700;
+
+      .ql-stroke {
+        @apply fill-none stroke-current;
+      }
+
+      .ql-fill {
+        @apply fill-current stroke-none;
+      }
+
+      .ql-stroke.ql-fill {
+        @apply fill-current stroke-current;
+      }
+      &:hover {
+        @apply text-primary-500;
+
+        .ql-stroke {
+          @apply fill-none stroke-current;
+        }
+
+        .ql-fill {
+          @apply fill-current stroke-none;
+        }
+
+        .ql-stroke.ql-fill {
+          @apply fill-current stroke-current;
+        }
+      }
+
+      &.ql-active {
+        @apply text-primary-500;
+
+        .ql-stroke {
+          @apply fill-none stroke-current;
+        }
+
+        .ql-fill {
+          @apply fill-current stroke-none;
+        }
+
+        .ql-stroke.ql-fill {
+          @apply fill-current stroke-current;
+        }
+      }
+    }
+
+    .ql-picker,
+    .ql-picker-label,
+    .ql-picker-options {
+      @apply text-slate-700 dark:text-slate-50 dark:bg-slate-900;
+
+      .ql-stroke {
+        @apply fill-none stroke-current;
+      }
+
+      .ql-fill {
+        @apply fill-current stroke-none;
+      }
+
+      .ql-stroke.ql-fill {
+        @apply fill-current stroke-current;
+      }
+    }
+    .ql-picker-label:hover,
+    .ql-picker-label:hover,
+    .ql-picker-label.ql-active,
+    .ql-picker-label.ql-active,
+    .ql-picker-item:hover,
+    .ql-picker-item:hover,
+    .ql-picker-item.ql-selected,
+    .ql-picker-item.ql-selected {
+      @apply text-primary-500;
+
+      .ql-stroke {
+        @apply fill-none stroke-current;
+      }
+
+      .ql-fill {
+        @apply fill-current stroke-none;
+      }
+
+      .ql-stroke.ql-fill {
+        @apply fill-current stroke-current;
+      }
+    }
+  }
+}
+
+// Bubble Theme
+.ql-bubble {
+  &.ql-container {
+    @apply border border-slate-300;
+  }
+}
+// =======Quill Styles End==========

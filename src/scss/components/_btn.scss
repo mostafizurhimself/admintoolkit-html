@@ -1,6 +1,6 @@
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-primary px-4 py-2 text-sm transition-all duration-150 disabled:cursor-not-allowed disabled:opacity-60;
+    @apply inline-flex  items-center justify-center gap-2 rounded-primary px-4 py-2 text-sm transition-all duration-150 disabled:cursor-not-allowed disabled:opacity-60;
 
     // Button Sizes
     &-xs {

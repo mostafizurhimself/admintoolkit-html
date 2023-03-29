@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calendar - Admin Toolkit</title>
-    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./scss/app.scss" />
   </head>
 
   <body>
@@ -37,10 +37,10 @@
         <!-- Sidebar Header Ends -->
 
         <!-- Sidebar Menu Starts -->
-        <ul class="sidebar-content" data-simplebar>
+        <ul class="sidebar-content">
           <!-- Dashboard -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu ">
+            <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="home"></i>
               </span>
@@ -51,7 +51,7 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="/" class="sidebar-submenu-item ">Ecommerce</a>
+                <a href="/" class="sidebar-submenu-item">Ecommerce</a>
               </li>
               <li>
                 <a href="./analytics.html" class="sidebar-submenu-item">Analytics</a>
@@ -101,13 +101,11 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="./create.html" class="sidebar-submenu-item">Create</a>
+                <a href="./invoice-create.html" class="sidebar-submenu-item">Create</a>
               </li>
+
               <li>
-                <a href="./listing.html" class="sidebar-submenu-item">Listing</a>
-              </li>
-              <li>
-                <a href="./details.html" class="sidebar-submenu-item">Details</a>
+                <a href="./invoice-details.html" class="sidebar-submenu-item">Details</a>
               </li>
             </ul>
           </li>
@@ -124,19 +122,20 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="./products.html" class="sidebar-submenu-item">Products</a>
+                <a href="./product-list.html" class="sidebar-submenu-item">Product List</a>
+              </li>
+
+              <li>
+                <a href="./product-edit.html" class="sidebar-submenu-item">Product Edit</a>
               </li>
               <li>
-                <a href="./products-details.html" class="sidebar-submenu-item">Products Details</a>
-              </li>
-              <li>
-                <a href="./orders.html" class="sidebar-submenu-item">Orders</a>
+                <a href="./order-list.html" class="sidebar-submenu-item">Order List</a>
               </li>
               <li>
                 <a href="./order-details.html" class="sidebar-submenu-item">Order Details</a>
               </li>
               <li>
-                <a href="./customers.html" class="sidebar-submenu-item">Customers</a>
+                <a href="./customer-list.html" class="sidebar-submenu-item">Customer List</a>
               </li>
             </ul>
           </li>
@@ -164,7 +163,7 @@
           <div class="sidebar-menu-header">Components</div>
           <!-- Common  -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu ">
+            <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="box"></i>
               </span>
@@ -174,6 +173,9 @@
               </span>
             </a>
             <ul class="sidebar-submenu">
+              <li>
+                <a href="./accordion.html" class="sidebar-submenu-item">Accordion</a>
+              </li>
               <li>
                 <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
               </li>
@@ -213,14 +215,12 @@
               <li>
                 <a href="./progress-bar.html" class="sidebar-submenu-item">Progress</a>
               </li>
-               <li>
-                <a href="./skeleton.html" class="sidebar-submenu-item">Skeleton</a>
-              </li>
+              
               <li>
                 <a href="./spinner.html" class="sidebar-submenu-item">Spinner</a>
               </li>
               <li>
-                <a href="./tabs.html" class="sidebar-submenu-item ">Tab</a>
+                <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
               </li>
               <li>
                 <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
@@ -246,9 +246,12 @@
                 <a href="./input.html" class="sidebar-submenu-item">Input</a>
               </li>
               <li>
+                <a href="./input-group.html" class="sidebar-submenu-item">Input Group</a>
+              </li>
+              <li>
                 <a href="./textarea.html" class="sidebar-submenu-item">Textarea</a>
               </li>
-               <li>
+              <li>
                 <a href="./checkbox.html" class="sidebar-submenu-item">Checkbox</a>
               </li>
               <li>
@@ -260,9 +263,7 @@
               <li>
                 <a href="./select.html" class="sidebar-submenu-item">Select</a>
               </li>
-              <li>
-                <a href="./range.html" class="sidebar-submenu-item">Range</a>
-              </li>
+              
               <li>
                 <a href="./datepicker.html" class="sidebar-submenu-item">Datepicker</a>
               </li>
@@ -278,9 +279,7 @@
               <li>
                 <a href="./validation.html" class="sidebar-submenu-item">Validation</a>
               </li>
-              <li>
-                <a href="./wizard.html" class="sidebar-submenu-item">Wizard</a>
-              </li>
+              
             </ul>
           </li>
           <!-- Tables  -->
@@ -327,7 +326,7 @@
           <li>
             <a href="./icons.html" class="sidebar-menu">
               <span class="sidebar-menu-icon">
-                 <i data-feather="italic"></i>
+                <i data-feather="italic"></i>
               </span>
               <span class="sidebar-menu-text">Icons</span>
             </a>
@@ -336,7 +335,7 @@
           <li>
             <a href="./typography.html" class="sidebar-menu">
               <span class="sidebar-menu-icon">
-                 <i data-feather="type"></i>
+                <i data-feather="type"></i>
               </span>
               <span class="sidebar-menu-text">Typography</span>
             </a>
@@ -417,6 +416,7 @@
         <!-- Sidebar Menu Ends -->
       </aside>
       <!-- Sidebar Ends -->
+
       <!-- Wrapper Starts -->
       <div class="wrapper">
         <!-- Header Starts -->
@@ -446,8 +446,8 @@
               </button>
 
               <form
-                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
                 action=""
+                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
               >
                 <div class="flex h-full items-center px-3">
                   <i
@@ -457,11 +457,10 @@
                     data-feather="search"
                   ></i>
                 </div>
-
                 <input
                   class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                  placeholder="Search"
                   type="text"
+                  placeholder="Search"
                 />
               </form>
             </div>
@@ -470,117 +469,50 @@
             <!-- Header Options Starts -->
             <div class="flex items-center space-x-6">
               <!-- Language Dropdown Starts -->
-              <div class="dropdown">
+              <div class="dropdown" data-strategy="absolute">
                 <div class="dropdown-toggle">
-                  <button type="button" class="flex items-center space-x-2 text-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
-                      <path fill="#FFF" d="M0 0h513v342H0z"></path>
-                      <path
-                        d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z"
-                        fill="#D80027"
-                      ></path>
-                      <path fill="#2E52B2" d="M0 0h256.5v184.1H0z"></path>
-                      <path
-                        d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z"
-                        fill="#FFF"
-                      ></path>
-                    </svg>
+                  <button type="button" class="inline-flex items-center gap-2 text-sm">
+                    <span class="fi fi-gb"></span>
                     <span class="hidden md:inline-block">English</span>
                     <span class="inline-block md:hidden">EN</span>
                   </button>
                 </div>
 
-                <div class="dropdown-content -right-8 w-[150px] sm:right-0">
-                  <ul>
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
-                          <path fill="#FFF" d="M0 0h513v342H0z"></path>
-                          <path
-                            d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z"
-                            fill="#D80027"
-                          ></path>
-                          <path fill="#2E52B2" d="M0 0h256.5v184.1H0z"></path>
-                          <path
-                            d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z"
-                            fill="#FFF"
-                          ></path>
-                        </svg>
+                <div class="dropdown-content w-40 mt-3">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-gb"></span>
                         <span>English</span>
                       </button>
                     </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
-                          <path fill="#D80027" d="M0 85.331h512v341.337H0z"></path>
-                          <path d="M0 85.331h512v113.775H0z"></path>
-                          <path fill="#FFDA44" d="M0 312.882h512v113.775H0z"></path>
-                        </svg>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-de"></span>
                         <span>German</span>
                       </button>
                     </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
-                          <path fill="#FFF" d="M0 85.331h512v341.337H0z"></path>
-                          <path fill="#0052B4" d="M0 85.331h170.663v341.337H0z"></path>
-                          <path fill="#D80027" d="M341.337 85.331H512v341.337H341.337z"></path>
-                        </svg>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-gf"></span>
                         <span>French</span>
                       </button>
                     </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 512 341.333" height="15">
-                          <path fill="#055e1c" d="M0 85.333h512v341.333H0z"></path>
-                          <g fill="#FFF">
-                            <path
-                              d="M183.548 289.386c0 12.295 9.731 22.261 21.736 22.261h65.208c0 10.244 8.11 18.551 18.114 18.551h21.736c10.004 0 18.114-8.306 18.114-18.551v-22.261H183.548zm146.716-107.595v51.942c0 8.183-6.5 14.84-14.491 14.84v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.942h-21.735zm-155.773 51.943c0 8.183-6.5 14.84-14.491 14.84v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.942H174.49v51.942z"
-                            ></path>
-                            <path
-                              d="M297.661 181.788h21.736v51.942h-21.736zm-32.604 29.685c0 2.046-1.625 3.71-3.623 3.71-1.998 0-3.623-1.664-3.623-3.71v-29.682h-21.736v29.682c0 2.046-1.625 3.71-3.623 3.71s-3.623-1.664-3.623-3.71v-29.682h-21.736v29.682c0 14.32 11.376 25.971 25.358 25.971 5.385 0 10.38-1.733 14.491-4.677 4.11 2.944 9.106 4.677 14.491 4.677 1.084 0 2.15-.078 3.2-.215-1.54 6.499-7.255 11.345-14.068 11.345v22.261c19.976 0 36.226-16.643 36.226-37.101v-51.943h-21.736l.002 29.682z"
-                            ></path>
-                            <path d="M207.093 248.57h32.601v22.261h-32.601z"></path>
-                          </g>
-                        </svg>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-sa"></span>
                         <span>Arabic</span>
                       </button>
                     </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" height="15">
-                          <path fill="#D80027" d="M0 0h513v342H0z"></path>
-                          <path
-                            d="m226.8 239.2-9.7-15.6-17.9 4.4 11.9-14.1-9.7-15.6 17.1 6.9 11.8-14.1-1.3 18.4 17.1 6.9-17.9 4.4zM290.6 82l-10.1 15.4 11.6 14.3-17.7-4.8-10.1 15.5-1-18.4-17.7-4.8 17.2-6.6-1-18.4 11.6 14.3zm-54.4-56.6-2 18.3 16.8 7.6-18 3.8-2 18.3-9.2-16-17.9 3.8 12.3-13.7-9.2-15.9 16.8 7.5zm56.6 136.4-14.9 10.9 5.8 17.5-14.9-10.8-14.9 11 5.6-17.6-14.9-10.7 18.4-.1 5.6-17.6 5.8 17.5zM115 46.3l17.3 53.5h56.2l-45.4 32.9 17.3 53.5-45.4-33-45.5 33 17.4-53.5-45.5-32.9h56.3z"
-                            fill="#FFDA44"
-                          ></path>
-                        </svg>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-cn"></span>
                         <span>Chinese</span>
                       </button>
                     </li>
-
-                    <li
-                      class="flex w-full items-center p-0 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                    >
-                      <button type="button" class="flex h-full w-full items-center space-x-2 px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85.333 513 342" height="15">
-                          <path fill="#2d6e41" d="M0 85.331h513v342H0z"></path>
-                          <circle fill="#F40B32" cx="218.902" cy="256.5" r="115"></circle>
-                        </svg>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-bd"></span>
                         <span>Bangla</span>
                       </button>
                     </li>
@@ -591,239 +523,158 @@
 
               <!-- Mobile Search Starts -->
               <div class="sm:hidden">
-                <button
-                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
-                  type="button"
-                >
+                <button type="button" class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300">
                   <i width="22" height="22" data-feather="search"></i>
                 </button>
               </div>
               <!-- Mobile Search Ends -->
 
               <!-- Dark Mood Toggle Starts -->
-              <div class="flex">
-                <button
-                  id="btn-theme-mode"
-                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
-                  type="button"
-                >
+              <div class="dropdown" data-strategy="absolute" id="dropdown-theme-switcher">
+                <button class="dropdown-toggle focus:text-primary-500" type="button">
                   <i class="block dark:hidden" width="24" height="24" data-feather="moon"></i>
-                  <i class="hidden dark:block" width="24" height="24" data-feather="sun"></i>
+                  <i class="hidden dark:block" width="24" height="24" data-feather="sun"></i> 
                 </button>
+
+                <div class="dropdown-content w-36 mt-3">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <button type="buttton" class="dropdown-btn" data-theme-mode="light">
+                        <i width="16" height="16" data-feather="sun"></i>
+                        <span>Light</span>
+                      </button>
+                    </li>
+
+                    <li class="dropdown-list-item">
+                      <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
+                        <i width="16" height="16" data-feather="moon"></i>
+                        <span>Dark</span>
+                      </button>
+                    </li>
+
+                    <li class="dropdown-list-item">
+                      <button type="buttton" class="dropdown-btn" data-theme-mode="system">
+                        <i width="16" height="16" data-feather="monitor"></i>
+                        <span>System</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <!-- Dark Mood Toggle Ends -->
 
               <!-- Notification Dropdown Starts -->
-              <div class="dropdown -mt-0.5">
+              <div class="dropdown -mt-0.5" data-strategy="absolute">
                 <div class="dropdown-toggle">
-                  <button
-                    class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
-                  >
+                  <button class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
                     <i width="24" height="24" data-feather="bell"></i>
-                    <span
-                      class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200"
-                    >
+                    <span class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
                       5
                     </span>
                   </button>
                 </div>
 
-                <div class="dropdown-content -right-full w-[280px] divide-y dark:divide-slate-700 sm:-right-2 sm:w-80">
+                <div class="dropdown-content w-[17.5rem] mt-3 divide-y dark:divide-slate-700 sm:w-80">
                   <div class="flex items-center justify-between py-4 px-4">
-                    <h5 class="font-semibold text-slate-800 dark:text-slate-300">Notifications</h5>
-                    <button class="text-xs text-slate-600 hover:text-primary-500 dark:text-slate-300">Clear All</button>
+                    <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
+                    <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
+                      Clear All
+                    </button>
                   </div>
 
-                  <div class="h-80 w-full overflow-y-auto">
+                  <div class="h-80 w-full" data-simplebar>
                     <ul>
                       <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700"
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
                       >
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500"
                         >
-                          <svg
-                            stroke="currentColor"
-                            fill="none"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            height="20"
-                            width="20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="16" x2="12" y2="12"></line>
-                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                          </svg>
+                          <i data-feather="alert-circle" width="20" height="20"></i>
                         </div>
 
                         <div>
-                          <h6 class="text-sm">New order received</h6>
+                          <h6 class="text-sm font-normal">New order received</h6>
                           <p class="text-xs text-slate-400">Order #1234 has been placed</p>
                           <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <svg
-                              stroke="currentColor"
-                              fill="none"
-                              stroke-width="2"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              height="1em"
-                              width="1em"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <circle cx="12" cy="12" r="10"></circle>
-                              <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
+                            <i data-feather="clock" width="1em" height="1em"></i>
                             <span>2 min ago</span>
                           </p>
                         </div>
                       </li>
 
                       <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700"
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
                       >
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500"
                         >
-                          <svg
-                            stroke="currentColor"
-                            fill="currentColor"
-                            stroke-width="0"
-                            viewBox="0 0 512 512"
-                            height="20"
-                            width="20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill="none"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="32"
-                              d="M85.57 446.25h340.86a32 32 0 0028.17-47.17L284.18 82.58c-12.09-22.44-44.27-22.44-56.36 0L57.4 399.08a32 32 0 0028.17 47.17z"
-                            ></path>
-                            <path
-                              fill="none"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="32"
-                              d="M250.26 195.39l5.74 122 5.73-121.95a5.74 5.74 0 00-5.79-6h0a5.74 5.74 0 00-5.68 5.95z"
-                            ></path>
-                            <path d="M256 397.25a20 20 0 1120-20 20 20 0 01-20 20z"></path>
-                          </svg>
+                          <i data-feather="alert-triangle" width="20" height="20"></i>
                         </div>
 
                         <div>
-                          <h6 class="text-sm">High CPU usage</h6>
+                          <h6 class="text-sm font-normal">High CPU usage</h6>
                           <p class="text-xs text-slate-400">CPU usage is at 92%</p>
                           <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <svg
-                              stroke="currentColor"
-                              fill="none"
-                              stroke-width="2"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              height="1em"
-                              width="1em"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <circle cx="12" cy="12" r="10"></circle>
-                              <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                            <span>5 minutes ago</span>
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>5 min ago</span>
                           </p>
                         </div>
                       </li>
 
                       <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700"
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
                       >
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
                         >
-                          <svg
-                            stroke="currentColor"
-                            fill="currentColor"
-                            stroke-width="0"
-                            viewBox="0 0 1024 1024"
-                            height="20"
-                            width="20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M699 353h-46.9c-10.2 0-19.9 4.9-25.9 13.3L469 584.3l-71.2-98.8c-6-8.3-15.6-13.3-25.9-13.3H325c-6.5 0-10.3 7.4-6.5 12.7l124.6 172.8a31.8 31.8 0 0 0 51.7 0l210.6-292c3.9-5.3.1-12.7-6.4-12.7z"
-                            ></path>
-                            <path
-                              d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-                            ></path>
-                          </svg>
+                          <i data-feather="check-circle" width="20" height="20"></i>
                         </div>
+
                         <div>
-                          <h6 class="text-sm">Your order has been shipped</h6>
+                          <h6 class="text-sm font-normal">Your order has been shipped</h6>
                           <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
                           <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <svg
-                              stroke="currentColor"
-                              fill="none"
-                              stroke-width="2"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              height="1em"
-                              width="1em"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <circle cx="12" cy="12" r="10"></circle>
-                              <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                            <span>10 minutes ago</span>
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>10 min ago</span>
                           </p>
                         </div>
                       </li>
 
                       <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-50 dark:hover:bg-slate-700"
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
                       >
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500"
                         >
-                          <svg
-                            stroke="currentColor"
-                            fill="currentColor"
-                            stroke-width="0"
-                            viewBox="0 0 24 24"
-                            height="20"
-                            width="20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path fill="none" d="M0 0h24v24H0V0z"></path>
-                            <path
-                              d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM19 14.9L14.9 19H9.1L5 14.9V9.1L9.1 5h5.8L19 9.1v5.8zm-4.17-7.14L12 10.59 9.17 7.76 7.76 9.17 10.59 12l-2.83 2.83 1.41 1.41L12 13.41l2.83 2.83 1.41-1.41L13.41 12l2.83-2.83-1.41-1.41z"
-                            ></path>
-                          </svg>
+                          <i data-feather="x-circle" width="20" height="20"></i>
                         </div>
+
                         <div>
-                          <h6 class="text-sm">Something went wrong</h6>
+                          <h6 class="text-sm font-normal">Something went wrong</h6>
                           <p class="text-xs text-slate-400">Order #1234 has been placed</p>
                           <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <svg
-                              stroke="currentColor"
-                              fill="none"
-                              stroke-width="2"
-                              viewBox="0 0 24 24"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              height="1em"
-                              width="1em"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <circle cx="12" cy="12" r="10"></circle>
-                              <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
+                            <i data-feather="clock" width="1em" height="1em"></i>
                             <span>1 hour ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
+                        >
+                          <i data-feather="check-circle" width="20" height="20"></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>10 min ago</span>
                           </p>
                         </div>
                       </li>
@@ -833,21 +684,7 @@
                   <div class="py-2 px-4">
                     <button class="btn btn-primary-plain btn-sm w-full" type="button">
                       <span>View More</span>
-                      <svg
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="ml-1"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                      </svg>
+                      <i data-feather="arrow-right" width="1rem" height="1rem"></i>
                     </button>
                   </div>
                 </div>
@@ -855,19 +692,15 @@
               <!-- Notification Dropdown Ends -->
 
               <!-- Profile Dropdown Starts -->
-              <div class="dropdown">
+              <div class="dropdown" data-strategy="absolute">
                 <div class="dropdown-toggle">
-                  <button class="group relative flex items-center space-x-1.5" type="button">
-                    <img
-                      class="block h-9 w-9 rounded-full group-focus:ring group-focus:ring-primary-500"
-                      src="https://avatars.githubusercontent.com/u/1164541?v=4"
-                      alt="avatar"
-                    />
+                  <button class="group relative flex items-center gap-x-1.5" type="button">
+                    <div class="avatar avatar-circle">
+                      <img class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500" src="./images/avatar1.png" alt="Avatar 1">
+                    </div>
 
                     <div class="hidden md:flex md:flex-col">
-                      <span
-                        class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300"
-                      >
+                      <span class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
                         John Doe
                       </span>
                       <span class="inline-block text-left text-xs text-slate-400">Admin</span>
@@ -875,30 +708,27 @@
                   </button>
                 </div>
 
-                <div class="dropdown-content right-0 mt-5 w-[180px]">
-                  <a
-                    href="/dashboard/ecommerce"
-                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                  >
-                    <i class="text-slate-600 dark:text-slate-400" width="18" height="18" data-feather="user"></i>
-                    <span>Profile</span>
-                  </a>
-
-                  <a
-                    href="/dashboard/ecommerce"
-                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                  >
-                    <i class="text-slate-600 dark:text-slate-400" width="18" height="18" data-feather="settings"></i>
-                    <span>Settings</span>
-                  </a>
-
-                  <a
-                    href="/dashboard/ecommerce"
-                    class="flex w-full items-center gap-3 px-4 py-2 text-left text-sm leading-5 text-slate-800 transition duration-150 ease-in-out hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-700"
-                  >
-                    <i class="text-slate-600 dark:text-slate-400" width="18" height="18" data-feather="log-out"></i>
-                    <span>Sign out</span>
-                  </a>
+                <div class="dropdown-content w-[11.25rem] mt-1">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-link">
+                        <i width="18" height="18" data-feather="user"></i>    
+                        <span>Profile</span>
+                      </a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-link">
+                        <i width="18" height="18" data-feather="settings"></i>    
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-link">
+                        <i width="18" height="18" data-feather="log-out"></i>    
+                        <span>Sign out</span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <!-- Profile Dropdown Ends -->
@@ -907,7 +737,7 @@
           </div>
         </header>
         <!-- Header Ends -->
-
+        
         <!-- Page Content Starts -->
         <div class="content">
           <!-- Main Content Starts -->
@@ -970,6 +800,6 @@
       </div>
       <!-- Wrapper Ends -->
     </div>
-    <script src="./js/app.js"></script>
+    <script src="./js/app.js" type="module"></script>
   </body>
 </html>

@@ -1,0 +1,42 @@
+@layer components {
+  .swiper {
+    $swiper: &;
+    
+    &-button-prev::after,
+    &-button-next::after {
+      @apply text-2xl sm:text-4xl text-slate-100;
+    }
+
+    &-preview {
+      #{$swiper}-slide {
+        @apply opacity-50 cursor-pointer;
+      }
+
+      #{$swiper}-slide-thumb-active {
+        @apply opacity-100;
+      }
+    }
+    
+    &-pagination {
+      $pagination: &;
+      
+      & > &-bullet {
+        @apply w-2 h-2 sm:w-[.6rem] sm:h-[.6rem] opacity-100 bg-black/20;
+      }
+
+      &-custom {
+        & > #{$pagination}-bullet {
+          @apply w-4 h-4 text-xs text-slate-400;
+        }
+      }
+
+      #{$pagination}#{$pagination}-progressbar > &-progressbar-fill {
+        @apply bg-primary-500;
+      }
+
+      & > &-bullet-active {
+        @apply bg-primary-500 text-slate-100;
+      }
+    }
+  }
+}

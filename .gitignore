@@ -7,7 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-.parcel-cache
 node_modules
 dist
 dist-ssr
@@ -20,7 +19,6 @@ dist-ssr
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-.yarnrc.yml
 
 # Editor directories and files
 .vscode/*

@@ -103,6 +103,12 @@ class CodeViewer {
       return this.beautify(sourceElement.innerHTML);
     }
 
+    // Get the source code from the code-viewer-content element
+    const contentElement = this.target.querySelector('.code-viewer-content');
+    if (contentElement) {
+      return this.beautify(contentElement.innerHTML);
+    }
+    
     // Get the source code from the code-viewer element
     return this.beautify(this.target.innerHTML);
   }
