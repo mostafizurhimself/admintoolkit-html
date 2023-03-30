@@ -328,6 +328,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash-es@npm:^4.17.6":
+  version: 4.17.7
+  resolution: "@types/lodash-es@npm:4.17.7"
+  dependencies:
+    "@types/lodash": "*"
+  checksum: 4b1f39fd1d921311c37a846c0e0df9d1fa23e27448a6ad1efd7574e703abd2b2fa5e8f3b5037146000f167ba231d0d01e52747d902654151b4ceeff9f2a9b380
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*":
+  version: 4.14.192
+  resolution: "@types/lodash@npm:4.14.192"
+  checksum: 31e1f0543a04158d2c429c45efd7c77882736630d0652f82eb337d6159ec0c249c5d175c0af731537b53271e665ff8d76f43221d75d03646d31cb4bd6f0056b1
+  languageName: node
+  linkType: hard
+
 "@webcomponents/webcomponentsjs@npm:^2.0.2":
   version: 2.7.0
   resolution: "@webcomponents/webcomponentsjs@npm:2.7.0"
@@ -566,9 +582,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001449, caniuse-lite@npm:^1.0.30001464":
-  version: 1.0.30001472
-  resolution: "caniuse-lite@npm:1.0.30001472"
-  checksum: 60f2fbe9b7fc6d88c500779ddbebda5fb0ba86eece32ecf3c18d5c1f74e2c36ac5151ed6464f72b6c43c43dc6a3d1ea83c73a195ebb6d2f49738add1f8a0cd4d
+  version: 1.0.30001473
+  resolution: "caniuse-lite@npm:1.0.30001473"
+  checksum: 007ad17463612d38080fc59b5fa115ccb1016a1aff8daab92199a7cf8eb91cf987e85e7015cb0bca830ee2ef45f252a016c29a98a6497b334cceb038526b73f1
   languageName: node
   linkType: hard
 
@@ -832,9 +848,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.284":
-  version: 1.4.342
-  resolution: "electron-to-chromium@npm:1.4.342"
-  checksum: 61ecf9f3ea65a6044cdcea092dd56b42d0961fdb8fb3942ba808c6aa6ab3213d3218e599748d6d6ae8b43ddc9f76f428af0b96eaee2f0b4b2f0195c643f36f3d
+  version: 1.4.345
+  resolution: "electron-to-chromium@npm:1.4.345"
+  checksum: 4561a09c1259c04ecb0c6f0c9000b12c562a1a06dfd89858bf2388d3d6083d41a12a7ca5a425cae9b12fa2de2ccddf2dd0ba43fb26600ab66cec26d48a8c19b0
   languageName: node
   linkType: hard
 
@@ -2041,8 +2057,8 @@ __metadata:
   linkType: hard
 
 "prettier-plugin-tailwindcss@npm:^0.2.3":
-  version: 0.2.5
-  resolution: "prettier-plugin-tailwindcss@npm:0.2.5"
+  version: 0.2.6
+  resolution: "prettier-plugin-tailwindcss@npm:0.2.6"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-php": "*"
@@ -2091,7 +2107,7 @@ __metadata:
       optional: true
     prettier-plugin-twig-melody:
       optional: true
-  checksum: 44ae325d40ad747dd8fb36e1d7986de1919b9bd912993628c18f4743c9287b1add6dd2d951ed336b1031a2ad49c7ba5eb50e4be6d3b9b37e0da7fd137d13ec53
+  checksum: 5cda3cee9657ca67708f348829b168932c89f099fb1bec821afcb9f6e2c3bfdac9bae31cd2a38ecbe5548182093dd4072a8ba9857a25675e8616b35e1eb14ed2
   languageName: node
   linkType: hard
 
@@ -2486,24 +2502,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simplebar-core@npm:^1.2.2":
-  version: 1.2.2
-  resolution: "simplebar-core@npm:1.2.2"
+"simplebar-core@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "simplebar-core@npm:1.2.3"
   dependencies:
+    "@types/lodash-es": ^4.17.6
     can-use-dom: ^0.1.0
     lodash: ^4.17.21
     lodash-es: ^4.17.21
-  checksum: 611efc4eb1089f26489f5aafabdb9c5252fad292c56ff79a2b0a1660fd451538910646d6cec7f0685a2c23f8eb89170de1dacdd6b76d2724ec8c405b93fcbbed
+  checksum: 920a8084f4b6fdad2c9a52a212af26d186ea20479116604052d8f21a1341ef524cfbb8f7b02dceeba347d4eac9dfa5afc6f7ce2208d5f48419254c705e3d165a
   languageName: node
   linkType: hard
 
 "simplebar@npm:^6.2.1":
-  version: 6.2.3
-  resolution: "simplebar@npm:6.2.3"
+  version: 6.2.4
+  resolution: "simplebar@npm:6.2.4"
   dependencies:
     can-use-dom: ^0.1.0
-    simplebar-core: ^1.2.2
-  checksum: 67b9eb8e6da97f6da2b0b19e3c60bbb5c80d4f34f2f4ada9de9a0d77d417bb14b0cd2fa534acfda25c6e6495cb27d985bf021d87f7e8c37adff0b1d5f9a8e73e
+    simplebar-core: ^1.2.3
+  checksum: f48d5ad1a60526029a8d2c47a1c0d71d2ac112f4303f6f2ded2027c27359bd4aca75b1c851a04642ceff0ffb4b1d0219eb7c87c188d18943a027a183de166d3d
   languageName: node
   linkType: hard
 

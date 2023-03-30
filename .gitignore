@@ -13,6 +13,7 @@ dist-ssr
 *.local
 
 #yarn logs
+.yarn
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
