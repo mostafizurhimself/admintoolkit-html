@@ -12,6 +12,7 @@ import dropdown from './components/dropdown';
 import modal from './components/modal';
 import sidebar from './components/sidebar';
 import tabs from './components/tabs';
+import tooltip from './components/tooltip';
 import datepicker from './components/datepicker';
 import drawer from './components/drawer';
 import themeSwitcher from './components/theme-switcher';
@@ -44,6 +45,9 @@ sidebar.init();
 
 // Initialize tabs
 tabs.init();
+
+// Initialize Tooltip
+tooltip.init();
 
 // Initialize carousel
 carousel.init();
