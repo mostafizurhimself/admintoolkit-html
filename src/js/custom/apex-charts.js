@@ -6,7 +6,7 @@ const emptyOption = `{
 const sourceCodeTemplate = (id, options = emptyOption) => {
   return `
         <div id="${id}"></div>
-        <script>
+        <script type="module">
             import ApexCharts from 'apexcharts';
             const options = ${options};
             const chart =  new ApexCharts(document.querySelector("#${id}"), options);
@@ -44,6 +44,7 @@ const chartOptions = {
       align: "left",
       style: {
         color: "#94A3B8",
+        fontWeight: 400,
       },
     },
     grid: {
@@ -144,6 +145,7 @@ const chartOptions = {
       align: "left",
       style: {
         color: "#94A3B8",
+        fontWeight: 400,
       },
     },
     subtitle: {
@@ -240,6 +242,7 @@ const chartOptions = {
         text: "$ (thousands)",
         style: {
           color: "#94A3B8",
+          fontWeight: 400,
         },
       },
     },
@@ -505,6 +508,7 @@ const chartOptions = {
       text: "Radar Chart - Multi Series",
       style: {
         color: "#94A3B8",
+        fontWeight: 400,
       },
     },
     stroke: {
