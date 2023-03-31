@@ -6,7 +6,7 @@ const accordion = {
     const defaultOptions = {
       elementClass : 'accordion-item',
       triggerClass : 'accordion-header',
-      panelClass   : 'accordion-content',
+      panelClass   : 'accordion-body',
       activeClass  : 'active',
       duration     : 300
     }
@@ -24,7 +24,7 @@ const accordion = {
             accordionOptions.openOnInit.push(index);
           }
         });
-        
+
         new Accordion(accordion, accordionOptions);
       });
     }
