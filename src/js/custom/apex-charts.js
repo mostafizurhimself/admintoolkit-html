@@ -3,7 +3,7 @@ import ApexCharts from "apexcharts";
 const emptyOption = `{ 
                           // ...... 
                         }`;
-const sourceCodeTemplate = (id, options = emptyOption) => {
+const sourceCodeTemplate = (id = 'chart', options = emptyOption) => {
   return `
         <div id="${id}"></div>
         <script type="module">
@@ -44,7 +44,8 @@ const chartOptions = {
       align: "left",
       style: {
         color: "#94A3B8",
-        fontWeight: 400,
+        fontSize: '20px',
+        fontWeight: 600,
       },
     },
     grid: {
@@ -145,7 +146,8 @@ const chartOptions = {
       align: "left",
       style: {
         color: "#94A3B8",
-        fontWeight: 400,
+        fontSize: '20px',
+        fontWeight: 600,
       },
     },
     subtitle: {
@@ -153,6 +155,7 @@ const chartOptions = {
       align: "left",
       style: {
         color: "#94A3B8",
+        fontWeight: 500,
       },
     },
     labels: [
@@ -242,7 +245,7 @@ const chartOptions = {
         text: "$ (thousands)",
         style: {
           color: "#94A3B8",
-          fontWeight: 400,
+          fontWeight: 500,
         },
       },
     },
@@ -508,7 +511,8 @@ const chartOptions = {
       text: "Radar Chart - Multi Series",
       style: {
         color: "#94A3B8",
-        fontWeight: 400,
+        fontSize: '20px',
+        fontWeight: 600,
       },
     },
     stroke: {
@@ -530,63 +534,75 @@ const lineChartElement = document.querySelector("#line-chart");
 const lineChart = new ApexCharts(lineChartElement, chartOptions.lineChart);
 lineChart.render();
 const lineChartOptionsTemplate = `
-                                  {
-                                    series: [{
-                                      name: "Desktops",
-                                      data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-                                  }],
-                                    chart: {
-                                    height: 350,
-                                    type: 'line',
-                                    zoom: {
-                                      enabled: false
-                                    },
-                                    toolbar:{
-                                      show: false,
-                                    },
-                                  },
-                                  dataLabels: {
-                                    enabled: false
-                                  },
-                                  stroke: {
-                                    curve: 'straight'
-                                  },
-                                  title: {
-                                    text: 'Product Trends by Month',
-                                    align: 'left',
-                                    style: {
-                                      color: "#94A3B8",
-                                    },
-                                  },
-                                  grid: {
-                                    row: {
-                                      colors: ["#94A3B8", "#fff"], 
-                                      opacity: 0.5
-                                    },
-                                  },
-                                  xaxis: {
-                                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-                                  }
-                                  }
-                                `;
-
+{
+  series: [
+    {
+      name: "Desktops",
+      data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+    },
+  ],
+  chart: {
+    height: 350,
+    type: "line",
+    zoom: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    curve: "straight",
+  },
+  title: {
+    text: "Product Trends by Month",
+    align: "left",
+    style: {
+      color: "#94A3B8",
+      fontSize: '20px',
+      fontWeight: 600,
+    },
+  },
+  grid: {
+    row: {
+      colors: ["transparent"],
+      opacity: 0.5,
+    },
+  },
+  xaxis: {
+    categories: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+    ],
+  },
+}
+`;
+// Add Source Code 
 createCodeViewer(
   "#line-chart-code-viewer",
-  sourceCodeTemplate("line-chart", lineChartOptionsTemplate)
+  sourceCodeTemplate(lineChartElement.id, lineChartOptionsTemplate)
 ).render();
-
 // Line Chart End
 
 // area Chart Start
 const areaChartElement = document.querySelector("#area-chart");
 const areaChart = new ApexCharts(areaChartElement, chartOptions.areaChart);
 areaChart.render();
-
+// Add Source Code 
 createCodeViewer(
   "#area-chart-code-viewer",
-  sourceCodeTemplate("area-chart")
+  sourceCodeTemplate(areaChartElement.id)
 ).render();
-
 // area Chart End
 
 // column Chart Start
@@ -596,24 +612,22 @@ const columnChart = new ApexCharts(
   chartOptions.columnChart
 );
 columnChart.render();
-
+// Add Source Code 
 createCodeViewer(
   "#column-chart-code-viewer",
-  sourceCodeTemplate("column-chart")
+  sourceCodeTemplate(columnChartElement.id)
 ).render();
-
 // column Chart End
 
 // bar Chart Start
 const barChartElement = document.querySelector("#bar-chart");
 const barChart = new ApexCharts(barChartElement, chartOptions.barChart);
 barChart.render();
-
+// Add Source Code 
 createCodeViewer(
   "#bar-chart-code-viewer",
-  sourceCodeTemplate("bar-chart")
+  sourceCodeTemplate(barChartElement.id)
 ).render();
-
 // bar Chart End
 
 // scatter Chart Start
@@ -623,46 +637,42 @@ const scatterChart = new ApexCharts(
   chartOptions.scatterChart
 );
 scatterChart.render();
-
+// Add Source Code 
 createCodeViewer(
   "#scatter-chart-code-viewer",
-  sourceCodeTemplate("scatter-chart")
+  sourceCodeTemplate(scatterChartElement.id)
 ).render();
-
 // Scatter Chart End
 
 // pie Chart Start
 const pieChartElement = document.querySelector("#pie-chart");
 const pieChart = new ApexCharts(pieChartElement, chartOptions.pieChart);
 pieChart.render();
-
+// Add Source Code 
 createCodeViewer(
   "#pie-chart-code-viewer",
-  sourceCodeTemplate("pie-chart")
+  sourceCodeTemplate(pieChartElement.id)
 ).render();
-
 // pie Chart End
 
 // donut Chart Start
 const donutChartElement = document.querySelector("#donut-chart");
 const donutChart = new ApexCharts(donutChartElement, chartOptions.donutChart);
 donutChart.render();
-
+// Add Source Code 
 createCodeViewer(
   "#donut-chart-code-viewer",
-  sourceCodeTemplate("donut-chart")
+  sourceCodeTemplate(donutChartElement.id)
 ).render();
-
 // donut Chart End
 
 // radar Chart Start
 const radarChartElement = document.querySelector("#radar-chart");
 const radarChart = new ApexCharts(radarChartElement, chartOptions.radarChart);
 radarChart.render();
-
+// Add Source Code 
 createCodeViewer(
   "#radar-chart-code-viewer",
-  sourceCodeTemplate("radar-chart")
+  sourceCodeTemplate(radarChartElement.id)
 ).render();
-
 // radar Chart End
