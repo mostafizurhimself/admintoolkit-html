@@ -2736,6 +2736,13 @@ dropzone@latest:
   languageName: node
   linkType: hard
 
+"toastify-js@npm:^1.12.0":
+  version: 1.12.0
+  resolution: "toastify-js@npm:1.12.0"
+  checksum: effb5553f11aa86caa2aceee01c446daea9cb4894e9c57021cf2de483ddcb46f82615058a4871e02055ac9f01d5c0d7ec2a4a7b209388d078092b7c2f9a88090
+  languageName: node
+  linkType: hard
+
 "tom-select@npm:^2.2.2":
   version: 2.2.2
   resolution: "tom-select@npm:2.2.2"
@@ -2830,6 +2837,7 @@ dropzone@latest:
     spinkit: ^2.0.1
     swiper: ^9.0.5
     tailwindcss: ^3.2.6
+    toastify-js: ^1.12.0
     tom-select: ^2.2.2
     vite: ^4.1.0
   languageName: unknown
