@@ -232,3 +232,23 @@
   
 }
 // =======Quill Styles End==========
+
+// ============Apex Chart  Start ============
+    .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title{
+      @apply bg-slate-200 text-slate-700 dark:bg-slate-700 border-b border-slate-400 dark:border-slate-600 dark:text-slate-200;
+    }
+  .apexcharts-tooltip.apexcharts-theme-light,
+  .apexcharts-yaxistooltip.apexcharts-theme-light,
+  .apexcharts-xaxistooltip.apexcharts-theme-light{
+    @apply  bg-slate-50 text-slate-700 dark:bg-slate-800 dark:text-slate-200 border border-slate-400 dark:border-slate-600;
+  }
+  .apexcharts-text.apexcharts-xaxis-label tspan,
+  .apexcharts-text.apexcharts-yaxis-label  tspan{
+    @apply fill-slate-400;
+  } 
+  .apexcharts-legend .apexcharts-legend-series .apexcharts-legend-text{
+    color: #94A3B8!important;
+  }
+
+// ============Apex Chart  End ============
+
