@@ -20,21 +20,22 @@ const toastBasicSourceCode     = `
     Show Toast
   </button>
 
-  <script>
+  <script type="module">
     import toast from "./js/components/toast";
     const btnTriggerToast = document.querySelector('#btn-trigger-toast');
 
     if(btnTriggerToast) {
       btnTriggerToast.addEventListener('click', () => toast('Hello, I am a Toast'));
-    }t
+    }
   </script>
 `;
 const toastTypeSourceCode      = `
-  <button id="btn-trigger-toast-primary" class="btn btn-primary" type="buton">
-    Toast Primary
-  </button>
+  <button id="btn-trigger-toast-success" class="btn btn-success" type="button">Toast Success</button>
+  <button id="btn-trigger-toast-danger" class="btn btn-danger" type="button">Toast Danger</button>
+  <button id="btn-trigger-toast-warning" class="btn btn-warning" type="button">Toast Warning</button>
+  <button id="btn-trigger-toast-info" class="btn btn-info" type="button">Toast Info</button>
 
-  <script>
+  <script type="module">
     import toast from "./js/components/toast";
 
     const btnTriggerToastSuccess = document.querySelector('#btn-trigger-toast-success');
@@ -60,7 +61,14 @@ const toastTypeSourceCode      = `
   </script>
 `;
 const toastPlacementSourceCode = `
-  <script>
+  <button id="btn-trigger-toast-tr" class="btn btn-primary" type="button">Top Right</button>
+  <button id="btn-trigger-toast-tc" class="btn btn-primary" type="button">Top Center</button>
+  <button id="btn-trigger-toast-tl" class="btn btn-primary" type="button">Top Left</button>
+  <button id="btn-trigger-toast-br" class="btn btn-primary" type="button">Bottom Right</button>
+  <button id="btn-trigger-toast-bc" class="btn btn-primary" type="button">Bottom Center</button>
+  <button id="btn-trigger-toast-bl" class="btn btn-primary" type="button">Bottom Left</button>
+
+  <script type="module">
     import toast from "./js/components/toast";
 
     const btnTriggerToastTR = document.querySelector('#btn-trigger-toast-tr');
@@ -126,7 +134,11 @@ const toastPlacementSourceCode = `
   </script>
 `;
 const toastCloseableSourceCode = `
-  <script>
+  <button id="btn-trigger-toast-closeable" class="btn btn-primary" type="button">
+    Show Toast
+  </button>
+
+  <script type="module">
     import toast from "./js/components/toast";
 
     const btnTriggerToastCloseable = document.querySelector('#btn-trigger-toast-closeable');
@@ -144,9 +156,9 @@ const toastCustomSourceCode    = `
     Show Toast
   </button>
 
-  <script>
+  <script type="module">
     import toast from "./js/components/toast";
-    
+
     const btnTriggerToastCustom    = document.querySelector('#btn-trigger-custom-toast');
     if(btnTriggerToastCustom) {
       btnTriggerToastCustom.addEventListener('click', () => {
