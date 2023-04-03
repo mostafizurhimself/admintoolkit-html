@@ -162,10 +162,12 @@ const toastCustomSourceCode    = `
     const btnTriggerToastCustom    = document.querySelector('#btn-trigger-custom-toast');
     if(btnTriggerToastCustom) {
       btnTriggerToastCustom.addEventListener('click', () => {
-        Toastify({
-          text: 'Hello, I am a <strong>Custom Toast</strong>',
-          escapeMarkup: false
-        }).showToast();
+        toast('Hello, I am a <strong>Custom Toast</strong>', {
+          style: {
+            background: '#a855f7',
+            color: '#fff'
+          }
+        });
       });
     }
   </script>
@@ -274,10 +276,12 @@ if(btnTriggerToastCloseable) {
 // Toast Custom
 if(btnTriggerToastCustom) {
   btnTriggerToastCustom.addEventListener('click', () => {
-    Toastify({
-      text: 'Hello, I am a <strong>Custom Toast</strong>',
-      escapeMarkup: false
-    }).showToast();
+    toast('Hello, I am a <strong>Custom Toast</strong>', {
+      style: {
+        background: '#a855f7',
+        color: '#fff'
+      }
+    });
   });
 }
 
