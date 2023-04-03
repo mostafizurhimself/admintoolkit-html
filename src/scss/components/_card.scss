@@ -31,7 +31,7 @@
     
     // Modifier classes
     &-primary {
-      @apply bg-primary-500;
+      @apply bg-primary-500 dark:bg-primary-500;
       
       #{$card}-title,
       #{$card}-content {
@@ -40,7 +40,7 @@
     }
 
     &-secondary {
-      @apply bg-secondary-500;
+      @apply bg-secondary-500 dark:bg-secondary-500;
       
       #{$card}-title,
       #{$card}-content {
@@ -49,7 +49,7 @@
     }
 
     &-success {
-      @apply bg-success-500;
+      @apply bg-success-500 dark:bg-success-500;
       
       #{$card}-title,
       #{$card}-content {
@@ -58,7 +58,7 @@
     }
 
     &-danger {
-      @apply bg-danger-500;
+      @apply bg-danger-500 dark:bg-danger-500;
       
       #{$card}-title,
       #{$card}-content {
@@ -67,7 +67,7 @@
     }
 
     &-warning {
-      @apply bg-warning-500;
+      @apply bg-warning-500 dark:bg-warning-500;
       
       #{$card}-title,
       #{$card}-content {
@@ -76,7 +76,7 @@
     }
 
     &-info {
-      @apply bg-info-500;
+      @apply bg-info-500 dark:bg-info-500;
       
       #{$card}-title,
       #{$card}-content {
@@ -85,7 +85,7 @@
     }
 
     &-dark {
-      @apply bg-info-500;
+      @apply bg-dark-500 dark:bg-dark-500;
       
       #{$card}-title,
       #{$card}-content {

@@ -5,20 +5,21 @@ import feather from "feather-icons";
 import ResizeObserver from "resize-observer-polyfill";
 
 //Core components
-import accordion from "./components/accordion";
-import alert from "./components/alert";
-import codeViewer from "./components/code-viewer";
-import dropdown from "./components/dropdown";
-import modal from "./components/modal";
-import sidebar from "./components/sidebar";
-import tabs from "./components/tabs";
-import datepicker from "./components/datepicker";
-import drawer from "./components/drawer";
-import themeSwitcher from "./components/theme-switcher";
-import carousel from "./components/carousel";
-import editor from "./components/editor";
-import select from "./components/select";
-import uploader from "./components/uploader";
+import accordion from './components/accordion';
+import alert from './components/alert';
+import codeViewer from './components/code-viewer';
+import dropdown from './components/dropdown';
+import modal from './components/modal';
+import sidebar from './components/sidebar';
+import tabs from './components/tabs';
+import tooltip from './components/tooltip';
+import datepicker from './components/datepicker';
+import drawer from './components/drawer';
+import themeSwitcher from './components/theme-switcher';
+import carousel from './components/carousel';
+import editor from './components/editor';
+import select from './components/select';
+import uploader from './components/uploader';
 
 
 // Initialize themeSwitcher
@@ -44,6 +45,9 @@ sidebar.init();
 
 // Initialize tabs
 tabs.init();
+
+// Initialize Tooltip
+tooltip.init();
 
 // Initialize carousel
 carousel.init();
