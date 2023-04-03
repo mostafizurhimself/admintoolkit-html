@@ -1,5 +1,5 @@
 const customFormValidationSourceCode =`
-  <form class="form-validation max-w-lg p-4 mx-auto bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" novalidate>
+  <form id="form-custom-validation" class="max-w-lg p-4 mx-auto bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" novalidate>
     <!-- Form Body -->
     <div class="flex flex-col gap-4">
       <!-- Form Row: Full name -->
@@ -50,27 +50,34 @@ const customFormValidationSourceCode =`
     </div>
   </form>
 
-  <script>
-    const forms = document.querySelectorAll('.form-validation');
+  <script type="module">
+    const formCustomValidation = document.querySelector('#form-custom-validation');
 
-    if(forms.length) {
-      [...forms].forEach(form => {
-        form.addEventListener('submit', (e) => {
-          if (!form.checkValidity()) {
-            e.preventDefault();
-            e.stopPropagation();
-          }
-
-          form.classList.add('form-validated')
-        })
+    if(formCustomValidation) {
+      formCustomValidation.addEventListener('submit',  function (e) {
+        if (!this.checkValidity()) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        this.classList.add('form-validated')
       })
     }
   </script>
 `;
 
-
-// Create CodeViewer
+const formCustomValidation = document.querySelector('#form-custom-validation');
 const customFormValidationCodeViewer = createCodeViewer('#custom-form-validation-code-viewer', customFormValidationSourceCode);    
+
+if(formCustomValidation) {
+  formCustomValidation.addEventListener('submit',  function (e) {
+    if (!this.checkValidity()) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    this.classList.add('form-validated')
+  })
+}
 
 // Render CodeViewer
 customFormValidationCodeViewer.render();

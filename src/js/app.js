@@ -19,7 +19,6 @@ import carousel from './components/carousel';
 import editor from './components/editor';
 import select from './components/select';
 import uploader from './components/uploader';
-import validation from './components/validation';
 
 // Initialize themeSwitcher
 themeSwitcher.init();
@@ -56,9 +55,6 @@ select.init();
 
 // Initialize uploader
 uploader.init();
-
-// Initialize validation
-validation.init();
 
 // Initialize datepicker
 datepicker.init();
