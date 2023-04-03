@@ -1,8 +1,8 @@
 //Third party packages
-import 'simplebar';
-import '@fortawesome/fontawesome-free/js/all';
-import feather from 'feather-icons';
-import ResizeObserver from 'resize-observer-polyfill';
+import "simplebar";
+import "@fortawesome/fontawesome-free/js/all";
+import feather from "feather-icons";
+import ResizeObserver from "resize-observer-polyfill";
 
 //Core components
 import accordion from './components/accordion';
@@ -68,7 +68,7 @@ datepicker.init();
 drawer.init();
 
 // Initialize feather-icons. Must be Initialize at the end.
-feather.replace(); 
+feather.replace();
 
 // Polyfill for ResizeObserver
 window.ResizeObserver = ResizeObserver;
