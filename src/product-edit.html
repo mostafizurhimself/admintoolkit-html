@@ -733,7 +733,7 @@
               <!-- General  -->
               <div class="bg-white p-6 dark:bg-slate-800 rounded-primary shadow-sm">
                 <h5 class="text-xl p-0 m-0  font-semibold text-slate-700 dark:text-slate-200">General</h5>
-                <p class="text-slate-400 font-normal p-0 m-0 text-xs ">Customize the basic information of your product
+                <p class="text-slate-400 font-normal p-0 mb-4 text-xs ">Customize the basic information of your product
                 </p>
                 <div class="py-2">
                   <label class="label label-required mb-1 font-medium" for="name">Name</label>
@@ -752,7 +752,7 @@
               <!-- Pricing  -->
               <div class="bg-white p-6 dark:bg-slate-800 rounded-primary shadow-sm">
                 <h5 class="text-xl p-0 m-0  font-semibold text-slate-700 dark:text-slate-200">Pricing</h5>
-                <p class="text-slate-400 font-normal p-0 m-0 text-xs ">Set your pricing strategies to stay ahead of the
+                <p class="text-slate-400 font-normal p-0 mb-4 text-xs ">Set your pricing strategies to stay ahead of the
                   competition</p>
                 <div class="py-2 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                   <div class="flex flex-col w-full md:w-auto">
@@ -782,7 +782,7 @@
               <!-- Media  -->
               <div class="bg-white p-6 dark:bg-slate-800 rounded-primary shadow-sm">
                 <h5 class="text-xl p-0 m-0  font-semibold text-slate-700 dark:text-slate-200">Media</h5>
-                <p class="text-slate-400 font-normal p-0 m-0 text-xs ">Showcase your product with high-quality images
+                <p class="text-slate-400 font-normal p-0 mb-4 text-xs ">Showcase your product with high-quality images
                 </p>
                 <div class="dropzone dropzone-basic my-5">
                   <div class="dz-message">
@@ -819,7 +819,7 @@
               <!-- Inventory  -->
               <div class="bg-white p-6 dark:bg-slate-800 rounded-primary shadow-sm">
                 <h5 class="text-xl p-0 m-0  font-semibold text-slate-700 dark:text-slate-200">Inventory</h5>
-                <p class="text-slate-400 font-normal p-0 m-0 text-xs ">Manage and track your product stocks</p>
+                <p class="text-slate-400 font-normal p-0 mb-4 text-xs ">Manage and track your product stocks</p>
                 <div class="py-2 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                   <div class="flex flex-col w-full md:w-auto">
                     <label class="label label-required mb-1 font-medium" for="sku">SKU</label>
@@ -848,7 +848,7 @@
               <!-- Shipping  -->
               <div class="bg-white p-6 dark:bg-slate-800 rounded-primary shadow-sm">
                 <h5 class="text-xl p-0 m-0  font-semibold text-slate-700 dark:text-slate-200">Shipping</h5>
-                <label for="toggle-sm" class="toggle my-1 toggle-sm">
+                <label for="toggle-sm" class="toggle mt-1 mb-4 toggle-sm">
                   <input class="toggle-input peer sr-only" id="toggle-sm" type="checkbox" checked="">
                   <div class="toggle-body"></div>
                   <span class="label label-sm !text-slate-400">This product requires shipping</span>
@@ -884,7 +884,41 @@
             </section>
             <!-- Left Side Div End  -->
             <!-- Right Side Div Start  -->
-            <section class="bg-white p-6 lg:col-span-1 dark:bg-slate-800 rounded-primary shadow">
+            <section class="lg:col-span-1">
+              <!-- Organization -->
+              <div class="bg-white p-6  dark:bg-slate-800 rounded-primary shadow ">
+                <h5 class="text-xl p-0 m-0  font-semibold text-slate-700 dark:text-slate-200">Organization</h5>
+                <p class="text-slate-400 font-normal p-0 mb-4 text-xs ">Better organize your product</p>
+                <div class="flex flex-col gap-4 ">
+                  <div>
+                    <label class="label label-required mb-1 font-medium " for="status">Status</label>
+                    <select class="select" id="status">
+                      <option value="">Draft</option>
+                      <option value="1">Inactive</option>
+                      <option value="2">Active</option>
+                      <option value="2">Out Stock</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="label label-required mb-1 font-medium " for="category">Category</label>
+                    <select class="select" id="category">
+                      <option value="">Electronics</option>
+                      <option value="1">Women</option>
+                      <option value="2">Fashion</option>
+                      <option value="2">Health Care</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="label label-required mb-1 font-medium " for="brand">Brand</label>
+                    <select class="select" id="brand">
+                      <option value="">Apple</option>
+                      <option value="1">Apex</option>
+                      <option value="2">Lotto</option>
+                      <option value="2">Android</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
             </section>
             <!-- Right Side Div End  -->
           </div>
