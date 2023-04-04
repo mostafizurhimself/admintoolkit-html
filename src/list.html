@@ -698,14 +698,14 @@
         <main class="flex-grow p-6">
           <!-- Page Title Starts -->
           <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-            <h5>--Title--</h5>
+            <h5 class="px-2 md:px-0">User List</h5>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
                 <a href="/">Home</a>
               </li>
 
               <li class="breadcrumb-item">
-                <a href="#">Components</a>
+                <a href="#">User</a>
               </li>
 
               <li class="breadcrumb-item">
@@ -715,24 +715,582 @@
           </div>
           <!-- Page Title Ends -->
 
-          <!-- Tabs Starts -->
-          <div class="space-y-6">
-            <!-- Card: Basic Tab Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">List</h4>
-
-                <p class="card-subtitle">
-                  You can use the <code>Checkbox</code> component to render a checkbox input.
-                </p>
-
-                <div class="code-viewer mt-4">
-                  <!-- Code Here  -->
+          <!-- User List Start  -->
+          <div class="grid grid-cols-1">
+            <!-- User List Header Start -->
+            <div class="flex w-full flex-col items-center justify-between gap-y-4 md:flex-row md:gap-0">
+              <div class="w-full md:w-1/2">
+                <div
+                  class="group flex h-10 w-full items-center rounded-primary border border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500 md:w-72">
+                  <div class="flex h-full items-center px-2">
+                    <i class="h-4 text-slate-400 group-focus-within:text-primary-500" data-feather="search"></i>
+                  </div>
+                  <input
+                    class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                    type="text" placeholder="Search" />
                 </div>
               </div>
+              <div class="flex w-full justify-between gap-2 md:w-1/2 md:justify-end md:gap-5">
+                <div data-placement="bottom-end"
+                  class="dropdown max-w-sm rounded-primary bg-white py-2 px-4 shadow-sm dark:bg-slate-800">
+                  <div class="dropdown-toggle flex gap-2 px-2 text-slate-600 dark:text-slate-300">
+                    <i class="w-4" data-feather="filter"></i>
+                    <span class="text-sm font-medium">Filter</span>
+                    <i class="w-4" data-feather="chevron-down"></i>
+                  </div>
+                  <div class="dropdown-content min-w-sm !overflow-visible md:min-w-[300px]">
+
+                    <ul class="dropdown-list p-4 space-y-4">
+                      <li class="dropdown-list-item">
+                        <h2 class="my-1 text-sm font-medium">Occupation</h2>
+                        <select class="tom-select w-full" autocomplete="off">
+                          <option value="">Select a Occupation</option>
+                          <option value="1">Frontend Developer</option>
+                          <option value="2">Full Stack Developer</option>
+                          <option value="3">Web Developer</option>
+                        </select>
+                      </li>
+
+                      <li class="dropdown-list-item">
+                        <h2 class="my-1 text-sm font-medium">Status</h2>
+                        <select class="select">
+                          <option value="">Select to Status</option>
+                          <option value="1">Acitve</option>
+                          <option value="2">Inactive</option>
+                          <option value="2">Resigned</option>
+                        </select>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="btn btn-soft-dark bg-white dark:bg-slate-800"><i class="h-4" data-feather="upload"></i>
+                  Export</button>
+                <a class="btn btn-primary" href="#" role="button">
+                  <i data-feather="plus" height="1rem" width="1rem"></i>
+                  Add <span class="hidden md:inline-block">User</span>
+                </a>
+              </div>
             </div>
-            <!-- Card: Basic Tab Ends -->
+            <!-- User List Header End -->
+
+            <div class="table-responsive my-4 shadow-sm">
+              <table class="table min-w-[1100px]">
+                <thead>
+                  <tr>
+                    <th>
+                      <label for="checkbox-sm" class="label">
+                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                      </label>
+                    </th>
+                    <th class="text-xs uppercase">User</th>
+                    <th class="text-xs uppercase">Email</th>
+                    <th class="text-xs uppercase">Phone</th>
+                    <th class="text-xs uppercase">Joined Date</th>
+                    <th class="text-xs uppercase">Status</th>
+                    <th class="text-xs uppercase">
+                      <p class="text-right">Actions</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                    </td>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <img src="./images/avatar1.png"
+                          class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
+                        <div>
+                          <h3 class="m-0 p-0 text-sm font-normal">Ahmed Shakil</h3>
+                          <p class="text-xs text-slate-400">Project Manager</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>shakil@example.com</td>
+                    <td>+1 080-123-4567</td>
+                    <td>19 Aug 2022</td>
+                    <td>
+                      <div class="badge badge-soft-success">Active</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                    </td>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <img src="./images/avatar2.png"
+                          class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
+                        <div>
+                          <h3 class="m-0 p-0 text-sm font-normal">Afrad Bhuyian</h3>
+                          <p class="text-xs text-slate-400">Frontend Developer</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>afrad@example.com</td>
+                    <td>+1 080-123-4567</td>
+                    <td>20 Jun 2022</td>
+                    <td>
+                      <div class="badge badge-soft-success">Active</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                    </td>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <img src="./images/avatar3.png"
+                          class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
+                        <div>
+                          <h3 class="m-0 p-0 text-sm font-normal">Adnan Shaikat</h3>
+                          <p class="text-xs text-slate-400">Web Developer</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>adnan@example.com</td>
+                    <td>+1 0823-163-6667</td>
+                    <td>01 May 2022</td>
+                    <td>
+                      <div class="badge badge-soft-danger">inactive</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                    </td>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <img src="./images/avatar4.png"
+                          class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
+                        <div>
+                          <h3 class="m-0 p-0 text-sm font-normal">Hasibur Rahman</h3>
+                          <p class="text-xs text-slate-400">Full Stack Developer</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>hasibur@example.com</td>
+                    <td>+1 0823-245-5667</td>
+                    <td>15 Apr 2022</td>
+                    <td>
+                      <div class="badge badge-soft-success">Active</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                    </td>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <img src="./images/avatar5.png"
+                          class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
+                        <div>
+                          <h3 class="m-0 p-0 text-sm font-normal">Tanvir Alam</h3>
+                          <p class="text-xs text-slate-400">UI/UX Designer</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>tanvir@example.com</td>
+                    <td>+1 0823-786-5867</td>
+                    <td>10 Apr 2022</td>
+                    <td>
+                      <div class="badge badge-soft-warning">Resigned</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                    </td>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <img src="./images/avatar6.png"
+                          class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
+                        <div>
+                          <h3 class="m-0 p-0 text-sm font-normal">Tauhid Islam</h3>
+                          <p class="text-xs text-slate-400">Software Developer</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>tauhid@example.com</td>
+                    <td>+1 0823-432-3467</td>
+                    <td>01 Mar 2022</td>
+                    <td>
+                      <div class="badge badge-soft-success">Active</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                    </td>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <img src="./images/avatar7.png"
+                          class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
+                        <div>
+                          <h3 class="m-0 p-0 text-sm font-normal">Motasim Fuad</h3>
+                          <p class="text-xs text-slate-400">Mobile App Developer</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>fuad@example.com</td>
+                    <td>+1 4232-422-3567</td>
+                    <td>10 Feb 2022</td>
+                    <td>
+                      <div class="badge badge-soft-success">Active</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                    </td>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <img src="./images/avatar8.png"
+                          class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
+                        <div>
+                          <h3 class="m-0 p-0 text-sm font-normal">Yeasin Ahmed</h3>
+                          <p class="text-xs text-slate-400">Backend Developer</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>yeasin@example.com</td>
+                    <td>+1 4332-411-3567</td>
+                    <td>01 Feb 2022</td>
+                    <td>
+                      <div class="badge badge-soft-warning">Resigned</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                    </td>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <img src="./images/avatar9.png"
+                          class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
+                        <div>
+                          <h3 class="m-0 p-0 text-sm font-normal">Nathan Cooper</h3>
+                          <p class="text-xs text-slate-400">Tech Advisor</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>nathan@example.com</td>
+                    <td>+1 7332-890-3067</td>
+                    <td>25 Jan 2022</td>
+                    <td>
+                      <div class="badge badge-soft-success">Active</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                    </td>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <img src="./images/avatar10.png"
+                          class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
+                        <div>
+                          <h3 class="m-0 p-0 text-sm font-normal">James William</h3>
+                          <p class="text-xs text-slate-400">Backend Developer</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>james@example.com</td>
+                    <td>+1 3453-123-3567</td>
+                    <td>01 Jan 2022</td>
+                    <td>
+                      <div class="badge badge-soft-danger">Inactive</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content min-w-[200px]">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row">
+              <p class="text-xs font-normal text-slate-400">Showing 1 to 10 of 50 result</p>
+              <!-- Pagination -->
+              <nav class="pagination">
+                <ul class="pagination-list">
+                  <li class="pagination-item">
+                    <a class="pagination-link pagination-link-prev-icon" href="#">
+                      <i data-feather="chevron-left" width="1em" height="1em"></i>
+                    </a>
+                  </li>
+                  <li class="pagination-item active">
+                    <a class="pagination-link" href="#">1</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">2</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">3</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">4</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">5</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link pagination-link-next-icon" href="#">
+                      <i data-feather="chevron-right" width="1em" height="1em"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
+          <!-- User List End  -->
           <!-- Tabs Ends -->
         </main>
         <!-- Main Content Ends -->
