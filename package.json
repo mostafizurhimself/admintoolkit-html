@@ -40,6 +40,7 @@
     "simplebar": "^6.2.1",
     "spinkit": "^2.0.1",
     "swiper": "^9.0.5",
+    "tippy.js": "^6.3.7",
     "tom-select": "^2.2.2"
   }
 }

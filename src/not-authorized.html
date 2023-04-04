@@ -4,10 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alerts - Admin Toolkit</title>
+    <title>Not Authorized - Admin Toolkit</title>
     <link rel="stylesheet" href="./scss/app.scss" />
   </head>
+
   <body>
-  <h2>not authorized</h2>
+    <div id="app" class="flex min-h-screen w-full items-center justify-center">
+      <!-- Main Content Starts -->
+      <main>
+        <div class="flex flex-col items-center justify-center">
+          <p class="text-6xl font-semibold text-primary-500">401</p>
+          <p class="card-title mt-2">Opps! Unauthorized!</p>
+          <p class="text-xs font-semibold">These are the invalid credentials</p>
+          <a href="./index.html">
+            <button class="btn btn-primary mt-8 px-8 py-2">Back to Home</button>
+          </a>
+        </div>
+      </main>
+      <!-- Main Content Ends -->
+    </div>
   </body>
 </html>

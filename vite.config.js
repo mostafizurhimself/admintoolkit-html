@@ -39,6 +39,11 @@ export default defineConfig({
             outDir = "assets/media";
           }
 
+          // JSON
+          if (/json$/.test(chunkInfo.name)) {
+            outDir = "assets/json";
+          }
+
           // JS
           if (/js$/.test(chunkInfo.name)) {
             outDir = "assets/js";
