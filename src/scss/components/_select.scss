@@ -22,12 +22,24 @@
       @apply h-11;
     }
 
-    &-valid {
+    &.is-valid,
+    .form-validated &:valid {
       @apply border-success-500  focus:border-success-500 focus:ring-success-500 dark:focus:border-success-500 dark:border-success-500;
     }
 
-    &-invalid {
+    &.is-valid ~ .success-message,
+    .form-validated &:valid ~ .success-message {
+      @apply block;
+    }
+
+    &.is-invalid,
+    .form-validated &:invalid {
       @apply border-danger-500  focus:border-danger-500 focus:ring-danger-500 dark:focus:border-danger-500 dark:border-danger-500;
+    }
+    
+    &.is-invalid ~ .error-message,
+    .form-validated &:invalid ~ .error-message {
+      @apply block;
     }
   }
   
