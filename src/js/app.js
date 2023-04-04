@@ -21,7 +21,6 @@ import editor from './components/editor';
 import select from './components/select';
 import uploader from './components/uploader';
 
-
 // Initialize themeSwitcher
 themeSwitcher.init();
 

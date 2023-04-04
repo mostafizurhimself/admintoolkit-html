@@ -3,7 +3,7 @@ import ApexCharts from "apexcharts";
 const emptyOption = `{ 
                           // ...... 
                         }`;
-const sourceCodeTemplate = (id = 'chart', options = emptyOption) => {
+const sourceCodeTemplate = (id = "chart", options = emptyOption) => {
   return `
         <div id="${id}"></div>
         <script type="module">
@@ -43,8 +43,8 @@ const chartOptions = {
       text: "Product Trends by Month",
       align: "left",
       style: {
-        color: "#94A3B8",
-        fontSize: '20px',
+        color: "#475569",
+        fontSize: "20px",
         fontWeight: 600,
       },
     },
@@ -145,8 +145,8 @@ const chartOptions = {
       text: "Fundamental Analysis of Stocks",
       align: "left",
       style: {
-        color: "#94A3B8",
-        fontSize: '20px',
+        color: "#475569",
+        fontSize: "20px",
         fontWeight: 600,
       },
     },
@@ -154,7 +154,7 @@ const chartOptions = {
       text: "Price Movements",
       align: "left",
       style: {
-        color: "#94A3B8",
+        color: "#475569",
         fontWeight: 500,
       },
     },
@@ -244,7 +244,7 @@ const chartOptions = {
       title: {
         text: "$ (thousands)",
         style: {
-          color: "#94A3B8",
+          color: "#475569",
           fontWeight: 500,
         },
       },
@@ -510,8 +510,8 @@ const chartOptions = {
     title: {
       text: "Radar Chart - Multi Series",
       style: {
-        color: "#94A3B8",
-        fontSize: '20px',
+        color: "#475569",
+        fontSize: "20px",
         fontWeight: 600,
       },
     },
@@ -561,7 +561,7 @@ const lineChartOptionsTemplate = `
     text: "Product Trends by Month",
     align: "left",
     style: {
-      color: "#94A3B8",
+      color: "#475569",
       fontSize: '20px',
       fontWeight: 600,
     },
@@ -587,7 +587,7 @@ const lineChartOptionsTemplate = `
   },
 }
 `;
-// Add Source Code 
+// Add Source Code
 createCodeViewer(
   "#line-chart-code-viewer",
   sourceCodeTemplate(lineChartElement.id, lineChartOptionsTemplate)
@@ -598,7 +598,7 @@ createCodeViewer(
 const areaChartElement = document.querySelector("#area-chart");
 const areaChart = new ApexCharts(areaChartElement, chartOptions.areaChart);
 areaChart.render();
-// Add Source Code 
+// Add Source Code
 createCodeViewer(
   "#area-chart-code-viewer",
   sourceCodeTemplate(areaChartElement.id)
@@ -612,7 +612,7 @@ const columnChart = new ApexCharts(
   chartOptions.columnChart
 );
 columnChart.render();
-// Add Source Code 
+// Add Source Code
 createCodeViewer(
   "#column-chart-code-viewer",
   sourceCodeTemplate(columnChartElement.id)
@@ -623,7 +623,7 @@ createCodeViewer(
 const barChartElement = document.querySelector("#bar-chart");
 const barChart = new ApexCharts(barChartElement, chartOptions.barChart);
 barChart.render();
-// Add Source Code 
+// Add Source Code
 createCodeViewer(
   "#bar-chart-code-viewer",
   sourceCodeTemplate(barChartElement.id)
@@ -637,7 +637,7 @@ const scatterChart = new ApexCharts(
   chartOptions.scatterChart
 );
 scatterChart.render();
-// Add Source Code 
+// Add Source Code
 createCodeViewer(
   "#scatter-chart-code-viewer",
   sourceCodeTemplate(scatterChartElement.id)
@@ -648,7 +648,7 @@ createCodeViewer(
 const pieChartElement = document.querySelector("#pie-chart");
 const pieChart = new ApexCharts(pieChartElement, chartOptions.pieChart);
 pieChart.render();
-// Add Source Code 
+// Add Source Code
 createCodeViewer(
   "#pie-chart-code-viewer",
   sourceCodeTemplate(pieChartElement.id)
@@ -659,7 +659,7 @@ createCodeViewer(
 const donutChartElement = document.querySelector("#donut-chart");
 const donutChart = new ApexCharts(donutChartElement, chartOptions.donutChart);
 donutChart.render();
-// Add Source Code 
+// Add Source Code
 createCodeViewer(
   "#donut-chart-code-viewer",
   sourceCodeTemplate(donutChartElement.id)
@@ -670,7 +670,7 @@ createCodeViewer(
 const radarChartElement = document.querySelector("#radar-chart");
 const radarChart = new ApexCharts(radarChartElement, chartOptions.radarChart);
 radarChart.render();
-// Add Source Code 
+// Add Source Code
 createCodeViewer(
   "#radar-chart-code-viewer",
   sourceCodeTemplate(radarChartElement.id)
