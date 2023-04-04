@@ -755,24 +755,24 @@
                 <p class="text-slate-400 font-normal p-0 m-0 text-xs ">Set your pricing strategies to stay ahead of the
                   competition</p>
                 <div class="py-2 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-                  <div class="flex flex-col w-full lg:w-auto">
+                  <div class="flex flex-col w-full md:w-auto">
                     <label class="label label-required mb-1 font-medium" for="base-price">Base Price</label>
                     <input type="text" class="input" id="base-price" value="1699.99">
                     <p class="help-text mt-1">Set the product regular price</p>
                   </div>
-                  <div class="flex flex-col w-full lg:w-auto">
+                  <div class="flex flex-col w-full md:w-auto">
                     <label class="label mb-1 font-medium" for="sale-price">Sale Price</label>
                     <input type="text" class="input" id="sale-price" value="1699.99">
                     <p class="help-text mt-1">Set the product offer price</p>
                   </div>
                 </div>
                 <div class="py-2 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-                  <div class="flex flex-col w-full lg:w-auto">
+                  <div class="flex flex-col w-full md:w-auto">
                     <label class="label mb-1 font-medium" for="cost-price">Cost Price</label>
                     <input type="text" class="input" id="cost-price" value="1200.00">
                     <p class="help-text mt-1">Set the cost price of the product</p>
                   </div>
-                  <div class="flex flex-col w-full lg:w-auto">
+                  <div class="flex flex-col w-full md:w-auto">
                     <label class="label mb-1 font-medium" for="tax-amount">Tax Amount (%)</label>
                     <input type="text" class="input" id="tax-amount" value="15">
                     <p class="help-text mt-1">Set the product tax amount in percentage (%)</p>
@@ -821,27 +821,62 @@
                 <h5 class="text-xl p-0 m-0  font-semibold text-slate-700 dark:text-slate-200">Inventory</h5>
                 <p class="text-slate-400 font-normal p-0 m-0 text-xs ">Manage and track your product stocks</p>
                 <div class="py-2 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-                  <div class="flex flex-col w-full lg:w-auto">
+                  <div class="flex flex-col w-full md:w-auto">
                     <label class="label label-required mb-1 font-medium" for="sku">SKU</label>
                     <input type="text" class="input" id="sku" value="MBP1001">
                     <p class="help-text mt-1">Product Stock Keeping Unit</p>
                   </div>
-                  <div class="flex flex-col w-full lg:w-auto">
+                  <div class="flex flex-col w-full md:w-auto">
                     <label class="label mb-1 font-medium" for="sale-price">Barcode</label>
                     <input type="text" class="input" id="sale-price" value="MBP1001">
                     <p class="help-text mt-1">Supported Format (ISBN, UPC, GTIN, etc.)</p>
                   </div>
                 </div>
                 <div class="py-2 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-                  <div class="flex flex-col w-full lg:w-auto">
+                  <div class="flex flex-col w-full md:w-auto">
                     <label class="label label-required mb-1 font-medium" for="stock-quantity">Stock Quantity</label>
                     <input type="text" class="input" id="stock-quantity" value="200">
                     <p class="help-text mt-1">Enter available stock quantity</p>
                   </div>
-                  <div class="flex flex-col w-full lg:w-auto">
+                  <div class="flex flex-col w-full md:w-auto">
                     <label class="label mb-1 font-medium" for="low-stock-threshold">Low Stock Threshold</label>
                     <input type="text" class="input" id="low-stock-threshold" value="50">
                     <p class="help-text mt-1">Enter low stock quantity alert threshold </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Shipping  -->
+              <div class="bg-white p-6 dark:bg-slate-800 rounded-primary shadow-sm">
+                <h5 class="text-xl p-0 m-0  font-semibold text-slate-700 dark:text-slate-200">Shipping</h5>
+                <label for="toggle-sm" class="toggle my-1 toggle-sm">
+                  <input class="toggle-input peer sr-only" id="toggle-sm" type="checkbox" checked="">
+                  <div class="toggle-body"></div>
+                  <span class="label label-sm !text-slate-400">This product requires shipping</span>
+                </label>
+                <div class="py-2 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                  <div class="flex flex-col w-full md:w-auto">
+                    <label class="label label-required mb-1 font-medium" for="weight">Weight</label>
+                    <input type="text" class="input" id="weight" value="4.5">
+                    <p class="help-text mt-1">Enter your product weight</p>
+                  </div>
+                  <div class="flex flex-col w-full md:w-auto">
+                    <label class="label mb-1 font-medium" for="unit">Unit</label>
+                    <input type="text" class="input" id="unit" value="Kg">
+                    <p class="help-text mt-1">Enter the product weight unit</p>
+                  </div>
+                </div>
+                <div class="py-2 grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                  <div class="flex flex-col justify-center w-full md:w-auto">
+                    <label class="label label-required my-2 font-medium" for="dimensions-length">Dimension(L x W x
+                      H)</label>
+                    <input type="text" class="input" id="dimensions-length" value="10">
+                    <p class="help-text mt-1">Enter your product dimension in cm</p>
+                  </div>
+                  <div class="flex flex-col justify-center w-full md:w-auto">
+                    <input type="text" class="input" id="dimension-weight" value="20">
+                  </div>
+                  <div class="flex flex-col w-full justify-center md:w-auto">
+                    <input type="text" class="input" id="dimensions-height" value="50">
                   </div>
                 </div>
               </div>
