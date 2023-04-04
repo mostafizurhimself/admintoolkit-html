@@ -754,9 +754,10 @@
                         <h2 class="my-1 text-sm font-medium">Status</h2>
                         <select class="select">
                           <option value="">Select to Status</option>
-                          <option value="1">Acitve</option>
+                          <option value="1">Active</option>
                           <option value="2">Inactive</option>
-                          <option value="2">Resigned</option>
+                          <option value="2">Prospect</option>
+                          <option value="2">Suspended</option>
                         </select>
                       </li>
                     </ul>
@@ -781,10 +782,9 @@
                         <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
                       </label>
                     </th>
-                    <th class="text-xs uppercase">User</th>
-                    <th class="text-xs uppercase">Email</th>
+                    <th class="text-xs uppercase">Customer</th>
                     <th class="text-xs uppercase">Phone</th>
-                    <th class="text-xs uppercase">Joined Date</th>
+                    <th class="text-xs uppercase">Last Ordered at</th>
                     <th class="text-xs uppercase">Status</th>
                     <th class="text-xs uppercase">
                       <p class="text-right">Actions</p>
@@ -802,11 +802,10 @@
                           class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
                         <div>
                           <h3 class="m-0 p-0 text-sm font-normal">Ahmed Shakil</h3>
-                          <p class="text-xs text-slate-400">Project Manager</p>
+                          <p class="text-xs text-slate-400">shakil@example.com</p>
                         </div>
                       </div>
                     </td>
-                    <td>shakil@example.com</td>
                     <td>+1 080-123-4567</td>
                     <td>19 Aug 2022</td>
                     <td>
@@ -818,18 +817,24 @@
                           <div class="dropdown-toggle">
                             <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                           </div>
-                          <div class="dropdown-content min-w-[200px]">
+                          <div class="dropdown-content min-w-[120px]">
                             <ul class="dropdown-list">
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
+                                  <i class="h-5 text-slate-400" data-feather="eye"></i>
+                                  <span>View</span>
                                 </a>
                               </li>
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
                                   <i class="h-5 text-slate-400" data-feather="trash"></i>
                                   <span>Delete</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="minus-circle"></i>
+                                  <span>Suspended</span>
                                 </a>
                               </li>
                             </ul>
@@ -848,15 +853,14 @@
                           class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
                         <div>
                           <h3 class="m-0 p-0 text-sm font-normal">Afrad Bhuyian</h3>
-                          <p class="text-xs text-slate-400">Frontend Developer</p>
+                          <p class="text-xs text-slate-400">afrad@example.com</p>
                         </div>
                       </div>
                     </td>
-                    <td>afrad@example.com</td>
                     <td>+1 080-123-4567</td>
                     <td>20 Jun 2022</td>
                     <td>
-                      <div class="badge badge-soft-success">Active</div>
+                      <div class="badge badge-soft-secondary">Prospect</div>
                     </td>
                     <td>
                       <div class="flex justify-end">
@@ -864,18 +868,24 @@
                           <div class="dropdown-toggle">
                             <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                           </div>
-                          <div class="dropdown-content min-w-[200px]">
+                          <div class="dropdown-content min-w-[120px]">
                             <ul class="dropdown-list">
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
+                                  <i class="h-5 text-slate-400" data-feather="eye"></i>
+                                  <span>View</span>
                                 </a>
                               </li>
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
                                   <i class="h-5 text-slate-400" data-feather="trash"></i>
                                   <span>Delete</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="minus-circle"></i>
+                                  <span>Suspended</span>
                                 </a>
                               </li>
                             </ul>
@@ -894,11 +904,10 @@
                           class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
                         <div>
                           <h3 class="m-0 p-0 text-sm font-normal">Adnan Shaikat</h3>
-                          <p class="text-xs text-slate-400">Web Developer</p>
+                          <p class="text-xs text-slate-400">adnan@example.com</p>
                         </div>
                       </div>
                     </td>
-                    <td>adnan@example.com</td>
                     <td>+1 0823-163-6667</td>
                     <td>01 May 2022</td>
                     <td>
@@ -910,18 +919,24 @@
                           <div class="dropdown-toggle">
                             <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                           </div>
-                          <div class="dropdown-content min-w-[200px]">
+                          <div class="dropdown-content min-w-[120px]">
                             <ul class="dropdown-list">
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
+                                  <i class="h-5 text-slate-400" data-feather="eye"></i>
+                                  <span>View</span>
                                 </a>
                               </li>
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
                                   <i class="h-5 text-slate-400" data-feather="trash"></i>
                                   <span>Delete</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="minus-circle"></i>
+                                  <span>Suspended</span>
                                 </a>
                               </li>
                             </ul>
@@ -940,11 +955,10 @@
                           class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
                         <div>
                           <h3 class="m-0 p-0 text-sm font-normal">Hasibur Rahman</h3>
-                          <p class="text-xs text-slate-400">Full Stack Developer</p>
+                          <p class="text-xs text-slate-400">hasibur@example.com</p>
                         </div>
                       </div>
                     </td>
-                    <td>hasibur@example.com</td>
                     <td>+1 0823-245-5667</td>
                     <td>15 Apr 2022</td>
                     <td>
@@ -956,18 +970,24 @@
                           <div class="dropdown-toggle">
                             <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                           </div>
-                          <div class="dropdown-content min-w-[200px]">
+                          <div class="dropdown-content min-w-[120px]">
                             <ul class="dropdown-list">
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
+                                  <i class="h-5 text-slate-400" data-feather="eye"></i>
+                                  <span>View</span>
                                 </a>
                               </li>
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
                                   <i class="h-5 text-slate-400" data-feather="trash"></i>
                                   <span>Delete</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="minus-circle"></i>
+                                  <span>Suspended</span>
                                 </a>
                               </li>
                             </ul>
@@ -986,15 +1006,14 @@
                           class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
                         <div>
                           <h3 class="m-0 p-0 text-sm font-normal">Tanvir Alam</h3>
-                          <p class="text-xs text-slate-400">UI/UX Designer</p>
+                          <p class="text-xs text-slate-400">tanvir@example.com</p>
                         </div>
                       </div>
                     </td>
-                    <td>tanvir@example.com</td>
                     <td>+1 0823-786-5867</td>
                     <td>10 Apr 2022</td>
                     <td>
-                      <div class="badge badge-soft-warning">Resigned</div>
+                      <div class="badge badge-soft-warning">Suspended</div>
                     </td>
                     <td>
                       <div class="flex justify-end">
@@ -1002,18 +1021,24 @@
                           <div class="dropdown-toggle">
                             <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                           </div>
-                          <div class="dropdown-content min-w-[200px]">
+                          <div class="dropdown-content min-w-[120px]">
                             <ul class="dropdown-list">
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
+                                  <i class="h-5 text-slate-400" data-feather="eye"></i>
+                                  <span>View</span>
                                 </a>
                               </li>
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
                                   <i class="h-5 text-slate-400" data-feather="trash"></i>
                                   <span>Delete</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="minus-circle"></i>
+                                  <span>Suspended</span>
                                 </a>
                               </li>
                             </ul>
@@ -1032,11 +1057,10 @@
                           class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
                         <div>
                           <h3 class="m-0 p-0 text-sm font-normal">Tauhid Islam</h3>
-                          <p class="text-xs text-slate-400">Software Developer</p>
+                          <p class="text-xs text-slate-400">tauhid@example.com</p>
                         </div>
                       </div>
                     </td>
-                    <td>tauhid@example.com</td>
                     <td>+1 0823-432-3467</td>
                     <td>01 Mar 2022</td>
                     <td>
@@ -1048,18 +1072,24 @@
                           <div class="dropdown-toggle">
                             <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                           </div>
-                          <div class="dropdown-content min-w-[200px]">
+                          <div class="dropdown-content min-w-[120px]">
                             <ul class="dropdown-list">
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
+                                  <i class="h-5 text-slate-400" data-feather="eye"></i>
+                                  <span>View</span>
                                 </a>
                               </li>
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
                                   <i class="h-5 text-slate-400" data-feather="trash"></i>
                                   <span>Delete</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="minus-circle"></i>
+                                  <span>Suspended</span>
                                 </a>
                               </li>
                             </ul>
@@ -1078,15 +1108,14 @@
                           class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
                         <div>
                           <h3 class="m-0 p-0 text-sm font-normal">Motasim Fuad</h3>
-                          <p class="text-xs text-slate-400">Mobile App Developer</p>
+                          <p class="text-xs text-slate-400">fuad@example.com</p>
                         </div>
                       </div>
                     </td>
-                    <td>fuad@example.com</td>
                     <td>+1 4232-422-3567</td>
                     <td>10 Feb 2022</td>
                     <td>
-                      <div class="badge badge-soft-success">Active</div>
+                      <div class="badge badge-soft-secondary">Prospect</div>
                     </td>
                     <td>
                       <div class="flex justify-end">
@@ -1094,18 +1123,24 @@
                           <div class="dropdown-toggle">
                             <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                           </div>
-                          <div class="dropdown-content min-w-[200px]">
+                          <div class="dropdown-content min-w-[120px]">
                             <ul class="dropdown-list">
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
+                                  <i class="h-5 text-slate-400" data-feather="eye"></i>
+                                  <span>View</span>
                                 </a>
                               </li>
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
                                   <i class="h-5 text-slate-400" data-feather="trash"></i>
                                   <span>Delete</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="minus-circle"></i>
+                                  <span>Suspended</span>
                                 </a>
                               </li>
                             </ul>
@@ -1124,15 +1159,14 @@
                           class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
                         <div>
                           <h3 class="m-0 p-0 text-sm font-normal">Yeasin Ahmed</h3>
-                          <p class="text-xs text-slate-400">Backend Developer</p>
+                          <p class="text-xs text-slate-400">yeasin@example.com</p>
                         </div>
                       </div>
                     </td>
-                    <td>yeasin@example.com</td>
                     <td>+1 4332-411-3567</td>
                     <td>01 Feb 2022</td>
                     <td>
-                      <div class="badge badge-soft-warning">Resigned</div>
+                      <div class="badge badge-soft-warning">Suspended</div>
                     </td>
                     <td>
                       <div class="flex justify-end">
@@ -1140,18 +1174,24 @@
                           <div class="dropdown-toggle">
                             <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                           </div>
-                          <div class="dropdown-content min-w-[200px]">
+                          <div class="dropdown-content min-w-[120px]">
                             <ul class="dropdown-list">
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
+                                  <i class="h-5 text-slate-400" data-feather="eye"></i>
+                                  <span>View</span>
                                 </a>
                               </li>
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
                                   <i class="h-5 text-slate-400" data-feather="trash"></i>
                                   <span>Delete</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="minus-circle"></i>
+                                  <span>Suspended</span>
                                 </a>
                               </li>
                             </ul>
@@ -1170,11 +1210,10 @@
                           class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
                         <div>
                           <h3 class="m-0 p-0 text-sm font-normal">Nathan Cooper</h3>
-                          <p class="text-xs text-slate-400">Tech Advisor</p>
+                          <p class="text-xs text-slate-400">nathan@example.com</p>
                         </div>
                       </div>
                     </td>
-                    <td>nathan@example.com</td>
                     <td>+1 7332-890-3067</td>
                     <td>25 Jan 2022</td>
                     <td>
@@ -1186,18 +1225,24 @@
                           <div class="dropdown-toggle">
                             <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                           </div>
-                          <div class="dropdown-content min-w-[200px]">
+                          <div class="dropdown-content min-w-[120px]">
                             <ul class="dropdown-list">
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
+                                  <i class="h-5 text-slate-400" data-feather="eye"></i>
+                                  <span>View</span>
                                 </a>
                               </li>
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
                                   <i class="h-5 text-slate-400" data-feather="trash"></i>
                                   <span>Delete</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="minus-circle"></i>
+                                  <span>Suspended</span>
                                 </a>
                               </li>
                             </ul>
@@ -1216,11 +1261,10 @@
                           class="h-10 w-10 rounded-full border border-slate-300 dark:border-slate-400" alt="product" />
                         <div>
                           <h3 class="m-0 p-0 text-sm font-normal">James William</h3>
-                          <p class="text-xs text-slate-400">Backend Developer</p>
+                          <p class="text-xs text-slate-400">james@example.com</p>
                         </div>
                       </div>
                     </td>
-                    <td>james@example.com</td>
                     <td>+1 3453-123-3567</td>
                     <td>01 Jan 2022</td>
                     <td>
@@ -1232,18 +1276,24 @@
                           <div class="dropdown-toggle">
                             <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                           </div>
-                          <div class="dropdown-content min-w-[200px]">
+                          <div class="dropdown-content min-w-[120px]">
                             <ul class="dropdown-list">
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
+                                  <i class="h-5 text-slate-400" data-feather="eye"></i>
+                                  <span>View</span>
                                 </a>
                               </li>
                               <li class="dropdown-list-item">
                                 <a href="javascript:void(0)" class="dropdown-link">
                                   <i class="h-5 text-slate-400" data-feather="trash"></i>
                                   <span>Delete</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="minus-circle"></i>
+                                  <span>Suspended</span>
                                 </a>
                               </li>
                             </ul>
