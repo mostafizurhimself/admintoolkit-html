@@ -16,4 +16,17 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+    // Sticky Section Styles 
+    .section-sticky {
+      &.appear {
+        position: relative;
+      }
+      // For All browser Supports 
+      @supports (position: sticky) {
+        &.appear {
+          position: sticky;
+        }
+      }
+  
+    }
 }
