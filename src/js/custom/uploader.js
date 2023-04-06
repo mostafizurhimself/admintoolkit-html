@@ -17,8 +17,7 @@ const customDragAndDropSourceCode =`
     import Dropzone from "dropzone";
 
     const dropzoneCustom = new Dropzone('.dropzone-custom', {
-      url: '/',
-      method: 'get',
+      url: '/uploader.html',
       parallelUploads: 1,
       maxFilesize: 5,
       addRemoveLinks: true,
