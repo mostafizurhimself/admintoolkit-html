@@ -6,15 +6,14 @@ const uploader = {
     const dropzoneMultiple  = document.querySelectorAll('.dropzone-multiple');
     const dropzoneDisabled  = document.querySelectorAll('.dropzone-disabled');
     const dropzoneCustom    = document.querySelectorAll('.dropzone-custom');
-    
+
     const defaultOptions    = {
-      url: '/',
-      method: 'get',
+      url: '/uploader.html',
       parallelUploads: 1,
       maxFilesize: 5,
       addRemoveLinks: true,
     }
-
+    
     if(dropzoneBasic.length) {
       [...dropzoneBasic].forEach(dropzone => new Dropzone(dropzone, {
        ...defaultOptions,
