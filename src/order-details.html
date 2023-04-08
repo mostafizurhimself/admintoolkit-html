@@ -706,7 +706,7 @@
             <i class="m-0 h-4 w-4 p-0" data-feather="chevron-left"></i>
             <p class="text-xs">Orders</p>
           </a>
-          <div class="flex justify-between">
+          <div class="flex position-observer justify-between">
             <div class="flex flex-col gap-1">
               <div class="flex items-center gap-1">
                 <h2 class="text-xl font-semibold">Order#1001</h2>
@@ -725,27 +725,37 @@
                 Actions <i class="w-4" data-feather="chevron-down"></i>
               </button>
               <div class="dropdown-content w-[200px]">
-                <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                  <i class="h-5 text-slate-500" data-feather="printer"></i>
-                  Print Invoice
-                </a>
-                <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                  <i class="h-5 text-slate-500" data-feather="credit-card"></i>
-                  Add Payment
-                </a>
-                <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                  <i class="h-5 text-slate-500" data-feather="truck"></i>
-                  Add Shipment
-                </a>
-                <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                  <i class="h-5 text-slate-500" data-feather="corner-up-left"></i>
-                  Add Refound
-                </a>
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <a href="javascript:void(0)" class="dropdown-link gap-4">
+                      <i class="h-5 text-slate-500" data-feather="printer"></i>
+                      Print Invoice
+                    </a>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <a href="javascript:void(0)" class="dropdown-link gap-4">
+                      <i class="h-5 text-slate-500" data-feather="credit-card"></i>
+                      Add Payment
+                    </a>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <a href="javascript:void(0)" class="dropdown-link gap-4">
+                      <i class="h-5 text-slate-500" data-feather="corner-up-left"></i>
+                      Add Refound
+                    </a>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <a href="javascript:void(0)" class="dropdown-link gap-4">
+                      <i class="h-5 text-slate-500" data-feather="truck"></i>
+                      Add Shipment
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
           <!-- Order Details Header End -->
-          <div class="my-4 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <div class="my-4 grid grid-cols-1 place-content-start gap-6 lg:grid-cols-3">
             <div class="col-span-1 flex flex-col gap-4 lg:col-span-2">
               <div class="card my-2">
                 <div class="table-responsive">
@@ -1135,8 +1145,8 @@
               </div>
               <!-- Order Activity End  -->
             </div>
-            <div class="lg:col-span-1">
-              <div class="min-h-max rounded-primary bg-white shadow dark:bg-slate-800">
+            <div class="lg:col-span-1 h-full p-2">
+              <div class="min-h-max section-sticky rounded-primary bg-white shadow dark:bg-slate-800">
                 <!-- User  -->
                 <div class="flex items-center gap-2 border-b border-slate-200 px-6 py-4 dark:border-slate-700">
                   <img src="./images/avatar1.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
@@ -1145,7 +1155,7 @@
                     <p class="text-xs text-slate-400">Dhaka, Bnagladesh</p>
                   </div>
                 </div>
-                <!-- Contact Adress  -->
+                <!-- Contact Address  -->
                 <div class="flex flex-col gap-2 border-b border-slate-200 px-6 py-4 dark:border-slate-700">
                   <div class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
                     <i class="h-4 w-4" data-feather="mail"></i>
@@ -1156,7 +1166,7 @@
                     <p class="text-sm font-normal">+(386)-259-8589</p>
                   </div>
                 </div>
-                <!-- shipping Adress  -->
+                <!-- shipping Address  -->
                 <div class="flex flex-col gap-2 border-b border-slate-200 px-6 py-4 dark:border-slate-700">
                   <h6 class="text-sm font-semibold uppercase text-slate-700 dark:text-slate-300">
                     SHIPPING ADDRESS
@@ -1206,6 +1216,7 @@
     <!-- Wrapper Ends -->
   </div>
   <script src="./js/app.js" type="module"></script>
+  <script src="./js/custom/position-sticky.js" type="module"></script>
 </body>
 
 </html>

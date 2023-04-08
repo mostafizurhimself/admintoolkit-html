@@ -753,7 +753,7 @@
 
             <!-- Email List Start  -->
             <div id="email-list"
-              class="absolute z-20 lg:z-0 flex h-full  w-[250px] -translate-x-full transform  transition duration-300 ease-in-out lg:sticky top-0 bg-red-400 lg:translate-x-0">
+              class="absolute z-20 lg:z-0 flex h-full lg:relative  w-[250px] -translate-x-full transform  transition duration-300 ease-in-out lg:translate-x-0">
               <div
                 class="bg-white section-sticky shadow dark:bg-slate-800 lg:h-min w-full rounded-l-primary rounded-r-none p-4 lg:max-w-none lg:rounded-primary">
                 <button type="button" data-toggle="modal" data-target="#modal-lg"
@@ -1386,7 +1386,7 @@
         sectionsSticky.forEach(section => {
           section.classList.toggle('appear', !entry.isIntersecting);
           if (!entry.isIntersecting) {
-            // content.addEventListener('scroll', () => section.style.top = `${content.scrollTop - 60}px`);
+            content.addEventListener('scroll', () => section.style.top = `${content.scrollTop - 60}px`);
           }
         })
       })

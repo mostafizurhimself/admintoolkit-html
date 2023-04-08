@@ -986,28 +986,7 @@
     <!-- Wrapper Ends -->
   </div>
   <script src="./js/app.js" type="module"></script>
-  <script>
-    const sectionsSticky = document.querySelectorAll('.section-sticky');
-    const isIntersectingSections = document.querySelectorAll('.position-observer');
-    document.addEventListener('DOMContentLoaded', () => {
-      const options = {
-        root: null,
-        rootMargin: '-10px 0px',
-        threshlod: 0.8
-      };
-      let stickyObserver = new IntersectionObserver(beTouching, options);
-      isIntersectingSections.forEach(observe => {
-        stickyObserver.observe(observe)
-      });
-    })
-    function beTouching(entries, observer) {
-      entries.forEach(entry => {
-        sectionsSticky.forEach(section => {
-          section.classList.toggle('appear', !entry.isIntersecting);
-        })
-      })
-    }
-  </script>
+  <script src="./js/custom/position-sticky.js" type="module"></script>
 </body>
 
 </html>
