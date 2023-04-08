@@ -700,7 +700,7 @@
         <!-- Main Content Starts -->
         <main class="flex-grow p-6">
           <!-- Page Title Starts -->
-          <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+          <div class="mb-6 flex flex-wrap position-observer items-center justify-between gap-x-4 gap-y-1">
             <h5 class="px-2 md:px-0">Invoice Create</h5>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
@@ -910,8 +910,8 @@
               </p>
             </div>
             <!-- Right Side Div Start -->
-            <div class="col-span-1">
-              <div class="card flex flex-col gap-4 p-6 max-h-min">
+            <div class="col-span-1 h-full">
+              <div class="card flex flex-col section-sticky gap-4 p-6 max-h-min">
                 <!-- Payment Method  -->
                 <div class="w-full">
                   <select class="select">
@@ -986,6 +986,28 @@
     <!-- Wrapper Ends -->
   </div>
   <script src="./js/app.js" type="module"></script>
+  <script>
+    const sectionsSticky = document.querySelectorAll('.section-sticky');
+    const isIntersectingSections = document.querySelectorAll('.position-observer');
+    document.addEventListener('DOMContentLoaded', () => {
+      const options = {
+        root: null,
+        rootMargin: '-10px 0px',
+        threshlod: 0.8
+      };
+      let stickyObserver = new IntersectionObserver(beTouching, options);
+      isIntersectingSections.forEach(observe => {
+        stickyObserver.observe(observe)
+      });
+    })
+    function beTouching(entries, observer) {
+      entries.forEach(entry => {
+        sectionsSticky.forEach(section => {
+          section.classList.toggle('appear', !entry.isIntersecting);
+        })
+      })
+    }
+  </script>
 </body>
 
 </html>
