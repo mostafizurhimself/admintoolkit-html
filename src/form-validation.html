@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tooltip - Admin Toolkit</title>
+    <title>Validation - Admin Toolkit</title>
     <link rel="stylesheet" href="./scss/app.scss" />
   </head>
 
@@ -191,7 +191,7 @@
           <div class="sidebar-menu-header">Components</div>
           <!-- Common  -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu active">
+            <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="box"></i>
               </span>
@@ -270,7 +270,7 @@
                 <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
               </li>
               <li>
-                <a href="./tooltip.html" class="sidebar-submenu-item active">
+                <a href="./tooltip.html" class="sidebar-submenu-item">
                   Tooltip
                 </a>
               </li>
@@ -278,7 +278,7 @@
           </li>
           <!-- Forms  -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
+            <a href="javascript:void(0);" class="sidebar-menu active">
               <span class="sidebar-menu-icon">
                 <i data-feather="edit"></i>
               </span>
@@ -333,7 +333,10 @@
                 <a href="./layout.html" class="sidebar-submenu-item">Layout</a>
               </li>
               <li>
-                <a href="./form-validation.html" class="sidebar-submenu-item">
+                <a
+                  href="./form-validation.html"
+                  class="sidebar-submenu-item active"
+                >
                   Validation
                 </a>
               </li>
@@ -931,7 +934,7 @@
             <div
               class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1"
             >
-              <h5>Tooltip</h5>
+              <h5>Validation</h5>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
@@ -942,520 +945,284 @@
                 </li>
 
                 <li class="breadcrumb-item">
-                  <a href="#">Tooltip</a>
+                  <a href="#">Validation</a>
                 </li>
               </ol>
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Tooltip Starts -->
+            <!-- Form Validation Starts -->
             <div class="space-y-6">
-              <!-- Card: Basic Tooltip Starts -->
+              <!-- Card: Default Form Validation Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Basic Tooltip</h4>
+                  <h4 class="card-title">Default Form Validation</h4>
 
-                  <p class="card-subtitle">Example of basic tooltip.</p>
+                  <p class="card-subtitle">
+                    Example of browser's default form validation.
+                  </p>
 
                   <div class="code-viewer mt-4">
-                    <button
-                      type="button"
-                      class="btn btn-primary"
-                      data-tooltip="tippy"
-                      data-tippy-content="I am a tippy tooltip!"
+                    <form
+                      class="mx-auto max-w-lg rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
+                      action=""
                     >
-                      Basic Tooltip
-                    </button>
+                      <!-- Form Body -->
+                      <div class="flex flex-col gap-4">
+                        <!-- Form Row: Full name -->
+                        <div class="w-full">
+                          <label
+                            class="label label-required mb-1"
+                            for="form-basic-full-name"
+                          >
+                            Full name
+                          </label>
+                          <input
+                            class="input"
+                            id="form-basic-full-name"
+                            name="full-name"
+                            type="text"
+                            placeholder="Full name"
+                            required
+                          />
+                        </div>
+                        <!-- Form Row: Company -->
+                        <div class="w-full">
+                          <label
+                            class="label label-required mb-1"
+                            for="form-basic-company"
+                          >
+                            Company
+                          </label>
+                          <input
+                            class="input"
+                            id="form-basic-company"
+                            name="company"
+                            type="text"
+                            placeholder="Company"
+                            required
+                          />
+                        </div>
+                        <!-- Form Row: Email -->
+                        <div class="w-full">
+                          <label
+                            class="label label-required mb-1"
+                            for="form-basic-email"
+                          >
+                            Email
+                          </label>
+                          <input
+                            class="input"
+                            id="form-basic-email"
+                            name="email"
+                            type="email"
+                            placeholder="Email"
+                            required
+                          />
+                        </div>
+                        <!-- Form Row: Phone -->
+                        <div class="w-full">
+                          <label
+                            class="label label-required mb-1"
+                            for="form-basic-phone"
+                          >
+                            Phone
+                          </label>
+                          <input
+                            class="input"
+                            id="form-basic-phone"
+                            name="phone"
+                            type="text"
+                            placeholder="Phone"
+                            required
+                          />
+                        </div>
+                        <!-- Form Row: Message -->
+                        <div class="w-full">
+                          <label
+                            class="label label-required mb-1"
+                            for="form-basic-message"
+                          >
+                            Message
+                          </label>
+                          <textarea
+                            class="textarea"
+                            name="message"
+                            id="form-basic-message"
+                            placeholder="Message"
+                            required
+                          ></textarea>
+                        </div>
+                        <!-- Form Row: TOS -->
+                        <div class="w-full">
+                          <div class="flex items-center gap-1.5">
+                            <input
+                              class="checkbox"
+                              type="checkbox"
+                              name="tos"
+                              id="form-basic-tos"
+                              required
+                            />
+                            <label class="label" for="form-basic-tos">
+                              I agree with the
+                              <a
+                                class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline focus:text-primary-600 focus:outline-none"
+                                href="#"
+                                target="_blank"
+                              >
+                                term of services
+                              </a>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Form Footer -->
+                      <div class="mt-6 flex w-full items-center justify-end">
+                        <button class="btn btn-primary" type="submit">
+                          Submit
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
-              <!-- Card: Basic Tooltip Ends -->
+              <!-- Card: Default Form Validation Ends -->
 
-              <!-- Card: Tooltip Arrow Starts -->
+              <!-- Card: Custom Form Validation Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Tooltip Arrows</h4>
+                  <h4 class="card-title">Custom Form Validation</h4>
 
                   <p class="card-subtitle">
-                    Example of tooltip with or without arrows.
+                    Example of form validation with custom messages.
                   </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap gap-4">
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-arrow="true"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Arrow True
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-arrow="false"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Arrow False
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Tooltip Arrow Ends -->
-
-              <!-- Card: Tooltip Placement Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Tooltip Placements</h4>
-
-                  <p class="card-subtitle">
-                    Example of different placements of tooltip. Default is
-                    <code>data-placement="top"</code>
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="top"
-                      >
-                        Top
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="top-start"
-                      >
-                        Top Start
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="top-end"
-                      >
-                        Top End
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="right"
-                      >
-                        Right
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="right-start"
-                      >
-                        Right Start
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="right-end"
-                      >
-                        Right End
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="bottom"
-                      >
-                        Bottom
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="bottom-start"
-                      >
-                        Bottom Start
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="bottom-end"
-                      >
-                        Bottom End
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="left"
-                      >
-                        Left
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="left-start"
-                      >
-                        Left Start
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="left-end"
-                      >
-                        Left End
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="auto"
-                      >
-                        Auto
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="auto-start"
-                      >
-                        Auto Start
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-arrow="false"
-                        data-tippy-placement="auto-end"
-                      >
-                        Auto End
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Tooltip Placement Ends -->
-
-              <!-- Card: Tooltip Animation Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Tooltip Animation</h4>
-
-                  <p class="card-subtitle">
-                    Example of tooltip with different animations. Default is
-                    <code>data-tippy-animation="fade"</code>
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="fade"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Fade (Default)
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="shift-away"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Shift Away
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="shift-away-subtle"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Shift Away Subtle
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="shift-away-extreme"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Shift Away Extreme
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="shift-toward"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Shift Toward
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="shift-toward-subtle"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Shift Toward Subtle
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="shift-toward-extreme"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Shift Toward Extreme
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="scale"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Scale
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="scale-subtle"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Scale Subtle
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="scale-extreme"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Scale Extreme
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="perspective"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Perspective
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="perspective-subtle"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Perspective Subtle
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-lg btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-animation="perspective-extreme"
-                        data-tippy-content="I am a tippy tooltip!"
-                      >
-                        Perspective Extreme
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Tooltip Animation Ends -->
-
-              <!-- Card: HTML Content In Tooltip Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">HTML Content in Tooltip</h4>
-
-                  <p class="card-subtitle">Use HTML as Tooltip content.</p>
-
-                  <div class="code-viewer mt-4">
-                    <button
-                      type="button"
-                      class="btn btn-primary"
-                      data-tooltip="tippy"
-                      data-tippy-content="I am a <strong>tippy</strong> tooltip!"
-                      data-tippy-allowHTML="true"
-                    >
-                      HTML Content
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: HTML Content In Tooltip Ends -->
-
-              <!-- Card: Tooltip Theme Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Tooltip Themes</h4>
-
-                  <p class="card-subtitle">
-                    Example of different themes of tooltip. Default is
-                    <code>data-tippy-theme="translucent"</code>
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap gap-4">
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-theme="light"
-                      >
-                        Light
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-theme="light-border"
-                      >
-                        Light Border
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-theme="material"
-                      >
-                        Material
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy-theme="translucent"
-                      >
-                        Translucent
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Tooltip Theme Ends -->
-
-              <!-- Card: Tooltip Trigger Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Tooltip Trigger</h4>
-
-                  <p class="card-subtitle">
-                    Trigger tooltip on different events.
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap gap-4">
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy="mouseenter"
-                      >
-                        Trigger on mouseenter
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy="focus"
-                      >
-                        Trigger on focus
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-tooltip="tippy"
-                        data-tippy-content="I am a tippy tooltip!"
-                        data-tippy="click"
-                      >
-                        Trigger on click
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Tooltip Trigger Ends -->
-
-              <!-- Card: Custom Tooltip Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Custom Tooltip</h4>
-
-                  <p class="card-subtitle">Example of custom tooltip.</p>
 
                   <div
-                    id="custom-tooltip-code-viewer"
+                    id="custom-form-validation-code-viewer"
                     class="code-viewer mt-4"
                     data-render-source="false"
                   >
                     <div class="code-viewer-content">
-                      <button
-                        id="btn-custom-tooltip"
-                        type="button"
-                        class="btn btn-primary"
+                      <form
+                        id="form-custom-validation"
+                        class="mx-auto max-w-lg rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
+                        novalidate
                       >
-                        Custom Tooltip
-                      </button>
+                        <!-- Form Body -->
+                        <div class="flex flex-col gap-4">
+                          <!-- Form Row: Full name -->
+                          <div class="w-full">
+                            <label class="label label-required mb-1">
+                              Full name
+                            </label>
+                            <input
+                              class="input"
+                              name="full-name"
+                              type="text"
+                              placeholder="Full name"
+                              value="John Doe"
+                              required
+                            />
+                            <div class="success-message">Looks good</div>
+                          </div>
+                          <!-- Form Row: Company -->
+                          <div class="w-full">
+                            <label class="label label-required mb-1">
+                              Company
+                            </label>
+                            <input
+                              class="input"
+                              name="company"
+                              type="text"
+                              placeholder="Company"
+                              value="XYZ Compnay"
+                              required
+                            />
+                            <div class="success-message">Looks good</div>
+                          </div>
+                          <!-- Form Row: Email -->
+                          <div class="w-full">
+                            <label class="label label-required mb-1">
+                              Email
+                            </label>
+                            <input
+                              class="input"
+                              name="email"
+                              type="email"
+                              placeholder="Email"
+                              required
+                            />
+                            <div class="error-message">
+                              The email field is required
+                            </div>
+                          </div>
+                          <!-- Form Row: Phone -->
+                          <div class="w-full">
+                            <label class="label label-required mb-1">
+                              Phone
+                            </label>
+                            <input
+                              class="input"
+                              name="phone"
+                              type="text"
+                              placeholder="Phone"
+                              required
+                            />
+                            <div class="error-message">
+                              The phone field is required
+                            </div>
+                          </div>
+                          <!-- Form Row: Message -->
+                          <div class="w-full">
+                            <label class="label label-required mb-1">
+                              Message
+                            </label>
+                            <textarea
+                              class="textarea"
+                              name="message"
+                              placeholder="Message"
+                              required
+                            ></textarea>
+                            <div class="error-message">
+                              The message field is required
+                            </div>
+                          </div>
+                          <!-- Form Row: TOS -->
+                          <div class="w-full">
+                            <div class="flex items-center gap-1.5">
+                              <input
+                                class="checkbox"
+                                type="checkbox"
+                                name="tos"
+                                required
+                              />
+                              <label class="label">
+                                I agree with the
+                                <a
+                                  class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline focus:text-primary-600 focus:outline-none"
+                                  href="#"
+                                  target="_blank"
+                                >
+                                  term of services
+                                </a>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Form Footer -->
+                        <div class="mt-6 flex w-full items-center justify-end">
+                          <button class="btn btn-primary" type="submit">
+                            Submit
+                          </button>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Custom Tooltip Ends -->
+              <!-- Card: Custom Form Validation Ends -->
             </div>
-            <!-- Tooltip Ends -->
+            <!-- Form Validation Ends -->
           </main>
           <!-- Main Content Ends -->
 
@@ -1488,32 +1255,8 @@
       </div>
       <!-- Wrapper Ends -->
     </div>
+
     <script src="./js/app.js" type="module"></script>
-    <script type="module">
-      import tippy from "tippy.js";
-
-      const customTooltipSourceCode = `
-        <button id="btn-custom-tooltip" type="button" class="btn btn-primary">
-          Custom Tooltip
-        </button>
-
-        \<script\>
-          tippy('#btn-custom-tooltip', {
-            content: 'I am a tippy tooltip',
-            placement: 'auto'
-          })
-        \<\/script\>
-      `;
-      const customTooltipCodeViewer = createCodeViewer(
-        "#custom-tooltip-code-viewer",
-        customTooltipSourceCode
-      );
-      customTooltipCodeViewer.render();
-
-      tippy("#btn-custom-tooltip", {
-        content: "I am a tippy tooltip",
-        placement: "auto",
-      });
-    </script>
+    <script src="./js/custom/form-validation.js" type="module"></script>
   </body>
 </html>
