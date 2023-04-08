@@ -27,9 +27,9 @@
 </head>
 
 <body>
-  <div id="app" class="min-h-screen w-full">
+  <div id="app" class="min-h-screen w-full ">
     <!-- Sidebar Starts -->
-    <aside class="sidebar">
+    <aside class="sidebar !z-50">
       <!-- Sidebar Header Starts -->
       <div class="sidebar-header">
         <span class="sidebar-logo-icon">
@@ -732,7 +732,7 @@
       <!-- Header Ends -->
 
       <!-- Page Content Starts -->
-      <div class="content">
+      <div class="content ">
         <!-- Main Content Starts -->
         <main class="flex-grow-1 flex flex-col p-6">
           <!-- Page Title Starts -->
@@ -750,12 +750,10 @@
           <!-- Page Title Ends -->
           <div
             class="relative lg:static m-0 flex w-full items-center gap-x-0 overflow-hidden rounded-primary bg-transparent lg:items-start lg:gap-x-8">
-            <div id="overlay"
-              class="invisible absolute inset-0 z-10 h-full w-full rounded-primary bg-black bg-opacity-50 opacity-100 transition-opacity duration-500 ease-in-out lg:hidden">
-            </div>
+
             <!-- Email List Start  -->
             <div id="email-list"
-              class="absolute z-20 flex h-full  w-[250px] -translate-x-full transform  transition duration-300 ease-in-out lg:static  lg:translate-x-0">
+              class="absolute z-20 lg:z-0 flex h-full  w-[250px] -translate-x-full transform  transition duration-300 ease-in-out lg:static  lg:translate-x-0">
               <div
                 class="bg-white section-sticky shadow dark:bg-slate-800 lg:h-min w-full rounded-l-primary rounded-r-none p-4 lg:max-w-none lg:rounded-primary">
                 <button type="button" data-toggle="modal" data-target="#modal-lg"
@@ -871,6 +869,9 @@
                 class="ml-1 mt-[12px] flex h-10 w-10 items-center justify-center rounded-full text-slate-200 hover:text-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-100 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:ring-slate-300 lg:hidden">
                 <i width="1.5rem" height="1.5rem" data-feather="x"></i>
               </button>
+            </div>
+            <div id="overlay"
+              class="invisible absolute inset-0 z-10 h-full w-full rounded-primary bg-black bg-opacity-50 opacity-100 transition-opacity duration-500 ease-in-out lg:hidden">
             </div>
             <!-- Email List End  -->
             <!-- Email Box Start -->

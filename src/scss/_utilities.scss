@@ -21,8 +21,7 @@
       &.appear {
         position: relative;
       }
-      // For All browser Supports 
-      @supports (position: sticky) {
+      @supports (position: sticky) { /* For All browser Supports */
         &.appear {
           position: sticky;
         }
