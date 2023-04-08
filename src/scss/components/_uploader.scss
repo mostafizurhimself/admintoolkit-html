@@ -1,6 +1,6 @@
 @layer components {
   .dropzone {
-    @apply min-h-[10rem] flex items-center justify-start flex-wrap p-4 border-2 border-dashed border-slate-300 dark:border-slate-600;
+    @apply min-h-[10rem] flex items-center justify-center lg:justify-start flex-wrap p-4 border-2 border-dashed border-slate-300 dark:border-slate-600;
 
     &:not(&-disabled) {
       @apply hover:border-primary-500 dark:hover:border-primary-500;
@@ -47,7 +47,7 @@
       }
 
       .dz-error-message {
-        @apply bg-danger-500 after:border-b-danger-500;
+        @apply bg-danger-500 -top-[60%] after:top-auto after:-bottom-[12px] after:left-0 after:right-0 after:m-auto after:border-b-transparent after:border-t-[6px] after:border-t-danger-500;
       }
 
       .dz-remove {
