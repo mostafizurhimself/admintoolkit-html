@@ -807,9 +807,9 @@
       <!-- Page Content Starts -->
       <div class="content">
         <!-- Main Content Starts -->
-        <main class="flex-grow-1 flex flex-col p-6">
+        <main class="flex-grow p-6">
           <!-- Page Title Starts -->
-          <div class="mb-6 position-observer flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+          <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
             <h5 class="px-2 md:px-0">Email</h5>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
@@ -822,13 +822,13 @@
           </div>
           <!-- Page Title Ends -->
           <div
-            class="relative m-0 flex w-full items-center gap-x-0 overflow-hidden rounded-primary bg-transparent lg:items-start lg:gap-x-8">
+            class="relative m-0 flex w-full items-center gap-x-0 rounded-primary bg-transparent lg:items-start lg:gap-x-8">
 
             <!-- Email List Start  -->
             <div id="email-list"
-              class="absolute z-20 lg:z-0 flex h-full lg:relative  w-[250px] -translate-x-full transform  transition duration-300 ease-in-out lg:translate-x-0">
+              class="absolute z-20 lg:z-0 flex h-full lg:relative  w-[250px] -translate-x-[350px] transform  transition duration-300 ease-in-out lg:translate-x-0">
               <div
-                class="bg-white section-sticky shadow dark:bg-slate-800 lg:h-min w-full rounded-l-primary rounded-r-none p-4 lg:max-w-none lg:rounded-primary">
+                class="bg-white shadow sticky top-20 dark:bg-slate-800 lg:h-min w-full rounded-l-primary rounded-r-none p-4 lg:max-w-none lg:rounded-primary">
                 <button type="button" data-toggle="modal" data-target="#modal-lg"
                   class="btn btn-primary my-4 w-full py-2">
                   Compose
@@ -937,6 +937,7 @@
                   </li>
                 </ul>
               </div>
+
               <!-- Email List Hide  -->
               <button id="hide-email-list" type="button"
                 class="ml-1 mt-[12px] flex h-10 w-10 items-center justify-center rounded-full text-slate-200 hover:text-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-100 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:ring-slate-300 lg:hidden">
@@ -1439,32 +1440,7 @@
   </div>
   <script src="./js/app.js" type="module"></script>
   <script src="./js/custom/email.js" type="module"></script>
-  <script>
-    const content = document.querySelector('.content');
-    const sectionsSticky = document.querySelectorAll('.section-sticky');
-    const isIntersectingSections = document.querySelectorAll('.position-observer');
-    document.addEventListener('DOMContentLoaded', () => {
-      const options = {
-        root: null,
-        rootMargin: '-10px 0px',
-        threshlod: 0.8
-      };
-      let stickyObserver = new IntersectionObserver(beTouching, options);
-      isIntersectingSections.forEach(observe => {
-        stickyObserver.observe(observe)
-      });
-    })
-    function beTouching(entries, observer) {
-      entries.forEach(entry => {
-        sectionsSticky.forEach(section => {
-          section.classList.toggle('appear', !entry.isIntersecting);
-          if (!entry.isIntersecting) {
-            content.addEventListener('scroll', () => section.style.top = `${content.scrollTop - 60}px`);
-          }
-        })
-      })
-    }
-  </script>
+
 </body>
 
 </html>
