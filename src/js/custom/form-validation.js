@@ -1,4 +1,4 @@
-const customFormValidationSourceCode =`
+const customFormValidationSourceCode = `
   <form id="form-custom-validation" class="max-w-lg p-4 mx-auto bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" novalidate>
     <!-- Form Body -->
     <div class="flex flex-col gap-4">
@@ -65,18 +65,21 @@ const customFormValidationSourceCode =`
   </script>
 `;
 
-const formCustomValidation = document.querySelector('#form-custom-validation');
-const customFormValidationCodeViewer = createCodeViewer('#custom-form-validation-code-viewer', customFormValidationSourceCode);    
+const formCustomValidation = document.querySelector("#form-custom-validation");
+const customFormValidationCodeViewer = createCodeViewer(
+  "#custom-form-validation-code-viewer",
+  customFormValidationSourceCode
+);
 
-if(formCustomValidation) {
-  formCustomValidation.addEventListener('submit',  function (e) {
+if (formCustomValidation) {
+  formCustomValidation.addEventListener("submit", function (e) {
     if (!this.checkValidity()) {
       e.preventDefault();
       e.stopPropagation();
     }
 
-    this.classList.add('form-validated')
-  })
+    this.classList.add("form-validated");
+  });
 }
 
 // Render CodeViewer
