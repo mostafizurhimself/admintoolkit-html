@@ -1,1045 +1,1423 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons - Admin Toolkit</title>
+    <link rel="stylesheet" href="./scss/app.scss" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buttons - Admin Toolkit</title>
-  <link rel="stylesheet" href="./scss/app.scss" />
-</head>
+  <body>
+    <div id="app" class="min-h-screen w-full">
+      <!-- Sidebar Starts -->
+      <aside class="sidebar">
+        <!-- Sidebar Header Starts -->
+        <div class="sidebar-header">
+          <span class="sidebar-logo-icon">
+            <svg
+              fill="currentColor"
+              width="45"
+              height="45"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+            >
+              <path
+                d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z"
+              ></path>
+              <path
+                d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z"
+              ></path>
+            </svg>
+          </span>
 
-<body>
-  <div id="app" class="min-h-screen w-full">
-    <!-- Sidebar Starts -->
-    <aside class="sidebar">
-      <!-- Sidebar Header Starts -->
-      <div class="sidebar-header">
-        <span class="sidebar-logo-icon">
-          <svg fill="currentColor" width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-            <path
-              d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z">
-            </path>
-            <path
-              d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z">
-            </path>
-          </svg>
-        </span>
-
-        <div class="sidebar-logo-text">
-          <h1 class="flex text-xl">
-            <span class="font-bold text-slate-800 dark:text-slate-200">Admin</span>
-            <span class="font-semibold text-primary-500">Toolkit</span>
-          </h1>
-
-          <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
-        </div>
-      </div>
-      <!-- Sidebar Header Ends -->
-
-      <!-- Sidebar Menu Starts -->
-      <ul class="sidebar-content">
-        <!-- Dashboard -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="home"></i>
-            </span>
-            <span class="sidebar-menu-text">Dashboard</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="/" class="sidebar-submenu-item">Ecommerce</a>
-            </li>
-            <li>
-              <a href="./analytics.html" class="sidebar-submenu-item">Analytics</a>
-            </li>
-          </ul>
-        </li>
-
-        <div class="sidebar-menu-header">Applications</div>
-
-        <!-- Email -->
-        <li>
-          <a href="./email.html" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="mail"></i>
-            </span>
-            <span class="sidebar-menu-text">Email</span>
-          </a>
-        </li>
-        <!-- Chat -->
-        <li>
-          <a href="./chat.html" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="message-square"></i>
-            </span>
-            <span class="sidebar-menu-text">Chat</span>
-          </a>
-        </li>
-        <!-- Calendar -->
-        <li>
-          <a href="./calendar.html" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="calendar"></i>
-            </span>
-            <span class="sidebar-menu-text">Calendar</span>
-          </a>
-        </li>
-        <!-- Invoice -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="file-text"></i>
-            </span>
-            <span class="sidebar-menu-text">Invoice</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./invoice-create.html" class="sidebar-submenu-item">Create</a>
-            </li>
-
-            <li>
-              <a href="./invoice-details.html" class="sidebar-submenu-item">Details</a>
-            </li>
-          </ul>
-        </li>
-        <!-- ecommnerce -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="shopping-bag"></i>
-            </span>
-            <span class="sidebar-menu-text">Ecommerce</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./product-list.html" class="sidebar-submenu-item">Product List</a>
-            </li>
-
-            <li>
-              <a href="./product-edit.html" class="sidebar-submenu-item">Product Edit</a>
-            </li>
-            <li>
-              <a href="./order-list.html" class="sidebar-submenu-item">Order List</a>
-            </li>
-            <li>
-              <a href="./order-details.html" class="sidebar-submenu-item">Order Details</a>
-            </li>
-            <li>
-              <a href="./customer-list.html" class="sidebar-submenu-item">Customer List</a>
-            </li>
-          </ul>
-        </li>
-        <!-- Users -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="users"></i>
-            </span>
-            <span class="sidebar-menu-text">Users</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./list.html" class="sidebar-submenu-item">List</a>
-            </li>
-            <li>
-              <a href="./profile.html" class="sidebar-submenu-item">Profile</a>
-            </li>
-          </ul>
-        </li>
-        <!--  Commponents  -->
-        <div class="sidebar-menu-header">Components</div>
-        <!-- Common  -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu active">
-            <span class="sidebar-menu-icon">
-              <i data-feather="box"></i>
-            </span>
-            <span class="sidebar-menu-text">Common</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./accordion.html" class="sidebar-submenu-item">Accordion</a>
-            </li>
-            <li>
-              <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
-            </li>
-            <li>
-              <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
-            </li>
-            <li>
-              <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
-            </li>
-            <li>
-              <a href="./button.html" class="sidebar-submenu-item active">Button</a>
-            </li>
-            <li>
-              <a href="./card.html" class="sidebar-submenu-item">Card</a>
-            </li>
-            <li>
-              <a href="./carousel.html" class="sidebar-submenu-item">Carousel</a>
-            </li>
-            <li>
-              <a href="./collapse.html" class="sidebar-submenu-item">Collapse</a>
-            </li>
-            <li>
-              <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
-            </li>
-            <li>
-              <a href="./dropdown.html" class="sidebar-submenu-item">Dropdown</a>
-            </li>
-            <li>
-              <a href="./list-group.html" class="sidebar-submenu-item">List Group</a>
-            </li>
-            <li>
-              <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
-            </li>
-            <li>
-              <a href="./pagination.html" class="sidebar-submenu-item">Pagination</a>
-            </li>
-            <li>
-              <a href="./progress-bar.html" class="sidebar-submenu-item">Progress</a>
-            </li>
-
-            <li>
-              <a href="./spinner.html" class="sidebar-submenu-item">Spinner</a>
-            </li>
-            <li>
-              <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
-            </li>
-            <li>
-              <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
-            </li>
-            <li>
-              <a href="./tooltip.html" class="sidebar-submenu-item">Tooltip</a>
-            </li>
-          </ul>
-        </li>
-        <!-- Forms  -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="edit"></i>
-            </span>
-            <span class="sidebar-menu-text">Forms</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./input.html" class="sidebar-submenu-item">Input</a>
-            </li>
-            <li>
-              <a href="./input-group.html" class="sidebar-submenu-item">Input Group</a>
-            </li>
-            <li>
-              <a href="./textarea.html" class="sidebar-submenu-item">Textarea</a>
-            </li>
-            <li>
-              <a href="./checkbox.html" class="sidebar-submenu-item">Checkbox</a>
-            </li>
-            <li>
-              <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
-            </li>
-            <li>
-              <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
-            </li>
-            <li>
-              <a href="./select.html" class="sidebar-submenu-item">Select</a>
-            </li>
-
-            <li>
-              <a href="./datepicker.html" class="sidebar-submenu-item">Datepicker</a>
-            </li>
-            <li>
-              <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
-            </li>
-            <li>
-              <a href="./uploader.html" class="sidebar-submenu-item">Uploader</a>
-            </li>
-            <li>
-              <a href="./layout.html" class="sidebar-submenu-item">Layout</a>
-            </li>
-            <li>
-              <a href="./validation.html" class="sidebar-submenu-item">Validation</a>
-            </li>
-
-          </ul>
-        </li>
-        <!-- Tables  -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="list"></i>
-            </span>
-            <span class="sidebar-menu-text">Tables</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./basic-table.html" class="sidebar-submenu-item">Basic Table</a>
-            </li>
-            <li>
-              <a href="./data-table.html" class="sidebar-submenu-item">Data Table</a>
-            </li>
-          </ul>
-        </li>
-        <!-- Charts  -->
-        <li>
-          <a href="./chart.html" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="pie-chart"></i>
-            </span>
-            <span class="sidebar-menu-text">Charts</span>
-          </a>
-        </li>
-        <!-- Icons-->
-        <li>
-          <a href="./icons.html" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="italic"></i>
-            </span>
-            <span class="sidebar-menu-text">Icons</span>
-          </a>
-        </li>
-        <!-- Typography-->
-        <li>
-          <a href="./typography.html" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="type"></i>
-            </span>
-            <span class="sidebar-menu-text">Typography</span>
-          </a>
-        </li>
-        <!--  Pages  -->
-        <div class="sidebar-menu-header">Pages</div>
-        <!-- Authentication  -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="lock"></i>
-            </span>
-            <span class="sidebar-menu-text">Authentication</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./login.html" class="sidebar-submenu-item">Login</a>
-            </li>
-            <li>
-              <a href="./register.html" class="sidebar-submenu-item">Register</a>
-            </li>
-            <li>
-              <a href="./recover-password.html" class="sidebar-submenu-item">Forgot Password</a>
-            </li>
-            <li>
-              <a href="./reset-password.html" class="sidebar-submenu-item">Reset Password</a>
-            </li>
-          </ul>
-        </li>
-        <!-- Miscellaneous  -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="grid"></i>
-            </span>
-            <span class="sidebar-menu-text">Miscellaneous</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./start-page.html" class="sidebar-submenu-item">Start Page</a>
-            </li>
-            <li>
-              <a href="./comming-soon.html" class="sidebar-submenu-item">Coming Soon</a>
-            </li>
-            <li>
-              <a href="./maintenance.html" class="sidebar-submenu-item">Maintenance</a>
-            </li>
-            <li>
-              <a href="./404-error.html" class="sidebar-submenu-item">Error 404</a>
-            </li>
-            <li>
-              <a href="./500-error.html" class="sidebar-submenu-item">Error 500</a>
-            </li>
-            <li>
-              <a href="./not-authorized.html" class="sidebar-submenu-item">Not Authorized</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <!-- Sidebar Menu Ends -->
-    </aside>
-    <!-- Sidebar Ends -->
-
-    <!-- Wrapper Starts -->
-    <div class="wrapper">
-      <!-- Header Starts -->
-      <header class="header">
-        <div class="container-fluid flex items-center justify-between">
-          <!-- Sidebar Toggle & Search Starts -->
-          <div class="flex items-center space-x-6">
-            <button class="sidebar-toggle">
-              <span class="flex space-x-4">
-                <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
-                  </path>
-                </svg>
+          <div class="sidebar-logo-text">
+            <h1 class="flex text-xl">
+              <span class="font-bold text-slate-800 dark:text-slate-200">
+                Admin
               </span>
-            </button>
+              <span class="font-semibold text-primary-500">Toolkit</span>
+            </h1>
 
-            <form action=""
-              class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex">
-              <div class="flex h-full items-center px-3">
-                <i class="text-slate-400 group-focus-within:text-primary-500" width="1em" height="1em"
-                  data-feather="search"></i>
-              </div>
-              <input
-                class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                type="text" placeholder="Search" />
-            </form>
+            <p class="whitespace-nowrap text-xs text-slate-400">
+              Simple &amp; Customizable
+            </p>
           </div>
-          <!-- Sidebar Toggle & Search Ends -->
+        </div>
+        <!-- Sidebar Header Ends -->
 
-          <!-- Header Options Starts -->
-          <div class="flex items-center space-x-6">
-            <!-- Language Dropdown Starts -->
-            <div class="dropdown" data-strategy="absolute">
-              <div class="dropdown-toggle">
-                <button type="button" class="inline-flex items-center gap-2 text-sm">
-                  <span class="fi fi-gb"></span>
-                  <span class="hidden md:inline-block">English</span>
-                  <span class="inline-block md:hidden">EN</span>
-                </button>
-              </div>
+        <!-- Sidebar Menu Starts -->
+        <ul class="sidebar-content">
+          <!-- Dashboard -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="home"></i>
+              </span>
+              <span class="sidebar-menu-text">Dashboard</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="/" class="sidebar-submenu-item">Ecommerce</a>
+              </li>
+              <li>
+                <a href="./analytics.html" class="sidebar-submenu-item">
+                  Analytics
+                </a>
+              </li>
+            </ul>
+          </li>
 
-              <div class="dropdown-content w-40 mt-3">
-                <ul class="dropdown-list">
-                  <li class="dropdown-list-item">
-                    <button class="dropdown-btn" type="button">
-                      <span class="fi fi-gb"></span>
-                      <span>English</span>
-                    </button>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <button class="dropdown-btn" type="button">
-                      <span class="fi fi-de"></span>
-                      <span>German</span>
-                    </button>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <button class="dropdown-btn" type="button">
-                      <span class="fi fi-gf"></span>
-                      <span>French</span>
-                    </button>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <button class="dropdown-btn" type="button">
-                      <span class="fi fi-sa"></span>
-                      <span>Arabic</span>
-                    </button>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <button class="dropdown-btn" type="button">
-                      <span class="fi fi-cn"></span>
-                      <span>Chinese</span>
-                    </button>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <button class="dropdown-btn" type="button">
-                      <span class="fi fi-bd"></span>
-                      <span>Bangla</span>
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- Language Dropdown Ends -->
+          <div class="sidebar-menu-header">Applications</div>
 
-            <!-- Mobile Search Starts -->
-            <div class="sm:hidden">
-              <button type="button"
-                class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300">
-                <i width="22" height="22" data-feather="search"></i>
+          <!-- Email -->
+          <li>
+            <a href="./email.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="mail"></i>
+              </span>
+              <span class="sidebar-menu-text">Email</span>
+            </a>
+          </li>
+          <!-- Chat -->
+          <li>
+            <a href="./chat.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="message-square"></i>
+              </span>
+              <span class="sidebar-menu-text">Chat</span>
+            </a>
+          </li>
+          <!-- Calendar -->
+          <li>
+            <a href="./calendar.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="calendar"></i>
+              </span>
+              <span class="sidebar-menu-text">Calendar</span>
+            </a>
+          </li>
+          <!-- Invoice -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="file-text"></i>
+              </span>
+              <span class="sidebar-menu-text">Invoice</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./invoice-create.html" class="sidebar-submenu-item">
+                  Create
+                </a>
+              </li>
+
+              <li>
+                <a href="./invoice-details.html" class="sidebar-submenu-item">
+                  Details
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- ecommnerce -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="shopping-bag"></i>
+              </span>
+              <span class="sidebar-menu-text">Ecommerce</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./product-list.html" class="sidebar-submenu-item">
+                  Product List
+                </a>
+              </li>
+
+              <li>
+                <a href="./product-edit.html" class="sidebar-submenu-item">
+                  Product Edit
+                </a>
+              </li>
+              <li>
+                <a href="./order-list.html" class="sidebar-submenu-item">
+                  Order List
+                </a>
+              </li>
+              <li>
+                <a href="./order-details.html" class="sidebar-submenu-item">
+                  Order Details
+                </a>
+              </li>
+              <li>
+                <a href="./customer-list.html" class="sidebar-submenu-item">
+                  Customer List
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Users -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="users"></i>
+              </span>
+              <span class="sidebar-menu-text">Users</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./list.html" class="sidebar-submenu-item">List</a>
+              </li>
+              <li>
+                <a href="./profile.html" class="sidebar-submenu-item">
+                  Profile
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--  Commponents  -->
+          <div class="sidebar-menu-header">Components</div>
+          <!-- Common  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu active">
+              <span class="sidebar-menu-icon">
+                <i data-feather="box"></i>
+              </span>
+              <span class="sidebar-menu-text">Common</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./accordion.html" class="sidebar-submenu-item">
+                  Accordion
+                </a>
+              </li>
+              <li>
+                <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
+              </li>
+              <li>
+                <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
+              </li>
+              <li>
+                <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
+              </li>
+              <li>
+                <a href="./button.html" class="sidebar-submenu-item active">
+                  Button
+                </a>
+              </li>
+              <li>
+                <a href="./card.html" class="sidebar-submenu-item">Card</a>
+              </li>
+              <li>
+                <a href="./carousel.html" class="sidebar-submenu-item">
+                  Carousel
+                </a>
+              </li>
+              <li>
+                <a href="./collapse.html" class="sidebar-submenu-item">
+                  Collapse
+                </a>
+              </li>
+              <li>
+                <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
+              </li>
+              <li>
+                <a href="./dropdown.html" class="sidebar-submenu-item">
+                  Dropdown
+                </a>
+              </li>
+              <li>
+                <a href="./list-group.html" class="sidebar-submenu-item">
+                  List Group
+                </a>
+              </li>
+              <li>
+                <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
+              </li>
+              <li>
+                <a href="./pagination.html" class="sidebar-submenu-item">
+                  Pagination
+                </a>
+              </li>
+              <li>
+                <a href="./progress-bar.html" class="sidebar-submenu-item">
+                  Progress
+                </a>
+              </li>
+
+              <li>
+                <a href="./spinner.html" class="sidebar-submenu-item">
+                  Spinner
+                </a>
+              </li>
+              <li>
+                <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
+              </li>
+              <li>
+                <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
+              </li>
+              <li>
+                <a href="./tooltip.html" class="sidebar-submenu-item">
+                  Tooltip
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Forms  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="edit"></i>
+              </span>
+              <span class="sidebar-menu-text">Forms</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./input.html" class="sidebar-submenu-item">Input</a>
+              </li>
+              <li>
+                <a href="./input-group.html" class="sidebar-submenu-item">
+                  Input Group
+                </a>
+              </li>
+              <li>
+                <a href="./textarea.html" class="sidebar-submenu-item">
+                  Textarea
+                </a>
+              </li>
+              <li>
+                <a href="./checkbox.html" class="sidebar-submenu-item">
+                  Checkbox
+                </a>
+              </li>
+              <li>
+                <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
+              </li>
+              <li>
+                <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
+              </li>
+              <li>
+                <a href="./select.html" class="sidebar-submenu-item">Select</a>
+              </li>
+
+              <li>
+                <a href="./datepicker.html" class="sidebar-submenu-item">
+                  Datepicker
+                </a>
+              </li>
+              <li>
+                <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
+              </li>
+              <li>
+                <a href="./uploader.html" class="sidebar-submenu-item">
+                  Uploader
+                </a>
+              </li>
+              <li>
+                <a href="./layout.html" class="sidebar-submenu-item">Layout</a>
+              </li>
+              <li>
+                <a href="./form-validation.html" class="sidebar-submenu-item">
+                  Validation
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Tables  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="list"></i>
+              </span>
+              <span class="sidebar-menu-text">Tables</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./basic-table.html" class="sidebar-submenu-item">
+                  Basic Table
+                </a>
+              </li>
+              <li>
+                <a href="./data-table.html" class="sidebar-submenu-item">
+                  Data Table
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Charts  -->
+          <li>
+            <a href="./chart.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="pie-chart"></i>
+              </span>
+              <span class="sidebar-menu-text">Charts</span>
+            </a>
+          </li>
+          <!-- Icons-->
+          <li>
+            <a href="./icons.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="italic"></i>
+              </span>
+              <span class="sidebar-menu-text">Icons</span>
+            </a>
+          </li>
+          <!-- Typography-->
+          <li>
+            <a href="./typography.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="type"></i>
+              </span>
+              <span class="sidebar-menu-text">Typography</span>
+            </a>
+          </li>
+          <!--  Pages  -->
+          <div class="sidebar-menu-header">Pages</div>
+          <!-- Authentication  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="lock"></i>
+              </span>
+              <span class="sidebar-menu-text">Authentication</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./login.html" class="sidebar-submenu-item">Login</a>
+              </li>
+              <li>
+                <a href="./register.html" class="sidebar-submenu-item">
+                  Register
+                </a>
+              </li>
+              <li>
+                <a href="./recover-password.html" class="sidebar-submenu-item">
+                  Forgot Password
+                </a>
+              </li>
+              <li>
+                <a href="./reset-password.html" class="sidebar-submenu-item">
+                  Reset Password
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Miscellaneous  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="grid"></i>
+              </span>
+              <span class="sidebar-menu-text">Miscellaneous</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./start-page.html" class="sidebar-submenu-item">
+                  Start Page
+                </a>
+              </li>
+              <li>
+                <a href="./comming-soon.html" class="sidebar-submenu-item">
+                  Coming Soon
+                </a>
+              </li>
+              <li>
+                <a href="./maintenance.html" class="sidebar-submenu-item">
+                  Maintenance
+                </a>
+              </li>
+              <li>
+                <a href="./404-error.html" class="sidebar-submenu-item">
+                  Error 404
+                </a>
+              </li>
+              <li>
+                <a href="./500-error.html" class="sidebar-submenu-item">
+                  Error 500
+                </a>
+              </li>
+              <li>
+                <a href="./not-authorized.html" class="sidebar-submenu-item">
+                  Not Authorized
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Sidebar Menu Ends -->
+      </aside>
+      <!-- Sidebar Ends -->
+
+      <!-- Wrapper Starts -->
+      <div class="wrapper">
+        <!-- Header Starts -->
+        <header class="header">
+          <div class="container-fluid flex items-center justify-between">
+            <!-- Sidebar Toggle & Search Starts -->
+            <div class="flex items-center space-x-6">
+              <button class="sidebar-toggle">
+                <span class="flex space-x-4">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    height="22"
+                    width="22"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    ></path>
+                  </svg>
+                </span>
               </button>
+
+              <form
+                action=""
+                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
+              >
+                <div class="flex h-full items-center px-3">
+                  <i
+                    class="text-slate-400 group-focus-within:text-primary-500"
+                    width="1em"
+                    height="1em"
+                    data-feather="search"
+                  ></i>
+                </div>
+                <input
+                  class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                  type="text"
+                  placeholder="Search"
+                />
+              </form>
             </div>
-            <!-- Mobile Search Ends -->
+            <!-- Sidebar Toggle & Search Ends -->
 
-            <!-- Dark Mood Toggle Starts -->
-            <div class="dropdown" data-strategy="absolute" id="dropdown-theme-switcher">
-              <button class="dropdown-toggle focus:text-primary-500" type="button">
-                <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
-                <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
-              </button>
-
-              <div class="dropdown-content w-36 mt-3">
-                <ul class="dropdown-list">
-                  <li class="dropdown-list-item">
-                    <button type="buttton" class="dropdown-btn" data-theme-mode="light">
-                      <i width="16" height="16" data-feather="sun"></i>
-                      <span>Light</span>
-                    </button>
-                  </li>
-
-                  <li class="dropdown-list-item">
-                    <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
-                      <i width="16" height="16" data-feather="moon"></i>
-                      <span>Dark</span>
-                    </button>
-                  </li>
-
-                  <li class="dropdown-list-item">
-                    <button type="buttton" class="dropdown-btn" data-theme-mode="system">
-                      <i width="16" height="16" data-feather="monitor"></i>
-                      <span>System</span>
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- Dark Mood Toggle Ends -->
-
-            <!-- Notification Dropdown Starts -->
-            <div class="dropdown -mt-0.5" data-strategy="absolute">
-              <div class="dropdown-toggle">
-                <button
-                  class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
-                  <i width="24" height="24" data-feather="bell"></i>
-                  <span
-                    class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
-                    5
-                  </span>
-                </button>
-              </div>
-
-              <div class="dropdown-content w-[17.5rem] mt-3 divide-y dark:divide-slate-700 sm:w-80">
-                <div class="flex items-center justify-between py-4 px-4">
-                  <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
-                  <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
-                    Clear All
+            <!-- Header Options Starts -->
+            <div class="flex items-center space-x-6">
+              <!-- Language Dropdown Starts -->
+              <div class="dropdown" data-strategy="absolute">
+                <div class="dropdown-toggle">
+                  <button
+                    type="button"
+                    class="inline-flex items-center gap-2 text-sm"
+                  >
+                    <span class="fi fi-gb"></span>
+                    <span class="hidden md:inline-block">English</span>
+                    <span class="inline-block md:hidden">EN</span>
                   </button>
                 </div>
 
-                <div class="h-80 w-full" data-simplebar>
-                  <ul>
-                    <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
-                      <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500">
-                        <i data-feather="alert-circle" width="20" height="20"></i>
-                      </div>
-
-                      <div>
-                        <h6 class="text-sm font-normal">New order received</h6>
-                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
-                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                          <i data-feather="clock" width="1em" height="1em"></i>
-                          <span>2 min ago</span>
-                        </p>
-                      </div>
+                <div class="dropdown-content mt-3 w-40">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-gb"></span>
+                        <span>English</span>
+                      </button>
                     </li>
-
-                    <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
-                      <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500">
-                        <i data-feather="alert-triangle" width="20" height="20"></i>
-                      </div>
-
-                      <div>
-                        <h6 class="text-sm font-normal">High CPU usage</h6>
-                        <p class="text-xs text-slate-400">CPU usage is at 92%</p>
-                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                          <i data-feather="clock" width="1em" height="1em"></i>
-                          <span>5 min ago</span>
-                        </p>
-                      </div>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-de"></span>
+                        <span>German</span>
+                      </button>
                     </li>
-
-                    <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
-                      <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
-                        <i data-feather="check-circle" width="20" height="20"></i>
-                      </div>
-
-                      <div>
-                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
-                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
-                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                          <i data-feather="clock" width="1em" height="1em"></i>
-                          <span>10 min ago</span>
-                        </p>
-                      </div>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-gf"></span>
+                        <span>French</span>
+                      </button>
                     </li>
-
-                    <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
-                      <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500">
-                        <i data-feather="x-circle" width="20" height="20"></i>
-                      </div>
-
-                      <div>
-                        <h6 class="text-sm font-normal">Something went wrong</h6>
-                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
-                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                          <i data-feather="clock" width="1em" height="1em"></i>
-                          <span>1 hour ago</span>
-                        </p>
-                      </div>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-sa"></span>
+                        <span>Arabic</span>
+                      </button>
                     </li>
-
-                    <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
-                      <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
-                        <i data-feather="check-circle" width="20" height="20"></i>
-                      </div>
-
-                      <div>
-                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
-                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
-                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                          <i data-feather="clock" width="1em" height="1em"></i>
-                          <span>10 min ago</span>
-                        </p>
-                      </div>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-cn"></span>
+                        <span>Chinese</span>
+                      </button>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-bd"></span>
+                        <span>Bangla</span>
+                      </button>
                     </li>
                   </ul>
                 </div>
-
-                <div class="py-2 px-4">
-                  <button class="btn btn-primary-plain btn-sm w-full" type="button">
-                    <span>View More</span>
-                    <i data-feather="arrow-right" width="1rem" height="1rem"></i>
-                  </button>
-                </div>
               </div>
-            </div>
-            <!-- Notification Dropdown Ends -->
+              <!-- Language Dropdown Ends -->
 
-            <!-- Profile Dropdown Starts -->
-            <div class="dropdown" data-strategy="absolute">
-              <div class="dropdown-toggle">
-                <button class="group relative flex items-center gap-x-1.5" type="button">
-                  <div class="avatar avatar-circle">
-                    <img class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
-                      src="./images/avatar1.png" alt="Avatar 1">
-                  </div>
-
-                  <div class="hidden md:flex md:flex-col">
-                    <span
-                      class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
-                      John Doe
-                    </span>
-                    <span class="inline-block text-left text-xs text-slate-400">Admin</span>
-                  </div>
+              <!-- Mobile Search Starts -->
+              <div class="sm:hidden">
+                <button
+                  type="button"
+                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
+                >
+                  <i width="22" height="22" data-feather="search"></i>
                 </button>
               </div>
+              <!-- Mobile Search Ends -->
 
-              <div class="dropdown-content w-[11.25rem] mt-1">
-                <ul class="dropdown-list">
-                  <li class="dropdown-list-item">
-                    <a href="javascript:void(0)" class="dropdown-link">
-                      <i width="18" height="18" data-feather="user"></i>
-                      <span>Profile</span>
-                    </a>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <a href="javascript:void(0)" class="dropdown-link">
-                      <i width="18" height="18" data-feather="settings"></i>
-                      <span>Settings</span>
-                    </a>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <a href="javascript:void(0)" class="dropdown-link">
-                      <i width="18" height="18" data-feather="log-out"></i>
-                      <span>Sign out</span>
-                    </a>
-                  </li>
-                </ul>
+              <!-- Dark Mood Toggle Starts -->
+              <div
+                class="dropdown"
+                data-strategy="absolute"
+                id="dropdown-theme-switcher"
+              >
+                <button
+                  class="dropdown-toggle focus:text-primary-500"
+                  type="button"
+                >
+                  <i
+                    class="hidden dark:block"
+                    width="24"
+                    height="24"
+                    data-feather="moon"
+                  ></i>
+                  <i
+                    class="block dark:hidden"
+                    width="24"
+                    height="24"
+                    data-feather="sun"
+                  ></i>
+                </button>
+
+                <div class="dropdown-content mt-3 w-36">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <button
+                        type="buttton"
+                        class="dropdown-btn"
+                        data-theme-mode="light"
+                      >
+                        <i width="16" height="16" data-feather="sun"></i>
+                        <span>Light</span>
+                      </button>
+                    </li>
+
+                    <li class="dropdown-list-item">
+                      <button
+                        type="buttton"
+                        class="dropdown-btn"
+                        data-theme-mode="dark"
+                      >
+                        <i width="16" height="16" data-feather="moon"></i>
+                        <span>Dark</span>
+                      </button>
+                    </li>
+
+                    <li class="dropdown-list-item">
+                      <button
+                        type="buttton"
+                        class="dropdown-btn"
+                        data-theme-mode="system"
+                      >
+                        <i width="16" height="16" data-feather="monitor"></i>
+                        <span>System</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
               </div>
+              <!-- Dark Mood Toggle Ends -->
+
+              <!-- Notification Dropdown Starts -->
+              <div class="dropdown -mt-0.5" data-strategy="absolute">
+                <div class="dropdown-toggle">
+                  <button
+                    class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                  >
+                    <i width="24" height="24" data-feather="bell"></i>
+                    <span
+                      class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200"
+                    >
+                      5
+                    </span>
+                  </button>
+                </div>
+
+                <div
+                  class="dropdown-content mt-3 w-[17.5rem] divide-y dark:divide-slate-700 sm:w-80"
+                >
+                  <div class="flex items-center justify-between px-4 py-4">
+                    <h6 class="text-slate-800 dark:text-slate-300">
+                      Notifications
+                    </h6>
+                    <button
+                      class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300"
+                    >
+                      Clear All
+                    </button>
+                  </div>
+
+                  <div class="h-80 w-full" data-simplebar>
+                    <ul>
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500"
+                        >
+                          <i
+                            data-feather="alert-circle"
+                            width="20"
+                            height="20"
+                          ></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">
+                            New order received
+                          </h6>
+                          <p class="text-xs text-slate-400">
+                            Order #1234 has been placed
+                          </p>
+                          <p
+                            class="mt-1 flex items-center gap-1 text-xs text-slate-400"
+                          >
+                            <i
+                              data-feather="clock"
+                              width="1em"
+                              height="1em"
+                            ></i>
+                            <span>2 min ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500"
+                        >
+                          <i
+                            data-feather="alert-triangle"
+                            width="20"
+                            height="20"
+                          ></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">High CPU usage</h6>
+                          <p class="text-xs text-slate-400">
+                            CPU usage is at 92%
+                          </p>
+                          <p
+                            class="mt-1 flex items-center gap-1 text-xs text-slate-400"
+                          >
+                            <i
+                              data-feather="clock"
+                              width="1em"
+                              height="1em"
+                            ></i>
+                            <span>5 min ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
+                        >
+                          <i
+                            data-feather="check-circle"
+                            width="20"
+                            height="20"
+                          ></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">
+                            Your order has been shipped
+                          </h6>
+                          <p class="text-xs text-slate-400">
+                            Order #1234 has been shipped
+                          </p>
+                          <p
+                            class="mt-1 flex items-center gap-1 text-xs text-slate-400"
+                          >
+                            <i
+                              data-feather="clock"
+                              width="1em"
+                              height="1em"
+                            ></i>
+                            <span>10 min ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500"
+                        >
+                          <i data-feather="x-circle" width="20" height="20"></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">
+                            Something went wrong
+                          </h6>
+                          <p class="text-xs text-slate-400">
+                            Order #1234 has been placed
+                          </p>
+                          <p
+                            class="mt-1 flex items-center gap-1 text-xs text-slate-400"
+                          >
+                            <i
+                              data-feather="clock"
+                              width="1em"
+                              height="1em"
+                            ></i>
+                            <span>1 hour ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
+                        >
+                          <i
+                            data-feather="check-circle"
+                            width="20"
+                            height="20"
+                          ></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">
+                            Your order has been shipped
+                          </h6>
+                          <p class="text-xs text-slate-400">
+                            Order #1234 has been shipped
+                          </p>
+                          <p
+                            class="mt-1 flex items-center gap-1 text-xs text-slate-400"
+                          >
+                            <i
+                              data-feather="clock"
+                              width="1em"
+                              height="1em"
+                            ></i>
+                            <span>10 min ago</span>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="px-4 py-2">
+                    <button
+                      class="btn btn-primary-plain btn-sm w-full"
+                      type="button"
+                    >
+                      <span>View More</span>
+                      <i
+                        data-feather="arrow-right"
+                        width="1rem"
+                        height="1rem"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Notification Dropdown Ends -->
+
+              <!-- Profile Dropdown Starts -->
+              <div class="dropdown" data-strategy="absolute">
+                <div class="dropdown-toggle">
+                  <button
+                    class="group relative flex items-center gap-x-1.5"
+                    type="button"
+                  >
+                    <div class="avatar avatar-circle">
+                      <img
+                        class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
+                        src="./images/avatar1.png"
+                        alt="Avatar 1"
+                      />
+                    </div>
+
+                    <div class="hidden md:flex md:flex-col">
+                      <span
+                        class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300"
+                      >
+                        John Doe
+                      </span>
+                      <span
+                        class="inline-block text-left text-xs text-slate-400"
+                      >
+                        Admin
+                      </span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="dropdown-content mt-1 w-[11.25rem]">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-link">
+                        <i width="18" height="18" data-feather="user"></i>
+                        <span>Profile</span>
+                      </a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-link">
+                        <i width="18" height="18" data-feather="settings"></i>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-link">
+                        <i width="18" height="18" data-feather="log-out"></i>
+                        <span>Sign out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Profile Dropdown Ends -->
             </div>
-            <!-- Profile Dropdown Ends -->
+            <!-- Header Options Ends -->
           </div>
-          <!-- Header Options Ends -->
+        </header>
+        <!-- Header Ends -->
+
+        <!-- Page Content Starts -->
+        <div class="content">
+          <!-- Main Content Starts -->
+          <main class="flex-grow p-6">
+            <!-- Page Title Starts -->
+            <div
+              class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1"
+            >
+              <h5>Buttons</h5>
+              <ol class="breadcrumb ml-auto">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Components</a></li>
+                <li class="breadcrumb-item"><a href="#">Buttons</a></li>
+              </ol>
+            </div>
+            <!-- Page Title Ends -->
+
+            <!-- Button Starts -->
+            <div class="space-y-6">
+              <!-- Card: Basic Button Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Basic Button</h4>
+                  <p class="card-subtitle text-sm text-slate-400">
+                    The
+                    <code>.btn</code>
+                    classes are designed to be used with the
+                    <code>&lt;/button&gt;</code>
+                    element. However, you can also use these classes on
+                    <code>&lt;/a&gt;</code>
+                    or
+                    <code>&lt;input&gt;</code>
+                    elements.
+                  </p>
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <a href="#" class="btn btn-primary" role="button">Link</a>
+                      <button class="btn btn-primary" type="submit">
+                        Button
+                      </button>
+                      <input
+                        class="btn btn-primary"
+                        type="button"
+                        value="Input"
+                      />
+                      <input
+                        class="btn btn-primary"
+                        type="submit"
+                        value="Submit"
+                      />
+                      <input
+                        class="btn btn-primary"
+                        type="reset"
+                        value="Reset"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Basic Button Ends -->
+
+              <!-- Card: Button Color Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Color Buttons</h4>
+                  <p class="card-subtitle">
+                    Use color modifier classes to change the button style.
+                    Example:
+                    <code>.btn-primary</code>
+                    ,
+                    <code>.btn-secondary</code>
+                    ,
+                    <code>.btn-success</code>
+                    ,
+                    <code>.btn-danger</code>
+                    ,
+                    <code>.btn-warning</code>
+                    ,
+                    <code>.btn-info</code>
+                    and
+                    <code>.btn-dark</code>
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-primary">Primary</button>
+                      <button class="btn btn-secondary">Secondary</button>
+                      <button class="btn btn-success">Success</button>
+                      <button class="btn btn-danger">Danger</button>
+                      <button class="btn btn-warning">Warning</button>
+                      <button class="btn btn-info">Info</button>
+                      <button class="btn btn-dark">Dark</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Color Ends -->
+
+              <!-- Card: Button Size Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Button Sizes</h4>
+
+                  <p class="card-subtitle">
+                    Use size modifier classes to change the button size.
+                    Example:
+                    <code>.btn-xs</code>
+                    ,
+                    <code>.btn-sm</code>
+                    ,
+                    <code>.btn-md</code>
+                    ,
+                    <code>.btn-lg</code>
+                    ,
+                    <code>.btn-xl</code>
+                    . Default is
+                    <code>.btn-md</code>
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-primary btn-xs">
+                        Extra Small
+                      </button>
+                      <button class="btn btn-primary btn-sm">Small</button>
+                      <button class="btn btn-primary btn-md">Medium</button>
+                      <button class="btn btn-primary btn-lg">Large</button>
+                      <button class="btn btn-primary btn-xl">
+                        Extra Large
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Size Ends -->
+
+              <!-- Card: Button Outline Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Outline Buttons</h4>
+
+                  <p class="card-subtitle">
+                    Use default classes with the
+                    <code>.btn-outline-*</code>
+                    ones to create an outline button.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-outline-primary">Primary</button>
+                      <button class="btn btn-outline-secondary">
+                        Secondary
+                      </button>
+                      <button class="btn btn-outline-success">Success</button>
+                      <button class="btn btn-outline-danger">Danger</button>
+                      <button class="btn btn-outline-warning">Warning</button>
+                      <button class="btn btn-outline-info">Info</button>
+                      <button class="btn btn-outline-dark">Dark</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Outline Ends -->
+
+              <!-- Card: Button Soft Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Soft Buttons</h4>
+
+                  <p class="card-subtitle">
+                    Use default classes with the
+                    <code>.btn-soft-*</code>
+                    ones to create a soft button.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-soft-primary">Primary</button>
+                      <button class="btn btn-soft-secondary">Secondary</button>
+                      <button class="btn btn-soft-success">Success</button>
+                      <button class="btn btn-soft-danger">Danger</button>
+                      <button class="btn btn-soft-warning">Warning</button>
+                      <button class="btn btn-soft-info">Info</button>
+                      <button class="btn btn-soft-dark">Dark</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Soft Ends -->
+
+              <!-- Card: Button Plain Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Plain Buttons</h4>
+
+                  <p class="card-subtitle">
+                    Use default classes with the
+                    <code>.btn-plain-*</code>
+                    ones to create a plain button.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-plain-primary">Primary</button>
+                      <button class="btn btn-plain-secondary">Secondary</button>
+                      <button class="btn btn-plain-success">Success</button>
+                      <button class="btn btn-plain-danger">Danger</button>
+                      <button class="btn btn-plain-warning">Warning</button>
+                      <button class="btn btn-plain-info">Info</button>
+                      <button class="btn btn-plain-dark">Dark</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Plain Ends -->
+
+              <!-- Card: Button Rounded Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Rounded Buttons</h4>
+
+                  <p class="card-subtitle">
+                    Use
+                    <code>.rounded-full</code>
+                    class to create a rounded button.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-primary rounded-full">
+                        Primary
+                      </button>
+                      <button class="btn btn-secondary rounded-full">
+                        Secondary
+                      </button>
+                      <button class="btn btn-success rounded-full">
+                        Success
+                      </button>
+                      <button class="btn btn-danger rounded-full">
+                        Danger
+                      </button>
+                      <button class="btn btn-warning rounded-full">
+                        Warning
+                      </button>
+                      <button class="btn btn-info rounded-full">Info</button>
+                      <button class="btn btn-dark rounded-full">Dark</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Rounded Ends -->
+
+              <!-- Card: Button Icon Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Icon Buttons</h4>
+
+                  <p class="card-subtitle">
+                    By adding
+                    <code>icon</code>
+                    to the button, you can create icon buttons
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-primary">
+                        <i data-feather="home" height="1rem" width="1rem"></i>
+                        <span>Home</span>
+                      </button>
+                      <button class="btn btn-warning">
+                        <i
+                          data-feather="user-plus"
+                          height="1rem"
+                          width="1rem"
+                        ></i>
+                        <span>Users</span>
+                      </button>
+                      <button class="btn btn-danger">
+                        <i data-feather="trash" height="1rem" width="1rem"></i>
+                        <span>Delete</span>
+                      </button>
+                      <button class="btn btn-info">
+                        <i data-feather="edit" height="1rem" width="1rem"></i>
+                        <span>Edit</span>
+                      </button>
+                      <button class="btn btn-success">
+                        <i
+                          data-feather="check-circle"
+                          height="1rem"
+                          width="1rem"
+                        ></i>
+                        <span>Done</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Icon Ends -->
+
+              <!-- Card: Button Loading Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Loading Buttons</h4>
+
+                  <p class="card-subtitle">
+                    By adding a loading icon with
+                    <code>disabled</code>
+                    attribute, you can create loading button.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-primary" disabled>
+                        <i
+                          class="animate-spin"
+                          data-feather="loader"
+                          height="1rem"
+                          width="1rem"
+                        ></i>
+                        <span>Loading</span>
+                      </button>
+                      <button class="btn btn-success" disabled>
+                        <i
+                          class="animate-spin"
+                          data-feather="loader"
+                          height="1rem"
+                          width="1rem"
+                        ></i>
+                        <span>Loading</span>
+                      </button>
+                      <button class="btn btn-info" disabled>
+                        <i
+                          class="animate-spin"
+                          data-feather="loader"
+                          height="1rem"
+                          width="1rem"
+                        ></i>
+                        <span>Loading</span>
+                      </button>
+                      <button class="btn btn-danger" disabled>
+                        <i
+                          class="animate-spin"
+                          data-feather="loader"
+                          height="1rem"
+                          width="1rem"
+                        ></i>
+                        <span>Loading</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Loading Ends -->
+
+              <!-- Card: Button Disabled Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Disabled Buttons</h4>
+
+                  <p class="card-subtitle">
+                    To disable a button, use
+                    <code>disable="true"</code>
+                    attribute on it.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <button class="btn btn-primary" disabled>Primary</button>
+                      <button class="btn btn-outline-success" disabled>
+                        Success
+                      </button>
+                      <button class="btn btn-soft-danger" disabled>
+                        Danger
+                      </button>
+                      <button class="btn btn-plain-warning" disabled>
+                        Warning
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Disabled Ends -->
+
+              <!-- Card: Button Block Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Block Buttons</h4>
+
+                  <p class="card-subtitle">
+                    Use
+                    <code>.w-full</code>
+                    class to create a block button.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="space-y-4">
+                      <button class="btn btn-primary w-full">
+                        Block Button
+                      </button>
+                      <button class="btn btn-secondary w-full">
+                        Block Button
+                      </button>
+                      <button class="btn btn-success w-full">
+                        Block Button
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Block Ends -->
+
+              <!-- Card: Button Group Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Group Buttons</h4>
+
+                  <p class="card-subtitle">
+                    To create button groups, wrap all the buttons with a
+                    <code>.btn-group</code>
+                    class.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                      <div class="btn-group">
+                        <button class="btn btn-primary">HTML</button>
+                        <button class="btn btn-primary">CSS</button>
+                        <button class="btn btn-primary">Javascript</button>
+                        <button class="btn btn-primary">PHP</button>
+                        <button class="btn btn-primary">Python</button>
+                      </div>
+                      <div class="btn-group">
+                        <button class="btn btn-outline-primary gap-2">
+                          <i
+                            data-feather="thumbs-up"
+                            height="1rem"
+                            width="1rem"
+                          ></i>
+                          <span>120k</span>
+                        </button>
+                        <button class="btn btn-outline-primary gap-2">
+                          <i
+                            data-feather="heart"
+                            height="1rem"
+                            width="1rem"
+                          ></i>
+                          <span>200k</span>
+                        </button>
+                      </div>
+                      <div class="btn-group rounded">
+                        <button class="btn btn-soft-primary">Years</button>
+                        <button class="btn btn-soft-primary">Months</button>
+                        <button class="btn btn-soft-primary">Days</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Button Group Ends -->
+            </div>
+            <!-- Button Ends -->
+          </main>
+          <!-- Main Content Ends -->
+
+          <!-- Footer Starts -->
+          <footer class="footer">
+            <p class="text-sm">
+              Copyright © 2023
+              <a
+                class="text-primary-500 hover:underline"
+                href="https://bdlancers.com"
+              >
+                Bdlancers
+              </a>
+              , All right Reserved
+            </p>
+
+            <p class="flex items-center gap-1 text-sm">
+              Hand-crafted &amp; Made with
+              <i
+                class="text-danger-500"
+                data-feather="heart"
+                height="1em"
+                width="1em"
+              ></i>
+            </p>
+          </footer>
+          <!-- Footer Ends -->
         </div>
-      </header>
-      <!-- Header Ends -->
-
-      <!-- Page Content Starts -->
-      <div class="content">
-        <!-- Main Content Starts -->
-        <main class="flex-grow p-6">
-          <!-- Page Title Starts -->
-          <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-            <h5>Buttons</h5>
-            <ol class="breadcrumb ml-auto">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Components</a></li>
-              <li class="breadcrumb-item"><a href="#">Buttons</a></li>
-            </ol>
-          </div>
-          <!-- Page Title Ends -->
-
-          <!-- Button Starts -->
-          <div class="space-y-6">
-            <!-- Card: Basic Button Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Basic Button</h4>
-                <p class="card-subtitle text-sm text-slate-400">
-                  The <code>.btn</code> classes are designed to be used with the<code>&lt;/button&gt;</code> element.
-                  However, you can also use these classes on <code>&lt;/a&gt;</code> or
-                  <code>&lt;input&gt;</code> elements.
-                </p>
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <a href="#" class="btn btn-primary" role="button">Link</a>
-                    <button class="btn btn-primary" type="submit">Button</button>
-                    <input class="btn btn-primary" type="button" value="Input" />
-                    <input class="btn btn-primary" type="submit" value="Submit" />
-                    <input class="btn btn-primary" type="reset" value="Reset" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Basic Button Ends -->
-
-            <!-- Card: Button Color Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Color Buttons</h4>
-                <p class="card-subtitle">
-                  Use color modifier classes to change the button style. Example: <code>.btn-primary</code>,
-                  <code>.btn-secondary</code>, <code>.btn-success</code>, <code>.btn-danger</code>,
-                  <code>.btn-warning</code>, <code>.btn-info</code> and <code>.btn-dark</code>
-                </p>
-
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary">Primary</button>
-                    <button class="btn btn-secondary">Secondary</button>
-                    <button class="btn btn-success">Success</button>
-                    <button class="btn btn-danger">Danger</button>
-                    <button class="btn btn-warning">Warning</button>
-                    <button class="btn btn-info">Info</button>
-                    <button class="btn btn-dark">Dark</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Button Color Ends -->
-
-            <!-- Card: Button Size Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Button Sizes</h4>
-
-                <p class="card-subtitle">
-                  Use size modifier classes to change the button size. Example: <code>.btn-xs</code>,
-                  <code>.btn-sm</code>, <code>.btn-md</code>, <code>.btn-lg</code>, <code>.btn-xl</code>. Default is
-                  <code>.btn-md</code>
-                </p>
-
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary btn-xs">Extra Small</button>
-                    <button class="btn btn-primary btn-sm">Small</button>
-                    <button class="btn btn-primary btn-md">Medium</button>
-                    <button class="btn btn-primary btn-lg">Large</button>
-                    <button class="btn btn-primary btn-xl">Extra Large</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Button Size Ends -->
-
-            <!-- Card: Button Outline Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Outline Buttons</h4>
-
-                <p class="card-subtitle">
-                  Use default classes with the <code>.btn-outline-*</code> ones to create an outline button.
-                </p>
-
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-outline-primary">Primary</button>
-                    <button class="btn btn-outline-secondary">Secondary</button>
-                    <button class="btn btn-outline-success">Success</button>
-                    <button class="btn btn-outline-danger">Danger</button>
-                    <button class="btn btn-outline-warning">Warning</button>
-                    <button class="btn btn-outline-info">Info</button>
-                    <button class="btn btn-outline-dark">Dark</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Button Outline Ends -->
-
-            <!-- Card: Button Soft Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Soft Buttons</h4>
-
-                <p class="card-subtitle">
-                  Use default classes with the <code>.btn-soft-*</code> ones to create a soft button.
-                </p>
-
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-soft-primary">Primary</button>
-                    <button class="btn btn-soft-secondary">Secondary</button>
-                    <button class="btn btn-soft-success">Success</button>
-                    <button class="btn btn-soft-danger">Danger</button>
-                    <button class="btn btn-soft-warning">Warning</button>
-                    <button class="btn btn-soft-info">Info</button>
-                    <button class="btn btn-soft-dark">Dark</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Button Soft Ends -->
-
-            <!-- Card: Button Plain Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Plain Buttons</h4>
-
-                <p class="card-subtitle">
-                  Use default classes with the <code>.btn-plain-*</code> ones to create a plain button.
-                </p>
-
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-plain-primary">Primary</button>
-                    <button class="btn btn-plain-secondary">Secondary</button>
-                    <button class="btn btn-plain-success">Success</button>
-                    <button class="btn btn-plain-danger">Danger</button>
-                    <button class="btn btn-plain-warning">Warning</button>
-                    <button class="btn btn-plain-info">Info</button>
-                    <button class="btn btn-plain-dark">Dark</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Button Plain Ends -->
-
-            <!-- Card: Button Rounded Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Rounded Buttons</h4>
-
-                <p class="card-subtitle">Use <code>.rounded-full</code> class to create a rounded button.</p>
-
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary rounded-full">Primary</button>
-                    <button class="btn btn-secondary rounded-full">Secondary</button>
-                    <button class="btn btn-success rounded-full">Success</button>
-                    <button class="btn btn-danger rounded-full">Danger</button>
-                    <button class="btn btn-warning rounded-full">Warning</button>
-                    <button class="btn btn-info rounded-full">Info</button>
-                    <button class="btn btn-dark rounded-full">Dark</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Button Rounded Ends -->
-
-            <!-- Card: Button Icon Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Icon Buttons</h4>
-
-                <p class="card-subtitle">By adding <code>icon</code> to the button, you can create icon buttons</p>
-
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary">
-                      <i data-feather="home" height="1rem" width="1rem"></i>
-                      <span>Home</span>
-                    </button>
-                    <button class="btn btn-warning">
-                      <i data-feather="user-plus" height="1rem" width="1rem"></i>
-                      <span>Users</span>
-                    </button>
-                    <button class="btn btn-danger">
-                      <i data-feather="trash" height="1rem" width="1rem"></i>
-                      <span>Delete</span>
-                    </button>
-                    <button class="btn btn-info">
-                      <i data-feather="edit" height="1rem" width="1rem"></i>
-                      <span>Edit</span>
-                    </button>
-                    <button class="btn btn-success">
-                      <i data-feather="check-circle" height="1rem" width="1rem"></i>
-                      <span>Done</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Button Icon Ends -->
-
-            <!-- Card: Button Loading Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Loading Buttons</h4>
-
-                <p class="card-subtitle">
-                  By adding a loading icon with <code>disabled</code> attribute, you can create loading button.
-                </p>
-
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary" disabled>
-                      <i class="animate-spin" data-feather="loader" height="1rem" width="1rem"></i>
-                      <span>Loading</span>
-                    </button>
-                    <button class="btn btn-success" disabled>
-                      <i class="animate-spin" data-feather="loader" height="1rem" width="1rem"></i>
-                      <span>Loading</span>
-                    </button>
-                    <button class="btn btn-info" disabled>
-                      <i class="animate-spin" data-feather="loader" height="1rem" width="1rem"></i>
-                      <span>Loading</span>
-                    </button>
-                    <button class="btn btn-danger" disabled>
-                      <i class="animate-spin" data-feather="loader" height="1rem" width="1rem"></i>
-                      <span>Loading</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Button Loading Ends -->
-
-            <!-- Card: Button Disabled Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Disabled Buttons</h4>
-
-                <p class="card-subtitle">To disable a button, use <code>disable="true"</code> attribute on it.</p>
-
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-primary" disabled>Primary</button>
-                    <button class="btn btn-outline-success" disabled>Success</button>
-                    <button class="btn btn-soft-danger" disabled>Danger</button>
-                    <button class="btn btn-plain-warning" disabled>Warning</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Button Disabled Ends -->
-
-            <!-- Card: Button Block Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Block Buttons</h4>
-
-                <p class="card-subtitle">Use <code>.w-full</code> class to create a block button.</p>
-
-                <div class="code-viewer mt-4">
-                  <div class="space-y-4">
-                    <button class="btn btn-primary w-full">Block Button</button>
-                    <button class="btn btn-secondary w-full">Block Button</button>
-                    <button class="btn btn-success w-full">Block Button</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Button Block Ends -->
-
-            <!-- Card: Button Group Starts -->
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Group Buttons</h4>
-
-                <p class="card-subtitle">
-                  To create button groups, wrap all the buttons with a <code>.btn-group</code> class.
-                </p>
-
-                <div class="code-viewer mt-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                    <div class="btn-group">
-                      <button class="btn btn-primary">HTML</button>
-                      <button class="btn btn-primary">CSS</button>
-                      <button class="btn btn-primary">Javascript</button>
-                      <button class="btn btn-primary">PHP</button>
-                      <button class="btn btn-primary">Python</button>
-                    </div>
-                    <div class="btn-group">
-                      <button class="btn btn-outline-primary gap-2">
-                        <i data-feather="thumbs-up" height="1rem" width="1rem"></i>
-                        <span>120k</span>
-                      </button>
-                      <button class="btn btn-outline-primary gap-2">
-                        <i data-feather="heart" height="1rem" width="1rem"></i>
-                        <span>200k</span>
-                      </button>
-                    </div>
-                    <div class="btn-group rounded">
-                      <button class="btn btn-soft-primary">Years</button>
-                      <button class="btn btn-soft-primary">Months</button>
-                      <button class="btn btn-soft-primary">Days</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card: Button Group Ends -->
-          </div>
-          <!-- Button Ends -->
-        </main>
-        <!-- Main Content Ends -->
-
-        <!-- Footer Starts -->
-        <footer class="footer">
-          <p class="text-sm">
-            Copyright © 2023 <a class="text-primary-500 hover:underline" href="https://bdlancers.com">Bdlancers</a>,
-            All right Reserved
-          </p>
-
-          <p class="flex items-center gap-1 text-sm">
-            Hand-crafted &amp; Made with <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
-          </p>
-        </footer>
-        <!-- Footer Ends -->
+        <!-- Page Content Ends -->
       </div>
-      <!-- Page Content Ends -->
+      <!-- Wrapper Ends -->
     </div>
-    <!-- Wrapper Ends -->
-  </div>
-  <script src="./js/app.js" type="module"></script>
-</body>
-
+    <script src="./js/app.js" type="module"></script>
+  </body>
 </html>
