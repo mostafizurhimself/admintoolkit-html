@@ -11,6 +11,9 @@ const entries = glob.sync("./src/**/*.html").reduce((acc, path) => {
 export default defineConfig({
   root: "src",
   publicDir: "public",
+  optimizeDeps: {
+    entries,
+  },
   build: {
     outDir: resolve(__dirname, "dist"),
     rollupOptions: {
