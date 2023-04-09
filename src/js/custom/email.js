@@ -6,7 +6,7 @@ const openEmailList = document.getElementById("open-email-list");
 const overlay = document.getElementById("overlay");
 // Open Email List
 const getOpenEmailList = () => {
-  emailList.classList.remove("-translate-x-full");
+  emailList.classList.remove("-translate-x-[350px]");
   emailList.classList.add("translate-x-0");
   overlay.classList.remove("invisible", "opacity-0");
   overlay.classList.add("visible", "opacity-100");
@@ -19,7 +19,7 @@ const getHideEmailList = () => {
   overlay.classList.remove("visible");
   setTimeout(() => {
     emailList.classList.remove("translate-x-0");
-    emailList.classList.add("-translate-x-full");
+    emailList.classList.add("-translate-x-[350px]");
     overlay.classList.add("invisible");
   }, 100);
 };
