@@ -812,7 +812,7 @@
           <!-- User Profile Start  -->
           <div class="flex flex-col lg:flex-row gap-6 lg:justify-center items-center lg:items-start">
             <!-- Left Section Start  -->
-            <section class="flex flex-col gap-6 w-full lg:w-[300px]">
+            <section class="flex flex-col lg:sticky lg:top-20 gap-6 w-full lg:w-[300px]">
               <!-- User Avatar & Status  -->
               <div class="card">
                 <div class="card-body flex flex-col items-center">
@@ -885,7 +885,7 @@
             </section>
             <!-- Left Section End  -->
             <!-- Right Section Start  -->
-            <section class="flex flex-col gap-8 flex-1">
+            <section class="flex flex-col w-full lg:w-auto gap-8 flex-1">
               <!-- Personal Details  -->
               <div class="card">
                 <div class="card-body">
@@ -1067,13 +1067,13 @@
                   <h2 class="text-[16px] font-semibold text-slate-700 dark:text-slate-300 ">Delete Account</h2>
                   <p class="text-sm text-slate-400 font-normal mb-4">Permanently remove your account and data from the
                     platform</p>
-                  <form class="grid grid-cols-1 md:grid-cols-2">
+                  <form class="grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2">
                     <label class="label" for="password">
                       <span class="my-1 block">Confirm Your Password</span>
                       <input type="password" class="input" id="password">
                     </label>
-                    <div class="text-right flex items-center justify-center">
-                      <div class="w-full">
+                    <div class="flex flex-wrap items-center justify-center md:items-end md:justify-end">
+                      <div>
                         <button class="btn btn-danger px-6" type="submit">Delete My Account</button>
                       </div>
                     </div>
