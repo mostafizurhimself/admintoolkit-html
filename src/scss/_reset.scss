@@ -252,3 +252,22 @@
 
 // ============Apex Chart  End ============
 
+// Email Tags Start 
+// Email Tag  Styles
+.tagi__panel {
+  @apply  flex flex-wrap gap-2;
+  & > .tagi__element{
+    @apply px-2 py-1 m-0 bg-slate-50 dark:bg-slate-900 flex items-center justify-between gap-1 rounded-full shadow cursor-pointer outline-none border-none right-0 ;
+    & span{
+      @apply text-xs font-medium text-slate-400 p-0 m-0;
+    }
+    & svg{
+      @apply h-3;
+    }
+  }
+  & input{
+    @apply border-none outline-none font-medium text-slate-400 bg-transparent text-xs py-0 px-2 m-0 ring-0 focus:outline-none focus:ring-0 flex-1;
+  }
+}
+// Email Tags End 
+

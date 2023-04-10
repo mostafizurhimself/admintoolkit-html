@@ -1,4 +1,5 @@
 import Quill from "quill";
+import TagInputControl from "tag-input-js";
 //  Chat List Toggle
 const emailList = document.getElementById("email-list");
 const hideEmailList = document.getElementById("hide-email-list");
@@ -47,4 +48,23 @@ const editor = new Quill(emailEditor, {
   theme: "snow",
   bounds: emailEditor,
   placeholder: "write your message",
+});
+
+// Input Tags
+const emailTags = document.querySelectorAll(".email-tags");
+function handleTagChange(tags) {
+  console.log(tags);
+}
+const emailTagOptions = {
+  cssClass: {
+    tagPanel: "tagi__panel", 
+    tagElement: "tagi__element", 
+    inputElement: "tagi__input", 
+  },
+  renderRemoveButton: function () {},
+  initialTags: [],
+  onTagChange: handleTagChange,
+};
+emailTags.forEach((emailTag) => {
+  const emailTagsInstance = new TagInputControl(emailTag, emailTagOptions);
 });
