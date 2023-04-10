@@ -798,11 +798,9 @@
               <li class="breadcrumb-item">
                 <a href="/">Home</a>
               </li>
-
               <li class="breadcrumb-item">
                 <a href="#">Users</a>
               </li>
-
               <li class="breadcrumb-item">
                 <a href="#">Profile</a>
               </li>
@@ -817,12 +815,13 @@
               <div class="card">
                 <div class="card-body flex flex-col items-center">
                   <div class="relative w-24 my-2 h-24 rounded-full">
-                    <img src="./images/avatar11.png" alt="avatar-img" class="w-full h-full rounded-full" />
+                    <img src="./images/avatar11.png" alt="avatar-img" id="user-image"
+                      class="w-full h-full rounded-full" />
                     <label for="upload-avatar"
                       class="absolute bottom-0 right-0 items-center flex justify-center cursor-pointer p-2 bg-slate-50 h-8 w-8 dark:bg-slate-900  rounded-full ">
                       <span class="text-slate-600 dark:text-slate-300"><i class="w-full"
                           data-feather="camera"></i></span>
-                      <input type="file" class="hidden" id="upload-avatar">
+                      <input type="file" accept="image/jpeg, image/png, image/jpg" class="hidden" id="upload-avatar">
                     </label>
                   </div>
                   <h2 class="text-[16px] font-medium text-slate-700 dark:text-slate-200">Ahmed Shakil</h2>
@@ -1162,6 +1161,11 @@
     <!-- Wrapper Ends -->
   </div>
   <script src="./js/app.js" type="module"></script>
+  <script type="module">
+    const userImage = document.getElementById('user-image');
+    const uploadAvatar = document.getElementById('upload-avatar');
+    uploadAvatar.onchange = () => userImage.src = URL.createObjectURL(uploadAvatar.files[0]);
+  </script>
 </body>
 
 </html>
