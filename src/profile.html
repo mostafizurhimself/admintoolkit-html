@@ -836,9 +836,10 @@
                 <div class="card-body">
                   <div class="flex mb-2 justify-between items-center">
                     <h3 class="text-[16px] font-semibold text-slate-700 dark:text-slate-200">Social Media</h3>
-                    <span
-                      class="text-slate-600  text-sm duration-150 ease-in hover:text-primary-500 cursor-pointer dark:text-slate-300 dark:hover:text-primary-500"><i
-                        class="h-5" data-feather="edit"></i></span>
+                    <button data-toggle="modal" data-target="#social-link"
+                      class="text-slate-600  text-sm duration-150 ease-in hover:text-primary-500 cursor-pointer dark:text-slate-300 dark:hover:text-primary-500">
+                      <i class="h-5" data-feather="edit"></i>
+                    </button>
                   </div>
                   <!-- Facebook  -->
                   <div class="flex items-center my-3 gap-4">
@@ -1081,10 +1082,59 @@
 
                 </div>
               </div>
-
-
             </section>
             <!-- Right Section End -->
+          </div>
+          <!-- Social Link Modal Box -->
+          <div class="modal modal-sm" id="social-link">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="flex items-center justify-between">
+                    <h6>Update Social Media</h6>
+                    <button type="button"
+                      class="btn btn-plain-secondary dark:text-slate-300 dark:hover:bg-slate-700 dark:focus:bg-slate-700"
+                      data-dismiss="modal">
+                      <i data-feather="x" width="1.5rem" height="1.5rem"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="modal-body">
+                  <form method="post" class="w-full flex flex-col">
+
+                    <label class="label my-3" for="facebook">
+                      <span class="my-1 block">Facebook</span>
+                      <input type="text" class="input" value="" id="facebook">
+                    </label>
+
+                    <label class="label my-3" for="instagram">
+                      <span class="my-1 block">Instagram</span>
+                      <input type="text" class="input" value="ahmedshakil" id="instagram">
+                    </label>
+
+                    <label class="label my-3" for="twitter">
+                      <span class="my-1 block">Twitter</span>
+                      <input type="text" class="input" value="ahmedshakil" id="twitter">
+                    </label>
+
+                    <label class="label my-3" for="linkedin">
+                      <span class="my-1 block">LinkedIn</span>
+                      <input type="text" class="input" value="ahmedshakil" id="linkedin">
+                    </label>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <div class="flex items-center justify-end gap-4">
+                    <button type="cancel" class="btn btn-secondary" data-dismiss="modal">
+                      Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                      Update
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- User Profile End  -->
         </main>
