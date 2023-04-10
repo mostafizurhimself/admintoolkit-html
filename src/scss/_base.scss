@@ -1,7 +1,24 @@
 body {
   @apply bg-slate-50  text-slate-700 dark:bg-slate-900 dark:text-slate-200;
 
-  .content {
-    @apply scroll-smooth;
+  .wrapper {
+    @apply flex flex-1 flex-col transition-margin duration-300 ease-in-out lg:ml-72;
+  
+    &.expanded {
+      @apply lg:ml-20;
+    }
+  
+    .header {
+      @apply sticky top-0 z-50 flex h-16 w-full items-center bg-white drop-shadow-sm dark:bg-slate-800;
+    }
+  
+    .content {
+      @apply flex w-full flex-col scroll-smooth;
+      min-height: calc(100vh - 4rem);
+    }
+  
+    .footer {
+      @apply flex flex-wrap items-center justify-between bg-white px-6 py-5 text-slate-500 dark:bg-slate-800;
+    }
   }
 }
