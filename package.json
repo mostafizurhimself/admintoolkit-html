@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --emptyOutDir",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{js,css,scss,html}\""
   },
   "devDependencies": {
     "@mertasan/tailwindcss-variables": "^2.5.1",

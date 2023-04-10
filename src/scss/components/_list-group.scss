@@ -2,7 +2,7 @@
   .list-group {
     @apply rounded-primary border border-slate-300  bg-white text-sm font-medium  dark:border-slate-600 dark:bg-slate-800;
     &-item {
-      @apply border-b border-b-slate-300  py-2 px-4 text-left dark:border-slate-600;
+      @apply border-b border-b-slate-300  px-4 py-2 text-left dark:border-slate-600;
 
       &-primary {
         @apply bg-primary-100 text-primary-500;

@@ -1,21 +1,21 @@
 import Toastify from 'toastify-js';
-import toast from "../components/toast";
+import toast from '../components/toast';
 
-const btnTriggerToast          = document.querySelector('#btn-trigger-toast');
-const btnTriggerToastSuccess   = document.querySelector('#btn-trigger-toast-success');
-const btnTriggerToastDanger    = document.querySelector('#btn-trigger-toast-danger');
-const btnTriggerToastWarning   = document.querySelector('#btn-trigger-toast-warning');
-const btnTriggerToastInfo      = document.querySelector('#btn-trigger-toast-info');
-const btnTriggerToastTR        = document.querySelector('#btn-trigger-toast-tr');
-const btnTriggerToastTL        = document.querySelector('#btn-trigger-toast-tl');
-const btnTriggerToastTC        = document.querySelector('#btn-trigger-toast-tc');
-const btnTriggerToastBR        = document.querySelector('#btn-trigger-toast-br');
-const btnTriggerToastBL        = document.querySelector('#btn-trigger-toast-bl');
-const btnTriggerToastBC        = document.querySelector('#btn-trigger-toast-bc');
+const btnTriggerToast = document.querySelector('#btn-trigger-toast');
+const btnTriggerToastSuccess = document.querySelector('#btn-trigger-toast-success');
+const btnTriggerToastDanger = document.querySelector('#btn-trigger-toast-danger');
+const btnTriggerToastWarning = document.querySelector('#btn-trigger-toast-warning');
+const btnTriggerToastInfo = document.querySelector('#btn-trigger-toast-info');
+const btnTriggerToastTR = document.querySelector('#btn-trigger-toast-tr');
+const btnTriggerToastTL = document.querySelector('#btn-trigger-toast-tl');
+const btnTriggerToastTC = document.querySelector('#btn-trigger-toast-tc');
+const btnTriggerToastBR = document.querySelector('#btn-trigger-toast-br');
+const btnTriggerToastBL = document.querySelector('#btn-trigger-toast-bl');
+const btnTriggerToastBC = document.querySelector('#btn-trigger-toast-bc');
 const btnTriggerToastCloseable = document.querySelector('#btn-trigger-toast-closeable');
-const btnTriggerToastCustom    = document.querySelector('#btn-trigger-custom-toast');
+const btnTriggerToastCustom = document.querySelector('#btn-trigger-custom-toast');
 
-const toastBasicSourceCode     = `
+const toastBasicSourceCode = `
   <button id="btn-trigger-toast" class="btn btn-primary" type="button">
     Show Toast
   </button>
@@ -29,7 +29,7 @@ const toastBasicSourceCode     = `
     }
   </script>
 `;
-const toastTypeSourceCode      = `
+const toastTypeSourceCode = `
   <button id="btn-trigger-toast-success" class="btn btn-success" type="button">Toast Success</button>
   <button id="btn-trigger-toast-danger" class="btn btn-danger" type="button">Toast Danger</button>
   <button id="btn-trigger-toast-warning" class="btn btn-warning" type="button">Toast Warning</button>
@@ -151,7 +151,7 @@ const toastCloseableSourceCode = `
     }
   </script>
 `;
-const toastCustomSourceCode    = `
+const toastCustomSourceCode = `
   <button id="btn-trigger-custom-toast" class="btn btn-primary" type="button">
     Show Toast
   </button>
@@ -173,114 +173,114 @@ const toastCustomSourceCode    = `
   </script>
 `;
 
-const toastBasicCodeViewer     = createCodeViewer('#toast-basic-code-viewer', toastBasicSourceCode);
-const toastTypeCodeViewer      = createCodeViewer('#toast-type-code-viewer', toastTypeSourceCode);
+const toastBasicCodeViewer = createCodeViewer('#toast-basic-code-viewer', toastBasicSourceCode);
+const toastTypeCodeViewer = createCodeViewer('#toast-type-code-viewer', toastTypeSourceCode);
 const toastPlacementCodeViewer = createCodeViewer('#toast-placement-code-viewer', toastPlacementSourceCode);
 const toastCloseableCodeViewer = createCodeViewer('#toast-closeable-code-viewer', toastCloseableSourceCode);
-const toastCustomCodeViewer    = createCodeViewer('#toast-custom-code-viewer', toastCustomSourceCode);
+const toastCustomCodeViewer = createCodeViewer('#toast-custom-code-viewer', toastCustomSourceCode);
 
 // Toast Basic
-if(btnTriggerToast) {
-  btnTriggerToast.addEventListener('click', () => toast('Hello, I am a Toast'))
+if (btnTriggerToast) {
+  btnTriggerToast.addEventListener('click', () => toast('Hello, I am a Toast'));
 }
 
 // Toast Type
-if(btnTriggerToastSuccess) {
+if (btnTriggerToastSuccess) {
   btnTriggerToastSuccess.addEventListener('click', () => {
     toast.success('Hello, I am a Success Toast');
   });
 }
 
-if(btnTriggerToastDanger) {
+if (btnTriggerToastDanger) {
   btnTriggerToastDanger.addEventListener('click', () => {
     toast.danger('Hello, I am a Danger Toast');
   });
 }
 
-if(btnTriggerToastWarning) {
+if (btnTriggerToastWarning) {
   btnTriggerToastWarning.addEventListener('click', () => {
     toast.warning('Hello, I am a Warning Toast');
   });
 }
 
-if(btnTriggerToastInfo) {
+if (btnTriggerToastInfo) {
   btnTriggerToastInfo.addEventListener('click', () => {
     toast.info('Hello, I am an Info Toast');
   });
 }
 
 // Toast Placements
-if(btnTriggerToastTR) {
+if (btnTriggerToastTR) {
   btnTriggerToastTR.addEventListener('click', () => {
     toast('Hello, I am a Toast', {
       gravity: 'top',
-      position: 'right'
-    })
+      position: 'right',
+    });
   });
 }
 
-if(btnTriggerToastTC) {
+if (btnTriggerToastTC) {
   btnTriggerToastTC.addEventListener('click', () => {
     toast('Hello, I am a Toast', {
       gravity: 'top',
-      position: 'center'
-    })
+      position: 'center',
+    });
   });
 }
 
-if(btnTriggerToastTL) {
+if (btnTriggerToastTL) {
   btnTriggerToastTL.addEventListener('click', () => {
     toast('Hello, I am a Toast', {
       gravity: 'top',
-      position: 'left'
-    })
+      position: 'left',
+    });
   });
 }
 
-if(btnTriggerToastBR) {
+if (btnTriggerToastBR) {
   btnTriggerToastBR.addEventListener('click', () => {
     toast('Hello, I am a Toast', {
       gravity: 'bottom',
-      position: 'right'
-    })
+      position: 'right',
+    });
   });
 }
 
-if(btnTriggerToastBC) {
+if (btnTriggerToastBC) {
   btnTriggerToastBC.addEventListener('click', () => {
     toast('Hello, I am a Toast', {
       gravity: 'bottom',
-      position: 'center'
-    })
+      position: 'center',
+    });
   });
 }
 
-if(btnTriggerToastBL) {
+if (btnTriggerToastBL) {
   btnTriggerToastBL.addEventListener('click', () => {
     toast('Hello, I am a Toast', {
       gravity: 'bottom',
-      position: 'left'
-    })
+      position: 'left',
+    });
   });
 }
 
 // Toast Closeable
-if(btnTriggerToastCloseable) {
+if (btnTriggerToastCloseable) {
   btnTriggerToastCloseable.addEventListener('click', () => {
     toast('Hello, I am a Toast', {
-      close: true
-    })
+      close: true,
+    });
   });
 }
 
 // Toast Custom
-if(btnTriggerToastCustom) {
+if (btnTriggerToastCustom) {
   btnTriggerToastCustom.addEventListener('click', () => {
     toast('Hello, I am a <strong>Custom Toast</strong>', {
       style: {
         background: '#a855f7',
-        color: '#fff'
-      }
+        color: '#fff',
+      },
     });
   });
 }

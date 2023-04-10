@@ -1,33 +1,33 @@
 @layer components {
   .toastify {
-    @apply flex items-center gap-2 bg-none bg-white border border-slate-200 text-slate-700 shadow-lg rounded-primary dark:text-slate-300 dark:border-slate-600 dark:bg-slate-700;
+    @apply flex items-center gap-2 rounded-primary border border-slate-200 bg-white bg-none text-slate-700 shadow-lg dark:border-slate-600 dark:bg-slate-700 dark:text-slate-300;
 
     &-primary {
-      @apply text-white border-primary-500 bg-primary-500 dark:border-primary-500 dark:bg-primary-500;
+      @apply border-primary-500 bg-primary-500 text-white dark:border-primary-500 dark:bg-primary-500;
     }
 
     &-secondary {
-      @apply text-white border-secondary-500 bg-secondary-500 dark:border-secondary-500 dark:bg-secondary-500;
+      @apply border-secondary-500 bg-secondary-500 text-white dark:border-secondary-500 dark:bg-secondary-500;
     }
 
     &-success {
-      @apply text-white border-success-500 bg-success-500 dark:border-success-500 dark:bg-success-500;
+      @apply border-success-500 bg-success-500 text-white dark:border-success-500 dark:bg-success-500;
     }
 
     &-danger {
-      @apply text-white border-danger-500 bg-danger-500 dark:border-danger-500 dark:bg-danger-500;
+      @apply border-danger-500 bg-danger-500 text-white dark:border-danger-500 dark:bg-danger-500;
     }
 
     &-warning {
-      @apply text-white border-warning-500 bg-warning-500 dark:border-warning-500 dark:bg-warning-500;
+      @apply border-warning-500 bg-warning-500 text-white dark:border-warning-500 dark:bg-warning-500;
     }
 
     &-info {
-      @apply text-white border-info-500 bg-info-500 dark:border-info-500 dark:bg-info-500;
+      @apply border-info-500 bg-info-500 text-white dark:border-info-500 dark:bg-info-500;
     }
 
     &-dark {
-      @apply text-white border-dark-500 bg-dark-500 dark:border-dark-500 dark:bg-dark-500;
+      @apply border-dark-500 bg-dark-500 text-white dark:border-dark-500 dark:bg-dark-500;
     }
   }
 

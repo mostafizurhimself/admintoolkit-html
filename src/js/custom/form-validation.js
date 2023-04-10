@@ -65,20 +65,20 @@ const customFormValidationSourceCode = `
   </script>
 `;
 
-const formCustomValidation = document.querySelector("#form-custom-validation");
+const formCustomValidation = document.querySelector('#form-custom-validation');
 const customFormValidationCodeViewer = createCodeViewer(
-  "#custom-form-validation-code-viewer",
+  '#custom-form-validation-code-viewer',
   customFormValidationSourceCode
 );
 
 if (formCustomValidation) {
-  formCustomValidation.addEventListener("submit", function (e) {
+  formCustomValidation.addEventListener('submit', function (e) {
     if (!this.checkValidity()) {
       e.preventDefault();
       e.stopPropagation();
     }
 
-    this.classList.add("form-validated");
+    this.classList.add('form-validated');
   });
 }
 

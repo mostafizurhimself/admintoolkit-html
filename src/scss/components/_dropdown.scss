@@ -3,12 +3,12 @@
     @apply relative flex flex-col;
 
     &-toggle {
-      @apply flex items-center cursor-pointer;
+      @apply flex cursor-pointer items-center;
     }
-    
+
     &-content {
-      @apply fixed top-0 left-0 z-20 hidden overflow-hidden rounded-primary border border-slate-200 bg-white shadow-lg dark:border-slate-700 dark:bg-slate-800;
-      
+      @apply fixed left-0 top-0 z-20 hidden overflow-hidden rounded-primary border border-slate-200 bg-white shadow-lg dark:border-slate-700 dark:bg-slate-800;
+
       &.show {
         @apply block;
       }
@@ -21,11 +21,11 @@
     // }
 
     &-link {
-      @apply w-full inline-flex items-center gap-2 cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-slate-700;
+      @apply inline-flex w-full cursor-pointer items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-slate-700;
     }
 
     &-btn {
-      @apply w-full inline-flex items-center gap-2 px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700;
+      @apply inline-flex w-full items-center gap-2 px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700;
 
       &.active {
         @apply text-primary-500 dark:text-primary-500;

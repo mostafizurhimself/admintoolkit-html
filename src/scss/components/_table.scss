@@ -14,15 +14,15 @@
     --table-hover-bg: theme(colors.slate.50);
     --table-hover-dark-bg: theme(colors.slate.700);
 
-    @apply w-full rounded-primary overflow-hidden shadow border-[var(--table-border-color)] dark:border-[var(--table-border-dark-color)];
+    @apply w-full overflow-hidden rounded-primary border-[var(--table-border-color)] shadow dark:border-[var(--table-border-dark-color)];
 
-    thead, 
-    tbody, 
-    tfoot, 
-    td, 
-    th, 
+    thead,
+    tbody,
+    tfoot,
+    td,
+    th,
     tr {
-      @apply border-inherit border-solid border-0;
+      @apply border-0 border-solid border-inherit;
     }
 
     th {
@@ -37,13 +37,13 @@
     & > tbody > tr:not(:last-child) > * {
       @apply border-b;
     }
-    
+
     & > tfoot > tr:first-child > * {
       @apply border-t;
     }
 
     & > :not(caption) > * > * {
-      @apply text-sm text-left px-6 py-3 bg-[var(--table-bg)] dark:bg-[var(--table-dark-bg)];
+      @apply bg-[var(--table-bg)] px-6 py-3 text-left text-sm dark:bg-[var(--table-dark-bg)];
     }
 
     &-striped {
@@ -65,7 +65,7 @@
     }
 
     &-bordered {
-      @apply shadow-none border border-separate border-spacing-0;
+      @apply border-separate border-spacing-0 border shadow-none;
 
       & > :not(caption) > * > *:not(:last-child) {
         @apply border-r;
@@ -85,7 +85,6 @@
     &-compact {
       & > :not(caption) > * > * {
         @apply px-4 py-2;
-        
       }
     }
 
@@ -103,7 +102,7 @@
       --table-hover-bg: theme(colors.primary.300 / 80%);
       --table-hover-dark-bg: theme(colors.primary.700);
     }
-    
+
     &-secondary {
       --table-bg: theme(colors.secondary.100);
       --table-dark-bg: theme(colors.secondary.800);

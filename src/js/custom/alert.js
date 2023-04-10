@@ -26,4 +26,4 @@ controlledAlertCodeViewer.render();
 const btnHideAlert = document.querySelector('#btn-hide-alert');
 btnHideAlert.addEventListener('click', () => {
   createDismissableAlert('#controlled-alert').dismiss();
-})
+});

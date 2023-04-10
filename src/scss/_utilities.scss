@@ -5,9 +5,9 @@
 
   .zero-sr-only {
     // Set the width, height and margin to `0` to prevent extra scrollbar appearing in chrome browser.
-    @apply sr-only w-0 h-0 m-0;
+    @apply sr-only m-0 h-0 w-0;
   }
-  
+
   /* Chrome, Safari and Opera */
   #chats::-webkit-scrollbar {
     display: none;

@@ -117,15 +117,15 @@ const sidebar = {
   },
 
   initScrollBar() {
-    if(this.sidebar) {
+    if (this.sidebar) {
       new SimpleBar(this.content);
       const activeMenu = this.content.querySelector('.sidebar-menu.active');
       const activeSubmenu = this.content.querySelector('.sidebar-submenu-item.active');
       window.addEventListener('load', () => {
         if (activeSubmenu) {
-          activeSubmenu.scrollIntoView({block: 'center', behavior: 'smooth'})
+          activeSubmenu.scrollIntoView({ block: 'center', behavior: 'smooth' });
         } else {
-          activeMenu.scrollIntoView({block: 'center', behavior: 'smooth'})
+          activeMenu.scrollIntoView({ block: 'center', behavior: 'smooth' });
         }
       });
     }

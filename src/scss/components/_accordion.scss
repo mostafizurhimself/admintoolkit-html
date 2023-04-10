@@ -1,37 +1,37 @@
 @layer components {
   .accordion {
     $accordion: &;
-    @apply w-full flex flex-col rounded-primary overflow-hidden divide-y divide-slate-200 border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700 dark:divide-slate-700;
+    @apply flex w-full flex-col divide-y divide-slate-200 overflow-hidden rounded-primary border border-slate-200 bg-white dark:divide-slate-700 dark:border-slate-700 dark:bg-slate-800;
 
     &-item {
       @apply bg-transparent;
     }
 
     &-header {
-      @apply w-full inline-flex items-center justify-between px-4 py-3 text-sm font-medium text-slate-600 dark:text-slate-300 transition-colors duration-150 ease-in-out;
+      @apply inline-flex w-full items-center justify-between px-4 py-3 text-sm font-medium text-slate-600 transition-colors duration-150 ease-in-out dark:text-slate-300;
 
       #{$accordion}-item.active & {
         @apply bg-primary-100 text-primary-500 dark:bg-primary-900/20;
       }
     }
-    
+
     &-body {
-      @apply overflow-hidden ease-in-out transition-all;
-      
+      @apply overflow-hidden transition-all ease-in-out;
+
       #{$accordion}-item.js-enabled & {
         @apply invisible;
       }
-      
+
       #{$accordion}-item.active & {
         @apply visible;
       }
     }
 
     &-icon {
-      @apply text-lg text-slate-500 dark:text-slate-400 rotate-0 transition-transform duration-150 ease-in-out;
+      @apply rotate-0 text-lg text-slate-500 transition-transform duration-150 ease-in-out dark:text-slate-400;
 
       #{$accordion}-item.active & {
-        @apply text-primary-500 rotate-90;
+        @apply rotate-90 text-primary-500;
       }
     }
 

@@ -1,7 +1,7 @@
 .sidebar {
   $sidebar: &;
 
-  @apply fixed top-0 bottom-0 z-20 h-screen w-72 -translate-x-full overflow-hidden bg-white shadow-lg transition-all duration-300 ease-in-out dark:bg-slate-800  lg:translate-x-0;
+  @apply fixed bottom-0 top-0 z-20 h-screen w-72 -translate-x-full overflow-hidden bg-white shadow-lg transition-all duration-300 ease-in-out dark:bg-slate-800  lg:translate-x-0;
 
   &.collapsed {
     @apply lg:w-20;
@@ -121,7 +121,7 @@
   }
 
   &-menu-header {
-    @apply pt-4 pb-2 pl-7 text-xs uppercase tracking-widest text-slate-400;
+    @apply pb-2 pl-7 pt-4 text-xs uppercase tracking-widest text-slate-400;
   }
 
   &-toggle {
