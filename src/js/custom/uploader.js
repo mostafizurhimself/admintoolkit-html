@@ -1,4 +1,4 @@
-const customDragAndDropSourceCode =`
+const customDragAndDropSourceCode = `
   <div class="dropzone dropzone-custom">
     <div class="dz-message">                        
       <i width="2.5rem" height="2.5rem" data-feather="upload"></i>
@@ -17,8 +17,7 @@ const customDragAndDropSourceCode =`
     import Dropzone from "dropzone";
 
     const dropzoneCustom = new Dropzone('.dropzone-custom', {
-      url: '/',
-      method: 'get',
+      url: '/uploader.html',
       parallelUploads: 1,
       maxFilesize: 5,
       addRemoveLinks: true,
@@ -28,9 +27,8 @@ const customDragAndDropSourceCode =`
   </script>
 `;
 
-
 // Create CodeViewer
-const customDragAndDropCodeViewer = createCodeViewer('#custom-drag-and-drop-code-viewer', customDragAndDropSourceCode);    
+const customDragAndDropCodeViewer = createCodeViewer('#custom-drag-and-drop-code-viewer', customDragAndDropSourceCode);
 
 // Render CodeViewer
 customDragAndDropCodeViewer.render();

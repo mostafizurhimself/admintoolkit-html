@@ -4,34 +4,34 @@ const editor = {
   theme: {
     snow: {
       modules: {
-        toolbar: [ 
+        toolbar: [
           ['bold', 'italic', 'underline', 'strike'],
           ['blockquote', 'code-block'],
-          [{ header: 1 }, { header: 2 }], 
+          [{ header: 1 }, { header: 2 }],
           [{ list: 'ordered' }, { list: 'bullet' }],
-          [{ script: 'sub' }, { script: 'super' }], 
-          [{ indent: '-1' }, { indent: '+1' }], 
-          [{ direction: 'rtl' }], 
-          [{ size: ['small', false, 'large', 'huge'] }], 
+          [{ script: 'sub' }, { script: 'super' }],
+          [{ indent: '-1' }, { indent: '+1' }],
+          [{ direction: 'rtl' }],
+          [{ size: ['small', false, 'large', 'huge'] }],
           [{ header: [1, 2, 3, 4, 5, 6, false] }],
-          [{ color: [] }, { background: [] }], 
+          [{ color: [] }, { background: [] }],
           [{ font: [] }],
           [{ align: [] }],
-          ['clean']
-        ]
-      }
+          ['clean'],
+        ],
+      },
     },
     bubble: {
       modules: {
         toolbar: [
           ['bold', 'italic', 'underline', 'strike'],
           ['blockquote', 'code-block'],
-          [{ header: 1 }, { header: 2 }], 
+          [{ header: 1 }, { header: 2 }],
           [{ list: 'bullet' }],
           [{ script: 'sub' }, { script: 'super' }],
-          [{ direction: 'rtl' }]
-        ]
-      }
+          [{ direction: 'rtl' }],
+        ],
+      },
     },
   },
 
@@ -40,24 +40,30 @@ const editor = {
     const bubbleEditors = document.querySelectorAll('.editor-bubble');
 
     // Default editor
-    if(editors.length) {
-      [...editors].forEach(editor => new Quill(editor, {
-        theme: 'snow',
-        bounds: editor,
-        modules: this.theme.snow.modules,
-      }));
-    } 
+    if (editors.length) {
+      [...editors].forEach(
+        (editor) =>
+          new Quill(editor, {
+            theme: 'snow',
+            bounds: editor,
+            modules: this.theme.snow.modules,
+          })
+      );
+    }
 
     // Default editor
-    if(bubbleEditors.length) {
-      [...bubbleEditors].forEach(editor => new Quill(editor, {
-        theme: 'bubble',
-        bounds: editor,
-        modules: this.theme.bubble.modules,
-      }));
-    } 
-  }
-}
+    if (bubbleEditors.length) {
+      [...bubbleEditors].forEach(
+        (editor) =>
+          new Quill(editor, {
+            theme: 'bubble',
+            bounds: editor,
+            modules: this.theme.bubble.modules,
+          })
+      );
+    }
+  },
+};
 
 window.createEditor = function (target, options = {}) {
   return new Quill(target, options);

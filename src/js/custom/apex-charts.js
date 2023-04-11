@@ -1,9 +1,9 @@
-import ApexCharts from "apexcharts";
+import ApexCharts from 'apexcharts';
 
 const emptyOption = `{ 
                           // ...... 
                         }`;
-const sourceCodeTemplate = (id = "chart", options = emptyOption) => {
+const sourceCodeTemplate = (id = 'chart', options = emptyOption) => {
   return `
         <div id="${id}"></div>
         <script type="module">
@@ -19,13 +19,13 @@ const chartOptions = {
   lineChart: {
     series: [
       {
-        name: "Desktops",
+        name: 'Desktops',
         data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
       },
     ],
     chart: {
       height: 350,
-      type: "line",
+      type: 'line',
       zoom: {
         enabled: false,
       },
@@ -37,41 +37,31 @@ const chartOptions = {
       enabled: false,
     },
     stroke: {
-      curve: "straight",
+      curve: 'straight',
     },
     title: {
-      text: "Product Trends by Month",
-      align: "left",
+      text: 'Product Trends by Month',
+      align: 'left',
       style: {
-        color: "#475569",
-        fontSize: "20px",
+        color: '#475569',
+        fontSize: '20px',
         fontWeight: 600,
       },
     },
     grid: {
       row: {
-        colors: ["transparent"],
+        colors: ['transparent'],
         opacity: 0.5,
       },
     },
     xaxis: {
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-      ],
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
     },
   },
   areaChart: {
     series: [
       {
-        name: "STOCK ABC",
+        name: 'STOCK ABC',
         data: [
           {
             x: 2010,
@@ -125,7 +115,7 @@ const chartOptions = {
       },
     ],
     chart: {
-      type: "area",
+      type: 'area',
       height: 350,
       zoom: {
         enabled: false,
@@ -138,23 +128,23 @@ const chartOptions = {
       enabled: false,
     },
     stroke: {
-      curve: "straight",
+      curve: 'straight',
     },
 
     title: {
-      text: "Fundamental Analysis of Stocks",
-      align: "left",
+      text: 'Fundamental Analysis of Stocks',
+      align: 'left',
       style: {
-        color: "#475569",
-        fontSize: "20px",
+        color: '#475569',
+        fontSize: '20px',
         fontWeight: 600,
       },
     },
     subtitle: {
-      text: "Price Movements",
-      align: "left",
+      text: 'Price Movements',
+      align: 'left',
       style: {
-        color: "#475569",
+        color: '#475569',
         fontWeight: 500,
       },
     },
@@ -181,32 +171,32 @@ const chartOptions = {
       },
     ],
     xaxis: {
-      type: "datetime",
+      type: 'datetime',
     },
     yaxis: {
       opposite: true,
     },
     legend: {
-      horizontalAlign: "left",
+      horizontalAlign: 'left',
     },
   },
   columnChart: {
     series: [
       {
-        name: "Net Profit",
+        name: 'Net Profit',
         data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
       },
       {
-        name: "Revenue",
+        name: 'Revenue',
         data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
       },
       {
-        name: "Free Cash Flow",
+        name: 'Free Cash Flow',
         data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
       },
     ],
     chart: {
-      type: "bar",
+      type: 'bar',
       height: 350,
       toolbar: {
         show: false,
@@ -215,8 +205,8 @@ const chartOptions = {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: "55%",
-        endingShape: "rounded",
+        columnWidth: '55%',
+        endingShape: 'rounded',
       },
     },
     dataLabels: {
@@ -225,26 +215,16 @@ const chartOptions = {
     stroke: {
       show: true,
       width: 2,
-      colors: ["transparent"],
+      colors: ['transparent'],
     },
     xaxis: {
-      categories: [
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-      ],
+      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
     },
     yaxis: {
       title: {
-        text: "$ (thousands)",
+        text: '$ (thousands)',
         style: {
-          color: "#475569",
+          color: '#475569',
           fontWeight: 500,
         },
       },
@@ -255,7 +235,7 @@ const chartOptions = {
     tooltip: {
       y: {
         formatter: function (val) {
-          return "$ " + val + " thousands";
+          return '$ ' + val + ' thousands';
         },
       },
     },
@@ -267,7 +247,7 @@ const chartOptions = {
       },
     ],
     chart: {
-      type: "bar",
+      type: 'bar',
       height: 350,
       toolbar: {
         show: false,
@@ -284,23 +264,23 @@ const chartOptions = {
     },
     xaxis: {
       categories: [
-        "South Korea",
-        "Canada",
-        "United Kingdom",
-        "Netherlands",
-        "Italy",
-        "France",
-        "Japan",
-        "United States",
-        "China",
-        "Germany",
+        'South Korea',
+        'Canada',
+        'United Kingdom',
+        'Netherlands',
+        'Italy',
+        'France',
+        'Japan',
+        'United States',
+        'China',
+        'Germany',
       ],
     },
   },
   scatterChart: {
     series: [
       {
-        name: "SAMPLE A",
+        name: 'SAMPLE A',
         data: [
           [16.4, 5.4],
           [21.7, 2],
@@ -336,7 +316,7 @@ const chartOptions = {
         ],
       },
       {
-        name: "SAMPLE B",
+        name: 'SAMPLE B',
         data: [
           [36.4, 13.4],
           [1.7, 11],
@@ -372,7 +352,7 @@ const chartOptions = {
         ],
       },
       {
-        name: "SAMPLE C",
+        name: 'SAMPLE C',
         data: [
           [21.7, 3],
           [23.6, 3.5],
@@ -410,10 +390,10 @@ const chartOptions = {
     ],
     chart: {
       height: 350,
-      type: "scatter",
+      type: 'scatter',
       zoom: {
         enabled: true,
-        type: "xy",
+        type: 'xy',
       },
       toolbar: {
         show: false,
@@ -435,13 +415,13 @@ const chartOptions = {
     series: [44, 55, 13, 43, 22],
     chart: {
       width: 380,
-      type: "pie",
-      align: "center",
+      type: 'pie',
+      align: 'center',
       toolbar: {
         show: false,
       },
     },
-    labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+    labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
     responsive: [
       {
         breakpoint: 480,
@@ -450,7 +430,7 @@ const chartOptions = {
             width: 200,
           },
           legend: {
-            position: "bottom",
+            position: 'bottom',
           },
         },
       },
@@ -459,7 +439,7 @@ const chartOptions = {
   donutChart: {
     series: [44, 55, 41, 17, 15],
     chart: {
-      type: "donut",
+      type: 'donut',
       width: 380,
       toolbar: {
         show: false,
@@ -473,7 +453,7 @@ const chartOptions = {
             width: 200,
           },
           legend: {
-            position: "bottom",
+            position: 'bottom',
           },
         },
       },
@@ -482,21 +462,21 @@ const chartOptions = {
   radarChart: {
     series: [
       {
-        name: "Series 1",
+        name: 'Series 1',
         data: [80, 50, 30, 40, 100, 20],
       },
       {
-        name: "Series 2",
+        name: 'Series 2',
         data: [20, 30, 40, 80, 20, 80],
       },
       {
-        name: "Series 3",
+        name: 'Series 3',
         data: [44, 76, 78, 13, 43, 10],
       },
     ],
     chart: {
       height: 350,
-      type: "radar",
+      type: 'radar',
       toolbar: {
         show: false,
       },
@@ -508,10 +488,10 @@ const chartOptions = {
       },
     },
     title: {
-      text: "Radar Chart - Multi Series",
+      text: 'Radar Chart - Multi Series',
       style: {
-        color: "#475569",
-        fontSize: "20px",
+        color: '#475569',
+        fontSize: '20px',
         fontWeight: 600,
       },
     },
@@ -525,12 +505,12 @@ const chartOptions = {
       size: 0,
     },
     xaxis: {
-      categories: ["2011", "2012", "2013", "2014", "2015", "2016"],
+      categories: ['2011', '2012', '2013', '2014', '2015', '2016'],
     },
   },
 };
 // Line Chart Start
-const lineChartElement = document.querySelector("#line-chart");
+const lineChartElement = document.querySelector('#line-chart');
 const lineChart = new ApexCharts(lineChartElement, chartOptions.lineChart);
 lineChart.render();
 const lineChartOptionsTemplate = `
@@ -588,91 +568,61 @@ const lineChartOptionsTemplate = `
 }
 `;
 // Add Source Code
-createCodeViewer(
-  "#line-chart-code-viewer",
-  sourceCodeTemplate(lineChartElement.id, lineChartOptionsTemplate)
-).render();
+createCodeViewer('#line-chart-code-viewer', sourceCodeTemplate(lineChartElement.id, lineChartOptionsTemplate)).render();
 // Line Chart End
 
 // area Chart Start
-const areaChartElement = document.querySelector("#area-chart");
+const areaChartElement = document.querySelector('#area-chart');
 const areaChart = new ApexCharts(areaChartElement, chartOptions.areaChart);
 areaChart.render();
 // Add Source Code
-createCodeViewer(
-  "#area-chart-code-viewer",
-  sourceCodeTemplate(areaChartElement.id)
-).render();
+createCodeViewer('#area-chart-code-viewer', sourceCodeTemplate(areaChartElement.id)).render();
 // area Chart End
 
 // column Chart Start
-const columnChartElement = document.querySelector("#column-chart");
-const columnChart = new ApexCharts(
-  columnChartElement,
-  chartOptions.columnChart
-);
+const columnChartElement = document.querySelector('#column-chart');
+const columnChart = new ApexCharts(columnChartElement, chartOptions.columnChart);
 columnChart.render();
 // Add Source Code
-createCodeViewer(
-  "#column-chart-code-viewer",
-  sourceCodeTemplate(columnChartElement.id)
-).render();
+createCodeViewer('#column-chart-code-viewer', sourceCodeTemplate(columnChartElement.id)).render();
 // column Chart End
 
 // bar Chart Start
-const barChartElement = document.querySelector("#bar-chart");
+const barChartElement = document.querySelector('#bar-chart');
 const barChart = new ApexCharts(barChartElement, chartOptions.barChart);
 barChart.render();
 // Add Source Code
-createCodeViewer(
-  "#bar-chart-code-viewer",
-  sourceCodeTemplate(barChartElement.id)
-).render();
+createCodeViewer('#bar-chart-code-viewer', sourceCodeTemplate(barChartElement.id)).render();
 // bar Chart End
 
 // scatter Chart Start
-const scatterChartElement = document.querySelector("#scatter-chart");
-const scatterChart = new ApexCharts(
-  scatterChartElement,
-  chartOptions.scatterChart
-);
+const scatterChartElement = document.querySelector('#scatter-chart');
+const scatterChart = new ApexCharts(scatterChartElement, chartOptions.scatterChart);
 scatterChart.render();
 // Add Source Code
-createCodeViewer(
-  "#scatter-chart-code-viewer",
-  sourceCodeTemplate(scatterChartElement.id)
-).render();
+createCodeViewer('#scatter-chart-code-viewer', sourceCodeTemplate(scatterChartElement.id)).render();
 // Scatter Chart End
 
 // pie Chart Start
-const pieChartElement = document.querySelector("#pie-chart");
+const pieChartElement = document.querySelector('#pie-chart');
 const pieChart = new ApexCharts(pieChartElement, chartOptions.pieChart);
 pieChart.render();
 // Add Source Code
-createCodeViewer(
-  "#pie-chart-code-viewer",
-  sourceCodeTemplate(pieChartElement.id)
-).render();
+createCodeViewer('#pie-chart-code-viewer', sourceCodeTemplate(pieChartElement.id)).render();
 // pie Chart End
 
 // donut Chart Start
-const donutChartElement = document.querySelector("#donut-chart");
+const donutChartElement = document.querySelector('#donut-chart');
 const donutChart = new ApexCharts(donutChartElement, chartOptions.donutChart);
 donutChart.render();
 // Add Source Code
-createCodeViewer(
-  "#donut-chart-code-viewer",
-  sourceCodeTemplate(donutChartElement.id)
-).render();
+createCodeViewer('#donut-chart-code-viewer', sourceCodeTemplate(donutChartElement.id)).render();
 // donut Chart End
 
 // radar Chart Start
-const radarChartElement = document.querySelector("#radar-chart");
+const radarChartElement = document.querySelector('#radar-chart');
 const radarChart = new ApexCharts(radarChartElement, chartOptions.radarChart);
 radarChart.render();
 // Add Source Code
-createCodeViewer(
-  "#radar-chart-code-viewer",
-  sourceCodeTemplate(radarChartElement.id)
-).render();
+createCodeViewer('#radar-chart-code-viewer', sourceCodeTemplate(radarChartElement.id)).render();
 // radar Chart End

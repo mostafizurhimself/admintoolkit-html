@@ -5,7 +5,7 @@
 
     // Direct elements
     & > &-header {
-      @apply px-6 py-4 border-b border-b-slate-200 dark:border-slate-700;
+      @apply border-b border-b-slate-200 px-6 py-4 dark:border-slate-700;
     }
 
     & > &-body {
@@ -13,7 +13,7 @@
     }
 
     & > &-footer {
-      @apply flex justify-end gap-2 px-6 py-4 border-t border-slate-200 dark:border-slate-700;
+      @apply flex justify-end gap-2 border-t border-slate-200 px-6 py-4 dark:border-slate-700;
     }
 
     // Child elements
@@ -28,11 +28,11 @@
     &-content {
       @apply text-sm text-slate-600 dark:text-slate-300;
     }
-    
+
     // Modifier classes
     &-primary {
       @apply bg-primary-500 dark:bg-primary-500;
-      
+
       #{$card}-title,
       #{$card}-content {
         @apply text-slate-100;
@@ -41,7 +41,7 @@
 
     &-secondary {
       @apply bg-secondary-500 dark:bg-secondary-500;
-      
+
       #{$card}-title,
       #{$card}-content {
         @apply text-slate-100;
@@ -50,7 +50,7 @@
 
     &-success {
       @apply bg-success-500 dark:bg-success-500;
-      
+
       #{$card}-title,
       #{$card}-content {
         @apply text-slate-100;
@@ -59,7 +59,7 @@
 
     &-danger {
       @apply bg-danger-500 dark:bg-danger-500;
-      
+
       #{$card}-title,
       #{$card}-content {
         @apply text-slate-100;
@@ -68,7 +68,7 @@
 
     &-warning {
       @apply bg-warning-500 dark:bg-warning-500;
-      
+
       #{$card}-title,
       #{$card}-content {
         @apply text-slate-100;
@@ -77,7 +77,7 @@
 
     &-info {
       @apply bg-info-500 dark:bg-info-500;
-      
+
       #{$card}-title,
       #{$card}-content {
         @apply text-slate-100;
@@ -86,7 +86,7 @@
 
     &-dark {
       @apply bg-dark-500 dark:bg-dark-500;
-      
+
       #{$card}-title,
       #{$card}-content {
         @apply text-slate-100;

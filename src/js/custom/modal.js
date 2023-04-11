@@ -1,4 +1,4 @@
-const controlledModalSourceCode =`
+const controlledModalSourceCode = `
   <button type="button" class="btn btn-primary" id="btn-controlled-modal">
     Open Controlled Modal
   </button>
@@ -32,10 +32,10 @@ const controlledModalSourceCode =`
     });
   </script>
 `;
-const controlledModalCodeViewer = createCodeViewer('#controlled-modal-code-viewer', controlledModalSourceCode);       
+const controlledModalCodeViewer = createCodeViewer('#controlled-modal-code-viewer', controlledModalSourceCode);
 controlledModalCodeViewer.render();
 
-const btnControlledModal = document.querySelector('#btn-controlled-modal')
+const btnControlledModal = document.querySelector('#btn-controlled-modal');
 
 btnControlledModal.addEventListener('click', () => {
   const controlledModal = createModal('#modal-controlled', {

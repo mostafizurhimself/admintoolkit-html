@@ -1,4 +1,4 @@
-const customPaginationSourceCode =`
+const customPaginationSourceCode = `
   <div class="swiper swiper-with-custom-pagination">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
@@ -79,8 +79,8 @@ const customSwiperSourceCode = `
 `;
 
 // Create CodeViewer
-const customPaginationCodeViewer = createCodeViewer('#custom-pagination-code-viewer', customPaginationSourceCode);    
-const customSwiperCodeViewer = createCodeViewer('#custom-caroursel-code-viewer', customSwiperSourceCode);    
+const customPaginationCodeViewer = createCodeViewer('#custom-pagination-code-viewer', customPaginationSourceCode);
+const customSwiperCodeViewer = createCodeViewer('#custom-caroursel-code-viewer', customSwiperSourceCode);
 
 // Render CodeViewer
 customPaginationCodeViewer.render();

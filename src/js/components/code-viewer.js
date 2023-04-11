@@ -108,7 +108,7 @@ class CodeViewer {
     if (contentElement) {
       return this.beautify(contentElement.innerHTML);
     }
-    
+
     // Get the source code from the code-viewer element
     return this.beautify(this.target.innerHTML);
   }

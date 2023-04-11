@@ -35,7 +35,7 @@ const btnDrawerControlled = document.querySelector('#btn-drawer-controlled');
 btnDrawerControlled.addEventListener('click', () => {
   const drawerControlled = createDrawer('#drawer-controlled', {
     keyboard: true,
-    backdrop: true
+    backdrop: true,
   });
 
   drawerControlled.show();

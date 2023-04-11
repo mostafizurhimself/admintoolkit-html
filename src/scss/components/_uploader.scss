@@ -1,6 +1,6 @@
 @layer components {
   .dropzone {
-    @apply min-h-[10rem] flex items-center justify-start flex-wrap p-4 border-2 border-dashed border-slate-300 dark:border-slate-600;
+    @apply flex min-h-[10rem] flex-wrap items-center justify-center border-2 border-dashed border-slate-300 p-4 dark:border-slate-600 lg:justify-start;
 
     &:not(&-disabled) {
       @apply hover:border-primary-500 dark:hover:border-primary-500;
@@ -9,45 +9,45 @@
     &-disabled {
       @apply cursor-not-allowed opacity-50;
     }
-    
+
     &.dz-drag-hover {
       @apply border-primary-500;
     }
 
     .dz-message {
-      @apply max-w-lg mx-auto my-0 flex flex-col items-center justify-center gap-2;
+      @apply mx-auto my-0 flex max-w-lg flex-col items-center justify-center gap-2;
     }
-    
-    .dz-preview {
-       &.dz-image-preview {
-         @apply bg-transparent;
-       }
 
-      .dz-error-mark, 
+    .dz-preview {
+      &.dz-image-preview {
+        @apply bg-transparent;
+      }
+
+      .dz-error-mark,
       .dz-success-mark {
         & > svg {
-          @apply w-10 h-10;
+          @apply h-10 w-10;
         }
       }
 
       .dz-success-mark {
         @apply bg-success-500;
-      } 
+      }
 
       .dz-error-mark {
         @apply bg-danger-500;
-      } 
+      }
 
-      .dz-progress  {
+      .dz-progress {
         @apply h-2 border-0 bg-slate-200 dark:bg-slate-700;
 
         & > .dz-upload {
-          @apply bg-primary-500 rounded-full;
+          @apply rounded-full bg-primary-500;
         }
       }
 
       .dz-error-message {
-        @apply bg-danger-500 after:border-b-danger-500;
+        @apply -top-[60%] bg-danger-500 after:-bottom-[12px] after:left-0 after:right-0 after:top-auto after:m-auto after:border-t-[6px] after:border-b-transparent after:border-t-danger-500;
       }
 
       .dz-remove {

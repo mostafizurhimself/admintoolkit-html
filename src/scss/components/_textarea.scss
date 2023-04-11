@@ -1,17 +1,17 @@
 @layer components {
   .textarea {
-    @apply w-full min-h-[5rem] inline-block rounded-primary border border-slate-300 bg-transparent text-sm px-4 py-2 text-slate-700 placeholder:text-slate-400 focus:ring-1 focus:outline-none focus:border-primary-500 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-80 disabled:bg-slate-100 disabled:placeholder:text-slate-500 disabled:text-slate-500 dark:text-slate-300 dark:border-slate-600 dark:placeholder:text-slate-400 dark:focus:border-primary-500  dark:disabled:bg-slate-700;
+    @apply inline-block min-h-[5rem] w-full rounded-primary border border-slate-300 bg-transparent px-4 py-2 text-sm text-slate-700 placeholder:text-slate-400 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 disabled:opacity-80 disabled:placeholder:text-slate-500 dark:border-slate-600 dark:text-slate-300 dark:placeholder:text-slate-400 dark:focus:border-primary-500  dark:disabled:bg-slate-700;
 
     &-sm {
-      @apply text-xs min-h-[3rem];
+      @apply min-h-[3rem] text-xs;
     }
 
     &-md {
-      @apply text-sm min-h-[5rem];
+      @apply min-h-[5rem] text-sm;
     }
-    
+
     &-lg {
-      @apply text-base min-h-[7rem];
+      @apply min-h-[7rem] text-base;
     }
 
     &.is-valid,
@@ -28,7 +28,7 @@
     .form-validated &:invalid {
       @apply border-danger-500 focus:border-danger-500 focus:ring-1 focus:ring-danger-500 dark:border-danger-500 dark:focus:border-danger-500 dark:focus:ring-danger-500;
     }
-    
+
     &.is-invalid ~ .error-message,
     .form-validated &:invalid ~ .error-message {
       @apply block;

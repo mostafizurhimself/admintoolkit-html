@@ -1,32 +1,32 @@
 @layer components {
   .swiper {
     $swiper: &;
-    
+
     &-button-prev::after,
     &-button-next::after {
-      @apply text-2xl sm:text-4xl text-slate-100;
+      @apply text-2xl text-slate-100 sm:text-4xl;
     }
 
     &-preview {
       #{$swiper}-slide {
-        @apply opacity-50 cursor-pointer;
+        @apply cursor-pointer opacity-50;
       }
 
       #{$swiper}-slide-thumb-active {
         @apply opacity-100;
       }
     }
-    
+
     &-pagination {
       $pagination: &;
-      
+
       & > &-bullet {
-        @apply w-2 h-2 sm:w-[.6rem] sm:h-[.6rem] opacity-100 bg-black/20;
+        @apply h-2 w-2 bg-black/20 opacity-100 sm:h-[.6rem] sm:w-[.6rem];
       }
 
       &-custom {
         & > #{$pagination}-bullet {
-          @apply w-4 h-4 text-xs text-slate-400;
+          @apply h-4 w-4 text-xs text-slate-400;
         }
       }
 
