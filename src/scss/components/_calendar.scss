@@ -1,0 +1,82 @@
+@layer components {
+  .fc {
+    & &-toolbar{
+      &-title {
+        @apply text-xl;
+      }
+    }
+
+    & &-button {
+      @apply capitalize text-sm py-2 px-4 focus:shadow-none;
+
+      &:focus {
+        @apply shadow-none;
+      }
+
+      &-primary {
+        @apply bg-slate-100 border-slate-100 text-slate-500 dark:bg-slate-700 dark:border-slate-700 dark:text-slate-400;
+
+        &:hover {
+          @apply bg-slate-100 border-slate-100 text-slate-700 dark:bg-slate-700 dark:border-slate-700 dark:text-slate-200;
+        }
+
+        &:disabled {
+          @apply bg-slate-100 border-slate-100 text-slate-500 dark:bg-slate-700 dark:border-slate-700 dark:text-slate-400;
+        }
+
+        &:focus {
+          @apply shadow-none;
+        }
+
+        &:not(:disabled).fc-button-active,
+        &:not(:disabled):active {
+          @apply bg-slate-200 border-slate-200 text-slate-700 dark:bg-slate-900 dark:border-slate-900 dark:text-slate-200;
+        }
+
+        &:not(:disabled).fc-button-active:focus,
+        &:not(:disabled):active:focus {
+          @apply shadow-none;
+        }
+      }
+    }
+  }
+
+  .fc .fc-col-header-cell-cushion {
+    @apply text-sm font-medium text-slate-700 dark:text-slate-300; 
+  }
+  
+  .fc .fc-daygrid-day-number {
+    @apply text-sm font-medium text-slate-500 dark:text-slate-400;
+  }
+
+  .fc-theme-standard .fc-scrollgrid {
+    @apply border border-slate-200 dark:border-slate-600;
+  }
+
+  .fc-theme-standard td, 
+  .fc-theme-standard th {
+    @apply border border-slate-200 dark:border-slate-600;
+  }
+
+  .fc .fc-daygrid-day.fc-day-today {
+    @apply bg-primary-100 dark:bg-primary-900/30;
+  }
+
+  .fc .fc-timegrid-axis-cushion {
+    @apply max-w-[4rem] font-medium;
+  }
+
+  .fc .fc-timegrid-axis-cushion, 
+  .fc .fc-timegrid-slot-label-cushion {
+    @apply capitalize text-sm text-slate-500 dark:text-slate-400;
+  }
+
+  .fc .fc-timegrid-divider {
+    @apply hidden;
+  }
+
+  .fc .fc-timegrid-col.fc-day-today {
+    @apply bg-primary-100 dark:bg-primary-900/30;
+  }
+  
+}
