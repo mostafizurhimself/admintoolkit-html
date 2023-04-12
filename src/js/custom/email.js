@@ -209,13 +209,13 @@ const editor = new Quill(emailEditor, {
   window.TagsInput = TagsInput;
 })();
 
-const emailTags = document.querySelectorAll(".email-tags");
-emailTags.forEach((tagInput) => {
-  let tagInput1 = new TagsInput({
-    selector: tagInput.id,
+const emailInputs = document.querySelectorAll(".email-tags");
+emailInputs.forEach((emailInput) => {
+  let tagInput = new TagsInput({
+    selector: emailInput.id,
     duplicate: false,
   });
-  console.log(tagInput1);
-  tagInput1.addData([]);
+  tagInput.addData([]);
+  
 });
 //++++++++++++++++ Email Badge For Email Compose End ++++++++++++++

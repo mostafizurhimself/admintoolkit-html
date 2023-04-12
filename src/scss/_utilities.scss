@@ -20,12 +20,12 @@
     /* Firefox */
   }
 
-  // Email Tags Styles 
+    // Email Badge Styles  for Compose
   .tags-input-wrapper {
     @apply bg-transparent flex-1 flex gap-2 flex-wrap;
 
     & input {
-      @apply border-none bg-transparent outline-none flex-1 ml-2;
+      @apply border-none bg-transparent outline-none text-xs font-medium flex-1 ml-2;
     }
 
     & .tag {
