@@ -215,7 +215,7 @@ emailTags.forEach((tagInput) => {
     selector: tagInput.id,
     duplicate: false,
   });
-
+  console.log(tagInput1);
   tagInput1.addData([]);
 });
 //++++++++++++++++ Email Badge For Email Compose End ++++++++++++++
