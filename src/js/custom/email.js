@@ -218,4 +218,5 @@ emailInputs.forEach((emailInput) => {
   tagInput.addData([]);
   
 });
+
 //++++++++++++++++ Email Badge For Email Compose End ++++++++++++++
