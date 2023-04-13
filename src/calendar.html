@@ -746,14 +746,196 @@
           <!-- Page Title Ends -->
 
           <!-- Calendar Starts -->
-          <div class="container">
+          <div class="max-w-7xl mx-auto">
             <div class="card">
+              <div class="card-header flex items-center justify-between">
+                <h6>Calendar</h6>
+
+                <button type="button" class="btn btn-primary" id="btn-add-event">
+                  <i width="20" height="20" data-feather="plus"></i>
+                  <span>Add Event</span>
+                </button>
+              </div>
               <div class="card-body">
                 <div id="calendar"></div>
               </div>
             </div>
           </div>
           <!-- Calendar Ends -->
+          
+          <!-- Modal Add Event Starts -->
+          <div class="modal" id="modal-add-event">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="flex items-center justify-between">
+                    <h6>Add a New Event</h6>
+                    <button type="button" class="btn btn-plain-secondary dark:text-slate-300 dark:hover:bg-slate-700 dark:focus:bg-slate-700" data-dismiss="modal">
+                      <i data-feather="x" width="1.5rem" height="1.5rem"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="modal-body">
+                  <form id="form-add-event">
+                    <!-- Form Body -->
+                    <div class=" w-full flex flex-col gap-4 p-4">
+                      <!-- Form Row: Title -->
+                      <div class="w-full">
+                        <label class="label label-required mb-1" for="form-add-event-title">
+                          Event Title
+                        </label>
+                        <input class="input" type="text" id="form-add-event-title" name="title">
+                        <div class="error-message"></div>
+                      </div>
+                      <!-- Form Row: Start & End Date -->
+                      <div class="w-full flex flex-col md:flex-row items-center gap-4">
+                        <!-- Form Column: Start Date -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-add-event-start">
+                            Event Start Date
+                          </label>
+                          <input type="text" class="input" id="form-add-event-start" name="start">
+                          <div class="error-message"></div>
+                        </div>
+                        <!-- Form Column: End Date -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-add-event-end">
+                            Event End Date
+                          </label>
+                          <input type="text" class="input " id="form-add-event-end" name="end">
+                          <div class="error-message"></div>
+                        </div>
+                      </div>
+                      <!-- Form Row: Toggle All Day -->
+                      <div class="w-full">
+                        <label class="toggle" for="form-add-event-allDay">
+                          <input class="toggle-input peer sr-only" id="form-add-event-allDay" name="allDay" type="checkbox">
+                          <div class="toggle-body"></div>
+                          <span class="label">All Day</span>
+                        </label>
+                      </div>
+                      <!-- Form Row: URL -->
+                      <div class="w-full">
+                        <label class="label mb-1" for="form-add-event-url">
+                          Event URL
+                        </label>
+                        <input class="input" type="text" id="form-add-event-url" name="url">
+                      </div>
+                      <!-- Form Row: Location -->
+                      <div class="w-full">
+                        <label class="label mb-1" for="form-add-event-location">
+                          Event Location
+                        </label>
+                        <input class="input" type="text" id="form-add-event-location" name="location">
+                      </div>
+                      <!-- Form Row: Description -->
+                      <div class="w-full">
+                        <label class="label mb-1" for="form-add-event-description">
+                          Event Description
+                        </label>
+                        <textarea class="textarea" id="form-add-event-description" name="description"></textarea>
+                      </div>
+                    </div>
+                    <!-- Form Footer -->
+                    <div class=" w-full flex items-center gap-4 p-4">
+                      <button type="button" class="btn btn-soft-secondary" data-dismiss="modal">Cancel</button>
+                      <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>        
+          </div>
+          <!-- Modal Add Event Ends -->
+
+          <!-- Modal Update Event Starts -->
+          <div class="modal" id="modal-update-event">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="flex items-center justify-between">
+                    <h6 class="modal-title">Update Event</h6>
+                    <button type="button" class="btn btn-plain-secondary dark:text-slate-300 dark:hover:bg-slate-700 dark:focus:bg-slate-700" data-dismiss="modal">
+                      <i data-feather="x" width="1.5rem" height="1.5rem"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="modal-body">
+                  <form id="form-update-event">
+                    <!-- Form Body -->
+                    <div class=" w-full flex flex-col gap-4 p-4">
+                      <!-- Form Row: Title -->
+                      <div class="w-full">
+                        <label class="label label-required mb-1" for="form-update-event-title">
+                          Event Title
+                        </label>
+                        <input class="input" type="text" id="form-update-event-title" name="title" required>
+                        <div class="error-message"></div>
+                      </div>
+                      <!-- Form Row: Start & End Date -->
+                      <div class="w-full flex flex-col md:flex-row items-center gap-4">
+                        <!-- Form Column: Start Date -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-update-event-start" required>
+                            Event Start Date
+                          </label>
+                          <input type="text" class="input" id="form-update-event-start" name="start">
+                          <div class="error-message"></div>
+                        </div>
+                        <!-- Form Column: End Date -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-update-event-end">
+                            Event End Date
+                          </label>
+                          <input type="text" class="input " id="form-update-event-end" name="end" required>
+                          <div class="error-message"></div>
+                        </div>
+                      </div>
+                      <!-- Form Row: Toggle All Day -->
+                      <div class="w-full">
+                        <label class="toggle" for="form-update-event-allDay">
+                          <input class="toggle-input peer sr-only" id="form-update-event-allDay" name="allDay" type="checkbox">
+                          <div class="toggle-body"></div>
+                          <span class="label">All Day</span>
+                        </label>
+                      </div>
+                      <!-- Form Row: URL -->
+                      <div class="w-full">
+                        <label class="label mb-1" for="form-update-event-url">
+                          Event URL
+                        </label>
+                        <input class="input" type="text" id="form-update-event-url" name="url">
+                      </div>
+                      <!-- Form Row: Location -->
+                      <div class="w-full">
+                        <label class="label mb-1" for="form-update-event-location">
+                          Event Location
+                        </label>
+                        <input class="input" type="text" id="form-update-event-location" name="location">
+                      </div>
+                      <!-- Form Row: Description -->
+                      <div class="w-full">
+                        <label class="label mb-1" for="form-update-event-description">
+                          Event Description
+                        </label>
+                        <textarea class="textarea" id="form-update-event-description" name="description"></textarea>
+                      </div>
+                    </div>
+                    <!-- Form Footer -->
+                    <div class=" w-full flex justify-between p-4">
+                      <div class="flex items-center gap-4">
+                        <button type="button" class="btn btn-soft-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                      </div>
+                      <button id="btn-delete-event" type="button" class="btn btn-soft-danger">Delete</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>        
+          </div>
+          <!-- Modal Update Event Ends -->
         </main>
         <!-- Main Content Ends -->
         
