@@ -1,7 +1,7 @@
 @layer components {
   .tabs {
     $tabs: &;
-    @apply flex flex-col gap-4;
+    @apply flex flex-col;
 
     &-vertical {
       @apply flex-row gap-0;
@@ -26,6 +26,7 @@
     &-content {
       @apply border-0 border-black;
     }
+    
 
     &-panel {
       @apply hidden h-full w-full px-4 py-2 text-sm tracking-wide text-slate-500 dark:text-slate-400;
@@ -33,6 +34,10 @@
       &.active {
         @apply block;
       }
+    }
+
+    #{$tabs}-pill &-panel {
+      @apply px-0;
     }
 
     &-btn {
@@ -74,5 +79,7 @@
         @apply cursor-not-allowed bg-transparent opacity-40;
       }
     }
+
+
   }
 }
