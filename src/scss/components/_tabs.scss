@@ -26,7 +26,6 @@
     &-content {
       @apply border-0 border-black;
     }
-    
 
     &-panel {
       @apply hidden h-full w-full px-4 py-2 text-sm tracking-wide text-slate-500 dark:text-slate-400;
@@ -79,7 +78,5 @@
         @apply cursor-not-allowed bg-transparent opacity-40;
       }
     }
-
-
   }
 }
