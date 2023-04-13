@@ -12,29 +12,8 @@
   #chats::-webkit-scrollbar {
     display: none;
   }
-
   #chats {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-  }
-
-    // Email Badge Styles  for Compose
-  .tags-input-wrapper {
-    @apply bg-transparent flex-1 flex gap-2 flex-wrap;
-
-    & input {
-      @apply border-none bg-transparent outline-none text-xs font-medium flex-1 ml-2;
-    }
-
-    & .tag {
-      @apply inline-block bg-slate-50 dark:bg-slate-900 text-xs font-medium text-slate-600 dark:text-slate-400 rounded-full py-1 px-2 my-1 shadow;
-
-      & a {
-        @apply mx-1 inline-block cursor-pointer text-xs font-medium;
-      }
-    }
-
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
