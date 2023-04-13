@@ -1,5 +1,5 @@
 const editorControlled = createEditor('#editor-controlled', {
-  theme: 'snow'
+  theme: 'snow',
 });
 
 const controlledEditorSource = `

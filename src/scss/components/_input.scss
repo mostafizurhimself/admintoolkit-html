@@ -1,22 +1,22 @@
 @layer components {
   .input {
     $input: &;
-    @apply w-full inline-block text-sm rounded-primary appearance-none border border-slate-300 text-slate-700 bg-transparent placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:border-primary-500 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-80 disabled:bg-slate-100 disabled:placeholder:text-slate-500 disabled:text-slate-500 dark:border-slate-600 dark:placeholder:text-slate-400 dark:text-slate-300 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
+    @apply inline-block w-full appearance-none rounded-primary border border-slate-300 bg-transparent text-sm text-slate-700 placeholder:text-slate-400 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 disabled:opacity-80 disabled:placeholder:text-slate-500 dark:border-slate-600 dark:text-slate-300 dark:placeholder:text-slate-400 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
 
-    &:not([type="file"]) {
+    &:not([type='file']) {
       @apply px-4 py-2;
     }
 
-    &[type="file"] {
-      @apply overflow-hidden focus-within:ring-1 focus-within:border-primary-500 focus-within:ring-primary-500;
+    &[type='file'] {
+      @apply overflow-hidden focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500;
 
       &:not(:disabled):not([readonly]) {
         @apply cursor-pointer;
       }
 
       &::file-selector-button {
-        @apply px-4 py-2 mr-2 pointer-events-none text-sm text-slate-700 border-0 border-solid border-inherit rounded-none bg-slate-100/50 transition-colors duration-150 ease-in-out hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300;
-        
+        @apply pointer-events-none mr-2 rounded-none border-0 border-solid border-inherit bg-slate-100/50 px-4 py-2 text-sm text-slate-700 transition-colors duration-150 ease-in-out hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300;
+
         font-family: inherit;
         appearance: button;
         -webkit-appearance: button;
@@ -27,11 +27,11 @@
     &-sm {
       @apply text-xs;
 
-      &:not([type="file"]) {
+      &:not([type='file']) {
         @apply px-4 py-1.5;
       }
 
-      &[type="file"]::file-selector-button {
+      &[type='file']::file-selector-button {
         @apply px-4 py-1.5 text-xs;
       }
     }
@@ -39,49 +39,49 @@
     &-md {
       @apply text-sm;
 
-      &:not([type="file"]) {
+      &:not([type='file']) {
         @apply px-4 py-2;
       }
 
-      &[type="file"]::file-selector-button {
+      &[type='file']::file-selector-button {
         @apply px-4 py-2 text-sm;
       }
     }
-  
+
     &-lg {
       @apply text-base;
 
-      &:not([type="file"]) {
+      &:not([type='file']) {
         @apply px-4 py-3;
       }
 
-      &[type="file"]::file-selector-button {
+      &[type='file']::file-selector-button {
         @apply px-4 py-3 text-base;
       }
     }
 
     &-color {
-      @apply w-16 h-9 rounded;
-      padding: .25rem !important;
+      @apply h-9 w-16 rounded;
+      padding: 0.25rem !important;
 
       &:not(:disabled):not([readonly]) {
         @apply cursor-pointer;
       }
 
       &::-moz-color-swatch {
-        @apply border-0 rounded;
+        @apply rounded border-0;
       }
-      
+
       &#{$input}-sm {
-        @apply w-12 h-7;
+        @apply h-7 w-12;
       }
 
       &#{$input}-md {
-        @apply w-16 h-9;
+        @apply h-9 w-16;
       }
 
       &#{$input}-lg {
-        @apply w-20 h-11;
+        @apply h-11 w-20;
       }
     }
 
@@ -96,7 +96,7 @@
     }
 
     &.is-invalid,
-    .form-validated &:invalid  {
+    .form-validated &:invalid {
       @apply border-danger-500 focus:border-danger-500 focus:ring-danger-500 dark:border-danger-500 dark:focus:border-danger-500 dark:focus:ring-danger-500;
     }
 

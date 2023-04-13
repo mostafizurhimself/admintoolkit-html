@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --emptyOutDir",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{js,css,scss,html}\""
   },
   "devDependencies": {
     "@mertasan/tailwindcss-variables": "^2.5.1",
@@ -40,7 +41,6 @@
     "simplebar": "^6.2.1",
     "spinkit": "^2.0.1",
     "swiper": "^9.0.5",
-    "tag-input-js": "^0.0.4",
     "tippy.js": "^6.3.7",
     "toastify-js": "^1.12.0",
     "tom-select": "^2.2.2"

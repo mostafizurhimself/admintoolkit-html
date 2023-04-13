@@ -1,7 +1,7 @@
 @layer components {
   .modal {
     $modal: &;
-    @apply w-full h-full fixed inset-0 z-[999] hidden flex-col overflow-y-auto overflow-x-hidden px-4 py-10;
+    @apply fixed inset-0 z-[999] hidden h-full w-full flex-col overflow-y-auto overflow-x-hidden px-4 py-10;
 
     &-full {
       @apply p-0;
@@ -12,7 +12,7 @@
     }
 
     &-dialog {
-      @apply w-full max-w-xl mx-auto relative z-[1001] transform scale-90 origin-center opacity-0 transition-all duration-500 ease-in-out; 
+      @apply relative z-[1001] mx-auto w-full max-w-xl origin-center scale-90 transform opacity-0 transition-all duration-500 ease-in-out;
 
       #{$modal}-sm & {
         @apply max-w-md;
@@ -32,7 +32,7 @@
     }
 
     &-content {
-      @apply w-full h-full relative flex flex-col shadow-xl rounded-primary bg-white dark:bg-slate-800; 
+      @apply relative flex h-full w-full flex-col rounded-primary bg-white shadow-xl dark:bg-slate-800;
     }
 
     &-header,
@@ -54,7 +54,7 @@
     }
 
     &-backdrop {
-      @apply w-full h-full bg-black opacity-0 z-[1000] fixed inset-0 transition-opacity duration-500 ease-in-out;
+      @apply fixed inset-0 z-[1000] h-full w-full bg-black opacity-0 transition-opacity duration-500 ease-in-out;
 
       &.show {
         @apply opacity-40;

@@ -3,13 +3,13 @@ import DataTable from '../components/data-table';
 async function loadTable(table) {
   const tbody = table.querySelector('tbody');
 
-  if(tbody) {
-    const response  = await fetch('/json/table-datatable.json');
-    const results   = await response.json(); 
-    const records   = results.data; 
-    
-    if(records.length) { 
-      records.forEach(record => {
+  if (tbody) {
+    const response = await fetch('/json/table-datatable.json');
+    const results = await response.json();
+    const records = results.data;
+
+    if (records.length) {
+      records.forEach((record) => {
         tbody.innerHTML += `
           <tr>
             <td>
@@ -27,12 +27,14 @@ async function loadTable(table) {
             <td>${record.phone}</td>
             <td>${record.joining_date}</td>
             <td>
-              <div class="badge badge-soft-${{active: 'success', inactive: 'danger', reassigned: 'warning'}[record.status]} capitalize">
+              <div class="badge badge-soft-${
+                { active: 'success', inactive: 'danger', reassigned: 'warning' }[record.status]
+              } capitalize">
                 ${record.status}
               </div>
             </td>
           </tr>
-        `
+        `;
       });
     }
   }
@@ -111,10 +113,10 @@ const dataTableSimpleCodeViewer = createCodeViewer('#datatable-simple-code-viewe
 const dataTableSimple = document.querySelector('#datatable-simple');
 dataTableSimpleCodeViewer.render();
 
-if(dataTableSimple) {
+if (dataTableSimple) {
   loadTable(dataTableSimple)
-  .then(table => new DataTable(table))
-  .catch(error => console.log(error));
+    .then((table) => new DataTable(table))
+    .catch((error) => console.log(error));
 }
 
 //Datatable Filter
@@ -217,35 +219,36 @@ const dataTableFilterCodeViewer = createCodeViewer('#datatable-filter-code-viewe
 const dataTableFilter = document.querySelector('#datatable-filter');
 dataTableFilterCodeViewer.render();
 
-if(dataTableFilter) {
+if (dataTableFilter) {
   loadTable(dataTableFilter)
-  .then(table => new DataTable(table, {
-    tableRender: (_data, table, type) => {
-      if (type === "print") {
-        return table
-      }
-      const tHead = table.childNodes[0]
-      const filterHeaders = {
-        nodeName: "TR",
-        childNodes: tHead.childNodes[0].childNodes.map(
-          (_th, index) => ({
-            nodeName: "TD",
-            childNodes: [
-              {
-                nodeName: "INPUT",
-                attributes: {
-                  class: "datatable-input input",
-                  type: "search",
-                  "data-columns": `[${index}]`
-                }
-              }
-            ]
-          })
-        )
-      }
-      tHead.childNodes.push(filterHeaders)
-      return table
-    }
-  }))
-  .catch(error => console.log(error));
+    .then(
+      (table) =>
+        new DataTable(table, {
+          tableRender: (_data, table, type) => {
+            if (type === 'print') {
+              return table;
+            }
+            const tHead = table.childNodes[0];
+            const filterHeaders = {
+              nodeName: 'TR',
+              childNodes: tHead.childNodes[0].childNodes.map((_th, index) => ({
+                nodeName: 'TD',
+                childNodes: [
+                  {
+                    nodeName: 'INPUT',
+                    attributes: {
+                      class: 'datatable-input input',
+                      type: 'search',
+                      'data-columns': `[${index}]`,
+                    },
+                  },
+                ],
+              })),
+            };
+            tHead.childNodes.push(filterHeaders);
+            return table;
+          },
+        })
+    )
+    .catch((error) => console.log(error));
 }

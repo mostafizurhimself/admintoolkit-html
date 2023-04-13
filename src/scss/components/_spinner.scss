@@ -1,66 +1,65 @@
 @layer components {
   .spinner {
-    @apply inline-block w-8 h-8 rounded-full border-4 animate-spin border-slate-600 dark:border-slate-100 border-r-transparent dark:border-r-transparent align-[-0.125rem];
+    @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-slate-600 border-r-transparent align-[-0.125rem] dark:border-slate-100 dark:border-r-transparent;
 
-
-    // Spinner Color Styles 
+    // Spinner Color Styles
     &-primary {
-      @apply inline-block h-8 w-8 rounded-full border-4 animate-spin align-[-0.125rem] border-primary-500 dark:border-primary-500 border-r-transparent dark:border-r-transparent;
+      @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-primary-500 border-r-transparent align-[-0.125rem] dark:border-primary-500 dark:border-r-transparent;
     }
 
     &-secondary {
-      @apply inline-block h-8 w-8 rounded-full border-4 animate-spin align-[-0.125rem] border-secondary-500 dark:border-secondary-500 border-r-transparent dark:border-r-transparent;
+      @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-secondary-500 border-r-transparent align-[-0.125rem] dark:border-secondary-500 dark:border-r-transparent;
     }
 
     &-success {
-      @apply inline-block h-8 w-8 rounded-full border-4 animate-spin align-[-0.125rem] border-success-500 dark:border-success-500 border-r-transparent dark:border-r-transparent;
+      @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-success-500 border-r-transparent align-[-0.125rem] dark:border-success-500 dark:border-r-transparent;
     }
 
     &-info {
-      @apply inline-block h-8 w-8 rounded-full border-4 animate-spin align-[-0.125rem] border-info-500 dark:border-info-500 border-r-transparent dark:border-r-transparent;
+      @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-info-500 border-r-transparent align-[-0.125rem] dark:border-info-500 dark:border-r-transparent;
     }
 
     &-danger {
-      @apply inline-block h-8 w-8 rounded-full border-4 animate-spin align-[-0.125rem] border-danger-500 dark:border-danger-500 border-r-transparent dark:border-r-transparent;
+      @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-danger-500 border-r-transparent align-[-0.125rem] dark:border-danger-500 dark:border-r-transparent;
     }
 
     &-warning {
-      @apply inline-block h-8 w-8 rounded-full border-4 animate-spin align-[-0.125rem] border-warning-500 dark:border-warning-500 border-r-transparent dark:border-r-transparent;
+      @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-warning-500 border-r-transparent align-[-0.125rem] dark:border-warning-500 dark:border-r-transparent;
     }
 
     &-dark {
-      @apply inline-block h-8 w-8 rounded-full border-4 animate-spin align-[-0.125rem] border-dark-500 dark:border-dark-500 border-r-transparent dark:border-r-transparent;
+      @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-dark-500 border-r-transparent align-[-0.125rem] dark:border-dark-500 dark:border-r-transparent;
     }
 
-    // Spinner Size Stlyes 
+    // Spinner Size Stlyes
     &-xs {
-        @apply inline-block rounded-full border-4 animate-spin border-slate-600 dark:border-slate-100 border-r-transparent dark:border-r-transparent align-[-0.125rem]  w-6 h-6;
+      @apply inline-block h-6 w-6 animate-spin rounded-full border-4 border-slate-600 border-r-transparent align-[-0.125rem]  dark:border-slate-100 dark:border-r-transparent;
     }
 
     &-sm {
-        @apply inline-block rounded-full border-4 animate-spin border-slate-600 dark:border-slate-100 border-r-transparent dark:border-r-transparent align-[-0.125rem] w-8 h-8;
+      @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-slate-600 border-r-transparent align-[-0.125rem] dark:border-slate-100 dark:border-r-transparent;
     }
 
     &-md {
-        @apply inline-block rounded-full border-4 animate-spin border-slate-600 dark:border-slate-100 border-r-transparent dark:border-r-transparent align-[-0.125rem] w-10 h-10;
+      @apply inline-block h-10 w-10 animate-spin rounded-full border-4 border-slate-600 border-r-transparent align-[-0.125rem] dark:border-slate-100 dark:border-r-transparent;
     }
 
     &-lg {
-        @apply inline-block rounded-full border-4 animate-spin border-slate-600 dark:border-slate-100 border-r-transparent dark:border-r-transparent align-[-0.125rem] w-12 h-12;
+      @apply inline-block h-12 w-12 animate-spin rounded-full border-4 border-slate-600 border-r-transparent align-[-0.125rem] dark:border-slate-100 dark:border-r-transparent;
     }
 
     &-xl {
-        @apply inline-block rounded-full border-4 animate-spin border-slate-600 dark:border-slate-100 border-r-transparent dark:border-r-transparent align-[-0.125rem] w-16 h-16;
+      @apply inline-block h-16 w-16 animate-spin rounded-full border-4 border-slate-600 border-r-transparent align-[-0.125rem] dark:border-slate-100 dark:border-r-transparent;
     }
   }
 
   // Pulse Spinner Styles
   .spinner-pulse {
-    @apply relative flex items-center justify-center h-12 w-12;
+    @apply relative flex h-12 w-12 items-center justify-center;
 
     & > div {
-      @apply absolute w-full h-full rounded-full border-4 ;
-    // Custom css
+      @apply absolute h-full w-full rounded-full border-4;
+      // Custom css
       backface-visibility: hidden;
       animation: loader 1500ms linear infinite;
     }
@@ -80,36 +79,33 @@
         opacity: 0;
       }
     }
-  // Spinner Color Styles
+    // Spinner Color Styles
     &-primary {
-        @apply border-primary-500 ;
+      @apply border-primary-500;
     }
 
     &-secondary {
-        @apply border-secondary-500;
+      @apply border-secondary-500;
     }
 
     &-success {
-        @apply border-success-500;
+      @apply border-success-500;
     }
 
     &-info {
-        @apply border-info-500;
+      @apply border-info-500;
     }
 
     &-danger {
-        @apply border-danger-500;
+      @apply border-danger-500;
     }
 
     &-warning {
-        @apply border-warning-500;
+      @apply border-warning-500;
     }
 
     &-dark {
-        @apply border-dark-500;
+      @apply border-dark-500;
     }
-
-
   }
-
 }

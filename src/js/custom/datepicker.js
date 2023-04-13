@@ -1,4 +1,4 @@
-const disabledDatepickerSourceCode =`
+const disabledDatepickerSourceCode = `
   <input class="input input-date-range-disabled" type="text" placeholder="YYYY-MM-DD">
 
   <script>
@@ -20,7 +20,7 @@ const disabledDatepickerSourceCode =`
   </script>
 `;
 
-const customDatepickerSourceCode =`
+const customDatepickerSourceCode = `
   <input class="input input-date-custom" type="text" placeholder="YYYY-MM-DD">
 
   <script>
@@ -31,8 +31,8 @@ const customDatepickerSourceCode =`
 `;
 
 // Create CodeViewer
-const disabledDatepickerCodeViewer = createCodeViewer('#disabled-datepicker-code-viewer', disabledDatepickerSourceCode);    
-const customDatepickerCodeViewer = createCodeViewer('#custom-datepicker-code-viewer', customDatepickerSourceCode);    
+const disabledDatepickerCodeViewer = createCodeViewer('#disabled-datepicker-code-viewer', disabledDatepickerSourceCode);
+const customDatepickerCodeViewer = createCodeViewer('#custom-datepicker-code-viewer', customDatepickerSourceCode);
 
 // Render CodeViewer
 disabledDatepickerCodeViewer.render();

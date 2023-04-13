@@ -1423,11 +1423,6 @@ swiper@^9.0.5:
   dependencies:
     ssr-window "^4.0.2"
 
-tag-input-js@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/tag-input-js/-/tag-input-js-0.0.4.tgz#f93d54d91a04e69c45b76db8bd7b43c469a457f8"
-  integrity sha512-Jag57NQRK84MDUNx2AH46wqT5YjLCyIwTwftB+PdJGQMdwdD5jNjOTKanWAKb+fvxTgLQKSSt3S6nRgDIjME6Q==
-
 tailwindcss@^3.2.6:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.3.1.tgz#b6662fab6a9b704779e48d083a9fef5a81d2b81e"

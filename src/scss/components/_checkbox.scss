@@ -1,50 +1,50 @@
 @layer components {
   .checkbox {
-    @apply w-4 h-4 rounded text-primary-500 bg-transparent border-slate-300 focus:ring-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-80 dark:border-slate-600 dark:focus:ring-offset-slate-900;
-    
+    @apply h-4 w-4 rounded border-slate-300 bg-transparent text-primary-500 focus:ring-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-80 dark:border-slate-600 dark:focus:ring-offset-slate-900;
+
     &-sm {
-      @apply w-3.5 h-3.5;
+      @apply h-3.5 w-3.5;
     }
-  
+
     &-md {
-      @apply w-4 h-4;
+      @apply h-4 w-4;
     }
-  
+
     &-lg {
-      @apply w-5 h-5;
+      @apply h-5 w-5;
     }
 
     &-primary {
-      @apply text-primary-500 border-primary-500 focus:ring-primary-500;
+      @apply border-primary-500 text-primary-500 focus:ring-primary-500;
     }
 
     &-secondary {
-      @apply text-secondary-500 border-secondary-500 focus:ring-secondary-500;
+      @apply border-secondary-500 text-secondary-500 focus:ring-secondary-500;
     }
 
     &-success {
-      @apply text-success-500 border-success-500 focus:ring-success-500;
+      @apply border-success-500 text-success-500 focus:ring-success-500;
     }
 
     &-danger {
-      @apply text-danger-500 border-danger-500 focus:ring-danger-500;
+      @apply border-danger-500 text-danger-500 focus:ring-danger-500;
     }
 
     &-warning {
-      @apply text-warning-500 border-warning-500 focus:ring-warning-500;
+      @apply border-warning-500 text-warning-500 focus:ring-warning-500;
     }
 
     &-info {
-      @apply text-info-500 border-info-500 focus:ring-info-500;
+      @apply border-info-500 text-info-500 focus:ring-info-500;
     }
 
     &-dark {
-      @apply text-dark-500 border-dark-500 focus:ring-dark-500;
+      @apply border-dark-500 text-dark-500 focus:ring-dark-500;
     }
 
     &.is-valid,
     .form-validated &:valid {
-      @apply text-success-500 border-success-500 ring-2 ring-offset-white ring-offset-2 ring-success-500 dark:ring-offset-slate-900;
+      @apply border-success-500 text-success-500 ring-2 ring-success-500 ring-offset-2 ring-offset-white dark:ring-offset-slate-900;
     }
 
     &.is-valid ~ .label,
@@ -54,7 +54,7 @@
 
     &.is-invalid,
     .form-validated &:invalid {
-      @apply text-danger-500 border-danger-500 ring-2 ring-offset-white ring-offset-2 ring-danger-500 dark:ring-offset-slate-900;
+      @apply border-danger-500 text-danger-500 ring-2 ring-danger-500 ring-offset-2 ring-offset-white dark:ring-offset-slate-900;
     }
 
     &.is-invalid ~ .label,
