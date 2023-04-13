@@ -1,7 +1,7 @@
 @layer components {
   .tabs {
     $tabs: &;
-    @apply flex flex-col gap-4;
+    @apply flex flex-col;
 
     &-vertical {
       @apply flex-row gap-0;
@@ -33,6 +33,10 @@
       &.active {
         @apply block;
       }
+    }
+
+    #{$tabs}-pill &-panel {
+      @apply px-0;
     }
 
     &-btn {
