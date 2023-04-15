@@ -37,7 +37,7 @@ const editor = {
 
   init() {
     const editors = document.querySelectorAll('.editor');
-    const bubbleEditors = document.querySelectorAll('.editor-bubble');
+    const popupEditors = document.querySelectorAll('.editor-popup');
 
     // Default editor
     if (editors.length) {
@@ -52,8 +52,8 @@ const editor = {
     }
 
     // Default editor
-    if (bubbleEditors.length) {
-      [...bubbleEditors].forEach(
+    if (popupEditors.length) {
+      [...popupEditors].forEach(
         (editor) =>
           new Quill(editor, {
             theme: 'bubble',
