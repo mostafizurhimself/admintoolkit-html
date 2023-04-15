@@ -18,7 +18,14 @@ export default {
   content: ['./src/**/*.{html,css,scss,js}'],
   theme: {
     container: {
-      center: true
+      center: true,
+      screens: {
+        sm: '100%',
+        md: '100%',
+        lg: '100%',
+        xl: '100%',
+        "2xl": "1536px",
+      }
     },
     extend: {
       fontFamily: {
