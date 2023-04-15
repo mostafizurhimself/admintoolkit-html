@@ -25,6 +25,11 @@
   "dependencies": {
     "@floating-ui/dom": "^1.2.1",
     "@fortawesome/fontawesome-free": "^6.3.0",
+    "@fullcalendar/core": "^6.1.5",
+    "@fullcalendar/daygrid": "^6.1.5",
+    "@fullcalendar/interaction": "^6.1.5",
+    "@fullcalendar/list": "^6.1.5",
+    "@fullcalendar/timegrid": "^6.1.5",
     "@tabler/icons-webfont": "^2.2.0",
     "accordion-js": "^3.3.2",
     "apexcharts": "^3.37.2",
