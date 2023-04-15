@@ -12,7 +12,7 @@ export default defineConfig({
   root: 'src',
   publicDir: 'public',
   optimizeDeps: {
-    entries,
+    entries: Object.keys(entries),
   },
   build: {
     outDir: resolve(__dirname, 'dist'),
