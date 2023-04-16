@@ -787,6 +787,41 @@
             </section>
             <!-- Overview Section End -->
 
+            <!-- Sales Analytics & Top Categories section Start  -->
+            <section class="grid md:grid-cols-1 lg:grid-cols-5 gap-6">
+              <!-- Sales Analytics -->
+              <div class="card lg:col-span-3">
+                <div class="card-body">
+                  <div class="flex justify-between items-center">
+                    <h4 class="text-xl font-semibold ">Sales Analytics</h4>
+                    <ul>
+                      <li>
+                        <span>
+
+                        </span>
+                      </li>
+                    </ul>
+                    <select class="select w-28">
+                      <option value="1">Yearly</option>
+                      <option value="2">Monthly</option>
+                      <option value="2">Date & Time</option>
+                    </select>
+                  </div>
+                  <!-- Chart  -->
+                  <div class="w-full">
+                    <div id="area-chart"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Top Categories -->
+              <div class="card lg:col-span-2">
+                <div class="card-body">
+                  <h4>Top Categories</h4>
+                </div>
+              </div>
+            </section>
+            <!-- Sales Analytics & Top Categories section End  -->
+
           </div>
         </main>
         <!-- Main Content Ends -->
@@ -811,6 +846,56 @@
     <!-- Wrapper Ends -->
   </div>
   <script src="./js/app.js" type="module"></script>
+  <script type="module">
+    import ApexCharts from 'apexcharts';
+    const options = {
+      series: [
+        {
+          name: 'Total Sales',
+          data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 45, 56],
+        },
+        {
+          name: 'Total Orders',
+          data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 67, 24],
+        }
+      ],
+      fill: {
+        colors: ['#8B5CF6'],
+        type: 'gradient',
+        gradient: {
+          opacityFrom: 0.3,
+          opacityTo: 0,
+        }
+      },
+      chart: {
+        type: 'area',
+        height: 350,
+        zoom: {
+          enabled: false,
+        },
+        toolbar: {
+          show: false,
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        curve: 'smooth',
+      },
+      xaxis: {
+        categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      },
+      yaxis: {
+        opposite: false,
+      },
+      legend: {
+        horizontalAlign: 'left',
+      },
+    }
+    let chart = new ApexCharts(document.querySelector("#area-chart"), options);
+    chart.render();
+  </script>
 </body>
 
 </html>
