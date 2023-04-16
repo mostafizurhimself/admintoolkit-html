@@ -795,9 +795,10 @@
                   <!-- Chart wrap -->
                   <div id="chart-wrap">
                     <div class="flex flex-wrap gap-3 md:gap-0 justify-between items-center">
-                      <h4 class="text-xl font-semibold ">Sales Analytics</h4>
+                      <!-- Chart Title  -->
+                      <h4 class="text-xl font-semibold">Sales Analytics</h4>
                       <!-- Legends  -->
-                      <div class="legend flex gap-2 items-center">
+                      <div class="area-legend flex gap-2 items-center">
                         <label for="sales" class="pretty p-svg p-smooth">
                           <input type="checkbox" id="sales" class="hidden" checked value="Total Sales">
                           <div class="state p-primary flex items-center gap-1 cursor-pointer">
@@ -828,8 +829,39 @@
               </div>
               <!-- Top Categories -->
               <div class="card lg:col-span-2">
-                <div class="card-body">
-                  <h4>Top Categories</h4>
+                <div class="card-body flex flex-col justify-between items-center">
+                  <div class="flex justify-between">
+                    <h4 class="text-xl font-semibold">Top Categories</h4>
+
+                  </div>
+                  <div id="chart-wrap" class="w-full flex-grow-1">
+                    <!-- Chart  -->
+                    <div id="pie-chart"></div>
+                    <!-- Legends  -->
+                    <!-- <div class="pie-legend  flex justify-center gap-2 items-center">
+                      <label for="sales" class="pretty p-svg p-smooth">
+                        <input type="checkbox" id="sales" class="hidden" checked value="Camera">
+                        <div class="state p-primary flex items-center gap-1 cursor-pointer">
+                          <div class="h-4 w-4 rounded-full bg-primary-500 "></div>
+                          <span class="text-slate-600 dark:text-slate-300 font-medium">Camera</span>
+                        </div>
+                      </label>
+                      <label for="sales" class="pretty p-svg p-smooth">
+                        <input type="checkbox" id="sales" class="hidden" checked value="Sunglass">
+                        <div class="state p-primary flex items-center gap-1 cursor-pointer">
+                          <div class="h-4 w-4 rounded-full bg-[#FDE68A] "></div>
+                          <span class="text-slate-600 dark:text-slate-300 font-medium">Sunglass</span>
+                        </div>
+                      </label>
+                      <label for="orders" class="pretty  p-svg p-smooth">
+                        <input type="checkbox" id="orders" class="hidden" checked value="MacBook">
+                        <div class="state p-success flex items-center gap-1 cursor-pointer">
+                          <div class="h-4 w-4 rounded-full bg-[#FDA4AF] "></div>
+                          <span class="text-slate-600 dark:text-slate-300 font-medium">MacBook</span>
+                        </div>
+                      </label>
+                    </div> -->
+                  </div>
                 </div>
               </div>
             </section>
@@ -861,7 +893,37 @@
   <script src="./js/app.js" type="module"></script>
   <script type="module">
     import ApexCharts from 'apexcharts';
-    const options = {
+    const pieOptions = {
+
+      series: [41, 17, 15],
+      labels: ['Camera', 'Sunglass', 'MacBook'],
+      colors: ['#8B5CF6', '#FDE68A', '#FDA4AF'],
+      chart: {
+        type: 'donut',
+        width: '100%',
+      },
+      plotOptions: {
+        pie: {
+          startAngle: -90,
+          endAngle: 90,
+          offsetY: 50,
+          dataLabels: {
+            enabled: false,
+            style: {
+              display: 'none',
+              visibility: 'invisible'
+            },
+          },
+
+        }
+      },
+      legend: {
+        // show: false
+        position: 'bottom',
+        offsetY: -130,
+      },
+    };
+    const areaOptions = {
       colors: ['#8C5EF6', '#1BA0FE'],
       series: [
         {
@@ -908,16 +970,18 @@
         show: false,
       },
     }
-    let chart = new ApexCharts(document.querySelector("#area-chart"), options);
-    chart.render();
-    // For Custom Legends
-    const allLegends = document.querySelectorAll(".legend input[type='checkbox']")
+    let areaChart = new ApexCharts(document.querySelector("#area-chart"), areaOptions);
+    areaChart.render();
+    // AreaChart Custom Legends 
+    const allLegends = document.querySelectorAll(".area-legend input[type='checkbox']")
     allLegends.forEach(legend => {
       legend.addEventListener('click', event => {
-        chart.toggleSeries(event.target.value)
+        areaChart.toggleSeries(event.target.value)
         legend.parentNode.classList.toggle('opacity-20')
       })
     })
+    var pieChart = new ApexCharts(document.querySelector("#pie-chart"), pieOptions);
+    pieChart.render();
   </script>
 </body>
 
