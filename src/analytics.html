@@ -830,13 +830,40 @@
               <!-- Top Categories -->
               <div class="card lg:col-span-2">
                 <div class="card-body flex flex-col justify-between items-center">
-                  <div class="flex justify-between">
+                  <div class="flex justify-between w-full">
                     <h4 class="text-xl font-semibold">Top Categories</h4>
-
+                    <div class="dropdown">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-3xl text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[200px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-4">
+                              <i class="h-5 text-slate-500" data-feather="edit"></i>
+                              Edit
+                            </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-4">
+                              <i class="h-5 text-slate-500" data-feather="copy"></i>
+                              Duplicate
+                            </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-4">
+                              <i class="h-5 text-slate-500" data-feather="trash-2"></i>
+                              Delete
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                  <div id="chart-wrap" class="w-full flex-grow-1">
+
+                  <div id="chart-wrap" class="w-full h-full">
                     <!-- Chart  -->
-                    <div id="pie-chart"></div>
+                    <div id="pie-chart" class="w-full"></div>
                     <!-- Legends  -->
                     <!-- <div class="pie-legend  flex justify-center gap-2 items-center">
                       <label for="sales" class="pretty p-svg p-smooth">
@@ -866,6 +893,59 @@
               </div>
             </section>
             <!-- Sales Analytics & Top Categories section End  -->
+            <!-- Sales By Location & Source Visits Section  Start  -->
+            <section class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+              <!-- Location  -->
+              <div class="card col-span-1 lg:col-span-3">
+                <div class="card-body">
+                  <div class="flex flex-wrap justify-between">
+                    <h4>Sales By Location</h4>
+                    <select class="select w-full md:w-48">
+                      <option value="1">Top Country</option>
+                      <option value="1">Latest Country</option>
+                      <option value="1">New Country</option>
+                      <option value="1">Feature Country</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Source Visits -->
+              <div class="card col-span-1 lg:col-span-2">
+                <div class="card-body">
+                  <div class="flex justify-between w-full">
+                    <h4 class="text-xl font-semibold">Source Visits</h4>
+                    <div class="dropdown">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-3xl text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[200px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-4">
+                              <i class="h-5 text-slate-500" data-feather="edit"></i>
+                              Edit
+                            </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-4">
+                              <i class="h-5 text-slate-500" data-feather="copy"></i>
+                              Duplicate
+                            </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-4">
+                              <i class="h-5 text-slate-500" data-feather="trash-2"></i>
+                              Delete
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Sales By Location & Source Visits Section  End  -->
 
           </div>
         </main>
@@ -970,6 +1050,7 @@
         show: false,
       },
     }
+    // Area Chart Start 
     let areaChart = new ApexCharts(document.querySelector("#area-chart"), areaOptions);
     areaChart.render();
     // AreaChart Custom Legends 
@@ -980,8 +1061,11 @@
         legend.parentNode.classList.toggle('opacity-20')
       })
     })
-    var pieChart = new ApexCharts(document.querySelector("#pie-chart"), pieOptions);
+    // Area Chart End 
+    // Pie Chart Start 
+    let pieChart = new ApexCharts(document.querySelector("#pie-chart"), pieOptions);
     pieChart.render();
+    // Pie Chart Start
   </script>
 </body>
 
