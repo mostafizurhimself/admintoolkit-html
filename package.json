@@ -19,12 +19,17 @@
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.3",
     "sass": "^1.58.1",
-    "tailwindcss": "^3.2.6",
+    "tailwindcss": "^3.3.1",
     "vite": "^4.1.0"
   },
   "dependencies": {
     "@floating-ui/dom": "^1.2.1",
     "@fortawesome/fontawesome-free": "^6.3.0",
+    "@fullcalendar/core": "^6.1.5",
+    "@fullcalendar/daygrid": "^6.1.5",
+    "@fullcalendar/interaction": "^6.1.5",
+    "@fullcalendar/list": "^6.1.5",
+    "@fullcalendar/timegrid": "^6.1.5",
     "@tabler/icons-webfont": "^2.2.0",
     "accordion-js": "^3.3.2",
     "apexcharts": "^3.37.2",

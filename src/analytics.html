@@ -792,23 +792,36 @@
               <!-- Sales Analytics -->
               <div class="card lg:col-span-3">
                 <div class="card-body">
-                  <div class="flex justify-between items-center">
-                    <h4 class="text-xl font-semibold ">Sales Analytics</h4>
-                    <ul>
-                      <li>
-                        <span>
+                  <!-- Chart wrap -->
+                  <div id="chart-wrap">
+                    <div class="flex justify-between items-center">
+                      <h4 class="text-xl font-semibold ">Sales Analytics</h4>
+                      <!-- Legends  -->
+                      <div class="legend flex gap-2 items-center">
+                        <label for="sales" class="pretty p-svg p-smooth">
+                          <input type="checkbox" id="sales" class="hidden" checked value="Total Sales">
+                          <div class="state p-primary flex items-center gap-1 cursor-pointer">
+                            <div class="h-4 w-4 rounded-full bg-primary-500 "></div>
+                            <span>Total Sales</span>
+                          </div>
+                        </label>
 
-                        </span>
-                      </li>
-                    </ul>
-                    <select class="select w-28">
-                      <option value="1">Yearly</option>
-                      <option value="2">Monthly</option>
-                      <option value="2">Date & Time</option>
-                    </select>
-                  </div>
-                  <!-- Chart  -->
-                  <div class="w-full">
+                        <label for="orders" class="pretty  p-svg p-smooth">
+                          <input type="checkbox" id="orders" class="hidden" checked value="Total Orders">
+                          <div class="state p-success flex items-center gap-1 cursor-pointer">
+                            <div class="h-4 w-4 rounded-full bg-[#1BA0FE] "></div>
+                            <span class="text-slate-600 dark:text-slate-300 font-medium">Total Orders</span>
+                          </div>
+                        </label>
+                      </div>
+                      <!-- Select By Chart -->
+                      <select class="select w-28">
+                        <option value="1">Yearly</option>
+                        <option value="2">Monthly</option>
+                        <option value="2">Date & Time</option>
+                      </select>
+                    </div>
+                    <!-- Chart  -->
                     <div id="area-chart"></div>
                   </div>
                 </div>
@@ -849,14 +862,15 @@
   <script type="module">
     import ApexCharts from 'apexcharts';
     const options = {
+      colors: ['#8C5EF6', '#1BA0FE'],
       series: [
         {
           name: 'Total Sales',
-          data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 45, 56],
+          data: [0, 5, 7, 16, 21, 38, 43, 80, 76, 45, 56],
         },
         {
           name: 'Total Orders',
-          data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 67, 24],
+          data: [0, 5, 8, 18, 22, 45, 47, 96, 85, 67, 50],
         }
       ],
       fill: {
@@ -887,14 +901,22 @@
         categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       },
       yaxis: {
-        opposite: false,
+        categories: ['0k', '10k', '20k', '30k', '40k', '50k']
       },
       legend: {
-        horizontalAlign: 'left',
+        show: false,
       },
     }
     let chart = new ApexCharts(document.querySelector("#area-chart"), options);
     chart.render();
+    // For Custom Legends
+    const allLegends = document.querySelectorAll(".legend input[type='checkbox']")
+    allLegends.forEach(legend => {
+      legend.addEventListener('click', event => {
+        chart.toggleSeries(event.target.value)
+        legend.parentNode.classList.toggle('opacity-20')
+      })
+    })
   </script>
 </body>
 
