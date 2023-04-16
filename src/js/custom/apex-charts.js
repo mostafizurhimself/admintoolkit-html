@@ -648,7 +648,7 @@ radarChart.render();
 createCodeViewer('#radar-chart-code-viewer', sourceCodeTemplate(radarChartElement.id)).render();
 // radar Chart End
 
-window.apex.chart = {
+window.Apex.chart = {
   fontFamily: {
     sans: ['Poppins', ...defaultTheme.fontFamily.sans],
   },
