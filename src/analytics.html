@@ -794,7 +794,7 @@
                 <div class="card-body">
                   <!-- Chart wrap -->
                   <div id="chart-wrap">
-                    <div class="flex justify-between items-center">
+                    <div class="flex flex-wrap gap-3 md:gap-0 justify-between items-center">
                       <h4 class="text-xl font-semibold ">Sales Analytics</h4>
                       <!-- Legends  -->
                       <div class="legend flex gap-2 items-center">
@@ -802,7 +802,7 @@
                           <input type="checkbox" id="sales" class="hidden" checked value="Total Sales">
                           <div class="state p-primary flex items-center gap-1 cursor-pointer">
                             <div class="h-4 w-4 rounded-full bg-primary-500 "></div>
-                            <span>Total Sales</span>
+                            <span class="text-slate-600 dark:text-slate-300 font-medium">Total Sales</span>
                           </div>
                         </label>
 
@@ -815,7 +815,7 @@
                         </label>
                       </div>
                       <!-- Select By Chart -->
-                      <select class="select w-28">
+                      <select class="select w-full md:w-32">
                         <option value="1">Yearly</option>
                         <option value="2">Monthly</option>
                         <option value="2">Date & Time</option>
@@ -866,11 +866,11 @@
       series: [
         {
           name: 'Total Sales',
-          data: [0, 5, 7, 16, 21, 38, 43, 80, 76, 45, 56],
+          data: [0, 1000, 7000, 16000, 21000, 38000, 43000, 30000, 36000, 25000, 36000],
         },
         {
           name: 'Total Orders',
-          data: [0, 5, 8, 18, 22, 45, 47, 96, 85, 67, 50],
+          data: [0, 1100, 8000, 18000, 22000, 45000, 40000, 38000, 39000, 44000, 30000],
         }
       ],
       fill: {
@@ -901,7 +901,8 @@
         categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       },
       yaxis: {
-        categories: ['0k', '10k', '20k', '30k', '40k', '50k']
+        min: 0,
+        max: 50000
       },
       legend: {
         show: false,
