@@ -951,7 +951,7 @@
               <div class="grid grid-cols-1 gap-6">
                 <!-- Selling Product  -->
                 <div class="card">
-                  <div class="card-body flex flex-col gap-4">
+                  <div class="card-body flex flex-col gap-2">
                     <div class="flex flex-wrap justify-between items-center">
                       <h4 class="text-xl font-semibold">Top Selling Product</h4>
                       <div class="flex items-center">
@@ -979,7 +979,7 @@
                 </div>
                 <!-- Most Viewed Product -->
                 <div class="card">
-                  <div class="card-body">
+                  <div class="card-body flex flex-col gap-2">
                     <div class="flex flex-wrap justify-between items-center">
                       <h4 class="text-xl font-semibold">Most Viewed Product</h4>
                       <div class="flex items-center">
@@ -1001,6 +1001,127 @@
                           <i class='bx bxs-star'></i>
                           <i class='bx bx-star'></i>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="flex justify-between w-full">
+                    <h4 class="text-xl font-semibold">Customer Satisfaction</h4>
+                    <div class="dropdown">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-3xl text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[200px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-4">
+                              <i class="h-5 text-slate-500" data-feather="edit"></i>
+                              Edit
+                            </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-4">
+                              <i class="h-5 text-slate-500" data-feather="copy"></i>
+                              Duplicate
+                            </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-4">
+                              <i class="h-5 text-slate-500" data-feather="trash-2"></i>
+                              Delete
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <h3 class="text-xl font-semibold text-slate-700 dark:text-slate-300">9.4</h3>
+                    <span class="text-success-500 flex items-center text-xs font-medium">+175<i class="h-3 w-3"
+                        stroke-width="3px" data-feather="arrow-up-left"></i></span>
+                  </div>
+                  <p class="text-sm font-medium text-slate-600 dark:text-slate-400 my-1">Performance Score</p>
+                  <!-- Performance Score Progress -->
+                  <div class="flex gap-[6px] w-full py-1">
+                    <div class="h-2 w-[40%] bg-primary-500 rounded-primary"></div>
+                    <div class="h-2 w-[20%] bg-success-500 rounded-primary"></div>
+                    <div class="h-2 w-[16%] bg-info-500 rounded-primary"></div>
+                    <div class="h-2 w-[18%] bg-warning-500 rounded-primary"></div>
+                    <div class="h-2 w-[10%] bg-danger-500 rounded-primary"></div>
+                  </div>
+                  <br>
+                  <div class="overflow-x-auto flex flex-col justify-end gap-8">
+                    <!-- Excellent -->
+                    <div class="grid grid-cols-3 w-full">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-primary-500"></div>
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">Excellent
+                        </p>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">1050</p>
+                      </div>
+                      <div class="flex justify-end items-center">
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">40%</p>
+                      </div>
+                    </div>
+                    <!-- Very Good  -->
+                    <div class="grid grid-cols-3 w-full">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-success-500"></div>
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">Very Good
+                        </p>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">426</p>
+                      </div>
+                      <div class="flex justify-end items-center">
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">20%</p>
+                      </div>
+                    </div>
+                    <!-- Good  -->
+                    <div class="grid grid-cols-3 w-full">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-info-500"></div>
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">Good
+                        </p>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">345</p>
+                      </div>
+                      <div class="flex justify-end items-center">
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">16%</p>
+                      </div>
+                    </div>
+                    <!-- Poor  -->
+                    <div class="grid grid-cols-3 w-full">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-warning-500"></div>
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">Poor
+                        </p>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">410</p>
+                      </div>
+                      <div class="flex justify-end items-center">
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">18%</p>
+                      </div>
+                    </div>
+                    <!-- Very Poor  -->
+                    <div class="grid grid-cols-3 w-full">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-danger-500"></div>
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium"> Very Poor
+                        </p>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">127</p>
+                      </div>
+                      <div class="flex justify-end items-center">
+                        <p class="whitespace-nowrap text-sm text-slate-700 dark:text-slate-300 font-medium">10%</p>
                       </div>
                     </div>
                   </div>
