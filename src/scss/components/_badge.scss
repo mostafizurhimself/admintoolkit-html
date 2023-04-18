@@ -1,6 +1,14 @@
 @layer components {
   .badge {
-    @apply inline-flex items-center rounded-primary px-2 py-0.5 text-xs;
+    @apply inline-flex items-center justify-center rounded-primary px-2 py-0.5 text-xs;
+
+    &-circle {
+      @apply w-5 h-5 rounded-full p-0;
+    }
+
+    &-dot {
+      @apply w-2 h-2 rounded-full p-0;
+    }
 
     &-primary {
       @apply bg-primary-500 text-primary-100;

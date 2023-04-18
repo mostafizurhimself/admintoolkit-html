@@ -1,222 +1,384 @@
+"use strict";
+
+import Tagify from '@yaireo/tagify'
 import Quill from 'quill';
-//  Chat List Toggle
-const emailList = document.getElementById('email-list');
-const hideEmailList = document.getElementById('hide-email-list');
-const openEmailList = document.getElementById('open-email-list');
-const overlay = document.getElementById('overlay');
-// Open Email List
-const getOpenEmailList = () => {
-  emailList.classList.remove('-translate-x-[350px]');
-  emailList.classList.add('translate-x-0');
-  overlay.classList.remove('invisible', 'opacity-0');
-  overlay.classList.add('visible', 'opacity-100');
-};
 
-// Hide Email List
-const getHideEmailList = () => {
-  overlay.classList.remove('opacity-100');
-  overlay.classList.add('opacity-0');
-  overlay.classList.remove('visible');
-  setTimeout(() => {
-    emailList.classList.remove('translate-x-0');
-    emailList.classList.add('-translate-x-[350px]');
-    overlay.classList.add('invisible');
-  }, 100);
-};
+document.addEventListener('DOMContentLoaded', function () {
+  (function () {
+    const emailUIMailSelectAll = document.querySelector('#email-ui-mail-select-all');
+    const emailUIMailMARAll = document.querySelector('#email-ui-mail-mar-all');
+    const emailUIMailDeleteAll = document.querySelector('#email-ui-mail-delete-all');
+    const emailUIMailList = document.querySelector('.email-ui-mail-list');
+    const emailUIMailListItems = emailUIMailList.querySelectorAll('.email-ui-mail-list-item');
+    const emailUIFilter = document.querySelector('.email-ui-filter');
+    const emailUIFilterItems = emailUIFilter.querySelectorAll('.email-ui-filter-item');
+    const emailUIReplyEditor = document.querySelector('#email-ui-reply-editor');
+    const emailComposeBtnCC = document.querySelector('#email-compose-btn-cc');
+    const emailComposeBtnBCC = document.querySelector('#email-compose-btn-bcc');
+    const emailComposeInputTo = document.querySelector('#email-compose-input-to');
+    const emailComposeInputCC = document.querySelector('#email-compose-input-cc');
+    const emailComposeInputBCC = document.querySelector('#email-compose-input-bcc');
+    const emailComposeEditor = document.querySelector('#email-compose-editor');
+    const sidebarToggles = document.querySelectorAll('[data-toggle="sidebar"]');
 
-//  EventListeners
-openEmailList.addEventListener('click', getOpenEmailList);
-overlay.addEventListener('click', getHideEmailList);
-hideEmailList.addEventListener('click', getHideEmailList);
-emailList.addEventListener('click', (event) => {
-  if (event.target === emailList) getHideEmailList();
-});
-
-// Email Compose
-const emailEditor = document.getElementById('email-editor');
-const ccToggle = document.getElementById('cc-toggle');
-const bccToggle = document.getElementById('bcc-toggle');
-bccToggle.addEventListener('click', () => {
-  document.getElementById('bcc-input').classList.toggle('hidden');
-});
-ccToggle.addEventListener('click', () => {
-  document.getElementById('cc-input').classList.toggle('hidden');
-});
-// Email Editor
-const editor = new Quill(emailEditor, {
-  theme: 'snow',
-  bounds: emailEditor,
-  placeholder: 'write your message',
-});
-
-//++++++++++++++++ Email Badge For Email Compose Start  ++++++++++++++
-(function () {
-  "use strict";
-
-  // Plugin Constructor
-  var TagsInput = function (opts) {
-    this.options = Object.assign(TagsInput.defaults, opts);
-    this.init();
-  };
-
-  // Initialize the plugin
-  TagsInput.prototype.init = function (opts) {
-    this.options = opts ? Object.assign(this.options, opts) : this.options;
-
-    if (this.initialized) this.destroy();
-
-    if (
-      !(this.orignal_input = document.getElementById(this.options.selector))
-    ) {
-      console.error(
-        "tags-input couldn't find an element with the specified ID"
-      );
-      return this;
+    // Initialize Mail Select All
+    if (emailUIMailSelectAll) {
+      emailUIMailSelectAll.addEventListener('click', function (e) {
+        const itemSelects = document.querySelectorAll('.email-ui-mail-list-item-select');
+        [...itemSelects].forEach(select => {
+          select.checked = this.checked;
+        })
+      })
     }
 
-    this.arr = [];
-    this.wrapper = document.createElement("div");
-    this.input = document.createElement("input");
-    init(this);
-    initEvents(this);
+    // Initialize Mail MAR(Mark as read) All
+    if (emailUIMailMARAll) {
+      emailUIMailMARAll.addEventListener('click', function (e) {
+        const checkedItemSelects = document.querySelectorAll('.email-ui-mail-list-item-select:checked');
 
-    this.initialized = true;
-    return this;
-  };
+        if (checkedItemSelects.length) {
+          [...checkedItemSelects].forEach(select => {
+            const checkedItem = select.parentElement.parentElement;
+            const checkedItemMark = checkedItem.querySelector('.email-ui-mail-list-item-mark');
 
-  // Add Tags
-  TagsInput.prototype.addTag = function (string) {
-    if (this.anyErrors(string)) return;
+            if (!checkedItem.classList.contains('mark-as-read')) {
+              checkedItem.classList.add('mark-as-read');
+              checkedItemMark.querySelector('i').classList.replace('ti-mail-opened', 'ti-mail');
+            }
 
-    this.arr.push(string);
-    var tagInput = this;
+            select.checked = false;
+            emailUIMailSelectAll.checked = false;
+          })
+        }
+      })
+    }
 
-    var tag = document.createElement("span");
-    tag.className = this.options.tagClass;
-    tag.innerText = string;
+    // Initialize Mail Delete All
+    if (emailUIMailDeleteAll) {
+      emailUIMailDeleteAll.addEventListener('click', function (e) {
+        const checkedItemSelects = document.querySelectorAll('.email-ui-mail-list-item-select:checked');
 
-    var closeIcon = document.createElement("a");
-    closeIcon.innerHTML = "&times;";
+        if (checkedItemSelects.length) {
+          [...checkedItemSelects].forEach(select => {
+            const checkedItem = select.parentElement.parentElement;
+            checkedItem.remove();
+            emailUIMailSelectAll.checked = false;
+          })
+        }
+      })
+    }
 
-    // delete the tag when icon is clicked
-    closeIcon.addEventListener("click", function (e) {
-      e.preventDefault();
-      var tag = this.parentNode;
+    // Initialize Mail List Items
+    if (emailUIMailListItems.length) {
+      [...emailUIMailListItems].forEach(item => {
+        const itemClass = '.email-ui-mail-list-item';
+        const select = item.querySelector(`${itemClass}-select`);
+        const btnBookmark = item.querySelector(`${itemClass}-bookmark`);
+        const btnMark = item.querySelector(`${itemClass}-mark`);
+        const btnDelete = item.querySelector(`${itemClass}-delete`);
 
-      for (var i = 0; i < tagInput.wrapper.childNodes.length; i++) {
-        if (tagInput.wrapper.childNodes[i] == tag) tagInput.deleteTag(tag, i);
+        select.addEventListener('click', function (e) {
+          e.stopPropagation();
+
+          const selects = document.querySelectorAll('.email-ui-mail-list-item-select');
+          const checkedSelects = document.querySelectorAll('.email-ui-mail-list-item-select:checked');
+
+          if (selects.length === checkedSelects.length) {
+            emailUIMailSelectAll.checked = true;
+          }
+
+          if (checkedSelects.length < selects.length) {
+            emailUIMailSelectAll.checked = false;
+          }
+        })
+
+        btnBookmark.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const item = this.parentElement.parentElement;
+          if (item.getAttribute('data-starred')) {
+            item.removeAttribute('data-starred');
+          } else {
+            item.setAttribute('data-starred', 'true');
+          }
+        })
+
+        btnMark.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const item = this.parentElement.parentElement.parentElement;
+
+          if (!item.classList.contains('mark-as-read')) {
+            item.classList.add('mark-as-read');
+            this.querySelector('i').classList.replace('ti-mail-opened', 'ti-mail');
+          } else {
+            item.classList.remove('mark-as-read');
+            this.querySelector('i').classList.replace('ti-mail', 'ti-mail-opened');
+          }
+        })
+
+        btnDelete.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const item = this.parentElement.parentElement.parentElement;
+          item.remove();
+        })
+      })
+    }
+
+    // Initialize Filtering
+    if (emailUIFilterItems.length) {
+      [...emailUIFilterItems].forEach((filterItem) => {
+
+        filterItem.addEventListener('click', function () {
+          const filter = this.dataset.filterBy;
+          const filterItemActive = emailUIFilter.querySelector('.email-ui-filter-item.active');
+
+          if (!filterItem.classList.contains('active')) {
+            filterItemActive.classList.remove('active');
+            filterItem.classList.add('active');
+          }
+
+          if (emailUIMailListItems.length) {
+            if (filter !== 'inbox') {
+              [...emailUIMailListItems].forEach(item => {
+                if (item.getAttribute(`data-filter-by-${filter}`)) {
+                  item.classList.remove('hidden');
+                } else {
+                  item.classList.add('hidden');
+                }
+              })
+            } else {
+              [...emailUIMailListItems].forEach(item => {
+                item.classList.remove('hidden');
+              })
+            }
+          }
+        })
+      });
+    }
+
+    // Initialize Filtering
+    if(emailUIReplyEditor) {
+      new Quill(emailUIReplyEditor, {
+        theme: 'snow',
+        bounds: emailUIReplyEditor,
+        placeholder: 'Write your message',
+      });
+    }
+    
+    // Initialize Sidebar Toggle
+    if (sidebarToggles.length) {
+      [...sidebarToggles].forEach(toggle => {
+        const targetId = toggle.dataset.target;
+
+        if (targetId) {
+          const target = document.querySelector(targetId);
+          const options = {
+            keyboard: target.dataset.keyboard === 'false' ? false : true,
+            backdrop: (() => {
+              let output = true;
+
+              if (target.dataset.backdrop === 'static') {
+                output = 'static';
+              }
+
+              if (target.dataset.backdrop === 'false') {
+                output = false;
+              }
+
+              return output;
+            })(),
+          }
+
+          new EmailUISidebar(toggle, options)
+        }
+      })
+    }
+
+    // Initialize Tagify in Compose To Input
+    if (emailComposeInputTo) {
+      new Tagify(emailComposeInputTo);
+    }
+
+    // Initialize Tagify in Compose CC Input
+    if (emailComposeInputCC) {
+      new Tagify(emailComposeInputCC);
+    }
+
+    // Initialize Tagify in Compose BCC Input
+    if (emailComposeInputBCC) {
+      new Tagify(emailComposeInputBCC);
+    }
+
+    // Initialize Quill Editor for composing email
+    if (emailComposeEditor) {
+      new Quill(emailComposeEditor, {
+        theme: 'snow',
+        bounds: emailComposeEditor,
+        placeholder: 'Write your message',
+      });
+    }
+    
+    // Initialize Email Compose CC Button
+    if(emailComposeBtnCC) {
+      emailComposeBtnCC.addEventListener('click', () => {
+        emailComposeInputCC.parentElement.classList.toggle('hidden');
+      });
+    }
+
+    // Initialize Email Compose BCC Button
+    if(emailComposeBtnBCC) {
+      emailComposeBtnBCC.addEventListener('click', () => {
+        emailComposeInputBCC.parentElement.classList.toggle('hidden');
+      });
+    }
+    
+    // Define the funciton to toggle Email Sidebars (Primary, Secondary)
+    function EmailUISidebar(target, options = {}) {
+      //Store the target element
+      this.target = null;
+
+      //Store sidebar element
+      this.sidebar = null;
+
+      //Store sidebar toggle
+      this.toggle = null;
+
+      //Store sidebar transition in miliseconds.
+      this.transition = 300;
+
+      //Store drawer dismisses
+      this.dismisses = null;
+
+      //Store the drawer options
+      this.options = {
+        keyboard: true, //Boolean. Default is true
+        backdrop: true, //Boolean | 'static'. Default is true
+        ...options,
+      };
+
+      this.documentOnKeydown = (e) => this.hideOnKeydown({ e, sidebar: this });
+
+      if (typeof target === 'string') {
+
+        this.target = document.querySelector(target);
+
+      } else if (target instanceof HTMLElement) {
+
+        this.target = target;
+
+      } else {
+
+        throw new Error('No target element found');
       }
-    });
 
-    tag.appendChild(closeIcon);
-    this.wrapper.insertBefore(tag, this.input);
-    this.orignal_input.value = this.arr.join(",");
+      if (this.target.classList.contains('email-ui-sidebar')) {
 
-    return this;
-  };
+        this.sidebar = this.target;
 
-  // Delete Tags
-  TagsInput.prototype.deleteTag = function (tag, i) {
-    tag.remove();
-    this.arr.splice(i, 1);
-    this.orignal_input.value = this.arr.join(",");
-    return this;
-  };
+      } else {
 
-  // Make sure input string have no error with the plugin
-  TagsInput.prototype.anyErrors = function (string) {
-    if (this.options.max != null && this.arr.length >= this.options.max) {
-      console.log("max tags limit reached");
-      return true;
-    }
+        this.toggle = this.target;
+        this.sidebar = document.querySelector(this.toggle.dataset.target);
 
-    if (!this.options.duplicate && this.arr.indexOf(string) != -1) {
-      console.log('duplicate found " ' + string + ' " ');
-      return true;
-    }
+        this.toggle.addEventListener('click', () => {
 
-    return false;
-  };
+          const openSidebars = document.querySelectorAll('.email-ui-sidebar.show');
 
-  // Add tags programmatically
-  TagsInput.prototype.addData = function (array) {
-    var plugin = this;
+          if (openSidebars.length) {
 
-    array.forEach(function (string) {
-      plugin.addTag(string);
-    });
-    return this;
-  };
+            [...openSidebars].forEach((sidebar) => this.hide(sidebar));
 
-  // Get the Input String
-  TagsInput.prototype.getInputString = function () {
-    return this.arr.join(",");
-  };
+          } else {
 
-  // destroy the plugin
-  TagsInput.prototype.destroy = function () {
-    this.orignal_input.removeAttribute("hidden");
-
-    delete this.orignal_input;
-    var self = this;
-
-    Object.keys(this).forEach(function (key) {
-      if (self[key] instanceof HTMLElement) self[key].remove();
-
-      if (key != "options") delete self[key];
-    });
-
-    this.initialized = false;
-  };
-
-  // Private function to initialize the tag input plugin
-  function init(tags) {
-    tags.wrapper.append(tags.input);
-    tags.wrapper.classList.add(tags.options.wrapperClass);
-    tags.orignal_input.setAttribute("hidden", "true");
-    tags.orignal_input.parentNode.insertBefore(
-      tags.wrapper,
-      tags.orignal_input
-    );
-  }
-
-  // initialize the Events
-  function initEvents(tags) {
-    tags.wrapper.addEventListener("click", function () {
-      tags.input.focus();
-    });
-
-    tags.input.addEventListener("keydown", function (e) {
-      var str = tags.input.value.trim();
-
-      if (!!~[9, 13, 188].indexOf(e.keyCode)) {
-        e.preventDefault();
-        tags.input.value = "";
-        if (str != "") tags.addTag(str);
+            this.show();
+          }
+        });
       }
-    });
-  }
 
-  // Set All the Default Values
-  TagsInput.defaults = {
-    selector: "",
-    wrapperClass: "tags-input-wrapper",
-    tagClass: "tag",
-    max: null,
-    duplicate: false,
-  };
+      this.dismisses = this.sidebar.querySelectorAll('[data-dismiss="sidebar"]');
+      if (this.dismisses.length) {
+        [...this.dismisses].forEach((dismiss) => {
+          dismiss.addEventListener('click', () => this.hide());
+        });
+      }
 
-  window.TagsInput = TagsInput;
-})();
+      this.show = function (element = null) {
+        const sidebar = element ? element : this.sidebar;
+        const sidebarParentEl = sidebar.parentElement;
 
-const emailInputs = document.querySelectorAll(".email-tags");
-emailInputs.forEach((emailInput) => {
-  let tagInput = new TagsInput({
-    selector: emailInput.id,
-    duplicate: false,
-  });
-  tagInput.addData([]);
-  
+        if (!sidebar.classList.contains('showing')) {
+          sidebar.classList.add('showing');
+
+          if (this.options.backdrop) {
+            if (sidebarParentEl.querySelector('email-ui-backdrop')) {
+              sidebarParentEl.querySelector('email-ui-backdrop').remove();
+            }
+
+            sidebarParentEl.appendChild(this.createBackdrop());
+          }
+
+          setTimeout(() => {
+            const emailUIBackdrop = document.querySelector('.email-ui-backdrop');
+            sidebar.classList.replace('showing', 'show');
+
+            if (emailUIBackdrop) {
+              emailUIBackdrop.classList.add('show');
+
+              emailUIBackdrop.addEventListener('click', () => {
+                if (this.options.backdrop !== 'static') {
+                  this.hide();
+                }
+              });
+            }
+
+            if (this.options.keyboard) {
+              document.addEventListener('keydown', this.documentOnKeydown);
+            }
+          }, 15);
+        }
+      }
+
+      this.hide = function (element = null) {
+        const sidebar = element ? element : this.sidebar;
+        const sidebarParentEl = sidebar.parentElement;
+
+        if (sidebar.classList.contains('show') && !sidebar.classList.contains('hiding')) {
+          const emailUIBackdrop = sidebarParentEl.querySelector('.email-ui-backdrop');
+
+          sidebar.classList.add('hiding');
+
+          if (emailUIBackdrop) {
+            emailUIBackdrop.classList.remove('show');
+          }
+
+          setTimeout(() => {
+            sidebar.classList.remove('show');
+            sidebar.classList.remove('hiding');
+
+            if (emailUIBackdrop) {
+              emailUIBackdrop.remove();
+            }
+
+            if (this.options.keyboard) {
+              document.removeEventListener('keydown', this.documentOnKeydown);
+            }
+          }, this.transition);
+        }
+      }
+
+      this.hideOnKeydown = function (args) {
+        const { e, sidebar } = args;
+
+        if (e.key === 'Escape' && sidebar.options.keyboard) {
+          sidebar.hide();
+        }
+      }
+
+      this.createBackdrop = function () {
+        const backdrop = document.createElement('div');
+        backdrop.setAttribute('class', 'email-ui-backdrop');
+
+        return backdrop;
+      }
+    }
+  })()
 });
-
-//++++++++++++++++ Email Badge For Email Compose End ++++++++++++++

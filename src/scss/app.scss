@@ -26,6 +26,7 @@
 @import 'tippy.js/themes/light-border.css';
 @import 'tippy.js/themes/material.css';
 @import 'tippy.js/themes/translucent.css';
+@import '@yaireo/tagify/dist/tagify.css';
 @import 'tom-select/dist/scss/tom-select.scss';
 
 // Base
@@ -68,3 +69,7 @@
 @import 'components/drawer';
 @import 'components/uploader';
 // @import 'components/spinkit-spinner';
+
+
+//Pages
+@import 'pages/email';

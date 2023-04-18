@@ -7,23 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Email - Admin Toolkit</title>
   <link rel="stylesheet" href="./scss/app.scss" />
-  <style>
-    .ql-toolbar.ql-snow {
-      border: none !important;
-    }
-
-    .ql-formats button svg {
-      color: #94a3b8 !important;
-    }
-
-    .ql-editor.ql-blank p {
-      color: #94a3b8 !important;
-    }
-
-    #email-editor {
-      height: 100px !important;
-    }
-  </style>
 </head>
 
 <body>
@@ -712,589 +695,1107 @@
       <!-- Page Content Starts -->
       <div class="content">
         <!-- Main Content Starts -->
-        <main class="flex-grow p-6">
-          <!-- Page Title Starts -->
-          <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-            <h5 class="px-2 md:px-0">Email</h5>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="/">Home</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="#">Email</a>
-              </li>
-            </ol>
-          </div>
-          <!-- Page Title Ends -->
-          <div
-            class="relative m-0 flex w-full items-center gap-x-0 rounded-primary bg-transparent lg:items-start lg:gap-x-8">
-            <!-- Email List Start  -->
-            <div id="email-list"
-              class="absolute z-20 flex h-full w-[250px] -translate-x-[350px] transform transition duration-300 ease-in-out lg:sticky lg:top-20 lg:z-0 lg:translate-x-0">
-              <div
-                class="w-full rounded-l-primary rounded-r-none bg-white p-4 shadow dark:bg-slate-800 lg:h-min lg:max-w-none lg:rounded-primary">
-                <button type="button" data-toggle="modal" data-target="#modal-lg"
-                  class="btn btn-primary my-4 w-full py-2">
-                  Compose
-                </button>
-                <ul class="users flex flex-col gap-2">
-                  <li
-                    class="flex cursor-pointer items-center justify-between rounded-primary p-2 font-medium text-slate-500 transition duration-150 ease-in-out hover:bg-slate-100 hover:text-primary-500 dark:text-slate-300 hover:dark:bg-slate-700 hover:dark:text-primary-500">
-                    <div class="flex items-center gap-4">
-                      <i class="h-5" data-feather="mail"></i>
-                      <p class="text-sm font-normal">Inbox</p>
-                    </div>
-                    <div
-                      class="flex h-5 w-5 items-center justify-center rounded-full bg-primary-500 text-xs text-slate-50">
-                      3
-                    </div>
-                  </li>
-                  <li
-                    class="flex cursor-pointer items-center justify-between rounded-primary p-2 font-medium text-slate-500 transition duration-150 ease-in-out hover:bg-slate-100 hover:text-primary-500 dark:text-slate-300 hover:dark:bg-slate-700 hover:dark:text-primary-500">
-                    <div class="flex items-center gap-4">
-                      <i class="h-5" data-feather="send"></i>
-                      <p class="text-sm font-normal">Sent</p>
-                    </div>
-                  </li>
-                  <li
-                    class="flex cursor-pointer items-center justify-between rounded-primary p-2 font-medium text-slate-500 transition duration-150 ease-in-out hover:bg-slate-100 hover:text-primary-500 dark:text-slate-300 hover:dark:bg-slate-700 hover:dark:text-primary-500">
-                    <div class="flex items-center gap-4">
-                      <i class="h-5" data-feather="edit"></i>
-                      <p class="text-sm font-normal">Draft</p>
-                    </div>
-                    <div
-                      class="hidden h-5 w-5 items-center justify-center rounded-full bg-primary-500 text-xs text-slate-50">
-                      3
-                    </div>
-                  </li>
-                  <li
-                    class="flex cursor-pointer items-center justify-between rounded-primary p-2 font-medium text-slate-500 transition duration-150 ease-in-out hover:bg-slate-100 hover:text-primary-500 dark:text-slate-300 hover:dark:bg-slate-700 hover:dark:text-primary-500">
-                    <div class="flex items-center gap-4">
-                      <i class="h-5" data-feather="star"></i>
-                      <p class="text-sm font-normal">Stared</p>
-                    </div>
-                    <div
-                      class="flex h-5 w-5 items-center justify-center rounded-full bg-warning-500 text-xs text-slate-50">
-                      7
-                    </div>
-                  </li>
-                  <li
-                    class="flex cursor-pointer items-center justify-between rounded-primary p-2 font-medium text-slate-500 transition duration-150 ease-in-out hover:bg-slate-100 hover:text-primary-500 dark:text-slate-300 hover:dark:bg-slate-700 hover:dark:text-primary-500">
-                    <div class="flex items-center gap-4">
-                      <i class="h-5" data-feather="info"></i>
-                      <p class="text-sm font-normal">Spam</p>
-                    </div>
-                    <div
-                      class="hidden h-5 w-5 items-center justify-center rounded-full bg-warning-500 text-xs text-slate-50">
-                      7
-                    </div>
-                  </li>
-                  <li
-                    class="flex cursor-pointer items-center justify-between rounded-primary p-2 font-medium text-slate-500 transition duration-150 ease-in-out hover:bg-slate-100 hover:text-primary-500 dark:text-slate-300 hover:dark:bg-slate-700 hover:dark:text-primary-500">
-                    <div class="flex items-center gap-4">
-                      <i class="h-5" data-feather="trash-2"></i>
-                      <p class="text-sm font-normal">Trash</p>
-                    </div>
-                    <div
-                      class="flex h-5 w-5 items-center justify-center rounded-full bg-danger-500 text-xs text-slate-50">
-                      10
-                    </div>
-                  </li>
-                  <div class="my-2 text-xs font-normal uppercase tracking-wider text-slate-400">Labels</div>
-                  <li
-                    class="flex cursor-pointer items-center justify-between rounded-primary p-2 text-slate-500 transition duration-150 ease-in-out hover:bg-slate-100 hover:text-success-500 dark:text-slate-300 hover:dark:bg-slate-700 hover:dark:text-success-500">
-                    <div class="flex items-center gap-4">
-                      <div class="h-4 w-4 rounded-full border-4 border-success-500"></div>
-                      <p class="text-sm font-normal">Personal</p>
-                    </div>
-                    <div
-                      class="flex h-5 w-5 items-center justify-center rounded-full bg-success-500 text-xs text-slate-50">
-                      6
-                    </div>
-                  </li>
-                  <li
-                    class="flex cursor-pointer items-center justify-between rounded-primary p-2 text-slate-500 transition duration-150 ease-in-out hover:bg-slate-100 hover:text-primary-500 dark:text-slate-300 hover:dark:bg-slate-700 hover:dark:text-primary-500">
-                    <div class="flex items-center gap-4">
-                      <div class="h-4 w-4 rounded-full border-4 border-primary-500"></div>
-                      <p class="text-sm font-normal">Company</p>
-                    </div>
-                  </li>
-                  <li
-                    class="flex cursor-pointer items-center justify-between rounded-primary p-2 text-slate-500 transition duration-150 ease-in-out hover:bg-slate-100 hover:text-danger-500 dark:text-slate-300 hover:dark:bg-slate-700 hover:dark:text-danger-500">
-                    <div class="flex items-center gap-4">
-                      <div class="h-4 w-4 rounded-full border-4 border-danger-500"></div>
-                      <p class="text-sm font-normal">Important</p>
-                    </div>
-                  </li>
-                  <li
-                    class="flex cursor-pointer items-center justify-between rounded-primary p-2 text-slate-500 transition duration-150 ease-in-out hover:bg-slate-100 hover:text-warning-500 dark:text-slate-300 hover:dark:bg-slate-700 hover:dark:text-warning-500">
-                    <div class="flex items-center gap-4">
-                      <div class="h-4 w-4 rounded-full border-4 border-warning-500"></div>
-                      <p class="text-sm font-normal">Promotions</p>
-                    </div>
-                    <div
-                      class="flex h-5 w-5 items-center justify-center rounded-full bg-warning-500 text-xs text-slate-50">
-                      5
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Email List Hide  -->
-              <button id="hide-email-list" type="button"
-                class="ml-1 mt-[12px] flex h-10 w-10 items-center justify-center rounded-full text-slate-200 hover:text-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-100 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:ring-slate-300 lg:hidden">
-                <i width="1.5rem" height="1.5rem" data-feather="x"></i>
-              </button>
-            </div>
-
-            <!-- Email List End  -->
-            <!-- Email Box Start -->
-            <div class="grid flex-1 grid-cols-1 gap-y-4">
-              <div class="card relative m-0 h-full rounded-primary p-0">
-                <div
-                  class="flex flex-col items-start justify-start gap-y-4 p-6 md:flex-row md:items-center md:justify-between">
-                  <div class="order-2 flex items-center gap-4 md:order-1">
-                    <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox" />
-                    <span
-                      class="cursor-pointer text-slate-400 transition duration-150 ease-in-out hover:text-primary-500 dark:text-slate-300 hover:dark:text-primary-500">
-                      <i class="h-5" data-feather="refresh-cw"></i>
+        <main class="flex flex-grow p-6">
+          <div class="container">
+            <!-- Email UI Starts -->
+            <div class="email-ui">
+              <!-- Sidebar Primary Starts -->
+              <div id="email-ui-sidebar-primary" class="email-ui-sidebar email-ui-sidebar-primary">
+                <div class="email-ui-sidebar-header">
+                  <button type="button" class="w-full btn btn-lg btn-primary" data-toggle="modal" data-target="#modal-email-compose">
+                    <span class="w-4 h-4 inline-flex items-center justify-center">
+                      <i class="ti ti-pencil text-xl"></i>
                     </span>
-                    <span
-                      class="cursor-pointer text-slate-400 transition duration-150 ease-in-out hover:text-primary-500 dark:text-slate-300 hover:dark:text-primary-500">
-                      <i class="ti ti-mail-opened text-xl"></i>
-                    </span>
-                    <span
-                      class="cursor-pointer text-slate-400 transition duration-150 ease-in-out hover:text-primary-500 dark:text-slate-300 hover:dark:text-primary-500">
-                      <i class="h-5" data-feather="trash-2"></i>
-                    </span>
-                    <div class="dropdown">
-                      <div class="dropdown-toggle m-0 p-0">
-                        <i class="h-5 text-slate-400 transition duration-150 ease-in-out hover:text-primary-500 dark:text-slate-300 hover:dark:text-primary-500"
-                          data-feather="more-vertical"></i>
-                      </div>
-                      <div class="dropdown-content w-[200px]">
-                        <ul class="dropdown-list">
-                          <li class="dropdown-list-item">
-                            <a href="javascript:void(0)" class="dropdown-link"> Mark as read </a>
-                            <a href="javascript:void(0)" class="dropdown-link"> Mark as unread </a>
-                            <a href="javascript:void(0)" class="dropdown-link"> Delete </a>
-                            <a href="javascript:void(0)" class="dropdown-link"> Archive </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="order-1 flex w-full justify-between gap-2 md:order-2 md:w-auto md:justify-end">
-                    <div
-                      class="group flex h-10 max-w-[15rem] items-center rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 md:w-72">
-                      <div class="flex h-full items-center px-2">
-                        <i class="h-4 text-slate-400 group-focus-within:text-primary-500" data-feather="search"></i>
-                      </div>
-                      <input
-                        class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                        type="text" placeholder="Search" />
-                    </div>
-                    <div id="open-email-list" class="m-0 flex items-center justify-center p-0 lg:hidden">
-                      <button
-                        class="m-0 p-0 text-slate-700 transition duration-150 ease-in-out hover:text-slate-800 dark:text-slate-400">
-                        <i width="1.125rem" height="1.125rem" data-feather="menu"></i>
-                      </button>
-                    </div>
-                  </div>
+                    <span class="text-sm">Compose</span>
+                  </button>
                 </div>
-                <div class="overflow-auto">
-                  <table class="table-hover table w-full !rounded-none p-0">
-                    <tbody>
-                      <tr class="cursor-pointer">
-                        <td>
-                          <div class="flex items-center gap-3">
-                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox" />
-                            <span class="text-slate-400 transition duration-150 ease-in-out hover:text-warning-400">
-                              <i class="h-5 font-semibold" data-feather="star"></i>
-                            </span>
-                            <img src="./images/avatar1.png" class="h-8 w-8 rounded-full" alt="user-image" />
-                          </div>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left font-semibold text-slate-700 dark:text-slate-300">
-                            John Doe
-                          </p>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap font-semibold text-slate-700 dark:text-slate-300">
-                            Your Order #1001 has been delivered successfully
-                          </p>
-                        </td>
-                        <td>
-                          <p
-                            class="whitespace-nowrap text-right text-xs font-semibold text-slate-700 dark:text-slate-300">
-                            3 hours ago
-                          </p>
-                        </td>
-                      </tr>
-                      <tr class="cursor-pointer">
-                        <td>
-                          <div class="flex items-center gap-3">
-                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox" />
-                            <span class="text-warning-400 transition duration-150 ease-in-out hover:text-warning-400">
-                              <i class="h-5" data-feather="star"></i>
-                            </span>
-                            <img src="./images/avatar2.png" class="h-8 w-8 rounded-full" alt="user-image" />
-                          </div>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">Stacy Cooper</p>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">
-                            Invitation to join a weekly business meeting
-                          </p>
-                        </td>
-                        <td>
-                          <p class="whitespace-pre text-right text-xs text-slate-400">July 24</p>
-                        </td>
-                      </tr>
-                      <tr class="cursor-pointer">
-                        <td>
-                          <div class="flex items-center gap-3">
-                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox" />
-                            <span class="text-warning-400 transition duration-150 ease-in-out hover:text-warning-400">
-                              <i class="h-5" data-feather="star"></i>
-                            </span>
-                            <img src="./images/avatar3.png" class="h-8 w-8 rounded-full" alt="user-image" />
-                          </div>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">Brad Adam</p>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">
-                            Congratulation! Your are shortlisted for and interview
-                          </p>
-                        </td>
-                        <td>
-                          <p class="whitespace-pre text-right text-xs text-slate-400">10:10 AM</p>
-                        </td>
-                      </tr>
-                      <tr class="cursor-pointer">
-                        <td class="!px-4">
-                          <div class="flex items-center gap-3">
-                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox" />
-                            <span class="text-slate-400 transition duration-150 ease-in-out hover:text-warning-400">
-                              <i class="h-5" data-feather="star"></i>
-                            </span>
-                            <img src="./images/avatar4.png" class="h-8 w-8 rounded-full" alt="user-image" />
-                          </div>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">John Doe</p>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">
-                            Invitation to join a weekly business meeting
-                          </p>
-                        </td>
-                        <td>
-                          <p class="whitespace-pre text-right text-xs text-slate-400">2 days ago</p>
-                        </td>
-                      </tr>
-                      <tr class="cursor-pointer">
-                        <td class="!px-4">
-                          <div class="flex items-center gap-3">
-                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox" />
-                            <span class="text-warning-400 transition duration-150 ease-in-out hover:text-warning-400">
-                              <i class="h-5" data-feather="star"></i>
-                            </span>
-                            <img src="./images/avatar4.png" class="h-8 w-8 rounded-full" alt="user-image" />
-                          </div>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">Stacy Cooper</p>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">
-                            Congratulation! Your are shortlisted for and interview
-                          </p>
-                        </td>
-                        <td>
-                          <p class="whitespace-pre text-right text-xs text-slate-400">3 days ago</p>
-                        </td>
-                      </tr>
-                      <tr class="cursor-pointer">
-                        <td class="!px-4">
-                          <div class="flex items-center gap-3">
-                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox" />
-                            <span class="text-slate-400 transition duration-150 ease-in-out hover:text-warning-400">
-                              <i class="h-5" data-feather="star"></i>
-                            </span>
-                            <img src="./images/avatar5.png" class="h-8 w-8 rounded-full" alt="user-image" />
-                          </div>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">Stacy Cooper</p>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">
-                            Invitation to join a weekly business meeting
-                          </p>
-                        </td>
-                        <td>
-                          <p class="whitespace-pre text-right text-xs text-slate-400">July 24</p>
-                        </td>
-                      </tr>
-                      <tr class="cursor-pointer">
-                        <td class="!px-4">
-                          <div class="flex items-center gap-3">
-                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox" />
-                            <span class="text-warning-400 transition duration-150 ease-in-out hover:text-warning-400">
-                              <i class="h-5" data-feather="star"></i>
-                            </span>
-                            <img src="./images/avatar6.png" class="h-8 w-8 rounded-full" alt="user-image" />
-                          </div>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">Brad Adam</p>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">
-                            Congratulation! Your are shortlisted for and interview
-                          </p>
-                        </td>
-                        <td>
-                          <p class="whitespace-pre text-right text-xs text-slate-400">10:10 AM</p>
-                        </td>
-                      </tr>
-                      <tr class="cursor-pointer">
-                        <td class="!px-4">
-                          <div class="flex items-center gap-3">
-                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox" />
-                            <span class="text-slate-400 transition duration-150 ease-in-out hover:text-warning-400">
-                              <i class="h-5" data-feather="star"></i>
-                            </span>
-                            <img src="./images/avatar7.png" class="h-8 w-8 rounded-full" alt="user-image" />
-                          </div>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">John Doe</p>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">
-                            Invitation to join a weekly business meeting
-                          </p>
-                        </td>
-                        <td>
-                          <p class="whitespace-pre text-right text-xs text-slate-400">2 days ago</p>
-                        </td>
-                      </tr>
-                      <tr class="cursor-pointer">
-                        <td class="!px-4">
-                          <div class="flex items-center gap-3">
-                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox" />
-                            <span class="text-warning-400 transition duration-150 ease-in-out hover:text-warning-400">
-                              <i class="h-5" data-feather="star"></i>
-                            </span>
-                            <img src="./images/avatar8.png" class="h-8 w-8 rounded-full" alt="user-image" />
-                          </div>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">Stacy Cooper</p>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">
-                            Your Order #1001 has been delivered successfully
-                          </p>
-                        </td>
-                        <td>
-                          <p class="whitespace-pre text-right text-xs text-slate-400">10:10 AM</p>
-                        </td>
-                      </tr>
-                      <tr class="cursor-pointer">
-                        <td class="!px-4">
-                          <div class="flex items-center gap-3">
-                            <input id="checked" class="checkbox" type="checkbox" name="basic-checkbox" />
-                            <span class="text-slate-400 transition duration-150 ease-in-out hover:text-warning-400">
-                              <i class="h-5" data-feather="star"></i>
-                            </span>
-                            <img src="./images/avatar8.png" class="h-8 w-8 rounded-full" alt="user-image" />
-                          </div>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">Brad Adam</p>
-                        </td>
-                        <td>
-                          <p class="whitespace-nowrap text-left text-slate-400">
-                            Congratulation! Your are shortlisted for and interview
-                          </p>
-                        </td>
-                        <td>
-                          <p class="whitespace-pre text-right text-xs text-slate-400">July 24</p>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="flex flex-wrap items-center justify-center gap-y-4 md:justify-between">
-                <p class="text-sm font-normal text-slate-400">Showing 1 to 10 of 50 result</p>
-                <!-- Pagination -->
-                <nav class="pagination-sm md:pagination-md lg:pagination">
-                  <ul class="pagination-list">
-                    <li class="pagination-item">
-                      <a class="pagination-link pagination-link-prev-icon" href="#">
-                        <i data-feather="chevron-left" width="1em" height="1em"></i>
+                <div class="email-ui-sidebar-body" data-simplebar>
+                  <ul class="email-ui-filter">
+                    <li class="email-ui-filter-item active" data-dismiss="sidebar" data-filter-by="inbox">
+                      <a href="javascript:void(0);" class="inline-flex items-center gap-2">
+                        <span class="w-5 h-5 inline-flex items-center justify-center">
+                          <i class="ti ti-mail text-xl"></i>
+                        </span>
+                        <span>Inbox</span>
+                      </a>
+                      <div class="badge badge-circle badge-primary">2</div>
+                    </li>
+                    <li class="email-ui-filter-item" data-dismiss="sidebar" data-filter-by="sent">
+                      <a href="javascript:void(0);" class="inline-flex items-center gap-2">
+                        <span class="w-5 h-5 inline-flex items-center justify-center">
+                          <i class="ti ti-send text-xl"></i>
+                        </span>
+                        <span>Sent</span>
                       </a>
                     </li>
-                    <li class="pagination-item active">
-                      <a class="pagination-link" href="#">1</a>
-                    </li>
-                    <li class="pagination-item">
-                      <a class="pagination-link" href="#">2</a>
-                    </li>
-                    <li class="pagination-item">
-                      <a class="pagination-link" href="#">3</a>
-                    </li>
-                    <li class="pagination-item">
-                      <a class="pagination-link" href="#">4</a>
-                    </li>
-                    <li class="pagination-item">
-                      <a class="pagination-link" href="#">5</a>
-                    </li>
-                    <li class="pagination-item">
-                      <a class="pagination-link pagination-link-next-icon" href="#">
-                        <i data-feather="chevron-right" width="1em" height="1em"></i>
+                    <li class="email-ui-filter-item" data-dismiss="sidebar" data-filter-by="draft">
+                      <a href="javascript:void(0);" class="inline-flex items-center gap-2">
+                        <span class="w-5 h-5 inline-flex items-center justify-center">
+                          <i class="ti ti-file text-xl"></i>
+                        </span>
+                        <span>Draft</span>
                       </a>
+                    </li>
+                    <li class="email-ui-filter-item" data-dismiss="sidebar" data-filter-by="starred">
+                      <a href="javascript:void(0);" class="inline-flex items-center gap-2">
+                        <span class="w-5 h-5 inline-flex items-center justify-center">
+                          <i class="ti ti-star text-xl"></i>
+                        </span>
+                        <span>Starred</span>
+                      </a>
+                      <div class="badge badge-circle badge-warning">7</div>
+                    </li>
+                    <li class="email-ui-filter-item" data-dismiss="sidebar" data-filter-by="spam">
+                      <a href="javascript:void(0);" class="inline-flex items-center gap-2">
+                        <span class="w-5 h-5 inline-flex items-center justify-center">
+                          <i class="ti ti-exclamation-circle text-xl"></i>
+                        </span>
+                        <span>Spam</span>
+                      </a>
+                    </li>
+                    <li class="email-ui-filter-item" data-dismiss="sidebar" data-filter-by="trash">
+                      <a href="javascript:void(0);" class="inline-flex items-center gap-2">
+                        <span class="w-5 h-5 inline-flex items-center justify-center">
+                          <i class="ti ti-trash text-xl"></i>
+                        </span>
+                        <span>Trash</span>
+                      </a>
+                      <div class="badge badge-circle badge-danger">2</div>
+                    </li>
+                    <li class="px-5 py-4 my-2 text-sm text-slate-400 uppercase tracking-widest">
+                      Labels
+                    </li>
+                    <li class="email-ui-filter-item" data-dismiss="sidebar" data-filter-by="company">
+                      <a href="javascript:void(0);" class="inline-flex items-center gap-2">
+                        <span class="badge badge-dot badge-primary"></span>
+                        <span>Company</span>
+                      </a>
+                    </li>
+                    <li class="email-ui-filter-item" data-dismiss="sidebar" data-filter-by="personal">
+                      <a href="javascript:void(0);" class="inline-flex items-center gap-2">
+                        <span class="badge badge-dot badge-success"></span>
+                        <span>Personal</span>
+                      </a>
+                      <div class="badge badge-circle badge-success">2</div>
+                    </li>
+                    <li class="email-ui-filter-item" data-dismiss="sidebar" data-filter-by="important">
+                      <a href="javascript:void(0);" class="inline-flex items-center gap-2">
+                        <span class="badge badge-dot badge-danger"></span>
+                        <span>Important</span>
+                      </a>
+                    </li>
+                    <li class="email-ui-filter-item" data-dismiss="sidebar" data-filter-by="promotions">
+                      <a href="javascript:void(0);" class="inline-flex items-center gap-2">
+                        <span class="badge badge-dot badge-warning"></span>
+                        <span>Promotions</span>
+                      </a>
+                      <div class="badge badge-circle badge-warning">2</div>
                     </li>
                   </ul>
-                </nav>
+                </div>
+                <div class="email-ui-sidebar-footer">
+                  <button type="button" class="btn btn-plain-secondary w-full justify-start px-4 py-3 text-slate-700 hover:bg-slate-100 focus:bg-slate-100 dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:text-slate-300">
+                    <i data-feather="plus" width="20" height="20"></i>
+                    <span>Add Label</span>
+                  </button>
+                </div>
               </div>
-            </div>
-            <!-- overlay  -->
-            <div id="overlay"
-              class="invisible absolute inset-0 z-10 h-full w-full rounded-primary bg-black bg-opacity-50 opacity-100 transition-opacity duration-500 ease-in-out lg:hidden">
-            </div>
-            <!-- Email Box End -->
-          </div>
-          <!-- Modal Compose  Box  -->
-          <div class="modal modal-lg" id="modal-lg">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <div class="flex items-center justify-between">
-                    <h6>Compose Message</h6>
-                    <button type="button"
-                      class="btn btn-plain-secondary dark:text-slate-300 dark:hover:bg-slate-700 dark:focus:bg-slate-700"
-                      data-dismiss="modal">
-                      <i data-feather="x" width="1.5rem" height="1.5rem"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="modal-body overflow-clip p-0">
-                  <div class="flex items-start gap-2 border-b border-slate-300 p-4 dark:border-slate-600">
-                    <label for="email-to">
-                      <span class="text-sm text-slate-600 dark:text-slate-300"> To: </span>
-                    </label>
-                    <input type="text" class="email-tags" id="to">
-                    <div class="flex items-center gap-1">
-                      <span id="cc-toggle"
-                        class="cursor-pointer text-sm font-medium text-slate-500 transition duration-150 ease-in-out hover:text-primary-500 dark:text-slate-400 hover:dark:text-primary-500">
-                        Cc
-                      </span>
-                      <span id="bcc-toggle"
-                        class="cursor-pointer text-sm font-medium text-slate-500 transition duration-150 ease-in-out hover:text-primary-500 dark:text-slate-400 hover:dark:text-primary-500">
-                        Bcc
-                      </span>
-                    </div>
-                  </div>
-                  <div id="cc-input" class="hidden border-b border-slate-300 p-4 dark:border-slate-600">
-                    <div class="flex gap-1">
-                      <span class="text-sm text-slate-600 dark:text-slate-300"> Cc: </span>
-                      <input type="text" class="email-tags" id="cc">
-                    </div>
-                  </div>
-                  <div id="bcc-input" class="hidden border-b border-slate-300 p-4 dark:border-slate-600">
-                    <div class="flex gap-1">
-                      <span class="text-sm text-slate-600 dark:text-slate-300"> Bcc: </span>
-                      <input type="text" class="email-tags" id="bcc">
-                    </div>
-                  </div>
-                  <div class="flex items-center gap-2 border-b border-slate-300 p-4 dark:border-slate-600">
-                    <span class="text-sm text-slate-600 dark:text-slate-300"> Subject: </span>
-                    <input type="text"
-                      class="flex-1 border-0 bg-transparent p-2 text-sm font-medium outline-none focus:border-0 focus:outline-none focus:ring-0" />
-                  </div>
-                  <!-- Quill Editor -->
-                  <div class="!border-transparent" id="email-editor"></div>
-                </div>
-                <!-- Modal Footer  -->
-                <div class="modal-footer">
-                  <div class="flex items-center justify-between gap-4">
-                    <div class="flex items-center gap-2">
-                      <div class="dropdown" data-placement="top-end">
-                        <div class="btn-group divide-x divide-primary-600">
-                          <button class="btn btn-primary">
-                            <i class="h-4" data-feather="send"></i>
-                            Send
-                          </button>
-                          <button class="btn btn-primary dropdown-toggle px-2">
-                            <i class="w-4" data-feather="chevron-down"></i>
+              <!-- Sidebar Primary Ends -->
+              
+              <!-- Wrapper Starts -->
+              <div class="email-ui-wrapper">
+                <!-- Container Starts -->
+                <div class="email-ui-container">
+                  <div class="email-ui-container-header">
+                    <!-- Mail Top Search Area Starts -->
+                    <div class="flex items-center gap-x-3 sm:gap-x-6 py-3 px-4">
+                      <button type="button" class="xl:hidden text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300" data-toggle="sidebar" data-target="#email-ui-sidebar-primary">
+                        <i class="ti ti-menu-2 text-xl"></i>
+                      </button>
+                      <form class="group w-full flex items-center rounded-primary overflow-hidden" action="">
+                        <i class="text-slate-500 group-focus-within:text-purple-500" data-feather="search" width="18" height="18"></i>
+                        <input class="w-full py-2 pr-2 bg-transparent border-transparent text-sm text-slate-700 placeholder:text-slate-500 focus:border-transparent focus:ring-0 focus:ring-transparent focus:outline-none focus:outline-transparent dark:text-slate-300 dark:placeholder:text-slate-400" type="text" placeholder="Searh in mail">
+                      </form>
+                      <div class="dropdown">
+                        <div class="dropdown-toggle">
+                          <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                            <i class="ti ti-dots-vertical text-xl"></i>
                           </button>
                         </div>
                         <div class="dropdown-content">
                           <ul class="dropdown-list">
                             <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link"> Schedule send </a>
+                              <a href="javascript:void(0);" class="dropdown-link">Mark as read</a>
                             </li>
                             <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link"> Save & archive </a>
+                              <a href="javascript:void(0);" class="dropdown-link">Mark as unread</a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0);" class="dropdown-link">Archive</a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0);" class="dropdown-link">Delete</a>
                             </li>
                           </ul>
                         </div>
                       </div>
-                      <label for="open-file"
-                        class="cursor-pointer text-slate-500 hover:text-primary-500 dark:text-slate-400 hover:dark:text-primary-500">
-                        <i class="h-5" data-feather="paperclip"></i>
-                        <input type="file" class="hidden" id="open-file" />
-                      </label>
                     </div>
-                    <div class="flex items-center gap-2">
-                      <div class="dropdown" data-placement="top-end">
-                        <div class="btn-group divide-x divide-primary-600">
-                          <button
-                            class="dropdown-toggle text-slate-600 transition duration-150 ease-in-out hover:text-primary-500 dark:text-slate-300 hover:dark:text-primary-500">
-                            <i class="h-5" data-feather="more-vertical"></i>
+                    <!-- Mail Top Search Area Ends -->
+
+                    <!-- Mail Top Toolbar Area Starts -->
+                    <div class="flex items-center justify-between py-3 px-4">
+                      <div class="flex items-center gap-x-3 sm:gap-x-6">
+                        <input id="email-ui-mail-select-all" type="checkbox" class="checkbox">
+                        <button id="email-ui-mail-reload-all" type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                          <i class="ti ti-reload text-xl"></i>
+                        </button>
+                        <button id="email-ui-mail-mar-all" type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                          <i class="ti ti-mail-opened text-xl"></i>
+                        </button>
+                        <button id="email-ui-mail-delete-all" type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                          <i class="ti ti-trash text-xl"></i>
+                        </button>
+                      </div>
+
+                      <div class="hidden sm:flex items-center gap-x-4">
+                        <span class="text-sm text-slate-500 dark:text-slate-300">1-10 of 653</span>
+                        <div class="flex items-center gap-x-2">
+                          <button type="button" disabled class="text-slate-500 focus:text-slate-700 disabled:opacity-50 dark:text-slate-400 dark:focus:text-slate-300">
+                            <i class="ti ti-chevron-left text-xl"></i>
+                          </button>
+                          <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                            <i class="ti ti-chevron-right text-xl"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Mail Top Toolbar Area Ends -->
+                  </div>
+
+                  <div class="email-ui-container-body" data-simplebar>
+                    <!-- Mail List Starts -->
+                    <ul class="email-ui-mail-list group">
+                      <li class="email-ui-mail-list-item group/mail-list-item" data-starred="true" data-filter-by-sent="true" data-filter-by-personal="true" data-toggle="sidebar" data-target="#email-ui-sidebar-secondary">
+                        <div class="flex items-center gap-x-3 sm:gap-x-6">
+                          <input type="checkbox" class="checkbox email-ui-mail-list-item-select">
+                          <button type="button" class="email-ui-mail-list-item-bookmark">
+                            <i class="ti ti-star text-lg"></i>
+                          </button>
+
+                          <div class="w-full flex items-center gap-3">
+                            <div class="avatar avatar-circle avatar-sm shrink-0">
+                              <img class="avatar-img" src="./images/avatar1.png" alt="Avatar 1">
+                            </div>
+
+                            <div class="w-full flex flex-col 2xl:flex-row items-center gap-1">
+                              <div class="w-full 2xl:w-1/6 shrink-0">
+                                <span class="email-ui-mail-list-item-sender">
+                                  Chandler Bing 
+                                </span>
+                              </div>
+
+                              <div class="w-full">
+                                <span class="email-ui-mail-list-item-subject">
+                                  Focused impactful open issues from the project of GitHub
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flex items-center gap-x-3">
+                            <span class="badge badge-dot badge-success hidden md:inline-flex"></span>
+                            <span class="email-ui-mail-list-item-time">
+                              9:33PM
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="email-ui-mail-list-item-inline-action">
+                          <div class="w-full h-full flex justify-end items-center gap-x-4 px-4">
+                            <button type="button" class="email-ui-mail-list-item-mark">
+                              <i class="ti ti-mail-opened text-xl"></i>
+                            </button>
+                            <button type="button" class="email-ui-mail-list-item-delete">
+                              <i class="ti ti-trash l text-xl"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="email-ui-mail-list-item group/mail-list-item mark-as-read" data-filter-by-sent="true" data-filter-by-company="true" data-toggle="sidebar" data-target="#email-ui-sidebar-secondary">
+                        <div class="flex items-center gap-x-3 sm:gap-x-6">
+                          <input type="checkbox" class="checkbox email-ui-mail-list-item-select">
+                          <button type="button" class="email-ui-mail-list-item-bookmark">
+                            <i class="ti ti-star text-lg"></i>
+                          </button>
+
+                          <div class="w-full flex items-center gap-3">
+                            <div class="avatar avatar-circle avatar-sm shrink-0">
+                              <img class="avatar-img" src="./images/avatar2.png" alt="Avatar 2">
+                            </div>
+
+                            <div class="w-full flex flex-col 2xl:flex-row items-center gap-1">
+                              <div class="w-full 2xl:w-1/6 shrink-0">
+                                <span class="email-ui-mail-list-item-sender">
+                                  Ross Geller 
+                                </span>
+                              </div>
+
+                              <div class="w-full">
+                                <span class="email-ui-mail-list-item-subject">
+                                  Hey Katy, Dessert soufflé tootsie roll soufflé carrot cake halvah jelly
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flex items-center gap-x-3">
+                            <span class="badge badge-dot badge-primary hidden md:inline-flex"></span>
+                            <span class="email-ui-mail-list-item-time">
+                              8:40AM
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="email-ui-mail-list-item-inline-action">
+                          <div class="w-full h-full flex justify-end items-center gap-x-4 px-4">
+                            <button type="button" class="email-ui-mail-list-item-mark">
+                              <i class="ti ti-mail text-xl"></i>
+                            </button>
+                            <button type="button" class="email-ui-mail-list-item-delete">
+                              <i class="ti ti-trash l text-xl"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="email-ui-mail-list-item group/mail-list-item mark-as-read" data-filter-by-draft="true" data-filter-by-important="true" data-toggle="sidebar" data-target="#email-ui-sidebar-secondary">
+                        <div class="flex items-center gap-x-3 sm:gap-x-6">
+                          <input type="checkbox" class="checkbox email-ui-mail-list-item-select">
+                          <button type="button" class="email-ui-mail-list-item-bookmark">
+                            <i class="ti ti-star text-lg"></i>
+                          </button>
+
+                          <div class="w-full flex items-center gap-3">
+                            <div class="avatar avatar-circle avatar-sm shrink-0">
+                              <img class="avatar-img" src="./images/avatar3.png" alt="Avatar 3">
+                            </div>
+
+                            <div class="w-full flex flex-col 2xl:flex-row items-center gap-1">
+                              <div class="w-full 2xl:w-1/6 shrink-0">
+                                <span class="email-ui-mail-list-item-sender">
+                                  Barney Stinson 
+                                </span>
+                              </div>
+
+                              <div class="w-full">
+                                <span class="email-ui-mail-list-item-subject">
+                                  Hey Katy, Soufflé apple pie caramels soufflé tiramisu bear claw
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flex items-center gap-x-3">
+                            <span class="badge badge-dot badge-danger hidden md:inline-flex"></span>
+                            <span class="email-ui-mail-list-item-attachment">
+                              <i class="ti ti-paperclip"></i>
+                            </span>
+                            <span class="email-ui-mail-list-item-time">
+                              10:12AM
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="email-ui-mail-list-item-inline-action">
+                          <div class="w-full h-full flex justify-end items-center gap-x-4 px-4">
+                            <button type="button" class="email-ui-mail-list-item-mark">
+                              <i class="ti ti-mail text-xl"></i>
+                            </button>
+                            <button type="button" class="email-ui-mail-list-item-delete">
+                              <i class="ti ti-trash l text-xl"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="email-ui-mail-list-item group/mail-list-item" data-starred="true" data-filter-by-draft="true" data-filter-by-promotions="true" data-toggle="sidebar" data-target="#email-ui-sidebar-secondary">
+                        <div class="flex items-center gap-x-3 sm:gap-x-6">
+                          <input type="checkbox" class="checkbox email-ui-mail-list-item-select">
+                          <button type="button" class="email-ui-mail-list-item-bookmark">
+                            <i class="ti ti-star text-lg"></i>
+                          </button>
+
+                          <div class="w-full flex items-center gap-3">
+                            <div class="avatar avatar-circle avatar-sm avatar-success shrink-0">
+                              <span class="avatar-text">
+                                <span>PB</span>
+                              </span>
+                            </div>
+
+                            <div class="w-full flex flex-col 2xl:flex-row items-center gap-1">
+                              <div class="w-full 2xl:w-1/6 shrink-0">
+                                <span class="email-ui-mail-list-item-sender">
+                                  Pheobe Buffay 
+                                </span>
+                              </div>
+
+                              <div class="w-full">
+                                <span class="email-ui-mail-list-item-subject">
+                                  Hey Katy, Tart croissant jujubes gummies macaroon Icing sweet
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flex items-center gap-x-3">
+                            <span class="badge badge-dot badge-warning hidden md:inline-flex"></span>
+                            <span class="email-ui-mail-list-item-time">
+                              12:44AM
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="email-ui-mail-list-item-inline-action">
+                          <div class="w-full h-full flex justify-end items-center gap-x-4 px-4">
+                            <button type="button" class="email-ui-mail-list-item-mark">
+                              <i class="ti ti-mail-opened text-xl"></i>
+                            </button>
+                            <button type="button" class="email-ui-mail-list-item-delete">
+                              <i class="ti ti-trash l text-xl"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="email-ui-mail-list-item group/mail-list-item mark-as-read" data-filter-by-starred="true" data-filter-by-personal="true" data-toggle="sidebar" data-target="#email-ui-sidebar-secondary">
+                        <div class="flex items-center gap-x-3 sm:gap-x-6">
+                          <input type="checkbox" class="checkbox email-ui-mail-list-item-select">
+                          <button type="button" class="email-ui-mail-list-item-bookmark">
+                            <i class="ti ti-star text-lg"></i>
+                          </button>
+
+                          <div class="w-full flex items-center gap-3">
+                            <div class="avatar avatar-circle avatar-sm shrink-0">
+                              <img class="avatar-img" src="./images/avatar5.png" alt="Avatar 5">
+                            </div>
+
+                            <div class="w-full flex flex-col 2xl:flex-row items-center gap-1">
+                              <div class="w-full 2xl:w-1/6 shrink-0">
+                                <span class="email-ui-mail-list-item-sender">
+                                  Ted Mosby
+                                </span>
+                              </div>
+
+                              <div class="w-full">
+                                <span class="email-ui-mail-list-item-subject">
+                                  Hey Katy, I love Pudding cookie chocolate sweet tiramisu jujubes I love danish
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flex items-center gap-x-3">
+                            <span class="badge badge-dot badge-success hidden md:inline-flex"></span>
+                            <span class="email-ui-mail-list-item-time">
+                              Apr 03
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="email-ui-mail-list-item-inline-action">
+                          <div class="w-full h-full flex justify-end items-center gap-x-4 px-4">
+                            <button type="button" class="email-ui-mail-list-item-mark">
+                              <i class="ti ti-mail text-xl"></i>
+                            </button>
+                            <button type="button" class="email-ui-mail-list-item-delete">
+                              <i class="ti ti-trash l text-xl"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="email-ui-mail-list-item group/mail-list-item mark-as-read" data-filter-by-starred="true" data-filter-by-company="true" data-toggle="sidebar" data-target="#email-ui-sidebar-secondary">
+                        <div class="flex items-center gap-x-3 sm:gap-x-6">
+                          <input type="checkbox" class="checkbox email-ui-mail-list-item-select">
+                          <button type="button" class="email-ui-mail-list-item-bookmark">
+                            <i class="ti ti-star text-lg"></i>
+                          </button>
+
+                          <div class="w-full flex items-center gap-3">
+                            <div class="avatar avatar-circle avatar-sm shrink-0">
+                              <img class="avatar-img" src="./images/avatar6.png" alt="Avatar 6">
+                            </div>
+
+                            <div class="w-full flex flex-col 2xl:flex-row items-center gap-1">
+                              <div class="w-full 2xl:w-1/6 shrink-0">
+                                <span class="email-ui-mail-list-item-sender">
+                                  Stacy Cooper 
+                                </span>
+                              </div>
+
+                              <div class="w-full">
+                                <span class="email-ui-mail-list-item-subject">
+                                  Hey Katy, I love danish. Cupcake I love carrot cake sugar plum I love
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flex items-center gap-x-3">
+                            <span class="badge badge-dot badge-primary hidden md:inline-flex"></span>
+                            <span class="email-ui-mail-list-item-time">
+                              Apr 01
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="email-ui-mail-list-item-inline-action">
+                          <div class="w-full h-full flex justify-end items-center gap-x-4 px-4">
+                            <button type="button" class="email-ui-mail-list-item-mark">
+                              <i class="ti ti-mail text-xl"></i>
+                            </button>
+                            <button type="button" class="email-ui-mail-list-item-delete">
+                              <i class="ti ti-trash l text-xl"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="email-ui-mail-list-item group/mail-list-item mark-as-read" data-filter-by-spam="true" data-filter-by-important="true" data-toggle="sidebar" data-target="#email-ui-sidebar-secondary">
+                        <div class="flex items-center gap-x-3 sm:gap-x-6">
+                          <input type="checkbox" class="checkbox email-ui-mail-list-item-select">
+                          <button type="button" class="email-ui-mail-list-item-bookmark">
+                            <i class="ti ti-star text-lg"></i>
+                          </button>
+
+                          <div class="w-full flex items-center gap-3">
+                            <div class="avatar avatar-circle avatar-sm shrink-0">
+                              <img class="avatar-img" src="./images/avatar7.png" alt="Avatar 7">
+                            </div>
+
+                            <div class="w-full flex flex-col 2xl:flex-row items-center gap-1">
+                              <div class="w-full 2xl:w-1/6 shrink-0">
+                                <span class="email-ui-mail-list-item-sender">
+                                  Rachel Green 
+                                </span>
+                              </div>
+
+                              <div class="w-full">
+                                <span class="email-ui-mail-list-item-subject">
+                                  Hey Katy, Chocolate cake pudding chocolate bar ice cream bonbon lollipop
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flex items-center gap-x-3">
+                            <span class="badge badge-dot badge-danger hidden md:inline-flex"></span>
+                            <span class="email-ui-mail-list-item-time">
+                              Mar 17
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="email-ui-mail-list-item-inline-action">
+                          <div class="w-full h-full flex justify-end items-center gap-x-4 px-4">
+                            <button type="button" class="email-ui-mail-list-item-mark">
+                              <i class="ti ti-mail text-xl"></i>
+                            </button>
+                            <button type="button" class="email-ui-mail-list-item-delete">
+                              <i class="ti ti-trash l text-xl"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="email-ui-mail-list-item group/mail-list-item" data-starred="true" data-filter-by-spam="true" data-filter-by-promotions="true" data-toggle="sidebar" data-target="#email-ui-sidebar-secondary">
+                        <div class="flex items-center gap-x-3 sm:gap-x-6">
+                          <input type="checkbox" class="checkbox email-ui-mail-list-item-select">
+                          <button type="button" class="email-ui-mail-list-item-bookmark">
+                            <i class="ti ti-star text-lg"></i>
+                          </button>
+
+                          <div class="w-full flex items-center gap-3">
+                            <div class="avatar avatar-circle avatar-sm avatar-primary shrink-0">
+                              <span class="avatar-text">
+                                <span>GS</span>
+                              </span>
+                            </div>
+                            
+                            <div class="w-full flex flex-col 2xl:flex-row items-center gap-1">
+                              <div class="w-full 2xl:w-1/6 shrink-0">
+                                <span class="email-ui-mail-list-item-sender">
+                                  Grace Shelby 
+                                </span>
+                              </div>
+
+                              <div class="w-full">
+                                <span class="email-ui-mail-list-item-subject">
+                                  Hey Katy, Icing gummi bears ice cream croissant dessert wafer
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flex items-center gap-x-3">
+                            <span class="badge badge-dot badge-warning hidden md:inline-flex"></span>
+                            <span class="email-ui-mail-list-item-time">
+                              Mar 04
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="email-ui-mail-list-item-inline-action">
+                          <div class="w-full h-full flex justify-end items-center gap-x-4 px-4">
+                            <button type="button" class="email-ui-mail-list-item-mark">
+                              <i class="ti ti-mail-opened text-xl"></i>
+                            </button>
+                            <button type="button" class="email-ui-mail-list-item-delete">
+                              <i class="ti ti-trash l text-xl"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="email-ui-mail-list-item group/mail-list-item" data-filter-by-trash="true" data-filter-by-personal="true" data-toggle="sidebar" data-target="#email-ui-sidebar-secondary">
+                        <div class="flex items-center gap-x-3 sm:gap-x-6">
+                          <input type="checkbox" class="checkbox email-ui-mail-list-item-select">
+                          <button type="button" class="email-ui-mail-list-item-bookmark">
+                            <i class="ti ti-star text-lg"></i>
+                          </button>
+
+                          <div class="w-full flex items-center gap-3">
+                            <div class="avatar avatar-circle avatar-sm shrink-0">
+                              <img class="avatar-img" src="./images/avatar9.png" alt="Avatar 9">
+                            </div>
+
+                            <div class="w-full flex flex-col 2xl:flex-row items-center gap-1">
+                              <div class="w-full 2xl:w-1/6 shrink-0">
+                                <span class="email-ui-mail-list-item-sender">
+                                  Jacob Frye 
+                                </span>
+                              </div>
+
+                              <div class="w-full">
+                                <span class="email-ui-mail-list-item-subject">
+                                  Hey Katy, Chocolate cake pudding chocolate bar ice cream Sweet
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flex items-center gap-x-3">
+                            <span class="badge badge-dot badge-success hidden md:inline-flex"></span>
+                            <span class="email-ui-mail-list-item-attachment">
+                              <i class="ti ti-paperclip"></i>
+                            </span>
+                            <span class="email-ui-mail-list-item-time">
+                              Mar 06
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="email-ui-mail-list-item-inline-action">
+                          <div class="w-full h-full flex justify-end items-center gap-x-4 px-4">
+                            <button type="button" class="email-ui-mail-list-item-mark">
+                              <i class="ti ti-mail-opened text-xl"></i>
+                            </button>
+                            <button type="button" class="email-ui-mail-list-item-delete">
+                              <i class="ti ti-trash l text-xl"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="email-ui-mail-list-item group/mail-list-item" data-filter-by-trash="true" data-filter-by-company="true" data-toggle="sidebar" data-target="#email-ui-sidebar-secondary">
+                        <div class="flex items-center gap-x-3 sm:gap-x-6">
+                          <input type="checkbox" class="checkbox email-ui-mail-list-item-select">
+                          <button type="button" class="email-ui-mail-list-item-bookmark">
+                            <i class="ti ti-star text-lg"></i>
+                          </button>
+
+                          <div class="w-full flex items-center gap-3">
+                            <div class="avatar avatar-circle avatar-sm shrink-0">
+                              <img class="avatar-img" src="./images/avatar10.png" alt="Avatar 10">
+                            </div>
+
+                            <div class="w-full flex flex-col 2xl:flex-row items-center gap-1">
+                              <div class="w-full 2xl:w-1/6 shrink-0">
+                                <span class="email-ui-mail-list-item-sender">
+                                  Alistair Crowley 
+                                </span>
+                              </div>
+
+                              <div class="w-full">
+                                <span class="email-ui-mail-list-item-subject">
+                                  Hey Katy, I love danish. Cupcake I love carrot cake sugar plum I love
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flex items-center gap-x-3">
+                            <span class="badge badge-dot badge-primary hidden md:inline-flex"></span>
+                            <span class="email-ui-mail-list-item-time">
+                              29/12/22
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="email-ui-mail-list-item-inline-action">
+                          <div class="w-full h-full flex justify-end items-center gap-x-4 px-4">
+                            <button type="button" class="email-ui-mail-list-item-mark">
+                              <i class="ti ti-mail-opened text-xl"></i>
+                            </button>
+                            <button type="button" class="email-ui-mail-list-item-delete">
+                              <i class="ti ti-trash l text-xl"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul> 
+                    <!-- Mail List Ends --> 
+                  </div>
+                </div>
+                <!-- Container Ends --> 
+
+                <!-- Sidebar Secondary Starts --> 
+                <div id="email-ui-sidebar-secondary" class="email-ui-sidebar email-ui-sidebar-secondary" data-backdrop="false">
+                  <div class="email-ui-sidebar-header">
+                    <!-- Mail View Top Subject Area Starts -->
+                    <div class="flex items-center justify-between py-3 px-4 gap-x-4">
+                      <div class="flex items-center gap-x-2 overflow-hidden">
+                        <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300" data-dismiss="sidebar">
+                          <i class="ti ti-chevron-left text-xl"></i>
+                        </button>
+                        <h6 class="truncate">Focused impactful open issues</h6>
+                        <div class="badge badge-soft-primary">Company</div>
+                      </div>
+
+                      <div class="dropdown">
+                        <div class="dropdown-toggle">
+                          <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                            <i class="ti ti-dots-vertical text-xl"></i>
                           </button>
                         </div>
                         <div class="dropdown-content">
                           <ul class="dropdown-list">
                             <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link"> Add label </a>
+                              <a href="javascript:void(0);" class="dropdown-link">
+                                <i class="ti ti-mail text-xl"></i>
+                                <span>Mark as read</span>
+                              </a>
                             </li>
                             <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link"> Pail text mode </a>
+                              <a href="javascript:void(0);" class="dropdown-link">
+                                <i class="ti ti-mail-opened text-xl"></i>
+                                <span>Mark as unread</span>
+                              </a>
                             </li>
                             <li class="dropdown-list-item">
-                              <a data-dismiss="modal" href="javascript:void(0)" class="dropdown-link"> Print </a>
+                              <a href="javascript:void(0);" class="dropdown-link">
+                                <i class="ti ti-star text-xl"></i>
+                                <span>Add Star</span>
+                              </a>
                             </li>
                             <li class="dropdown-list-item">
-                              <a data-dismiss="modal" href="javascript:void(0)" class="dropdown-link">
-                                Check spelling
+                              <a href="javascript:void(0);" class="dropdown-link">
+                                <i class="ti ti-calendar text-xl"></i>
+                                <span>Create Event</span>
+                              </a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0);" class="dropdown-link">
+                                <i class="ti ti-volume-off text-xl"></i>
+                                <span>Mute</span>
                               </a>
                             </li>
                           </ul>
                         </div>
                       </div>
-                      <button data-dismiss="modal"
-                        class="text-slate-600 transition duration-150 ease-in-out hover:text-primary-500 dark:text-slate-300 hover:dark:text-primary-500">
-                        <i class="h-5" data-feather="trash-2"></i>
+                    </div>
+                    <!-- Mail View Top Subject Area Ends -->
+
+                    <!-- Mail View Top Toolbar Area Starts -->
+                    <div class="flex items-center justify-between py-3 px-4 gap-x-4">
+                      <div class="flex items-center gap-x-4">
+                        <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                          <i class="ti ti-printer text-xl"></i>
+                        </button>
+                        <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                          <i class="ti ti-mail-opened text-xl"></i>
+                        </button>
+                        <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                          <i class="ti ti-trash text-xl"></i>
+                        </button>
+                      </div>
+
+                      <div class="flex items-center gap-x-4">
+                        <span class="hidden sm:inline-block text-sm text-slate-500 dark:text-slate-300">1-10 of 653</span>
+                        <div class="flex items-center gap-x-2">
+                          <button type="button" disabled class="text-slate-500 focus:text-slate-700 disabled:opacity-50 dark:text-slate-400 dark:focus:text-slate-300">
+                            <i class="ti ti-chevron-left text-xl"></i>
+                          </button>
+                          <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                            <i class="ti ti-chevron-right text-xl"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Mail View Top Toolbar Area Ends -->
+                  </div>
+                  
+                  <div class="email-ui-sidebar-body" data-simplebar>
+                    <!-- Mail View Previous Message Card Starts -->
+                    <div class="card email-ui-card-prev">
+                      <div class="card-header !p-5 !border-b-0">
+                        <div class="flex flex-col items-start gap-y-2 sm:flex-row sm:items-center justify-between">
+                          <div class="flex items-center gap-x-3">
+                            <div class="avatar avatar-circle">
+                              <img class="avatar-img" src="./images/avatar1.png" alt="Avatar 1">
+                            </div>
+                            <div class="flex flex-col">
+                              <span class="inline-block text-sm font-medium text-slate-700 dark:text-slate-300">
+                                Chandler Bing
+                              </span>
+                              <span class="inline-block text-xs font-normal text-slate-500 dark:text-slate-400">
+                                chandler@example.com
+                              </span>
+                            </div>
+                          </div>
+
+                          <div class="flex items-center gap-x-3">
+                            <span class="text-sm text-slate-500 dark:text-slate-400">Jun 20, 2020 08:30 AM</span>
+                            <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                              <i class="ti ti-paperclip text-xl"></i>
+                            </button>
+                            <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                              <i class="ti ti-star text-xl"></i>
+                            </button>
+                            <div class="dropdown">
+                              <div class="dropdown-toggle">
+                                <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                                  <i class="ti ti-dots-vertical text-xl"></i>
+                                </button>
+                              </div>
+                              <div class="dropdown-content">
+                                <ul class="dropdown-list">
+                                  <li class="dropdown-list-item">
+                                    <a href="javascript:void(0);" class="dropdown-link">
+                                      <i class="ti ti-corner-up-left text-xl"></i>
+                                      <span>Reply</span>
+                                    </a>
+                                  </li>
+                                  <li class="dropdown-list-item">
+                                    <a href="javascript:void(0);" class="dropdown-link">
+                                      <i class="ti ti-corner-up-right text-xl"></i>
+                                      <span>Forword</span>
+                                    </a>
+                                  </li>
+                                  <li class="dropdown-list-item">
+                                    <a href="javascript:void(0);" class="dropdown-link">
+                                      <i class="ti ti-alert-octagon text-xl"></i>
+                                      <span>Report</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body !p-5">
+                        <p class="text-sm font-semibold text-slate-500 dark:text-slate-300 mb-2">
+                          Greetings!
+                        </p>
+
+                        <p class="text-sm tracking-wide leading-relaxed text-slate-500 dark:text-slate-400 mb-4">
+                          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',making it look like readable English. 
+                        </p>
+
+                        <p class="text-sm tracking-wide leading-relaxed text-slate-500 dark:text-slate-400 mb-4">
+                          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+                        </p>
+
+                        <p class="text-sm tracking-wide leading-relaxed text-slate-500 dark:text-slate-400">
+                          Sincerely yours,
+                        </p>
+
+                        <p class="text-sm font-semibold text-slate-500 dark:text-slate-300">
+                          Envato Design Team
+                        </p>
+                      </div>
+
+                      <div class="card-footer !p-5 !justify-start">
+                        <div class="flex flex-col gap-y-2">
+                          <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Attachments</p>
+                          
+                          <a href="#" class="text-sm inline-flex items-center gap-x-1 text-slate-500 dark:text-slate-400">
+                            <i class="ti ti-file"></i>
+                            <span>report.csv</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Mail View Previous Message Card Ends -->
+                    
+                    <!-- Mail View Last Message Card Starts -->
+                    <div class="card email-ui-card-last mt-6">
+                      <div class="card-header !p-5 !border-b-0">
+                        <div class="flex flex-col items-start gap-y-2 sm:flex-row sm:items-center justify-between">
+                          <div class="flex items-center gap-x-3">
+                            <div class="avatar avatar-circle">
+                              <img class="avatar-img" src="./images/avatar9.png" alt="Avatar 9">
+                            </div>
+                            <div class="flex flex-col">
+                              <span class="inline-block text-sm font-medium text-slate-700 dark:text-slate-300">
+                                Ross Geller
+                              </span>
+                              <span class="inline-block text-xs font-normal text-slate-500 dark:text-slate-400">
+                                ross@example.com
+                              </span>
+                            </div>
+                          </div>
+
+                          <div class="flex items-center gap-x-3">
+                            <span class="text-sm text-slate-500 dark:text-slate-400">Jun 20, 2020 08:30 AM</span>
+                            <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                              <i class="ti ti-paperclip text-xl"></i>
+                            </button>
+                            <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                              <i class="ti ti-star text-xl"></i>
+                            </button>
+                            <div class="dropdown">
+                              <div class="dropdown-toggle">
+                                <button type="button" class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300">
+                                  <i class="ti ti-dots-vertical text-xl"></i>
+                                </button>
+                              </div>
+                              <div class="dropdown-content">
+                                <ul class="dropdown-list">
+                                  <li class="dropdown-list-item">
+                                    <a href="javascript:void(0);" class="dropdown-link">
+                                      <i class="ti ti-corner-up-left text-xl"></i>
+                                      <span>Reply</span>
+                                    </a>
+                                  </li>
+                                  <li class="dropdown-list-item">
+                                    <a href="javascript:void(0);" class="dropdown-link">
+                                      <i class="ti ti-corner-up-right text-xl"></i>
+                                      <span>Forword</span>
+                                    </a>
+                                  </li>
+                                  <li class="dropdown-list-item">
+                                    <a href="javascript:void(0);" class="dropdown-link">
+                                      <i class="ti ti-alert-octagon text-xl"></i>
+                                      <span>Report</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body !p-5">
+                        <p class="text-sm font-semibold text-slate-500 dark:text-slate-300 mb-2">
+                          Greetings!
+                        </p>
+
+                        <p class="text-sm tracking-wide leading-relaxed text-slate-500 dark:text-slate-400 mb-4">
+                          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',making it look like readable English. 
+                        </p>
+
+                        <p class="text-sm tracking-wide leading-relaxed text-slate-500 dark:text-slate-400 mb-4">
+                          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+                        </p>
+
+                        <p class="text-sm tracking-wide leading-relaxed text-slate-500 dark:text-slate-400">
+                          Sincerely yours,
+                        </p>
+
+                        <p class="text-sm font-semibold text-slate-500 dark:text-slate-300">
+                          Envato Design Team
+                        </p>
+                      </div>
+
+                      <div class="card-footer !p-5 !justify-start">
+                        <div class="flex flex-col gap-y-2">
+                          <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Attachments</p>
+                          
+                          <a href="#" class="text-sm inline-flex items-center gap-x-1 text-slate-500 dark:text-slate-400">
+                            <i class="ti ti-file"></i>
+                            <span>report.csv</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Mail View Last Message Card Ends -->
+                    
+                    <!-- Mail View Reply Message Card Starts -->
+                    <div class="card email-ui-card-replay mt-6">
+                      <div class="card-header !px-5 !py-4 !border-b-0">
+                        <h6 class="text-slate-500 dark:text-slate-400">Reply to Chandler Bing</h6>
+                      </div>
+
+                      <div class="card-body !px-5 !py-4">
+                        <div id="email-ui-reply-editor"></div>
+                      </div>
+                    </div>
+                    <!-- Mail View Reply Message Card Ends -->
+                  </div>
+                </div>
+                <!-- Sidebar Secondary Ends -->
+              </div>
+              <!-- Wrapper Ends -->
+            </div>
+            <!-- Email UI Ends -->
+
+            <!-- Modal Emai Compose Starts -->
+            <div id="modal-email-compose" class="modal" data-backdrop="static">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header bg-slate-100 dark:bg-slate-700">
+                    <div class="flex justify-between items-center">  
+                      <h6>Compose Mail</h6>
+
+                      <button type="button" class="btn btn-plain-secondary dark:text-slate-300 dark:hover:bg-slate-800 dark:focus:bg-slate-800" data-dismiss="modal">
+                        <span class="w-4 h-4 inline-flex justify-center items-center">
+                          <i class="ti ti-x text-xl"></i>
+                        </span>
                       </button>
                     </div>
                   </div>
+                  <div class="modal-body">
+                    <form id="email-compose-form" action="">
+                      <!-- Form Body Starts -->
+                      <div class="w-full space-y-4">
+                        <!-- Form Row: To Starts -->
+                        <div class="w-full">
+                          <div class="flex items-center justify-between mb-1">
+                            <label for="email-compose-input-to" class="label font-medium">
+                              To:
+                            </label>
+                            <div class="flex items-center gap-x-2">
+                              <button id="email-compose-btn-cc" type="button" class="text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300">
+                                Cc
+                              </button>
+                              <span class="text-slate-500 dark:text-slate-400">|</span>
+                              <button id="email-compose-btn-bcc" type="button" class="text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300">
+                                Bcc
+                              </button>
+                            </div>
+                          </div>
+                          <input id="email-compose-input-to" type="text" class="w-full border-0 border-b border-b-slate-300 focus:border-b-slate-300 focus:ring-0 dark:border-b-slate-600">
+                        </div> 
+                        <!-- Form Row: To Ends -->
+
+                        <!-- Form Row: CC Starts -->
+                        <div class="w-full hidden">
+                          <label for="email-compose-input-cc" class="label font-medium mb-1">
+                            Cc:
+                          </label>
+                          <input id="email-compose-input-cc" type="text" class="w-full border-0 border-b border-b-slate-300 focus:border-b-slate-300 focus:ring-0 dark:border-b-slate-600">
+                        </div>
+                        <!-- Form Row: CC Ends -->
+
+                        <!-- Form Row: BCC Starts -->
+                        <div class="w-full hidden">
+                          <label for="email-compose-input-bcc" class="label font-medium mb-1">
+                            Bcc:
+                          </label>
+                          <input id="email-compose-input-bcc" type="text" class="w-full border-0 border-b border-b-slate-300 focus:border-b-slate-300 focus:ring-0 dark:border-b-slate-600" >
+                        </div>
+                        <!-- Form Row: BCC Ends -->
+
+                        <!-- Form Row: Subject Starts -->
+                        <div class="w-full">
+                          <label for="email-compose-input-subject" class="label font-medium mb-1">
+                            Subject:
+                          </label>
+                          <input id="email-compose-input-subject" type="text" class="w-full px-0 text-sm text-slate-700 bg-transparent border-0 border-b border-b-slate-300 focus:border-b-slate-300 focus:ring-0 dark:text-slate-300 dark:border-b-slate-600">
+                        </div>
+                        <!-- Form Row: Subject Ends -->
+
+                        <!-- Form Row: Message Editor Starts -->
+                        <div class="w-full">
+                          <div id="email-compose-editor" class="!min-h-[15rem]"></div>
+                        </div>
+                        <!-- Form Row: Message Editor Ends -->
+                      </div>
+                      <!-- Form Body Ends -->
+
+                      <!-- Form Footer Starts -->
+                      <div class="w-full flex justify-between items-center mt-6 py-3 border-t border-t-slate-300 dark:border-t-slate-600">
+                        <div class="flex items-center gap-x-2">
+                          <div class="dropdown" data-placement="top-end">
+                            <div class="btn-group divide-x divide-primary-600">
+                              <button class="btn btn-primary" type="button">
+                                <span class="w-4 h-4 inline-flex items-center justify-center">
+                                  <i class="ti ti-send text-lg"></i>
+                                </span>
+                                <span>Send</span>
+                              </button>
+                              <button class="btn btn-primary dropdown-toggle px-2" type="button">
+                                <span class="w-4 h-4 inline-flex items-center justify-center">
+                                  <i class="ti ti-chevron-down text-lg"></i>
+                                </span>
+                              </button>
+                            </div>
+                            <div class="dropdown-content">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">Schedule send</a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link"> Save &amp; archive </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <label for="input-attach-files" class="cursor-pointer text-slate-500 hover:text-primary-500 dark:text-slate-400 hover:dark:text-primary-500">
+                            <i class="ti ti-paperclip text-lg"></i>
+                            <input type="file" class="zero-sr-only" id="input-attach-files">
+                          </label>
+                        </div>
+
+                        <div class="flex items-center gap-x-2">
+                          <div class="dropdown" data-placement="top-end">
+                            <div class="btn-group divide-x divide-primary-600">
+                              <button type="button" class="dropdown-toggle text-slate-600 transition duration-150 ease-in-out hover:text-primary-500 dark:text-slate-300 hover:dark:text-primary-500">
+                                <i class="ti ti-dots-vertical text-lg"></i>
+                              </button>
+                            </div>
+                            <div class="dropdown-content">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">Add label</a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">Pail text mode</a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a data-dismiss="modal" href="javascript:void(0)" class="dropdown-link">Print</a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a data-dismiss="modal" href="javascript:void(0)" class="dropdown-link">Check spelling</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <button type="button" class="text-slate-600 transition duration-150 ease-in-out hover:text-primary-500 dark:text-slate-300 hover:dark:text-primary-500" data-dismiss="modal">
+                            <i class="ti ti-trash text-xl"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- Form Footer Ends -->
+                    </form>
+                  </div>
                 </div>
               </div>
+              <div class="modal-backdrop show"></div>
             </div>
+            <!-- Modal Emai Compose Ends -->
           </div>
         </main>
         <!-- Main Content Ends -->
+
         <!-- Footer Starts -->
         <footer class="footer">
           <p class="text-sm">

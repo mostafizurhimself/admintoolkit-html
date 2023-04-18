@@ -32,7 +32,7 @@
     }
 
     &-content {
-      @apply relative flex h-full w-full flex-col rounded-primary bg-white shadow-xl dark:bg-slate-800;
+      @apply relative flex h-full w-full flex-col rounded-primary overflow-hidden bg-white shadow-xl dark:bg-slate-800;
     }
 
     &-header,
