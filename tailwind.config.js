@@ -1,5 +1,6 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
+/** @type {import('tailwindcss').Config} */
+import defaultTheme from 'tailwindcss/defaultTheme';
+import colors from 'tailwindcss/colors';
 
 // Add your custom theme colors here
 const themeColors = {
@@ -12,13 +13,19 @@ const themeColors = {
   dark: colors.slate,
 };
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: 'class',
   content: ['./src/**/*.{html,css,scss,js}'],
   theme: {
     container: {
-      center: true
+      center: true,
+      screens: {
+        sm: '100%',
+        md: '100%',
+        lg: '100%',
+        xl: '100%',
+        "2xl": "1536px",
+      }
     },
     extend: {
       fontFamily: {
@@ -88,4 +95,5 @@ module.exports = {
     require('@mertasan/tailwindcss-variables'),
     require('@tailwindcss/typography'),
   ],
-};
+}
+
