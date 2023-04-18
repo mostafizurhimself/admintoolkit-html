@@ -1,4 +1,5 @@
 import ApexCharts from 'apexcharts';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 const emptyOption = `{ 
                           // ...... 
@@ -44,8 +45,11 @@ const chartOptions = {
       align: 'left',
       style: {
         color: '#475569',
-        fontSize: '20px',
+        fontSize: '18px',
         fontWeight: 600,
+        fontFamily: {
+          sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        },
       },
     },
     grid: {
@@ -136,8 +140,11 @@ const chartOptions = {
       align: 'left',
       style: {
         color: '#475569',
-        fontSize: '20px',
+        fontSize: '18px',
         fontWeight: 600,
+        fontFamily: {
+          sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        },
       },
     },
     subtitle: {
@@ -146,6 +153,9 @@ const chartOptions = {
       style: {
         color: '#475569',
         fontWeight: 500,
+        fontFamily: {
+          sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        },
       },
     },
     labels: [
@@ -226,6 +236,9 @@ const chartOptions = {
         style: {
           color: '#475569',
           fontWeight: 500,
+          fontFamily: {
+            sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+          },
         },
       },
     },
@@ -460,6 +473,11 @@ const chartOptions = {
     ],
   },
   radarChart: {
+    chart: {
+      fontFamily: {
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+      },
+    },
     series: [
       {
         name: 'Series 1',
@@ -491,8 +509,11 @@ const chartOptions = {
       text: 'Radar Chart - Multi Series',
       style: {
         color: '#475569',
-        fontSize: '20px',
+        fontSize: '18px',
         fontWeight: 600,
+        fontFamily: {
+          sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        },
       },
     },
     stroke: {
@@ -626,3 +647,9 @@ radarChart.render();
 // Add Source Code
 createCodeViewer('#radar-chart-code-viewer', sourceCodeTemplate(radarChartElement.id)).render();
 // radar Chart End
+
+window.Apex.chart = {
+  fontFamily: {
+    sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+  },
+};
