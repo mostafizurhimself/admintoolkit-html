@@ -791,9 +791,9 @@
             <section class="grid md:grid-cols-1 lg:grid-cols-5 gap-6">
               <!-- Sales Analytics -->
               <div class="card lg:col-span-3">
-                <div class="card-body">
+                <div class="card-body h-full ">
                   <!-- Chart wrap -->
-                  <div id="chart-wrap">
+                  <div id="chart-wrap" class="flex flex-col h-full justify-between">
                     <div class="flex flex-wrap gap-3 md:gap-0 justify-between items-center">
                       <!-- Chart Title  -->
                       <h4 class="text-xl font-semibold">Sales Analytics</h4>
@@ -890,8 +890,8 @@
             <section class="grid grid-cols-1 lg:grid-cols-5 gap-6">
               <!-- Location  -->
               <div class="card col-span-1 lg:col-span-3">
-                <div class="card-body">
-                  <div class="flex flex-wrap justify-between">
+                <div class="card-body h-full flex flex-col justify-between  gap-8">
+                  <div class="flex flex-wrap gap-2 justify-between">
                     <h4>Sales By Location</h4>
                     <select class="select w-full md:w-48">
                       <option value="1">Top Country</option>
@@ -900,13 +900,92 @@
                       <option value="1">Feature Country</option>
                     </select>
                   </div>
+                  <div class="flex-grow grid grid-cols-1 min-h-min md:grid-cols-5 gap-4">
+                    <!-- World Map Chart  -->
+                    <div id="chartdiv" class=" col-span-1 md:col-span-3 h-80 md:h-full"></div>
+                    <div class="col-span-1 md:col-span-2 flex flex-col my-4 gap-8">
+                      <!-- United States  -->
+                      <div class="flex items-center gap-2">
+                        <img src="./images/flag-United_States.jpg" class="h-7 w-10 " alt="flag-image">
+                        <div class="flex-1 flex flex-col gap-1">
+                          <div class="flex justify-between items-center">
+                            <h6 class="text-sm font-normal text-slate-700 dark:text-slate-300 ">United States</h6>
+                            <p class="text-slate-400 text-sm font-normal">50%</p>
+                          </div>
+                          <div class="progress progress-sm" role="progressbar" aria-valuenow="10" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 50%"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- United Kingdom  -->
+                      <div class="flex items-center gap-2">
+                        <img src="./images/flag-United_Kingdom.jpg" class="h-7 w-10 " alt="flag-image">
+                        <div class="flex-1 flex flex-col gap-1">
+                          <div class="flex justify-between items-center">
+                            <h6 class="text-sm font-normal text-slate-700 dark:text-slate-300 ">United Kingdom</h6>
+                            <p class="text-slate-400 text-sm font-normal">35%</p>
+                          </div>
+                          <div class="progress progress-success progress-sm" role="progressbar" aria-valuenow="10"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 35%"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Brazil  -->
+                      <div class="flex items-center gap-2">
+                        <img src="./images/flag-Brazil.jpg" class="h-7 w-10 " alt="flag-image">
+                        <div class="flex-1 flex flex-col gap-1">
+                          <div class="flex justify-between items-center">
+                            <h6 class="text-sm font-normal text-slate-700 dark:text-slate-300 ">Brazil</h6>
+                            <p class="text-slate-400 text-sm font-normal">22%</p>
+                          </div>
+                          <div class="progress progress-info progress-sm" role="progressbar" aria-valuenow="10"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 22%"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Germany  -->
+                      <div class="flex items-center gap-2">
+                        <img src="./images/flag-Germany.jpg" class="h-7 w-10 " alt="flag-image">
+                        <div class="flex-1 flex flex-col gap-1">
+                          <div class="flex justify-between items-center">
+                            <h6 class="text-sm font-normal text-slate-700 dark:text-slate-300 ">Germany</h6>
+                            <p class="text-slate-400 text-sm font-normal">52%</p>
+                          </div>
+                          <div class="progress progress-warning progress-sm" role="progressbar" aria-valuenow="10"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 52%"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
               <!-- Source Visits -->
               <div class="card col-span-1 lg:col-span-2">
-                <div class="card-body flex flex-col gap-4">
+                <div class="card-body flex flex-col gap-0">
                   <!-- Header  -->
-                  <div class="flex justify-between w-full">
+                  <div class="flex justify-between w-full my-2">
                     <h4 class="text-xl font-semibold">Source Visitors</h4>
                     <div class="dropdown">
                       <div class="dropdown-toggle">
@@ -928,10 +1007,10 @@
                       </div>
                     </div>
                   </div>
-                  <p class="text-slate-400 text-sm font-normal">30.8k Visiters</p>
+                  <p class="text-slate-400 my-1 text-sm font-normal">30.8k Visiters</p>
                   <div class="grid grid-cols-1">
                     <!-- Social Network -->
-                    <div class="grid grid-cols-2 py-4 border-b border-b-slate-200 dark:border-b-slate-600">
+                    <div class="grid grid-cols-2 py-2 border-b border-b-slate-200 dark:border-b-slate-600">
                       <div class="flex items-center gap-4">
                         <div
                           class="h-12 w-14 rounded-primary flex justify-center items-center text-3xl  bg-success-500 text-success-500 bg-opacity-20">
@@ -949,7 +1028,7 @@
                       </div>
                     </div>
                     <!-- Direct Source  -->
-                    <div class="grid grid-cols-2 py-4 border-b border-b-slate-200 dark:border-b-slate-600">
+                    <div class="grid grid-cols-2 py-2 border-b border-b-slate-200 dark:border-b-slate-600">
                       <div class="flex items-center gap-4">
                         <div
                           class="h-12 w-14 rounded-primary flex justify-center items-center text-3xl  bg-primary-500 text-primary-500 bg-opacity-20">
@@ -967,7 +1046,7 @@
                       </div>
                     </div>
                     <!-- ADVT  -->
-                    <div class="grid grid-cols-2 py-4 border-b border-b-slate-200 dark:border-b-slate-600">
+                    <div class="grid grid-cols-2 py-2 border-b border-b-slate-200 dark:border-b-slate-600">
                       <div class="flex items-center gap-4">
                         <div
                           class="h-12 w-14 rounded-primary flex justify-center items-center text-3xl  bg-warning-500 text-warning-500 bg-opacity-20">
@@ -984,7 +1063,7 @@
                       </div>
                     </div>
                     <!-- Referrals  -->
-                    <div class="grid grid-cols-2 py-4 ">
+                    <div class="grid grid-cols-2 py-2 ">
                       <div class="flex items-center gap-4">
                         <div
                           class="h-12 w-14 rounded-primary flex justify-center items-center text-3xl  bg-info-500 text-info-500 bg-opacity-20">
@@ -1379,9 +1458,9 @@
             <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <!-- Monthly Campaign State  -->
               <div class="card">
-                <div class="card-body flex flex-col gap-4">
+                <div class="card-body h-full flex flex-col justify-between">
                   <!-- Header  -->
-                  <div class="flex justify-between w-full">
+                  <div class="flex justify-between w-full my-2">
                     <h4 class="text-xl font-semibold">Monthly Campaign State</h4>
                     <div class="dropdown">
                       <div class="dropdown-toggle">
@@ -1403,10 +1482,10 @@
                       </div>
                     </div>
                   </div>
-                  <p class="text-slate-400 text-sm font-normal">8.56k social Visiters</p>
+                  <p class="text-slate-400 text-sm my-1 font-normal">8.56k social Visiters</p>
                   <div class="grid grid-cols-1">
                     <!-- Emails  -->
-                    <div class="grid grid-cols-2 py-4 border-b border-b-slate-200 dark:border-b-slate-600">
+                    <div class="grid grid-cols-2 py-2 border-b border-b-slate-200 dark:border-b-slate-600">
                       <div class="flex items-center gap-4">
                         <div
                           class="h-12 w-14 rounded-primary flex justify-center items-center text-3xl  bg-primary-500 text-primary-500 bg-opacity-20">
@@ -1423,7 +1502,7 @@
                       </div>
                     </div>
                     <!-- Opened  -->
-                    <div class="grid grid-cols-2 py-4 border-b border-b-slate-200 dark:border-b-slate-600">
+                    <div class="grid grid-cols-2 py-2 border-b border-b-slate-200 dark:border-b-slate-600">
                       <div class="flex items-center gap-4">
                         <div
                           class="h-12 w-14 rounded-primary flex justify-center items-center text-3xl  bg-success-500 text-success-500 bg-opacity-20">
@@ -1440,7 +1519,7 @@
                       </div>
                     </div>
                     <!-- Clicked  -->
-                    <div class="grid grid-cols-2 py-4 border-b border-b-slate-200 dark:border-b-slate-600">
+                    <div class="grid grid-cols-2 py-2 border-b border-b-slate-200 dark:border-b-slate-600">
                       <div class="flex items-center gap-4">
                         <div
                           class="h-12 w-14 rounded-primary flex justify-center items-center text-3xl  bg-info-500 text-info-500 bg-opacity-20">
@@ -1457,7 +1536,7 @@
                       </div>
                     </div>
                     <!-- Complaints  -->
-                    <div class="grid grid-cols-2 py-4 ">
+                    <div class="grid grid-cols-2 py-2">
                       <div class="flex items-center gap-4">
                         <div
                           class="h-12 w-14 rounded-primary flex justify-center items-center text-3xl  bg-warning-500 text-warning-500 bg-opacity-20">
@@ -1478,7 +1557,7 @@
               </div>
               <!-- Active Users  -->
               <div class="card">
-                <div class="card-body flex flex-col gap-4">
+                <div class="card-body h-full flex flex-col justify-between gap-4">
                   <!-- Header  -->
                   <div class="flex justify-between w-full">
                     <h4 class="text-xl font-semibold">Active Users</h4>
@@ -1717,102 +1796,96 @@
     </div>
     <!-- Wrapper Ends -->
   </div>
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
   <script src="./js/app.js" type="module"></script>
-  <script type="module">
-    import ApexCharts from 'apexcharts';
-    const pieOptions = {
+  <script src="./js/custom/analytics.js" type="module"></script>
+  <script>
+    am5.ready(function () {
+      // Create root element
+      // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+      var root = am5.Root.new('chartdiv');
 
-      series: [41, 17, 15],
-      labels: ['Camera', 'Sunglass', 'MacBook'],
-      colors: ['#8B5CF6', '#FDE68A', '#FDA4AF'],
-      chart: {
-        type: 'donut',
-        width: '100%',
-      },
-      plotOptions: {
-        pie: {
-          startAngle: -90,
-          endAngle: 90,
-          offsetY: 50,
-          dataLabels: {
-            enabled: false,
-            style: {
-              display: 'none',
-              visibility: 'invisible'
-            },
-          },
+      // Set themes
+      // https://www.amcharts.com/docs/v5/concepts/themes/
+      root.setThemes([am5themes_Animated.new(root)]);
 
-        }
-      },
-      legend: {
-        // show: false
-        position: 'bottom',
-        offsetY: -130,
-      },
-    };
-    const areaOptions = {
-      colors: ['#8C5EF6', '#1BA0FE'],
-      series: [
-        {
-          name: 'Total Sales',
-          data: [0, 1000, 7000, 16000, 21000, 38000, 43000, 30000, 36000, 25000, 36000],
-        },
-        {
-          name: 'Total Orders',
-          data: [0, 1100, 8000, 18000, 22000, 45000, 40000, 38000, 39000, 44000, 30000],
-        }
-      ],
-      fill: {
-        colors: ['#8B5CF6'],
-        type: 'gradient',
-        gradient: {
-          opacityFrom: 0.3,
-          opacityTo: 0,
-        }
-      },
-      chart: {
-        type: 'area',
-        height: 350,
-        zoom: {
-          enabled: false,
-        },
-        toolbar: {
-          show: false,
-        },
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        curve: 'smooth',
-      },
-      xaxis: {
-        categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-      },
-      yaxis: {
-        min: 0,
-        max: 50000
-      },
-      legend: {
-        show: false,
-      },
-    }
-    // Area Chart Start 
-    let areaChart = new ApexCharts(document.querySelector("#area-chart"), areaOptions);
-    areaChart.render();
-    // AreaChart Custom Legends 
-    const allLegends = document.querySelectorAll(".area-legend input[type='checkbox']")
-    allLegends.forEach(legend => {
-      legend.addEventListener('click', event => {
-        areaChart.toggleSeries(event.target.value)
-        legend.parentNode.classList.toggle('opacity-20')
-      })
-    })
-    // Area Chart End 
-    // Pie Chart Start 
-    let pieChart = new ApexCharts(document.querySelector("#pie-chart"), pieOptions);
-    pieChart.render();
-    // Pie Chart Start
+      // Create the map chart
+      // https://www.amcharts.com/docs/v5/charts/map-chart/
+      var chart = root.container.children.push(
+        am5map.MapChart.new(root, {
+          panX: 'translateX',
+          panY: 'translateY',
+          projection: am5map.geoMercator(),
+        })
+      );
+
+      // Create main polygon series for countries
+      // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
+      var polygonSeries = chart.series.push(
+        am5map.MapPolygonSeries.new(root, {
+          geoJSON: am5geodata_worldLow,
+          exclude: ['AQ'],
+        })
+      );
+
+      polygonSeries.mapPolygons.template.setAll({
+        tooltipText: '{name}',
+        toggleKey: 'active',
+        interactive: true,
+      });
+
+      polygonSeries.mapPolygons.template.states.create('hover', {
+        fill: root.interfaceColors.get('primaryButtonHover'),
+      });
+
+      polygonSeries.mapPolygons.template.states.create('active', {
+        fill: root.interfaceColors.get('primaryButtonHover'),
+      });
+
+      // US Series
+      // Create main polygon series for countries
+      // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
+      var polygonSeriesUS = chart.series.push(
+        am5map.MapPolygonSeries.new(root, {
+          geoJSON: am5geodata_usaLow,
+        })
+      );
+
+      polygonSeriesUS.mapPolygons.template.setAll({
+        tooltipText: '{name}',
+        toggleKey: 'active',
+        interactive: true,
+      });
+
+      var colors = am5.ColorSet.new(root, {});
+
+      polygonSeriesUS.mapPolygons.template.set('fill', colors.getIndex(3));
+
+      polygonSeriesUS.mapPolygons.template.states.create('hover', {
+        fill: root.interfaceColors.get('primaryButtonHover'),
+      });
+
+      polygonSeriesUS.mapPolygons.template.states.create('active', {
+        fill: root.interfaceColors.get('primaryButtonHover'),
+      });
+
+      // Add zoom control
+      // https://www.amcharts.com/docs/v5/charts/map-chart/map-pan-zoom/#Zoom_control
+      chart.set('zoomControl', am5map.ZoomControl.new(root, {}));
+
+      // Set clicking on "water" to zoom out
+      chart.chartContainer.get('background').events.on('click', function () {
+        chart.goHome();
+      });
+
+      // Make stuff animate on load
+      chart.appear(1000, 100);
+    }); // end am5.ready()
+
   </script>
 </body>
 
