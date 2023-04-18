@@ -837,24 +837,16 @@
                       <div class="dropdown-toggle">
                         <i class="ti ti-dots-vertical text-3xl text-slate-500"></i>
                       </div>
-                      <div class="dropdown-content w-[200px]">
+                      <div class="dropdown-content w-[160px]">
                         <ul class="dropdown-list">
                           <li class="dropdown-list-item">
                             <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="edit"></i>
-                              Edit
+                              Action
                             </a>
                           </li>
                           <li class="dropdown-list-item">
                             <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="copy"></i>
-                              Duplicate
-                            </a>
-                          </li>
-                          <li class="dropdown-list-item">
-                            <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="trash-2"></i>
-                              Delete
+                              Another Action
                             </a>
                           </li>
                         </ul>
@@ -912,34 +904,100 @@
               </div>
               <!-- Source Visits -->
               <div class="card col-span-1 lg:col-span-2">
-                <div class="card-body">
+                <div class="card-body flex flex-col gap-4">
+                  <!-- Header  -->
                   <div class="flex justify-between w-full">
-                    <h4 class="text-xl font-semibold">Source Visits</h4>
+                    <h4 class="text-xl font-semibold">Source Visitors</h4>
                     <div class="dropdown">
                       <div class="dropdown-toggle">
                         <i class="ti ti-dots-vertical text-3xl text-slate-500"></i>
                       </div>
-                      <div class="dropdown-content w-[200px]">
+                      <div class="dropdown-content w-[160px]">
                         <ul class="dropdown-list">
                           <li class="dropdown-list-item">
                             <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="edit"></i>
-                              Edit
+                              Actions
                             </a>
                           </li>
                           <li class="dropdown-list-item">
-                            <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="copy"></i>
-                              Duplicate
-                            </a>
-                          </li>
-                          <li class="dropdown-list-item">
-                            <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="trash-2"></i>
-                              Delete
+                            <a href="javascript:void(0)" class="dropdown-link">
+                              Another Action
                             </a>
                           </li>
                         </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-slate-400 text-sm font-normal">30.8k Visiters</p>
+                  <div class="grid grid-cols-1">
+                    <!-- Social Network -->
+                    <div class="grid grid-cols-2 py-4 border-b border-b-slate-200 dark:border-b-slate-600">
+                      <div class="flex items-center gap-4">
+                        <div
+                          class="h-12 w-14 rounded-primary flex justify-center items-center text-3xl  bg-success-500 text-success-500 bg-opacity-20">
+                          <i class="ti ti-social"></i>
+                        </div>
+                        <div class="flex flex-col">
+                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300 whitespace-nowrap">Social
+                            Network</h6>
+                          <p class="text-slate-400 font-normal text-sm">31.4k</p>
+                        </div>
+                      </div>
+                      <div class="flex justify-end text-danger-500 items-center">
+                        <span class="text-sm font-medium ">08%</span>
+                        <i data-feather="arrow-down-left" class="h-3 w-3"></i>
+                      </div>
+                    </div>
+                    <!-- Direct Source  -->
+                    <div class="grid grid-cols-2 py-4 border-b border-b-slate-200 dark:border-b-slate-600">
+                      <div class="flex items-center gap-4">
+                        <div
+                          class="h-12 w-14 rounded-primary flex justify-center items-center text-3xl  bg-primary-500 text-primary-500 bg-opacity-20">
+                          <i class="ti ti-world-search"></i>
+                        </div>
+                        <div class="flex flex-col">
+                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300 whitespace-nowrap">Direct
+                            Source</h6>
+                          <p class="text-slate-400 font-normal text-sm">1.4k</p>
+                        </div>
+                      </div>
+                      <div class="flex justify-end text-success-500 items-center">
+                        <span class="text-sm font-medium ">15%</span>
+                        <i data-feather="arrow-up-left" class="h-3 w-3"></i>
+                      </div>
+                    </div>
+                    <!-- ADVT  -->
+                    <div class="grid grid-cols-2 py-4 border-b border-b-slate-200 dark:border-b-slate-600">
+                      <div class="flex items-center gap-4">
+                        <div
+                          class="h-12 w-14 rounded-primary flex justify-center items-center text-3xl  bg-warning-500 text-warning-500 bg-opacity-20">
+                          <i class=" ti ti-social"></i>
+                        </div>
+                        <div class="flex flex-col">
+                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">ADVT</h6>
+                          <p class="text-slate-400 font-normal text-sm">31.2k</p>
+                        </div>
+                      </div>
+                      <div class="flex justify-end text-danger-500 items-center">
+                        <span class="text-sm font-medium ">16%</span>
+                        <i data-feather="arrow-down-left" class="h-3 w-3"></i>
+                      </div>
+                    </div>
+                    <!-- Referrals  -->
+                    <div class="grid grid-cols-2 py-4 ">
+                      <div class="flex items-center gap-4">
+                        <div
+                          class="h-12 w-14 rounded-primary flex justify-center items-center text-3xl  bg-info-500 text-info-500 bg-opacity-20">
+                          <i class="ti ti-users-group"></i>
+                        </div>
+                        <div class="flex flex-col">
+                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Referrals</h6>
+                          <p class="text-slate-400 font-normal text-sm">345</p>
+                        </div>
+                      </div>
+                      <div class="flex justify-end text-success-500 items-center">
+                        <span class="text-sm font-medium ">53%</span>
+                        <i data-feather="arrow-down-left" class="h-3 w-3"></i>
                       </div>
                     </div>
                   </div>
@@ -1017,25 +1075,18 @@
                       <div class="dropdown-toggle">
                         <i class="ti ti-dots-vertical text-3xl text-slate-500"></i>
                       </div>
-                      <div class="dropdown-content w-[200px]">
+                      <div class="dropdown-content w-[160px]">
                         <ul class="dropdown-list">
                           <li class="dropdown-list-item">
                             <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="edit"></i>
-                              Edit
+                              Action
                             </a>
                           </li>
                           <li class="dropdown-list-item">
                             <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="copy"></i>
-                              Duplicate
+                              Another Action
                             </a>
                           </li>
-                          <li class="dropdown-list-item">
-                            <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="trash-2"></i>
-                              Delete
-                            </a>
                           </li>
                         </ul>
                       </div>
@@ -1142,24 +1193,16 @@
                     <div class="dropdown-toggle">
                       <i class="ti ti-dots-vertical text-3xl text-slate-500"></i>
                     </div>
-                    <div class="dropdown-content w-[200px]">
+                    <div class="dropdown-content w-[160px]">
                       <ul class="dropdown-list">
                         <li class="dropdown-list-item">
                           <a href="javascript:void(0)" class="dropdown-link gap-4">
-                            <i class="h-5 text-slate-500" data-feather="edit"></i>
-                            Edit
+                            Action
                           </a>
                         </li>
                         <li class="dropdown-list-item">
                           <a href="javascript:void(0)" class="dropdown-link gap-4">
-                            <i class="h-5 text-slate-500" data-feather="copy"></i>
-                            Duplicate
-                          </a>
-                        </li>
-                        <li class="dropdown-list-item">
-                          <a href="javascript:void(0)" class="dropdown-link gap-4">
-                            <i class="h-5 text-slate-500" data-feather="trash-2"></i>
-                            Delete
+                            Another Action
                           </a>
                         </li>
                       </ul>
@@ -1344,31 +1387,23 @@
                       <div class="dropdown-toggle">
                         <i class="ti ti-dots-vertical text-3xl text-slate-500"></i>
                       </div>
-                      <div class="dropdown-content w-[200px]">
+                      <div class="dropdown-content w-[160px]">
                         <ul class="dropdown-list">
                           <li class="dropdown-list-item">
                             <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="edit"></i>
-                              Edit
+                              Action
                             </a>
                           </li>
                           <li class="dropdown-list-item">
                             <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="copy"></i>
-                              Duplicate
-                            </a>
-                          </li>
-                          <li class="dropdown-list-item">
-                            <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="trash-2"></i>
-                              Delete
+                              Another Action
                             </a>
                           </li>
                         </ul>
                       </div>
                     </div>
                   </div>
-                  <p class="text-slate-400 text-xs font-medium">8.56k social Visiters</p>
+                  <p class="text-slate-400 text-sm font-normal">8.56k social Visiters</p>
                   <div class="grid grid-cols-1">
                     <!-- Emails  -->
                     <div class="grid grid-cols-2 py-4 border-b border-b-slate-200 dark:border-b-slate-600">
@@ -1384,7 +1419,7 @@
                       </div>
                       <div class="flex justify-end text-success-500 items-center">
                         <span class="text-sm font-medium ">75%</span>
-                        <i data-feather="arrow-up-left" class="h-4 w-4"></i>
+                        <i data-feather="arrow-up-left" class="h-3 w-3"></i>
                       </div>
                     </div>
                     <!-- Opened  -->
@@ -1401,7 +1436,7 @@
                       </div>
                       <div class="flex justify-end text-danger-500 items-center">
                         <span class="text-sm font-medium ">05%</span>
-                        <i data-feather="arrow-down-left" class="h-4 w-4"></i>
+                        <i data-feather="arrow-down-left" class="h-3 w-3"></i>
                       </div>
                     </div>
                     <!-- Clicked  -->
@@ -1418,7 +1453,7 @@
                       </div>
                       <div class="flex justify-end text-success-500 items-center">
                         <span class="text-sm font-medium ">53%</span>
-                        <i data-feather="arrow-up-left" class="h-4 w-4"></i>
+                        <i data-feather="arrow-up-left" class="h-3 w-3"></i>
                       </div>
                     </div>
                     <!-- Complaints  -->
@@ -1435,7 +1470,7 @@
                       </div>
                       <div class="flex justify-end text-danger-500 items-center">
                         <span class="text-sm font-medium ">08%</span>
-                        <i data-feather="arrow-down-left" class="h-4 w-4"></i>
+                        <i data-feather="arrow-down-left" class="h-3 w-3"></i>
                       </div>
                     </div>
                   </div>
@@ -1451,24 +1486,16 @@
                       <div class="dropdown-toggle">
                         <i class="ti ti-dots-vertical text-3xl text-slate-500"></i>
                       </div>
-                      <div class="dropdown-content w-[200px]">
+                      <div class="dropdown-content w-[160px]">
                         <ul class="dropdown-list">
                           <li class="dropdown-list-item">
                             <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="edit"></i>
-                              Edit
+                              Action
                             </a>
                           </li>
                           <li class="dropdown-list-item">
                             <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="copy"></i>
-                              Duplicate
-                            </a>
-                          </li>
-                          <li class="dropdown-list-item">
-                            <a href="javascript:void(0)" class="dropdown-link gap-4">
-                              <i class="h-5 text-slate-500" data-feather="trash-2"></i>
-                              Delete
+                              Another Action
                             </a>
                           </li>
                         </ul>
