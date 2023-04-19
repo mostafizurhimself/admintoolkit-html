@@ -5,7 +5,7 @@
       &:nth-child(1) {
         @apply order-2 md:order-1;
       }
-      
+
       &:nth-child(2) {
         @apply order-1 w-full md:order-2 md:w-auto;
       }
@@ -17,22 +17,22 @@
   }
 
   .fc .fc-toolbar-title {
-    @apply text-lg md:text-xl text-center;
+    @apply text-center text-lg md:text-xl;
   }
 
   .fc .fc-button {
-    @apply capitalize text-sm p-2 md:py-2 md:px-4 focus:shadow-none;
+    @apply p-2 text-sm capitalize focus:shadow-none md:px-4 md:py-2;
   }
 
   .fc .fc-button-primary {
-    @apply bg-slate-100 border-slate-100 text-slate-500 dark:bg-slate-700 dark:border-slate-700 dark:text-slate-400;
+    @apply border-slate-100 bg-slate-100 text-slate-500 dark:border-slate-700 dark:bg-slate-700 dark:text-slate-400;
 
     &:hover {
-      @apply bg-slate-100 border-slate-100 text-slate-700 dark:bg-slate-700 dark:border-slate-700 dark:text-slate-200;
+      @apply border-slate-100 bg-slate-100 text-slate-700 dark:border-slate-700 dark:bg-slate-700 dark:text-slate-200;
     }
 
     &:disabled {
-      @apply bg-slate-100 border-slate-100 text-slate-500 dark:bg-slate-700 dark:border-slate-700 dark:text-slate-400;
+      @apply border-slate-100 bg-slate-100 text-slate-500 dark:border-slate-700 dark:bg-slate-700 dark:text-slate-400;
     }
 
     &:focus {
@@ -41,7 +41,7 @@
 
     &:not(:disabled).fc-button-active,
     &:not(:disabled):active {
-      @apply bg-slate-200 border-slate-200 text-slate-700 dark:bg-slate-900 dark:border-slate-900 dark:text-slate-200;
+      @apply border-slate-200 bg-slate-200 text-slate-700 dark:border-slate-900 dark:bg-slate-900 dark:text-slate-200;
     }
 
     &:not(:disabled).fc-button-active:focus,
@@ -51,7 +51,7 @@
   }
 
   .fc .fc-col-header-cell-cushion {
-    @apply text-sm font-medium text-slate-700 dark:text-slate-300; 
+    @apply text-sm font-medium text-slate-700 dark:text-slate-300;
   }
 
   .fc .fc-daygrid-day-number {
@@ -62,7 +62,7 @@
     @apply border border-slate-200 dark:border-slate-600;
   }
 
-  .fc-theme-standard td, 
+  .fc-theme-standard td,
   .fc-theme-standard th {
     @apply border border-slate-200 dark:border-slate-600;
   }
@@ -75,9 +75,9 @@
     @apply max-w-[4rem] font-medium;
   }
 
-  .fc .fc-timegrid-axis-cushion, 
+  .fc .fc-timegrid-axis-cushion,
   .fc .fc-timegrid-slot-label-cushion {
-    @apply capitalize text-sm text-slate-500 dark:text-slate-400;
+    @apply text-sm capitalize text-slate-500 dark:text-slate-400;
   }
 
   .fc .fc-timegrid-divider {
@@ -104,12 +104,12 @@
     @apply text-sm font-normal hover:bg-slate-200 dark:hover:bg-slate-700;
   }
 
-  .fc-theme-standard .fc-popover{
-    @apply shadow rounded-sm bg-white border border-slate-300 dark:border-slate-700 dark:bg-slate-800;
+  .fc-theme-standard .fc-popover {
+    @apply rounded-sm border border-slate-300 bg-white shadow dark:border-slate-700 dark:bg-slate-800;
   }
 
   .fc-theme-standard .fc-popover-header {
-    @apply bg-slate-200 dark:bg-slate-700 p-2;
+    @apply bg-slate-200 p-2 dark:bg-slate-700;
   }
 
   .fc .fc-popover-title {
@@ -128,19 +128,18 @@
     @apply text-sm;
   }
 
-  .fc-timegrid-event-harness-inset 
-  .fc-timegrid-event, 
-  .fc-timegrid-event.fc-event-mirror, 
+  .fc-timegrid-event-harness-inset .fc-timegrid-event,
+  .fc-timegrid-event.fc-event-mirror,
   .fc-timegrid-more-link {
     @apply shadow-none;
   }
 
   .fc-theme-standard .fc-list {
-    @apply border border-slate-200 dark:border-slate-600;  
+    @apply border border-slate-200 dark:border-slate-600;
   }
 
   .fc .fc-list-sticky .fc-list-day > * {
-    @apply text-slate-600 font-medium text-sm bg-slate-100 dark:bg-slate-700 dark:text-slate-300;
+    @apply bg-slate-100 text-sm font-medium text-slate-600 dark:bg-slate-700 dark:text-slate-300;
   }
 
   .fc .fc-list-table td {

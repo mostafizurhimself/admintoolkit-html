@@ -11,7 +11,10 @@ const modalAddEvent = document.querySelector('#modal-add-event');
 const modalUpdateEvent = document.querySelector('#modal-update-event');
 const formAddEvent = document.querySelector('#form-add-event');
 const formUpdateEvent = document.querySelector('#form-update-event');
-const nextMonth = date.getMonth() === 11 ? new Date(date.getFullYear() + 1, 0, 1) : new Date(date.getFullYear(), date.getMonth() + 1, 1);
+const nextMonth =
+  date.getMonth() === 11
+    ? new Date(date.getFullYear() + 1, 0, 1)
+    : new Date(date.getFullYear(), date.getMonth() + 1, 1);
 const events = [
   {
     id: 1,
@@ -23,7 +26,7 @@ const events = [
     extendedProps: {
       location: '',
       description: '',
-    }
+    },
   },
   {
     id: 2,
@@ -35,7 +38,7 @@ const events = [
     extendedProps: {
       location: '',
       description: '',
-    }
+    },
   },
   {
     id: 3,
@@ -47,7 +50,7 @@ const events = [
     extendedProps: {
       location: '',
       description: '',
-    }
+    },
   },
   {
     id: 4,
@@ -59,7 +62,7 @@ const events = [
     extendedProps: {
       location: '',
       description: '',
-    }
+    },
   },
   {
     id: 5,
@@ -71,69 +74,69 @@ const events = [
     extendedProps: {
       location: '',
       description: '',
-    }
+    },
   },
   {
     id: 6,
     url: '',
-    title: 'Doctor\'s Appointment',
+    title: "Doctor's Appointment",
     start: new Date(date.getFullYear(), date.getMonth(), 25),
-    end: new Date(date.getFullYear(), date.getMonth(),25),
+    end: new Date(date.getFullYear(), date.getMonth(), 25),
     allDay: true,
     extendedProps: {
       location: '',
       description: '',
-    }
+    },
   },
   {
     id: 7,
     url: '',
     title: 'Meeting with clients',
     start: new Date(date.getFullYear(), date.getMonth(), 27),
-    end: new Date(date.getFullYear(), date.getMonth(),27),
+    end: new Date(date.getFullYear(), date.getMonth(), 27),
     allDay: true,
     extendedProps: {
       location: '',
       description: '',
-    }
+    },
   },
   {
     id: 8,
     url: '',
     title: 'Dart Game',
     start: new Date(date.getFullYear(), date.getMonth(), 13),
-    end: new Date(date.getFullYear(), date.getMonth(),13),
+    end: new Date(date.getFullYear(), date.getMonth(), 13),
     allDay: true,
     extendedProps: {
       location: '',
       description: '',
-    }
+    },
   },
   {
     id: 9,
     url: '',
     title: 'Cricket',
     start: new Date(date.getFullYear(), date.getMonth(), 13, 10),
-    end: new Date(date.getFullYear(), date.getMonth(),13, 12),
+    end: new Date(date.getFullYear(), date.getMonth(), 13, 12),
     allDay: false,
     extendedProps: {
       location: '',
       description: '',
-    }
+    },
   },
   {
     id: 10,
     url: '',
     title: 'Football',
     start: new Date(date.getFullYear(), date.getMonth(), 13, 15),
-    end: new Date(date.getFullYear(), date.getMonth(),13, 20),
+    end: new Date(date.getFullYear(), date.getMonth(), 13, 20),
     allDay: false,
     extendedProps: {
       location: '',
       description: '',
-    }
+    },
   },
-]
+];
 
 const calendar = new Calendar(calendarEl, {
   events,
@@ -195,19 +198,19 @@ function dateClick(info) {
           allDay,
           extendedProps: {
             location,
-            description
-          }
-        }
+            description,
+          },
+        };
 
         calendar.addEvent(eventData);
         this.reset();
-        this.classList.add('is-valid')
+        this.classList.add('is-valid');
         modalInstance.hide();
         calendar.refetchEvents();
       }
     }
   });
-} 
+}
 
 function eventClick(info) {
   const formInputTitle = formUpdateEvent.querySelector('[name="title"]');
@@ -218,61 +221,61 @@ function eventClick(info) {
   const formInputLocation = formUpdateEvent.querySelector('[name="location"]');
   const formInputDescription = formUpdateEvent.querySelector('[name="description"]');
   const btnDeleteEvent = formUpdateEvent.querySelector('#btn-delete-event');
-  const event = info.event; 
-  const {id, title, start, end, url, allDay} = event;
-  const {location, description} = event.extendedProps;
+  const event = info.event;
+  const { id, title, start, end, url, allDay } = event;
+  const { location, description } = event.extendedProps;
 
-  if(url) {
+  if (url) {
     info.jsEvent.preventDefault();
     window.open(url, '_blank');
   }
 
-  if(formInputTitle) {
+  if (formInputTitle) {
     formInputTitle.value = title;
   }
 
-  if(formInputStart) {
+  if (formInputStart) {
     flatpickr(formInputStart, {
       defaultDate: start,
       enableTime: true,
     });
   }
 
-  if(formInputEnd) {
+  if (formInputEnd) {
     flatpickr(formInputEnd, {
       defaultDate: end,
       enableTime: true,
     });
   }
 
-  if(formInputAllDay) {
+  if (formInputAllDay) {
     formInputAllDay.checked = allDay;
   }
 
-  if(formInputURL) {
+  if (formInputURL) {
     formInputURL.value = url;
   }
 
-  if(formInputLocation) {
+  if (formInputLocation) {
     formInputLocation.value = location;
   }
 
-  if(formInputDescription) {
+  if (formInputDescription) {
     formInputDescription.value = description;
   }
 
   const modalInstance = createModal(modalUpdateEvent);
   modalInstance.show();
-  formUpdateEvent.classList.remove('is-invalid')
+  formUpdateEvent.classList.remove('is-invalid');
 
   formUpdateEvent.addEventListener('submit', function (e) {
     e.preventDefault();
-    
-    if(!this.classList.contains('is-invalid')) {
+
+    if (!this.classList.contains('is-invalid')) {
       const formData = validateForm(this);
-      
-      if(formData instanceof Object) {
-        const {title, start,  end,  url,  location,  description, allDay} = formData;
+
+      if (formData instanceof Object) {
+        const { title, start, end, url, location, description, allDay } = formData;
         const event = calendar.getEventById(id);
         event.setProp('title', title);
         event.setStart(start);
@@ -281,9 +284,9 @@ function eventClick(info) {
         event.setProp('url', url);
         event.setExtendedProp('location', location);
         event.setExtendedProp('description', description);
-        
+
         this.reset();
-        this.classList.add('is-invalid')
+        this.classList.add('is-invalid');
         modalInstance.hide();
         calendar.refetchEvents();
       }
@@ -292,8 +295,8 @@ function eventClick(info) {
 
   btnDeleteEvent.addEventListener('click', function (e) {
     const event = calendar.getEventById(id);
-    
-    if(event) {
+
+    if (event) {
       event.remove();
       formUpdateEvent.reset();
       formUpdateEvent.classList.add('is-invalid');
@@ -305,73 +308,68 @@ function eventClick(info) {
 function validateForm(form) {
   const formInputTitle = form.querySelector('[name="title"]');
   const formInputStart = form.querySelector('[name="start"]');
-  const formInputEnd   = form.querySelector('[name="end"]');
-  const formData       = new FormData(form);
-  const formDataObj    = {};
-  
+  const formInputEnd = form.querySelector('[name="end"]');
+  const formData = new FormData(form);
+  const formDataObj = {};
+
   for (const entry of formData.entries()) {
     formDataObj[entry[0]] = entry[1];
   }
 
-  const {title, start, end, url, location, description, allDay} = formDataObj;
+  const { title, start, end, url, location, description, allDay } = formDataObj;
 
-  if(title === '') {
+  if (title === '') {
     formInputTitle.classList.add('is-invalid');
     const erroMessageEl = formInputTitle.nextElementSibling;
 
     erroMessageEl.classList.contains('error-message')
-      ? erroMessageEl.innerHTML = 'The event title is required.'
+      ? (erroMessageEl.innerHTML = 'The event title is required.')
       : null;
-
-  }else {
+  } else {
     formInputTitle.classList.remove('is-invalid');
   }
 
-  if(start === '') {
+  if (start === '') {
     formInputStart.classList.add('is-invalid');
     const erroMessageEl = formInputStart.nextElementSibling;
-    
-    erroMessageEl.classList.contains('error-message')
-      ? erroMessageEl.innerHTML = 'The event start is required.'
-      : null;
 
-  }else {
+    erroMessageEl.classList.contains('error-message')
+      ? (erroMessageEl.innerHTML = 'The event start is required.')
+      : null;
+  } else {
     formInputStart.classList.remove('is-invalid');
   }
 
-  if(end === '') {
+  if (end === '') {
     formInputEnd.classList.add('is-invalid');
     const erroMessageEl = formInputEnd.nextElementSibling;
-    
-    erroMessageEl.classList.contains('error-message')
-      ? erroMessageEl.innerHTML = 'The event end is required.'
-      : null;
 
-  }else {
+    erroMessageEl.classList.contains('error-message') ? (erroMessageEl.innerHTML = 'The event end is required.') : null;
+  } else {
     formInputEnd.classList.remove('is-invalid');
   }
 
-  if(title !== '' && start !== '' && end !== '') {
+  if (title !== '' && start !== '' && end !== '') {
     return {
-      title,  
-      start,  
-      end,  
-      url,  
-      location,  
-      description,  
-      allDay: allDay ? true: false
-    } 
+      title,
+      start,
+      end,
+      url,
+      location,
+      description,
+      allDay: allDay ? true : false,
+    };
   }
 
   return false;
 }
 
-if(btnAddEvent) {
+if (btnAddEvent) {
   btnAddEvent.addEventListener('click', () => {
     dateClick({
-      date: new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0)
-    })
-  })
+      date: new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0),
+    });
+  });
 }
 
 calendar.render();
