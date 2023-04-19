@@ -731,27 +731,26 @@
         <div class="content">
           <!-- Main Content Starts -->
           <main class="container grid flex-grow grid-cols-1 place-items-center px-6">
-           
             <!-- Chat Starts -->
             <div
-              class="relative m-0 grid h-min w-full grid-cols-1 gap-x-0 rounded-primary bg-transparent lg:grid-cols-3 lg:place-items-start lg:gap-x-6 overflow-hidden p-1"
+              class="relative grid h-min w-full grid-cols-1 gap-x-0 overflow-hidden rounded-primary bg-transparent p-1 lg:grid-cols-3 lg:place-items-start lg:gap-x-6"
             >
-             <!-- Chat Overlay Starts -->
-             <div
-             id="overlay"
-             class="invisible absolute inset-0 bottom-0 left-0 right-0 top-0 z-10 rounded-primary bg-black bg-opacity-50 opacity-100 transition-opacity duration-500 ease-in-out lg:hidden"
-           ></div>
-           <!-- Chat Overlay Ends -->
+              <!-- Chat Overlay Starts -->
+              <div
+                id="overlay"
+                class="invisible absolute inset-0 bottom-0 left-0 right-0 top-0 z-10 rounded-primary bg-black bg-opacity-50 opacity-100 transition-opacity duration-500 ease-in-out lg:hidden"
+              ></div>
+              <!-- Chat Overlay Ends -->
 
               <!-- Chat List Start  -->
               <div
                 id="chat-list"
-                class="absolute z-20 flex h-full w-full -translate-x-full transform bg-transparent transition duration-300 ease-in-out lg:relative lg:col-span-1 lg:translate-x-0 overflow-hidden lg:overflow-visible"
+                class="absolute z-20 flex h-full w-full -translate-x-full transform overflow-hidden bg-transparent transition duration-300 ease-in-out lg:relative lg:col-span-1 lg:translate-x-0 lg:overflow-visible"
               >
                 <div
                   class="card m-0 max-w-[18rem] rounded-l-primary rounded-r-none p-0 lg:max-w-none lg:rounded-primary"
                 >
-                  <div class="border-b dark:border-slate-700 p-4">
+                  <div class="border-b p-4 dark:border-slate-700">
                     <form
                       action=""
                       class="group h-10 w-full items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
@@ -772,198 +771,194 @@
                     </form>
                   </div>
 
-                  <ul
-                  class="max-h-[calc(100vh-17rem)] overflow-auto"
-                  data-simplebar
-                >
-                  <!-- User -->
-                  <li
-                    class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
-                      <img class="avatar-img" src="./images/avatar1.png" alt="profile-img" />
-                    </div>
-                    <div class="flex-grow">
-                      <div class="flex w-full justify-between">
-                        <p class="text-sm font-medium text-slate-700 dark:text-slate-100">Max Simth</p>
-                        <span class="text-xs font-normal text-slate-400"> 5 min ago </span>
+                  <ul class="max-h-[calc(100vh-17rem)] overflow-auto" data-simplebar>
+                    <!-- User -->
+                    <li
+                      class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                      <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                        <img class="avatar-img" src="./images/avatar1.png" alt="profile-img" />
                       </div>
-                      <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Hi Jhon how are you?</p>
-                    </div>
-                  </li>
-                  <!-- User -->
-                  <li
-                    class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <div class="avatar avatar-circle">
-                      <img src="./images/avatar2.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <div class="flex-grow">
-                      <div class="flex w-full justify-between">
-                        <p class="text-sm font-medium text-slate-700 dark:text-slate-100">James Cook</p>
-                        <span class="text-xs font-normal text-slate-400"> 10 min ago </span>
+                      <div class="flex-grow">
+                        <div class="flex w-full justify-between">
+                          <p class="text-sm font-medium text-slate-700 dark:text-slate-100">Max Simth</p>
+                          <span class="text-xs font-normal text-slate-400"> 5 min ago </span>
+                        </div>
+                        <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Hi Jhon how are you?</p>
                       </div>
-                      <p class="text-sm font-normal text-slate-500 dark:text-slate-400">
-                        I will purchase this template...
-                      </p>
-                    </div>
-                  </li>
-                  <!-- User -->
-                  <li
-                    class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
-                      <img src="./images/avatar3.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <div class="flex-grow">
-                      <div class="flex w-full justify-between">
-                        <p class="text-sm font-medium text-slate-700 dark:text-slate-100">Maxwell Alston</p>
-                        <span class="text-xs font-normal text-slate-400"> 20 min ago </span>
+                    </li>
+                    <!-- User -->
+                    <li
+                      class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                      <div class="avatar avatar-circle">
+                        <img src="./images/avatar2.png" class="avatar-img" alt="profile-img" />
                       </div>
-                      <p class="text-sm font-normal text-slate-500 dark:text-slate-400">
-                        Learn something interesting...
-                      </p>
-                    </div>
-                  </li>
-                  <!-- User -->
-                  <li
-                    class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <div class="avatar avatar-circle">
-                      <img src="./images/avatar4.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <div class="flex-grow">
-                      <div class="flex w-full justify-between">
-                        <p class="text-sm font-medium text-slate-700 dark:text-slate-100">Albert Wilson</p>
-                        <span class="text-xs font-normal text-slate-400"> 1 hour ago </span>
+                      <div class="flex-grow">
+                        <div class="flex w-full justify-between">
+                          <p class="text-sm font-medium text-slate-700 dark:text-slate-100">James Cook</p>
+                          <span class="text-xs font-normal text-slate-400"> 10 min ago </span>
+                        </div>
+                        <p class="text-sm font-normal text-slate-500 dark:text-slate-400">
+                          I will purchase this template...
+                        </p>
                       </div>
-                      <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Are you available now?</p>
-                    </div>
-                  </li>
-                  <!-- User -->
-                  <li
-                    class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <div class="avatar avatar-circle">
-                      <img src="./images/avatar5.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <div class="flex-grow">
-                      <div class="flex w-full justify-between">
-                        <p class="text-sm font-medium text-slate-700 dark:text-slate-100">Francis Nicola</p>
-                        <span class="text-xs font-normal text-slate-400"> 2 hours ago </span>
+                    </li>
+                    <!-- User -->
+                    <li
+                      class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                      <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                        <img src="./images/avatar3.png" class="avatar-img" alt="profile-img" />
                       </div>
-                      <p class="text-sm font-normal text-slate-500 dark:text-slate-400">
-                        Tour plan ready, let’s explore...
-                      </p>
-                    </div>
-                  </li>
-                  <!-- User -->
-                  <li
-                    class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
-                      <img src="./images/avatar6.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <div class="flex-grow">
-                      <div class="flex w-full items-center justify-between">
-                        <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Calvin Moore</h5>
-                        <span class="text-xs font-normal text-slate-400"> 20 hours ago </span>
+                      <div class="flex-grow">
+                        <div class="flex w-full justify-between">
+                          <p class="text-sm font-medium text-slate-700 dark:text-slate-100">Maxwell Alston</p>
+                          <span class="text-xs font-normal text-slate-400"> 20 min ago </span>
+                        </div>
+                        <p class="text-sm font-normal text-slate-500 dark:text-slate-400">
+                          Learn something interesting...
+                        </p>
                       </div>
-                      <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Your order is delivered</p>
-                    </div>
-                  </li>
-                  <!-- User -->
-                  <li
-                    class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <div class="avatar avatar-circle">
-                      <img src="./images/avatar7.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <div class="flex-grow">
-                      <div class="flex w-full items-center justify-between">
-                        <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Neil Amstrong</h5>
-                        <span class="text-xs font-normal text-slate-400"> 1 day ago </span>
+                    </li>
+                    <!-- User -->
+                    <li
+                      class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                      <div class="avatar avatar-circle">
+                        <img src="./images/avatar4.png" class="avatar-img" alt="profile-img" />
                       </div>
-                      <p class="text-sm font-normal text-slate-500 dark:text-slate-400">It will take some time</p>
-                    </div>
-                  </li>
-                  <!-- User -->
-                  <li
-                    class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <div class="avatar avatar-circle">
-                      <img src="./images/avatar8.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <div class="flex-grow">
-                      <div class="flex w-full items-center justify-between">
-                        <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
-                        <span class="text-xs font-normal text-slate-400"> 1 day ago </span>
+                      <div class="flex-grow">
+                        <div class="flex w-full justify-between">
+                          <p class="text-sm font-medium text-slate-700 dark:text-slate-100">Albert Wilson</p>
+                          <span class="text-xs font-normal text-slate-400"> 1 hour ago </span>
+                        </div>
+                        <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Are you available now?</p>
                       </div>
-                      <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Are you there?</p>
-                    </div>
-                  </li>
-                  <!-- User -->
-                  <li
-                    class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <div class="avatar avatar-circle">
-                      <img src="./images/avatar9.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <div class="flex-grow">
-                      <div class="flex w-full items-center justify-between">
-                        <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Calvin Moore</h5>
-                        <span class="text-xs font-normal text-slate-400"> 2 days ago </span>
+                    </li>
+                    <!-- User -->
+                    <li
+                      class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                      <div class="avatar avatar-circle">
+                        <img src="./images/avatar5.png" class="avatar-img" alt="profile-img" />
                       </div>
-                      <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Your order is delivered</p>
-                    </div>
-                  </li>
-                  <!-- User -->
-                  <li
-                    class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <div class="avatar avatar-circle">
-                      <img src="./images/avatar10.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <div class="flex-grow">
-                      <div class="flex w-full items-center justify-between">
-                        <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Neil Amstrong</h5>
-                        <span class="text-xs font-normal text-slate-400"> 2 day ago </span>
+                      <div class="flex-grow">
+                        <div class="flex w-full justify-between">
+                          <p class="text-sm font-medium text-slate-700 dark:text-slate-100">Francis Nicola</p>
+                          <span class="text-xs font-normal text-slate-400"> 2 hours ago </span>
+                        </div>
+                        <p class="text-sm font-normal text-slate-500 dark:text-slate-400">
+                          Tour plan ready, let’s explore...
+                        </p>
                       </div>
-                      <p class="text-sm font-normal text-slate-500 dark:text-slate-400">It will take some time</p>
-                    </div>
-                  </li>
-                  <!-- User -->
-                  <li
-                    class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <div class="avatar avatar-circle">
-                      <img src="./images/avatar11.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <div class="flex-grow">
-                      <div class="flex w-full items-center justify-between">
-                        <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
-                        <span class="text-xs font-normal text-slate-400"> May 7 </span>
+                    </li>
+                    <!-- User -->
+                    <li
+                      class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                      <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                        <img src="./images/avatar6.png" class="avatar-img" alt="profile-img" />
                       </div>
-                      <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Are you there?</p>
-                    </div>
-                  </li>
-                  <!-- User -->
-                  <li
-                    class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
-                  >
-                    <div class="avatar avatar-circle">
-                      <img src="./images/avatar12.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <div class="flex-grow">
-                      <div class="flex w-full items-center justify-between">
-                        <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
-                        <span class="text-xs font-normal text-slate-400"> April 10 </span>
+                      <div class="flex-grow">
+                        <div class="flex w-full items-center justify-between">
+                          <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Calvin Moore</h5>
+                          <span class="text-xs font-normal text-slate-400"> 20 hours ago </span>
+                        </div>
+                        <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Your order is delivered</p>
                       </div>
-                      <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Are you there?</p>
-                    </div>
-                  </li>
-                </ul>
-                 
+                    </li>
+                    <!-- User -->
+                    <li
+                      class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                      <div class="avatar avatar-circle">
+                        <img src="./images/avatar7.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex-grow">
+                        <div class="flex w-full items-center justify-between">
+                          <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Neil Amstrong</h5>
+                          <span class="text-xs font-normal text-slate-400"> 1 day ago </span>
+                        </div>
+                        <p class="text-sm font-normal text-slate-500 dark:text-slate-400">It will take some time</p>
+                      </div>
+                    </li>
+                    <!-- User -->
+                    <li
+                      class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                      <div class="avatar avatar-circle">
+                        <img src="./images/avatar8.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex-grow">
+                        <div class="flex w-full items-center justify-between">
+                          <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
+                          <span class="text-xs font-normal text-slate-400"> 1 day ago </span>
+                        </div>
+                        <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Are you there?</p>
+                      </div>
+                    </li>
+                    <!-- User -->
+                    <li
+                      class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                      <div class="avatar avatar-circle">
+                        <img src="./images/avatar9.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex-grow">
+                        <div class="flex w-full items-center justify-between">
+                          <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Calvin Moore</h5>
+                          <span class="text-xs font-normal text-slate-400"> 2 days ago </span>
+                        </div>
+                        <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Your order is delivered</p>
+                      </div>
+                    </li>
+                    <!-- User -->
+                    <li
+                      class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                      <div class="avatar avatar-circle">
+                        <img src="./images/avatar10.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex-grow">
+                        <div class="flex w-full items-center justify-between">
+                          <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Neil Amstrong</h5>
+                          <span class="text-xs font-normal text-slate-400"> 2 day ago </span>
+                        </div>
+                        <p class="text-sm font-normal text-slate-500 dark:text-slate-400">It will take some time</p>
+                      </div>
+                    </li>
+                    <!-- User -->
+                    <li
+                      class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                      <div class="avatar avatar-circle">
+                        <img src="./images/avatar11.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex-grow">
+                        <div class="flex w-full items-center justify-between">
+                          <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
+                          <span class="text-xs font-normal text-slate-400"> May 7 </span>
+                        </div>
+                        <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Are you there?</p>
+                      </div>
+                    </li>
+                    <!-- User -->
+                    <li
+                      class="user flex w-full cursor-pointer items-center gap-4 p-4 duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                      <div class="avatar avatar-circle">
+                        <img src="./images/avatar12.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex-grow">
+                        <div class="flex w-full items-center justify-between">
+                          <h5 class="text-sm font-medium text-slate-700 dark:text-slate-100">Albert Wilson</h5>
+                          <span class="text-xs font-normal text-slate-400"> April 10 </span>
+                        </div>
+                        <p class="text-sm font-normal text-slate-500 dark:text-slate-400">Are you there?</p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
                 <!-- Chat List Hide  -->
                 <button
@@ -975,7 +970,7 @@
                 </button>
               </div>
               <!-- Chat List End  -->
-              
+
               <!-- Chat Box Start -->
               <div class="card relative m-0 h-full rounded-primary p-0 lg:col-span-2">
                 <!-- Chat Header Start  -->
@@ -1118,22 +1113,57 @@
                 <!-- Chat Header End  -->
 
                 <!-- Chat Body Start -->
-                <div
-                  id="chats"
-                  class="conversion pb-[90px] relative max-h-[calc(100vh-17rem)] overflow-y-auto"
-                >
+                <div id="chats" class="conversion relative max-h-[calc(100vh-17rem)] overflow-y-auto pb-[90px]">
                   <!-- Friend Chat -->
                   <div class="flex items-start justify-start gap-2 p-4">
                     <div class="avatar avatar-circle avatar-sm">
                       <img src="./images/avatar2.png" class="avatar-img" alt="profile-img" />
                     </div>
                     <!-- Message  -->
-                    <div class="flex flex-col gap-2">
-                      <div class="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-3">
-                        <div class="max-w-sm rounded-primary bg-slate-100 p-2 dark:bg-slate-700">
-                          <p class="text-sm font-normal text-slate-500 dark:text-slate-100">Hello!, Max</p>
-                        </div>
-                        <p class="text-xs font-normal text-slate-400">1 day ago</p>
+                    <div class="flex items-center gap-2">
+                      <p
+                        class="max-w-sm rounded-primary bg-slate-100 p-2 text-sm font-normal text-slate-500 dark:bg-slate-700 dark:text-slate-100"
+                      >
+                        Hello!, Max
+                      </p>
+                      <span class="text-xs font-normal text-slate-400">1 day ago</span>
+                    </div>
+                  </div>
+                  <!-- User Chat -->
+                  <div class="flex flex-row-reverse items-start justify-start gap-2 p-4">
+                    <div class="avatar avatar-circle avatar-sm">
+                      <img src="./images/avatar1.png" class="avatar-img" alt="profile-img" />
+                    </div>
+                    <!-- Message  -->
+                    <div class="flex flex-row-reverse items-center gap-2">
+                      <p class="max-w-sm rounded-primary bg-primary-500 p-2 text-sm font-normal text-primary-100">
+                        Hi, How can I help you?
+                      </p>
+                      <span class="text-xs font-normal text-slate-400">08:01AM</span>
+                    </div>
+                  </div>
+                  <!-- Friend Chat -->
+                  <div class="flex items-start justify-start gap-2 p-4">
+                    <div class="avatar avatar-circle avatar-sm">
+                      <img src="./images/avatar2.png" class="avatar-img" alt="profile-img" />
+                    </div>
+                    <!-- Message  -->
+                    <div class="space-y-2">
+                      <div class="flex items-center gap-2">
+                        <p
+                          class="max-w-sm rounded-primary bg-slate-100 p-2 text-sm font-normal text-slate-500 dark:bg-slate-700 dark:text-slate-100"
+                        >
+                          Hi Max, I’m interested to purchase a template. Do you have any available?
+                        </p>
+                        <span class="text-xs font-normal text-slate-400">09:00AM</span>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <p
+                          class="max-w-sm rounded-primary bg-slate-100 p-2 text-sm font-normal text-slate-500 dark:bg-slate-700 dark:text-slate-100"
+                        >
+                          It should be based on TailwindCSS.
+                        </p>
+                        <span class="text-xs font-normal text-slate-400">09:01AM</span>
                       </div>
                     </div>
                   </div>
@@ -1143,13 +1173,12 @@
                       <img src="./images/avatar1.png" class="avatar-img" alt="profile-img" />
                     </div>
                     <!-- Message  -->
-                    <div class="flex flex-col gap-2">
-                      <div class="flex flex-col items-end gap-1 lg:flex-row-reverse lg:items-center lg:gap-3">
-                        <div class="max-w-sm rounded-primary bg-primary-500 p-2 text-slate-50">
-                          <p class="text-sm font-normal">Hi, How can I help you?</p>
-                        </div>
-                        <p class="text-xs text-slate-400">08:01AM</p>
-                      </div>
+                    <div class="flex flex-row-reverse items-center gap-2">
+                      <p class="max-w-sm rounded-primary bg-primary-500 p-2 text-sm font-normal text-primary-100">
+                        Yes, we have a few templates that matches your description. Admin Toolkit is one the best of
+                        them.
+                      </p>
+                      <span class="text-xs font-normal text-slate-400">1 hour ago</span>
                     </div>
                   </div>
                   <!-- Friend Chat -->
@@ -1158,22 +1187,51 @@
                       <img src="./images/avatar2.png" class="avatar-img" alt="profile-img" />
                     </div>
                     <!-- Message  -->
-                    <div class="flex flex-col gap-2">
-                      <div class="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-3">
-                        <div class="max-w-sm rounded-primary bg-slate-100 p-2 dark:bg-slate-700">
-                          <p class="text-sm font-normal text-slate-500 dark:text-slate-100">
-                            Hi Max, I’m interested to purchase a template. Do you have any available?
-                          </p>
-                        </div>
-                        <p class="text-xs font-normal text-slate-400">09:00AM</p>
+                    <div class="flex items-center gap-2">
+                      <p
+                        class="max-w-sm rounded-primary bg-slate-100 p-2 text-sm font-normal text-slate-500 dark:bg-slate-700 dark:text-slate-100"
+                      >
+                        Sounds great, Could you please tell me a little bit more about this template?
+                      </p>
+                      <span class="text-xs font-normal text-slate-400">5 min ago</span>
+                    </div>
+                  </div>
+                  <!-- User Chat -->
+                  <div class="flex flex-row-reverse items-start justify-start gap-2 p-4">
+                    <div class="avatar avatar-circle avatar-sm">
+                      <img src="./images/avatar1.png" class="avatar-img" alt="profile-img" />
+                    </div>
+                    <!-- Message  -->
+                    <div class="flex flex-row-reverse items-center gap-2">
+                      <p class="max-w-sm rounded-primary bg-primary-500 p-2 text-sm font-normal text-primary-100">
+                        Of course, In this template you can fully customize fonts, colours, component, layouts and
+                        everything else that you need.
+                      </p>
+                      <span class="text-xs font-normal text-slate-400">2 min ago</span>
+                    </div>
+                  </div>
+                  <!-- Friend Chat -->
+                  <div class="flex items-start justify-start gap-2 p-4">
+                    <div class="avatar avatar-circle avatar-sm">
+                      <img src="./images/avatar2.png" class="avatar-img" alt="profile-img" />
+                    </div>
+                    <!-- Message  -->
+                    <div class="space-y-2">
+                      <div class="flex items-center gap-2">
+                        <p
+                          class="max-w-sm rounded-primary bg-slate-100 p-2 text-sm font-normal text-slate-500 dark:bg-slate-700 dark:text-slate-100"
+                        >
+                          That's good, I will purchase it for sure.
+                        </p>
+                        <span class="text-xs font-normal text-slate-400">1 min ago</span>
                       </div>
-                      <div class="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-3">
-                        <div class="max-w-sm rounded-primary bg-slate-100 p-2 dark:bg-slate-700">
-                          <p class="text-sm font-normal text-slate-500 dark:text-slate-100">
-                            It should be base on TailwindCSS.
-                          </p>
-                        </div>
-                        <p class="text-xs font-normal text-slate-400">09:30AM</p>
+                      <div class="flex items-center gap-2">
+                        <p
+                          class="max-w-sm rounded-primary bg-slate-100 p-2 text-sm font-normal text-slate-500 dark:bg-slate-700 dark:text-slate-100"
+                        >
+                          Thanks for your information
+                        </p>
+                        <span class="text-xs font-normal text-slate-400">1 min ago</span>
                       </div>
                     </div>
                   </div>
@@ -1183,86 +1241,11 @@
                       <img src="./images/avatar1.png" class="avatar-img" alt="profile-img" />
                     </div>
                     <!-- Message  -->
-                    <div class="flex flex-col gap-2">
-                      <div class="flex flex-col items-end gap-1 lg:flex-row-reverse lg:items-center lg:gap-3">
-                        <div class="max-w-sm rounded-primary bg-primary-500 p-2 text-slate-50">
-                          <p class="text-sm font-normal">
-                            Yes, we have a few templates that matches your description. Admin Toolkit is one the best of
-                            them.
-                          </p>
-                        </div>
-                        <p class="text-xs text-slate-400">1 hour ago</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Friend Chat -->
-                  <div class="flex items-start justify-start gap-2 p-4">
-                    <div class="avatar avatar-circle avatar-sm">
-                      <img src="./images/avatar2.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <!-- Message  -->
-                    <div class="flex flex-col gap-2">
-                      <div class="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-3">
-                        <div class="max-w-sm rounded-primary bg-slate-100 p-2 dark:bg-slate-700">
-                          <p class="text-sm font-normal text-slate-500 dark:text-slate-100">
-                            Sounds great, Could you please tell me a little bit more about this template?
-                          </p>
-                        </div>
-                        <p class="text-xs font-normal text-slate-400">5 min ago</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- User Chat -->
-                  <div class="flex flex-row-reverse items-start justify-start gap-2 p-4">
-                    <div class="avatar avatar-circle avatar-sm">
-                      <img src="./images/avatar1.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <!-- Message  -->
-                    <div class="flex flex-col gap-2">
-                      <div class="flex flex-col items-end gap-1 lg:flex-row-reverse lg:items-center lg:gap-3">
-                        <div class="max-w-sm rounded-primary bg-primary-500 p-2 text-slate-50">
-                          <p class="text-sm font-normal">
-                            Of course, In this template you can fully customize fonts, colours, component, layouts and
-                            everything else that you need.
-                          </p>
-                        </div>
-                        <p class="text-xs text-slate-400">2 day ago</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Friend Chat -->
-                  <div class="flex items-start justify-start gap-2 p-4">
-                    <div class="avatar avatar-circle avatar-sm">
-                      <img src="./images/avatar2.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <!-- Message  -->
-                    <div class="flex flex-col gap-2">
-                      <div class="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-3">
-                        <div class="max-w-sm rounded-primary bg-slate-100 p-2 dark:bg-slate-700">
-                          <p class="text-sm font-normal text-slate-500 dark:text-slate-100">
-                            Sounds great, Could you please tell me a little bit more about this template?
-                          </p>
-                        </div>
-                        <p class="text-xs font-normal text-slate-400">5 min ago</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- User Chat -->
-                  <div class="flex flex-row-reverse items-start justify-start gap-2 p-4">
-                    <div class="avatar avatar-circle avatar-sm">
-                      <img src="./images/avatar1.png" class="avatar-img" alt="profile-img" />
-                    </div>
-                    <!-- Message  -->
-                    <div class="flex flex-col gap-2">
-                      <div class="flex flex-col items-end gap-1 lg:flex-row-reverse lg:items-center lg:gap-3">
-                        <div class="max-w-sm rounded-primary bg-primary-500 p-2 text-slate-50">
-                          <p class="text-sm font-normal">
-                            Of course, In this template you can fully customize fonts, colours, component, layouts and
-                            everything else that you need.
-                          </p>
-                        </div>
-                        <p class="text-xs text-slate-400">2 day ago</p>
-                      </div>
+                    <div class="flex flex-row-reverse items-center gap-2">
+                      <p class="max-w-sm rounded-primary bg-primary-500 p-2 text-sm font-normal text-primary-100">
+                        I’m happy to help you. If you have any questions, please feel free to contact me.
+                      </p>
+                      <span class="text-xs font-normal text-slate-400">1 sec ago</span>
                     </div>
                   </div>
                 </div>
