@@ -4,52 +4,31 @@ import Tagify from '@yaireo/tagify'
 import Quill from 'quill';
 
 document.addEventListener('DOMContentLoaded', function () {
-
   (function () {
     const emailFilter = document.querySelector("#email-filter");
-    const emailFilterItems = document.querySelectorAll("#email-filter > li[data-filter-by]");
-    const emailList = document.querySelector("#email-list");
-    const emailListItems = document.querySelectorAll("#email-list > li");
-    const emailCheckAll = document.querySelector('#email-check-all');
-    const emailMarkAll = document.querySelector('#email-mark-all');
-    const emailDeleteAll = document.querySelector('#email-delete-all');
-    const emailReplayEditor = document.querySelector('#email-reply-editor');
+    const emailFilterItems = document.querySelectorAll("#email-filter > li.group");
     const emailComposeBtnCC = document.querySelector('#email-compose-btn-cc');
     const emailComposeBtnBCC = document.querySelector('#email-compose-btn-bcc');
     const emailComposeInputTo = document.querySelector('#email-compose-input-to');
     const emailComposeInputCC = document.querySelector('#email-compose-input-cc');
     const emailComposeInputBCC = document.querySelector('#email-compose-input-bcc');
     const emailComposeEditor = document.querySelector('#email-compose-editor');
-    const emailBackdrop = document.querySelector('#email-backdrop');
-    const emailBtnToggleSidebarLeft = document.querySelector('#email-btn-toggle-sidebar-left');
-    const emailBtnToggleSidebarView = document.querySelector('#email-btn-toggle-sidebar-view');
+    const emailOverlay = document.querySelector('#overlay');
     const emailSidebarLeft = document.querySelector('#email-sidebar-left');
-    const emailSidebarView = document.querySelector('#email-sidebar-view');
+    const emailBtnShowSidebarLeft = document.querySelector('#email-btn-show-sidebar-left');
+    const emailBtnHideSidebarLeft = document.querySelector('#email-btn-hide-sidebar-left');
 
     if (emailFilterItems.length) {
       [...emailFilterItems].forEach(filterItem => {
         filterItem.addEventListener('click', function () {
           const filter = this.dataset.filterBy;
           const filterItemActive = emailFilter.querySelector('li.active');
-          
-          if (!filterItem.classList.contains('active')) {
-            filterItemActive.classList.remove('active', 'bg-slate-100', 'dark:bg-slate-700');
-            filterItem.classList.add('active', 'bg-slate-100', 'dark:bg-slate-700');;
-          }
 
-          if (emailListItems.length) {
-            if (filter !== 'inbox') {
-              [...emailListItems].forEach(item => {
-                if (item.getAttribute(`data-filter-by-${filter}`)) {
-                  item.classList.remove('hidden');
-                } else {
-                  item.classList.add('hidden');
-                }
-              })
-            } else {
-              [...emailListItems].forEach(item => {
-                item.classList.remove('hidden');
-              })
+          if (!filterItem.classList.contains('active')) {
+            filterItem.classList.add('active');
+
+            if(filterItemActive) {
+              filterItemActive.classList.remove('active');
             }
           }
 
@@ -58,140 +37,22 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     }
 
-    if (emailListItems.length) {
-      [...emailListItems].forEach(listItem => {
-        const check = listItem.querySelector('input[type="checkbox"]');
-        const btnBookmark = listItem.querySelector('button[data-btn="bookmark"]');
-        const btnMark = listItem.querySelector('button[data-btn="mark"]');
-        const btnDelete = listItem.querySelector('button[data-btn="delete"]');
-
-        listItem.addEventListener('click', function () {
-          const emailSidebarViewInstance = new EmailSidebar(emailSidebarView, {
-            backdrop: false
-          });
-          emailSidebarViewInstance.show();
-        });
-
-        check.addEventListener('click', function (e) {
-          const checks = emailList.querySelectorAll('input[type="checkbox"]');
-          const selectedChecks = emailList.querySelectorAll('input[type="checkbox"]:checked');
-
-          e.stopPropagation();
-
-          if (checks.length === selectedChecks.length) {
-            emailCheckAll.checked = true;
-          }
-
-          if (selectedChecks.length < checks.length) {
-            emailCheckAll.checked = false;
-          }
-        });
-
-        btnBookmark.addEventListener('click', function (e) {
-          const item = this.parentElement.parentElement;
-          e.stopPropagation();
-          item.classList.toggle('mark-as-starred');
-        });
-
-        btnMark.addEventListener('click', function (e) {
-          const item = this.parentElement.parentElement.parentElement;
-          e.stopPropagation();
-
-          if (!item.classList.contains('mark-as-read')) {
-            item.classList.add('mark-as-read');
-            item.classList.replace('bg-white', 'bg-slate-50');
-            item.classList.replace('dark:bg-slate-800', 'dark:bg-slate-900');
-
-          } else {
-            item.classList.remove('mark-as-read');
-            item.classList.replace('bg-slate-50', 'bg-white');
-            item.classList.replace('dark:bg-slate-900', 'dark:bg-slate-800');
-          }
-
-        });
-
-        btnDelete.addEventListener('click', function (e) {
-          const item = this.parentElement.parentElement.parentElement;
-          e.stopPropagation();
-
-          item.remove();
-        });
-      })
-    }
-
-    if (emailCheckAll) {
-      emailCheckAll.addEventListener('click', function (e) {
-        if (emailListItems.length) {
-          [...emailListItems].forEach(listItem => {
-            const check = listItem.querySelector('input[type="checkbox"]');
-            check.checked = this.checked;
-          })
-        }
-      })
-    }
-
-    if (emailMarkAll) {
-      emailMarkAll.addEventListener('click', function (e) {
-        const selectedChecks = emailList.querySelectorAll('input[type="checkbox"]:checked');
-
-        if (selectedChecks.length) {
-          [...selectedChecks].forEach(check => {
-            const selectedItem = check.parentElement.parentElement;
-
-            if (!selectedItem.classList.contains('mark-as-read')) {
-              selectedItem.classList.add('mark-as-read');
-              selectedItem.classList.replace('bg-white', 'bg-slate-50');
-              selectedItem.classList.replace('dark:bg-slate-800', 'dark:bg-slate-900');
-            }
-
-            check.checked = false;
-            emailCheckAll.checked = false;
-          })
-        }
-
-      })
-    }
-
-    if (emailDeleteAll) {
-      emailDeleteAll.addEventListener('click', function (e) {
-        const selectedChecks = emailList.querySelectorAll('input[type="checkbox"]:checked');
-
-        if (selectedChecks.length) {
-          [...selectedChecks].forEach(check => {
-            const selectedItem = check.parentElement.parentElement;
-            selectedItem.remove();
-            emailCheckAll.checked = false;
-          })
-        }
-      })
-    }
-
-    if(emailReplayEditor) {
-      new Quill(emailReplayEditor, {
-        theme: 'snow',
-        bounds: emailReplayEditor,
-        placeholder: 'Write your message',
-      });
-    }
-
-    if (emailBtnToggleSidebarLeft) {
-      emailBtnToggleSidebarLeft.addEventListener('click', () => {
+    if (emailBtnShowSidebarLeft) {
+      emailBtnShowSidebarLeft.addEventListener('click', () => {
         new EmailSidebar(emailSidebarLeft).show();
       })
     }
 
-    if (emailBtnToggleSidebarView) {
-      emailBtnToggleSidebarView.addEventListener('click', () => {
-        new EmailSidebar(emailSidebarView).hide();
+    if (emailBtnHideSidebarLeft) {
+      emailBtnHideSidebarLeft.addEventListener('click', () => {
+        new EmailSidebar(emailSidebarLeft).hide();
       })
     }
 
-    
     if (emailComposeInputTo) {
       new Tagify(emailComposeInputTo);
     }
 
-    
     if (emailComposeInputCC) {
       new Tagify(emailComposeInputCC);
     }
@@ -259,15 +120,15 @@ document.addEventListener('DOMContentLoaded', function () {
           sidebar.classList.add('transform-none');
           sidebar.classList.replace('invisible', 'visible');
 
-          if (this.options.backdrop && emailBackdrop) {
-            emailBackdrop.classList.remove('hidden');
+          if (this.options.backdrop && emailOverlay) {
+            emailOverlay.classList.remove('hidden');
           }
 
           setTimeout(() => {
-            if (this.options.backdrop && emailBackdrop) {
-              emailBackdrop.classList.add('bg-opacity-40');
+            if (this.options.backdrop && emailOverlay) {
+              emailOverlay.classList.add('bg-opacity-40');
 
-              emailBackdrop.addEventListener('click', () => {
+              emailOverlay.addEventListener('click', () => {
                 if (this.options.backdrop !== 'static') {
                   this.hide();
                 }
@@ -289,15 +150,15 @@ document.addEventListener('DOMContentLoaded', function () {
         if (sidebarVisibility === 'visible') {
           sidebar.classList.remove('transform-none');
 
-          if (this.options.backdrop && emailBackdrop) {
-            emailBackdrop.classList.remove('bg-opacity-40');
+          if (this.options.backdrop && emailOverlay) {
+            emailOverlay.classList.remove('bg-opacity-40');
           }
 
           setTimeout(() => {
             sidebar.classList.replace('visible', 'invisible');
 
-            if (this.options.backdrop && emailBackdrop) {
-              emailBackdrop.classList.add('hidden');
+            if (this.options.backdrop && emailOverlay) {
+              emailOverlay.classList.add('hidden');
             }
 
             if (this.options.keyboard) {
@@ -316,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     }
-
+    
   })()
+
 });
