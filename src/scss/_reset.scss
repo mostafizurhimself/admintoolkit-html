@@ -287,3 +287,42 @@
 }
 
 
+// ============ Tagify Custom CSS Starts ============
+.tagify{
+  @apply items-center gap-2;
+
+  & > &__tag  {
+    @apply m-0 cursor-pointer flex items-center gap-x-1 px-2 py-1 bg-slate-100 border border-slate-300 rounded-full dark:bg-slate-700 dark:border-slate-600; 
+  }
+
+  & > &__tag > div {
+    @apply p-0 leading-none;
+    
+    &::before {
+      @apply shadow-none;
+    }
+  }
+
+  & > &__tag &__tag-text {
+    @apply text-sm text-slate-600 dark:text-slate-300;
+  }
+
+  & > &__tag &__tag__removeBtn {
+    @apply text-lg m-0 text-slate-600 hover:bg-transparent hover:text-danger-500 dark:text-slate-300 dark:hover:text-danger-500;
+  }
+
+  & > &__tag &__tag__removeBtn:hover + div > span {
+    @apply opacity-100;
+  }
+
+  & > &__tag &__tag__removeBtn:hover + div::before {
+    box-shadow: none !important
+  }
+
+
+  & > &__input {
+    @apply m-0 px-0 py-2 text-sm text-slate-700 dark:text-slate-300;
+  }
+  
+}
+// ============ Tagify Custom CSS Ends ============
