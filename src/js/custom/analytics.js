@@ -3,7 +3,7 @@ import colors from 'tailwindcss/colors';
 import themeConfig, { themeColors } from '@tailwind.config';
 
 
-const areaOptions = {
+const salesAnalyticsChartOptions = {
   colors: [themeColors.primary['500'], colors.sky['500']],
   series: [
     {
@@ -76,22 +76,21 @@ const pieOptions = {
     }
   }
 };
-// Area Chart Start
-let areaChart = new ApexCharts(document.querySelector('#area-chart'), areaOptions);
-areaChart.render();
+// Sales Analytics Chart Start
+let salesAnalyticsChart = new ApexCharts(document.querySelector('#sales-analytics-chart'), salesAnalyticsChartOptions);
+salesAnalyticsChart.render();
 // AreaChart Custom Legends
-const allLegends = document.querySelectorAll(".area-legend input[type='checkbox']");
-allLegends.forEach((legend) => {
+const salesAnalyticsChartLegends = document.querySelectorAll("#sales-analytics-chart-legend input[type='checkbox']");
+salesAnalyticsChartLegends.forEach((legend) => {
   legend.addEventListener('click', (event) => {
-    areaChart.toggleSeries(event.target.value);
+    salesAnalyticsChart.toggleSeries(event.target.value);
     legend.parentNode.classList.toggle('opacity-20');
   });
 });
-// Area Chart End
+// Sales Analytics Chart End
 
-// Pie Chart Start
-let pieChart = new ApexCharts(document.querySelector('#pie-chart'), pieOptions);
+// Top Categories Chart Start
+let pieChart = new ApexCharts(document.querySelector('#top-categories-chart'), pieOptions);
 pieChart.render();
-// Pie Chart End
+// Top Categories Chart End
 
-// AM World map
