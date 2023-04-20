@@ -1,4 +1,59 @@
 import ApexCharts from 'apexcharts';
+import colors from 'tailwindcss/colors';
+import themeConfig, { themeColors } from '@tailwind.config';
+
+
+const areaOptions = {
+  colors: [themeColors.primary['500'], colors.sky['500']],
+  series: [
+    {
+      name: 'Total Sales',
+      data: [0, 2000, 5000, 8000, 15000, 21000, 38000, 43000, 30000, 36000, 25000, 36000],
+    },
+    {
+      name: 'Total Orders',
+      data: [0, 3500, 7000, 10000, 20000, 25000, 45000, 40000, 38000, 39000, 44000, 50000],
+    },
+  ],
+  fill: {
+    type: 'solid',
+    colors: ['transparent']
+  },
+  chart: {
+    type: 'area',
+    height: 350,
+    zoom: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
+    fontFamily: themeConfig.theme.fontFamily.sans,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    curve: 'smooth',
+  },
+  xaxis: {
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  },
+  yaxis: {
+    min: 0,
+    max: 50000,
+    tickAmount: 5,
+    labels: {
+      formatter: function (value) { 
+        return value / 1000 + 'K';
+      }
+    },
+  },
+  legend: {
+    show: false,
+  },
+};
+
 const pieOptions = {
   series: [41, 17, 15],
   labels: ['Camera', 'Sunglass', 'MacBook'],
@@ -25,53 +80,6 @@ const pieOptions = {
     // show: false
     position: 'bottom',
     offsetY: -130,
-  },
-};
-const areaOptions = {
-  colors: ['#8C5EF6', '#1BA0FE'],
-  series: [
-    {
-      name: 'Total Sales',
-      data: [0, 1000, 7000, 16000, 21000, 38000, 43000, 30000, 36000, 25000, 36000],
-    },
-    {
-      name: 'Total Orders',
-      data: [0, 1100, 8000, 18000, 22000, 45000, 40000, 38000, 39000, 44000, 30000],
-    },
-  ],
-  fill: {
-    colors: ['#8B5CF6'],
-    type: 'gradient',
-    gradient: {
-      opacityFrom: 0.3,
-      opacityTo: 0,
-    },
-  },
-  chart: {
-    type: 'area',
-    height: 250,
-    zoom: {
-      enabled: false,
-    },
-    toolbar: {
-      show: false,
-    },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  stroke: {
-    curve: 'smooth',
-  },
-  xaxis: {
-    categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-  },
-  yaxis: {
-    min: 0,
-    max: 50000,
-  },
-  legend: {
-    show: false,
   },
 };
 // Area Chart Start

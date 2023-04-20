@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/logo-small.svg" type="image/svg" />
     <title>Analytics - Admin Toolkit</title>
     <link rel="stylesheet" href="./scss/app.scss" />
   </head>
@@ -824,39 +825,39 @@
             <section class="grid gap-6 md:grid-cols-1 lg:grid-cols-5">
               <!-- Sales Analytics -->
               <div class="card lg:col-span-3">
-                <div class="card-body h-full">
+                <div class="card-body">
                   <!-- Chart wrap -->
-                  <div id="chart-wrap" class="flex h-full flex-col justify-between">
+                  <div id="chart-wrap" class="flex flex-col justify-between">
                     <div class="flex flex-wrap items-center justify-between gap-3 md:gap-0">
                       <!-- Chart Title  -->
-                      <h4 class="text-xl font-semibold">Sales Analytics</h4>
+                      <h6>Sales Analytics</h6>
                       <!-- Legends  -->
-                      <div class="area-legend flex items-center gap-2">
-                        <label for="sales" class="pretty p-svg p-smooth">
+                      <div class="area-legend flex items-center gap-4">
+                        <label for="sales">
                           <input type="checkbox" id="sales" class="hidden" checked value="Total Sales" />
-                          <div class="state p-primary flex cursor-pointer items-center gap-1">
+                          <div class="flex items-center gap-1">
                             <div class="h-4 w-4 rounded-full bg-primary-500"></div>
-                            <span class="font-medium text-slate-600 dark:text-slate-300">Total Sales</span>
+                            <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Total Sales</p>
                           </div>
                         </label>
 
-                        <label for="orders" class="pretty p-svg p-smooth">
+                        <label for="orders">
                           <input type="checkbox" id="orders" class="hidden" checked value="Total Orders" />
-                          <div class="state p-success flex cursor-pointer items-center gap-1">
-                            <div class="h-4 w-4 rounded-full bg-[#1BA0FE]"></div>
-                            <span class="font-medium text-slate-600 dark:text-slate-300">Total Orders</span>
+                          <div class="flex items-center gap-1">
+                            <div class="h-4 w-4 rounded-full bg-sky-500"></div>
+                            <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Total Orders</span>
                           </div>
                         </label>
                       </div>
                       <!-- Select By Chart -->
-                      <select class="select w-full md:w-32">
+                      <select class="select select-sm w-full md:w-32">
                         <option value="1">Yearly</option>
                         <option value="2">Monthly</option>
                         <option value="2">Date & Time</option>
                       </select>
                     </div>
                     <!-- Chart  -->
-                    <div id="area-chart"></div>
+                    <div id="area-chart" class="-mx-4"></div>
                   </div>
                 </div>
               </div>
@@ -865,10 +866,10 @@
                 <div class="card-body flex flex-col items-center justify-between">
                   <!-- Header  -->
                   <div class="flex w-full justify-between">
-                    <h4 class="text-xl font-semibold">Top Categories</h4>
+                    <h6>Top Categories</h4>
                     <div class="dropdown">
                       <div class="dropdown-toggle">
-                        <i class="ti ti-dots-vertical text-3xl text-slate-500"></i>
+                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
                       </div>
                       <div class="dropdown-content w-[160px]">
                         <ul class="dropdown-list">
@@ -883,10 +884,7 @@
                     </div>
                   </div>
                   <!-- Pie Chart  -->
-                  <div id="chart-wrap" class="h-full w-full">
-                    <!-- Chart  -->
-                    <div id="pie-chart" class="w-full"></div>
-                  </div>
+                  <!-- <div id="pie-chart" class="w-full"></div> -->
                 </div>
               </div>
             </section>
