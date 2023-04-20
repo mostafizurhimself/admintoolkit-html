@@ -700,14 +700,14 @@
         <!-- Main Content Starts -->
         <main class="container flex-grow flex items-center p-6">
           <!-- Email Starts -->
-          <div class="w-full h-full flex gap-x-6 relative overflow-hidden xl:overflow-visible">
+          <div class="w-full h-full xl:grid xl:grid-cols-4 xl:gap-x-6 relative overflow-hidden xl:overflow-visible">
             <!-- Email Overlay Starts -->
             <div id="overlay" class="w-full h-full absolute inset-0 z-10 bg-black bg-opacity-0 transition-colors duration-300 ease-in-out hidden xl:hidden">
             </div>
             <!-- Email Overlay Ends -->
 
             <!-- Email Sidebar Starts -->
-            <div id="email-sidebar-left" class="shrink-0 absolute top-0 bottom-0 z-20 invisible -translate-x-full transition-transform ease-in-out duration-300 bg-white h-auto w-3/4 sm:w-64 2xl:w-72 xl:translate-x-0 xl:rounded-primary xl:h-max xl:sticky xl:top-20 xl:shadow xl:visible dark:bg-slate-800 space-y-3">
+            <div id="email-sidebar-left" class="space-y-3 absolute top-0 bottom-0 z-20 invisible -translate-x-full transition-transform ease-in-out duration-300 bg-white h-auto w-3/4 sm:w-64 xl:w-auto xl:h-max xl:translate-x-0 xl:rounded-primary xl:sticky xl:top-20 xl:shadow xl:visible xl:col-span-1 dark:bg-slate-800">
               <!-- Email Sidebar Header Starts -->
               <div class="px-6 mt-4">
                 <button type="button" class="w-full btn btn-lg btn-primary" data-toggle="modal" data-target="#modal-email-compose">
@@ -849,7 +849,7 @@
             <!-- Email Sidebar Ends -->
 
             <!-- Email Wrapper Starts -->
-            <div class="w-full h-max relative overflow-hidden rounded-primary shadow bg-white dark:bg-slate-800">
+            <div class="w-full h-max relative overflow-hidden rounded-primary shadow bg-white xl:col-span-3 dark:bg-slate-800">
               <!-- Email Wrapper Header Starts -->
               <div class="border-b border-b-slate-200 divide-y divide-slate-200 dark:border-b-slate-600 dark:divide-slate-600">
                 <!-- Email Search Starts -->
