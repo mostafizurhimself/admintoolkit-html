@@ -56,31 +56,25 @@ const areaOptions = {
 
 const pieOptions = {
   series: [41, 17, 15],
-  labels: ['Camera', 'Sunglass', 'MacBook'],
-  colors: ['#8B5CF6', '#FDE68A', '#FDA4AF'],
+  labels: ['Electronics', 'Furniture', 'Grocery'],
+  colors: [themeColors.primary['500'], colors.amber['300'], themeColors.danger['400']],
   chart: {
     type: 'donut',
-    width: '100%',
+    width: "100%",
+    height: 400,
+    fontFamily: themeConfig.theme.fontFamily.sans,
+  },
+  legend: {
+    position: 'bottom',
+  },
+  stroke: {
+    width: 0,
   },
   plotOptions: {
     pie: {
-      startAngle: -90,
-      endAngle: 90,
-      offsetY: 50,
-      dataLabels: {
-        enabled: false,
-        style: {
-          display: 'none',
-          visibility: 'invisible',
-        },
-      },
-    },
-  },
-  legend: {
-    // show: false
-    position: 'bottom',
-    offsetY: -130,
-  },
+      expandOnClick: false
+    }
+  }
 };
 // Area Chart Start
 let areaChart = new ApexCharts(document.querySelector('#area-chart'), areaOptions);
