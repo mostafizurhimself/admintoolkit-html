@@ -18,7 +18,7 @@ body {
     }
 
     .footer {
-      @apply flex flex-wrap items-center justify-between bg-white px-6 py-5 text-slate-500 dark:bg-slate-800;
+      @apply mt-auto flex flex-wrap items-center justify-between bg-white px-6 py-5 text-slate-500 dark:bg-slate-800;
     }
   }
 }
