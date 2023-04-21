@@ -94,7 +94,6 @@
     }
 
     .ql-expanded {
-
       .ql-picker-label,
       .ql-picker-options {
         @apply border border-slate-300 dark:border-slate-600;
@@ -269,16 +268,16 @@
 }
 
 // ============Apex Chart  End ============
-// Email Badge 
+// Email Badge
 .tags-input-wrapper {
-  @apply p-0 border-none outline-none bg-transparent text-xs m-0 text-slate-600 dark:text-slate-300 w-full flex flex-wrap gap-2;
+  @apply m-0 flex w-full flex-wrap gap-2 border-none bg-transparent p-0 text-xs text-slate-600 outline-none dark:text-slate-300;
 
   & input {
-    @apply border-none outline-none flex-1 bg-transparent py-1;
+    @apply flex-1 border-none bg-transparent py-1 outline-none;
   }
 
   & .tag {
-    @apply inline-block bg-slate-50 dark:bg-slate-900 rounded-full px-2 py-1 mb-1 shadow;
+    @apply mb-1 inline-block rounded-full bg-slate-50 px-2 py-1 shadow dark:bg-slate-900;
 
     & a {
       @apply mx-2 inline-block cursor-pointer;
@@ -286,18 +285,17 @@
   }
 }
 
-
 // ============ Tagify Custom CSS Starts ============
-.tagify{
+.tagify {
   @apply items-center gap-2;
 
-  & > &__tag  {
-    @apply m-0 cursor-pointer flex items-center gap-x-1 px-2 py-1 bg-slate-100 border border-slate-300 rounded-full dark:bg-slate-700 dark:border-slate-600; 
+  & > &__tag {
+    @apply m-0 flex cursor-pointer items-center gap-x-1 rounded-full border border-slate-300 bg-slate-100 px-2 py-1 dark:border-slate-600 dark:bg-slate-700;
   }
 
   & > &__tag > div {
     @apply p-0 leading-none;
-    
+
     &::before {
       @apply shadow-none;
     }
@@ -308,7 +306,7 @@
   }
 
   & > &__tag &__tag__removeBtn {
-    @apply text-lg m-0 text-slate-600 hover:bg-transparent hover:text-danger-500 dark:text-slate-300 dark:hover:text-danger-500;
+    @apply m-0 text-lg text-slate-600 hover:bg-transparent hover:text-danger-500 dark:text-slate-300 dark:hover:text-danger-500;
   }
 
   & > &__tag &__tag__removeBtn:hover + div > span {
@@ -316,13 +314,11 @@
   }
 
   & > &__tag &__tag__removeBtn:hover + div::before {
-    box-shadow: none !important
+    box-shadow: none !important;
   }
-
 
   & > &__input {
     @apply m-0 px-0 py-2 text-sm text-slate-700 dark:text-slate-300;
   }
-  
 }
 // ============ Tagify Custom CSS Ends ============

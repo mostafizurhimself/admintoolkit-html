@@ -1,12 +1,12 @@
-"use strict";
+'use strict';
 
-import Tagify from '@yaireo/tagify'
+import Tagify from '@yaireo/tagify';
 import Quill from 'quill';
 
 document.addEventListener('DOMContentLoaded', function () {
   (function () {
-    const emailFilter = document.querySelector("#email-filter");
-    const emailFilterItems = document.querySelectorAll("#email-filter > li.group");
+    const emailFilter = document.querySelector('#email-filter');
+    const emailFilterItems = document.querySelectorAll('#email-filter > li.group');
     const emailComposeBtnCC = document.querySelector('#email-compose-btn-cc');
     const emailComposeBtnBCC = document.querySelector('#email-compose-btn-bcc');
     const emailComposeInputTo = document.querySelector('#email-compose-input-to');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const emailBtnHideSidebarLeft = document.querySelector('#email-btn-hide-sidebar-left');
 
     if (emailFilterItems.length) {
-      [...emailFilterItems].forEach(filterItem => {
+      [...emailFilterItems].forEach((filterItem) => {
         filterItem.addEventListener('click', function () {
           const filter = this.dataset.filterBy;
           const filterItemActive = emailFilter.querySelector('li.active');
@@ -27,26 +27,26 @@ document.addEventListener('DOMContentLoaded', function () {
           if (!filterItem.classList.contains('active')) {
             filterItem.classList.add('active');
 
-            if(filterItemActive) {
+            if (filterItemActive) {
               filterItemActive.classList.remove('active');
             }
           }
 
           new EmailSidebar(emailSidebarLeft).hide();
-        })
-      })
+        });
+      });
     }
 
     if (emailBtnShowSidebarLeft) {
       emailBtnShowSidebarLeft.addEventListener('click', () => {
         new EmailSidebar(emailSidebarLeft).show();
-      })
+      });
     }
 
     if (emailBtnHideSidebarLeft) {
       emailBtnHideSidebarLeft.addEventListener('click', () => {
         new EmailSidebar(emailSidebarLeft).hide();
-      })
+      });
     }
 
     if (emailComposeInputTo) {
@@ -69,13 +69,13 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
 
-    if(emailComposeBtnCC) {
+    if (emailComposeBtnCC) {
       emailComposeBtnCC.addEventListener('click', () => {
         emailComposeInputCC.parentElement.classList.toggle('hidden');
       });
     }
 
-    if(emailComposeBtnBCC) {
+    if (emailComposeBtnBCC) {
       emailComposeBtnBCC.addEventListener('click', () => {
         emailComposeInputBCC.parentElement.classList.toggle('hidden');
       });
@@ -99,15 +99,10 @@ document.addEventListener('DOMContentLoaded', function () {
       this.documentOnKeydown = (e) => this.hideOnKeydown({ e, sidebar: this });
 
       if (typeof sidebar === 'string') {
-
         this.sidebar = document.querySelector(sidebar);
-
       } else if (sidebar instanceof HTMLElement) {
-
         this.sidebar = sidebar;
-
       } else {
-
         throw new Error('No Sidebar element found');
       }
 
@@ -140,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
           }, 15);
         }
-      }
+      };
 
       this.hide = function () {
         const sidebar = this.sidebar;
@@ -164,10 +159,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (this.options.keyboard) {
               document.removeEventListener('keydown', this.documentOnKeydown);
             }
-
-          }, this.transition)
+          }, this.transition);
         }
-      }
+      };
 
       this.hideOnKeydown = function (args) {
         const { e, sidebar } = args;
@@ -175,9 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.key === 'Escape' && sidebar.options.keyboard) {
           sidebar.hide();
         }
-      }
+      };
     }
-    
-  })()
-
+  })();
 });

@@ -1,6 +1,6 @@
 @layer components {
   .checkbox {
-    @apply h-4 w-4 rounded cursor-pointer border-slate-300 bg-transparent text-primary-500 focus:ring-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-80 dark:border-slate-600 dark:focus:ring-offset-slate-900;
+    @apply h-4 w-4 cursor-pointer rounded border-slate-300 bg-transparent text-primary-500 focus:ring-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-80 dark:border-slate-600 dark:focus:ring-offset-slate-900;
 
     &-sm {
       @apply h-3.5 w-3.5;
