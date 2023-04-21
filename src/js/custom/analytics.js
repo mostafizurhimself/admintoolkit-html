@@ -57,7 +57,7 @@ const salesAnalyticsChartOptions = {
   },
 };
 
-const pieOptions = {
+const topCategoriesChartOptions = {
   series: [41, 17, 15],
   labels: ['Electronics', 'Furniture', 'Grocery'],
   colors: [themeColors.primary['500'], colors.amber['300'], themeColors.danger['400']],
@@ -93,14 +93,14 @@ salesAnalyticsChartLegends.forEach((legend) => {
 // Sales Analytics Chart End
 
 // Top Categories Chart Start
-let pieChart = new ApexCharts(document.querySelector('#top-categories-chart'), pieOptions);
-pieChart.render();
+let topCategoriesChartOption = new ApexCharts(document.querySelector('#top-categories-chart'), topCategoriesChartOptions);
+topCategoriesChartOption.render();
 // Top Categories Chart End
 
-// ========AmChart Start ===========
-
-let root = am5.Root.new('worldChart');
-let amChart = root.container.children.push(
+// ========Sale Location Cart Start ===========
+ 
+let root = am5.Root.new('salesLocationChart');
+let salesLocationChart = root.container.children.push(
   am5map.MapChart.new(root, {
     panX: 'translateX',
     panY: 'translateY',
@@ -108,14 +108,14 @@ let amChart = root.container.children.push(
   })
 );
 
-// Set AmChart Theme
+// Set Sale Location Cart Theme
 root.setThemes([am5themes_Animated.new(root)]);
 
-// Remove AmChart Default Logo
+// Remove Sale Location Cart Default Logo
 if (root._logo) root._logo.dispose();
 
 // Polygon Background Color
-let polygonSeries = amChart.series.push(
+let polygonSeries = salesLocationChart.series.push(
   am5map.MapPolygonSeries.new(root, {
     geoJSON: am5geodata_worldLow,
     exclude: ['AQ'],
@@ -170,4 +170,4 @@ polygonSeries.data.setAll([
 polygonSeries.mapPolygons.template.states.create('hover', {
   fill: am5.color(0x8b5cf6),
 });
-// ========AmChart End ===========
+// ========Sale Location Cart End ===========

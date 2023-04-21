@@ -860,8 +860,8 @@
                     </select>
                   </div>
                   <div class="grid min-h-min flex-grow grid-cols-1 gap-4 md:grid-cols-5">
-                    <!-- World Map Chart  -->
-                    <div id="worldChart" class="col-span-1 h-96 md:col-span-3 md:h-full"></div>
+                    <!-- Sales Location Chart  -->
+                    <div id="salesLocationChart" class="col-span-1 h-96 md:col-span-3 md:h-full"></div>
                     <div class="col-span-1 my-4 flex flex-col gap-8 md:col-span-2">
                       <!-- United States  -->
                       <div class="flex items-center gap-2">
@@ -1718,96 +1718,8 @@
     </div>
     <!-- Wrapper Ends -->
   </div>
-  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
   <script src="./js/app.js" type="module"></script>
   <script src="./js/custom/analytics.js" type="module"></script>
-  <!-- <script>
-    am5.ready(function () {
-      // Create root element
-      // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-      var root = am5.Root.new('chartdiv');
-
-      // Set themes
-      // https://www.amcharts.com/docs/v5/concepts/themes/
-      root.setThemes([am5themes_Animated.new(root)]);
-
-      // Create the map chart
-      // https://www.amcharts.com/docs/v5/charts/map-chart/
-      var chart = root.container.children.push(
-        am5map.MapChart.new(root, {
-          panX: 'translateX',
-          panY: 'translateY',
-          projection: am5map.geoMercator(),
-        })
-      );
-
-      // Create main polygon series for countries
-      // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
-      var polygonSeries = chart.series.push(
-        am5map.MapPolygonSeries.new(root, {
-          geoJSON: am5geodata_worldLow,
-          exclude: ['AQ'],
-        })
-      );
-
-      polygonSeries.mapPolygons.template.setAll({
-        tooltipText: '{name}',
-        toggleKey: 'active',
-        interactive: true,
-      });
-
-      polygonSeries.mapPolygons.template.states.create('hover', {
-        fill: root.interfaceColors.get('primaryButtonHover'),
-      });
-
-      polygonSeries.mapPolygons.template.states.create('active', {
-        fill: root.interfaceColors.get('primaryButtonHover'),
-      });
-
-      // US Series
-      // Create main polygon series for countries
-      // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
-      var polygonSeriesUS = chart.series.push(
-        am5map.MapPolygonSeries.new(root, {
-          geoJSON: am5geodata_usaLow,
-        })
-      );
-
-      polygonSeriesUS.mapPolygons.template.setAll({
-        tooltipText: '{name}',
-        toggleKey: 'active',
-        interactive: true,
-      });
-
-      var colors = am5.ColorSet.new(root, {});
-
-      polygonSeriesUS.mapPolygons.template.set('fill', colors.getIndex(3));
-
-      polygonSeriesUS.mapPolygons.template.states.create('hover', {
-        fill: root.interfaceColors.get('primaryButtonHover'),
-      });
-
-      polygonSeriesUS.mapPolygons.template.states.create('active', {
-        fill: root.interfaceColors.get('primaryButtonHover'),
-      });
-
-      // Add zoom control
-      // https://www.amcharts.com/docs/v5/charts/map-chart/map-pan-zoom/#Zoom_control
-      chart.set('zoomControl', am5map.ZoomControl.new(root, {}));
-
-      // Set clicking on "water" to zoom out
-      chart.chartContainer.get('background').events.on('click', function () {
-        chart.goHome();
-      });
-
-      // Make stuff animate on load
-      chart.appear(1000, 100);
-    }); // end am5.ready()
-  </script> -->
 </body>
 
 </html>
