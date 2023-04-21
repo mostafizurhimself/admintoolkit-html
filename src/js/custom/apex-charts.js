@@ -1,5 +1,6 @@
 import ApexCharts from 'apexcharts';
 import defaultTheme from 'tailwindcss/defaultTheme';
+import themeConfig from '@tailwind.config';
 
 const emptyOption = `{ 
                           // ...... 
@@ -33,6 +34,7 @@ const chartOptions = {
       toolbar: {
         show: false,
       },
+      fontFamily: themeConfig.theme.fontFamily.sans,
     },
     dataLabels: {
       enabled: false,
@@ -47,9 +49,6 @@ const chartOptions = {
         color: '#475569',
         fontSize: '18px',
         fontWeight: 600,
-        fontFamily: {
-          sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-        },
       },
     },
     grid: {
@@ -127,6 +126,7 @@ const chartOptions = {
       toolbar: {
         show: false,
       },
+      fontFamily: themeConfig.theme.fontFamily.sans,
     },
     dataLabels: {
       enabled: false,
@@ -211,6 +211,7 @@ const chartOptions = {
       toolbar: {
         show: false,
       },
+      fontFamily: themeConfig.theme.fontFamily.sans,
     },
     plotOptions: {
       bar: {
@@ -265,6 +266,7 @@ const chartOptions = {
       toolbar: {
         show: false,
       },
+      fontFamily: themeConfig.theme.fontFamily.sans,
     },
     plotOptions: {
       bar: {
@@ -411,6 +413,7 @@ const chartOptions = {
       toolbar: {
         show: false,
       },
+      fontFamily: themeConfig.theme.fontFamily.sans,
     },
     xaxis: {
       tickAmount: 10,
@@ -433,6 +436,7 @@ const chartOptions = {
       toolbar: {
         show: false,
       },
+      fontFamily: themeConfig.theme.fontFamily.sans,
     },
     labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
     responsive: [
@@ -457,6 +461,7 @@ const chartOptions = {
       toolbar: {
         show: false,
       },
+      fontFamily: themeConfig.theme.fontFamily.sans,
     },
     responsive: [
       {
@@ -473,11 +478,6 @@ const chartOptions = {
     ],
   },
   radarChart: {
-    chart: {
-      fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-      },
-    },
     series: [
       {
         name: 'Series 1',
@@ -504,6 +504,7 @@ const chartOptions = {
         left: 1,
         top: 1,
       },
+      fontFamily: themeConfig.theme.fontFamily.sans,
     },
     title: {
       text: 'Radar Chart - Multi Series',
@@ -511,9 +512,6 @@ const chartOptions = {
         color: '#475569',
         fontSize: '18px',
         fontWeight: 600,
-        fontFamily: {
-          sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-        },
       },
     },
     stroke: {

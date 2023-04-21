@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 import defaultTheme from 'tailwindcss/defaultTheme';
 import colors from 'tailwindcss/colors';
+import forms from '@tailwindcss/forms';
+import variables from '@mertasan/tailwindcss-variables';
+import typography from '@tailwindcss/typography';
 
 // Add your custom theme colors here
-const themeColors = {
+export const themeColors = {
   primary: colors.violet,
   secondary: colors.gray,
   success: colors.emerald,
@@ -17,6 +20,9 @@ export default {
   darkMode: 'class',
   content: ['./src/**/*.{html,css,scss,js}'],
   theme: {
+    fontFamily: {
+      sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+    },
     container: {
       center: true,
       screens: {
@@ -28,9 +34,6 @@ export default {
       }
     },
     extend: {
-      fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-      },
       transitionProperty: {
         width: 'width',
         height: 'height',
@@ -82,7 +85,9 @@ export default {
       },
       colors: themeColors,
       variables: {
-        DEFAULT: themeColors,
+        DEFAULT: {
+          ...themeColors,
+        },
       },
       borderRadius: {
         primary: '0.4rem',
@@ -91,9 +96,9 @@ export default {
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@mertasan/tailwindcss-variables'),
-    require('@tailwindcss/typography'),
+    forms,
+    variables,
+    typography,
   ],
 }
 

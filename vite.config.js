@@ -10,7 +10,11 @@ const entries = glob.sync('./src/**/*.html').reduce((acc, path) => {
 
 export default defineConfig({
   root: 'src',
-  publicDir: 'public',
+  resolve: {
+    alias: {
+      '@tailwind.config': resolve(__dirname, './tailwind.config.js'),
+    }
+  },
   optimizeDeps: {
     entries: Object.keys(entries),
   },

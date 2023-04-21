@@ -23,6 +23,9 @@
     "vite": "4.1.0"
   },
   "dependencies": {
+    "@amcharts/amcharts5": "^5.3.11",
+    "@amcharts/amcharts5-fonts": "^5.0.1",
+    "@amcharts/amcharts5-geodata": "^5.1.0",
     "@floating-ui/dom": "^1.2.1",
     "@fortawesome/fontawesome-free": "^6.3.0",
     "@fullcalendar/core": "^6.1.5",

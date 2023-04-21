@@ -1,792 +1,1725 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/logo-small.svg" type="image/svg" />
-    <title>Analytics - Admin Toolkit</title>
-    <link rel="stylesheet" href="./scss/app.scss" />
-  </head>
 
-  <body>
-    <div id="app" class="min-h-screen w-full">
-      <!-- Sidebar Starts -->
-      <aside class="sidebar">
-        <!-- Sidebar Header Starts -->
-        <div class="sidebar-header">
-          <div class="sidebar-logo-icon">
-            <img src="./images/logo-small.svg" alt="logo" class="h-[50px]" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./images/logo-small.svg" type="image/svg" />
+  <title>Analytics - Admin Toolkit</title>
+  <link rel="stylesheet" href="./scss/app.scss" />
+</head>
 
-          <div class="sidebar-logo-text">
-            <h1 class="flex text-xl">
-              <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
-              <span class="font-semibold text-primary-500">Toolkit</span>
-            </h1>
-
-            <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
-          </div>
+<body>
+  <div id="app" class="min-h-screen w-full">
+    <!-- Sidebar Starts -->
+    <aside class="sidebar">
+      <!-- Sidebar Header Starts -->
+      <div class="sidebar-header">
+        <div class="sidebar-logo-icon">
+          <img src="./images/logo-small.svg" alt="logo" class="h-[50px]" />
         </div>
-        <!-- Sidebar Header Ends -->
 
-        <!-- Sidebar Menu Starts -->
-        <ul class="sidebar-content">
-          <!-- Dashboard -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu active">
-              <span class="sidebar-menu-icon">
-                <i data-feather="home"></i>
-              </span>
-              <span class="sidebar-menu-text">Dashboard</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="/" class="sidebar-submenu-item">Ecommerce</a>
-              </li>
-              <li>
-                <a href="./analytics.html" class="sidebar-submenu-item active"> Analytics </a>
-              </li>
-            </ul>
-          </li>
+        <div class="sidebar-logo-text">
+          <h1 class="flex text-xl">
+            <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
+            <span class="font-semibold text-primary-500">Toolkit</span>
+          </h1>
 
-          <div class="sidebar-menu-header">Applications</div>
+          <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+        </div>
+      </div>
+      <!-- Sidebar Header Ends -->
 
-          <!-- Email -->
-          <li>
-            <a href="./email.html" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="mail"></i>
-              </span>
-              <span class="sidebar-menu-text">Email</span>
-            </a>
-          </li>
-          <!-- Chat -->
-          <li>
-            <a href="./chat.html" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="message-square"></i>
-              </span>
-              <span class="sidebar-menu-text">Chat</span>
-            </a>
-          </li>
-          <!-- Calendar -->
-          <li>
-            <a href="./calendar.html" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="calendar"></i>
-              </span>
-              <span class="sidebar-menu-text">Calendar</span>
-            </a>
-          </li>
-          <!-- Invoice -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="file-text"></i>
-              </span>
-              <span class="sidebar-menu-text">Invoice</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./invoice-create.html" class="sidebar-submenu-item"> Create </a>
-              </li>
+      <!-- Sidebar Menu Starts -->
+      <ul class="sidebar-content">
+        <!-- Dashboard -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu active">
+            <span class="sidebar-menu-icon">
+              <i data-feather="home"></i>
+            </span>
+            <span class="sidebar-menu-text">Dashboard</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="/" class="sidebar-submenu-item">Ecommerce</a>
+            </li>
+            <li>
+              <a href="./analytics.html" class="sidebar-submenu-item active"> Analytics </a>
+            </li>
+          </ul>
+        </li>
 
-              <li>
-                <a href="./invoice-details.html" class="sidebar-submenu-item"> Details </a>
-              </li>
-            </ul>
-          </li>
-          <!-- ecommnerce -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="shopping-bag"></i>
-              </span>
-              <span class="sidebar-menu-text">Ecommerce</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./product-list.html" class="sidebar-submenu-item"> Product List </a>
-              </li>
+        <div class="sidebar-menu-header">Applications</div>
 
-              <li>
-                <a href="./product-edit.html" class="sidebar-submenu-item"> Product Edit </a>
-              </li>
-              <li>
-                <a href="./order-list.html" class="sidebar-submenu-item"> Order List </a>
-              </li>
-              <li>
-                <a href="./order-details.html" class="sidebar-submenu-item"> Order Details </a>
-              </li>
-              <li>
-                <a href="./customer-list.html" class="sidebar-submenu-item"> Customer List </a>
-              </li>
-            </ul>
-          </li>
-          <!-- Users -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="users"></i>
-              </span>
-              <span class="sidebar-menu-text">Users</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./list.html" class="sidebar-submenu-item">List</a>
-              </li>
-              <li>
-                <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
-              </li>
-            </ul>
-          </li>
-          <!--  Commponents  -->
-          <div class="sidebar-menu-header">Components</div>
-          <!-- Common  -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="box"></i>
-              </span>
-              <span class="sidebar-menu-text">Common</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./accordion.html" class="sidebar-submenu-item"> Accordion </a>
-              </li>
-              <li>
-                <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
-              </li>
-              <li>
-                <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
-              </li>
-              <li>
-                <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
-              </li>
-              <li>
-                <a href="./button.html" class="sidebar-submenu-item">Button</a>
-              </li>
-              <li>
-                <a href="./card.html" class="sidebar-submenu-item">Card</a>
-              </li>
-              <li>
-                <a href="./carousel.html" class="sidebar-submenu-item"> Carousel </a>
-              </li>
-              <li>
-                <a href="./collapse.html" class="sidebar-submenu-item"> Collapse </a>
-              </li>
-              <li>
-                <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
-              </li>
-              <li>
-                <a href="./dropdown.html" class="sidebar-submenu-item"> Dropdown </a>
-              </li>
-              <li>
-                <a href="./list-group.html" class="sidebar-submenu-item"> List Group </a>
-              </li>
-              <li>
-                <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
-              </li>
-              <li>
-                <a href="./pagination.html" class="sidebar-submenu-item"> Pagination </a>
-              </li>
-              <li>
-                <a href="./progress-bar.html" class="sidebar-submenu-item"> Progress </a>
-              </li>
+        <!-- Email -->
+        <li>
+          <a href="./email.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="mail"></i>
+            </span>
+            <span class="sidebar-menu-text">Email</span>
+          </a>
+        </li>
+        <!-- Chat -->
+        <li>
+          <a href="./chat.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="message-square"></i>
+            </span>
+            <span class="sidebar-menu-text">Chat</span>
+          </a>
+        </li>
+        <!-- Calendar -->
+        <li>
+          <a href="./calendar.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="calendar"></i>
+            </span>
+            <span class="sidebar-menu-text">Calendar</span>
+          </a>
+        </li>
+        <!-- Invoice -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="file-text"></i>
+            </span>
+            <span class="sidebar-menu-text">Invoice</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./invoice-create.html" class="sidebar-submenu-item"> Create </a>
+            </li>
 
-              <li>
-                <a href="./spinner.html" class="sidebar-submenu-item"> Spinner </a>
-              </li>
-              <li>
-                <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
-              </li>
-              <li>
-                <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
-              </li>
-              <li>
-                <a href="./tooltip.html" class="sidebar-submenu-item"> Tooltip </a>
-              </li>
-            </ul>
-          </li>
-          <!-- Forms  -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="edit"></i>
-              </span>
-              <span class="sidebar-menu-text">Forms</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./input.html" class="sidebar-submenu-item">Input</a>
-              </li>
-              <li>
-                <a href="./input-group.html" class="sidebar-submenu-item"> Input Group </a>
-              </li>
-              <li>
-                <a href="./textarea.html" class="sidebar-submenu-item"> Textarea </a>
-              </li>
-              <li>
-                <a href="./checkbox.html" class="sidebar-submenu-item"> Checkbox </a>
-              </li>
-              <li>
-                <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
-              </li>
-              <li>
-                <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
-              </li>
-              <li>
-                <a href="./select.html" class="sidebar-submenu-item">Select</a>
-              </li>
+            <li>
+              <a href="./invoice-details.html" class="sidebar-submenu-item"> Details </a>
+            </li>
+          </ul>
+        </li>
+        <!-- ecommnerce -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="shopping-bag"></i>
+            </span>
+            <span class="sidebar-menu-text">Ecommerce</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./product-list.html" class="sidebar-submenu-item"> Product List </a>
+            </li>
 
-              <li>
-                <a href="./datepicker.html" class="sidebar-submenu-item"> Datepicker </a>
-              </li>
-              <li>
-                <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
-              </li>
-              <li>
-                <a href="./uploader.html" class="sidebar-submenu-item"> Uploader </a>
-              </li>
-              <li>
-                <a href="./layout.html" class="sidebar-submenu-item">Layout</a>
-              </li>
-              <li>
-                <a href="./form-validation.html" class="sidebar-submenu-item"> Validation </a>
-              </li>
-            </ul>
-          </li>
-          <!-- Tables  -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="list"></i>
-              </span>
-              <span class="sidebar-menu-text">Tables</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./basic-table.html" class="sidebar-submenu-item"> Basic Table </a>
-              </li>
-              <li>
-                <a href="./data-table.html" class="sidebar-submenu-item"> Data Table </a>
-              </li>
-            </ul>
-          </li>
-          <!-- Charts  -->
-          <li>
-            <a href="./chart.html" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="pie-chart"></i>
-              </span>
-              <span class="sidebar-menu-text">Charts</span>
-            </a>
-          </li>
-          <!-- Icons-->
-          <li>
-            <a href="./icons.html" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="italic"></i>
-              </span>
-              <span class="sidebar-menu-text">Icons</span>
-            </a>
-          </li>
-          <!-- Typography-->
-          <li>
-            <a href="./typography.html" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="type"></i>
-              </span>
-              <span class="sidebar-menu-text">Typography</span>
-            </a>
-          </li>
-          <!--  Pages  -->
-          <div class="sidebar-menu-header">Pages</div>
-          <!-- Authentication  -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="lock"></i>
-              </span>
-              <span class="sidebar-menu-text">Authentication</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./login.html" class="sidebar-submenu-item">Login</a>
-              </li>
-              <li>
-                <a href="./register.html" class="sidebar-submenu-item"> Register </a>
-              </li>
-              <li>
-                <a href="./recover-password.html" class="sidebar-submenu-item"> Forgot Password </a>
-              </li>
-              <li>
-                <a href="./reset-password.html" class="sidebar-submenu-item"> Reset Password </a>
-              </li>
-            </ul>
-          </li>
-          <!-- Miscellaneous  -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="grid"></i>
-              </span>
-              <span class="sidebar-menu-text">Miscellaneous</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./start-page.html" class="sidebar-submenu-item"> Start Page </a>
-              </li>
-              <li>
-                <a href="./comming-soon.html" class="sidebar-submenu-item"> Coming Soon </a>
-              </li>
-              <li>
-                <a href="./maintenance.html" class="sidebar-submenu-item"> Maintenance </a>
-              </li>
-              <li>
-                <a href="./404-error.html" class="sidebar-submenu-item"> Error 404 </a>
-              </li>
-              <li>
-                <a href="./500-error.html" class="sidebar-submenu-item"> Error 500 </a>
-              </li>
-              <li>
-                <a href="./not-authorized.html" class="sidebar-submenu-item"> Not Authorized </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <!-- Sidebar Menu Ends -->
-      </aside>
-      <!-- Sidebar Ends -->
+            <li>
+              <a href="./product-edit.html" class="sidebar-submenu-item"> Product Edit </a>
+            </li>
+            <li>
+              <a href="./order-list.html" class="sidebar-submenu-item"> Order List </a>
+            </li>
+            <li>
+              <a href="./order-details.html" class="sidebar-submenu-item"> Order Details </a>
+            </li>
+            <li>
+              <a href="./customer-list.html" class="sidebar-submenu-item"> Customer List </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Users -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="users"></i>
+            </span>
+            <span class="sidebar-menu-text">Users</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./list.html" class="sidebar-submenu-item">List</a>
+            </li>
+            <li>
+              <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
+            </li>
+          </ul>
+        </li>
+        <!--  Commponents  -->
+        <div class="sidebar-menu-header">Components</div>
+        <!-- Common  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="box"></i>
+            </span>
+            <span class="sidebar-menu-text">Common</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./accordion.html" class="sidebar-submenu-item"> Accordion </a>
+            </li>
+            <li>
+              <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
+            </li>
+            <li>
+              <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
+            </li>
+            <li>
+              <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
+            </li>
+            <li>
+              <a href="./button.html" class="sidebar-submenu-item">Button</a>
+            </li>
+            <li>
+              <a href="./card.html" class="sidebar-submenu-item">Card</a>
+            </li>
+            <li>
+              <a href="./carousel.html" class="sidebar-submenu-item"> Carousel </a>
+            </li>
+            <li>
+              <a href="./collapse.html" class="sidebar-submenu-item"> Collapse </a>
+            </li>
+            <li>
+              <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
+            </li>
+            <li>
+              <a href="./dropdown.html" class="sidebar-submenu-item"> Dropdown </a>
+            </li>
+            <li>
+              <a href="./list-group.html" class="sidebar-submenu-item"> List Group </a>
+            </li>
+            <li>
+              <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
+            </li>
+            <li>
+              <a href="./pagination.html" class="sidebar-submenu-item"> Pagination </a>
+            </li>
+            <li>
+              <a href="./progress-bar.html" class="sidebar-submenu-item"> Progress </a>
+            </li>
 
-      <!-- Wrapper Starts -->
-      <div class="wrapper">
-        <!-- Header Starts -->
-        <header class="header">
-          <div class="container-fluid flex items-center justify-between">
-            <!-- Sidebar Toggle & Search Starts -->
-            <div class="flex items-center space-x-6">
-              <button class="sidebar-toggle">
-                <span class="flex space-x-4">
-                  <svg
-                    stroke="currentColor"
-                    fill="none"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    height="22"
-                    width="22"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16"
-                    ></path>
-                  </svg>
-                </span>
+            <li>
+              <a href="./spinner.html" class="sidebar-submenu-item"> Spinner </a>
+            </li>
+            <li>
+              <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
+            </li>
+            <li>
+              <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
+            </li>
+            <li>
+              <a href="./tooltip.html" class="sidebar-submenu-item"> Tooltip </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Forms  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="edit"></i>
+            </span>
+            <span class="sidebar-menu-text">Forms</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./input.html" class="sidebar-submenu-item">Input</a>
+            </li>
+            <li>
+              <a href="./input-group.html" class="sidebar-submenu-item"> Input Group </a>
+            </li>
+            <li>
+              <a href="./textarea.html" class="sidebar-submenu-item"> Textarea </a>
+            </li>
+            <li>
+              <a href="./checkbox.html" class="sidebar-submenu-item"> Checkbox </a>
+            </li>
+            <li>
+              <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
+            </li>
+            <li>
+              <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
+            </li>
+            <li>
+              <a href="./select.html" class="sidebar-submenu-item">Select</a>
+            </li>
+
+            <li>
+              <a href="./datepicker.html" class="sidebar-submenu-item"> Datepicker </a>
+            </li>
+            <li>
+              <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
+            </li>
+            <li>
+              <a href="./uploader.html" class="sidebar-submenu-item"> Uploader </a>
+            </li>
+            <li>
+              <a href="./layout.html" class="sidebar-submenu-item">Layout</a>
+            </li>
+            <li>
+              <a href="./form-validation.html" class="sidebar-submenu-item"> Validation </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Tables  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="list"></i>
+            </span>
+            <span class="sidebar-menu-text">Tables</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./basic-table.html" class="sidebar-submenu-item"> Basic Table </a>
+            </li>
+            <li>
+              <a href="./data-table.html" class="sidebar-submenu-item"> Data Table </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Charts  -->
+        <li>
+          <a href="./chart.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="pie-chart"></i>
+            </span>
+            <span class="sidebar-menu-text">Charts</span>
+          </a>
+        </li>
+        <!-- Icons-->
+        <li>
+          <a href="./icons.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="italic"></i>
+            </span>
+            <span class="sidebar-menu-text">Icons</span>
+          </a>
+        </li>
+        <!-- Typography-->
+        <li>
+          <a href="./typography.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="type"></i>
+            </span>
+            <span class="sidebar-menu-text">Typography</span>
+          </a>
+        </li>
+        <!--  Pages  -->
+        <div class="sidebar-menu-header">Pages</div>
+        <!-- Authentication  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="lock"></i>
+            </span>
+            <span class="sidebar-menu-text">Authentication</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./login.html" class="sidebar-submenu-item">Login</a>
+            </li>
+            <li>
+              <a href="./register.html" class="sidebar-submenu-item"> Register </a>
+            </li>
+            <li>
+              <a href="./recover-password.html" class="sidebar-submenu-item"> Forgot Password </a>
+            </li>
+            <li>
+              <a href="./reset-password.html" class="sidebar-submenu-item"> Reset Password </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Miscellaneous  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="grid"></i>
+            </span>
+            <span class="sidebar-menu-text">Miscellaneous</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./start-page.html" class="sidebar-submenu-item"> Start Page </a>
+            </li>
+            <li>
+              <a href="./comming-soon.html" class="sidebar-submenu-item"> Coming Soon </a>
+            </li>
+            <li>
+              <a href="./maintenance.html" class="sidebar-submenu-item"> Maintenance </a>
+            </li>
+            <li>
+              <a href="./404-error.html" class="sidebar-submenu-item"> Error 404 </a>
+            </li>
+            <li>
+              <a href="./500-error.html" class="sidebar-submenu-item"> Error 500 </a>
+            </li>
+            <li>
+              <a href="./not-authorized.html" class="sidebar-submenu-item"> Not Authorized </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Sidebar Menu Ends -->
+    </aside>
+    <!-- Sidebar Ends -->
+
+    <!-- Wrapper Starts -->
+    <div class="wrapper">
+      <!-- Header Starts -->
+      <header class="header">
+        <div class="container-fluid flex items-center justify-between">
+          <!-- Sidebar Toggle & Search Starts -->
+          <div class="flex items-center space-x-6">
+            <button class="sidebar-toggle">
+              <span class="flex space-x-4">
+                <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
+                  </path>
+                </svg>
+              </span>
+            </button>
+
+            <form action=""
+              class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex">
+              <div class="flex h-full items-center px-3">
+                <i class="text-slate-400 group-focus-within:text-primary-500" width="1em" height="1em"
+                  data-feather="search"></i>
+              </div>
+              <input
+                class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                type="text" placeholder="Search" />
+            </form>
+          </div>
+          <!-- Sidebar Toggle & Search Ends -->
+
+          <!-- Header Options Starts -->
+          <div class="flex items-center space-x-6">
+            <!-- Language Dropdown Starts -->
+            <div class="dropdown" data-placement="bottom-end" data-strategy="absolute">
+              <div class="dropdown-toggle">
+                <button type="button" class="inline-flex items-center gap-2 text-sm">
+                  <span class="fi fi-gb"></span>
+                  <span class="hidden md:inline-block">English</span>
+                  <span class="inline-block md:hidden">EN</span>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-3 w-40">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-gb"></span>
+                      <span>English</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-de"></span>
+                      <span>German</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-gf"></span>
+                      <span>French</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-sa"></span>
+                      <span>Arabic</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-cn"></span>
+                      <span>Chinese</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-bd"></span>
+                      <span>Bangla</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Language Dropdown Ends -->
+
+            <!-- Mobile Search Starts -->
+            <div class="sm:hidden">
+              <button type="button"
+                class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300">
+                <i width="22" height="22" data-feather="search"></i>
+              </button>
+            </div>
+            <!-- Mobile Search Ends -->
+
+            <!-- Dark Mood Toggle Starts -->
+            <div class="dropdown" data-placement="bottom-end" data-strategy="absolute" id="dropdown-theme-switcher">
+              <button class="dropdown-toggle focus:text-primary-500" type="button">
+                <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
+                <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
               </button>
 
-              <form
-                action=""
-                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
-              >
-                <div class="flex h-full items-center px-3">
-                  <i
-                    class="text-slate-400 group-focus-within:text-primary-500"
-                    width="1em"
-                    height="1em"
-                    data-feather="search"
-                  ></i>
-                </div>
-                <input
-                  class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                  type="text"
-                  placeholder="Search"
-                />
-              </form>
-            </div>
-            <!-- Sidebar Toggle & Search Ends -->
+              <div class="dropdown-content mt-3 w-36">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="light">
+                      <i width="16" height="16" data-feather="sun"></i>
+                      <span>Light</span>
+                    </button>
+                  </li>
 
-            <!-- Header Options Starts -->
-            <div class="flex items-center space-x-6">
-              <!-- Language Dropdown Starts -->
-              <div class="dropdown" data-strategy="absolute">
-                <div class="dropdown-toggle">
-                  <button type="button" class="inline-flex items-center gap-2 text-sm">
-                    <span class="fi fi-gb"></span>
-                    <span class="hidden md:inline-block">English</span>
-                    <span class="inline-block md:hidden">EN</span>
-                  </button>
-                </div>
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
+                      <i width="16" height="16" data-feather="moon"></i>
+                      <span>Dark</span>
+                    </button>
+                  </li>
 
-                <div class="dropdown-content mt-3 w-40">
-                  <ul class="dropdown-list">
-                    <li class="dropdown-list-item">
-                      <button class="dropdown-btn" type="button">
-                        <span class="fi fi-gb"></span>
-                        <span>English</span>
-                      </button>
-                    </li>
-                    <li class="dropdown-list-item">
-                      <button class="dropdown-btn" type="button">
-                        <span class="fi fi-de"></span>
-                        <span>German</span>
-                      </button>
-                    </li>
-                    <li class="dropdown-list-item">
-                      <button class="dropdown-btn" type="button">
-                        <span class="fi fi-gf"></span>
-                        <span>French</span>
-                      </button>
-                    </li>
-                    <li class="dropdown-list-item">
-                      <button class="dropdown-btn" type="button">
-                        <span class="fi fi-sa"></span>
-                        <span>Arabic</span>
-                      </button>
-                    </li>
-                    <li class="dropdown-list-item">
-                      <button class="dropdown-btn" type="button">
-                        <span class="fi fi-cn"></span>
-                        <span>Chinese</span>
-                      </button>
-                    </li>
-                    <li class="dropdown-list-item">
-                      <button class="dropdown-btn" type="button">
-                        <span class="fi fi-bd"></span>
-                        <span>Bangla</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="system">
+                      <i width="16" height="16" data-feather="monitor"></i>
+                      <span>System</span>
+                    </button>
+                  </li>
+                </ul>
               </div>
-              <!-- Language Dropdown Ends -->
+            </div>
+            <!-- Dark Mood Toggle Ends -->
 
-              <!-- Mobile Search Starts -->
-              <div class="sm:hidden">
+            <!-- Notification Dropdown Starts -->
+            <div class="dropdown -mt-0.5" data-strategy="absolute">
+              <div class="dropdown-toggle">
                 <button
-                  type="button"
-                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
-                >
-                  <i width="22" height="22" data-feather="search"></i>
+                  class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
+                  <i width="24" height="24" data-feather="bell"></i>
+                  <span
+                    class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
+                    5
+                  </span>
                 </button>
               </div>
-              <!-- Mobile Search Ends -->
 
-              <!-- Dark Mood Toggle Starts -->
-              <div class="dropdown" data-strategy="absolute" id="dropdown-theme-switcher">
-                <button class="dropdown-toggle focus:text-primary-500" type="button">
-                  <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
-                  <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
-                </button>
+              <div class="dropdown-content mt-3 w-[17.5rem] divide-y dark:divide-slate-700 sm:w-80">
+                <div class="flex items-center justify-between px-4 py-4">
+                  <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
+                  <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
+                    Clear All
+                  </button>
+                </div>
 
-                <div class="dropdown-content mt-3 w-36">
-                  <ul class="dropdown-list">
-                    <li class="dropdown-list-item">
-                      <button type="buttton" class="dropdown-btn" data-theme-mode="light">
-                        <i width="16" height="16" data-feather="sun"></i>
-                        <span>Light</span>
-                      </button>
+                <div class="h-80 w-full" data-simplebar>
+                  <ul>
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500">
+                        <i data-feather="alert-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm">New order received</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>2 min ago</span>
+                        </p>
+                      </div>
                     </li>
 
-                    <li class="dropdown-list-item">
-                      <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
-                        <i width="16" height="16" data-feather="moon"></i>
-                        <span>Dark</span>
-                      </button>
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500">
+                        <i data-feather="alert-triangle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm">High CPU usage</h6>
+                        <p class="text-xs text-slate-400">CPU usage is at 92%</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>5 min ago</span>
+                        </p>
+                      </div>
                     </li>
 
-                    <li class="dropdown-list-item">
-                      <button type="buttton" class="dropdown-btn" data-theme-mode="system">
-                        <i width="16" height="16" data-feather="monitor"></i>
-                        <span>System</span>
-                      </button>
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                        <i data-feather="check-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm">Your order has been shipped</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>10 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500">
+                        <i data-feather="x-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm">Something went wrong</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>1 hour ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                        <i data-feather="check-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm">Your order has been shipped</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>10 min ago</span>
+                        </p>
+                      </div>
                     </li>
                   </ul>
                 </div>
-              </div>
-              <!-- Dark Mood Toggle Ends -->
 
-              <!-- Notification Dropdown Starts -->
-              <div class="dropdown -mt-0.5" data-strategy="absolute">
-                <div class="dropdown-toggle">
-                  <button
-                    class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
-                  >
-                    <i width="24" height="24" data-feather="bell"></i>
+                <div class="px-4 py-2">
+                  <button class="btn btn-primary-plain btn-sm w-full" type="button">
+                    <span>View More</span>
+                    <i data-feather="arrow-right" width="1rem" height="1rem"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Notification Dropdown Ends -->
+
+            <!-- Profile Dropdown Starts -->
+            <div class="dropdown" data-placement="bottom-end" data-strategy="absolute">
+              <div class="dropdown-toggle">
+                <button class="group relative flex items-center gap-x-1.5" type="button">
+                  <div class="avatar avatar-circle">
+                    <img class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
+                      src="./images/avatar1.png" alt="Avatar 1" />
+                  </div>
+
+                  <div class="hidden md:flex md:flex-col">
                     <span
-                      class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200"
-                    >
-                      5
+                      class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300">
+                      John Doe
                     </span>
-                  </button>
-                </div>
-
-                <div class="dropdown-content mt-3 w-[17.5rem] divide-y dark:divide-slate-700 sm:w-80">
-                  <div class="flex items-center justify-between px-4 py-4">
-                    <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
-                    <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
-                      Clear All
-                    </button>
+                    <span class="inline-block text-left text-xs text-slate-400"> Admin </span>
                   </div>
-
-                  <div class="h-80 w-full" data-simplebar>
-                    <ul>
-                      <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                      >
-                        <div
-                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500"
-                        >
-                          <i data-feather="alert-circle" width="20" height="20"></i>
-                        </div>
-
-                        <div>
-                          <h6 class="text-sm font-normal">New order received</h6>
-                          <p class="text-xs text-slate-400">Order #1234 has been placed</p>
-                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <i data-feather="clock" width="1em" height="1em"></i>
-                            <span>2 min ago</span>
-                          </p>
-                        </div>
-                      </li>
-
-                      <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                      >
-                        <div
-                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500"
-                        >
-                          <i data-feather="alert-triangle" width="20" height="20"></i>
-                        </div>
-
-                        <div>
-                          <h6 class="text-sm font-normal">High CPU usage</h6>
-                          <p class="text-xs text-slate-400">CPU usage is at 92%</p>
-                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <i data-feather="clock" width="1em" height="1em"></i>
-                            <span>5 min ago</span>
-                          </p>
-                        </div>
-                      </li>
-
-                      <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                      >
-                        <div
-                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
-                        >
-                          <i data-feather="check-circle" width="20" height="20"></i>
-                        </div>
-
-                        <div>
-                          <h6 class="text-sm font-normal">Your order has been shipped</h6>
-                          <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
-                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <i data-feather="clock" width="1em" height="1em"></i>
-                            <span>10 min ago</span>
-                          </p>
-                        </div>
-                      </li>
-
-                      <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                      >
-                        <div
-                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500"
-                        >
-                          <i data-feather="x-circle" width="20" height="20"></i>
-                        </div>
-
-                        <div>
-                          <h6 class="text-sm font-normal">Something went wrong</h6>
-                          <p class="text-xs text-slate-400">Order #1234 has been placed</p>
-                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <i data-feather="clock" width="1em" height="1em"></i>
-                            <span>1 hour ago</span>
-                          </p>
-                        </div>
-                      </li>
-
-                      <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                      >
-                        <div
-                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
-                        >
-                          <i data-feather="check-circle" width="20" height="20"></i>
-                        </div>
-
-                        <div>
-                          <h6 class="text-sm font-normal">Your order has been shipped</h6>
-                          <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
-                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <i data-feather="clock" width="1em" height="1em"></i>
-                            <span>10 min ago</span>
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="px-4 py-2">
-                    <button class="btn btn-primary-plain btn-sm w-full" type="button">
-                      <span>View More</span>
-                      <i data-feather="arrow-right" width="1rem" height="1rem"></i>
-                    </button>
-                  </div>
-                </div>
+                </button>
               </div>
-              <!-- Notification Dropdown Ends -->
 
-              <!-- Profile Dropdown Starts -->
-              <div class="dropdown" data-strategy="absolute">
-                <div class="dropdown-toggle">
-                  <button class="group relative flex items-center gap-x-1.5" type="button">
-                    <div class="avatar avatar-circle">
-                      <img
-                        class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
-                        src="./images/avatar1.png"
-                        alt="Avatar 1"
-                      />
-                    </div>
-
-                    <div class="hidden md:flex md:flex-col">
-                      <span
-                        class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300"
-                      >
-                        John Doe
-                      </span>
-                      <span class="inline-block text-left text-xs text-slate-400"> Admin </span>
-                    </div>
-                  </button>
-                </div>
-
-                <div class="dropdown-content mt-1 w-[11.25rem]">
-                  <ul class="dropdown-list">
-                    <li class="dropdown-list-item">
-                      <a href="javascript:void(0)" class="dropdown-link">
-                        <i width="18" height="18" data-feather="user"></i>
-                        <span>Profile</span>
-                      </a>
-                    </li>
-                    <li class="dropdown-list-item">
-                      <a href="javascript:void(0)" class="dropdown-link">
-                        <i width="18" height="18" data-feather="settings"></i>
-                        <span>Settings</span>
-                      </a>
-                    </li>
-                    <li class="dropdown-list-item">
-                      <a href="javascript:void(0)" class="dropdown-link">
-                        <i width="18" height="18" data-feather="log-out"></i>
-                        <span>Sign out</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+              <div class="dropdown-content mt-1 w-[11.25rem]">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <a href="javascript:void(0)" class="dropdown-link">
+                      <i width="18" height="18" data-feather="user"></i>
+                      <span>Profile</span>
+                    </a>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <a href="javascript:void(0)" class="dropdown-link">
+                      <i width="18" height="18" data-feather="settings"></i>
+                      <span>Settings</span>
+                    </a>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <a href="javascript:void(0)" class="dropdown-link">
+                      <i width="18" height="18" data-feather="log-out"></i>
+                      <span>Sign out</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <!-- Profile Dropdown Ends -->
             </div>
-            <!-- Header Options Ends -->
+            <!-- Profile Dropdown Ends -->
           </div>
-        </header>
-        <!-- Header Ends -->
+          <!-- Header Options Ends -->
+        </div>
+      </header>
+      <!-- Header Ends -->
 
-        <!-- Page Content Starts -->
-        <div class="content">
-          <!-- Main Content Starts -->
-          <main class="flex-grow p-6">
-            <!-- Page Title Starts -->
-            <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5>Analytics</h5>
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="/">Home</a>
-                </li>
+      <!-- Page Content Starts -->
+      <div class="content">
+        <!-- Main Content Starts -->
+        <main class="container flex-grow p-6">
+          <!-- Page Title Starts -->
+          <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+            <h5 class="px-2 md:px-0">Analytics</h5>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Analytics</a>
+              </li>
+            </ol>
+          </div>
+          <!-- Page Title Ends -->
 
-                <li class="breadcrumb-item">
-                  <a href="#">Components</a>
-                </li>
+          <div class="space-y-6">
+            <!-- Overview Section Start -->
+            <section class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+              <!-- Product Views  -->
+              <div class="card">
+                <div class="card-body flex items-center gap-4">
+                  <div
+                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary-500 bg-opacity-20 text-3xl font-semibold text-primary-500">
+                    <i data-feather="box"></i>
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <p class="text-sm tracking-wide text-slate-500">Product Views</p>
+                    <div class="flex flex-wrap items-baseline justify-between gap-2">
+                      <h4>$24,92</h4>
+                      <span class="flex items-center text-xs font-medium text-success-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-up-right"></i>2.2%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Product Sold  -->
+              <div class="card">
+                <div class="card-body flex items-center gap-4">
+                  <div
+                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-success-500 bg-opacity-20 text-3xl font-semibold text-success-500">
+                    <i class="bx bx-dollar-circle"></i>
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <p class="text-sm tracking-wide text-slate-500">Product Sold</p>
+                    <div class="flex flex-wrap items-baseline justify-between gap-2">
+                      <h4>8,430</h4>
+                      <span class="flex items-center text-xs font-medium text-danger-500">
+                        <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i> 0.5%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Likes  -->
+              <div class="card">
+                <div class="card-body flex items-center gap-4">
+                  <div
+                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-warning-500 bg-opacity-20 text-3xl font-semibold text-warning-500">
+                    <i class="ti ti-thumb-up"></i>
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <p class="text-sm tracking-wide text-slate-500">Total Likes</p>
+                    <div class="flex flex-wrap items-baseline justify-between gap-2">
+                      <h4>46,256</h4>
+                      <span class="flex items-center text-xs font-medium text-success-500">
+                        <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i> 1.2%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Conversation Rate  -->
+              <div class="card">
+                <div class="card-body flex items-center gap-4">
+                  <div
+                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-info-500 bg-opacity-20 text-3xl font-semibold text-info-500">
+                    <i class="ti ti-message-2-cog"></i>
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <p class="text-sm tracking-wide text-slate-500">Conversation</p>
+                    <div class="flex flex-wrap items-baseline justify-between gap-2">
+                      <h4>$200,56</h4>
+                      <span class="flex items-center text-xs font-medium text-success-500">
+                        <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i> 3.2%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Overview Section End -->
 
-                <li class="breadcrumb-item">
-                  <a href="#">Analytics</a>
-                </li>
-              </ol>
-            </div>
-            <!-- Page Title Ends -->
+            <!-- Sales Analytics & Top Categories section Start  -->
+            <section class="grid gap-6 md:grid-cols-1 xl:grid-cols-5">
+              <!-- Sales Analytics -->
+              <div class="card xl:col-span-3">
+                <div class="card-body">
+                  <!-- Chart wrap -->
+                  <div id="chart-wrap" class="flex flex-col justify-between">
+                    <div class="flex flex-wrap items-center justify-between gap-3 md:gap-0">
+                      <!-- Chart Title  -->
+                      <h6>Sales Analytics</h6>
+                      <!-- Legends  -->
+                      <div id="sales-analytics-chart-legend" class="flex items-center gap-4">
+                        <label for="sales">
+                          <input type="checkbox" id="sales" class="hidden" checked value="Total Sales" />
+                          <div class="flex items-center gap-1">
+                            <div class="h-4 w-4 rounded-full bg-primary-500"></div>
+                            <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Total Sales</p>
+                          </div>
+                        </label>
 
-            <!-- Tabs Starts -->
-            <div class="space-y-6">
-              <!-- Card: Basic Tab Starts -->
+                        <label for="orders">
+                          <input type="checkbox" id="orders" class="hidden" checked value="Total Orders" />
+                          <div class="flex items-center gap-1">
+                            <div class="h-4 w-4 rounded-full bg-sky-500"></div>
+                            <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Total Orders</span>
+                          </div>
+                        </label>
+                      </div>
+                      <!-- Select By Chart -->
+                      <select class="select select-sm w-full md:w-32">
+                        <option value="1">Yearly</option>
+                        <option value="2">Monthly</option>
+                        <option value="2">Date & Time</option>
+                      </select>
+                    </div>
+                    <!-- Chart  -->
+                    <div id="sales-analytics-chart" class="-mx-4"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Top Categories -->
+              <div class="card xl:col-span-2">
+                <div class="card-body flex flex-col items-center justify-between">
+                  <!-- Header  -->
+                  <div class="flex w-full justify-between">
+                    <h6>Top Categories</h6>
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[160px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Pie Chart  -->
+                  <div id="top-categories-chart" class="w-full"></div>
+                </div>
+              </div>
+            </section>
+            <!-- Sales Analytics & Top Categories section End  -->
+
+            <!-- Sales By Location & Top Selling & Most Viewed Product  Start  -->
+            <section class="grid gap-6 md:grid-cols-1 xl:grid-cols-5">
+              <!-- Sales By Location  -->
+              <div class="card col-span-1 xl:col-span-3">
+                <div class="card-body flex h-full flex-col justify-between gap-8">
+                  <div class="flex flex-wrap justify-between gap-2">
+                    <h6>Sales By Location</h6>
+                    <select class="select select-sm w-full md:w-48">
+                      <option value="1">Top Country</option>
+                      <option value="2">Latest Country</option>
+                      <option value="3">New Country</option>
+                    </select>
+                  </div>
+                  <div class="grid min-h-min flex-grow grid-cols-1 gap-4 md:grid-cols-5">
+                    <!-- Sales Location Chart  -->
+                    <div id="salesLocationChart" class="col-span-1 h-96 md:col-span-3 md:h-full"></div>
+                    <div class="col-span-1 my-4 flex flex-col gap-8 md:col-span-2">
+                      <!-- United States  -->
+                      <div class="flex items-center gap-2">
+                        <img src="./images/flag-United_States.jpg" class="h-5 w-8" alt="flag-image" />
+                        <div class="flex flex-1 flex-col gap-1">
+                          <div class="flex items-center justify-between">
+                            <h6 class="text-sm text-slate-700 dark:text-slate-300">United States</h6>
+                            <p class="text-sm text-slate-400">50%</p>
+                          </div>
+                          <div class="progress progress-sm" role="progressbar" aria-valuenow="10" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 50%"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Australia  -->
+                      <div class="flex items-center gap-2">
+                        <img src="./images/flag-australia.png" class="h-5 w-8" alt="flag-image" />
+                        <div class="flex flex-1 flex-col gap-1">
+                          <div class="flex items-center justify-between">
+                            <h6 class="text-sm text-slate-700 dark:text-slate-300">Australia</h6>
+                            <p class="text-sm text-slate-400">35%</p>
+                          </div>
+                          <div class="progress progress-success progress-sm" role="progressbar" aria-valuenow="10"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 35%"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Brazil  -->
+                      <div class="flex items-center gap-2">
+                        <img src="./images/flag-Brazil.jpg" class="h-5 w-8" alt="flag-image" />
+                        <div class="flex flex-1 flex-col gap-1">
+                          <div class="flex items-center justify-between">
+                            <h6 class="text-sm text-slate-700 dark:text-slate-300">Brazil</h6>
+                            <p class="text-sm text-slate-400">22%</p>
+                          </div>
+                          <div class="progress progress-info progress-sm" role="progressbar" aria-valuenow="10"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 22%"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Germany  -->
+                      <div class="flex items-center gap-2">
+                        <img src="./images/flag-Germany.jpg" class="h-5 w-8" alt="flag-image" />
+                        <div class="flex flex-1 flex-col gap-1">
+                          <div class="flex items-center justify-between">
+                            <h6 class="text-sm text-slate-700 dark:text-slate-300">Germany</h6>
+                            <p class="text-sm text-slate-400">52%</p>
+                          </div>
+                          <div class="progress progress-warning progress-sm" role="progressbar" aria-valuenow="10"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 52%"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Top Selling & Most Viewed Product  -->
+              <div class="col-span-1 space-y-6 xl:col-span-2">
+                <!-- Top Selling Product  -->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="flex flex-wrap items-center justify-between">
+                      <h6>Top Selling Product</h6>
+                      <div class="flex items-center gap-2">
+                        <label for="top-selling-product-today" class="cursor-pointer">
+                          <input type="radio" name="top-selling-product" id="top-selling-product-today"
+                            class="peer sr-only" checked />
+                          <span
+                            class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400">Today</span>
+                        </label>
+                        <span class="text-sm text-slate-200 dark:text-slate-600">|</span>
+                        <label for="top-selling-product-month" class="cursor-pointer">
+                          <input type="radio" name="top-selling-product" id="top-selling-product-month"
+                            class="peer sr-only" />
+                          <span
+                            class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400">Month</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="mt-4 flex items-center gap-4 rounded-primary bg-slate-50 p-4 dark:bg-slate-900">
+                      <img src="./images/product8.png" alt="product-img"
+                        class="w-20 rounded-primary bg-white p-2 dark:bg-slate-800" />
+                      <div class="flex flex-1 flex-col gap-1">
+                        <h3 class="text-sm font-semibold">Stylish Sunglass</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">New offer only $26.00</p>
+                        <div class="flex gap-1 text-xl text-warning-400">
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Most Viewed Product -->
+                <div class="card">
+                  <div class="card-body flex flex-col gap-2">
+                    <div class="flex flex-wrap items-center justify-between">
+                      <h6>Most Viewed Product</h6>
+                      <div class="flex items-center gap-2">
+                        <label for="most-viewed-product-today" class="cursor-pointer">
+                          <input type="radio" name="most-viewed-product" id="most-viewed-product-today"
+                            class="peer sr-only" checked />
+                          <span
+                            class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400">Today</span>
+                        </label>
+                        <span class="text-sm text-slate-200 dark:text-slate-600">|</span>
+                        <label for="most-viewed-product-month" class="cursor-pointer">
+                          <input type="radio" name="most-viewed-product" id="most-viewed-product-month"
+                            class="peer sr-only" />
+                          <span
+                            class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400">Month</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4 rounded-primary bg-slate-50 p-4 dark:bg-slate-900">
+                      <img src="./images/product7.png" alt="product-img"
+                        class="w-20 rounded-primary bg-white p-2 dark:bg-slate-800" />
+                      <div class="flex flex-1 flex-col gap-1">
+                        <h3 class="text-sm font-semibold">Trending Oz Pro Shoes</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">New offer only $105.00</p>
+                        <div class="flex gap-1 text-xl text-warning-500">
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bx-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Sales By Location & Top Selling & Most Viewed Product  End  -->
+
+            <!-- Campaign & Source Visited Section Start  -->
+            <section class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <!-- Monthly Campaign State  -->
+              <div class="card">
+                <div class="card-body flex h-full flex-col">
+                  <!-- Header  -->
+                  <div class="flex w-full justify-between">
+                    <h6>Monthly Campaign State</h6>
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[160px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="my-1 text-sm text-slate-400">34.25k email sent</p>
+                  <div class="mt-auto divide-y dark:divide-slate-600">
+                    <!-- Emails  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-primary-500 bg-opacity-20 text-primary-500">
+                        <i class="ti ti-refresh text-3xl"></i>
+                      </div>
+                      <div>
+                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Retargeted</h6>
+                        <p class="text-sm text-slate-400">14,679</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-success-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-up-right"></i>20%</span>
+                    </div>
+                    <!-- Opened  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-14 flex h-12 w-12 items-center justify-center rounded-primary bg-success-500 bg-opacity-20 text-success-500">
+                        <i class="ti ti-external-link text-3xl"></i>
+                      </div>
+                      <div>
+                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Opened</h6>
+                        <p class="text-sm text-slate-400">12,675</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-success-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-up-right"></i>35%</span>
+                    </div>
+
+                    <!-- Clicked  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-info-500 bg-opacity-20 text-info-500">
+                        <i class="ti ti-hand-click text-3xl"></i>
+                      </div>
+                      <div>
+                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Clicked</h6>
+                        <p class="text-sm text-slate-400">6,320</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-danger-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-down-left"></i>10%</span>
+                    </div>
+
+                    <!-- Complaints  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-warning-500 bg-opacity-10 text-warning-500">
+                        <i class="ti ti-message-exclamation text-3xl"></i>
+                      </div>
+                      <div>
+                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Complaints</h6>
+                        <p class="text-sm text-slate-400">575</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-danger-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-down-left"></i>02%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Source Visits -->
+              <div class="card">
+                <div class="card-body flex h-full flex-col">
+                  <!-- Header  -->
+                  <div class="flex w-full justify-between">
+                    <h6>Source Visitors</h6>
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[160px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Actions </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link"> Another Action </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-sm text-slate-400">70.8k Visiters</p>
+                  <div class="mt-auto divide-y dark:divide-slate-600">
+                    <!-- Social Network -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-success-500 bg-opacity-20 text-success-500">
+                        <i class="ti ti-social text-3xl"></i>
+                      </div>
+                      <div>
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-300">
+                          Social Network
+                        </p>
+                        <p class="text-sm text-slate-400">31.4k</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-danger-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-down-left"></i>20%</span>
+                    </div>
+                    <!-- Direct Source  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-primary-500 bg-opacity-20 text-primary-500">
+                        <i class="ti ti-world-search text-3xl"></i>
+                      </div>
+                      <div>
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-300">
+                          Direct Source
+                        </p>
+                        <p class="text-sm text-slate-400">1.4k</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-success-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-up-right"></i>15%</span>
+                    </div>
+
+                    <!-- ADVT  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-warning-500 bg-opacity-20 text-warning-500">
+                        <i class="ti ti-social text-3xl"></i>
+                      </div>
+                      <div class="flex flex-col">
+                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">ADVT</h6>
+                        <p class="text-sm text-slate-400">31.2k</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-success-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-up-right"></i>16%</span>
+                    </div>
+
+                    <!-- Referrals  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="flex h-12 w-14 items-center justify-center rounded-primary bg-info-500 bg-opacity-20 text-info-500">
+                        <i class="ti ti-users-group text-3xl"></i>
+                      </div>
+                      <div class="flex flex-col">
+                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Referrals</h6>
+                        <p class="text-sm text-slate-400">345</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-danger-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-down-left"></i>08%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Campaign & Source Visited Section End  -->
+
+            <!-- Top Sellers Section start  -->
+            <section class="card">
+              <div class="card-body space-y-2">
+                <!-- Header  -->
+                <div class="flex w-full justify-between">
+                  <h6>Top Sellers</h6>
+                  <div class="dropdown" data-placement="bottom-end">
+                    <div class="dropdown-toggle">
+                      <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                    </div>
+                    <div class="dropdown-content w-[160px]">
+                      <ul class="dropdown-list">
+                        <li class="dropdown-list-item">
+                          <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                        </li>
+                        <li class="dropdown-list-item">
+                          <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Seller Table  -->
+                <div class="table-responsive">
+                  <table class="table min-w-[43rem]">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Product</th>
+                        <th>Country</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Revenue</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="flex items-center gap-2">
+                            <img src="./images/avatar1.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                            <p class="whitespace-nowrap text-sm font-medium">Wade Warren</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">07 August</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">Cap</p>
+                        </td>
+                        <td>
+                          <div class="flex items-center gap-2">
+                            <img src="./images/flag-australia.png" class="h-5 w-8" alt="flag-img" />
+                            <p class="whitespace-nowrap text-sm font-medium uppercase">AU</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">2865</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">$5.08,876</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">$27,187</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex items-center gap-2">
+                            <img src="./images/avatar2.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                            <p class="whitespace-nowrap text-sm font-medium">Afrad Bhuyian</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">25 Mar</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">Earings</p>
+                        </td>
+                        <td>
+                          <div class="flex items-center gap-2">
+                            <img src="./images/flag-United_States.jpg" class="h-5 w-8" alt="flag-img" />
+                            <p class="whitespace-nowrap text-sm font-medium uppercase">USA</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">36654</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">$3.06,867</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">$23,89</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex items-center gap-2">
+                            <img src="./images/avatar3.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                            <p class="whitespace-nowrap text-sm font-medium">Robert Fox</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">14 February</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">1 phone</p>
+                        </td>
+                        <td>
+                          <div class="flex items-center gap-2">
+                            <img src="./images/flag-United_Kingdom.jpg" class="h-5 w-8" alt="flag-img" />
+                            <p class="whitespace-nowrap text-sm font-medium uppercase">UK</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">4253</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">$1.06,657</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">$56,99</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex items-center gap-2">
+                            <img src="./images/avatar4.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                            <p class="whitespace-nowrap text-sm font-medium">Wade Warren</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">14 January</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">Watches</p>
+                        </td>
+                        <td>
+                          <div class="flex items-center gap-2">
+                            <img src="./images/flag-Germany.jpg" class="h-5 w-8" alt="flag-img" />
+                            <p class="whitespace-nowrap text-sm font-medium uppercase">GER</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">3532</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">$3.54,450</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">$7,67,657</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex items-center gap-2">
+                            <img src="./images/avatar5.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                            <p class="whitespace-nowrap text-sm font-medium">Afrad Bhuyian</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">11 November</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">Shoes</p>
+                        </td>
+                        <td>
+                          <div class="flex items-center gap-2">
+                            <img src="./images/flag-Brazil.jpg" class="h-5 w-8" alt="flag-img" />
+                            <p class="whitespace-nowrap text-sm font-medium uppercase">BRA</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">9076</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">$9.54,450</p>
+                        </td>
+                        <td>
+                          <p class="whitespace-nowrap text-sm font-medium">$78,01</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+            <!-- Top Sellers Section End  -->
+
+            <!-- Customer Satisfaction & Top Customers Section Start -->
+            <section class="grid gap-6 lg:grid-cols-2">
+              <!-- Customer Satisfaction  -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Analytics</h4>
+                  <!-- Header  -->
+                  <div class="flex w-full justify-between">
+                    <h6>Customer Satisfaction</h6>
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[160px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="my-1 text-sm text-slate-400">9.4k reviews</p>
 
-                  <p class="card-subtitle">
-                    You can use the
-                    <code>Checkbox</code>
-                    component to render a checkbox input.
-                  </p>
-
-                  <div class="code-viewer mt-4">
-                    <!-- Code Here  -->
+                  <!-- Performance Score Progress -->
+                  <div class="flex w-full gap-[6px] mt-2">
+                    <div class="h-2 w-[40%] rounded-primary bg-primary-500"></div>
+                    <div class="h-2 w-[20%] rounded-primary bg-success-500"></div>
+                    <div class="h-2 w-[18%] rounded-primary bg-info-500"></div>
+                    <div class="h-2 w-[12%] rounded-primary bg-warning-500"></div>
+                    <div class="h-2 w-[10%] rounded-primary bg-danger-500"></div>
+                  </div>
+                  <br />
+                  <div class="flex flex-col justify-end gap-8 overflow-x-auto">
+                    <!-- Excellent -->
+                    <div class="grid w-full grid-cols-3">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-primary-500"></div>
+                        <p class="whitespace-nowrap text-sm font-medium">Excellent</p>
+                      </div>
+                      <div class="flex items-center justify-center">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">3760</p>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">40%</p>
+                      </div>
+                    </div>
+                    <!-- Very Good  -->
+                    <div class="grid w-full grid-cols-3">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-success-500"></div>
+                        <p class="whitespace-nowrap text-sm font-medium">Very Good</p>
+                      </div>
+                      <div class="flex items-center justify-center">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">1880</p>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">20%</p>
+                      </div>
+                    </div>
+                    <!-- Good  -->
+                    <div class="grid w-full grid-cols-3">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-info-500"></div>
+                        <p class="whitespace-nowrap text-sm font-medium">Good</p>
+                      </div>
+                      <div class="flex items-center justify-center">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">1692</p>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">18%</p>
+                      </div>
+                    </div>
+                    <!-- Poor  -->
+                    <div class="grid w-full grid-cols-3">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-warning-500"></div>
+                        <p class="whitespace-nowrap text-sm font-medium">Poor</p>
+                      </div>
+                      <div class="flex items-center justify-center">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">1128</p>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">12%</p>
+                      </div>
+                    </div>
+                    <!-- Very Poor  -->
+                    <div class="grid w-full grid-cols-3">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-danger-500"></div>
+                        <p class="whitespace-nowrap text-sm font-medium">Very Poor</p>
+                      </div>
+                      <div class="flex items-center justify-center">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">940</p>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">10%</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Basic Tab Ends -->
-            </div>
-            <!-- Tabs Ends -->
-          </main>
-          <!-- Main Content Ends -->
+              <!-- Top Customers  -->
+              <div class="card">
+                <div class="card-body flex h-full flex-col justify-between gap-2">
+                  <!-- Header  -->
+                  <div class="flex w-full justify-between">
+                    <h6>Top Customers</h6>
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[160px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Users Table  -->
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Customer</th>
+                          <th>Company</th>
+                          <th>Product</th>
+                          <th>Revenue</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <img src="./images/avatar1.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                              <p class="whitespace-nowrap text-sm font-medium">Wade Warren</p>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="whitespace-nowrap text-sm font-medium">XD54862</p>
+                          </td>
+                          <td>
+                            <p class="whitespace-nowrap text-sm font-medium">7 min ago</p>
+                          </td>
+                          <td>
+                            <p class="whitespace-nowrap text-center text-sm font-medium">6x</p>
+                          </td>
+                          <td>
+                            <div class="flex justify-center">
+                              <div class="dropdown" data-placement="bottom-end">
+                                <div class="dropdown-toggle">
+                                  <i class="text-slate-500" data-feather="more-horizontal"></i>
+                                </div>
+                                <div class="dropdown-content w-[160px]">
+                                  <ul class="dropdown-list">
+                                    <li class="dropdown-list-item">
+                                      <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                        <i class="h-5 text-slate-500" data-feather="info"></i>
+                                        Details
+                                      </a>
+                                    </li>
+                                    <li class="dropdown-list-item">
+                                      <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                        <i class="h-5 text-slate-500" data-feather="trash-2"></i>
+                                        Delete
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <img src="./images/avatar2.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                              <p class="whitespace-nowrap text-sm font-medium">Afrad Bhuyian</p>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="whitespace-nowrap text-sm font-medium">EF64354</p>
+                          </td>
+                          <td>
+                            <p class="whitespace-nowrap text-sm font-medium">9 min ago</p>
+                          </td>
+                          <td>
+                            <p class="whitespace-nowrap text-center text-sm font-medium">4x</p>
+                          </td>
+                          <td>
+                            <div class="flex justify-center">
+                              <div class="dropdown" data-placement="bottom-end">
+                                <div class="dropdown-toggle">
+                                  <i class="text-slate-500" data-feather="more-horizontal"></i>
+                                </div>
+                                <div class="dropdown-content w-[160px]">
+                                  <ul class="dropdown-list">
+                                    <li class="dropdown-list-item">
+                                      <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                        <i class="h-5 text-slate-500" data-feather="info"></i>
+                                        Details
+                                      </a>
+                                    </li>
+                                    <li class="dropdown-list-item">
+                                      <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                        <i class="h-5 text-slate-500" data-feather="trash-2"></i>
+                                        Delete
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <img src="./images/avatar3.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                              <p class="whitespace-nowrap text-sm font-medium">Robert Fox</p>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="whitespace-nowrap text-sm font-medium">WS318972</p>
+                          </td>
+                          <td>
+                            <p class="whitespace-nowrap text-sm font-medium">12 min ago</p>
+                          </td>
+                          <td>
+                            <p class="whitespace-nowrap text-center text-sm font-medium">8x</p>
+                          </td>
+                          <td>
+                            <div class="flex justify-center">
+                              <div class="dropdown" data-placement="bottom-end">
+                                <div class="dropdown-toggle">
+                                  <i class="text-slate-500" data-feather="more-horizontal"></i>
+                                </div>
+                                <div class="dropdown-content w-[160px]">
+                                  <ul class="dropdown-list">
+                                    <li class="dropdown-list-item">
+                                      <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                        <i class="h-5 text-slate-500" data-feather="info"></i>
+                                        Details
+                                      </a>
+                                    </li>
+                                    <li class="dropdown-list-item">
+                                      <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                        <i class="h-5 text-slate-500" data-feather="trash-2"></i>
+                                        Delete
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <img src="./images/avatar4.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                              <p class="whitespace-nowrap text-sm font-medium">Wade Warren</p>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="whitespace-nowrap text-sm font-medium">XD54862</p>
+                          </td>
+                          <td>
+                            <p class="whitespace-nowrap text-sm font-medium">7 min ago</p>
+                          </td>
+                          <td>
+                            <p class="whitespace-nowrap text-center text-sm font-medium">6x</p>
+                          </td>
+                          <td>
+                            <div class="flex justify-center">
+                              <div class="dropdown" data-placement="bottom-end">
+                                <div class="dropdown-toggle">
+                                  <i class="text-slate-500" data-feather="more-horizontal"></i>
+                                </div>
+                                <div class="dropdown-content w-[160px]">
+                                  <ul class="dropdown-list">
+                                    <li class="dropdown-list-item">
+                                      <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                        <i class="h-5 text-slate-500" data-feather="info"></i>
+                                        Details
+                                      </a>
+                                    </li>
+                                    <li class="dropdown-list-item">
+                                      <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                        <i class="h-5 text-slate-500" data-feather="trash-2"></i>
+                                        Delete
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Customer Satisfaction & Top Customers Section End -->
+          </div>
+        </main>
+        <!-- Main Content Ends -->
 
-          <!-- Footer Starts -->
-          <footer class="footer">
-            <p class="text-sm">
-              Copyright © 2023
-              <a class="text-primary-500 hover:underline" href="https://bdlancers.com"> Bdlancers </a>
-              , All right Reserved
-            </p>
+        <!-- Footer Starts -->
+        <footer class="footer">
+          <p class="text-sm">
+            Copyright © 2023
+            <a class="text-primary-500 hover:underline" href="https://bdlancers.com"> Bdlancers </a>
+            , All right Reserved
+          </p>
 
-            <p class="flex items-center gap-1 text-sm">
-              Hand-crafted &amp; Made with
-              <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
-            </p>
-          </footer>
-          <!-- Footer Ends -->
-        </div>
-        <!-- Page Content Ends -->
+          <p class="flex items-center gap-1 text-sm">
+            Hand-crafted &amp; Made with
+            <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
+          </p>
+        </footer>
+        <!-- Footer Ends -->
       </div>
-      <!-- Wrapper Ends -->
+      <!-- Page Content Ends -->
     </div>
-    <script src="./js/app.js" type="module"></script>
-  </body>
+    <!-- Wrapper Ends -->
+  </div>
+  <script src="./js/app.js" type="module"></script>
+  <script src="./js/custom/analytics.js" type="module"></script>
+</body>
+
 </html>
