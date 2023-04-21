@@ -737,18 +737,21 @@
           <main class="container flex flex-grow items-center p-6">
             <!-- Email Starts -->
             <div class="relative h-full w-full overflow-hidden xl:grid xl:grid-cols-4 xl:gap-x-6 xl:overflow-visible">
-              <!-- Email Overlay Starts -->
-              <div
-                id="overlay"
-                class="absolute inset-0 z-10 hidden h-full w-full bg-black bg-opacity-0 transition-colors duration-300 ease-in-out xl:hidden"
-              ></div>
-              <!-- Email Overlay Ends -->
-
               <!-- Email Sidebar Starts -->
               <div
-                id="email-sidebar-left"
+                id="email-sidebar"
                 class="invisible absolute bottom-0 top-0 z-20 h-auto w-3/4 -translate-x-full space-y-3 bg-white transition-transform duration-300 ease-in-out dark:bg-slate-800 sm:w-64 xl:visible xl:sticky xl:top-20 xl:col-span-1 xl:h-max xl:w-auto xl:translate-x-0 xl:rounded-primary xl:shadow"
               >
+                <!-- Email Sidebar Close Button Starts -->
+                <button
+                  id="email-btn-hide-sidebar"
+                  type="button"
+                  class="absolute inset-0 left-full z-20 ml-2 inline-flex h-8 w-8 items-center justify-center rounded-full text-white dark:text-slate-300 xl:hidden"
+                >
+                  <i class="ti ti-x text-xl"></i>
+                </button>
+                <!-- Email Sidebar Close Button Ends -->
+
                 <!-- Email Sidebar Header Starts -->
                 <div class="mt-4 px-6">
                   <button
@@ -915,15 +918,6 @@
                   </button>
                 </div>
                 <!-- Email Sidebar Footer Ends -->
-
-                <!-- Email Sidebar Close Button -->
-                <button
-                  id="email-btn-hide-sidebar-left"
-                  type="button"
-                  class="absolute inset-0 left-full z-20 ml-1 inline-flex h-10 w-10 items-center justify-center rounded-full text-slate-200 hover:text-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-100 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:ring-slate-600 xl:hidden"
-                >
-                  <i class="ti ti-x text-xl"></i>
-                </button>
               </div>
               <!-- Email Sidebar Ends -->
 
@@ -938,7 +932,7 @@
                   <!-- Email Search Starts -->
                   <div class="flex items-center gap-x-3 px-4 py-3 sm:gap-x-6">
                     <button
-                      id="email-btn-show-sidebar-left"
+                      id="email-btn-show-sidebar"
                       type="button"
                       class="text-slate-500 focus:text-slate-700 dark:text-slate-400 dark:focus:text-slate-300 xl:hidden"
                       data-toggle="sidebar"
@@ -1768,6 +1762,13 @@
                 <!-- Email Wrapper Body Ends -->
               </div>
               <!-- Email Wrapper Ends -->
+
+              <!-- Email Overlay Starts -->
+              <div
+                id="email-overlay"
+                class="absolute inset-0 z-10 hidden h-full w-full bg-black bg-opacity-0 transition-colors duration-300 ease-in-out xl:hidden"
+              ></div>
+              <!-- Email Overlay Ends -->
             </div>
             <!-- Email Ends -->
 
