@@ -1,7 +1,10 @@
 import ApexCharts from 'apexcharts';
 import colors from 'tailwindcss/colors';
 import themeConfig, { themeColors } from '@tailwind.config';
-
+import * as am5 from '@amcharts/amcharts5';
+import * as am5map from '@amcharts/amcharts5/map';
+import am5geodata_worldLow from '@amcharts/amcharts5-geodata/worldLow';
+import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
 const salesAnalyticsChartOptions = {
   colors: [themeColors.primary['500'], colors.sky['500']],
@@ -17,7 +20,7 @@ const salesAnalyticsChartOptions = {
   ],
   fill: {
     type: 'solid',
-    colors: ['transparent']
+    colors: ['transparent'],
   },
   chart: {
     type: 'area',
@@ -44,9 +47,9 @@ const salesAnalyticsChartOptions = {
     max: 50000,
     tickAmount: 5,
     labels: {
-      formatter: function (value) { 
+      formatter: function (value) {
         return value / 1000 + 'K';
-      }
+      },
     },
   },
   legend: {
@@ -60,7 +63,7 @@ const pieOptions = {
   colors: [themeColors.primary['500'], colors.amber['300'], themeColors.danger['400']],
   chart: {
     type: 'donut',
-    width: "100%",
+    width: '100%',
     height: 400,
     fontFamily: themeConfig.theme.fontFamily.sans,
   },
@@ -72,9 +75,9 @@ const pieOptions = {
   },
   plotOptions: {
     pie: {
-      expandOnClick: false
-    }
-  }
+      expandOnClick: false,
+    },
+  },
 };
 // Sales Analytics Chart Start
 let salesAnalyticsChart = new ApexCharts(document.querySelector('#sales-analytics-chart'), salesAnalyticsChartOptions);
@@ -94,3 +97,77 @@ let pieChart = new ApexCharts(document.querySelector('#top-categories-chart'), p
 pieChart.render();
 // Top Categories Chart End
 
+// ========AmChart Start ===========
+
+let root = am5.Root.new('worldChart');
+let amChart = root.container.children.push(
+  am5map.MapChart.new(root, {
+    panX: 'translateX',
+    panY: 'translateY',
+    projection: am5map.geoNaturalEarth1(),
+  })
+);
+
+// Set AmChart Theme
+root.setThemes([am5themes_Animated.new(root)]);
+
+// Remove AmChart Default Logo
+if (root._logo) root._logo.dispose();
+
+// Polygon Background Color
+let polygonSeries = amChart.series.push(
+  am5map.MapPolygonSeries.new(root, {
+    geoJSON: am5geodata_worldLow,
+    exclude: ['AQ'],
+    fill: am5.color(0xcbd5e1),
+    stroke: am5.color(0xffffff),
+  })
+);
+// Polygon Settings
+polygonSeries.mapPolygons.template.setAll({
+  tooltipText: '{name}',
+  toggleKey: 'active',
+  interactive: true,
+  templateField: 'polygonSettings',
+});
+
+// Set Tooltip Background Color
+let tooltip = am5.Tooltip.new(root, {});
+tooltip.get('background').setAll({
+  fill: am5.color(0x8b5cf6),
+});
+
+// Set Individual country Color
+polygonSeries.data.setAll([
+  {
+    id: 'US',
+    polygonSettings: {
+      fill: am5.color(0x8b5cf6),
+    },
+  },
+  {
+    id: 'AU',
+    polygonSettings: {
+      fill: am5.color(0x10b981),
+    },
+  },
+  {},
+  {
+    id: 'BR',
+    polygonSettings: {
+      fill: am5.color(0x6366f1),
+    },
+  },
+  {
+    id: 'DE',
+    polygonSettings: {
+      fill: am5.color(0xff8c42),
+    },
+  },
+]);
+
+// Is Hover Any Country Change BG Color
+polygonSeries.mapPolygons.template.states.create('hover', {
+  fill: am5.color(0x8b5cf6),
+});
+// ========AmChart End ===========
