@@ -1,50 +1,116 @@
+import Tagify from '@yaireo/tagify';
 import Quill from 'quill';
-//  Chat List Toggle
-const emailList = document.getElementById('email-list');
-const hideEmailList = document.getElementById('hide-email-list');
-const openEmailList = document.getElementById('open-email-list');
-const overlay = document.getElementById('overlay');
-// Open Email List
-const getOpenEmailList = () => {
-  emailList.classList.remove('-translate-x-[350px]');
-  emailList.classList.add('translate-x-0');
-  overlay.classList.remove('invisible', 'opacity-0');
-  overlay.classList.add('visible', 'opacity-100');
-};
 
-// Hide Email List
-const getHideEmailList = () => {
-  overlay.classList.remove('opacity-100');
-  overlay.classList.add('opacity-0');
-  overlay.classList.remove('visible');
-  setTimeout(() => {
-    emailList.classList.remove('translate-x-0');
-    emailList.classList.add('-translate-x-[350px]');
-    overlay.classList.add('invisible');
-  }, 100);
-};
+const emailFilter = document.querySelector('#email-filter');
+const emailFilterItems = document.querySelectorAll('#email-filter > li.group');
+const emailComposeBtnCC = document.querySelector('#email-compose-btn-cc');
+const emailComposeBtnBCC = document.querySelector('#email-compose-btn-bcc');
+const emailComposeInputTo = document.querySelector('#email-compose-input-to');
+const emailComposeInputCC = document.querySelector('#email-compose-input-cc');
+const emailComposeInputBCC = document.querySelector('#email-compose-input-bcc');
+const emailComposeEditor = document.querySelector('#email-compose-editor');
+const emailOverlay = document.querySelector('#email-overlay');
+const emailSidebar = document.querySelector('#email-sidebar');
+const emailBtnShowSidebar = document.querySelector('#email-btn-show-sidebar');
+const emailBtnHideSidebar = document.querySelector('#email-btn-hide-sidebar');
 
-//  EventListeners
-openEmailList.addEventListener('click', getOpenEmailList);
-overlay.addEventListener('click', getHideEmailList);
-hideEmailList.addEventListener('click', getHideEmailList);
-emailList.addEventListener('click', (event) => {
-  if (event.target === emailList) getHideEmailList();
-});
+if (emailFilterItems.length) {
+  [...emailFilterItems].forEach((filterItem) => {
+    filterItem.addEventListener('click', function () {
+      const filterItemActive = emailFilter.querySelector('li.active');
 
-// Email Compose
-const emailEditor = document.getElementById('email-editor');
-const ccToggle = document.getElementById('cc-toggle');
-const bccToggle = document.getElementById('bcc-toggle');
-bccToggle.addEventListener('click', () => {
-  document.getElementById('bcc-input').classList.toggle('hidden');
-});
-ccToggle.addEventListener('click', () => {
-  document.getElementById('cc-input').classList.toggle('hidden');
-});
-// Email Editor
-const editor = new Quill(emailEditor, {
-  theme: 'snow',
-  bounds: emailEditor,
-  placeholder: 'write your message',
-});
+      if (!filterItem.classList.contains('active')) {
+        filterItem.classList.add('active');
+
+        if (filterItemActive) {
+          filterItemActive.classList.remove('active');
+        }
+      }
+
+      hideEmailSidebar(emailSidebar);
+    });
+  });
+}
+
+if (emailComposeInputTo) {
+  new Tagify(emailComposeInputTo);
+}
+
+if (emailComposeInputCC) {
+  new Tagify(emailComposeInputCC);
+}
+
+if (emailComposeInputBCC) {
+  new Tagify(emailComposeInputBCC);
+}
+
+if (emailComposeEditor) {
+  new Quill(emailComposeEditor, {
+    theme: 'snow',
+    bounds: emailComposeEditor,
+    placeholder: 'Write your message',
+  });
+}
+
+if (emailComposeBtnCC) {
+  emailComposeBtnCC.addEventListener('click', () => {
+    emailComposeInputCC.parentElement.classList.toggle('hidden');
+  });
+}
+
+if (emailComposeBtnBCC) {
+  emailComposeBtnBCC.addEventListener('click', () => {
+    emailComposeInputBCC.parentElement.classList.toggle('hidden');
+  });
+}
+
+if (emailBtnShowSidebar) {
+  emailBtnShowSidebar.addEventListener('click', () => showEmailSidebar(emailSidebar));
+}
+
+if (emailBtnHideSidebar) {
+  emailBtnHideSidebar.addEventListener('click', () => hideEmailSidebar(emailSidebar));
+}
+
+function showEmailSidebar(sidebar) {
+  if (!sidebar) return;
+
+  const sidebarComputedStyle = window.getComputedStyle(sidebar);
+  const sidebarVisibility = sidebarComputedStyle.getPropertyValue('visibility');
+
+  if (sidebarVisibility === 'hidden') {
+    sidebar.classList.add('transform-none');
+    sidebar.classList.replace('invisible', 'visible');
+
+    if (emailOverlay) {
+      emailOverlay.classList.remove('hidden');
+
+      setTimeout(() => {
+        if (emailOverlay) {
+          emailOverlay.classList.add('bg-opacity-40');
+          emailOverlay.addEventListener('click', () => hideEmailSidebar(emailSidebar));
+        }
+      }, 15);
+    }
+  }
+}
+
+function hideEmailSidebar(sidebar) {
+  if (!sidebar) return;
+
+  const sidebarComputedStyle = window.getComputedStyle(sidebar);
+  const sidebarVisibility = sidebarComputedStyle.getPropertyValue('visibility');
+
+  if (sidebarVisibility === 'visible') {
+    sidebar.classList.remove('transform-none');
+
+    if (emailOverlay) {
+      emailOverlay.classList.remove('bg-opacity-40');
+
+      setTimeout(() => {
+        sidebar.classList.replace('visible', 'invisible');
+        emailOverlay.classList.add('hidden');
+      }, 300);
+    }
+  }
+}
