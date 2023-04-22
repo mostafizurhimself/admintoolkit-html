@@ -1,10 +1,10 @@
 body {
 
+  @apply bg-slate-50  text-slate-700 dark:bg-slate-900 dark:text-slate-200;
+
   #app {
     @apply min-h-screen w-full;
   }
-
-  @apply bg-slate-50  text-slate-700 dark:bg-slate-900 dark:text-slate-200;
 
   .wrapper {
     @apply flex flex-1 flex-col transition-margin duration-300 ease-in-out lg:ml-72;
