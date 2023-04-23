@@ -19,6 +19,7 @@ export default defineConfig({
     entries: Object.keys(entries),
   },
   build: {
+    target: 'esnext',
     outDir: resolve(__dirname, 'dist'),
     rollupOptions: {
       input: entries,
@@ -80,7 +81,7 @@ export default defineConfig({
         //   //   return "custom/" + fileName;
         //   // }
         // },
-      },
+      }
     },
   },
 });
