@@ -421,6 +421,17 @@
                 </span>
               </button>
 
+              <!-- Mobile Search Starts -->
+              <div class="sm:hidden">
+                <button
+                  type="button"
+                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300"
+                >
+                  <i width="22" height="22" data-feather="search"></i>
+                </button>
+              </div>
+              <!-- Mobile Search Ends -->
+
               <form
                 action=""
                 class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
@@ -443,14 +454,17 @@
             <!-- Sidebar Toggle & Search Ends -->
 
             <!-- Header Options Starts -->
-            <div class="flex items-center space-x-6">
+            <div class="flex items-center">
               <!-- Language Dropdown Starts -->
               <div class="dropdown" data-strategy="absolute">
-                <div class="dropdown-toggle">
-                  <button type="button" class="inline-flex items-center gap-2 text-sm">
+                <div class="dropdown-toggle px-3">
+                  <button
+                    type="button"
+                    class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-700 focus:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-slate-300"
+                  >
                     <span class="fi fi-gb"></span>
-                    <span class="hidden md:inline-block">English</span>
-                    <span class="inline-block md:hidden">EN</span>
+                    <span class="hidden font-medium md:inline-block">English</span>
+                    <span class="inline-block font-medium md:hidden">EN</span>
                   </button>
                 </div>
 
@@ -459,37 +473,37 @@
                     <li class="dropdown-list-item">
                       <button class="dropdown-btn" type="button">
                         <span class="fi fi-gb"></span>
-                        <span>English</span>
+                        <span class="">English</span>
                       </button>
                     </li>
                     <li class="dropdown-list-item">
                       <button class="dropdown-btn" type="button">
                         <span class="fi fi-de"></span>
-                        <span>German</span>
+                        <span class="">German</span>
                       </button>
                     </li>
                     <li class="dropdown-list-item">
                       <button class="dropdown-btn" type="button">
                         <span class="fi fi-gf"></span>
-                        <span>French</span>
+                        <span class="">French</span>
                       </button>
                     </li>
                     <li class="dropdown-list-item">
                       <button class="dropdown-btn" type="button">
                         <span class="fi fi-sa"></span>
-                        <span>Arabic</span>
+                        <span class="">Arabic</span>
                       </button>
                     </li>
                     <li class="dropdown-list-item">
                       <button class="dropdown-btn" type="button">
                         <span class="fi fi-cn"></span>
-                        <span>Chinese</span>
+                        <span class="">Chinese</span>
                       </button>
                     </li>
                     <li class="dropdown-list-item">
                       <button class="dropdown-btn" type="button">
                         <span class="fi fi-bd"></span>
-                        <span>Bangla</span>
+                        <span class="">Bangla</span>
                       </button>
                     </li>
                   </ul>
@@ -497,20 +511,12 @@
               </div>
               <!-- Language Dropdown Ends -->
 
-              <!-- Mobile Search Starts -->
-              <div class="sm:hidden">
-                <button
-                  type="button"
-                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-300 dark:hover:text-slate-300"
-                >
-                  <i width="22" height="22" data-feather="search"></i>
-                </button>
-              </div>
-              <!-- Mobile Search Ends -->
-
               <!-- Dark Mood Toggle Starts -->
               <div class="dropdown" data-strategy="absolute" id="dropdown-theme-switcher">
-                <button class="dropdown-toggle focus:text-primary-500 text-slate-600 dark:text-slate-400" type="button">
+                <button
+                  class="dropdown-toggle px-3 text-slate-600 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                  type="button"
+                >
                   <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
                   <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
                 </button>
@@ -544,9 +550,9 @@
 
               <!-- Notification Dropdown Starts -->
               <div class="dropdown -mt-0.5" data-strategy="absolute">
-                <div class="dropdown-toggle">
+                <div class="dropdown-toggle px-3">
                   <button
-                    class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                    class="relative mt-1 flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
                   >
                     <i width="24" height="24" data-feather="bell"></i>
                     <span
@@ -676,23 +682,14 @@
 
               <!-- Profile Dropdown Starts -->
               <div class="dropdown" data-strategy="absolute">
-                <div class="dropdown-toggle">
+                <div class="dropdown-toggle pl-3">
                   <button class="group relative flex items-center gap-x-1.5" type="button">
-                    <div class="avatar avatar-circle">
+                    <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
                       <img
                         class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
                         src="./images/avatar1.png"
                         alt="Avatar 1"
                       />
-                    </div>
-
-                    <div class="hidden md:flex md:flex-col">
-                      <span
-                        class="inline-block text-sm font-medium text-slate-600 group-focus:text-slate-800 dark:text-slate-300 dark:group-focus:text-slate-300"
-                      >
-                        John Doe
-                      </span>
-                      <span class="inline-block text-left text-xs text-slate-400"> Admin </span>
                     </div>
                   </button>
                 </div>

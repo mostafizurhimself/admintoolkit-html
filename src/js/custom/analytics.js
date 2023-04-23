@@ -93,12 +93,15 @@ salesAnalyticsChartLegends.forEach((legend) => {
 // Sales Analytics Chart End
 
 // Top Categories Chart Start
-let topCategoriesChartOption = new ApexCharts(document.querySelector('#top-categories-chart'), topCategoriesChartOptions);
+let topCategoriesChartOption = new ApexCharts(
+  document.querySelector('#top-categories-chart'),
+  topCategoriesChartOptions
+);
 topCategoriesChartOption.render();
 // Top Categories Chart End
 
 // ========Sale Location Cart Start ===========
- 
+
 let root = am5.Root.new('salesLocationChart');
 let salesLocationChart = root.container.children.push(
   am5map.MapChart.new(root, {
