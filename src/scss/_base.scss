@@ -1,9 +1,9 @@
 body {
   @apply bg-slate-50  text-slate-700 dark:bg-slate-900 dark:text-slate-200;
 
-  &:has(.preloader) {
-    @apply overflow-hidden;
-  }
+  // &:has(.preloader) {
+  //   @apply overflow-hidden;
+  // }
 
   #app {
     @apply min-h-screen w-full;
