@@ -33,12 +33,12 @@ class ThemeSwitcher {
 
     if (themeMode === 'light') {
       // Whenever the user explicitly chooses light mode
-      localStorage.theme = 'light';
+      localStorage.setItem('theme', 'light');
     }
 
     if (themeMode === 'dark') {
       // Whenever the user explicitly chooses dark mode
-      localStorage.theme = 'dark';
+      localStorage.setItem('theme', 'dark');
     }
 
     if (themeMode === 'system') {
@@ -67,9 +67,8 @@ class ThemeSwitcher {
   }
 
   checkThemeMode() {
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (
-      localStorage.theme === 'dark' ||
+      localStorage.getItem('theme') === 'dark' ||
       (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
       document.documentElement.classList.add('dark');
@@ -84,7 +83,7 @@ const themeSwitcher = {
     const dropdownThemeSwitcher = document.querySelector('#dropdown-theme-switcher');
 
     if (dropdownThemeSwitcher) {
-      new ThemeSwitcher(dropdownThemeSwitcher).checkThemeMode();
+      new ThemeSwitcher(dropdownThemeSwitcher)
     }
   },
 };
