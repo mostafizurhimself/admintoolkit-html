@@ -3,6 +3,8 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import listPlugin from '@fullcalendar/list';
+import colors from 'tailwindcss/colors';
+import { themeColors } from '@tailwind.config';
 
 const date = new Date();
 const calendarEl = document.querySelector('#calendar');
@@ -152,9 +154,9 @@ const calendar = new Calendar(calendarEl, {
     center: 'title',
     end: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth',
   },
-  eventBackgroundColor: '#7C3AED',
-  eventBorderColor: '#7C3AED',
-  eventTextColor: '#f1f5f9',
+  eventBackgroundColor: themeColors.primary['500'],
+  eventBorderColor: themeColors.primary['500'],
+  eventTextColor: colors.slate['100'],
   dateClick: (info) => dateClick(info),
   eventClick: (info) => eventClick(info),
 });
