@@ -22,7 +22,7 @@ const chartOptions = {
     series: [
       {
         name: 'Desktops',
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+        data: [10, 41, 80, 72, 62, 69, 91, 148, 120, 110, 150, 200],
       },
     ],
     chart: {
@@ -40,16 +40,7 @@ const chartOptions = {
       enabled: false,
     },
     stroke: {
-      curve: 'straight',
-    },
-    title: {
-      text: 'Product Trends by Month',
-      align: 'left',
-      style: {
-        color: '#475569',
-        fontSize: '18px',
-        fontWeight: 600,
-      },
+      curve: 'smooth',
     },
     grid: {
       row: {
@@ -58,7 +49,7 @@ const chartOptions = {
       },
     },
     xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     },
   },
   areaChart: {
@@ -132,31 +123,7 @@ const chartOptions = {
       enabled: false,
     },
     stroke: {
-      curve: 'straight',
-    },
-
-    title: {
-      text: 'Fundamental Analysis of Stocks',
-      align: 'left',
-      style: {
-        color: '#475569',
-        fontSize: '18px',
-        fontWeight: 600,
-        fontFamily: {
-          sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-        },
-      },
-    },
-    subtitle: {
-      text: 'Price Movements',
-      align: 'left',
-      style: {
-        color: '#475569',
-        fontWeight: 500,
-        fontFamily: {
-          sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-        },
-      },
+      curve: 'smooth',
     },
     labels: [
       {
@@ -194,15 +161,15 @@ const chartOptions = {
     series: [
       {
         name: 'Net Profit',
-        data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+        data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 70, 76, 80],
       },
       {
         name: 'Revenue',
-        data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+        data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 100, 86, 106],
       },
       {
         name: 'Free Cash Flow',
-        data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
+        data: [35, 41, 36, 26, 45, 48, 52, 53, 41, 40, 36, 26],
       },
     ],
     chart: {
@@ -229,7 +196,7 @@ const chartOptions = {
       colors: ['transparent'],
     },
     xaxis: {
-      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     },
     yaxis: {
       title: {
@@ -506,14 +473,6 @@ const chartOptions = {
       },
       fontFamily: themeConfig.theme.fontFamily.sans,
     },
-    title: {
-      text: 'Radar Chart - Multi Series',
-      style: {
-        color: '#475569',
-        fontSize: '18px',
-        fontWeight: 600,
-      },
-    },
     stroke: {
       width: 2,
     },
@@ -555,15 +514,6 @@ const lineChartOptionsTemplate = `
   },
   stroke: {
     curve: "straight",
-  },
-  title: {
-    text: "Product Trends by Month",
-    align: "left",
-    style: {
-      color: "#475569",
-      fontSize: '20px',
-      fontWeight: 600,
-    },
   },
   grid: {
     row: {
