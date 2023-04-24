@@ -38,6 +38,7 @@ const salesAnalyticsChartOptions = {
   },
   stroke: {
     curve: 'smooth',
+    width: 2,
   },
   xaxis: {
     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],

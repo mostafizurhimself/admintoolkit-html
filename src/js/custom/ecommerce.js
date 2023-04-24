@@ -3,21 +3,12 @@ import colors from 'tailwindcss/colors';
 import themeConfig, { themeColors } from '@tailwind.config';
 
 const salesReportChartOptions = {
-  colors: [themeColors.primary['500'], colors.sky['500']],
+  colors: [themeColors.primary['500']],
   series: [
     {
-      name: 'Total Sales',
-      data: [0, 2000, 5000, 8000, 15000, 21000, 38000, 43000, 30000, 36000, 25000, 36000],
-    },
-    {
-      name: 'Total Orders',
-      data: [0, 3500, 7000, 10000, 20000, 25000, 45000, 40000, 38000, 39000, 44000, 50000],
+      data: [0, 5000, 15000, 8000, 20000, 21000, 38000, 43000, 30000, 36000, 25000, 36000],
     },
   ],
-  fill: {
-    type: 'solid',
-    colors: ['transparent'],
-  },
   chart: {
     type: 'area',
     height: 350,
@@ -34,6 +25,7 @@ const salesReportChartOptions = {
   },
   stroke: {
     curve: 'smooth',
+    width: 2,
   },
   xaxis: {
     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -53,9 +45,9 @@ const salesReportChartOptions = {
   },
 };
 
-const topCategoriesChartOptions = {
-  series: [41, 17, 15],
-  labels: ['Electronics', 'Furniture', 'Grocery'],
+const orderStatusChartOptions = {
+  series: [2500, 1500, 650],
+  labels: ['Completed', 'Inprogress', 'Canceled'],
   colors: [themeColors.primary['500'], colors.amber['300'], themeColors.danger['400']],
   chart: {
     type: 'donut',
@@ -78,20 +70,12 @@ const topCategoriesChartOptions = {
 // Sales Analytics Chart Start
 let salesAnalyticsChart = new ApexCharts(document.querySelector('#sales-report-chart'), salesReportChartOptions);
 salesAnalyticsChart.render();
-// AreaChart Custom Legends
-const salesAnalyticsChartLegends = document.querySelectorAll("#sales-report-chart-legend input[type='checkbox']");
-salesAnalyticsChartLegends.forEach((legend) => {
-  legend.addEventListener('click', (event) => {
-    salesAnalyticsChart.toggleSeries(event.target.value);
-    legend.parentNode.classList.toggle('opacity-20');
-  });
-});
 // Sales Analytics Chart End
 
 // Top Categories Chart Start
-let topCategoriesChartOption = new ApexCharts(
-  document.querySelector('#top-categories-chart'),
-  topCategoriesChartOptions
+let orderStatusChart = new ApexCharts(
+  document.querySelector('#order-status-chart'),
+  orderStatusChartOptions
 );
-topCategoriesChartOption.render();
+orderStatusChart.render();
 // Top Categories Chart End
