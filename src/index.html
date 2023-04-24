@@ -723,7 +723,7 @@
                   </div>
                   <div class="py-1">
                     <form method="POST" action="#">
-                      <button type="submit" class="dropdown-btn" >
+                      <button type="submit" class="dropdown-btn">
                         <i width="18" height="18" data-feather="log-out" class="text-slate-500"></i>
                         <span>Sign out</span>
                       </button>
@@ -742,9 +742,169 @@
         <div class="content">
           <!-- Main Content Starts -->
           <main class="container flex-grow p-6">
-            <div>
-              <h5>Dashboard</h5>
-              <div class="mt-4 h-96 rounded-primary border-4 border-dashed dark:border-slate-500"></div>
+            <!-- Page Title Starts -->
+            <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+              <h5 class="px-2 md:px-0">Dashboard</h5>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="/">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#">Dashboard</a>
+                </li>
+              </ol>
+            </div>
+            <!-- Page Title Ends -->
+            <div class="space-y-6">
+              <!-- Overview Section Start -->
+              <section class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+                <!-- Product Views  -->
+                <div class="card">
+                  <div class="card-body flex items-center gap-4">
+                    <div
+                      class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary-500 bg-opacity-20 text-primary-500"
+                    >
+                      <i class="bx bx-dollar-circle text-3xl"></i>
+                    </div>
+                    <div class="flex flex-1 flex-col gap-1">
+                      <p class="text-sm tracking-wide text-slate-500">Total Sales</p>
+                      <div class="flex flex-wrap items-baseline justify-between gap-2">
+                        <h4>$25,275</h4>
+                        <span class="flex items-center text-xs font-medium text-success-500"
+                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i>2.2%</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Product Sold  -->
+                <div class="card">
+                  <div class="card-body flex items-center gap-4">
+                    <div
+                      class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-success-500 bg-opacity-20 text-success-500"
+                    >
+                      <i class="ti ti-shopping-cart text-3xl"></i>
+                    </div>
+                    <div class="flex flex-1 flex-col gap-1">
+                      <p class="text-sm tracking-wide text-slate-500">Total Orders</p>
+                      <div class="flex flex-wrap items-baseline justify-between gap-2">
+                        <h4>5,630</h4>
+                        <span class="flex items-center text-xs font-medium text-danger-500">
+                          <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i> 0.5%</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Likes  -->
+                <div class="card">
+                  <div class="card-body flex items-center gap-4">
+                    <div
+                      class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-warning-500 bg-opacity-20 text-warning-500"
+                    >
+                      <i class="ti ti-users text-3xl"></i>
+                    </div>
+                    <div class="flex flex-1 flex-col gap-1">
+                      <p class="text-sm tracking-wide text-slate-500">Total Customers</p>
+                      <div class="flex flex-wrap items-baseline justify-between gap-2">
+                        <h4>46,256</h4>
+                        <span class="flex items-center text-xs font-medium text-success-500">
+                          <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i> 1.2%</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Conversation Rate  -->
+                <div class="card">
+                  <div class="card-body flex items-center gap-4">
+                    <div
+                      class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-info-500 bg-opacity-20 text-info-500"
+                    >
+                      <i class="ti ti-receipt-refund text-3xl"></i>
+                    </div>
+                    <div class="flex flex-1 flex-col gap-1">
+                      <p class="text-sm tracking-wide text-slate-500">Total Refunds</p>
+                      <div class="flex flex-wrap items-baseline justify-between gap-2">
+                        <h4>$20,56</h4>
+                        <span class="flex items-center text-xs font-medium text-success-500">
+                          <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i> 3.2%</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Overview Section End -->
+
+              <!-- Sale Report & Order Status Section Start  -->
+              <section class="grid gap-6 md:grid-cols-1 xl:grid-cols-5">
+                <!-- Sales Analytics -->
+                <div class="card xl:col-span-3">
+                  <div class="card-body">
+                    <!-- Chart wrap -->
+                    <div id="chart-wrap" class="flex flex-col justify-between">
+                      <div class="flex flex-wrap items-center justify-between gap-3 md:gap-0">
+                        <!-- Chart Title  -->
+                        <h6>Sales Report</h6>
+                        <!-- Legends  -->
+                        <div id="sales-report-chart-legend" class="flex items-center gap-4">
+                          <label for="sales">
+                            <input type="checkbox" id="sales" class="hidden" checked value="Total Sales" />
+                            <div class="flex items-center gap-1">
+                              <div class="h-4 w-4 rounded-full bg-primary-500"></div>
+                              <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Total Sales</p>
+                            </div>
+                          </label>
+
+                          <label for="orders">
+                            <input type="checkbox" id="orders" class="hidden" checked value="Total Orders" />
+                            <div class="flex items-center gap-1">
+                              <div class="h-4 w-4 rounded-full bg-sky-500"></div>
+                              <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Total Orders</span>
+                            </div>
+                          </label>
+                        </div>
+                        <!-- Select By Chart -->
+                        <select class="select select-sm w-full md:w-32">
+                          <option value="1">Yearly</option>
+                          <option value="2">Monthly</option>
+                          <option value="2">Date & Time</option>
+                        </select>
+                      </div>
+                      <!-- Chart  -->
+                      <div id="sales-report-chart" class="-mx-4"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Top Categories -->
+                <div class="card xl:col-span-2">
+                  <div class="card-body flex flex-col items-center justify-between">
+                    <!-- Header  -->
+                    <div class="flex w-full justify-between">
+                      <h6>Top Categories</h6>
+                      <div class="dropdown" data-placement="bottom-end">
+                        <div class="dropdown-toggle">
+                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                        </div>
+                        <div class="dropdown-content w-[160px]">
+                          <ul class="dropdown-list">
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Pie Chart  -->
+                    <div id="top-categories-chart" class="w-full"></div>
+                  </div>
+                </div>
+              </section>
+              <!-- Sale Report & Order Status Section End  -->
             </div>
           </main>
           <!-- Main Content Ends -->
@@ -769,5 +929,6 @@
       <!-- Wrapper Ends -->
     </div>
     <script src="./js/app.js" type="module"></script>
+    <script src="./js/custom/ecommerce.js" type="module"></script>
   </body>
 </html>

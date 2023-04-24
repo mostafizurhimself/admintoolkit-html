@@ -58,26 +58,66 @@ const salesAnalyticsChartOptions = {
 };
 
 const topCategoriesChartOptions = {
-  series: [41, 17, 15],
-  labels: ['Electronics', 'Furniture', 'Grocery'],
-  colors: [themeColors.primary['500'], colors.amber['300'], themeColors.danger['400']],
+  series: [{
+    data: [
+      25000, 20000, 18000, 15000, 13000, 10000, 8000, 5000
+    ]
+  }],
   chart: {
-    type: 'donut',
-    width: '100%',
-    height: 400,
+    type: 'bar',
+    height: 350,
+    toolbar: {
+      show: false,
+    },
     fontFamily: themeConfig.theme.fontFamily.sans,
   },
-  legend: {
-    position: 'bottom',
-  },
-  stroke: {
-    width: 0,
-  },
   plotOptions: {
-    pie: {
-      expandOnClick: false,
+    bar: {
+      distributed: true,
+      horizontal: true,
+      borderRadius: 4,
+    }
+  },
+  colors: [
+    themeColors.primary['500'],
+    colors.sky['500'],
+    colors.blue['500'],
+    colors.emerald['500'],
+    colors.rose['500'],
+    colors.yellow['500'],
+    colors.indigo['500'],
+    colors.slate['500'],
+  ],
+  dataLabels: {
+    enabled: false,
+  },
+  xaxis: {
+    categories: [
+      "Electronics",
+      "Furniture",
+      "Clothing",
+      "Grocery",
+      "Footwear",
+      "Jewellery",
+      "Sports",
+      "Toys",
+    ],
+    labels: {
+      formatter: function (value) {
+        return value / 1000 + 'K';
+      },
     },
   },
+  yaxis: {
+    min: 0,
+    max: 25000,
+  },
+  legend: {
+    show: false,
+  },
+  grid: {
+    show: false,
+  }
 };
 // Sales Analytics Chart Start
 let salesAnalyticsChart = new ApexCharts(document.querySelector('#sales-analytics-chart'), salesAnalyticsChartOptions);
