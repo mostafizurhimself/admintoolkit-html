@@ -496,7 +496,7 @@ const lineChartOptionsTemplate = `
   series: [
     {
       name: "Desktops",
-      data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+      data: [10, 41, 80, 72, 62, 69, 91, 148, 120, 110, 150, 200],
     },
   ],
   chart: {
@@ -532,6 +532,9 @@ const lineChartOptionsTemplate = `
       "Jul",
       "Aug",
       "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
     ],
   },
 }
