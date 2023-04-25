@@ -6,25 +6,21 @@ import * as am5map from '@amcharts/amcharts5/map';
 import am5geodata_worldLow from '@amcharts/amcharts5-geodata/worldLow';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
-// Sales Analytics Chart
-const salesAnalyticsChartOptions = {
+// ========Store Analytics Chart Start ===========
+const storeAnalyticsChartOptions = {
   colors: [themeColors.primary['500'], colors.sky['500']],
   series: [
     {
-      name: 'Total Sales',
-      data: [0, 2000, 5000, 8000, 15000, 21000, 38000, 43000, 30000, 36000, 25000, 36000],
-    },
-    {
-      name: 'Total Orders',
+      name: 'Visitors',
       data: [0, 3500, 7000, 10000, 20000, 25000, 45000, 40000, 38000, 39000, 44000, 50000],
     },
+    {
+      name: 'Orders',
+      data: [0, 2000, 5000, 8000, 15000, 21000, 38000, 43000, 30000, 36000, 25000, 36000],
+    },
   ],
-  fill: {
-    type: 'solid',
-    colors: ['transparent'],
-  },
   chart: {
-    type: 'area',
+    type: 'line',
     height: 350,
     zoom: {
       enabled: false,
@@ -58,87 +54,77 @@ const salesAnalyticsChartOptions = {
     show: false,
   },
 };
-let salesAnalyticsChart = new ApexCharts(document.querySelector('#sales-analytics-chart'), salesAnalyticsChartOptions);
-salesAnalyticsChart.render();
-// AreaChart Custom Legends
-const salesAnalyticsChartLegends = document.querySelectorAll("#sales-analytics-chart-legend input[type='checkbox']");
+let storeAnalyticsChart = new ApexCharts(document.querySelector('#store-analytics-chart'), storeAnalyticsChartOptions);
+storeAnalyticsChart.render();
+// Custom Legends
+const salesAnalyticsChartLegends = document.querySelectorAll("#store-analytics-chart-legend input[type='checkbox']");
 salesAnalyticsChartLegends.forEach((legend) => {
   legend.addEventListener('click', (event) => {
-    salesAnalyticsChart.toggleSeries(event.target.value);
+    storeAnalyticsChart.toggleSeries(event.target.value);
     legend.parentNode.classList.toggle('opacity-20');
   });
 });
 
+// ========Store Analytics Chart End ===========
 
-// Top Categories Chart
-const topCategoriesChartOptions = {
-  series: [{
-    data: [
-      25000, 20000, 18000, 15000, 13000, 10000, 8000, 5000
-    ]
-  }],
+// ========Active Users Chart Start ===========
+
+const activeUsersChartOptions = {
+  series: [20000, 15000, 6000],
+  labels: ['Desktop', 'Mobile', 'Tablet'],
+  colors: [themeColors.primary['500'], themeColors.warning['400'], colors.red['500']],
   chart: {
-    type: 'bar',
+    type: 'donut',
     height: 350,
     toolbar: {
       show: false,
     },
     fontFamily: themeConfig.theme.fontFamily.sans,
   },
-  plotOptions: {
-    bar: {
-      distributed: true,
-      horizontal: true,
-      borderRadius: 4,
-    }
-  },
-  colors: [
-    themeColors.primary['500'],
-    colors.sky['500'],
-    colors.blue['500'],
-    colors.emerald['500'],
-    colors.rose['500'],
-    colors.yellow['500'],
-    colors.indigo['500'],
-    colors.slate['500'],
-  ],
   dataLabels: {
     enabled: false,
   },
-  xaxis: {
-    categories: [
-      "Electronics",
-      "Furniture",
-      "Clothing",
-      "Grocery",
-      "Footwear",
-      "Jewellery",
-      "Sports",
-      "Toys",
-    ],
-    labels: {
-      formatter: function (value) {
-        return value / 1000 + 'K';
-      },
+  stroke: {
+    width: 0,
+  },
+  plotOptions: {
+    expandOnClick: false,
+    pie: {
+      offsetY: 20,
     },
   },
-  yaxis: {
-    min: 0,
-    max: 25000,
-  },
   legend: {
-    show: false,
+    position: 'bottom',
+    horizontalAlign: 'center',
+    itemMargin: {
+      horizontal: 20,
+    },
+    markers: {
+      width: 15,
+      height: 15,
+    },
+    formatter: function (name, opts) { 
+      const total = opts.w.globals.seriesTotals.reduce((a, b) => { 
+        return a + b
+      }, 0);
+      const value = opts.w.globals.series[opts.seriesIndex];
+
+      const percentage = ((value / total) * 100).toFixed(1);
+
+      return `
+        <div class="ml-2">
+          <p class="text-slate-700 text-base font-semibold dark:text-slate-300">${percentage}%</p>
+          <p class="text-sm">${name}</p>
+        </div>
+      `
+    },
   },
-  grid: {
-    show: false,
-  }
 };
 
-let topCategoriesChartOption = new ApexCharts(
-  document.querySelector('#top-categories-chart'),
-  topCategoriesChartOptions
-);
-topCategoriesChartOption.render();
+const activeUsersChart = new ApexCharts(document.querySelector('#active-users-chart'), activeUsersChartOptions);
+activeUsersChart.render();
+
+// ========Active Users Chart End ===========
 
 // ========Sale Location Cart Start ===========
 

@@ -837,10 +837,10 @@
               </section>
               <!-- Overview Section End -->
 
-              <!-- Sales Report, Order Status, Profit, Revenue, Sales Section Start  -->
-              <section class="grid gap-6 grid-cols-1 md:grid-cols-4 xl:grid-cols-3">
+              <!-- Sales Report & Order Status Section Start  -->
+              <section class="grid gap-6 grid-cols-1 xl:grid-cols-5">
                 <!-- Sales Report -->
-                <div class="card col-span-1 md:col-span-4 xl:col-span-2">
+                <div class="card xl:col-span-3">
                   <div class="card-body">
                     <!-- Chart wrap -->
                     <div id="chart-wrap" class="flex flex-col justify-between">
@@ -860,7 +860,7 @@
                   </div>
                 </div>
                 <!-- Order Status -->
-                <div class="card col-span-1 md:col-span-2 xl:col-span-1">
+                <div class="card xl:col-span-2">
                   <div class="card-body flex flex-col items-center justify-between">
                     <!-- Header  -->
                     <div class="flex w-full justify-between">
@@ -885,34 +885,13 @@
                     <div id="order-status-chart" class="w-full"></div>
                   </div>
                 </div>
-                <!-- Profit -->
-                <div class="card col-span-1 md:col-span-2 xl:col-span-1">
-                  <div class="card-body flex flex-col items-center justify-between">
-                    <!-- Header  -->
-                    <div class="flex w-full justify-between">
-                      <h6>Profit</h6>
-                      <div class="dropdown" data-placement="bottom-end">
-                        <div class="dropdown-toggle">
-                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
-                        </div>
-                        <div class="dropdown-content w-[160px]">
-                          <ul class="dropdown-list">
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
-                            </li>
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Chart  -->
-                    <div id="profit-report-chart" class="w-full"></div>
-                  </div>
-                </div>
-                <!-- Revenue -->
-                <div class="card col-span-1 md:col-span-2 xl:col-span-1">
+              </section>
+              <!-- Sales Report & Order Status Section End  -->
+
+              <!-- Revenue Report & Top Categories Section -->
+                <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
+                  <!-- Revenue -->
+                <div class="card col-span-1">
                   <div class="card-body flex flex-col items-center justify-between">
                     <!-- Header  -->
                     <div class="flex w-full justify-between">
@@ -934,15 +913,15 @@
                       </div>
                     </div>
                     <!-- Chart  -->
-                    <div id="order-status-chart" class="w-full"></div>
+                    <div id="revenue-report-chart" class="w-full"></div>
                   </div>
                 </div>
-                 <!-- Sales -->
-                 <div class="card col-span-1 md:col-span-2 xl:col-span-1">
+                 <!-- Top Categories -->
+                 <div class="card col-span-1">
                   <div class="card-body flex flex-col items-center justify-between">
                     <!-- Header  -->
                     <div class="flex w-full justify-between">
-                      <h6>Sales</h6>
+                      <h6>Top Categories</h6>
                       <div class="dropdown" data-placement="bottom-end">
                         <div class="dropdown-toggle">
                           <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
@@ -960,11 +939,11 @@
                       </div>
                     </div>
                     <!-- Chart  -->
-                    <div id="order-status-chart" class="w-full"></div>
+                    <div id="top-categories-chart" class="w-full"></div>
                   </div>
                 </div>
-              </section>
-              <!-- Sales Report, Order Status, Profit, Revenue, Sales Section End  -->
+
+                </div>
             </div>
           </main>
           <!-- Main Content Ends -->

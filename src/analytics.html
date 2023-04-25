@@ -19,8 +19,10 @@
         (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
       ) {
         document.documentElement.classList.add('dark');
+        window.theme = 'dark'
       } else {
         document.documentElement.classList.remove('dark');
+        window.theme = 'light'
       }
     </script>
   </head>
@@ -838,31 +840,31 @@
               </section>
               <!-- Overview Section End -->
 
-              <!-- Sales Analytics & Top Categories section Start  -->
+              <!-- Store Analytics & Active Users Section Start  -->
               <section class="grid gap-6 grid-cols-1 xl:grid-cols-5">
-                <!-- Sales Analytics -->
+                <!-- Store Analytics -->
                 <div class="card xl:col-span-3">
                   <div class="card-body">
                     <!-- Chart wrap -->
                     <div id="chart-wrap" class="flex flex-col justify-between">
                       <div class="flex flex-wrap items-center justify-between gap-3 md:gap-0">
                         <!-- Chart Title  -->
-                        <h6>Sales Analytics</h6>
+                        <h6>Store Analytics</h6>
                         <!-- Legends  -->
-                        <div id="sales-analytics-chart-legend" class="flex items-center gap-4">
-                          <label for="sales">
-                            <input type="checkbox" id="sales" class="hidden" checked value="Total Sales" />
+                        <div id="store-analytics-chart-legend" class="flex items-center gap-4">
+                          <label for="visitors">
+                            <input type="checkbox" id="visitors" class="hidden" checked value="Visitors" />
                             <div class="flex items-center gap-1">
                               <div class="h-4 w-4 rounded-full bg-primary-500"></div>
-                              <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Total Sales</p>
+                              <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Visitors</p>
                             </div>
                           </label>
 
                           <label for="orders">
-                            <input type="checkbox" id="orders" class="hidden" checked value="Total Orders" />
+                            <input type="checkbox" id="orders" class="hidden" checked value="Orders" />
                             <div class="flex items-center gap-1">
                               <div class="h-4 w-4 rounded-full bg-sky-500"></div>
-                              <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Total Orders</span>
+                              <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Orders</span>
                             </div>
                           </label>
                         </div>
@@ -874,38 +876,56 @@
                         </select>
                       </div>
                       <!-- Chart  -->
-                      <div id="sales-analytics-chart" class="-mx-4"></div>
+                      <div id="store-analytics-chart" class="-mx-4"></div>
                     </div>
                   </div>
                 </div>
-                <!-- Top Categories -->
-                <div class="card xl:col-span-2">
-                  <div class="card-body flex flex-col items-center justify-between">
-                    <!-- Header  -->
-                    <div class="flex w-full justify-between">
-                      <h6>Top Categories</h6>
-                      <div class="dropdown" data-placement="bottom-end">
-                        <div class="dropdown-toggle">
-                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
-                        </div>
-                        <div class="dropdown-content w-[160px]">
-                          <ul class="dropdown-list">
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
-                            </li>
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
-                            </li>
-                          </ul>
+                   <!-- Active Users -->
+                   <div class="card xl:col-span-2">
+                    <div class="card-body flex flex-col items-center justify-between">
+                      <!-- Header  -->
+                      <div class="flex w-full justify-between">
+                        <h6>Active Users</h6>
+                        <div class="dropdown" data-placement="bottom-end">
+                          <div class="dropdown-toggle">
+                            <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                          </div>
+                          <div class="dropdown-content w-[160px]">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
+                      <!-- Chart  -->
+                      <div id="active-users-chart" class="w-full"></div>
+                      <!-- Legends  -->
+                      <!-- <div id="store-analytics-chart-legend" class="flex items-center gap-4">
+                        <label for="visitors">
+                          <input type="checkbox" id="visitors" class="hidden" checked value="Visitors" />
+                          <div class="flex items-center gap-1">
+                            <div class="h-4 w-4 rounded-full bg-primary-500"></div>
+                            <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Visitors</p>
+                          </div>
+                        </label>
+
+                        <label for="orders">
+                          <input type="checkbox" id="orders" class="hidden" checked value="Orders" />
+                          <div class="flex items-center gap-1">
+                            <div class="h-4 w-4 rounded-full bg-sky-500"></div>
+                            <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Orders</span>
+                          </div>
+                        </label>
+                      </div> -->
                     </div>
-                    <!-- Pie Chart  -->
-                    <div id="top-categories-chart" class="w-full"></div>
                   </div>
-                </div>
               </section>
-              <!-- Sales Analytics & Top Categories section End  -->
+              <!-- Store Analytics & Active Users Section End  -->
 
               <!-- Sales By Location & Top Selling & Most Viewed Product  Start  -->
               <section class="grid gap-6 grid-cols-1 xl:grid-cols-5">

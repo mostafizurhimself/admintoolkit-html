@@ -76,42 +76,77 @@ const orderStatusChartOptions = {
 let orderStatusChart = new ApexCharts(document.querySelector('#order-status-chart'), orderStatusChartOptions);
 orderStatusChart.render();
 
-// Profit Chart Start
-const options = {
-  series: [60, 55],
+
+// Revenue Chart
+
+
+
+// Top Categories Chart
+const topCategoriesChartOptions = {
+  series: [{
+    data: [
+      25000, 20000, 18000, 15000, 13000, 10000, 8000, 5000
+    ]
+  }],
   chart: {
+    type: 'bar',
     height: 350,
-    type: 'radialBar',
+    toolbar: {
+      show: false,
+    },
     fontFamily: themeConfig.theme.fontFamily.sans,
   },
-  stroke: {
-    lineCap: 'round',
-  },
   plotOptions: {
-    radialBar: {
-      dataLabels: {
-        name: {
-          fontSize: '22px',
-        },
-        value: {
-          fontSize: '16px',
-        },
-        total: {
-          show: true,
-          label: 'Total',
-          formatter: function (w) {
-            console.log(w);
-            return 100;
-          },
-        },
+    bar: {
+      distributed: true,
+      horizontal: true,
+      borderRadius: 4,
+    }
+  },
+  colors: [
+    themeColors.primary['500'],
+    colors.sky['500'],
+    colors.blue['500'],
+    colors.emerald['500'],
+    colors.rose['500'],
+    colors.yellow['500'],
+    colors.indigo['500'],
+    colors.slate['500'],
+  ],
+  dataLabels: {
+    enabled: false,
+  },
+  xaxis: {
+    categories: [
+      "Electronics",
+      "Furniture",
+      "Clothing",
+      "Grocery",
+      "Footwear",
+      "Jewellery",
+      "Sports",
+      "Toys",
+    ],
+    labels: {
+      formatter: function (value) {
+        return value / 1000 + 'K';
       },
     },
   },
-  labels: ["This Month", "Last Month"],
-  legend: {
-    position: 'bottom',
+  yaxis: {
+    min: 0,
+    max: 25000,
   },
+  legend: {
+    show: false,
+  },
+  grid: {
+    show: false,
+  }
 };
 
-var chart = new ApexCharts(document.querySelector('#profit-report-chart'), options);
-chart.render();
+let topCategoriesChartOption = new ApexCharts(
+  document.querySelector('#top-categories-chart'),
+  topCategoriesChartOptions
+);
+topCategoriesChartOption.render();
