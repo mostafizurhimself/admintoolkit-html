@@ -57,11 +57,18 @@ const orderStatusChartOptions = {
   chart: {
     type: 'donut',
     width: '100%',
-    height: 400,
+    height: 380,
     fontFamily: themeConfig.theme.fontFamily.sans,
+  },
+  dataLabels: {
+    enabled: false,
   },
   legend: {
     position: 'bottom',
+    horizontalAlign: 'center',
+    itemMargin: {
+      horizontal: 10,
+    },
   },
   stroke: {
     width: 0,

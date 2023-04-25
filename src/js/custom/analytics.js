@@ -70,11 +70,12 @@ salesAnalyticsChartLegends.forEach((legend) => {
 // ========Active Users Chart Start ===========
 
 const activeUsersChartOptions = {
-  series: [20000, 15000, 6000],
+  series: [25000, 15000, 5000],
   labels: ['Desktop', 'Mobile', 'Tablet'],
   colors: [themeColors.primary['500'], themeColors.warning['400'], colors.red['500']],
   chart: {
     type: 'donut',
+    width: '100%',
     height: 350,
     toolbar: {
       show: false,
