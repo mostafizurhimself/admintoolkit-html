@@ -2,6 +2,7 @@ import ApexCharts from 'apexcharts';
 import colors from 'tailwindcss/colors';
 import themeConfig, { themeColors } from '@tailwind.config';
 
+// Sales Report Chart
 const salesReportChartOptions = {
   colors: [themeColors.primary['500']],
   series: [
@@ -40,11 +41,15 @@ const salesReportChartOptions = {
       },
     },
   },
+
   legend: {
     show: false,
   },
 };
+let salesAnalyticsChart = new ApexCharts(document.querySelector('#sales-report-chart'), salesReportChartOptions);
+salesAnalyticsChart.render();
 
+// Order Status Chart
 const orderStatusChartOptions = {
   series: [2500, 1500, 650],
   labels: ['Completed', 'Inprogress', 'Canceled'],
@@ -67,15 +72,46 @@ const orderStatusChartOptions = {
     },
   },
 };
-// Sales Analytics Chart Start
-let salesAnalyticsChart = new ApexCharts(document.querySelector('#sales-report-chart'), salesReportChartOptions);
-salesAnalyticsChart.render();
-// Sales Analytics Chart End
 
-// Top Categories Chart Start
-let orderStatusChart = new ApexCharts(
-  document.querySelector('#order-status-chart'),
-  orderStatusChartOptions
-);
+let orderStatusChart = new ApexCharts(document.querySelector('#order-status-chart'), orderStatusChartOptions);
 orderStatusChart.render();
-// Top Categories Chart End
+
+// Profit Chart Start
+const options = {
+  series: [60, 55],
+  chart: {
+    height: 350,
+    type: 'radialBar',
+    fontFamily: themeConfig.theme.fontFamily.sans,
+  },
+  stroke: {
+    lineCap: 'round',
+  },
+  plotOptions: {
+    radialBar: {
+      dataLabels: {
+        name: {
+          fontSize: '22px',
+        },
+        value: {
+          fontSize: '16px',
+        },
+        total: {
+          show: true,
+          label: 'Total',
+          formatter: function (w) {
+            console.log(w);
+            return 100;
+          },
+        },
+      },
+    },
+  },
+  labels: ["This Month", "Last Month"],
+  legend: {
+    position: 'bottom',
+  },
+};
+
+var chart = new ApexCharts(document.querySelector('#profit-report-chart'), options);
+chart.render();

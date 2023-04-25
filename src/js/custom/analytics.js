@@ -6,6 +6,7 @@ import * as am5map from '@amcharts/amcharts5/map';
 import am5geodata_worldLow from '@amcharts/amcharts5-geodata/worldLow';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
+// Sales Analytics Chart
 const salesAnalyticsChartOptions = {
   colors: [themeColors.primary['500'], colors.sky['500']],
   series: [
@@ -57,7 +58,19 @@ const salesAnalyticsChartOptions = {
     show: false,
   },
 };
+let salesAnalyticsChart = new ApexCharts(document.querySelector('#sales-analytics-chart'), salesAnalyticsChartOptions);
+salesAnalyticsChart.render();
+// AreaChart Custom Legends
+const salesAnalyticsChartLegends = document.querySelectorAll("#sales-analytics-chart-legend input[type='checkbox']");
+salesAnalyticsChartLegends.forEach((legend) => {
+  legend.addEventListener('click', (event) => {
+    salesAnalyticsChart.toggleSeries(event.target.value);
+    legend.parentNode.classList.toggle('opacity-20');
+  });
+});
 
+
+// Top Categories Chart
 const topCategoriesChartOptions = {
   series: [{
     data: [
@@ -120,26 +133,12 @@ const topCategoriesChartOptions = {
     show: false,
   }
 };
-// Sales Analytics Chart Start
-let salesAnalyticsChart = new ApexCharts(document.querySelector('#sales-analytics-chart'), salesAnalyticsChartOptions);
-salesAnalyticsChart.render();
-// AreaChart Custom Legends
-const salesAnalyticsChartLegends = document.querySelectorAll("#sales-analytics-chart-legend input[type='checkbox']");
-salesAnalyticsChartLegends.forEach((legend) => {
-  legend.addEventListener('click', (event) => {
-    salesAnalyticsChart.toggleSeries(event.target.value);
-    legend.parentNode.classList.toggle('opacity-20');
-  });
-});
-// Sales Analytics Chart End
 
-// Top Categories Chart Start
 let topCategoriesChartOption = new ApexCharts(
   document.querySelector('#top-categories-chart'),
   topCategoriesChartOptions
 );
 topCategoriesChartOption.render();
-// Top Categories Chart End
 
 // ========Sale Location Cart Start ===========
 

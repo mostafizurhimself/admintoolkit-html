@@ -837,16 +837,16 @@
               </section>
               <!-- Overview Section End -->
 
-              <!-- Sale Report & Order Status Section Start  -->
-              <section class="grid gap-6 md:grid-cols-1 xl:grid-cols-5">
-                <!-- Sales Analytics -->
-                <div class="card xl:col-span-3">
+              <!-- Sales Report, Order Status, Profit, Revenue, Sales Section Start  -->
+              <section class="grid gap-6 grid-cols-1 md:grid-cols-4 xl:grid-cols-3">
+                <!-- Sales Report -->
+                <div class="card col-span-1 md:col-span-4 xl:col-span-2">
                   <div class="card-body">
                     <!-- Chart wrap -->
                     <div id="chart-wrap" class="flex flex-col justify-between">
                       <div class="flex flex-wrap items-center justify-between gap-3 md:gap-0">
                         <!-- Chart Title  -->
-                        <h6>Sales Overview</h6>
+                        <h6>Sales Report</h6>
                         <!-- Select By Chart -->
                         <select class="select select-sm w-full md:w-32">
                           <option value="1">Yearly</option>
@@ -859,8 +859,8 @@
                     </div>
                   </div>
                 </div>
-                <!-- Top Categories -->
-                <div class="card xl:col-span-2">
+                <!-- Order Status -->
+                <div class="card col-span-1 md:col-span-2 xl:col-span-1">
                   <div class="card-body flex flex-col items-center justify-between">
                     <!-- Header  -->
                     <div class="flex w-full justify-between">
@@ -881,18 +881,90 @@
                         </div>
                       </div>
                     </div>
-                    <!-- Pie Chart  -->
+                    <!-- Chart  -->
+                    <div id="order-status-chart" class="w-full"></div>
+                  </div>
+                </div>
+                <!-- Profit -->
+                <div class="card col-span-1 md:col-span-2 xl:col-span-1">
+                  <div class="card-body flex flex-col items-center justify-between">
+                    <!-- Header  -->
+                    <div class="flex w-full justify-between">
+                      <h6>Profit</h6>
+                      <div class="dropdown" data-placement="bottom-end">
+                        <div class="dropdown-toggle">
+                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                        </div>
+                        <div class="dropdown-content w-[160px]">
+                          <ul class="dropdown-list">
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Chart  -->
+                    <div id="profit-report-chart" class="w-full"></div>
+                  </div>
+                </div>
+                <!-- Revenue -->
+                <div class="card col-span-1 md:col-span-2 xl:col-span-1">
+                  <div class="card-body flex flex-col items-center justify-between">
+                    <!-- Header  -->
+                    <div class="flex w-full justify-between">
+                      <h6>Revenue</h6>
+                      <div class="dropdown" data-placement="bottom-end">
+                        <div class="dropdown-toggle">
+                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                        </div>
+                        <div class="dropdown-content w-[160px]">
+                          <ul class="dropdown-list">
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Chart  -->
+                    <div id="order-status-chart" class="w-full"></div>
+                  </div>
+                </div>
+                 <!-- Sales -->
+                 <div class="card col-span-1 md:col-span-2 xl:col-span-1">
+                  <div class="card-body flex flex-col items-center justify-between">
+                    <!-- Header  -->
+                    <div class="flex w-full justify-between">
+                      <h6>Sales</h6>
+                      <div class="dropdown" data-placement="bottom-end">
+                        <div class="dropdown-toggle">
+                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                        </div>
+                        <div class="dropdown-content w-[160px]">
+                          <ul class="dropdown-list">
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Chart  -->
                     <div id="order-status-chart" class="w-full"></div>
                   </div>
                 </div>
               </section>
-              <!-- Sale Report & Order Status Section End  -->
-
-              <!-- Profit & Revenue Section Starts -->
-              <section  class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-
-              </section>
-              <!-- Profit & Revenue Section End -->
+              <!-- Sales Report, Order Status, Profit, Revenue, Sales Section End  -->
             </div>
           </main>
           <!-- Main Content Ends -->
