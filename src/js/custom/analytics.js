@@ -41,6 +41,12 @@ const storeAnalyticsChartOptions = {
   },
   xaxis: {
     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    axisBorder: {
+      color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+    },
+    axisTicks: {
+      color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+    },
   },
   yaxis: {
     min: 0,
@@ -54,6 +60,9 @@ const storeAnalyticsChartOptions = {
   },
   legend: {
     show: false,
+  },
+  grid: {
+    borderColor: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
   },
 };
 let storeAnalyticsChart = new ApexCharts(document.querySelector('#store-analytics-chart'), storeAnalyticsChartOptions);

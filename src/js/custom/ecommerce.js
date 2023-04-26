@@ -44,6 +44,12 @@ const salesReportChartOptions = {
   },
   xaxis: {
     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    axisBorder: {
+      color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+    },
+    axisTicks: {
+      color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+    },
   },
   yaxis: {
     min: 0,
@@ -58,6 +64,9 @@ const salesReportChartOptions = {
 
   legend: {
     show: false,
+  },
+  grid: {
+    borderColor: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
   },
 };
 let salesReportChart = new ApexCharts(document.querySelector('#sales-report-chart'), salesReportChartOptions);
@@ -183,6 +192,9 @@ const profitChartOptions = {
     height: 350,
     type: 'line',
     fontFamily: themeConfig.theme.fontFamily.sans,
+    zoom: {
+      enabled: false,
+    },
     toolbar: {
       show: false,
     },
@@ -196,6 +208,12 @@ const profitChartOptions = {
   },
   xaxis: {
     categories: ['Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+    axisBorder: {
+      color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+    },
+    axisTicks: {
+      color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+    },
   },
   yaxis: {
     min: 0,
@@ -206,6 +224,9 @@ const profitChartOptions = {
         return value / 1000 + 'K';
       },
     },
+  },
+  grid: {
+    borderColor: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
   },
 };
 
@@ -262,9 +283,18 @@ const revenueChartOptions = {
   },
   xaxis: {
     categories: ['Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+    axisBorder: {
+      color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+    },
+    axisTicks: {
+      color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+    },
   },
   legend: {
     show: false,
+  },
+  grid: {
+    borderColor: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
   },
 };
 const revenueChart = new ApexCharts(document.querySelector('#revenue-chart'), revenueChartOptions);
