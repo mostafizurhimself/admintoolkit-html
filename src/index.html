@@ -837,16 +837,34 @@
               </section>
               <!-- Overview Section End -->
 
-              <!-- Sales Report & Order Status Section Start  -->
-              <section class="grid gap-6 grid-cols-1 xl:grid-cols-5">
+              <!-- Sales Report, Order Status, Profit, Revenue, Shipping Status Section Start  -->
+              <section class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
                 <!-- Sales Report -->
-                <div class="card xl:col-span-3">
+                <div class="card col-span-1 md:col-span-2">
                   <div class="card-body">
                     <!-- Chart wrap -->
                     <div id="chart-wrap" class="flex flex-col justify-between">
                       <div class="flex flex-wrap items-center justify-between gap-3 md:gap-0">
                         <!-- Chart Title  -->
                         <h6>Sales Report</h6>
+                        <!-- Legends  -->
+                        <div id="sales-report-chart-legend" class="flex items-center gap-4">
+                          <label for="sales">
+                            <input type="checkbox" id="sales" class="hidden" checked value="Sales" />
+                            <div class="flex items-center gap-1">
+                              <div class="h-4 w-4 rounded-full bg-primary-500"></div>
+                              <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Sales</p>
+                            </div>
+                          </label>
+
+                          <label for="profit">
+                            <input type="checkbox" id="profit" class="hidden" checked value="Profit" />
+                            <div class="flex items-center gap-1">
+                              <div class="h-4 w-4 rounded-full bg-sky-500"></div>
+                              <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Profit</span>
+                            </div>
+                          </label>
+                        </div>
                         <!-- Select By Chart -->
                         <select class="select select-sm w-full md:w-32">
                           <option value="1">Yearly</option>
@@ -860,7 +878,7 @@
                   </div>
                 </div>
                 <!-- Order Status -->
-                <div class="card xl:col-span-2">
+                <div class="card xl:col-span-1">
                   <div class="card-body flex flex-col items-center justify-between">
                     <!-- Header  -->
                     <div class="flex w-full justify-between">
@@ -885,14 +903,35 @@
                     <div id="order-status-chart" class="w-full"></div>
                   </div>
                 </div>
-              </section>
-              <!-- Sales Report & Order Status Section End  -->
-
-              <!-- Revenue Report & Top Categories Section -->
-                <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
-                  <!-- Revenue -->
+                <!-- Profit -->
                 <div class="card col-span-1">
-                  <div class="card-body flex flex-col items-center justify-between">
+                  <div class="card-body">
+                    <!-- Header  -->
+                    <div class="flex w-full justify-between">
+                      <h6>Profit Growth</h6>
+                      <div class="dropdown" data-placement="bottom-end">
+                        <div class="dropdown-toggle">
+                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                        </div>
+                        <div class="dropdown-content w-[160px]">
+                          <ul class="dropdown-list">
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Chart  -->
+                    <div id="profit-chart" class="-mx-4"></div>
+                  </div>
+                </div>
+                <!-- Revenue -->
+                <div class="card col-span-1">
+                  <div class="card-body">
                     <!-- Header  -->
                     <div class="flex w-full justify-between">
                       <h6>Revenue</h6>
@@ -913,15 +952,15 @@
                       </div>
                     </div>
                     <!-- Chart  -->
-                    <div id="revenue-report-chart" class="w-full"></div>
+                    <div id="revenue-chart" class="-mx-4"></div>
                   </div>
                 </div>
-                 <!-- Top Categories -->
-                 <div class="card col-span-1">
+                <!-- Shipping Status -->
+                <div class="card col-span-1">
                   <div class="card-body flex flex-col items-center justify-between">
                     <!-- Header  -->
                     <div class="flex w-full justify-between">
-                      <h6>Top Categories</h6>
+                      <h6>Shipping Status</h6>
                       <div class="dropdown" data-placement="bottom-end">
                         <div class="dropdown-toggle">
                           <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
@@ -939,11 +978,601 @@
                       </div>
                     </div>
                     <!-- Chart  -->
-                    <div id="top-categories-chart" class="w-full"></div>
+                    <div id="shipping-status-chart" class="w-full"></div>
+                    <!-- Legends -->
+                    <div class="flex items-center gap-6">
+                      <div class="flex items-center gap-2 cursor-default">
+                        <span class="inline-block h-[15px] w-[15px] rounded-full bg-primary-500"></span>
+                         <div >
+                           <p class="text-sm font-semibold">70.0%</p>
+                           <p class="text-slate-400 text-xs">Shipped</p>
+                         </div>
+                      </div>
+                      <div class="flex items-center gap-2 cursor-default">
+                        <span class="inline-block h-[15px] w-[15px] rounded-full bg-slate-200 dark:bg-slate-600"></span>
+                         <div >
+                           <p class="text-sm font-semibold">30.0%</p>
+                           <p class="text-slate-400 text-xs">Pending</p>
+                         </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </section>
+              <!-- Sales Report, Order Status, Profit, Revenue, Shipping Status Section End  -->
 
+              <!-- Recent Orders Section Start -->
+              <section class="grid grid-cols-1">
+                <div class="card">
+                  <div class="card-body space-y-2">
+                    <div class="flex w-full justify-between">
+                      <h6>Recent Orders</h6>
+                      <div class="dropdown" data-placement="bottom-end">
+                        <div class="dropdown-toggle">
+                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                        </div>
+                        <div class="dropdown-content w-[160px]">
+                          <ul class="dropdown-list">
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="table-responsive">
+                      <table class="table min-w-[43rem]">
+                        <thead>
+                          <tr>
+                            <th>Customer</th>
+                            <th>Total</th>
+                            <th>Ordered At</th>
+                            <th>Status</th>
+                            <th>
+                              <p class="text-right">Actions</p>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                           
+                            <td>
+                              <div class="flex gap-2">
+                                <img src="./images/avatar1.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                                <div>
+                                  <h4 class="m-0 p-0 text-sm font-medium">Ahmed Shakil</h4>
+                                  <p class="m-0 p-0 text-xs font-normal text-slate-400">jackson.graham@example.com</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>$446.61</td>
+                            <td>19 Aug 2022, 10:39 pm</td>
+                            <td>
+                              <div class="badge badge-soft-primary">Processing</div>
+                            </td>
+                            <td>
+                              <div class="flex justify-end">
+                                <div class="dropdown" data-placement="bottom-start">
+                                  <div class="dropdown-toggle">
+                                    <i class="w-6 text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content min-w-[150px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                          <span>Details</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                          <span>PDF</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                          <span>Delete</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                          
+                            <td>
+                              <div class="flex gap-2">
+                                <img src="./images/avatar2.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                                <div>
+                                  <h4 class="m-0 p-0 text-sm font-medium">Afrad Bhuyian</h4>
+                                  <p class="m-0 p-0 text-xs font-normal text-slate-400">michelle.rivera@example.com</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>$739.65</td>
+                            <td>20 Jun 2022, 05:00 pm</td>
+                            <td>
+                              <div class="badge badge-soft-primary">Processing</div>
+                            </td>
+                            <td>
+                              <div class="flex justify-end">
+                                <div class="dropdown" data-placement="bottom-start">
+                                  <div class="dropdown-toggle">
+                                    <i class="w-6 text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content min-w-[150px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                          <span>Details</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                          <span>PDF</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                          <span>Delete</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            
+                            <td>
+                              <div class="flex gap-2">
+                                <img src="./images/avatar3.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                                <div>
+                                  <h4 class="m-0 p-0 text-sm font-medium">Adnan Shaikat</h4>
+                                  <p class="m-0 p-0 text-xs font-normal text-slate-400">georgia.young@example.com</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>$475.22</td>
+                            <td>01 May 2022, 12:01 am</td>
+                            <td>
+                              <div class="badge badge-soft-danger">Canceled</div>
+                            </td>
+                            <td>
+                              <div class="flex justify-end">
+                                <div class="dropdown" data-placement="bottom-start">
+                                  <div class="dropdown-toggle">
+                                    <i class="w-6 text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content min-w-[150px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                          <span>Details</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                          <span>PDF</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                          <span>Delete</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex gap-2">
+                                <img src="./images/avatar4.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                                <div>
+                                  <h4 class="m-0 p-0 text-sm font-medium">Hasibur Rahman</h4>
+                                  <p class="m-0 p-0 text-xs font-normal text-slate-400">nathan.roberts@example.com</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>$779.58</td>
+                            <td>15 Apr 2022, 01: 10 am</td>
+                            <td>
+                              <div class="badge badge-soft-success">Delivered</div>
+                            </td>
+                            <td>
+                              <div class="flex justify-end">
+                                <div class="dropdown" data-placement="bottom-start">
+                                  <div class="dropdown-toggle">
+                                    <i class="w-6 text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content min-w-[150px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                          <span>Details</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                          <span>PDF</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                          <span>Delete</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex gap-2">
+                                <img src="./images/avatar5.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                                <div>
+                                  <h4 class="m-0 p-0 text-sm font-medium">Tanvir Alam</h4>
+                                  <p class="m-0 p-0 text-xs font-normal text-slate-400">sara.cruz@example.com</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>$169.43</td>
+                            <td>10 Apr 2022, 04:30 pm</td>
+                            <td>
+                              <div class="badge badge-soft-success">Delivered</div>
+                            </td>
+                            <td>
+                              <div class="flex justify-end">
+                                <div class="dropdown" data-placement="bottom-start">
+                                  <div class="dropdown-toggle">
+                                    <i class="w-6 text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content min-w-[150px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                          <span>Details</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                          <span>PDF</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                          <span>Delete</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
+              </section>
+              <!-- Recent Orders Section End -->
+
+              <!-- Stock Report & Popular Product Section Start -->
+              <section class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                <!-- Stock Report  -->
+                <div class="card">
+                  <div class="card-body flex h-full flex-col justify-between gap-2">
+                    <!-- Header  -->
+                    <div class="flex w-full justify-between">
+                      <h6>Stock Report</h6>
+                      <div class="dropdown" data-placement="bottom-end">
+                        <div class="dropdown-toggle">
+                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                        </div>
+                        <div class="dropdown-content w-[160px]">
+                          <ul class="dropdown-list">
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Product</th>
+                            <th>SKU</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="font-medium">Apple Watch</td>
+                            <td>AW-123</td>
+                            <td>$250</td>
+                            <td>10</td>
+                            <td>
+                              <span class="badge badge-soft-warning">Low Stock</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-medium">Wireless Headphone</td>
+                            <td>WH-123</td>
+                            <td>$150</td>
+                            <td>0</td>
+                            <td>
+                              <span class="badge badge-soft-danger">Out of Stock</span>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>Iphone 13 Pro</td>
+                            <td>IP-123</td>
+                            <td>$1200</td>
+                            <td>5</td>
+                            <td>
+                              <span class="badge badge-soft-warning">Low Stock</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Macbook Pro</td>
+                            <td>MB-123</td>
+                            <td>$2500</td>
+                            <td>0</td>
+                            <td>
+                              <span class="badge badge-soft-info">Backorder</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- Popular Products  -->
+                <div class="card">
+                  <div class="card-body flex h-full flex-col justify-between gap-2">
+                    <!-- Header  -->
+                    <div class="flex w-full justify-between">
+                      <h6>Top Customers</h6>
+                      <div class="dropdown" data-placement="bottom-end">
+                        <div class="dropdown-toggle">
+                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                        </div>
+                        <div class="dropdown-content w-[160px]">
+                          <ul class="dropdown-list">
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Users Table  -->
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Customer</th>
+                            <th>Company</th>
+                            <th>Product</th>
+                            <th>Revenue</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <img src="./images/avatar1.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                                <p class="whitespace-nowrap text-sm font-medium">Wade Warren</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="whitespace-nowrap text-sm font-medium">XD54862</p>
+                            </td>
+                            <td>
+                              <p class="whitespace-nowrap text-sm font-medium">7 min ago</p>
+                            </td>
+                            <td>
+                              <p class="whitespace-nowrap text-center text-sm font-medium">6x</p>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="dropdown" data-placement="bottom-end">
+                                  <div class="dropdown-toggle">
+                                    <i class="text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content w-[160px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                          <i class="h-5 text-slate-500" data-feather="info"></i>
+                                          Details
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                          <i class="h-5 text-slate-500" data-feather="trash-2"></i>
+                                          Delete
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <img src="./images/avatar2.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                                <p class="whitespace-nowrap text-sm font-medium">Afrad Bhuyian</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="whitespace-nowrap text-sm font-medium">EF64354</p>
+                            </td>
+                            <td>
+                              <p class="whitespace-nowrap text-sm font-medium">9 min ago</p>
+                            </td>
+                            <td>
+                              <p class="whitespace-nowrap text-center text-sm font-medium">4x</p>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="dropdown" data-placement="bottom-end">
+                                  <div class="dropdown-toggle">
+                                    <i class="text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content w-[160px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                          <i class="h-5 text-slate-500" data-feather="info"></i>
+                                          Details
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                          <i class="h-5 text-slate-500" data-feather="trash-2"></i>
+                                          Delete
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <img src="./images/avatar3.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                                <p class="whitespace-nowrap text-sm font-medium">Robert Fox</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="whitespace-nowrap text-sm font-medium">WS318972</p>
+                            </td>
+                            <td>
+                              <p class="whitespace-nowrap text-sm font-medium">12 min ago</p>
+                            </td>
+                            <td>
+                              <p class="whitespace-nowrap text-center text-sm font-medium">8x</p>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="dropdown" data-placement="bottom-end">
+                                  <div class="dropdown-toggle">
+                                    <i class="text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content w-[160px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                          <i class="h-5 text-slate-500" data-feather="info"></i>
+                                          Details
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                          <i class="h-5 text-slate-500" data-feather="trash-2"></i>
+                                          Delete
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <img src="./images/avatar4.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                                <p class="whitespace-nowrap text-sm font-medium">Wade Warren</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="whitespace-nowrap text-sm font-medium">XD54862</p>
+                            </td>
+                            <td>
+                              <p class="whitespace-nowrap text-sm font-medium">7 min ago</p>
+                            </td>
+                            <td>
+                              <p class="whitespace-nowrap text-center text-sm font-medium">6x</p>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="dropdown" data-placement="bottom-end">
+                                  <div class="dropdown-toggle">
+                                    <i class="text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content w-[160px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                          <i class="h-5 text-slate-500" data-feather="info"></i>
+                                          Details
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link gap-2">
+                                          <i class="h-5 text-slate-500" data-feather="trash-2"></i>
+                                          Delete
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Stock Report & Popular Product Section End -->
             </div>
           </main>
           <!-- Main Content Ends -->

@@ -19,10 +19,8 @@
         (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
       ) {
         document.documentElement.classList.add('dark');
-        window.theme = 'dark'
       } else {
         document.documentElement.classList.remove('dark');
-        window.theme = 'light'
       }
     </script>
   </head>
@@ -1337,189 +1335,205 @@
               <!-- Campaign & Source Visited Section End  -->
 
               <!-- Top Sellers Section start  -->
-              <section class="card">
-                <div class="card-body space-y-2">
-                  <!-- Header  -->
-                  <div class="flex w-full justify-between">
-                    <h6>Top Sellers</h6>
-                    <div class="dropdown" data-placement="bottom-end">
-                      <div class="dropdown-toggle">
-                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
-                      </div>
-                      <div class="dropdown-content w-[160px]">
-                        <ul class="dropdown-list">
-                          <li class="dropdown-list-item">
-                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
-                          </li>
-                          <li class="dropdown-list-item">
-                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
-                          </li>
-                        </ul>
+              <section class="grid grid-cols-1">
+                <div class="card">
+                  <div class="card-body space-y-2">
+                    <!-- Header  -->
+                    <div class="flex w-full justify-between">
+                      <h6>Top Sellers</h6>
+                      <div class="dropdown" data-placement="bottom-end">
+                        <div class="dropdown-toggle">
+                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                        </div>
+                        <div class="dropdown-content w-[160px]">
+                          <ul class="dropdown-list">
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <!-- Seller Table  -->
-                  <div class="table-responsive">
-                    <table class="table min-w-[43rem]">
-                      <thead>
-                        <tr>
-                          <th>Name</th>
-                          <th>Date</th>
-                          <th>Product</th>
-                          <th>Country</th>
-                          <th>Quantity</th>
-                          <th>Total</th>
-                          <th>Revenue</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <div class="flex items-center gap-2">
-                              <img src="./images/avatar1.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
-                              <p class="whitespace-nowrap text-sm font-medium">Wade Warren</p>
-                            </div>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">07 August</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">Cap</p>
-                          </td>
-                          <td>
-                            <div class="flex items-center gap-2">
-                              <img src="./images/flag-australia.png" class="h-5 w-8" alt="flag-img" />
-                              <p class="whitespace-nowrap text-sm font-medium uppercase">AU</p>
-                            </div>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">2865</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">$5.08,876</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">$27,187</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="flex items-center gap-2">
-                              <img src="./images/avatar2.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
-                              <p class="whitespace-nowrap text-sm font-medium">Afrad Bhuyian</p>
-                            </div>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">25 Mar</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">Earings</p>
-                          </td>
-                          <td>
-                            <div class="flex items-center gap-2">
-                              <img src="./images/flag-United_States.jpg" class="h-5 w-8" alt="flag-img" />
-                              <p class="whitespace-nowrap text-sm font-medium uppercase">USA</p>
-                            </div>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">36654</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">$3.06,867</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">$23,89</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="flex items-center gap-2">
-                              <img src="./images/avatar3.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
-                              <p class="whitespace-nowrap text-sm font-medium">Robert Fox</p>
-                            </div>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">14 February</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">1 phone</p>
-                          </td>
-                          <td>
-                            <div class="flex items-center gap-2">
-                              <img src="./images/flag-United_Kingdom.jpg" class="h-5 w-8" alt="flag-img" />
-                              <p class="whitespace-nowrap text-sm font-medium uppercase">UK</p>
-                            </div>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">4253</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">$1.06,657</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">$56,99</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="flex items-center gap-2">
-                              <img src="./images/avatar4.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
-                              <p class="whitespace-nowrap text-sm font-medium">Wade Warren</p>
-                            </div>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">14 January</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">Watches</p>
-                          </td>
-                          <td>
-                            <div class="flex items-center gap-2">
-                              <img src="./images/flag-Germany.jpg" class="h-5 w-8" alt="flag-img" />
-                              <p class="whitespace-nowrap text-sm font-medium uppercase">GER</p>
-                            </div>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">3532</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">$3.54,450</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">$7,67,657</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="flex items-center gap-2">
-                              <img src="./images/avatar5.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
-                              <p class="whitespace-nowrap text-sm font-medium">Afrad Bhuyian</p>
-                            </div>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">11 November</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">Shoes</p>
-                          </td>
-                          <td>
-                            <div class="flex items-center gap-2">
-                              <img src="./images/flag-Brazil.jpg" class="h-5 w-8" alt="flag-img" />
-                              <p class="whitespace-nowrap text-sm font-medium uppercase">BRA</p>
-                            </div>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">9076</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">$9.54,450</p>
-                          </td>
-                          <td>
-                            <p class="whitespace-nowrap text-sm font-medium">$78,01</p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <!-- Seller Table  -->
+                    <div class="table-responsive">
+                      <table class="table min-w-[43rem]">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Product</th>
+                            <th>Country</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Revenue</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <div class="avatar avatar-circle">
+                                  <img src="./images/avatar1.png" class="avatar-img" alt="avatar-img" />
+                                </div>
+                                <p class="whitespace-nowrap font-medium">Wade Warren</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>07 August</p>
+                            </td>
+                            <td>
+                              <p>T-shirt</p>
+                            </td>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <img src="./images/flag-australia.png" class="h-5 w-8" alt="flag-img" />
+                                <p class="whitespace-nowrap uppercase">AU</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>2865</p>
+                            </td>
+                            <td>
+                              <p>$5.08,876</p>
+                            </td>
+                            <td>
+                              <p>$27,187</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <div class="avatar avatar-circle">
+                                  <img src="./images/avatar2.png" class="avatar-img" alt="avatar-img" />
+                                </div>
+                                <p class="whitespace-nowrap font-medium">Afrad Bhuyian</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>25 Mar</p>
+                            </td>
+                            <td>
+                              <p>Earings</p>
+                            </td>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <img src="./images/flag-United_States.jpg" class="h-5 w-8" alt="flag-img" />
+                                <p class="whitespace-nowrap uppercase">USA</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>36654</p>
+                            </td>
+                            <td>
+                              <p>$3.06,867</p>
+                            </td>
+                            <td>
+                              <p>$23,89</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <div class="avatar avatar-circle">
+                                  <img src="./images/avatar3.png" class="avatar-img" alt="avatar-img" />
+                                </div>
+                                <p class="whitespace-nowrap font-medium">Robert Fox</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>14 February</p>
+                            </td>
+                            <td>
+                              <p>1 phone</p>
+                            </td>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <img src="./images/flag-United_Kingdom.jpg" class="h-5 w-8" alt="flag-img" />
+                                <p class="whitespace-nowrap uppercase">UK</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>4253</p>
+                            </td>
+                            <td>
+                              <p>$1.06,657</p>
+                            </td>
+                            <td>
+                              <p>$56,99</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <div class="avatar avatar-circle">
+                                  <img src="./images/avatar4.png" class="avatar-img" alt="avatar-img" />
+                                </div>
+                                <p class="whitespace-nowrap font-medium">
+                                  John William
+                                </p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>14 January</p>
+                            </td>
+                            <td>
+                              <p>Watches</p>
+                            </td>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <img src="./images/flag-Germany.jpg" class="h-5 w-8" alt="flag-img" />
+                                <p class="whitespace-nowrap uppercase">GER</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>3532</p>
+                            </td>
+                            <td>
+                              <p>$3.54,450</p>
+                            </td>
+                            <td>
+                              <p>$7,67,657</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <div class="avatar avatar-circle">
+                                  <img src="./images/avatar5.png" class="avatar-img" alt="avatar-img" />
+                                </div>
+                                <p class="whitespace-nowrap font-medium">
+                                  Ahmed Imtiaz
+                                </p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>11 November</p>
+                            </td>
+                            <td>
+                              <p>Shoes</p>
+                            </td>
+                            <td>
+                              <div class="flex items-center gap-2">
+                                <img src="./images/flag-Brazil.jpg" class="h-5 w-8" alt="flag-img" />
+                                <p class="whitespace-nowrap uppercase">BRA</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>9076</p>
+                            </td>
+                            <td>
+                              <p>$9.54,450</p>
+                            </td>
+                            <td>
+                              <p>$78,01</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -1667,12 +1681,14 @@
                           <tr>
                             <td>
                               <div class="flex items-center gap-2">
-                                <img src="./images/avatar1.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
-                                <p class="whitespace-nowrap text-sm font-medium">Wade Warren</p>
+                                <div class="avatar avatar-circle">
+                                  <img src="./images/avatar1.png" class="avatar-img" alt="avatar-img" />
+                                </div>
+                                <p class="whitespace-nowrap font-medium">Wade Warren</p>
                               </div>
                             </td>
                             <td>
-                              <p class="whitespace-nowrap text-sm font-medium">XD54862</p>
+                              <p class="whitespace-nowrap text-sm font-medium">ABC Store</p>
                             </td>
                             <td>
                               <p class="whitespace-nowrap text-sm font-medium">7 min ago</p>

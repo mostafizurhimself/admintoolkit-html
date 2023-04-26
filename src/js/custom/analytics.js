@@ -8,7 +8,6 @@ import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
 // ========Store Analytics Chart Start ===========
 const storeAnalyticsChartOptions = {
-  colors: [themeColors.primary['500'], colors.sky['500']],
   series: [
     {
       name: 'Visitors',
@@ -19,6 +18,7 @@ const storeAnalyticsChartOptions = {
       data: [0, 2000, 5000, 8000, 15000, 21000, 38000, 43000, 30000, 36000, 25000, 36000],
     },
   ],
+  colors: [themeColors.primary['500'], colors.sky['500']],
   chart: {
     type: 'line',
     height: 350,
@@ -89,8 +89,8 @@ const activeUsersChartOptions = {
     width: 0,
   },
   plotOptions: {
-    expandOnClick: false,
     pie: {
+      expandOnClick: false,
       offsetY: 20,
     },
   },
