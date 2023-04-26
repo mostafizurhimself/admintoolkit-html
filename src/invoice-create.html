@@ -850,7 +850,7 @@
                     <div class="w-full overflow-auto">
                       <div class="min-w-[42rem]">
                         <div class="table-responsive whitespace-nowrap rounded-primary border border-slate-200 dark:border-slate-600">
-                          <table class="table">
+                          <table id="table-products" class="table">
                             <thead>
                               <tr>
                                 <th>Product Name</th>
@@ -884,7 +884,7 @@
                                 <td class="!py-0 !px-0 !pr-2">
                                   <div class="flex items-center justify-center">  
                                     <button
-                                      class="cursor-pointer rounded-full p-1 font-medium focus:bg-slate-300 focus:bg-opacity-50 focus:text-slate-600"
+                                      class="btn-remove-item cursor-pointer rounded-full p-1 font-medium focus:bg-slate-300 focus:bg-opacity-50 focus:text-slate-600"
                                     >
                                       <i class="h-4 w-4" data-feather="x"></i>
                                     </button>
@@ -915,7 +915,7 @@
                                 <td class="!py-0 !px-0 !pr-2">
                                   <div class="flex items-center justify-center"> 
                                     <button
-                                      class="cursor-pointer rounded-full p-1 font-medium focus:bg-slate-300 focus:bg-opacity-50 focus:text-slate-600"
+                                      class="btn-remove-item cursor-pointer rounded-full p-1 font-medium focus:bg-slate-300 focus:bg-opacity-50 focus:text-slate-600"
                                     >
                                       <i class="h-4 w-4" data-feather="x"></i>
                                     </button>
@@ -927,9 +927,9 @@
                         </div>
 
                         <div class="flex items-stretch justify-between mt-4">
-                          <div class="w-2/5  flex flex-col items-start gap-2">
+                          <div class="w-2/5 flex flex-col items-start gap-y-4">
                             <div class="w-full">
-                              <button class="btn btn-plain-primary">
+                              <button id="btn-add-item" class="text-primary-500 text-sm inline-flex items-center gap-x-2 hover:text-primary-700 focus:text-primary-700 dark:hover:text-primary-600 dark:focus:text-primary-600">
                                 <i class="h-4" data-feather="plus"></i>
                                 New Item
                               </button>
@@ -1071,5 +1071,6 @@
       <!-- Wrapper Ends -->
     </div>
     <script src="./js/app.js" type="module"></script>
+    <script src="./js/custom/invoice-create.js" type="module"></script>
   </body>
 </html>
