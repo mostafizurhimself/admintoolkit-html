@@ -6,24 +6,23 @@ import * as am5map from '@amcharts/amcharts5/map';
 import am5geodata_worldLow from '@amcharts/amcharts5-geodata/worldLow';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
-const salesAnalyticsChartOptions = {
-  colors: [themeColors.primary['500'], colors.sky['500']],
+const theme = localStorage.getItem('theme');
+
+// ========Store Analytics Chart Start ===========
+const storeAnalyticsChartOptions = {
   series: [
     {
-      name: 'Total Sales',
-      data: [0, 2000, 5000, 8000, 15000, 21000, 38000, 43000, 30000, 36000, 25000, 36000],
+      name: 'Visitors',
+      data: [0, 15000, 7000, 22000, 15000, 30000, 28000, 40000, 30000, 25000, 44000, 48000],
     },
     {
-      name: 'Total Orders',
-      data: [0, 3500, 7000, 10000, 20000, 25000, 45000, 40000, 38000, 39000, 44000, 50000],
+      name: 'Orders',
+      data: [0, 5000, 1500, 5000, 2500, 25000, 10000, 15000, 10000, 30000, 15000, 36000],
     },
   ],
-  fill: {
-    type: 'solid',
-    colors: ['transparent'],
-  },
+  colors: [themeColors.primary['500'], colors.sky['500']],
   chart: {
-    type: 'area',
+    type: 'line',
     height: 350,
     zoom: {
       enabled: false,
@@ -38,9 +37,16 @@ const salesAnalyticsChartOptions = {
   },
   stroke: {
     curve: 'smooth',
+    width: 2,
   },
   xaxis: {
     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    axisBorder: {
+      color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+    },
+    axisTicks: {
+      color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+    },
   },
   yaxis: {
     min: 0,
@@ -55,20 +61,40 @@ const salesAnalyticsChartOptions = {
   legend: {
     show: false,
   },
+  grid: {
+    borderColor: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+  },
 };
+let storeAnalyticsChart = new ApexCharts(document.querySelector('#store-analytics-chart'), storeAnalyticsChartOptions);
+storeAnalyticsChart.render();
+// Custom Legends
+const salesAnalyticsChartLegends = document.querySelectorAll("#store-analytics-chart-legend input[type='checkbox']");
+salesAnalyticsChartLegends.forEach((legend) => {
+  legend.addEventListener('click', (event) => {
+    storeAnalyticsChart.toggleSeries(event.target.value);
+    legend.parentNode.classList.toggle('opacity-20');
+  });
+});
 
-const topCategoriesChartOptions = {
-  series: [41, 17, 15],
-  labels: ['Electronics', 'Furniture', 'Grocery'],
-  colors: [themeColors.primary['500'], colors.amber['300'], themeColors.danger['400']],
+// ========Store Analytics Chart End ===========
+
+// ========Active Users Chart Start ===========
+
+const activeUsersChartOptions = {
+  series: [25000, 15000, 5000],
+  labels: ['Desktop', 'Mobile', 'Tablet'],
+  colors: [themeColors.primary['500'], themeColors.warning['400'], themeColors.danger['400']],
   chart: {
     type: 'donut',
     width: '100%',
-    height: 400,
+    height: 350,
+    toolbar: {
+      show: false,
+    },
     fontFamily: themeConfig.theme.fontFamily.sans,
   },
-  legend: {
-    position: 'bottom',
+  dataLabels: {
+    enabled: false,
   },
   stroke: {
     width: 0,
@@ -76,29 +102,81 @@ const topCategoriesChartOptions = {
   plotOptions: {
     pie: {
       expandOnClick: false,
+      offsetY: 20,
+      donut: {
+        labels: {
+          show: true,
+          name: {
+            show: true,
+            fontSize: '14px',
+            fontWeight: 500,
+            color: colors.slate['400'],
+          },
+          value: {
+            show: true,
+            fontSize: '28px',
+            fontWeight: 'bold',
+            color: theme === 'dark' ? colors.slate['300'] : colors.slate['700'],
+            formatter: function (val) {
+              return Intl.NumberFormat().format(val);
+            },
+          },
+          total: {
+            show: true,
+            label: 'Total Users',
+            fontSize: '14px',
+            fontWeight: 500,
+            color: colors.slate['400'],
+            formatter: function (w) {
+              const total = w.globals.seriesTotals.reduce((a, b) => {
+                return a + b;
+              }, 0);
+
+              return Intl.NumberFormat().format(total);
+            },
+          },
+        },
+      },
+    },
+  },
+  legend: {
+    position: 'bottom',
+    horizontalAlign: 'center',
+    itemMargin: {
+      horizontal: 20,
+    },
+    markers: {
+      width: 15,
+      height: 15,
+    },
+    formatter: function (name, opts) {
+      const total = opts.w.globals.seriesTotals.reduce((a, b) => {
+        return a + b;
+      }, 0);
+      const value = opts.w.globals.series[opts.seriesIndex];
+
+      const percentage = ((value / total) * 100).toFixed(1);
+
+      return `
+        <div class="ml-2">
+          <p class="text-slate-700 text-base font-semibold dark:text-slate-300">${percentage}%</p>
+          <p class="text-sm">${name}</p>
+        </div>
+      `;
+    },
+    onItemClick: {
+      toggleDataSeries: false,
+    },
+    onItemHover: {
+      highlightDataSeries: false,
     },
   },
 };
-// Sales Analytics Chart Start
-let salesAnalyticsChart = new ApexCharts(document.querySelector('#sales-analytics-chart'), salesAnalyticsChartOptions);
-salesAnalyticsChart.render();
-// AreaChart Custom Legends
-const salesAnalyticsChartLegends = document.querySelectorAll("#sales-analytics-chart-legend input[type='checkbox']");
-salesAnalyticsChartLegends.forEach((legend) => {
-  legend.addEventListener('click', (event) => {
-    salesAnalyticsChart.toggleSeries(event.target.value);
-    legend.parentNode.classList.toggle('opacity-20');
-  });
-});
-// Sales Analytics Chart End
 
-// Top Categories Chart Start
-let topCategoriesChartOption = new ApexCharts(
-  document.querySelector('#top-categories-chart'),
-  topCategoriesChartOptions
-);
-topCategoriesChartOption.render();
-// Top Categories Chart End
+const activeUsersChart = new ApexCharts(document.querySelector('#active-users-chart'), activeUsersChartOptions);
+activeUsersChart.render();
+
+// ========Active Users Chart End ===========
 
 // ========Sale Location Cart Start ===========
 
