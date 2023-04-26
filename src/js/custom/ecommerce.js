@@ -76,7 +76,7 @@ salesReportChartLegends.forEach((legend) => {
 const orderStatusChartOptions = {
   series: [25000, 15000, 5000],
   labels: ['Completed', 'In Progress', 'Canceled'],
-  colors: [themeColors.primary['500'], themeColors.warning['400'], colors.red['500']],
+  colors: [themeColors.primary['500'], themeColors.warning['400'], themeColors.danger['400']],
   chart: {
     type: 'donut',
     width: '100%',
@@ -158,11 +158,11 @@ const orderStatusChartOptions = {
       `;
     },
     onItemClick: {
-      toggleDataSeries: false
-  },
+      toggleDataSeries: false,
+    },
     onItemHover: {
-      highlightDataSeries: false
-  },
+      highlightDataSeries: false,
+    },
   },
 };
 
@@ -239,7 +239,7 @@ const revenueChartOptions = {
   plotOptions: {
     bar: {
       horizontal: false,
-      columnWidth: "20px",
+      columnWidth: '20px',
       borderRadius: 5,
       borderRadiusApplication: 'around',
       borderRadiusWhenStacked: 'all',
@@ -265,21 +265,6 @@ const revenueChartOptions = {
   },
   legend: {
     show: false,
-    // position: 'bottom',
-    // horizontalAlign: 'center',
-    // itemMargin: {
-    //   horizontal: 10,
-    // },
-    // markers: {
-    //   width: 15,
-    //   height: 15,
-    //   radius: 8,
-    // },
-    // formatter: function (name) {
-    //   return `
-    //     <p class="text-xs ml-1">${name}</p>
-    //   `;
-    // },
   },
 };
 const revenueChart = new ApexCharts(document.querySelector('#revenue-chart'), revenueChartOptions);

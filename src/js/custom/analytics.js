@@ -6,16 +6,18 @@ import * as am5map from '@amcharts/amcharts5/map';
 import am5geodata_worldLow from '@amcharts/amcharts5-geodata/worldLow';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
+const theme = localStorage.getItem('theme');
+
 // ========Store Analytics Chart Start ===========
 const storeAnalyticsChartOptions = {
   series: [
     {
       name: 'Visitors',
-      data: [0, 3500, 7000, 10000, 20000, 25000, 45000, 40000, 38000, 39000, 44000, 50000],
+      data: [0, 15000, 7000, 22000, 15000, 30000, 28000, 40000, 30000, 25000, 44000, 48000],
     },
     {
       name: 'Orders',
-      data: [0, 2000, 5000, 8000, 15000, 21000, 38000, 43000, 30000, 36000, 25000, 36000],
+      data: [0, 5000, 1500, 5000, 2500, 25000, 10000, 15000, 10000, 30000, 15000, 36000],
     },
   ],
   colors: [themeColors.primary['500'], colors.sky['500']],
@@ -72,7 +74,7 @@ salesAnalyticsChartLegends.forEach((legend) => {
 const activeUsersChartOptions = {
   series: [25000, 15000, 5000],
   labels: ['Desktop', 'Mobile', 'Tablet'],
-  colors: [themeColors.primary['500'], themeColors.warning['400'], colors.red['500']],
+  colors: [themeColors.primary['500'], themeColors.warning['400'], themeColors.danger['400']],
   chart: {
     type: 'donut',
     width: '100%',
@@ -92,6 +94,40 @@ const activeUsersChartOptions = {
     pie: {
       expandOnClick: false,
       offsetY: 20,
+      donut: {
+        labels: {
+          show: true,
+          name: {
+            show: true,
+            fontSize: '14px',
+            fontWeight: 500,
+            color: colors.slate['400'],
+          },
+          value: {
+            show: true,
+            fontSize: '28px',
+            fontWeight: 'bold',
+            color: theme === 'dark' ? colors.slate['300'] : colors.slate['700'],
+            formatter: function (val) {
+              return Intl.NumberFormat().format(val);
+            },
+          },
+          total: {
+            show: true,
+            label: 'Total Users',
+            fontSize: '14px',
+            fontWeight: 500,
+            color: colors.slate['400'],
+            formatter: function (w) {
+              const total = w.globals.seriesTotals.reduce((a, b) => {
+                return a + b;
+              }, 0);
+
+              return Intl.NumberFormat().format(total);
+            },
+          },
+        },
+      },
     },
   },
   legend: {
@@ -104,9 +140,9 @@ const activeUsersChartOptions = {
       width: 15,
       height: 15,
     },
-    formatter: function (name, opts) { 
-      const total = opts.w.globals.seriesTotals.reduce((a, b) => { 
-        return a + b
+    formatter: function (name, opts) {
+      const total = opts.w.globals.seriesTotals.reduce((a, b) => {
+        return a + b;
       }, 0);
       const value = opts.w.globals.series[opts.seriesIndex];
 
@@ -117,7 +153,13 @@ const activeUsersChartOptions = {
           <p class="text-slate-700 text-base font-semibold dark:text-slate-300">${percentage}%</p>
           <p class="text-sm">${name}</p>
         </div>
-      `
+      `;
+    },
+    onItemClick: {
+      toggleDataSeries: false,
+    },
+    onItemHover: {
+      highlightDataSeries: false,
     },
   },
 };
