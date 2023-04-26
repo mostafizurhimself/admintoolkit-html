@@ -46,8 +46,10 @@ class ThemeSwitcher {
       localStorage.removeItem('theme');
     }
 
-    this.updateActiveClass();
-    this.checkThemeMode();
+    window.location.reload();
+
+    // this.updateActiveClass();
+    // this.checkThemeMode();
   }
 
   updateActiveClass() {
@@ -66,16 +68,16 @@ class ThemeSwitcher {
     });
   }
 
-  checkThemeMode() {
-    if (
-      localStorage.getItem('theme') === 'dark' ||
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }
+  // checkThemeMode() {
+  //   if (
+  //     localStorage.getItem('theme') === 'dark' ||
+  //     (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  //   ) {
+  //     document.documentElement.classList.add('dark');
+  //   } else {
+  //     document.documentElement.classList.remove('dark');
+  //   }
+  // }
 }
 
 const themeSwitcher = {
@@ -83,7 +85,7 @@ const themeSwitcher = {
     const dropdownThemeSwitcher = document.querySelector('#dropdown-theme-switcher');
 
     if (dropdownThemeSwitcher) {
-      new ThemeSwitcher(dropdownThemeSwitcher)
+      new ThemeSwitcher(dropdownThemeSwitcher);
     }
   },
 };
