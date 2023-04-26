@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/logo-small.svg" type="image/svg" />
-    <title>Analytics - Admin Toolkit</title>
+    <title>Dashboard - Admin Toolkit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,7 +37,7 @@
 
           <div class="sidebar-logo-text">
             <h1 class="flex text-xl">
-              <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
+              <span class="font-bold text-slate-700 dark:text-slate-200"> Admin </span>
               <span class="font-semibold text-primary-500">Toolkit</span>
             </h1>
 
@@ -61,10 +61,10 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="/" class="sidebar-submenu-item">Ecommerce</a>
+                <a href="/" class="sidebar-submenu-item"> Analytics </a>
               </li>
               <li>
-                <a href="./analytics.html" class="sidebar-submenu-item active"> Analytics </a>
+                <a href="./ecommerce.html" class="sidebar-submenu-item active">Ecommerce</a>
               </li>
             </ul>
           </li>
@@ -723,7 +723,7 @@
                   </div>
                   <div class="py-1">
                     <form method="POST" action="#">
-                      <button type="submit" class="dropdown-btn" >
+                      <button type="submit" class="dropdown-btn">
                         <i width="18" height="18" data-feather="log-out" class="text-slate-500"></i>
                         <span>Sign out</span>
                       </button>
@@ -744,18 +744,17 @@
           <main class="container flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5 class="px-2 md:px-0">Analytics</h5>
+              <h5 class="px-2 md:px-0">Dashboard</h5>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
                 </li>
                 <li class="breadcrumb-item">
-                  <a href="#">Analytics</a>
+                  <a href="#">Dashboard</a>
                 </li>
               </ol>
             </div>
             <!-- Page Title Ends -->
-
             <div class="space-y-6">
               <!-- Overview Section Start -->
               <section class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
@@ -765,12 +764,12 @@
                     <div
                       class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary-500 bg-opacity-20 text-primary-500"
                     >
-                      <i data-feather="box" class="text-3xl"></i>
+                      <i class="bx bx-dollar-circle text-3xl"></i>
                     </div>
                     <div class="flex flex-1 flex-col gap-1">
-                      <p class="text-sm tracking-wide text-slate-500">Product Views</p>
+                      <p class="text-sm tracking-wide text-slate-500">Total Sales</p>
                       <div class="flex flex-wrap items-baseline justify-between gap-2">
-                        <h4>$24,92</h4>
+                        <h4>$25,275</h4>
                         <span class="flex items-center text-xs font-medium text-success-500"
                           ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i>2.2%</span
                         >
@@ -784,12 +783,12 @@
                     <div
                       class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-success-500 bg-opacity-20 text-success-500"
                     >
-                      <i class="bx bx-dollar-circle text-3xl"></i>
+                      <i class="ti ti-shopping-cart text-3xl"></i>
                     </div>
                     <div class="flex flex-1 flex-col gap-1">
-                      <p class="text-sm tracking-wide text-slate-500">Product Sold</p>
+                      <p class="text-sm tracking-wide text-slate-500">Total Orders</p>
                       <div class="flex flex-wrap items-baseline justify-between gap-2">
-                        <h4>8,430</h4>
+                        <h4>5,630</h4>
                         <span class="flex items-center text-xs font-medium text-danger-500">
                           <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i> 0.5%</span
                         >
@@ -803,10 +802,10 @@
                     <div
                       class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-warning-500 bg-opacity-20 text-warning-500"
                     >
-                      <i class="ti ti-thumb-up text-3xl"></i>
+                      <i class="ti ti-users text-3xl"></i>
                     </div>
                     <div class="flex flex-1 flex-col gap-1">
-                      <p class="text-sm tracking-wide text-slate-500">Total Likes</p>
+                      <p class="text-sm tracking-wide text-slate-500">Total Customers</p>
                       <div class="flex flex-wrap items-baseline justify-between gap-2">
                         <h4>46,256</h4>
                         <span class="flex items-center text-xs font-medium text-success-500">
@@ -822,12 +821,12 @@
                     <div
                       class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-info-500 bg-opacity-20 text-info-500"
                     >
-                      <i class="ti ti-message-2-cog text-3xl"></i>
+                      <i class="ti ti-receipt-refund text-3xl"></i>
                     </div>
                     <div class="flex flex-1 flex-col gap-1">
-                      <p class="text-sm tracking-wide text-slate-500">Conversation</p>
+                      <p class="text-sm tracking-wide text-slate-500">Total Refunds</p>
                       <div class="flex flex-wrap items-baseline justify-between gap-2">
-                        <h4>$200,56</h4>
+                        <h4>$20,56</h4>
                         <span class="flex items-center text-xs font-medium text-success-500">
                           <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i> 3.2%</span
                         >
@@ -838,31 +837,31 @@
               </section>
               <!-- Overview Section End -->
 
-              <!-- Store Analytics, Active Users, Sales By Location, Top & Most Viewed Product Section Start  -->
-              <section class="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                <!-- Store Analytics -->
-                <div class="card md:col-span-2 order-1">
+              <!-- Sales Report, Order Status, Profit, Revenue, Shipping Status Section Start  -->
+              <section class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+                <!-- Sales Report -->
+                <div class="card col-span-1 md:col-span-2">
                   <div class="card-body">
                     <!-- Chart wrap -->
                     <div id="chart-wrap" class="flex flex-col justify-between">
                       <div class="flex flex-wrap items-center justify-between gap-3 md:gap-0">
                         <!-- Chart Title  -->
-                        <h6>Store Analytics</h6>
+                        <h6>Sales Report</h6>
                         <!-- Legends  -->
-                        <div id="store-analytics-chart-legend" class="flex items-center gap-4">
-                          <label for="visitors">
-                            <input type="checkbox" id="visitors" class="hidden" checked value="Visitors" />
+                        <div id="sales-report-chart-legend" class="flex items-center gap-4">
+                          <label for="sales">
+                            <input type="checkbox" id="sales" class="hidden" checked value="Sales" />
                             <div class="flex items-center gap-1">
                               <div class="h-4 w-4 rounded-full bg-primary-500"></div>
-                              <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Visitors</p>
+                              <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Sales</p>
                             </div>
                           </label>
 
-                          <label for="orders">
-                            <input type="checkbox" id="orders" class="hidden" checked value="Orders" />
+                          <label for="profit">
+                            <input type="checkbox" id="profit" class="hidden" checked value="Profit" />
                             <div class="flex items-center gap-1">
                               <div class="h-4 w-4 rounded-full bg-sky-500"></div>
-                              <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Orders</span>
+                              <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Profit</span>
                             </div>
                           </label>
                         </div>
@@ -874,16 +873,16 @@
                         </select>
                       </div>
                       <!-- Chart  -->
-                      <div id="store-analytics-chart" class="-mx-4"></div>
+                      <div id="sales-report-chart" class="-mx-4"></div>
                     </div>
                   </div>
                 </div>
-                <!-- Active Users -->
-                <div class="card col-span-1 order-3 xl:order-2">
+                <!-- Order Status -->
+                <div class="card xl:col-span-1">
                   <div class="card-body flex flex-col items-center justify-between">
                     <!-- Header  -->
                     <div class="flex w-full justify-between">
-                      <h6>Active Users</h6>
+                      <h6>Order Status</h6>
                       <div class="dropdown" data-placement="bottom-end">
                         <div class="dropdown-toggle">
                           <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
@@ -901,260 +900,15 @@
                       </div>
                     </div>
                     <!-- Chart  -->
-                    <div id="active-users-chart" class="w-full"></div>
-                    <!-- Legends  -->
-                    <!-- <div id="store-analytics-chart-legend" class="flex items-center gap-4">
-                      <label for="visitors">
-                        <input type="checkbox" id="visitors" class="hidden" checked value="Visitors" />
-                        <div class="flex items-center gap-1">
-                          <div class="h-4 w-4 rounded-full bg-primary-500"></div>
-                          <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Visitors</p>
-                        </div>
-                      </label>
-
-                      <label for="orders">
-                        <input type="checkbox" id="orders" class="hidden" checked value="Orders" />
-                        <div class="flex items-center gap-1">
-                          <div class="h-4 w-4 rounded-full bg-sky-500"></div>
-                          <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Orders</span>
-                        </div>
-                      </label>
-                    </div> -->
+                    <div id="order-status-chart" class="w-full"></div>
                   </div>
                 </div>
-                  <!-- Sales By Location  -->
-                <div class="card col-span-1 md:col-span-2 order-2 xl:order-3">
-                  <div class="card-body flex h-full flex-col justify-between gap-8">
-                    <div class="flex flex-wrap justify-between gap-2">
-                      <h6>Sales By Location</h6>
-                      <select class="select select-sm w-full md:w-48">
-                        <option value="1">Top Country</option>
-                        <option value="2">Latest Country</option>
-                        <option value="3">New Country</option>
-                      </select>
-                    </div>
-                    <div class="grid min-h-min flex-grow grid-cols-1 gap-4 md:grid-cols-5">
-                      <!-- Sales Location Chart  -->
-                      <div id="salesLocationChart" class="col-span-1 h-96 md:col-span-3 md:h-full"></div>
-                      <div class="col-span-1 my-4 flex flex-col gap-8 md:col-span-2">
-                        <!-- United States  -->
-                        <div class="flex items-center gap-2">
-                          <img src="./images/flag-United_States.jpg" class="h-5 w-8" alt="flag-image" />
-                          <div class="flex flex-1 flex-col gap-1">
-                            <div class="flex items-center justify-between">
-                              <h6 class="text-sm text-slate-700 dark:text-slate-300">United States</h6>
-                              <p class="text-sm text-slate-400">50%</p>
-                            </div>
-                            <div
-                              class="progress progress-sm"
-                              role="progressbar"
-                              aria-valuenow="10"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              <div class="progress-line">
-                                <div class="progress-line-track">
-                                  <div class="progress-line-thumb" style="width: 50%"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Australia  -->
-                        <div class="flex items-center gap-2">
-                          <img src="./images/flag-australia.png" class="h-5 w-8" alt="flag-image" />
-                          <div class="flex flex-1 flex-col gap-1">
-                            <div class="flex items-center justify-between">
-                              <h6 class="text-sm text-slate-700 dark:text-slate-300">Australia</h6>
-                              <p class="text-sm text-slate-400">35%</p>
-                            </div>
-                            <div
-                              class="progress progress-success progress-sm"
-                              role="progressbar"
-                              aria-valuenow="10"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              <div class="progress-line">
-                                <div class="progress-line-track">
-                                  <div class="progress-line-thumb" style="width: 35%"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Brazil  -->
-                        <div class="flex items-center gap-2">
-                          <img src="./images/flag-Brazil.jpg" class="h-5 w-8" alt="flag-image" />
-                          <div class="flex flex-1 flex-col gap-1">
-                            <div class="flex items-center justify-between">
-                              <h6 class="text-sm text-slate-700 dark:text-slate-300">Brazil</h6>
-                              <p class="text-sm text-slate-400">22%</p>
-                            </div>
-                            <div
-                              class="progress progress-info progress-sm"
-                              role="progressbar"
-                              aria-valuenow="10"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              <div class="progress-line">
-                                <div class="progress-line-track">
-                                  <div class="progress-line-thumb" style="width: 22%"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Germany  -->
-                        <div class="flex items-center gap-2">
-                          <img src="./images/flag-Germany.jpg" class="h-5 w-8" alt="flag-image" />
-                          <div class="flex flex-1 flex-col gap-1">
-                            <div class="flex items-center justify-between">
-                              <h6 class="text-sm text-slate-700 dark:text-slate-300">Germany</h6>
-                              <p class="text-sm text-slate-400">52%</p>
-                            </div>
-                            <div
-                              class="progress progress-warning progress-sm"
-                              role="progressbar"
-                              aria-valuenow="10"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              <div class="progress-line">
-                                <div class="progress-line-track">
-                                  <div class="progress-line-thumb" style="width: 52%"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Top Selling & Most Viewed Product  -->
-                <div class="col-span-1 space-y-6 order-4">
-                  <!-- Top Selling Product  -->
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="flex flex-wrap items-center justify-between">
-                        <h6>Top Selling Product</h6>
-                        <div class="flex items-center gap-2">
-                          <label for="top-selling-product-today" class="cursor-pointer">
-                            <input
-                              type="radio"
-                              name="top-selling-product"
-                              id="top-selling-product-today"
-                              class="peer sr-only"
-                              checked
-                            />
-                            <span
-                              class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400"
-                              >Today</span
-                            >
-                          </label>
-                          <span class="text-sm text-slate-200 dark:text-slate-600">|</span>
-                          <label for="top-selling-product-month" class="cursor-pointer">
-                            <input
-                              type="radio"
-                              name="top-selling-product"
-                              id="top-selling-product-month"
-                              class="peer sr-only"
-                            />
-                            <span
-                              class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400"
-                              >Month</span
-                            >
-                          </label>
-                        </div>
-                      </div>
-                      <div class="mt-4 flex items-center gap-4 rounded-primary bg-slate-50 p-4 dark:bg-slate-900">
-                        <img
-                          src="./images/product8.png"
-                          alt="product-img"
-                          class="w-20 rounded-primary bg-white p-2 dark:bg-slate-800"
-                        />
-                        <div class="flex flex-1 flex-col gap-1">
-                          <h3 class="text-sm font-semibold">Stylish Sunglass</h3>
-                          <p class="text-sm text-slate-500 dark:text-slate-400">New offer only $26.00</p>
-                          <div class="flex gap-1 text-xl text-warning-400">
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Most Viewed Product -->
-                  <div class="card">
-                    <div class="card-body flex flex-col gap-2">
-                      <div class="flex flex-wrap items-center justify-between">
-                        <h6>Most Viewed Product</h6>
-                        <div class="flex items-center gap-2">
-                          <label for="most-viewed-product-today" class="cursor-pointer">
-                            <input
-                              type="radio"
-                              name="most-viewed-product"
-                              id="most-viewed-product-today"
-                              class="peer sr-only"
-                              checked
-                            />
-                            <span
-                              class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400"
-                              >Today</span
-                            >
-                          </label>
-                          <span class="text-sm text-slate-200 dark:text-slate-600">|</span>
-                          <label for="most-viewed-product-month" class="cursor-pointer">
-                            <input
-                              type="radio"
-                              name="most-viewed-product"
-                              id="most-viewed-product-month"
-                              class="peer sr-only"
-                            />
-                            <span
-                              class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400"
-                              >Month</span
-                            >
-                          </label>
-                        </div>
-                      </div>
-                      <div class="flex items-center gap-4 rounded-primary bg-slate-50 p-4 dark:bg-slate-900">
-                        <img
-                          src="./images/product7.png"
-                          alt="product-img"
-                          class="w-20 rounded-primary bg-white p-2 dark:bg-slate-800"
-                        />
-                        <div class="flex flex-1 flex-col gap-1">
-                          <h3 class="text-sm font-semibold">Trending Oz Pro Shoes</h3>
-                          <p class="text-sm text-slate-500 dark:text-slate-400">New offer only $105.00</p>
-                          <div class="flex gap-1 text-xl text-warning-500">
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bx-star"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- Store Analytics, Active Users, Sales By Location, Top & Most Viewed Product Section End  -->
-
-              <!-- Campaign & Source Visited Section Start  -->
-              <section class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                <!-- Monthly Campaign State  -->
-                <div class="card">
-                  <div class="card-body flex h-full flex-col">
+                <!-- Profit -->
+                <div class="card col-span-1">
+                  <div class="card-body">
                     <!-- Header  -->
                     <div class="flex w-full justify-between">
-                      <h6>Monthly Campaign State</h6>
+                      <h6>Profit Growth</h6>
                       <div class="dropdown" data-placement="bottom-end">
                         <div class="dropdown-toggle">
                           <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
@@ -1171,79 +925,16 @@
                         </div>
                       </div>
                     </div>
-                    <p class="my-1 text-sm text-slate-400">34.25k email sent</p>
-                    <div class="mt-auto divide-y dark:divide-slate-600">
-                      <!-- Emails  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-primary-500 bg-opacity-20 text-primary-500"
-                        >
-                          <i class="ti ti-refresh text-3xl"></i>
-                        </div>
-                        <div>
-                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Retargeted</h6>
-                          <p class="text-sm text-slate-400">14,679</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-success-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i>20%</span
-                        >
-                      </div>
-                      <!-- Opened  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-14 flex h-12 w-12 items-center justify-center rounded-primary bg-success-500 bg-opacity-20 text-success-500"
-                        >
-                          <i class="ti ti-external-link text-3xl"></i>
-                        </div>
-                        <div>
-                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Opened</h6>
-                          <p class="text-sm text-slate-400">12,675</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-success-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i>35%</span
-                        >
-                      </div>
-
-                      <!-- Clicked  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-info-500 bg-opacity-20 text-info-500"
-                        >
-                          <i class="ti ti-hand-click text-3xl"></i>
-                        </div>
-                        <div>
-                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Clicked</h6>
-                          <p class="text-sm text-slate-400">6,320</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-danger-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i>10%</span
-                        >
-                      </div>
-
-                      <!-- Complaints  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-warning-500 bg-opacity-10 text-warning-500"
-                        >
-                          <i class="ti ti-message-exclamation text-3xl"></i>
-                        </div>
-                        <div>
-                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Complaints</h6>
-                          <p class="text-sm text-slate-400">575</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-danger-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i>02%</span
-                        >
-                      </div>
-                    </div>
+                    <!-- Chart  -->
+                    <div id="profit-chart" class="-mx-4"></div>
                   </div>
                 </div>
-                <!-- Source Visits -->
-                <div class="card">
-                  <div class="card-body flex h-full flex-col">
+                <!-- Revenue -->
+                <div class="card col-span-1">
+                  <div class="card-body">
                     <!-- Header  -->
                     <div class="flex w-full justify-between">
-                      <h6>Source Visitors</h6>
+                      <h6>Revenue</h6>
                       <div class="dropdown" data-placement="bottom-end">
                         <div class="dropdown-toggle">
                           <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
@@ -1251,96 +942,71 @@
                         <div class="dropdown-content w-[160px]">
                           <ul class="dropdown-list">
                             <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Actions </a>
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
                             </li>
                             <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link"> Another Action </a>
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
                             </li>
                           </ul>
                         </div>
                       </div>
                     </div>
-                    <p class="text-sm text-slate-400">70.8k Visiters</p>
-                    <div class="mt-auto divide-y dark:divide-slate-600">
-                      <!-- Social Network -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-success-500 bg-opacity-20 text-success-500"
-                        >
-                          <i class="ti ti-social text-3xl"></i>
+                    <!-- Chart  -->
+                    <div id="revenue-chart" class="-mx-4"></div>
+                  </div>
+                </div>
+                <!-- Shipping Status -->
+                <div class="card col-span-1">
+                  <div class="card-body flex flex-col items-center justify-between">
+                    <!-- Header  -->
+                    <div class="flex w-full justify-between">
+                      <h6>Shipping Status</h6>
+                      <div class="dropdown" data-placement="bottom-end">
+                        <div class="dropdown-toggle">
+                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
                         </div>
-                        <div>
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-300">
-                            Social Network
-                          </p>
-                          <p class="text-sm text-slate-400">31.4k</p>
+                        <div class="dropdown-content w-[160px]">
+                          <ul class="dropdown-list">
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                            </li>
+                          </ul>
                         </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-danger-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i>20%</span
-                        >
                       </div>
-                      <!-- Direct Source  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-primary-500 bg-opacity-20 text-primary-500"
-                        >
-                          <i class="ti ti-world-search text-3xl"></i>
-                        </div>
-                        <div>
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-300">
-                            Direct Source
-                          </p>
-                          <p class="text-sm text-slate-400">1.4k</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-success-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i>15%</span
-                        >
+                    </div>
+                    <!-- Chart  -->
+                    <div id="shipping-status-chart" class="w-full"></div>
+                    <!-- Legends -->
+                    <div class="flex items-center gap-6">
+                      <div class="flex items-center gap-2 cursor-default">
+                        <span class="inline-block h-[15px] w-[15px] rounded-full bg-primary-500"></span>
+                         <div >
+                           <p class="text-sm font-semibold">70.0%</p>
+                           <p class="text-slate-400 text-xs">Shipped</p>
+                         </div>
                       </div>
-
-                      <!-- ADVT  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-warning-500 bg-opacity-20 text-warning-500"
-                        >
-                          <i class="ti ti-social text-3xl"></i>
-                        </div>
-                        <div class="flex flex-col">
-                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">ADVT</h6>
-                          <p class="text-sm text-slate-400">31.2k</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-success-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i>16%</span
-                        >
-                      </div>
-
-                      <!-- Referrals  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="flex h-12 w-14 items-center justify-center rounded-primary bg-info-500 bg-opacity-20 text-info-500"
-                        >
-                          <i class="ti ti-users-group text-3xl"></i>
-                        </div>
-                        <div class="flex flex-col">
-                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Referrals</h6>
-                          <p class="text-sm text-slate-400">345</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-danger-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i>08%</span
-                        >
+                      <div class="flex items-center gap-2 cursor-default">
+                        <span class="inline-block h-[15px] w-[15px] rounded-full bg-slate-200 dark:bg-slate-600"></span>
+                         <div >
+                           <p class="text-sm font-semibold">30.0%</p>
+                           <p class="text-slate-400 text-xs">Pending</p>
+                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </section>
-              <!-- Campaign & Source Visited Section End  -->
+              <!-- Sales Report, Order Status, Profit, Revenue, Shipping Status Section End  -->
 
-              <!-- Top Sellers Section start  -->
+              <!-- Recent Orders Section Start -->
               <section class="grid grid-cols-1">
                 <div class="card">
                   <div class="card-body space-y-2">
-                    <!-- Header  -->
                     <div class="flex w-full justify-between">
-                      <h6>Top Sellers</h6>
+                      <h6>Recent Orders</h6>
                       <div class="dropdown" data-placement="bottom-end">
                         <div class="dropdown-toggle">
                           <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
@@ -1357,178 +1023,339 @@
                         </div>
                       </div>
                     </div>
-                    <!-- Seller Table  -->
+
                     <div class="table-responsive">
                       <table class="table min-w-[43rem]">
                         <thead>
                           <tr>
-                            <th>Name</th>
-                            <th>Date</th>
-                            <th>Product</th>
-                            <th>Country</th>
-                            <th>Quantity</th>
+                            <th>Customer</th>
                             <th>Total</th>
-                            <th>Revenue</th>
+                            <th>Ordered At</th>
+                            <th>Status</th>
+                            <th>
+                              <p class="text-right">Actions</p>
+                            </th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
+                           
                             <td>
-                              <div class="flex items-center gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar1.png" class="avatar-img" alt="avatar-img" />
+                              <div class="flex gap-2">
+                                <img src="./images/avatar1.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                                <div>
+                                  <h4 class="m-0 p-0 text-sm font-medium">Ahmed Shakil</h4>
+                                  <p class="m-0 p-0 text-xs font-normal text-slate-400">jackson.graham@example.com</p>
                                 </div>
-                                <p class="whitespace-nowrap font-medium">Wade Warren</p>
                               </div>
                             </td>
+                            <td>$446.61</td>
+                            <td>19 Aug 2022, 10:39 pm</td>
                             <td>
-                              <p>07 August</p>
+                              <div class="badge badge-soft-primary">Processing</div>
                             </td>
                             <td>
-                              <p>T-shirt</p>
-                            </td>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/flag-australia.png" class="h-5 w-8" alt="flag-img" />
-                                <p class="whitespace-nowrap uppercase">AU</p>
+                              <div class="flex justify-end">
+                                <div class="dropdown" data-placement="bottom-start">
+                                  <div class="dropdown-toggle">
+                                    <i class="w-6 text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content min-w-[150px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                          <span>Details</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                          <span>PDF</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                          <span>Delete</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
                               </div>
                             </td>
+                          </tr>
+                          <tr>
+                          
                             <td>
-                              <p>2865</p>
+                              <div class="flex gap-2">
+                                <img src="./images/avatar2.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                                <div>
+                                  <h4 class="m-0 p-0 text-sm font-medium">Afrad Bhuyian</h4>
+                                  <p class="m-0 p-0 text-xs font-normal text-slate-400">michelle.rivera@example.com</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>$739.65</td>
+                            <td>20 Jun 2022, 05:00 pm</td>
+                            <td>
+                              <div class="badge badge-soft-primary">Processing</div>
                             </td>
                             <td>
-                              <p>$5.08,876</p>
+                              <div class="flex justify-end">
+                                <div class="dropdown" data-placement="bottom-start">
+                                  <div class="dropdown-toggle">
+                                    <i class="w-6 text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content min-w-[150px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                          <span>Details</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                          <span>PDF</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                          <span>Delete</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            
+                            <td>
+                              <div class="flex gap-2">
+                                <img src="./images/avatar3.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                                <div>
+                                  <h4 class="m-0 p-0 text-sm font-medium">Adnan Shaikat</h4>
+                                  <p class="m-0 p-0 text-xs font-normal text-slate-400">georgia.young@example.com</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>$475.22</td>
+                            <td>01 May 2022, 12:01 am</td>
+                            <td>
+                              <div class="badge badge-soft-danger">Canceled</div>
                             </td>
                             <td>
-                              <p>$27,187</p>
+                              <div class="flex justify-end">
+                                <div class="dropdown" data-placement="bottom-start">
+                                  <div class="dropdown-toggle">
+                                    <i class="w-6 text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content min-w-[150px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                          <span>Details</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                          <span>PDF</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                          <span>Delete</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
                             </td>
                           </tr>
                           <tr>
                             <td>
-                              <div class="flex items-center gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar2.png" class="avatar-img" alt="avatar-img" />
+                              <div class="flex gap-2">
+                                <img src="./images/avatar4.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                                <div>
+                                  <h4 class="m-0 p-0 text-sm font-medium">Hasibur Rahman</h4>
+                                  <p class="m-0 p-0 text-xs font-normal text-slate-400">nathan.roberts@example.com</p>
                                 </div>
-                                <p class="whitespace-nowrap font-medium">Afrad Bhuyian</p>
                               </div>
                             </td>
+                            <td>$779.58</td>
+                            <td>15 Apr 2022, 01: 10 am</td>
                             <td>
-                              <p>25 Mar</p>
+                              <div class="badge badge-soft-success">Delivered</div>
                             </td>
                             <td>
-                              <p>Earings</p>
-                            </td>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/flag-United_States.jpg" class="h-5 w-8" alt="flag-img" />
-                                <p class="whitespace-nowrap uppercase">USA</p>
+                              <div class="flex justify-end">
+                                <div class="dropdown" data-placement="bottom-start">
+                                  <div class="dropdown-toggle">
+                                    <i class="w-6 text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content min-w-[150px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                          <span>Details</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                          <span>PDF</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                          <span>Delete</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
                               </div>
-                            </td>
-                            <td>
-                              <p>36654</p>
-                            </td>
-                            <td>
-                              <p>$3.06,867</p>
-                            </td>
-                            <td>
-                              <p>$23,89</p>
                             </td>
                           </tr>
                           <tr>
                             <td>
-                              <div class="flex items-center gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar3.png" class="avatar-img" alt="avatar-img" />
+                              <div class="flex gap-2">
+                                <img src="./images/avatar5.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                                <div>
+                                  <h4 class="m-0 p-0 text-sm font-medium">Tanvir Alam</h4>
+                                  <p class="m-0 p-0 text-xs font-normal text-slate-400">sara.cruz@example.com</p>
                                 </div>
-                                <p class="whitespace-nowrap font-medium">Robert Fox</p>
                               </div>
                             </td>
+                            <td>$169.43</td>
+                            <td>10 Apr 2022, 04:30 pm</td>
                             <td>
-                              <p>14 February</p>
+                              <div class="badge badge-soft-success">Delivered</div>
                             </td>
                             <td>
-                              <p>1 phone</p>
-                            </td>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/flag-United_Kingdom.jpg" class="h-5 w-8" alt="flag-img" />
-                                <p class="whitespace-nowrap uppercase">UK</p>
+                              <div class="flex justify-end">
+                                <div class="dropdown" data-placement="bottom-start">
+                                  <div class="dropdown-toggle">
+                                    <i class="w-6 text-slate-500" data-feather="more-horizontal"></i>
+                                  </div>
+                                  <div class="dropdown-content min-w-[150px]">
+                                    <ul class="dropdown-list">
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                          <span>Details</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                          <span>PDF</span>
+                                        </a>
+                                      </li>
+                                      <li class="dropdown-list-item">
+                                        <a href="javascript:void(0)" class="dropdown-link">
+                                          <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                          <span>Delete</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
                               </div>
                             </td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Recent Orders Section End -->
+
+              <!-- Stock Report & Popular Product Section Start -->
+              <section class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                <!-- Stock Report  -->
+                <div class="card">
+                  <div class="card-body flex h-full flex-col justify-between gap-2">
+                    <!-- Header  -->
+                    <div class="flex w-full justify-between">
+                      <h6>Stock Report</h6>
+                      <div class="dropdown" data-placement="bottom-end">
+                        <div class="dropdown-toggle">
+                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                        </div>
+                        <div class="dropdown-content w-[160px]">
+                          <ul class="dropdown-list">
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                            </li>
+                            <li class="dropdown-list-item">
+                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Product</th>
+                            <th>SKU</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="font-medium">Apple Watch</td>
+                            <td>AW-123</td>
+                            <td>$250</td>
+                            <td>10</td>
                             <td>
-                              <p>4253</p>
-                            </td>
-                            <td>
-                              <p>$1.06,657</p>
-                            </td>
-                            <td>
-                              <p>$56,99</p>
+                              <span class="badge badge-soft-warning">Low Stock</span>
                             </td>
                           </tr>
                           <tr>
+                            <td class="font-medium">Wireless Headphone</td>
+                            <td>WH-123</td>
+                            <td>$150</td>
+                            <td>0</td>
                             <td>
-                              <div class="flex items-center gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar4.png" class="avatar-img" alt="avatar-img" />
-                                </div>
-                                <p class="whitespace-nowrap font-medium">
-                                  John William
-                                </p>
-                              </div>
+                              <span class="badge badge-soft-danger">Out of Stock</span>
                             </td>
+                          </tr>
+
+                          <tr>
+                            <td>Iphone 13 Pro</td>
+                            <td>IP-123</td>
+                            <td>$1200</td>
+                            <td>5</td>
                             <td>
-                              <p>14 January</p>
-                            </td>
-                            <td>
-                              <p>Watches</p>
-                            </td>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/flag-Germany.jpg" class="h-5 w-8" alt="flag-img" />
-                                <p class="whitespace-nowrap uppercase">GER</p>
-                              </div>
-                            </td>
-                            <td>
-                              <p>3532</p>
-                            </td>
-                            <td>
-                              <p>$3.54,450</p>
-                            </td>
-                            <td>
-                              <p>$7,67,657</p>
+                              <span class="badge badge-soft-warning">Low Stock</span>
                             </td>
                           </tr>
                           <tr>
+                            <td>Macbook Pro</td>
+                            <td>MB-123</td>
+                            <td>$2500</td>
+                            <td>0</td>
                             <td>
-                              <div class="flex items-center gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar5.png" class="avatar-img" alt="avatar-img" />
-                                </div>
-                                <p class="whitespace-nowrap font-medium">
-                                  Ahmed Imtiaz
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <p>11 November</p>
-                            </td>
-                            <td>
-                              <p>Shoes</p>
-                            </td>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/flag-Brazil.jpg" class="h-5 w-8" alt="flag-img" />
-                                <p class="whitespace-nowrap uppercase">BRA</p>
-                              </div>
-                            </td>
-                            <td>
-                              <p>9076</p>
-                            </td>
-                            <td>
-                              <p>$9.54,450</p>
-                            </td>
-                            <td>
-                              <p>$78,01</p>
+                              <span class="badge badge-soft-info">Backorder</span>
                             </td>
                           </tr>
                         </tbody>
@@ -1536,114 +1363,7 @@
                     </div>
                   </div>
                 </div>
-              </section>
-              <!-- Top Sellers Section End  -->
-
-              <!-- Customer Satisfaction & Top Customers Section Start -->
-              <section class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                <!-- Customer Satisfaction  -->
-                <div class="card">
-                  <div class="card-body">
-                    <!-- Header  -->
-                    <div class="flex w-full justify-between">
-                      <h6>Customer Satisfaction</h6>
-                      <div class="dropdown" data-placement="bottom-end">
-                        <div class="dropdown-toggle">
-                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
-                        </div>
-                        <div class="dropdown-content w-[160px]">
-                          <ul class="dropdown-list">
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
-                            </li>
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="my-1 text-sm text-slate-400">9.4k reviews</p>
-
-                    <!-- Performance Score Progress -->
-                    <div class="mt-2 flex w-full gap-[6px]">
-                      <div class="h-2 w-[40%] rounded-primary bg-primary-500"></div>
-                      <div class="h-2 w-[20%] rounded-primary bg-success-500"></div>
-                      <div class="h-2 w-[18%] rounded-primary bg-info-500"></div>
-                      <div class="h-2 w-[12%] rounded-primary bg-warning-500"></div>
-                      <div class="h-2 w-[10%] rounded-primary bg-danger-500"></div>
-                    </div>
-                    <br />
-                    <div class="flex flex-col justify-end gap-8 overflow-x-auto">
-                      <!-- Excellent -->
-                      <div class="grid w-full grid-cols-3">
-                        <div class="flex items-center gap-2">
-                          <div class="h-[14px] w-[14px] rounded-full border-2 border-primary-500"></div>
-                          <p class="whitespace-nowrap text-sm font-medium">Excellent</p>
-                        </div>
-                        <div class="flex items-center justify-center">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">3760</p>
-                        </div>
-                        <div class="flex items-center justify-end">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">40%</p>
-                        </div>
-                      </div>
-                      <!-- Very Good  -->
-                      <div class="grid w-full grid-cols-3">
-                        <div class="flex items-center gap-2">
-                          <div class="h-[14px] w-[14px] rounded-full border-2 border-success-500"></div>
-                          <p class="whitespace-nowrap text-sm font-medium">Very Good</p>
-                        </div>
-                        <div class="flex items-center justify-center">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">1880</p>
-                        </div>
-                        <div class="flex items-center justify-end">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">20%</p>
-                        </div>
-                      </div>
-                      <!-- Good  -->
-                      <div class="grid w-full grid-cols-3">
-                        <div class="flex items-center gap-2">
-                          <div class="h-[14px] w-[14px] rounded-full border-2 border-info-500"></div>
-                          <p class="whitespace-nowrap text-sm font-medium">Good</p>
-                        </div>
-                        <div class="flex items-center justify-center">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">1692</p>
-                        </div>
-                        <div class="flex items-center justify-end">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">18%</p>
-                        </div>
-                      </div>
-                      <!-- Poor  -->
-                      <div class="grid w-full grid-cols-3">
-                        <div class="flex items-center gap-2">
-                          <div class="h-[14px] w-[14px] rounded-full border-2 border-warning-500"></div>
-                          <p class="whitespace-nowrap text-sm font-medium">Poor</p>
-                        </div>
-                        <div class="flex items-center justify-center">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">1128</p>
-                        </div>
-                        <div class="flex items-center justify-end">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">12%</p>
-                        </div>
-                      </div>
-                      <!-- Very Poor  -->
-                      <div class="grid w-full grid-cols-3">
-                        <div class="flex items-center gap-2">
-                          <div class="h-[14px] w-[14px] rounded-full border-2 border-danger-500"></div>
-                          <p class="whitespace-nowrap text-sm font-medium">Very Poor</p>
-                        </div>
-                        <div class="flex items-center justify-center">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">940</p>
-                        </div>
-                        <div class="flex items-center justify-end">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">10%</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Top Customers  -->
+                <!-- Popular Products  -->
                 <div class="card">
                   <div class="card-body flex h-full flex-col justify-between gap-2">
                     <!-- Header  -->
@@ -1681,14 +1401,12 @@
                           <tr>
                             <td>
                               <div class="flex items-center gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar1.png" class="avatar-img" alt="avatar-img" />
-                                </div>
-                                <p class="whitespace-nowrap font-medium">Wade Warren</p>
+                                <img src="./images/avatar1.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                                <p class="whitespace-nowrap text-sm font-medium">Wade Warren</p>
                               </div>
                             </td>
                             <td>
-                              <p class="whitespace-nowrap text-sm font-medium">ABC Store</p>
+                              <p class="whitespace-nowrap text-sm font-medium">XD54862</p>
                             </td>
                             <td>
                               <p class="whitespace-nowrap text-sm font-medium">7 min ago</p>
@@ -1854,7 +1572,7 @@
                   </div>
                 </div>
               </section>
-              <!-- Customer Satisfaction & Top Customers Section End -->
+              <!-- Stock Report & Popular Product Section End -->
             </div>
           </main>
           <!-- Main Content Ends -->
@@ -1879,6 +1597,6 @@
       <!-- Wrapper Ends -->
     </div>
     <script src="./js/app.js" type="module"></script>
-    <script src="./js/custom/analytics.js" type="module"></script>
+    <script src="./js/custom/ecommerce.js" type="module"></script>
   </body>
 </html>
