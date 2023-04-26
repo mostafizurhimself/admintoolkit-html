@@ -50,7 +50,6 @@ class ThemeSwitcher {
 
     // this.updateActiveClass();
     // this.checkThemeMode();
-
   }
 
   updateActiveClass() {
@@ -86,7 +85,7 @@ const themeSwitcher = {
     const dropdownThemeSwitcher = document.querySelector('#dropdown-theme-switcher');
 
     if (dropdownThemeSwitcher) {
-      new ThemeSwitcher(dropdownThemeSwitcher)
+      new ThemeSwitcher(dropdownThemeSwitcher);
     }
   },
 };
