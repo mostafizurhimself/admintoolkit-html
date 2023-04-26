@@ -767,287 +767,298 @@
 
             <!-- Invoice Create Start -->
             <div class="grid grid-cols-1 gap-6 lg:grid-cols-4">
-              <!--Left Side Div Start -->
-              <div class="card col-span-1 p-6 lg:col-span-3">
-                <!-- Invoice Header  Start -->
-                <div class="mb-6 flex flex-col justify-between md:flex-row">
-                  <div class="flex items-center justify-center md:justify-start">
-                    <div class="sidebar-header !ml-0 !pl-0">
-                      <span class="sidebar-logo-icon">
-                        <svg
-                          fill="currentColor"
-                          width="45"
-                          height="45"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 48 48"
-                        >
-                          <path
-                            d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z"
-                          ></path>
-                          <path
-                            d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z"
-                          ></path>
-                        </svg>
-                      </span>
+              <!--Left Side Div Starts -->
+              <div class="col-span-1 lg:col-span-3">
+                <div class="card">
+                  <div class="card-body">
+                    <!-- Invoice Header Starts -->
+                    <div class="mb-6 flex flex-col justify-between md:flex-row">
+                      <div class="flex items-center justify-center md:justify-start">
+                        <div class="sidebar-header !ml-0 !pl-0">
+                          <span class="sidebar-logo-icon">
+                            <svg
+                              fill="currentColor"
+                              width="45"
+                              height="45"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 48 48"
+                            >
+                              <path
+                                d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z"
+                              ></path>
+                              <path
+                                d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z"
+                              ></path>
+                            </svg>
+                          </span>
 
-                      <div class="sidebar-logo-text">
-                        <h1 class="flex text-xl">
-                          <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
-                          <span class="font-semibold text-primary-500"> Toolkit </span>
-                        </h1>
+                          <div class="sidebar-logo-text">
+                            <h1 class="flex text-xl">
+                              <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
+                              <span class="font-semibold text-primary-500"> Toolkit </span>
+                            </h1>
 
-                        <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+                            <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col items-start justify-center gap-3 md:items-end">
+                        <h2 class="mx-0 p-0 text-2xl font-semibold">Invoice #1001</h2>
+                        <div class="flex items-center justify-end gap-3">
+                          <span class="text-sm font-medium text-slate-700 dark:text-slate-300"> Date: </span>
+                          <div class="max-w-xs">
+                            <input
+                              class="input input-date bg-white dark:bg-slate-800"
+                              type="text"
+                              placeholder="YYYY-MM-DD"
+                            />
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-end gap-3">
+                          <span class="text-sm font-medium text-slate-700 dark:text-slate-300"> Due Date: </span>
+                          <div class="max-w-xs">
+                            <input
+                              class="input input-date bg-white dark:bg-slate-800"
+                              type="text"
+                              placeholder="YYYY-MM-DD"
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="flex flex-col items-start justify-center gap-3 md:items-end">
-                    <h2 class="mx-0 p-0 text-2xl font-semibold">Invoice #1001</h2>
-                    <div class="flex items-center justify-end gap-3">
-                      <span class="text-sm font-medium text-slate-700 dark:text-slate-300"> Date: </span>
-                      <div class="max-w-xs">
-                        <input
-                          class="input input-date bg-white dark:bg-slate-800"
-                          type="text"
-                          placeholder="YYYY-MM-DD"
-                        />
+                    <!-- Invoice Header Ends -->
+
+                    <!-- Invoice Info Start  -->
+                    <div class="mb-6 flex flex-col justify-between md:flex-row">
+                      <div class="mb-4 flex w-full flex-col items-start justify-center md:mb-0 md:w-2/3 md:justify-center">
+                        <h4 class="m-0 p-0 text-xs font-medium uppercase text-secondary-400">BILLED FROM</h4>
+                        <h5 class="my-1 text-sm font-semibold text-slate-700">Admin Toolkit</h5>
+                        <p class="my-0 py-0 text-sm font-normal text-slate-600 dark:text-slate-300">
+                          123 Example Road, Example - 1234
+                        </p>
+                        <p class="my-0 py-0 text-sm font-normal text-slate-600 dark:text-slate-300">
+                          Tel No: 123 123 123 123
+                        </p>
+                        <p class="my-0 py-0 text-sm font-normal text-slate-600 dark:text-slate-300">
+                          Email: johndoe@example.com
+                        </p>
+                      </div>
+                      <div class="flex w-full flex-col items-start justify-center md:w-1/3 md:items-end">
+                        <h4 class="m-0 p-0 text-xs font-medium uppercase text-secondary-400">BILLED TO</h4>
+                        <h5 class="my-1 text-sm font-semibold text-slate-700">John Doe</h5>
+                        <p class="my-0 py-0 text-sm font-normal text-slate-600 dark:text-slate-300">
+                          123 Example Road, Example - 1234
+                        </p>
+                        <p class="my-0 py-0 text-sm font-normal text-slate-600 dark:text-slate-300">
+                          Tel No: 123 123 123 123
+                        </p>
+                        <p class="my-0 py-0 text-sm font-normal text-slate-600 dark:text-slate-300">
+                          Email: johndoe@example.com
+                        </p>
                       </div>
                     </div>
-                    <div class="flex items-center justify-end gap-3">
-                      <span class="text-sm font-medium text-slate-700 dark:text-slate-300"> Due Date: </span>
-                      <div class="max-w-xs">
-                        <input
-                          class="input input-date bg-white dark:bg-slate-800"
-                          type="text"
-                          placeholder="YYYY-MM-DD"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Invoice Header  End -->
 
-                <!-- Invoice Info Start  -->
-                <div class="mb-6 flex flex-col justify-between md:flex-row">
-                  <div class="mb-4 flex w-full flex-col items-start justify-center md:mb-0 md:w-2/3 md:justify-center">
-                    <h4 class="m-0 p-0 text-xs font-medium uppercase text-secondary-400">BILLED FROM</h4>
-                    <h5 class="my-1 text-sm font-semibold text-slate-700">Admin Toolkit</h5>
-                    <p class="my-0 py-0 text-sm font-normal text-slate-600 dark:text-slate-300">
-                      123 Example Road, Example - 1234
-                    </p>
-                    <p class="my-0 py-0 text-sm font-normal text-slate-600 dark:text-slate-300">
-                      Tel No: 123 123 123 123
-                    </p>
-                    <p class="my-0 py-0 text-sm font-normal text-slate-600 dark:text-slate-300">
-                      Email: johndoe@example.com
-                    </p>
-                  </div>
-                  <div class="flex w-full flex-col items-start justify-center md:w-1/3 md:items-end">
-                    <h4 class="m-0 p-0 text-xs font-medium uppercase text-secondary-400">BILLED TO</h4>
-                    <h5 class="my-1 text-sm font-semibold text-slate-700">John Doe</h5>
-                    <p class="my-0 py-0 text-sm font-normal text-slate-600 dark:text-slate-300">
-                      123 Example Road, Example - 1234
-                    </p>
-                    <p class="my-0 py-0 text-sm font-normal text-slate-600 dark:text-slate-300">
-                      Tel No: 123 123 123 123
-                    </p>
-                    <p class="my-0 py-0 text-sm font-normal text-slate-600 dark:text-slate-300">
-                      Email: johndoe@example.com
-                    </p>
-                  </div>
-                </div>
-                <!-- Product Table Start -->
-                <div class="w-full overflow-auto">
-                  <div class="min-w-[42rem]">
-                    <div class="w-full rounded-primary border border-slate-200 dark:border-slate-600">
-                      <table class="table w-full">
-                        <thead>
-                          <tr class="rounded-primary">
-                            <th>Product Name</th>
-                            <th>
-                              <p class="text-left">Price</p>
-                            </th>
-                            <th>
-                              <p class="text-left">Quantity</p>
-                            </th>
-                            <th>
-                              <p class="flex-nowrap text-right">Line Total</p>
-                            </th>
-                            <th></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <select class="select" autocomplete="off">
-                                <option value="">Select Product</option>
-                                <option value="1">Antiuqe Camera</option>
-                                <option value="2">Stylish Sunglass</option>
-                                <option value="3">Apple Watch 2023</option>
-                              </select>
-                            </td>
-                            <td>
-                              <input type="text" placeholder="0.00" class="input w-20" />
-                            </td>
+                    <!-- Product Table Starts -->
+                    <div class="w-full overflow-auto">
+                      <div class="min-w-[42rem]">
+                        <div class="table-responsive whitespace-nowrap rounded-primary border border-slate-200 dark:border-slate-600">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Product Name</th>
+                                <th class="w-[10%]">Price</th>
+                                <th class="w-[10%]">Quantity</th>
+                                <th class="!text-right">Line Total</th>
+                                <th class="w-8 !py-0 !px-0 !pr-2"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <select class="select w-4/5" autocomplete="off">
+                                    <option value="">Select Product</option>
+                                    <option value="1">Antiuqe Camera</option>
+                                    <option value="2">Stylish Sunglass</option>
+                                    <option value="3">Apple Watch 2023</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  <input type="text" placeholder="0.00" class="input w-20">
+                                </td>
+                                <td>
+                                  <input type="text" placeholder="1" class="input w-20">
+                                </td>
+                                <td>
+                                  <span class="w-full inline-block text-right font-semibold text-slate-700 dark:text-slate-200">
+                                    $00.00
+                                  </span>
+                                </td>
+                                <td class="!py-0 !px-0 !pr-2">
+                                  <div class="flex items-center justify-center">  
+                                    <button
+                                      class="cursor-pointer rounded-full p-1 font-medium focus:bg-slate-300 focus:bg-opacity-50 focus:text-slate-600"
+                                    >
+                                      <i class="h-4 w-4" data-feather="x"></i>
+                                    </button>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <select class="select w-4/5" autocomplete="off">
+                                    <option value="">Select Product</option>
+                                    <option value="1">Antiuqe Camera</option>
+                                    <option value="2">Stylish Sunglass</option>
+                                    <option value="3">Apple Watch 2023</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  <input type="text" placeholder="0.00" class="input w-20" />
+                                </td>
 
-                            <td>
-                              <input type="text" placeholder="1" class="input w-20" />
-                            </td>
-                            <td>
-                              <div class="flex items-center justify-end gap-1">
-                                <p class="m-0 p-0 text-right text-sm font-semibold text-slate-700 dark:text-slate-200">
-                                  $00.00
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <button
-                                class="cursor-pointer rounded-full p-1 font-medium focus:bg-slate-300 focus:bg-opacity-50 focus:text-slate-600"
-                              >
-                                <i class="h-4 w-4" data-feather="x"></i>
+                                <td>
+                                  <input type="text" placeholder="1" class="input w-20" />
+                                </td>
+                                <td>
+                                  <span class="w-full inline-block text-right font-semibold text-slate-700 dark:text-slate-200">
+                                    $00.00
+                                  </span>
+                                </td>
+                                <td class="!py-0 !px-0 !pr-2">
+                                  <div class="flex items-center justify-center"> 
+                                    <button
+                                      class="cursor-pointer rounded-full p-1 font-medium focus:bg-slate-300 focus:bg-opacity-50 focus:text-slate-600"
+                                    >
+                                      <i class="h-4 w-4" data-feather="x"></i>
+                                    </button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div class="flex items-stretch justify-between mt-4">
+                          <div class="w-2/5  flex flex-col items-start gap-2">
+                            <div class="w-full">
+                              <button class="btn btn-plain-primary">
+                                <i class="h-4" data-feather="plus"></i>
+                                New Item
                               </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <select class="select" autocomplete="off">
-                                <option value="">Select Product</option>
-                                <option value="1">Antiuqe Camera</option>
-                                <option value="2">Stylish Sunglass</option>
-                                <option value="3">Apple Watch 2023</option>
-                              </select>
-                            </td>
-                            <td>
-                              <input type="text" placeholder="0.00" class="input w-20" />
-                            </td>
-
-                            <td>
-                              <input type="text" placeholder="1" class="input w-20" />
-                            </td>
-                            <td>
-                              <div class="flex items-center justify-end gap-1">
-                                <p class="m-0 p-0 text-right text-sm font-semibold text-slate-700 dark:text-slate-200">
+                            </div>
+                            <div class="w-full">
+                              <textarea class="textarea" rows="3" placeholder="Write some note"></textarea>
+                            </div>
+                          </div>
+                          
+                          <div>
+                            <ul class="space-y-3 mr-8">
+                              <li class="flex items-center gap-x-2">
+                                <span class="w-1/2 inline-block text-right text-sm font-medium text-slate-400">Subtotal:</span>
+                                <span class="w-1/2 inline-block text-right pr-6 text-sm font-semibold text-slate-700 dark:text-slate-200">
                                   $00.00
-                                </p>
-                              </div>
-                            </td>
-                            <td>
-                              <button
-                                class="cursor-pointer rounded-full p-1 font-medium focus:bg-slate-300 focus:bg-opacity-50 focus:text-slate-600"
-                              >
-                                <i class="h-4 w-4" data-feather="x"></i>
-                              </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="my-2 flex items-center justify-between">
-                      <div class="flex w-1/2 flex-col items-start gap-2">
-                        <div class="w-full">
-                          <button class="btn btn-plain-primary">
-                            <i class="h-4" data-feather="plus"></i>
-                            New Item
-                          </button>
-                        </div>
-                        <div class="w-4/5">
-                          <textarea class="textarea" rows="3" placeholder="Write some note"></textarea>
+                                </span>
+                              </li>
+                              <li class="flex items-center gap-x-2">
+                                <span class="w-1/2 inline-block text-right text-sm font-medium text-slate-400">Discount:</span>
+                                <span class="w-1/2 inline-block text-right pr-6 text-sm font-semibold text-slate-700 dark:text-slate-200">
+                                  $00.00
+                                </span>
+                              </li>
+                              <li class="flex items-center gap-x-2">
+                                <span class="w-1/2 inline-block text-right text-sm font-medium text-slate-400">Tax:</span>
+                                <span class="w-1/2 inline-block text-right pr-6 text-sm font-semibold text-slate-700 dark:text-slate-200">
+                                  $00.00
+                                </span>
+                              </li>
+                            </ul>
+                            <hr class="mt-5 mb-1 border-slate-200 dark:border-slate-600">
+                            <div class="mr-8 flex items-center gap-x-2">
+                              <span class="w-1/2 inline-block text-right text-sm font-medium text-slate-400">Total:</span>
+                              <span class="w-1/2 inline-block text-right pr-6 text-sm font-semibold text-slate-700 dark:text-slate-200">
+                                $00.00
+                              </span>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="min-w-1/2 my-1 flex flex-col items-end">
-                        <div
-                          class="flex w-full flex-col items-end gap-2 border-b border-slate-200 py-2 pr-[6.5rem] dark:border-slate-600"
-                        >
-                          <h4 class="text-sm font-medium text-slate-400 dark:text-slate-400">
-                            Subtotal:
-                            <span class="font-semibold text-slate-600 dark:text-slate-200"> $00.00 </span>
-                          </h4>
-                          <h4 class="text-sm font-medium text-slate-400 dark:text-slate-400">
-                            Discount:
-                            <span class="font-semibold text-slate-700 dark:text-slate-200"> $00.00 </span>
-                          </h4>
-                          <h4 class="text-sm font-medium text-slate-400 dark:text-slate-400">
-                            Tax:
-                            <span class="font-semibold text-slate-700 dark:text-slate-200"> $00.00 </span>
-                          </h4>
-                        </div>
-                        <h4 class="pr-[6.5rem] text-sm font-medium text-slate-400 dark:text-slate-400">
-                          Total:
-                          <span class="font-semibold text-slate-700 dark:text-slate-200"> $00.00 </span>
-                        </h4>
-                      </div>
                     </div>
-                  </div>
-                </div>
-                <!-- Product Table End -->
-
-                <p class="my-8 text-center text-sm font-normal text-slate-700 dark:text-slate-200">
-                  Thanks for your Business
-                </p>
-              </div>
-              <!-- Right Side Div Start -->
-              <div class="col-span-1 h-full">
-                <div class="card sticky top-20 flex max-h-min flex-col gap-4 p-6">
-                  <!-- Payment Method  -->
-                  <div class="w-full">
-                    <select class="select">
-                      <option value="">Payment Method</option>
-                      <option value="1">Bank Account</option>
-                      <option value="2">Paypal</option>
-                      <option value="2">Credit/Debit Card</option>
-                      <option value="2">UPI Transfer</option>
-                    </select>
-                  </div>
-                  <!-- Send Email  -->
-                  <div class="flex w-full justify-between">
-                    <span class="label text-sm font-medium text-slate-400">Send Email</span>
-                    <label for="send-email" class="toggle">
-                      <input
-                        class="toggle-input peer sr-only"
-                        id="send-email"
-                        type="checkbox"
-                        checked="true"
-                        name="send-email"
-                      />
-                      <div class="toggle-body"></div>
-                    </label>
-                  </div>
-                  <!-- Charge Fee  -->
-                  <div class="flex w-full justify-between">
-                    <span class="label text-sm font-medium text-slate-400">Charge Late Fee</span>
-                    <label for="charge-late-fee" class="toggle">
-                      <input
-                        class="toggle-input peer sr-only"
-                        id="charge-late-fee"
-                        type="checkbox"
-                        name="charge-late-fee"
-                      />
-                      <div class="toggle-body"></div>
-                    </label>
-                  </div>
-                  <!-- Save Invoice  -->
-                  <div class="w-full">
-                    <button class="btn btn-primary w-full font-medium">
-                      <i class="h-4" data-feather="save"></i>
-                      Save invoice
-                    </button>
-                  </div>
-                  <!-- Save & Print Invoice  -->
-                  <div class="w-full">
-                    <button class="btn btn-success w-full font-medium">
-                      <i class="h-4" data-feather="printer"></i>
-                      Save & Print
-                    </button>
-                  </div>
-                  <!-- Preview Invoice  -->
-                  <div class="w-full">
-                    <button class="btn btn-outline-primary w-full font-medium">
-                      <i class="h-4" data-feather="file-text"></i>
-                      Preview Invoice
-                    </button>
+                    <!-- Product Table Ends -->
+                    
+                    <p class="my-8 text-center text-sm font-normal text-slate-700 dark:text-slate-200">
+                      Thanks for your Business
+                    </p>
                   </div>
                 </div>
               </div>
-              <!--Right Side Div End -->
+              <!--Left Side Div Ends -->              
+
+              <!-- Right Side Div Starts-->
+              <div class="col-span-1 h-max sticky top-20">
+                <div class="card">
+                  <div class="card-body flex flex-col gap-4">
+                    <!-- Payment Method  -->
+                    <div class="w-full">
+                      <select class="select">
+                        <option value="">Payment Method</option>
+                        <option value="1">Bank Account</option>
+                        <option value="2">Paypal</option>
+                        <option value="2">Credit/Debit Card</option>
+                        <option value="2">UPI Transfer</option>
+                      </select>
+                    </div>
+                    <!-- Send Email  -->
+                    <div class="flex w-full justify-between">
+                      <span class="label text-sm font-medium text-slate-400">Send Email</span>
+                      <label for="send-email" class="toggle">
+                        <input
+                          class="toggle-input peer sr-only"
+                          id="send-email"
+                          type="checkbox"
+                          checked="true"
+                          name="send-email"
+                        />
+                        <div class="toggle-body"></div>
+                      </label>
+                    </div>
+                    <!-- Charge Fee  -->
+                    <div class="flex w-full justify-between">
+                      <span class="label text-sm font-medium text-slate-400">Charge Late Fee</span>
+                      <label for="charge-late-fee" class="toggle">
+                        <input
+                          class="toggle-input peer sr-only"
+                          id="charge-late-fee"
+                          type="checkbox"
+                          name="charge-late-fee"
+                        />
+                        <div class="toggle-body"></div>
+                      </label>
+                    </div>
+                    <!-- Save Invoice  -->
+                    <div class="w-full">
+                      <button class="btn btn-primary w-full font-medium">
+                        <i class="h-4" data-feather="save"></i>
+                        Save invoice
+                      </button>
+                    </div>
+                    <!-- Save & Print Invoice  -->
+                    <div class="w-full">
+                      <button class="btn btn-success w-full font-medium">
+                        <i class="h-4" data-feather="printer"></i>
+                        Save & Print
+                      </button>
+                    </div>
+                    <!-- Preview Invoice  -->
+                    <div class="w-full">
+                      <button class="btn btn-outline-primary w-full font-medium">
+                        <i class="h-4" data-feather="file-text"></i>
+                        Preview Invoice
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Right Side Div Ends -->
             </div>
             <!-- Invoice Create End -->
           </main>
