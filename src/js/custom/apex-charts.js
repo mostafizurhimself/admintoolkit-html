@@ -495,36 +495,6 @@ const chartOptions = {
       },
     ],
   },
-  radialBarChart: {
-    series: [70],
-    chart: {
-      height: 350,
-      type: 'radialBar',
-      fontFamily: themeConfig.theme.fontFamily.sans,
-    },
-    stroke: {
-      lineCap: 'round',
-    },
-    plotOptions: {
-      radialBar: {
-        hollow: {
-          size: '70%',
-        },
-        track: {
-          background: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
-        },
-        dataLabels: {
-          value: {
-            show: true,
-            fontSize: '18px',
-            fontWeight: 'bold',
-            color: theme === 'dark' ? colors.slate['300'] : colors.slate['700'],
-          },
-        },
-      },
-    },
-    labels: ['Completed'],
-  },
 };
 // Line Chart Start
 const lineChartElement = document.querySelector('#line-chart');
@@ -630,10 +600,3 @@ donutChart.render();
 createCodeViewer('#donut-chart-code-viewer', sourceCodeTemplate(donutChartElement.id)).render();
 // Donut Chart End
 
-// Radial Bar Chart Start
-const radialBarChartElement = document.querySelector('#radial-bar-chart');
-const radialBarChart = new ApexCharts(radialBarChartElement, chartOptions.radialBarChart);
-radialBarChart.render();
-// Add Source Code
-createCodeViewer('#radial-bar-chart-code-viewer', sourceCodeTemplate(radialBarChartElement.id)).render();
-// Radial Bar Chart End
