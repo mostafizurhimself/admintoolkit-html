@@ -1,6 +1,8 @@
 import ApexCharts from 'apexcharts';
-import defaultTheme from 'tailwindcss/defaultTheme';
-import themeConfig from '@tailwind.config';
+import colors from 'tailwindcss/colors';
+import themeConfig, { themeColors } from '@tailwind.config';
+
+const theme = localStorage.getItem('theme');
 
 const emptyOption = `{ 
                           // ...... 
@@ -40,6 +42,7 @@ const chartOptions = {
       enabled: false,
     },
     stroke: {
+      width: 2,
       curve: 'smooth',
     },
     grid: {
@@ -47,9 +50,16 @@ const chartOptions = {
         colors: ['transparent'],
         opacity: 0.5,
       },
+      borderColor: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
     },
     xaxis: {
       categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      axisBorder: {
+        color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+      },
+      axisTicks: {
+        color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+      },
     },
   },
   areaChart: {
@@ -123,6 +133,7 @@ const chartOptions = {
       enabled: false,
     },
     stroke: {
+      width: 2,
       curve: 'smooth',
     },
     labels: [
@@ -149,9 +160,18 @@ const chartOptions = {
     ],
     xaxis: {
       type: 'datetime',
+      axisBorder: {
+        color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+      },
+      axisTicks: {
+        color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+      },
     },
     yaxis: {
       opposite: true,
+    },
+    grid: {
+      borderColor: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
     },
     legend: {
       horizontalAlign: 'left',
@@ -197,6 +217,12 @@ const chartOptions = {
     },
     xaxis: {
       categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      axisBorder: {
+        color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+      },
+      axisTicks: {
+        color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+      },
     },
     yaxis: {
       title: {
@@ -204,9 +230,6 @@ const chartOptions = {
         style: {
           color: '#475569',
           fontWeight: 500,
-          fontFamily: {
-            sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-          },
         },
       },
     },
@@ -219,6 +242,9 @@ const chartOptions = {
           return '$ ' + val + ' thousands';
         },
       },
+    },
+    grid: {
+      borderColor: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
     },
   },
   barChart: {
@@ -257,6 +283,15 @@ const chartOptions = {
         'China',
         'Germany',
       ],
+      axisBorder: {
+        color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+      },
+      axisTicks: {
+        color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+      },
+    },
+    grid: {
+      borderColor: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
     },
   },
   scatterChart: {
@@ -389,9 +424,18 @@ const chartOptions = {
           return parseFloat(val).toFixed(1);
         },
       },
+      axisBorder: {
+        color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+      },
+      axisTicks: {
+        color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+      },
     },
     yaxis: {
       tickAmount: 7,
+    },
+    grid: {
+      borderColor: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
     },
   },
   pieChart: {
@@ -404,6 +448,9 @@ const chartOptions = {
         show: false,
       },
       fontFamily: themeConfig.theme.fontFamily.sans,
+    },
+    stroke: {
+      width: 0,
     },
     labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
     responsive: [
@@ -422,6 +469,7 @@ const chartOptions = {
   },
   donutChart: {
     series: [44, 55, 41, 17, 15],
+    labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
     chart: {
       type: 'donut',
       width: 380,
@@ -429,6 +477,9 @@ const chartOptions = {
         show: false,
       },
       fontFamily: themeConfig.theme.fontFamily.sans,
+    },
+    stroke: {
+      width: 0,
     },
     responsive: [
       {
@@ -443,48 +494,6 @@ const chartOptions = {
         },
       },
     ],
-  },
-  radarChart: {
-    series: [
-      {
-        name: 'Series 1',
-        data: [80, 50, 30, 40, 100, 20],
-      },
-      {
-        name: 'Series 2',
-        data: [20, 30, 40, 80, 20, 80],
-      },
-      {
-        name: 'Series 3',
-        data: [44, 76, 78, 13, 43, 10],
-      },
-    ],
-    chart: {
-      height: 350,
-      type: 'radar',
-      toolbar: {
-        show: false,
-      },
-      dropShadow: {
-        enabled: true,
-        blur: 1,
-        left: 1,
-        top: 1,
-      },
-      fontFamily: themeConfig.theme.fontFamily.sans,
-    },
-    stroke: {
-      width: 2,
-    },
-    fill: {
-      opacity: 0.1,
-    },
-    markers: {
-      size: 0,
-    },
-    xaxis: {
-      categories: ['2011', '2012', '2013', '2014', '2015', '2016'],
-    },
   },
 };
 // Line Chart Start
@@ -543,31 +552,31 @@ const lineChartOptionsTemplate = `
 createCodeViewer('#line-chart-code-viewer', sourceCodeTemplate(lineChartElement.id, lineChartOptionsTemplate)).render();
 // Line Chart End
 
-// area Chart Start
+// Area Chart Start
 const areaChartElement = document.querySelector('#area-chart');
 const areaChart = new ApexCharts(areaChartElement, chartOptions.areaChart);
 areaChart.render();
 // Add Source Code
 createCodeViewer('#area-chart-code-viewer', sourceCodeTemplate(areaChartElement.id)).render();
-// area Chart End
+// Area Chart End
 
-// column Chart Start
+// Column Chart Start
 const columnChartElement = document.querySelector('#column-chart');
 const columnChart = new ApexCharts(columnChartElement, chartOptions.columnChart);
 columnChart.render();
 // Add Source Code
 createCodeViewer('#column-chart-code-viewer', sourceCodeTemplate(columnChartElement.id)).render();
-// column Chart End
+// Column Chart End
 
-// bar Chart Start
+// Bar Chart Start
 const barChartElement = document.querySelector('#bar-chart');
 const barChart = new ApexCharts(barChartElement, chartOptions.barChart);
 barChart.render();
 // Add Source Code
 createCodeViewer('#bar-chart-code-viewer', sourceCodeTemplate(barChartElement.id)).render();
-// bar Chart End
+// Bar Chart End
 
-// scatter Chart Start
+// Scatter Chart Start
 const scatterChartElement = document.querySelector('#scatter-chart');
 const scatterChart = new ApexCharts(scatterChartElement, chartOptions.scatterChart);
 scatterChart.render();
@@ -575,26 +584,18 @@ scatterChart.render();
 createCodeViewer('#scatter-chart-code-viewer', sourceCodeTemplate(scatterChartElement.id)).render();
 // Scatter Chart End
 
-// pie Chart Start
+// Pie Chart Start
 const pieChartElement = document.querySelector('#pie-chart');
 const pieChart = new ApexCharts(pieChartElement, chartOptions.pieChart);
 pieChart.render();
 // Add Source Code
 createCodeViewer('#pie-chart-code-viewer', sourceCodeTemplate(pieChartElement.id)).render();
-// pie Chart End
+// Pie Chart End
 
-// donut Chart Start
+// Donut Chart Start
 const donutChartElement = document.querySelector('#donut-chart');
 const donutChart = new ApexCharts(donutChartElement, chartOptions.donutChart);
 donutChart.render();
 // Add Source Code
 createCodeViewer('#donut-chart-code-viewer', sourceCodeTemplate(donutChartElement.id)).render();
-// donut Chart End
-
-// radar Chart Start
-const radarChartElement = document.querySelector('#radar-chart');
-const radarChart = new ApexCharts(radarChartElement, chartOptions.radarChart);
-radarChart.render();
-// Add Source Code
-createCodeViewer('#radar-chart-code-viewer', sourceCodeTemplate(radarChartElement.id)).render();
-// radar Chart End
+// Donut Chart End

@@ -47,9 +47,6 @@ class ThemeSwitcher {
     }
 
     window.location.reload();
-
-    // this.updateActiveClass();
-    // this.checkThemeMode();
   }
 
   updateActiveClass() {
@@ -67,17 +64,6 @@ class ThemeSwitcher {
       }
     });
   }
-
-  // checkThemeMode() {
-  //   if (
-  //     localStorage.getItem('theme') === 'dark' ||
-  //     (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  //   ) {
-  //     document.documentElement.classList.add('dark');
-  //   } else {
-  //     document.documentElement.classList.remove('dark');
-  //   }
-  // }
 }
 
 const themeSwitcher = {
