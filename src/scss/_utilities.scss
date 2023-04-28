@@ -8,12 +8,12 @@
     @apply sr-only m-0 h-0 w-0;
   }
 
-  /* Chrome, Safari and Opera */
-  #chats::-webkit-scrollbar {
-    display: none;
-  }
-  #chats {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+  // /* Chrome, Safari and Opera */
+  // #chats::-webkit-scrollbar {
+  //   display: none;
+  // }
+  // #chats {
+  //   -ms-overflow-style: none; /* IE and Edge */
+  //   scrollbar-width: none; /* Firefox */
+  // }
 }

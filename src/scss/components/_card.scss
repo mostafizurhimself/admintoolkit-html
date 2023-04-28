@@ -4,15 +4,15 @@
     @apply w-full rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800;
 
     // Direct elements
-    & > &-header {
+    &-header {
       @apply border-b border-b-slate-200 px-6 py-4 dark:border-slate-700;
     }
 
-    & > &-body {
+    &-body {
       @apply p-6;
     }
 
-    & > &-footer {
+    &-footer {
       @apply flex justify-end gap-2 border-t border-slate-200 px-6 py-4 dark:border-slate-700;
     }
 

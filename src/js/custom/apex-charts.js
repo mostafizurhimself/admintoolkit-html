@@ -1,6 +1,6 @@
 import ApexCharts from 'apexcharts';
 import colors from 'tailwindcss/colors';
-import themeConfig, {themeColors} from '@tailwind.config';
+import themeConfig, { themeColors } from '@tailwind.config';
 
 const theme = localStorage.getItem('theme');
 
@@ -599,4 +599,3 @@ donutChart.render();
 // Add Source Code
 createCodeViewer('#donut-chart-code-viewer', sourceCodeTemplate(donutChartElement.id)).render();
 // Donut Chart End
-
