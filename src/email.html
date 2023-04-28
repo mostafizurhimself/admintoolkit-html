@@ -751,7 +751,7 @@
         <!-- Page Content Starts -->
         <div class="content">
           <!-- Main Content Starts -->
-          <main class="container flex flex-grow items-center p-6">
+          <main class="container flex flex-grow items-start p-6">
             <!-- Email Starts -->
             <div class="relative h-full w-full overflow-hidden xl:grid xl:grid-cols-4 xl:gap-x-6 xl:overflow-visible">
               <!-- Email Sidebar Starts -->
@@ -759,18 +759,9 @@
                 id="email-sidebar"
                 class="invisible absolute bottom-0 top-0 z-20 h-auto w-3/4 -translate-x-full space-y-3 bg-white transition-transform duration-300 ease-in-out dark:bg-slate-800 sm:w-64 xl:visible xl:sticky xl:top-20 xl:col-span-1 xl:h-max xl:w-auto xl:translate-x-0 xl:rounded-primary xl:shadow"
               >
-                <!-- Email Sidebar Close Button Starts -->
-                <button
-                  id="email-btn-hide-sidebar"
-                  type="button"
-                  class="absolute inset-0 left-full z-20 ml-2 inline-flex h-8 w-8 items-center justify-center rounded-full text-white dark:text-slate-300 xl:hidden"
-                >
-                  <i class="ti ti-x text-xl"></i>
-                </button>
-                <!-- Email Sidebar Close Button Ends -->
 
                 <!-- Email Sidebar Header Starts -->
-                <div class="mt-4 px-6">
+                <div class="relative mt-4 px-6">
                   <button
                     type="button"
                     class="btn btn-lg btn-primary w-full"
@@ -782,6 +773,16 @@
                     </span>
                     <span class="text-sm">Compose</span>
                   </button>
+
+                  <!-- Email Sidebar Close Button Starts -->
+                    <button
+                    id="email-btn-hide-sidebar"
+                    type="button"
+                    class="absolute top-1/2 left-full -translate-x-1/5 -translate-y-1/2 z-20 ml-2 inline-flex h-8 w-8 items-center justify-center rounded-full text-white dark:text-slate-300 xl:hidden"
+                  >
+                    <i class="ti ti-x text-xl"></i>
+                  </button>
+                  <!-- Email Sidebar Close Button Ends -->
                 </div>
                 <!-- Email Sidebar Header Ends -->
 
