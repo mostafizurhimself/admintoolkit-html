@@ -3,7 +3,7 @@
     @apply flex text-sm text-slate-500 dark:text-slate-300;
 
     &-item {
-      @apply ml-2 flex items-center font-medium text-primary-500 after:ml-2 after:text-slate-500 after:content-['>'] last:font-normal last:text-slate-500 last:after:content-[''];
+      @apply ml-2 flex items-center font-medium text-primary-500 after:ml-2 after:text-slate-500 after:content-['>'] last:font-normal last:text-slate-500 dark:last:text-slate-400 last:after:content-[''];
     }
   }
 }
