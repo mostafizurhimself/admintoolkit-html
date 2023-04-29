@@ -5,7 +5,7 @@
       {
         "name": "Analytics",
         "url": "/",
-        "icon": "ti ti-chart-bar"
+        "icon": "ti ti-home-stats"
       },
       {
         "name": "Ecommerce",
@@ -218,12 +218,12 @@
         "icon": "ti ti-cloud-upload"
       },
       {
-        "name": "Layout",
+        "name": "Form Layout",
         "url": "/form-layout.html",
         "icon": "ti ti-layout-board"
       },
       {
-        "name": "Validation",
+        "name": "Form Validation",
         "url": "/form-validation.html",
         "icon": "ti ti-shield-lock"
       },
@@ -240,7 +240,7 @@
       {
         "name": "Charts",
         "url": "/chart.html",
-        "icon": "ti ti-chart-bar"
+        "icon": "ti ti-chart-pie"
       },
       {
         "name": "Icons",
@@ -250,7 +250,7 @@
       {
         "name": "Typography",
         "url": "/typography.html",
-        "icon": "ti ti-clipboard-typography"
+        "icon": "ti ti-letter-t"
       }
     ]
   },
