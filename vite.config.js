@@ -25,47 +25,47 @@ export default defineConfig({
       input: entries,
       output: {
         assetFileNames: (chunkInfo) => {
-          let outDir = 'assets';
+          let outDir = '';
 
           // Fonts
           if (/(ttf|woff|woff2|eot)$/.test(chunkInfo.name)) {
-            outDir = 'assets/fonts';
+            outDir = 'fonts';
           }
 
           // SVG
           if (/svg$/.test(chunkInfo.name)) {
-            outDir = 'assets/svg';
+            outDir = 'svg';
           }
 
           // Images
           if (/(png|jpg|jpeg|gif|webp)$/.test(chunkInfo.name)) {
-            outDir = 'assets/images';
+            outDir = 'images';
           }
 
           // Media
           if (/(mp3|mp4|webm|ogg|wav|flac|aac)$/.test(chunkInfo.name)) {
-            outDir = 'assets/media';
+            outDir += 'media';
           }
 
           // JSON
           if (/json$/.test(chunkInfo.name)) {
-            outDir = 'assets/json';
+            outDir = 'json';
           }
 
           // JS
           if (/js$/.test(chunkInfo.name)) {
-            outDir = 'assets/js';
+            outDir = 'js';
           }
 
           // CSS
           if (/css$/.test(chunkInfo.name)) {
-            outDir = 'assets/css';
+            outDir = 'css';
           }
 
-          return `${outDir}/[name]-[hash][extname]`;
+          return `${outDir}/[name][extname]`;
         },
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
         // manualChunks: (id) => {
         //   const fileName = id.split("/").pop();
 

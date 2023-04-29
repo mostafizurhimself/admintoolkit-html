@@ -1023,14 +1023,14 @@ Introducing the new MacBook Pro 2023 - the ultimate powerhouse for creators and 
               id: 4,
               name: 'Product 4',
               size: 36318,
-              url: '/images/product4.png',
+              url: '/images/product7.png',
             },
             {
               id: 5,
               name: 'Product 5',
               size: 17526,
-              url: '/images/product5.png',
-            },
+              url: '/images/product8.png',
+            }
           ];
 
           files.forEach((file) => {
@@ -1045,7 +1045,7 @@ Introducing the new MacBook Pro 2023 - the ultimate powerhouse for creators and 
             this.files = this.files.filter((f) => f.id !== file.id);
             this.options.maxFiles = files.length - this.files.length;
           });
-        },
+        }
       });
     </script>
   </body>
