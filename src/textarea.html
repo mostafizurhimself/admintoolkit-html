@@ -162,7 +162,7 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="./list.html" class="sidebar-submenu-item">List</a>
+                <a href="./user-list.html" class="sidebar-submenu-item">List</a>
               </li>
               <li>
                 <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
@@ -433,31 +433,26 @@
               <div class="sm:hidden">
                 <button
                   type="button"
-                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300"
+                  data-toggle="modal"
+                  data-target="#search-modal"
+                  class="flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300"
                 >
                   <i width="22" height="22" data-feather="search"></i>
                 </button>
               </div>
               <!-- Mobile Search Ends -->
 
-              <form
-                action=""
-                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
+              <!-- Searchbar Start -->
+              <button
+                type="button"
+                data-toggle="modal"
+                data-target="#search-modal"
+                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex"
               >
-                <div class="flex h-full items-center px-3">
-                  <i
-                    class="text-slate-400 group-focus-within:text-primary-500"
-                    width="1em"
-                    height="1em"
-                    data-feather="search"
-                  ></i>
-                </div>
-                <input
-                  class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                  type="text"
-                  placeholder="Search"
-                />
-              </form>
+                <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
+                <span class="ml-2 text-sm text-slate-400">Search</span>
+              </button>
+              <!-- Searchbar Ends -->
             </div>
             <!-- Sidebar Toggle & Search Ends -->
 
@@ -520,7 +515,7 @@
               <!-- Language Dropdown Ends -->
 
               <!-- Dark Mood Toggle Starts -->
-              <div class="dropdown" data-strategy="absolute" id="dropdown-theme-switcher">
+              <div class="dropdown" data-strategy="absolute" id="theme-switcher-dropdown">
                 <button
                   class="dropdown-toggle px-3 text-slate-500 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
                   type="button"
@@ -902,6 +897,35 @@
         <!-- Page Content Ends -->
       </div>
       <!-- Wrapper Ends -->
+
+      <!-- Search Modal Start -->
+      <div class="modal" id="search-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header px-6">
+              <div class="group flex items-center">
+                <i
+                  data-feather="search"
+                  class="text-slate-500 group-focus-within:text-slate-600 dark:text-slate-400 dark:group-focus-within:text-slate-300"
+                ></i>
+                <input
+                  type="text"
+                  class="w-full border-none bg-transparent text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:ring-0 dark:text-slate-200"
+                  placeholder="Search"
+                />
+                <button
+                  class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
+                  data-dismiss="modal"
+                >
+                  ESC
+                </button>
+              </div>
+            </div>
+            <div class="modal-body max-h-[600px] p-6"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Search Modal Ends -->
     </div>
     <script src="./js/app.js" type="module"></script>
   </body>

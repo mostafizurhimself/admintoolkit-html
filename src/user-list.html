@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/logo-small.svg" type="image/svg" />
-    <title>Orders List - Admin Toolkit</title>
+    <title>User List - Admin Toolkit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -100,7 +100,7 @@
           </li>
           <!-- Invoice -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu active">
+            <a href="javascript:void(0);" class="sidebar-menu">
               <span class="sidebar-menu-icon">
                 <i data-feather="file-text"></i>
               </span>
@@ -113,9 +113,7 @@
               <li>
                 <a href="./invoice-create.html" class="sidebar-submenu-item"> Create </a>
               </li>
-              <li>
-                <a href="./invoice-listing.html" class="sidebar-submenu-item active"> Listing </a>
-              </li>
+
               <li>
                 <a href="./invoice-details.html" class="sidebar-submenu-item"> Details </a>
               </li>
@@ -153,7 +151,7 @@
           </li>
           <!-- Users -->
           <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
+            <a href="javascript:void(0);" class="sidebar-menu active">
               <span class="sidebar-menu-icon">
                 <i data-feather="users"></i>
               </span>
@@ -164,7 +162,7 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="./list.html" class="sidebar-submenu-item">List</a>
+                <a href="./user-list.html" class="sidebar-submenu-item active"> List </a>
               </li>
               <li>
                 <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
@@ -435,31 +433,26 @@
               <div class="sm:hidden">
                 <button
                   type="button"
-                  class="flex items-center justify-center rounded-full text-slate-600 transition-colors duration-150 hover:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300"
+                  data-toggle="modal"
+                  data-target="#search-modal"
+                  class="flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300"
                 >
                   <i width="22" height="22" data-feather="search"></i>
                 </button>
               </div>
               <!-- Mobile Search Ends -->
 
-              <form
-                action=""
-                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500 sm:flex"
+              <!-- Searchbar Start -->
+              <button
+                type="button"
+                data-toggle="modal"
+                data-target="#search-modal"
+                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex"
               >
-                <div class="flex h-full items-center px-3">
-                  <i
-                    class="text-slate-400 group-focus-within:text-primary-500"
-                    width="1em"
-                    height="1em"
-                    data-feather="search"
-                  ></i>
-                </div>
-                <input
-                  class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                  type="text"
-                  placeholder="Search"
-                />
-              </form>
+                <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
+                <span class="ml-2 text-sm text-slate-400">Search</span>
+              </button>
+              <!-- Searchbar Ends -->
             </div>
             <!-- Sidebar Toggle & Search Ends -->
 
@@ -522,7 +515,7 @@
               <!-- Language Dropdown Ends -->
 
               <!-- Dark Mood Toggle Starts -->
-              <div class="dropdown" data-strategy="absolute" id="dropdown-theme-switcher">
+              <div class="dropdown" data-strategy="absolute" id="theme-switcher-dropdown">
                 <button
                   class="dropdown-toggle px-3 text-slate-500 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
                   type="button"
@@ -746,132 +739,132 @@
           <main class="container flex-grow p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-              <h5 class="px-2 md:px-0">Orders List</h5>
+              <h5 class="px-2 md:px-0">User List</h5>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
                 </li>
 
                 <li class="breadcrumb-item">
-                  <a href="#">Ecommerce</a>
+                  <a href="#">User</a>
                 </li>
 
                 <li class="breadcrumb-item">
-                  <a href="#">Orders</a>
+                  <a href="#">List</a>
                 </li>
               </ol>
             </div>
             <!-- Page Title Ends -->
-
-            <!-- Invoice Listing Starts -->
-            <div class="grid grid-cols-1">
-              <!-- Invoice Header Start -->
-              <div class="flex w-full flex-col items-center justify-between gap-y-4 md:flex-row md:gap-0">
-                <div class="w-full md:w-1/2">
-                  <form
-                    action=""
-                    class="input group flex h-10 w-full items-center rounded-primary border border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500 md:w-72"
-                  >
-                    <div class="flex h-full items-center px-3">
-                      <i
-                        class="text-slate-400 group-focus-within:text-primary-500"
-                        width="1em"
-                        height="1em"
-                        data-feather="search"
-                      ></i>
-                    </div>
-                    <input
-                      class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                      type="text"
-                      placeholder="Search"
-                    />
-                  </form>
-                </div>
-                <div class="flex w-full justify-between gap-5 md:w-1/2 md:justify-end">
-                  <div
-                    data-placement="bottom-end"
-                    class="dropdown max-w-sm rounded-primary bg-white px-4 py-2 shadow-sm dark:bg-slate-800"
-                  >
-                    <div class="dropdown-toggle flex gap-2 px-2 text-slate-600 dark:text-slate-300">
-                      <i class="w-4" data-feather="filter"></i>
-                      <span class="text-sm font-medium">Filter</span>
-                      <i class="w-4" data-feather="chevron-down"></i>
-                    </div>
-                    <div class="dropdown-content min-w-sm !overflow-visible md:min-w-[300px]">
-                      <a href="javascript:void(0)" class="dropdown-item hover:!bg-transparent">
-                        <h2 class="my-1 text-sm font-medium">Status</h2>
-                        <select class="select select-sm w-full">
-                          <option value="">Select a Status</option>
-                          <option value="1">Delivered</option>
-                          <option value="2">Shipped</option>
-                          <option value="3">Processing</option>
-                          <option value="4">Refounded</option>
-                          <option value="5">Canceled</option>
-                        </select>
-                      </a>
-                      <a href="javascript:void(0)" class="dropdown-item hover:!bg-transparent">
-                        <h2 class="my-1 text-sm font-medium">Ordered Date</h2>
-                        <select class="tom-select" autocomplete="off">
-                          <option value="">Search Date</option>
-                          <option value="1">01 May 2022</option>
-                          <option value="2">20 Jun 2022</option>
-                          <option value="3">19 Aug 2022</option>
-                        </select>
-                      </a>
-                    </div>
+            
+            <!-- User List Starts -->
+            <div class="space-y-4">
+              <!-- User Header Starts -->
+              <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row md:gap-y-0">
+                <!-- User Search Starts -->
+                <form class="group flex items-center rounded-primary border border-transparent bg-white shadow-sm h-10 w-full md:w-72 focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500">
+                  <div class="flex h-full items-center px-2">
+                    <i class="h-4 text-slate-400 group-focus-within:text-primary-500" data-feather="search"></i>
                   </div>
+                  <input
+                    class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                    type="text"
+                    placeholder="Search"
+                  />
+                </form>
+                <!-- User Search Ends -->
+                
+                <!-- User Action Starts -->
+                <div class="w-full md:w-auto flex items-center justify-between gap-x-4">
+                  <div class="flex items-center gap-x-4">
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <button type="button" class="btn font-medium shadow-sm bg-white dark:bg-slate-800">
+                          <i class="w-4" data-feather="filter"></i>
+                          <span class="hidden sm:inline-block">Filter</span>
+                          <i class="w-4" data-feather="chevron-down"></i>
+                        </button>
+                      </div>
+                      <div class="dropdown-content !overflow-visible w-72">
+                        <ul class="dropdown-list space-y-4 p-4">
+                          <li class="dropdown-list-item">
+                            <h2 class="my-1 text-sm font-medium">Occupation</h2>
+                            <select class="tom-select w-full" autocomplete="off">
+                              <option value="">Select a Occupation</option>
+                              <option value="1">Frontend Developer</option>
+                              <option value="2">Full Stack Developer</option>
+                              <option value="3">Web Developer</option>
+                            </select>
+                          </li>
+
+                          <li class="dropdown-list-item">
+                            <h2 class="my-1 text-sm font-medium">Status</h2>
+                            <select class="select">
+                              <option value="">Select to Status</option>
+                              <option value="1">Active</option>
+                              <option value="2">Inactive</option>
+                              <option value="2">Prospect</option>
+                              <option value="2">Suspended</option>
+                            </select>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <button class="btn font-medium shadow-sm bg-white dark:bg-slate-800">
+                      <i class="h-4" data-feather="upload"></i>
+                      <span class="hidden sm:inline-block">Export</span>
+                    </button>
+                  </div>
+
                   <a class="btn btn-primary" href="#" role="button">
                     <i data-feather="plus" height="1rem" width="1rem"></i>
-                    New Order
+                    <span class="hidden sm:inline-block">Add User</span>
                   </a>
                 </div>
+                <!-- User Action Ends -->
               </div>
-              <!-- Invoice Header End -->
-              <div class="table-responsive my-4">
-                <table class="table min-w-[1100px]">
+              <!-- User Header Ends -->
+
+              <!-- User Table Starts -->
+              <div class="table-responsive whitespace-nowrap rounded-primary">
+                <table class="table">
                   <thead>
                     <tr>
-                      <th>
-                        <label for="checkbox-sm" class="label">
-                          <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
-                        </label>
+                      <th class="w-[5%]">
+                        <input class="checkbox" type="checkbox">
                       </th>
-                      <th class="text-xs uppercase">Order</th>
-                      <th class="text-xs uppercase">Customer</th>
-                      <th class="text-xs uppercase">Total</th>
-                      <th class="text-xs uppercase">Ordered At</th>
-                      <th class="text-xs uppercase">Status</th>
-                      <th class="text-xs uppercase">
-                        <p class="text-right">Actions</p>
-                      </th>
+                      <th class="w-[30%] uppercase">User</th>
+                      <th class="w-[15%] uppercase">Email</th>
+                      <th class="w-[15%] uppercase">Phone</th>
+                      <th class="w-[15%] uppercase">Joined Date</th>
+                      <th class="w-[15%] uppercase">Status</th>
+                      <th class="w-[5%] uppercase !text-right">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
-                        <a
-                          class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
-                          href="#"
-                        >
-                          #2890
-                        </a>
-                      </td>
-                      <td>
-                        <div class="flex gap-2">
-                          <img src="./images/avatar1.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                        <div class="flex items-center gap-3">
+                          <div class="avatar avatar-circle">
+                            <img class="avatar-img" src="./images/avatar1.png" alt="Avatar 1">
+                          </div>
                           <div>
-                            <h4 class="m-0 p-0 text-sm font-medium">Ahmed Shakil</h4>
-                            <p class="m-0 p-0 text-xs font-normal text-slate-400">jackson.graham@example.com</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Korrie O'Crevy 
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Nuclear Power Engineer
+                            </p>
                           </div>
                         </div>
                       </td>
-                      <td>$446.61</td>
-                      <td>19 Aug 2022, 10:39 pm</td>
+                      <td>kocrevy0@thetimes.co.uk</td>
+                      <td>+1 080-123-4567</td>
+                      <td>19 Aug 2022</td>
                       <td>
-                        <div class="badge badge-soft-primary">Processing</div>
+                        <div class="badge badge-soft-success">Active</div>
                       </td>
                       <td>
                         <div class="flex justify-end">
@@ -879,19 +872,21 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                Details
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                PDF
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                Delete
-                              </a>
+                            <div class="dropdown-content">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -899,29 +894,29 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
-                        <a
-                          class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
-                          href="#"
-                        >
-                          #2891
-                        </a>
-                      </td>
-                      <td>
-                        <div class="flex gap-2">
-                          <img src="./images/avatar2.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                        <div class="flex items-center gap-3">
+                          <div class="avatar avatar-circle">
+                            <img class="avatar-img" src="./images/avatar2.png" alt="Avatar 2">
+                          </div>
+
                           <div>
-                            <h4 class="m-0 p-0 text-sm font-medium">Afrad Bhuyian</h4>
-                            <p class="m-0 p-0 text-xs font-normal text-slate-400">michelle.rivera@example.com</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Bailie Coulman
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              VP Quality Control
+                            </p>
                           </div>
                         </div>
                       </td>
-                      <td>$739.65</td>
-                      <td>20 Jun 2022, 05:00 pm</td>
+                      <td>bcoulman1@yolasite.com</td>
+                      <td>+1 080-123-4567</td>
+                      <td>20 Jun 2022</td>
                       <td>
-                        <div class="badge badge-soft-primary">Processing</div>
+                        <div class="badge badge-soft-success">Active</div>
                       </td>
                       <td>
                         <div class="flex justify-end">
@@ -929,19 +924,21 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                Details
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                PDF
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                Delete
-                              </a>
+                            <div class="dropdown-content">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -949,29 +946,29 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
-                        <a
-                          class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
-                          href="#"
-                        >
-                          #2892
-                        </a>
-                      </td>
-                      <td>
-                        <div class="flex gap-2">
-                          <img src="./images/avatar3.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                        <div class="flex items-center gap-3">
+                          <div class="avatar avatar-circle">
+                            <img class="avatar-img" src="./images/avatar3.png" alt="Avatar 3">
+                          </div>
+
                           <div>
-                            <h4 class="m-0 p-0 text-sm font-medium">Adnan Shaikat</h4>
-                            <p class="m-0 p-0 text-xs font-normal text-slate-400">georgia.young@example.com</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Stella Ganderton
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Operator
+                            </p>
                           </div>
                         </div>
                       </td>
-                      <td>$475.22</td>
-                      <td>01 May 2022, 12:01 am</td>
+                      <td>sganderton2@tuttocitta.it</td>
+                      <td>+1 0823-163-6667</td>
+                      <td>01 May 2022</td>
                       <td>
-                        <div class="badge badge-soft-danger">Canceled</div>
+                        <div class="badge badge-soft-danger">inactive</div>
                       </td>
                       <td>
                         <div class="flex justify-end">
@@ -979,19 +976,21 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                Details
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                PDF
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                Delete
-                              </a>
+                            <div class="dropdown-content">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -999,29 +998,29 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
-                        <a
-                          class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
-                          href="#"
-                        >
-                          #2893
-                        </a>
-                      </td>
-                      <td>
-                        <div class="flex gap-2">
-                          <img src="./images/avatar4.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                        <div class="flex items-center gap-3">
+                          <div class="avatar avatar-circle">
+                            <img class="avatar-img" src="./images/avatar4.png" alt="Avatar 4">
+                          </div>
+
                           <div>
-                            <h4 class="m-0 p-0 text-sm font-medium">Hasibur Rahman</h4>
-                            <p class="m-0 p-0 text-xs font-normal text-slate-400">nathan.roberts@example.com</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Dorolice Crossman
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Cost Accountant 
+                            </p>
                           </div>
                         </div>
                       </td>
-                      <td>$779.58</td>
-                      <td>15 Apr 2022, 01: 10 am</td>
+                      <td>dcrossman3@google.co.jp</td>
+                      <td>+1 0823-245-5667</td>
+                      <td>15 Apr 2022</td>
                       <td>
-                        <div class="badge badge-soft-success">Delivered</div>
+                        <div class="badge badge-soft-success">Active</div>
                       </td>
                       <td>
                         <div class="flex justify-end">
@@ -1029,19 +1028,21 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                Details
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                PDF
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                Delete
-                              </a>
+                            <div class="dropdown-content">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -1049,29 +1050,29 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
-                        <a
-                          class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
-                          href="#"
-                        >
-                          #2894
-                        </a>
-                      </td>
-                      <td>
-                        <div class="flex gap-2">
-                          <img src="./images/avatar5.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                        <div class="flex items-center gap-3">
+                          <div class="avatar avatar-circle">
+                            <img class="avatar-img" src="./images/avatar5.png" alt="Avatar 5">
+                          </div>
+
                           <div>
-                            <h4 class="m-0 p-0 text-sm font-medium">Tanvir Alam</h4>
-                            <p class="m-0 p-0 text-xs font-normal text-slate-400">sara.cruz@example.com</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Harmonia Nisius
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Senior Cost Accountant 
+                            </p>
                           </div>
                         </div>
                       </td>
-                      <td>$169.43</td>
-                      <td>10 Apr 2022, 04:30 pm</td>
+                      <td>hnisius4@gnu.org</td>
+                      <td>+1 0823-786-5867</td>
+                      <td>10 Apr 2022</td>
                       <td>
-                        <div class="badge badge-soft-success">Delivered</div>
+                        <div class="badge badge-soft-warning">Resigned</div>
                       </td>
                       <td>
                         <div class="flex justify-end">
@@ -1079,19 +1080,21 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                Details
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                PDF
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                Delete
-                              </a>
+                            <div class="dropdown-content">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -1099,29 +1102,29 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
-                        <a
-                          class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
-                          href="#"
-                        >
-                          #2895
-                        </a>
-                      </td>
-                      <td>
-                        <div class="flex gap-2">
-                          <img src="./images/avatar6.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                        <div class="flex items-center gap-3">
+                          <div class="avatar avatar-circle">
+                            <img class="avatar-img" src="./images/avatar6.png" alt="Avatar 6">
+                          </div>
+
                           <div>
-                            <h4 class="m-0 p-0 text-sm font-medium">Tauhid Islam</h4>
-                            <p class="m-0 p-0 text-xs font-normal text-slate-400">jessica.hanson@example.com</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Genevra Honeywood
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Geologist
+                            </p>
                           </div>
                         </div>
                       </td>
-                      <td>$576.28</td>
-                      <td>01 Mar 2022, 06: 25 pm</td>
+                      <td>ghoneywood5@narod.ru</td>
+                      <td>+1 0823-432-3467</td>
+                      <td>01 Mar 2022</td>
                       <td>
-                        <div class="badge badge-soft-warning">Shipped</div>
+                        <div class="badge badge-soft-success">Active</div>
                       </td>
                       <td>
                         <div class="flex justify-end">
@@ -1129,19 +1132,21 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                Details
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                PDF
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                Delete
-                              </a>
+                            <div class="dropdown-content">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -1149,29 +1154,29 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
-                        <a
-                          class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
-                          href="#"
-                        >
-                          #2896
-                        </a>
-                      </td>
-                      <td>
-                        <div class="flex gap-2">
-                          <img src="./images/avatar7.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                        <div class="flex items-center gap-3">
+                          <div class="avatar avatar-circle">
+                            <img class="avatar-img" src="./images/avatar7.png" alt="Avatar 7">
+                          </div>
+                          
                           <div>
-                            <h4 class="m-0 p-0 text-sm font-medium">Motasim Fuad</h4>
-                            <p class="m-0 p-0 text-xs font-normal text-slate-400">kenzi.lawson@example.com</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Eileen Diehn
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Environmental Specialist 
+                            </p>
                           </div>
                         </div>
                       </td>
-                      <td>$630.44</td>
-                      <td>10 Feb 2022, 10:05 am</td>
+                      <td>ediehn6@163.com</td>
+                      <td>+1 4232-422-3567</td>
+                      <td>10 Feb 2022</td>
                       <td>
-                        <div class="badge badge-soft-success">Delivered</div>
+                        <div class="badge badge-soft-success">Active</div>
                       </td>
                       <td>
                         <div class="flex justify-end">
@@ -1179,19 +1184,21 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                Details
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                PDF
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                Delete
-                              </a>
+                            <div class="dropdown-content">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -1199,29 +1206,28 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
-                        <a
-                          class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
-                          href="#"
-                        >
-                          #2897
-                        </a>
-                      </td>
-                      <td>
-                        <div class="flex gap-2">
-                          <img src="./images/avatar8.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                        <div class="flex items-center gap-3">
+                          <div class="avatar avatar-circle">
+                            <img class="avatar-img" src="./images/avatar8.png" alt="Avatar 8">
+                          </div>
                           <div>
-                            <h4 class="m-0 p-0 text-sm font-medium">Yeasin Ahmed</h4>
-                            <p class="m-0 p-0 text-xs font-normal text-slate-400">tanya.hill@example.com</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Richardo Aldren
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Senior Sales Associate 
+                            </p>
                           </div>
                         </div>
                       </td>
-                      <td>$202.87</td>
-                      <td>01 Feb 2022, 03: 30 pm</td>
+                      <td>raldren7@mtv.com</td>
+                      <td>+1 4332-411-3567</td>
+                      <td>01 Feb 2022</td>
                       <td>
-                        <div class="badge badge-soft-secondary">Refounded</div>
+                        <div class="badge badge-soft-warning">Resigned</div>
                       </td>
                       <td>
                         <div class="flex justify-end">
@@ -1229,19 +1235,21 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                Details
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                PDF
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                Delete
-                              </a>
+                            <div class="dropdown-content">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -1249,29 +1257,29 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
-                        <a
-                          class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
-                          href="#"
-                        >
-                          #2898
-                        </a>
-                      </td>
-                      <td>
-                        <div class="flex gap-2">
-                          <img src="./images/avatar9.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                        <div class="flex items-center gap-3">
+                          <div class="avatar avatar-circle">
+                            <img class="avatar-img" src="./images/avatar9.png" alt="Avatar 9">
+                          </div>
+
                           <div>
-                            <h4 class="m-0 p-0 text-sm font-medium">Nathan Cooper</h4>
-                            <p class="m-0 p-0 text-xs font-normal text-slate-400">nevaeh.simmons@example.com</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Allyson Moakler
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Safety Technician 
+                            </p>
                           </div>
                         </div>
                       </td>
-                      <td>$928.41</td>
-                      <td>25 Jan 2022, 08: 25 pm</td>
+                      <td>amoakler8@shareasale.com</td>
+                      <td>+1 7332-890-3067</td>
+                      <td>25 Jan 2022</td>
                       <td>
-                        <div class="badge badge-soft-success">Delivered</div>
+                        <div class="badge badge-soft-success">Active</div>
                       </td>
                       <td>
                         <div class="flex justify-end">
@@ -1279,19 +1287,21 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                Details
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                PDF
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                Delete
-                              </a>
+                            <div class="dropdown-content">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -1299,29 +1309,29 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
-                        <a
-                          class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
-                          href="#"
-                        >
-                          #2899
-                        </a>
-                      </td>
-                      <td>
-                        <div class="flex gap-2">
-                          <img src="./images/avatar10.png" alt="avatar-img" class="h-10 w-10 rounded-full" />
+                        <div class="flex items-center gap-3">
+                          <div class="avatar avatar-circle">
+                            <img class="avatar-img" src="./images/avatar10.png" alt="Avatar 10">
+                          </div>
+
                           <div>
-                            <h4 class="m-0 p-0 text-sm font-medium">James William</h4>
-                            <p class="m-0 p-0 text-xs font-normal text-slate-400">felicia.reid@example.com</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Merline Penhalewick
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Junior Executive 
+                            </p>
                           </div>
                         </div>
                       </td>
-                      <td>$406.27</td>
-                      <td>01 Jan 2022, 09: 10 am</td>
+                      <td>mpenhalewick9@php.net</td>
+                      <td>+1 3453-123-3567</td>
+                      <td>01 Jan 2022</td>
                       <td>
-                        <div class="badge badge-soft-success">Delivered</div>
+                        <div class="badge badge-soft-danger">Inactive</div>
                       </td>
                       <td>
                         <div class="flex justify-end">
@@ -1329,19 +1339,21 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                Details
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="file-text"></i>
-                                PDF
-                              </a>
-                              <a href="javascript:void(0)" class="dropdown-item flex items-center gap-4">
-                                <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                Delete
-                              </a>
+                            <div class="dropdown-content">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -1350,6 +1362,9 @@
                   </tbody>
                 </table>
               </div>
+              <!-- User Table Ends -->
+
+              <!-- User Pagination Starts -->
               <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row">
                 <p class="text-xs font-normal text-slate-400">Showing 1 to 10 of 50 result</p>
                 <!-- Pagination -->
@@ -1383,8 +1398,9 @@
                   </ul>
                 </nav>
               </div>
+              <!-- User Pagination Ends -->
             </div>
-            <!-- Invoice Listing Ends -->
+            <!-- User List Ends -->
           </main>
           <!-- Main Content Ends -->
 
@@ -1406,6 +1422,35 @@
         <!-- Page Content Ends -->
       </div>
       <!-- Wrapper Ends -->
+
+      <!-- Search Modal Start -->
+      <div class="modal" id="search-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header px-6">
+              <div class="group flex items-center">
+                <i
+                  data-feather="search"
+                  class="text-slate-500 group-focus-within:text-slate-600 dark:text-slate-400 dark:group-focus-within:text-slate-300"
+                ></i>
+                <input
+                  type="text"
+                  class="w-full border-none bg-transparent text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:ring-0 dark:text-slate-200"
+                  placeholder="Search"
+                />
+                <button
+                  class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
+                  data-dismiss="modal"
+                >
+                  ESC
+                </button>
+              </div>
+            </div>
+            <div class="modal-body max-h-[600px] p-6"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Search Modal Ends -->
     </div>
     <script src="./js/app.js" type="module"></script>
   </body>

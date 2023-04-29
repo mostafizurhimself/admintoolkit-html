@@ -13,6 +13,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@tailwind.config': resolve(__dirname, './tailwind.config.js'),
+      '@': resolve(__dirname, './src'),
     }
   },
   optimizeDeps: {

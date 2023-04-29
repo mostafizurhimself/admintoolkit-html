@@ -1,28 +1,32 @@
 //Third party packages
-import 'simplebar';
 import '@fortawesome/fontawesome-free/js/all';
 import feather from 'feather-icons';
 import ResizeObserver from 'resize-observer-polyfill';
+import 'simplebar';
 
 //Core components
 import accordion from './components/accordion';
 import alert from './components/alert';
+import carousel from './components/carousel';
 import codeViewer from './components/code-viewer';
-import dropdown from './components/dropdown';
-import modal from './components/modal';
-import sidebar from './components/sidebar';
-import tabs from './components/tabs';
-import tooltip from './components/tooltip';
 import datepicker from './components/datepicker';
 import drawer from './components/drawer';
-import themeSwitcher from './components/theme-switcher';
-import carousel from './components/carousel';
+import dropdown from './components/dropdown';
 import editor from './components/editor';
+import modal from './components/modal';
+import searchModal from './components/search-modal';
 import select from './components/select';
+import sidebar from './components/sidebar';
+import tabs from './components/tabs';
+import themeSwitcher from './components/theme-switcher';
+import tooltip from './components/tooltip';
 import uploader from './components/uploader';
 
 // Initialize themeSwitcher
 themeSwitcher.init();
+
+// Initialize searchModal
+searchModal.init();
 
 // Initialize codeViewer
 codeViewer.init();
