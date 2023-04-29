@@ -1,4 +1,4 @@
-class Modal {
+export class Modal {
   constructor(target, options = {}) {
     //Store the target element
     this.target = null;

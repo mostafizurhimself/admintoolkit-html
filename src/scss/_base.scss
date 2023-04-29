@@ -1,7 +1,7 @@
 body {
   @apply bg-slate-50  text-slate-700 dark:bg-slate-900 dark:text-slate-200;
 
-  // &:has(.preloader) {
+  // &:has(.modal.show) {
   //   @apply overflow-hidden;
   // }
 
@@ -17,7 +17,7 @@ body {
     }
 
     .header {
-      @apply sticky top-0 z-50 flex h-16 w-full items-center bg-white drop-shadow-sm dark:bg-slate-800;
+      @apply sticky top-0 z-50 flex h-16 w-full items-center overflow-visible bg-white drop-shadow-sm dark:bg-slate-800;
     }
 
     .content {

@@ -68,7 +68,7 @@ class ThemeSwitcher {
 
 const themeSwitcher = {
   init() {
-    const dropdownThemeSwitcher = document.querySelector('#dropdown-theme-switcher');
+    const dropdownThemeSwitcher = document.querySelector('#theme-switcher-dropdown');
 
     if (dropdownThemeSwitcher) {
       new ThemeSwitcher(dropdownThemeSwitcher);

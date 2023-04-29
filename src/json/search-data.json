@@ -1,0 +1,67 @@
+[
+    {
+        "title": "Dashboard",
+        "pages": [
+            {
+                "name": "Analytics",
+                "url": "/",
+                "icon": "ti ti-chart-bar"
+            },
+            {
+                "name": "Ecommerce",
+                "url": "/ecommerce.html",
+                "icon": "ti ti-shopping-cart"
+            }
+        ]
+    },
+    {
+        "title": "Applications",
+        "pages": [
+            {
+                "name": "Email",
+                "url": "/email.html",
+                "icon": "ti ti-mail"
+            },
+            {
+                "name": "Chat",
+                "url": "/chat.html",
+                "icon": "ti ti-message"
+            },
+            {
+                "name": "Calendar",
+                "url": "/calendar.html",
+                "icon": "ti ti-calendar"
+            },
+            {
+                "name": "Invoice Create",
+                "url": "/invoice-create.html",
+                "icon": "ti ti-file-invoice"
+            },
+            {
+                "name": "Invoice Details",
+                "url": "/invoice-details.html",
+                "icon": "ti ti-file-invoice"
+            }
+        ]
+    },
+    {
+        "title": "Components",
+        "pages": [
+            {
+                "name": "Accordion",
+                "url": "/accordion.html",
+                "icon": "ti ti-components"
+            },
+            {
+                "name": "Alerts",
+                "url": "/alert.html",
+                "icon": "ti ti-bell"
+            },
+            {
+                "name": "Avatars",
+                "url": "/avatar.html",
+                "icon": "ti ti-user"
+            }
+        ]
+    }
+]

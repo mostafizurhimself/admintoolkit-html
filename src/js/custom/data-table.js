@@ -1,12 +1,10 @@
 import DataTable from '../components/data-table';
-import tableData from '../../json/datatable.json';
-
+import tableData from '@/json/datatable.json';
 
 async function loadTable(table) {
   const tbody = table.querySelector('tbody');
 
   if (tbody) {
-
     if (tableData.length) {
       tableData.forEach((record) => {
         tbody.innerHTML += `
