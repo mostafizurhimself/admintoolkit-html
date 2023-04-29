@@ -16,7 +16,7 @@
     }
 
     &-list {
-      @apply flex items-center gap-4;
+      @apply flex flex-wrap items-center gap-4;
     }
 
     &-item {
