@@ -63,5 +63,11 @@
                 "icon": "ti ti-user"
             }
         ]
+    },
+    {
+        "title": "Pages",
+        "pages": [
+            
+        ]
     }
 ]
