@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/logo-small.svg" type="image/svg" />
-    <title>Edit Product - Admin Toolkit</title>
+    <title>Product Edit - Admin Toolkit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -1047,14 +1047,14 @@ Introducing the new MacBook Pro 2023 - the ultimate powerhouse for creators and 
               id: 4,
               name: 'Product 4',
               size: 36318,
-              url: '/images/product4.png',
+              url: '/images/product7.png',
             },
             {
               id: 5,
               name: 'Product 5',
               size: 17526,
-              url: '/images/product5.png',
-            },
+              url: '/images/product8.png',
+            }
           ];
 
           files.forEach((file) => {
@@ -1069,7 +1069,7 @@ Introducing the new MacBook Pro 2023 - the ultimate powerhouse for creators and 
             this.files = this.files.filter((f) => f.id !== file.id);
             this.options.maxFiles = files.length - this.files.length;
           });
-        },
+        }
       });
     </script>
   </body>

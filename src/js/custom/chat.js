@@ -1,37 +1,93 @@
+const chatOverlay = document.querySelector('#chat-overlay');
+const chatSidebar = document.querySelector('#chat-sidebar');
+const chatList = document.querySelector('#chat-list');
+const chatListItems = document.querySelectorAll('#chat-list > li');
+const chatBtnShowSidebar = document.querySelector('#chat-btn-show-sidebar');
+const chatBtnHideSidebar = document.querySelector('#chat-btn-hide-sidebar');
+const btnUploadMedia = document.querySelector('#btn-upload-media');
+const inputUploadMedia = document.querySelector('#input-upload-media');
+
+
 // Default Scroll To Bottom
 window.addEventListener('load', () => {
   const chats = document.getElementById('chats');
   let chatScrollHeight = chats.scrollHeight;
   chats.scrollTo({ top: chatScrollHeight, left: 0 });
 });
-//  Chat List Toggle
-const chatList = document.getElementById('chat-list');
-const hideChatList = document.getElementById('hide-chat-list');
-const openChatList = document.getElementById('open-chat-list');
-const overlay = document.getElementById('overlay');
-// Open Chat List
-const getOpenChatList = () => {
-  chatList.classList.remove('-translate-x-full');
-  chatList.classList.add('translate-x-0');
-  overlay.classList.remove('invisible', 'opacity-0');
-  overlay.classList.add('visible', 'opacity-100');
-};
 
-// Hide Chat List
-const getHideChatList = () => {
-  overlay.classList.remove('opacity-100');
-  overlay.classList.add('opacity-0');
-  overlay.classList.remove('visible');
-  setTimeout(() => {
-    chatList.classList.remove('translate-x-0');
-    chatList.classList.add('-translate-x-full');
-    overlay.classList.add('invisible');
-  }, 100);
-};
+if (chatListItems.length) {
+  [...chatListItems].forEach(chatItem => {
+    chatItem.addEventListener('click', () => {
+      const chatItemActive = chatList.querySelector('li.active');
 
-//  EventListeners
-openChatList.addEventListener('click', getOpenChatList);
-hideChatList.addEventListener('click', getHideChatList);
-chatList.addEventListener('click', (event) => {
-  if (event.target === chatList) getHideChatList();
-});
+      if (!chatItem.classList.contains('active')) {
+        chatItem.classList.add('active');
+
+        if (chatItemActive) {
+          chatItemActive.classList.remove('active');
+        }
+      }
+
+      hideChatSidebar(chatSidebar);
+    })
+  })
+}
+
+if (chatBtnShowSidebar) {
+  chatBtnShowSidebar.addEventListener('click', () => showChatSidebar(chatSidebar));
+}
+
+if (chatBtnHideSidebar) {
+  chatBtnHideSidebar.addEventListener('click', () => hideChatSidebar(chatSidebar));
+}
+
+if (btnUploadMedia) {
+  btnUploadMedia.addEventListener('click', () => {
+    if (inputUploadMedia) {
+      inputUploadMedia.click()
+    }
+  })
+}
+
+function showChatSidebar(sidebar) {
+  if (!sidebar) return;
+
+  const sidebarComputedStyle = window.getComputedStyle(sidebar);
+  const sidebarVisibility = sidebarComputedStyle.getPropertyValue('visibility');
+
+  if (sidebarVisibility === 'hidden') {
+    sidebar.classList.add('transform-none');
+    sidebar.classList.replace('invisible', 'visible');
+
+    if (chatOverlay) {
+      chatOverlay.classList.remove('hidden');
+
+      setTimeout(() => {
+        if (chatOverlay) {
+          chatOverlay.classList.add('bg-opacity-40');
+          chatOverlay.addEventListener('click', () => hideChatSidebar(chatSidebar));
+        }
+      }, 15);
+    }
+  }
+}
+
+function hideChatSidebar(sidebar) {
+  if (!sidebar) return;
+
+  const sidebarComputedStyle = window.getComputedStyle(sidebar);
+  const sidebarVisibility = sidebarComputedStyle.getPropertyValue('visibility');
+
+  if (sidebarVisibility === 'visible') {
+    sidebar.classList.remove('transform-none');
+
+    if (chatOverlay) {
+      chatOverlay.classList.remove('bg-opacity-40');
+
+      setTimeout(() => {
+        sidebar.classList.replace('visible', 'invisible');
+        chatOverlay.classList.add('hidden');
+      }, 300);
+    }
+  }
+}

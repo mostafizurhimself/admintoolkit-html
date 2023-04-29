@@ -778,7 +778,7 @@
                 </div>
               </div>
               <!-- Card: Basic Progressbar Ends -->
-
+              
               <!-- Card: Progressbar With Label Starts -->
               <div class="card">
                 <div class="card-body">
@@ -1012,28 +1012,6 @@
               </div>
               <!-- Card: Progressbar Color Ends -->
 
-              <!-- Card: Step Progressbar Starts -->
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Step Progress Bar</h4>
-
-                  <p class="card-subtitle">Example of a step progress bar.</p>
-
-                  <div class="code-viewer mt-4">
-                    <div class="progress" role="progressbar">
-                      <div class="progress-step">
-                        <button class="progress-step-btn progress-step-btn-complete" type="button">1</button>
-                        <div class="progress-step-line"></div>
-                        <button class="progress-step-btn progress-step-btn-complete" type="button">2</button>
-                        <div class="progress-step-line"></div>
-                        <button class="progress-step-btn progress-step-btn-active" type="button">3</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card: Step Progressbar Ends -->
-
               <!-- Card: Circle Progressbar Starts -->
               <div class="card">
                 <div class="card-body">
@@ -1042,19 +1020,21 @@
                   <p class="card-subtitle">Example of a circle progress bar.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                      <div class="progress-circle">
-                        <svg class="progress-circle-svg" viewBox="0 0 152 152">
-                          <circle cx="70" cy="70" r="70"></circle>
-                          <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
-                          <circle
-                            cx="70"
-                            cy="70"
-                            r="70"
-                            style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
-                          ></circle>
-                        </svg>
-                        <span class="progress-circle-label">70%</span>
+                    <div class="flex items-center justify-center sm:justify-start">
+                      <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-circle">
+                          <svg class="progress-circle-svg" viewBox="0 0 152 152">
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <!-- calc((440px - (440px * 70[Change the percentage value]) / 100) * -1) -->
+                            <circle
+                              cx="70"
+                              cy="70"
+                              r="70"
+                              style="stroke-dashoffset: calc((440px - (440px * 70) / 100) * -1)"
+                            ></circle>
+                          </svg>
+                          <span class="progress-circle-label">70%</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1070,7 +1050,7 @@
                   <p class="card-subtitle">Example of a circle progress bar with different sizes.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="flex items-center gap-6">
+                    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-6">
                       <div
                         class="progress progress-sm"
                         role="progressbar"
@@ -1148,7 +1128,7 @@
                   <p class="card-subtitle">Example of a circle progress bar with different colors.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="flex items-center gap-6">
+                    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-6">
                       <div
                         class="progress progress-primary"
                         role="progressbar"
