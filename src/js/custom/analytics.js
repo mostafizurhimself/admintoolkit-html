@@ -181,16 +181,22 @@ activeUsersChart.render();
 // ========Sale Location Cart Start ===========
 
 let root = am5.Root.new('salesLocationChart');
+
+// Set Sale Location Cart Theme
+root.setThemes([am5themes_Animated.new(root)]);
+
+// Create the map chart
 let salesLocationChart = root.container.children.push(
   am5map.MapChart.new(root, {
     panX: 'translateX',
     panY: 'translateY',
-    projection: am5map.geoNaturalEarth1(),
+    projection: am5map.geoMercator(),
+    paddingTop: 0,
+    paddingLeft: 0,
+		paddingRight: 0,
+		paddingBottom: 0
   })
 );
-
-// Set Sale Location Cart Theme
-root.setThemes([am5themes_Animated.new(root)]);
 
 // Remove Sale Location Cart Default Logo
 if (root._logo) root._logo.dispose();
@@ -200,8 +206,8 @@ let polygonSeries = salesLocationChart.series.push(
   am5map.MapPolygonSeries.new(root, {
     geoJSON: am5geodata_worldLow,
     exclude: ['AQ'],
-    fill: am5.color(0xcbd5e1),
-    stroke: am5.color(0xffffff),
+    fill: theme === 'dark' ? am5.color(colors.slate['600']) : am5.color(colors.slate['200']),
+    stroke: theme === 'dark' ? am5.color(colors.slate['700']) : am5.color(colors.slate['100']),
   })
 );
 // Polygon Settings
@@ -215,40 +221,43 @@ polygonSeries.mapPolygons.template.setAll({
 // Set Tooltip Background Color
 let tooltip = am5.Tooltip.new(root, {});
 tooltip.get('background').setAll({
-  fill: am5.color(0x8b5cf6),
+  fill: am5.color(themeColors.primary['500']),
 });
+
 
 // Set Individual country Color
 polygonSeries.data.setAll([
   {
     id: 'US',
     polygonSettings: {
-      fill: am5.color(0x8b5cf6),
+      fill: am5.color(themeColors.primary['500']),
     },
   },
   {
     id: 'AU',
     polygonSettings: {
-      fill: am5.color(0x10b981),
+      fill: am5.color(themeColors.success['500']),
     },
   },
   {},
   {
     id: 'BR',
     polygonSettings: {
-      fill: am5.color(0x6366f1),
+      fill: am5.color(themeColors.info['500']),
     },
   },
   {
     id: 'DE',
     polygonSettings: {
-      fill: am5.color(0xff8c42),
+      fill: am5.color(themeColors.warning['500']),
     },
   },
 ]);
 
 // Is Hover Any Country Change BG Color
-polygonSeries.mapPolygons.template.states.create('hover', {
-  fill: am5.color(0x8b5cf6),
-});
+// polygonSeries.mapPolygons.template.states.create('hover', {
+//   fill: am5.color(themeColors.primary['500']),
+// });
+
+
 // ========Sale Location Cart End ===========
