@@ -27,13 +27,21 @@
   <body>
     <div id="app" class="flex min-h-screen w-full items-center justify-center">
       <!-- Main Content Starts -->
-      <main>
-        <div class="flex flex-col items-center justify-center">
-          <p class="text-2xl font-semibold">Site is Under Maintenance</p>
-          <p class="font-semibold">Please check back in sometime.</p>
-          <div></div>
-          <a href="./index.html"><button class="btn btn-primary btn-md mt-6">Back to Home</button></a>
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-[450px]" viewBox="0 0 750 500">
+      <main class="w-4/5 md:w-1/4 p-4">
+        <div class="flex flex-col gap-y-4">
+          <div class="flex flex-col justify-center">
+            <h4>Site is Under Maintenance</h4>
+            <p class="text-sm mt-1 text-slate-500 dark:text-slate-400">
+              Please check back in sometime.
+            </p>
+
+            <a href="./index.html" class="btn btn-primary mt-6 mx-auto" role="button">
+              <i width="16" height="16" data-feather="home"></i>
+              <span>Back to Home</span>
+            </a>
+          </div>
+
+          <svg class="w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500">
             <g id="freepik--background-complete--inject-2">
               <path
                 d="M366.6,163.49a7.15,7.15,0,0,1-2.37-.4L352,158.85a7.29,7.29,0,0,1-4.75-5.49l-2.45-12.73a7.26,7.26,0,0,1,2.38-6.86l9.79-8.48a7.3,7.3,0,0,1,7.14-1.38l12.24,4.25a7.27,7.27,0,0,1,4.76,5.49l2.44,12.72a7.31,7.31,0,0,1-2.37,6.87l-9.8,8.48A7.28,7.28,0,0,1,366.6,163.49ZM355,151.43l11.44,4,9.16-7.92-2.29-11.89-11.44-4-9.15,7.93Z"
