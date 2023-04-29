@@ -753,89 +753,94 @@
               </ol>
             </div>
             <!-- Page Title Ends -->
-            <!-- Product List Starts -->
-            <div class="grid grid-cols-1">
-              <!-- Product Header Start -->
-              <div class="flex w-full flex-col items-center justify-between gap-y-4 md:flex-row md:gap-0">
-                <div class="w-full md:w-1/2">
-                  <div
-                    class="group flex h-10 w-full items-center rounded-primary border border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500 md:w-72"
-                  >
-                    <div class="flex h-full items-center px-2">
-                      <i class="h-4 text-slate-400 group-focus-within:text-primary-500" data-feather="search"></i>
-                    </div>
-                    <input
-                      class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                      type="text"
-                      placeholder="Search"
-                    />
-                  </div>
-                </div>
-                <div class="flex w-full justify-between gap-2 md:w-1/2 md:justify-end md:gap-5">
-                  <div
-                    data-placement="bottom-end"
-                    class="dropdown max-w-sm rounded-primary bg-white px-4 py-2 shadow-sm dark:bg-slate-800"
-                  >
-                    <div class="dropdown-toggle flex gap-2 px-2 text-slate-600 dark:text-slate-300">
-                      <i class="w-4" data-feather="filter"></i>
-                      <span class="text-sm font-medium">Filter</span>
-                      <i class="w-4" data-feather="chevron-down"></i>
-                    </div>
-                    <div class="dropdown-content min-w-sm !overflow-visible md:min-w-[300px]">
-                      <ul class="dropdown-list space-y-4 p-4">
-                        <li class="dropdown-list-item">
-                          <h2 class="my-1 text-sm font-medium">Category</h2>
-                          <select class="tom-select w-full" autocomplete="off">
-                            <option value="">Select a Category</option>
-                            <option value="1">Electronics</option>
-                            <option value="2">Fashion</option>
-                            <option value="3">Accessories</option>
-                          </select>
-                        </li>
 
-                        <li class="dropdown-list-item">
-                          <h2 class="my-1 text-sm font-medium">Status</h2>
-                          <select class="select">
-                            <option value="">Select to Status</option>
-                            <option value="1">Available</option>
-                            <option value="2">Disabled</option>
-                          </select>
-                        </li>
-                      </ul>
-                    </div>
+            <!-- Product List Starts -->
+            <div class="space-y-4">
+              <!-- Product Header Starts -->
+              <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row md:gap-y-0">
+                <!-- Customer Search Starts -->
+                <form class="group flex items-center rounded-primary border border-transparent bg-white shadow-sm h-10 w-full md:w-72 focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500">
+                  <div class="flex h-full items-center px-2">
+                    <i class="h-4 text-slate-400 group-focus-within:text-primary-500" data-feather="search"></i>
                   </div>
+                  <input
+                    class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                    type="text"
+                    placeholder="Search"
+                  />
+                </form>
+                <!-- Customer Search Ends -->
+                
+                <!-- Customer Action Starts -->
+                <div class="w-full md:w-auto flex items-center justify-between gap-x-4">
+                  <div class="flex items-center gap-x-4">
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <button type="button" class="btn font-medium shadow-sm bg-white dark:bg-slate-800">
+                          <i class="w-4" data-feather="filter"></i>
+                          <span class="hidden sm:inline-block">Filter</span>
+                          <i class="w-4" data-feather="chevron-down"></i>
+                        </button>
+                      </div>
+                      <div class="dropdown-content !overflow-visible w-72">
+                        <ul class="dropdown-list space-y-4 p-4">
+                          <li class="dropdown-list-item">
+                            <h2 class="my-1 text-sm font-medium">Category</h2>
+                            <select class="tom-select w-full" autocomplete="off">
+                              <option value="">Select a Category</option>
+                              <option value="1">Electronics</option>
+                              <option value="2">Fashion</option>
+                              <option value="3">Accessories</option>
+                            </select>
+                          </li>
+
+                          <li class="dropdown-list-item">
+                            <h2 class="my-1 text-sm font-medium">Status</h2>
+                            <select class="select">
+                              <option value="">Select to Status</option>
+                              <option value="1">Available</option>
+                              <option value="2">Disabled</option>
+                            </select>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <button class="btn font-medium shadow-sm bg-white dark:bg-slate-800">
+                      <i class="h-4" data-feather="upload"></i>
+                      <span class="hidden sm:inline-block">Export</span>
+                    </button>
+                  </div>
+
                   <a class="btn btn-primary" href="#" role="button">
                     <i data-feather="plus" height="1rem" width="1rem"></i>
-                    Add
-                    <span class="hidden md:inline-block">Product</span>
+                    <span class="hidden sm:inline-block">Add Product</span>
                   </a>
                 </div>
+                <!-- Customer Action Ends -->
               </div>
-              <!-- Product Header End -->
-              <div class="table-responsive my-4 shadow-sm">
-                <table class="table min-w-[1300px]">
+              <!-- Product Header Ends -->
+              
+              <!-- Product Table Starts -->
+              <div class="table-responsive whitespace-nowrap rounded-primary">
+                <table class="table">
                   <thead>
                     <tr>
-                      <th>
-                        <label for="checkbox-sm" class="label">
-                          <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
-                        </label>
+                      <th class="w-[5%]">
+                        <input class="checkbox" type="checkbox">
                       </th>
-                      <th class="text-xs uppercase">Product</th>
-                      <th class="text-xs uppercase">SKU</th>
-                      <th class="text-xs uppercase">Price</th>
-                      <th class="text-xs uppercase">Quantity</th>
-                      <th class="text-xs uppercase">Last Ordered</th>
-                      <th class="text-xs uppercase">Status</th>
-                      <th class="text-xs uppercase">
-                        <p class="text-right">Actions</p>
-                      </th>
+                      <th class="w-[40%] uppercase">Product</th>
+                      <th class="w-[10%] uppercase">SKU</th>
+                      <th class="w-[10%] uppercase">Price</th>
+                      <th class="w-[10%] uppercase">Quantity</th>
+                      <th class="w-[10%] uppercase">Last Ordered</th>
+                      <th class="w-[10%] uppercase">Status</th>
+                      <th class="w-[5%] uppercase !text-right">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
                         <div class="flex items-center gap-3">
@@ -845,8 +850,12 @@
                             alt="product"
                           />
                           <div>
-                            <h3 class="m-0 p-0 text-sm font-normal">Apple Watch 2023</h3>
-                            <p class="text-xs text-slate-400">Electronics > Accessories</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Apple Watch 2023
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Electronics > Accessories
+                            </p>
                           </div>
                         </div>
                       </td>
@@ -863,7 +872,7 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
+                            <div class="dropdown-content w-40">
                               <ul class="dropdown-list">
                                 <li class="dropdown-list-item">
                                   <a href="javascript:void(0)" class="dropdown-link">
@@ -891,7 +900,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
                         <div class="flex items-center gap-3">
@@ -901,8 +910,12 @@
                             alt="product"
                           />
                           <div>
-                            <h3 class="m-0 p-0 text-sm font-normal">Wireless Headphone</h3>
-                            <p class="text-xs text-slate-400">Electronics > Gadget</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              ireless Headphone
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Electronics > Gadget
+                            </p>
                           </div>
                         </div>
                       </td>
@@ -919,7 +932,7 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
+                            <div class="dropdown-content w-40">
                               <ul class="dropdown-list">
                                 <li class="dropdown-list-item">
                                   <a href="javascript:void(0)" class="dropdown-link">
@@ -947,7 +960,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
                         <div class="flex items-center gap-3">
@@ -957,8 +970,12 @@
                             alt="product"
                           />
                           <div>
-                            <h3 class="m-0 p-0 text-sm font-normal">Styllish Sunglass</h3>
-                            <p class="text-xs text-slate-400">Electronics > Accessories</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Styllish Sunglass
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Electronics > Accessories
+                            </p>
                           </div>
                         </div>
                       </td>
@@ -975,7 +992,7 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
+                            <div class="dropdown-content w-40">
                               <ul class="dropdown-list">
                                 <li class="dropdown-list-item">
                                   <a href="javascript:void(0)" class="dropdown-link">
@@ -1003,7 +1020,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
                         <div class="flex items-center gap-3">
@@ -1012,9 +1029,14 @@
                             class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
                             alt="product"
                           />
+
                           <div>
-                            <h3 class="m-0 p-0 text-sm font-normal">Nike Sports Shoe</h3>
-                            <p class="text-xs text-slate-400">Fashion > Shoes</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Nike Sports Shoe
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Fashion > Shoes
+                            </p>
                           </div>
                         </div>
                       </td>
@@ -1031,7 +1053,7 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
+                            <div class="dropdown-content w-40">
                               <ul class="dropdown-list">
                                 <li class="dropdown-list-item">
                                   <a href="javascript:void(0)" class="dropdown-link">
@@ -1059,7 +1081,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
                         <div class="flex items-center gap-3">
@@ -1069,8 +1091,12 @@
                             alt="product"
                           />
                           <div>
-                            <h3 class="m-0 p-0 text-sm font-normal">Branded Coconut Oil</h3>
-                            <p class="text-xs text-slate-400">Health Care > Body Oil</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Branded Coconut Oil
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Health Care > Body Oil
+                            </p>
                           </div>
                         </div>
                       </td>
@@ -1087,7 +1113,7 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
+                            <div class="dropdown-content w-40">
                               <ul class="dropdown-list">
                                 <li class="dropdown-list-item">
                                   <a href="javascript:void(0)" class="dropdown-link">
@@ -1115,7 +1141,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
                         <div class="flex items-center gap-3">
@@ -1124,9 +1150,14 @@
                             class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
                             alt="product"
                           />
+
                           <div>
-                            <h3 class="m-0 p-0 text-sm font-normal">JBL Wireless Earbud</h3>
-                            <p class="text-xs text-slate-400">Electronics > Gadget</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              JBL Wireless Earbud
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Electronics > Gadget
+                            </p>
                           </div>
                         </div>
                       </td>
@@ -1143,7 +1174,7 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
+                            <div class="dropdown-content w-40">
                               <ul class="dropdown-list">
                                 <li class="dropdown-list-item">
                                   <a href="javascript:void(0)" class="dropdown-link">
@@ -1171,7 +1202,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
                         <div class="flex items-center gap-3">
@@ -1180,9 +1211,14 @@
                             class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
                             alt="product"
                           />
+
                           <div>
-                            <h3 class="m-0 p-0 text-sm font-normal">McBook Pro 2023</h3>
-                            <p class="text-xs text-slate-400">Electronics > Laptop</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              McBook Pro 2023
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Electronics > Laptop
+                            </p>
                           </div>
                         </div>
                       </td>
@@ -1199,7 +1235,7 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
+                            <div class="dropdown-content w-40">
                               <ul class="dropdown-list">
                                 <li class="dropdown-list-item">
                                   <a href="javascript:void(0)" class="dropdown-link">
@@ -1227,7 +1263,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
                         <div class="flex items-center gap-3">
@@ -1236,9 +1272,14 @@
                             class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
                             alt="product"
                           />
+
                           <div>
-                            <h3 class="m-0 p-0 text-sm font-normal">Ladies Handbag</h3>
-                            <p class="text-xs text-slate-400">Fashion > Women's Fashion</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Ladies Handbag
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Fashion > Women's Fashion
+                            </p>
                           </div>
                         </div>
                       </td>
@@ -1255,7 +1296,7 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
+                            <div class="dropdown-content w-40">
                               <ul class="dropdown-list">
                                 <li class="dropdown-list-item">
                                   <a href="javascript:void(0)" class="dropdown-link">
@@ -1283,7 +1324,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input id="checkbox-sm" class="checkbox checkbox-sm" type="checkbox" name="checkbox-size" />
+                        <input class="checkbox" type="checkbox">
                       </td>
                       <td>
                         <div class="flex items-center gap-3">
@@ -1292,9 +1333,14 @@
                             class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
                             alt="product"
                           />
+
                           <div>
-                            <h3 class="m-0 p-0 text-sm font-normal">Iphone 13 Pro Max</h3>
-                            <p class="text-xs text-slate-400">Electronics > Mobile</p>
+                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                              Iphone 13 Pro Max
+                            </h6>
+                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
+                              Electronics > Mobile
+                            </p>
                           </div>
                         </div>
                       </td>
@@ -1311,7 +1357,7 @@
                             <div class="dropdown-toggle">
                               <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
                             </div>
-                            <div class="dropdown-content min-w-[200px]">
+                            <div class="dropdown-content w-40">
                               <ul class="dropdown-list">
                                 <li class="dropdown-list-item">
                                   <a href="javascript:void(0)" class="dropdown-link">
@@ -1340,6 +1386,9 @@
                   </tbody>
                 </table>
               </div>
+              <!-- Product Table Ends -->
+              
+              <!-- Product Pagination Starts -->
               <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row">
                 <p class="text-xs font-normal text-slate-400">Showing 1 to 10 of 50 result</p>
                 <!-- Pagination -->
@@ -1373,6 +1422,7 @@
                   </ul>
                 </nav>
               </div>
+              <!-- Product Pagination Ends -->
             </div>
             <!-- Product List Ends -->
           </main>
