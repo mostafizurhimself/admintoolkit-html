@@ -1,15 +1,14 @@
 import DataTable from '../components/data-table';
+import tableData from '../../json/datatable.json';
+
 
 async function loadTable(table) {
   const tbody = table.querySelector('tbody');
 
   if (tbody) {
-    const response = await fetch('/json/table-datatable.json');
-    const results = await response.json();
-    const records = results.data;
 
-    if (records.length) {
-      records.forEach((record) => {
+    if (tableData.length) {
+      tableData.forEach((record) => {
         tbody.innerHTML += `
           <tr>
             <td>
