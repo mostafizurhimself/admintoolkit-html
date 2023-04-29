@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --emptyOutDir",
-    "preview": "vite preview",
+    "start": "vite preview",
     "format": "prettier --write \"src/**/*.{js,css,scss,html}\""
   },
   "devDependencies": {
