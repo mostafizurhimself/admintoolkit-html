@@ -256,6 +256,57 @@
   },
   {
     "title": "Pages",
-    "pages": []
+    "pages": [
+      {
+        "name": "Login",
+        "url": "/login.html",
+        "icon": "ti ti-login"
+      },
+      {
+        "name": "Register",
+        "url": "/register.html",
+        "icon": "ti ti-registered"
+      },
+      {
+        "name": "Forgot Password",
+        "url": "/recover-password.html",
+        "icon": "ti ti-key-off"
+      },
+      {
+        "name": "Reset Password",
+        "url": "/reset-password.html",
+        "icon": "ti ti-zoom-reset"
+      },
+      {
+        "name": "Starter Page",
+        "url": "/starter.html",
+        "icon": "ti ti-home-infinity"
+      },
+      {
+        "name": "Coming Soon",
+        "url": "/comming-soon.html",
+        "icon": "ti ti-brand-comedy-central"
+      },
+      {
+        "name": "Maintenance",
+        "url": "/maintenance.html",
+        "icon": "ti ti-hexagon-letter-m"
+      },
+      {
+        "name": "Error 404",
+        "url": "/404-error.html",
+        "icon": "ti ti-error-404"
+      },
+      {
+        "name": "Error 500",
+        "url": "/500-error.html",
+        "icon": "ti ti-bug"
+      },
+      {
+        "name": "Not Authorized",
+        "url": "/not-authorized.html",
+        "icon": "ti ti-license-off"
+      }
+    ]
   }
 ]
