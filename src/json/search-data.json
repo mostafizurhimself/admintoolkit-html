@@ -1,73 +1,106 @@
 [
-    {
-        "title": "Dashboard",
-        "pages": [
-            {
-                "name": "Analytics",
-                "url": "/",
-                "icon": "ti ti-chart-bar"
-            },
-            {
-                "name": "Ecommerce",
-                "url": "/ecommerce.html",
-                "icon": "ti ti-shopping-cart"
-            }
-        ]
-    },
-    {
-        "title": "Applications",
-        "pages": [
-            {
-                "name": "Email",
-                "url": "/email.html",
-                "icon": "ti ti-mail"
-            },
-            {
-                "name": "Chat",
-                "url": "/chat.html",
-                "icon": "ti ti-message"
-            },
-            {
-                "name": "Calendar",
-                "url": "/calendar.html",
-                "icon": "ti ti-calendar"
-            },
-            {
-                "name": "Invoice Create",
-                "url": "/invoice-create.html",
-                "icon": "ti ti-file-invoice"
-            },
-            {
-                "name": "Invoice Details",
-                "url": "/invoice-details.html",
-                "icon": "ti ti-file-invoice"
-            }
-        ]
-    },
-    {
-        "title": "Components",
-        "pages": [
-            {
-                "name": "Accordion",
-                "url": "/accordion.html",
-                "icon": "ti ti-components"
-            },
-            {
-                "name": "Alerts",
-                "url": "/alert.html",
-                "icon": "ti ti-bell"
-            },
-            {
-                "name": "Avatars",
-                "url": "/avatar.html",
-                "icon": "ti ti-user"
-            }
-        ]
-    },
-    {
-        "title": "Pages",
-        "pages": [
-            
-        ]
-    }
+  {
+    "title": "Dashboard",
+    "pages": [
+      {
+        "name": "Analytics",
+        "url": "/",
+        "icon": "ti ti-chart-bar"
+      },
+      {
+        "name": "Ecommerce",
+        "url": "/ecommerce.html",
+        "icon": "ti ti-shopping-cart"
+      }
+    ]
+  },
+  {
+    "title": "Applications",
+    "pages": [
+      {
+        "name": "Email",
+        "url": "/email.html",
+        "icon": "ti ti-mail"
+      },
+      {
+        "name": "Chat",
+        "url": "/chat.html",
+        "icon": "ti ti-message"
+      },
+      {
+        "name": "Calendar",
+        "url": "/calendar.html",
+        "icon": "ti ti-calendar"
+      },
+      {
+        "name": "Invoice Create",
+        "url": "/invoice-create.html",
+        "icon": "ti ti-file-invoice"
+      },
+      {
+        "name": "Invoice Details",
+        "url": "/invoice-details.html",
+        "icon": "ti ti-file-invoice"
+      },
+      {
+        "name": "Product List",
+        "url": "/product-list.html",
+        "icon": "ti ti-list-numbers"
+      },
+      {
+        "name": "Product Edit",
+        "url": "/product-edit.html",
+        "icon": "ti ti-pencil-minus"
+      },
+      {
+        "name": "Order List",
+        "url": "/Order-list.html",
+        "icon": "ti ti-truck-delivery"
+      },
+      {
+        "name": "Order Details",
+        "url": "/order-details.html",
+        "icon": "ti ti-truck-return"
+      },
+      {
+        "name": "Customer List",
+        "url": "/Customer-list.html",
+        "icon": "ti ti-headphones"
+      },
+      {
+        "name": "Users List",
+        "url": "/user-list.html",
+        "icon": "ti ti-address-book"
+      },
+      {
+        "name": "User Profile",
+        "url": "/profile.html",
+        "icon": "ti ti-user-circle"
+      }
+    ]
+  },
+  {
+    "title": "Components",
+    "pages": [
+      {
+        "name": "Accordion",
+        "url": "/accordion.html",
+        "icon": "ti ti-components"
+      },
+      {
+        "name": "Alerts",
+        "url": "/alert.html",
+        "icon": "ti ti-bell"
+      },
+      {
+        "name": "Avatars",
+        "url": "/avatar.html",
+        "icon": "ti ti-user"
+      }
+    ]
+  },
+  {
+    "title": "Pages",
+    "pages": []
+  }
 ]
