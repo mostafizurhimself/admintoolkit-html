@@ -166,6 +166,91 @@
         "name": "Tooltip",
         "url": "/tooltip.html",
         "icon": "ti ti-tooltip"
+      },
+      {
+        "name": "Input",
+        "url": "/input.html",
+        "icon": "ti ti-circle-letter-i"
+      },
+      {
+        "name": "Input Group",
+        "url": "/input-group.html",
+        "icon": "ti ti-brand-letterboxd"
+      },
+      {
+        "name": "Textarea",
+        "url": "/textarea.html",
+        "icon": "ti ti-text-resize"
+      },
+      {
+        "name": "Checkbox",
+        "url": "/checkbox.html",
+        "icon": "ti ti-checkbox"
+      },
+      {
+        "name": "Radio",
+        "url": "/radio.html",
+        "icon": "ti ti-radio"
+      },
+      {
+        "name": "Toggle",
+        "url": "/toggle.html",
+        "icon": "ti ti-toggle-right"
+      },
+      {
+        "name": "Select",
+        "url": "/select.html",
+        "icon": "ti ti-selector"
+      },
+      {
+        "name": "Datepicker",
+        "url": "/datepicker.html",
+        "icon": "ti ti-calendar-time"
+      },
+      {
+        "name": "Editor",
+        "url": "/editor.html",
+        "icon": "ti ti-brand-vscode"
+      },
+      {
+        "name": "Uploader",
+        "url": "/uploader.html",
+        "icon": "ti ti-cloud-upload"
+      },
+      {
+        "name": "Layout",
+        "url": "/form-layout.html",
+        "icon": "ti ti-layout-board"
+      },
+      {
+        "name": "Validation",
+        "url": "/form-validation.html",
+        "icon": "ti ti-shield-lock"
+      },
+      {
+        "name": "Basic Table",
+        "url": "/basic-table.html",
+        "icon": "ti ti-table"
+      },
+      {
+        "name": "Data Table",
+        "url": "/data-table.html",
+        "icon": "ti ti-table-import"
+      },
+      {
+        "name": "Charts",
+        "url": "/chart.html",
+        "icon": "ti ti-chart-bar"
+      },
+      {
+        "name": "Icons",
+        "url": "/icons.html",
+        "icon": "ti ti-icons"
+      },
+      {
+        "name": "Typography",
+        "url": "/typography.html",
+        "icon": "ti ti-clipboard-typography"
       }
     ]
   },
