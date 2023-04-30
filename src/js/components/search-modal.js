@@ -3,8 +3,7 @@ import searchData from '@/json/search-data.json';
 import recentSearchData from '@/json/recent-search-data.json';
 
 export class SearchModal {
-
-  constructor(trigger, target) {    
+  constructor(trigger, target) {
     this.setTrigger(trigger);
     this.setTarget(target);
     this.setModal();
@@ -15,7 +14,7 @@ export class SearchModal {
   }
 
   // Set the trigger element
-  setTrigger(trigger) { 
+  setTrigger(trigger) {
     if (typeof trigger === 'string') {
       this.trigger = document.querySelector(trigger);
     }
@@ -30,7 +29,7 @@ export class SearchModal {
   }
 
   // Set the target element
-  setTarget(target) { 
+  setTarget(target) {
     if (typeof target === 'string') {
       this.target = document.querySelector(target);
     }
@@ -45,32 +44,31 @@ export class SearchModal {
   }
 
   // Set the modal
-  setModal() { 
+  setModal() {
     this.modal = createModal(this.target);
   }
 
-  // Set the search input 
-  setSearchInput() {  
+  // Set the search input
+  setSearchInput() {
     const searchInput = this.target.querySelector('input[type="text"]');
-    if(!searchInput) {
+    if (!searchInput) {
       throw new Error('No search input found');
     }
     this.searchInput = searchInput;
   }
 
   // Show the modal
-  show() { 
+  show() {
     this.modal.show();
   }
 
   // Hide the modal
-  hide() { 
+  hide() {
     this.modal.hide();
   }
 
   // Register events
   registerEvents() {
-
     // Handle trigger click
     this.trigger.addEventListener('click', () => {
       this.searchInput.value = '';
@@ -84,7 +82,6 @@ export class SearchModal {
 
   // Handle input change
   handleInput(search) {
-
     if (search.length === 0) {
       this.renderSearchContent(recentSearchData);
       return;
@@ -168,7 +165,7 @@ const searchModal = {
     const triggers = document.querySelectorAll('[data-trigger="search-modal"]');
     const target = document.getElementById('search-modal');
 
-    triggers.forEach((trigger) => { 
+    triggers.forEach((trigger) => {
       new SearchModal(trigger, target);
     });
   },

@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/logo-small.svg" type="image/svg" />
+    <link rel="icon" href="./images/logo-small.svg" type="image/svg+xml" />
     <title>Product Edit - Admin Toolkit</title>
+    <meta
+      name="description"
+      content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -735,9 +739,9 @@
           <!-- Main Content Starts -->
           <main class="container flex-grow p-6">
             <!-- Page Title Starts -->
-            <div class="flex flex-col justify-between gap-y-1 mb-6 sm:gap-y-0 sm:flex-row">
+            <div class="mb-6 flex flex-col justify-between gap-y-1 sm:flex-row sm:gap-y-0">
               <h5>Product Edit</h5>
-              
+
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
@@ -927,31 +931,46 @@ Introducing the new MacBook Pro 2023 - the ultimate powerhouse for creators and 
                       </select>
                     </div>
                     <div>
+                      <label class="label mb-1 font-medium" for="vendor"> Tags </label>
+                      <select class="tom-select" multiple="" autocomplete="off">
+                        <option selected value="1">Apple</option>
+                        <option selected value="2">Laptop</option>
+                        <option value="3">Shoes</option>
+                        <option value="4">Furniture</option>
+                        <option value="5">Fashion</option>
+                        <option value="6">Gadget</option>
+                        <option value="7">Health</option>
+                        <option value="8">Care</option>
+                        <option value="9">Beauty</option>
+                        <option value="10">Smart</option>
+                        <option value="11">Watch</option>
+                        <option value="12">Headphone</option>
+                      </select>
+                    </div>
+                    <div>
                       <label class="label mb-1 font-medium" for="brand"> Brand </label>
                       <select class="select" id="brand">
                         <option value="">Apple</option>
                         <option value="1">Apex</option>
                         <option value="2">Lotto</option>
-                        <option value="2">Android</option>
+                        <option value="3">Samsung</option>
                       </select>
                     </div>
                     <div>
-                      <label class="label label-required mb-1 font-medium" for="vendor"> Vendor </label>
+                      <label class="label mb-1 font-medium" for="vendor"> Vendor </label>
                       <select class="select" id="vendor">
-                        <option value="">Star Tech Computer</option>
+                        <option value="">Star Tech</option>
                         <option value="1">All Store</option>
                         <option value="2">GameEight</option>
-                        <option value="2">Always In Stock</option>
+                        <option value="2">Vitech</option>
                       </select>
                     </div>
                     <div>
-                      <label class="label label-required mb-1 font-medium" for="vendor"> Tags </label>
-                      <select class="tom-select" multiple="" autocomplete="off">
-                        <option selected value="1">Apple</option>
-                        <option selected value="2">Laptop</option>
-                        <option value="3">Shoes</option>
-                        <option value="4">Accessories</option>
-                        <option value="5">Women's Fashion</option>
+                      <label class="label mb-1 font-medium" for="vendor"> Template </label>
+                      <select class="select" id="vendor">
+                        <option value="">Default</option>
+                        <option value="1">Boxed</option>
+                        <option value="2">Minimal</option>
                       </select>
                     </div>
                   </div>
@@ -967,7 +986,7 @@ Introducing the new MacBook Pro 2023 - the ultimate powerhouse for creators and 
           <footer class="footer">
             <p class="text-sm">
               Copyright © 2023
-              <a class="text-primary-500 hover:underline" href="https://techmasih.com"  target="_blank"> TechMasih </a>
+              <a class="text-primary-500 hover:underline" href="https://techmasih.com" target="_blank"> TechMasih </a>
               , All right Reserved
             </p>
 
@@ -1051,7 +1070,7 @@ Introducing the new MacBook Pro 2023 - the ultimate powerhouse for creators and 
               name: 'Product 5',
               size: 17526,
               url: '/images/product8.png',
-            }
+            },
           ];
 
           files.forEach((file) => {
@@ -1066,7 +1085,7 @@ Introducing the new MacBook Pro 2023 - the ultimate powerhouse for creators and 
             this.files = this.files.filter((f) => f.id !== file.id);
             this.options.maxFiles = files.length - this.files.length;
           });
-        }
+        },
       });
     </script>
   </body>

@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/logo-small.svg" type="image/svg" />
+    <link rel="icon" href="./images/logo-small.svg" type="image/svg+xml" />
     <title>Email - Admin Toolkit</title>
+    <meta
+      name="description"
+      content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -752,7 +756,6 @@
                 id="email-sidebar"
                 class="invisible absolute bottom-0 top-0 z-20 h-auto w-3/4 -translate-x-full space-y-3 bg-white transition-transform duration-300 ease-in-out dark:bg-slate-800 sm:w-64 xl:visible xl:sticky xl:top-20 xl:col-span-1 xl:h-max xl:w-auto xl:translate-x-0 xl:rounded-primary xl:shadow"
               >
-
                 <!-- Email Sidebar Header Starts -->
                 <div class="relative mt-4 px-6">
                   <button
@@ -768,10 +771,10 @@
                   </button>
 
                   <!-- Email Sidebar Close Button Starts -->
-                    <button
+                  <button
                     id="email-btn-hide-sidebar"
                     type="button"
-                    class="absolute top-1/2 left-full -translate-x-1/5 -translate-y-1/2 z-20 ml-2 inline-flex h-8 w-8 items-center justify-center rounded-full text-white dark:text-slate-300 xl:hidden"
+                    class="-translate-x-1/5 absolute left-full top-1/2 z-20 ml-2 inline-flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-white dark:text-slate-300 xl:hidden"
                   >
                     <i class="ti ti-x text-xl"></i>
                   </button>
@@ -957,7 +960,7 @@
                       action=""
                     >
                       <div class="flex h-full items-center px-2">
-                        <i data-feather="search" class="w-4 h-4 text-slate-400 group-focus-within:text-primary-500"></i>
+                        <i data-feather="search" class="h-4 w-4 text-slate-400 group-focus-within:text-primary-500"></i>
                       </div>
                       <input
                         class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
@@ -1971,7 +1974,7 @@
           <footer class="footer">
             <p class="text-sm">
               Copyright © 2023
-              <a class="text-primary-500 hover:underline" href="https://techmasih.com"  target="_blank"> TechMasih </a>
+              <a class="text-primary-500 hover:underline" href="https://techmasih.com" target="_blank"> TechMasih </a>
               , All right Reserved
             </p>
 

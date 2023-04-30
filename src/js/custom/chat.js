@@ -7,7 +7,6 @@ const chatBtnHideSidebar = document.querySelector('#chat-btn-hide-sidebar');
 const btnUploadMedia = document.querySelector('#btn-upload-media');
 const inputUploadMedia = document.querySelector('#input-upload-media');
 
-
 // Default Scroll To Bottom
 window.addEventListener('load', () => {
   const chats = document.getElementById('chats');
@@ -16,7 +15,7 @@ window.addEventListener('load', () => {
 });
 
 if (chatListItems.length) {
-  [...chatListItems].forEach(chatItem => {
+  [...chatListItems].forEach((chatItem) => {
     chatItem.addEventListener('click', () => {
       const chatItemActive = chatList.querySelector('li.active');
 
@@ -29,8 +28,8 @@ if (chatListItems.length) {
       }
 
       hideChatSidebar(chatSidebar);
-    })
-  })
+    });
+  });
 }
 
 if (chatBtnShowSidebar) {
@@ -44,9 +43,9 @@ if (chatBtnHideSidebar) {
 if (btnUploadMedia) {
   btnUploadMedia.addEventListener('click', () => {
     if (inputUploadMedia) {
-      inputUploadMedia.click()
+      inputUploadMedia.click();
     }
-  })
+  });
 }
 
 function showChatSidebar(sidebar) {

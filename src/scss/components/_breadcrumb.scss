@@ -1,12 +1,12 @@
 @layer components {
   .breadcrumb {
-    @apply flex flex-wrap items-center;  
+    @apply flex flex-wrap items-center;
 
     &-item {
       @apply text-sm font-medium text-primary-500;
 
       &:not(:last-child) {
-        @apply mr-1.5  after:content-['>'] after:ml-1.5 after:text-slate-500 after:dark:text-slate-400;
+        @apply mr-1.5  after:ml-1.5 after:text-slate-500 after:content-['>'] after:dark:text-slate-400;
       }
 
       &:last-child {

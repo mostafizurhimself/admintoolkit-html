@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/logo-small.svg" type="image/svg" />
+    <link rel="icon" href="./images/logo-small.svg" type="image/svg+xml" />
     <title>Order List - Admin Toolkit</title>
+    <meta
+      name="description"
+      content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -735,9 +739,9 @@
           <!-- Main Content Starts -->
           <main class="container flex-grow p-6">
             <!-- Page Title Starts -->
-            <div class="flex flex-col justify-between gap-y-1 mb-6 sm:gap-y-0 sm:flex-row">
+            <div class="mb-6 flex flex-col justify-between gap-y-1 sm:flex-row sm:gap-y-0">
               <h5>Order List</h5>
-              
+
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
@@ -757,7 +761,9 @@
               <!-- Order Header Starts -->
               <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row md:gap-y-0">
                 <!-- Order Search Starts -->
-                <form class="group flex items-center rounded-primary border border-transparent bg-white shadow-sm h-10 w-full md:w-72 focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500">
+                <form
+                  class="group flex h-10 w-full items-center rounded-primary border border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500 md:w-72"
+                >
                   <div class="flex h-full items-center px-2">
                     <i class="h-4 text-slate-400 group-focus-within:text-primary-500" data-feather="search"></i>
                   </div>
@@ -768,18 +774,18 @@
                   />
                 </form>
                 <!-- Order Search Ends -->
-                
+
                 <!-- Order Action Starts -->
-                <div class="w-full md:w-auto flex items-center justify-between gap-x-4">
+                <div class="flex w-full items-center justify-between gap-x-4 md:w-auto">
                   <div class="dropdown" data-placement="bottom-end">
                     <div class="dropdown-toggle">
-                      <button type="button" class="btn font-medium shadow-sm bg-white dark:bg-slate-800">
+                      <button type="button" class="btn bg-white font-medium shadow-sm dark:bg-slate-800">
                         <i class="w-4" data-feather="filter"></i>
                         <span>Filter</span>
                         <i class="w-4" data-feather="chevron-down"></i>
                       </button>
                     </div>
-                    <div class="dropdown-content !overflow-visible w-72">
+                    <div class="dropdown-content w-72 !overflow-visible">
                       <ul class="dropdown-list space-y-4 p-4">
                         <li class="dropdown-list-item">
                           <h2 class="my-1 text-sm font-medium">Status</h2>
@@ -814,27 +820,27 @@
                 <!-- Order Action Ends -->
               </div>
               <!-- Order Header Ends -->
-              
+
               <!-- Order Table Starts -->
               <div class="table-responsive whitespace-nowrap rounded-primary">
                 <table class="table">
                   <thead>
                     <tr>
                       <th class="w-[5%]">
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" />
                       </th>
                       <th class="w-[5%] uppercase">Order</th>
                       <th class="w-[55%] uppercase">Customer</th>
                       <th class="w-[10%] uppercase">Total</th>
                       <th class="w-[10%] uppercase">Ordered At</th>
                       <th class="w-[10%] uppercase">Status</th>
-                      <th class="w-[5%] uppercase !text-right">Actions</th>
+                      <th class="w-[5%] !text-right uppercase">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" />
                       </td>
                       <td>
                         <a
@@ -847,16 +853,14 @@
                       <td>
                         <div class="flex gap-2">
                           <div class="avatar avatar-circle">
-                            <img class="avatar-img" src="./images/avatar1.png" alt="Avatar 1">
+                            <img class="avatar-img" src="./images/avatar1.png" alt="Avatar 1" />
                           </div>
 
                           <div>
-                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
                               Korrie O'Crevy
                             </h6>
-                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
-                              kocrevy0@thetimes.co.uk
-                            </p>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">kocrevy0@thetimes.co.uk</p>
                           </div>
                         </div>
                       </td>
@@ -899,7 +903,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" />
                       </td>
                       <td>
                         <a
@@ -912,16 +916,14 @@
                       <td>
                         <div class="flex gap-2">
                           <div class="avatar avatar-circle">
-                            <img class="avatar-img" src="./images/avatar2.png" alt="Avatar 1">
+                            <img class="avatar-img" src="./images/avatar2.png" alt="Avatar 1" />
                           </div>
 
                           <div>
-                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
                               Bailie Coulman
                             </h6>
-                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
-                              bcoulman1@yolasite.com
-                            </p>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">bcoulman1@yolasite.com</p>
                           </div>
                         </div>
                       </td>
@@ -964,7 +966,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" />
                       </td>
                       <td>
                         <a
@@ -977,16 +979,14 @@
                       <td>
                         <div class="flex gap-2">
                           <div class="avatar avatar-circle">
-                            <img class="avatar-img" src="./images/avatar3.png" alt="Avatar 3">
+                            <img class="avatar-img" src="./images/avatar3.png" alt="Avatar 3" />
                           </div>
 
                           <div>
-                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
                               Stella Ganderton
                             </h6>
-                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
-                              sganderton2@tuttocitta.it
-                            </p>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">sganderton2@tuttocitta.it</p>
                           </div>
                         </div>
                       </td>
@@ -1029,7 +1029,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" />
                       </td>
                       <td>
                         <a
@@ -1042,16 +1042,14 @@
                       <td>
                         <div class="flex gap-2">
                           <div class="avatar avatar-circle">
-                            <img class="avatar-img" src="./images/avatar4.png" alt="Avatar 4">
+                            <img class="avatar-img" src="./images/avatar4.png" alt="Avatar 4" />
                           </div>
 
                           <div>
-                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
                               Dorolice Crossman
                             </h6>
-                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
-                              dcrossman3@google.co.jp
-                            </p>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">dcrossman3@google.co.jp</p>
                           </div>
                         </div>
                       </td>
@@ -1094,7 +1092,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" />
                       </td>
                       <td>
                         <a
@@ -1107,16 +1105,14 @@
                       <td>
                         <div class="flex gap-2">
                           <div class="avatar avatar-circle">
-                            <img class="avatar-img" src="./images/avatar5.png" alt="Avatar 5">
+                            <img class="avatar-img" src="./images/avatar5.png" alt="Avatar 5" />
                           </div>
 
                           <div>
-                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
                               Harmonia Nisius
                             </h6>
-                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
-                              hnisius4@gnu.org
-                            </p>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">hnisius4@gnu.org</p>
                           </div>
                         </div>
                       </td>
@@ -1159,7 +1155,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" />
                       </td>
                       <td>
                         <a
@@ -1172,16 +1168,14 @@
                       <td>
                         <div class="flex gap-2">
                           <div class="avatar avatar-circle">
-                            <img class="avatar-img" src="./images/avatar6.png" alt="Avatar 6">
+                            <img class="avatar-img" src="./images/avatar6.png" alt="Avatar 6" />
                           </div>
-                          
+
                           <div>
-                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
                               Genevra Honeywood
                             </h6>
-                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
-                              ghoneywood5@narod.ru
-                            </p>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">ghoneywood5@narod.ru</p>
                           </div>
                         </div>
                       </td>
@@ -1224,7 +1218,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" />
                       </td>
                       <td>
                         <a
@@ -1237,16 +1231,14 @@
                       <td>
                         <div class="flex gap-2">
                           <div class="avatar avatar-circle">
-                            <img class="avatar-img" src="./images/avatar7.png" alt="Avatar 7">
+                            <img class="avatar-img" src="./images/avatar7.png" alt="Avatar 7" />
                           </div>
-                          
+
                           <div>
-                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
                               Genevra Honeywood
                             </h6>
-                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
-                              ghoneywood5@narod.ru
-                            </p>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">ghoneywood5@narod.ru</p>
                           </div>
                         </div>
                       </td>
@@ -1289,7 +1281,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" />
                       </td>
                       <td>
                         <a
@@ -1302,16 +1294,14 @@
                       <td>
                         <div class="flex gap-2">
                           <div class="avatar avatar-circle">
-                            <img class="avatar-img" src="./images/avatar8.png" alt="Avatar 8">
+                            <img class="avatar-img" src="./images/avatar8.png" alt="Avatar 8" />
                           </div>
-                          
+
                           <div>
-                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
                               Eileen Diehn
                             </h6>
-                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
-                              ediehn6@163.com
-                            </p>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">ediehn6@163.com</p>
                           </div>
                         </div>
                       </td>
@@ -1354,7 +1344,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" />
                       </td>
                       <td>
                         <a
@@ -1367,16 +1357,14 @@
                       <td>
                         <div class="flex gap-2">
                           <div class="avatar avatar-circle">
-                            <img class="avatar-img" src="./images/avatar9.png" alt="Avatar 9">
+                            <img class="avatar-img" src="./images/avatar9.png" alt="Avatar 9" />
                           </div>
-                          
+
                           <div>
-                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
                               Richardo Aldren
                             </h6>
-                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
-                              raldren7@mtv.com
-                            </p>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">raldren7@mtv.com</p>
                           </div>
                         </div>
                       </td>
@@ -1419,7 +1407,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" />
                       </td>
                       <td>
                         <a
@@ -1432,16 +1420,14 @@
                       <td>
                         <div class="flex gap-2">
                           <div class="avatar avatar-circle">
-                            <img class="avatar-img" src="./images/avatar10.png" alt="Avatar 10">
+                            <img class="avatar-img" src="./images/avatar10.png" alt="Avatar 10" />
                           </div>
-                          
+
                           <div>
-                            <h6 class="text-sm font-medium text-slate-700 whitespace-nowrap dark:text-slate-100">
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
                               Allyson Moakler
                             </h6>
-                            <p class="text-xs text-slate-500 truncate dark:text-slate-400">
-                              amoakler8@shareasale.com
-                            </p>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">amoakler8@shareasale.com</p>
                           </div>
                         </div>
                       </td>
@@ -1486,7 +1472,7 @@
                 </table>
               </div>
               <!-- Order Table Ends -->
-              
+
               <!-- Order Pagination Starts -->
               <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row">
                 <p class="text-xs font-normal text-slate-400">Showing 1 to 10 of 50 result</p>
@@ -1531,7 +1517,7 @@
           <footer class="footer">
             <p class="text-sm">
               Copyright © 2023
-              <a class="text-primary-500 hover:underline" href="https://techmasih.com"  target="_blank"> TechMasih </a>
+              <a class="text-primary-500 hover:underline" href="https://techmasih.com" target="_blank"> TechMasih </a>
               , All right Reserved
             </p>
 

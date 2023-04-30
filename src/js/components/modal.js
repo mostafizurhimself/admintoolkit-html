@@ -65,7 +65,6 @@ export class Modal {
         input && input.focus();
       }
 
-
       setTimeout(() => {
         const modalBackdrop = modal.querySelector('.modal-backdrop');
         modal.classList.add('show');
