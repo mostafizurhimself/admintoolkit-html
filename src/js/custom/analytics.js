@@ -188,13 +188,17 @@ root.setThemes([am5themes_Animated.new(root)]);
 // Create the map chart
 let salesLocationChart = root.container.children.push(
   am5map.MapChart.new(root, {
-    panX: 'translateX',
-    panY: 'translateY',
     projection: am5map.geoMercator(),
+    draggable: false,
+    panY: false,
+    panX: false,
     paddingTop: 0,
     paddingLeft: 0,
-		paddingRight: 0,
-		paddingBottom: 0
+    paddingRight: 0,
+    paddingBottom: 0,
+    wheelable: false,
+    wheelX: 'none',
+    wheelY: 'none',
   })
 );
 
@@ -224,7 +228,6 @@ tooltip.get('background').setAll({
   fill: am5.color(themeColors.primary['500']),
 });
 
-
 // Set Individual country Color
 polygonSeries.data.setAll([
   {
@@ -253,11 +256,5 @@ polygonSeries.data.setAll([
     },
   },
 ]);
-
-// Is Hover Any Country Change BG Color
-// polygonSeries.mapPolygons.template.states.create('hover', {
-//   fill: am5.color(themeColors.primary['500']),
-// });
-
 
 // ========Sale Location Cart End ===========
