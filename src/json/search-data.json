@@ -1,0 +1,312 @@
+[
+  {
+    "title": "Dashboard",
+    "pages": [
+      {
+        "name": "Analytics",
+        "url": "/",
+        "icon": "ti ti-home-stats"
+      },
+      {
+        "name": "Ecommerce",
+        "url": "/ecommerce.html",
+        "icon": "ti ti-shopping-cart"
+      }
+    ]
+  },
+  {
+    "title": "Applications",
+    "pages": [
+      {
+        "name": "Email",
+        "url": "/email.html",
+        "icon": "ti ti-mail"
+      },
+      {
+        "name": "Chat",
+        "url": "/chat.html",
+        "icon": "ti ti-message"
+      },
+      {
+        "name": "Calendar",
+        "url": "/calendar.html",
+        "icon": "ti ti-calendar"
+      },
+      {
+        "name": "Invoice Create",
+        "url": "/invoice-create.html",
+        "icon": "ti ti-file-invoice"
+      },
+      {
+        "name": "Invoice Details",
+        "url": "/invoice-details.html",
+        "icon": "ti ti-file-invoice"
+      },
+      {
+        "name": "Product List",
+        "url": "/product-list.html",
+        "icon": "ti ti-list-numbers"
+      },
+      {
+        "name": "Product Edit",
+        "url": "/product-edit.html",
+        "icon": "ti ti-database-edit"
+      },
+      {
+        "name": "Order List",
+        "url": "/Order-list.html",
+        "icon": "ti ti-truck-delivery"
+      },
+      {
+        "name": "Order Details",
+        "url": "/order-details.html",
+        "icon": "ti ti-truck-return"
+      },
+      {
+        "name": "Customer List",
+        "url": "/Customer-list.html",
+        "icon": "ti ti-headphones"
+      },
+      {
+        "name": "Users List",
+        "url": "/user-list.html",
+        "icon": "ti ti-address-book"
+      },
+      {
+        "name": "User Profile",
+        "url": "/profile.html",
+        "icon": "ti ti-user-circle"
+      }
+    ]
+  },
+  {
+    "title": "Components",
+    "pages": [
+      {
+        "name": "Accordion",
+        "url": "/accordion.html",
+        "icon": "ti ti-components"
+      },
+      {
+        "name": "Alerts",
+        "url": "/alert.html",
+        "icon": "ti ti-bell"
+      },
+      {
+        "name": "Avatars",
+        "url": "/avatar.html",
+        "icon": "ti ti-user"
+      },
+      {
+        "name": "Badge",
+        "url": "/badge.html",
+        "icon": "ti ti-badges"
+      },
+      {
+        "name": "Button",
+        "url": "/button.html",
+        "icon": "ti ti-xbox-b"
+      },
+      {
+        "name": "Card",
+        "url": "/card.html",
+        "icon": "ti ti-cards"
+      },
+      {
+        "name": "Carousel",
+        "url": "/carousel.html",
+        "icon": "ti ti-carousel-horizontal"
+      },
+      {
+        "name": "Drawer",
+        "url": "/drawer.html",
+        "icon": "ti ti-artboard"
+      },
+      {
+        "name": "Dropdown",
+        "url": "/dropdown.html",
+        "icon": "ti ti-select"
+      },
+      {
+        "name": "List Group",
+        "url": "/list-group.html",
+        "icon": "ti ti-list-details"
+      },
+      {
+        "name": "Modal",
+        "url": "/modal.html",
+        "icon": "ti ti-box-model-2"
+      },
+      {
+        "name": "Pagination",
+        "url": "/pagination.html",
+        "icon": "ti ti-box-multiple-5"
+      },
+      {
+        "name": "Progress Bar",
+        "url": "/progress-bar.html",
+        "icon": "ti ti-progress"
+      },
+      {
+        "name": "Spinner",
+        "url": "/spinner.html",
+        "icon": "ti ti-fidget-spinner"
+      },
+      {
+        "name": "Tab",
+        "url": "/tabs.html",
+        "icon": "ti ti-server-bolt"
+      },
+      {
+        "name": "Toast",
+        "url": "/toast.html",
+        "icon": "ti ti-bell-plus"
+      },
+      {
+        "name": "Tooltip",
+        "url": "/tooltip.html",
+        "icon": "ti ti-tooltip"
+      },
+      {
+        "name": "Input",
+        "url": "/input.html",
+        "icon": "ti ti-circle-letter-i"
+      },
+      {
+        "name": "Input Group",
+        "url": "/input-group.html",
+        "icon": "ti ti-brand-letterboxd"
+      },
+      {
+        "name": "Textarea",
+        "url": "/textarea.html",
+        "icon": "ti ti-text-resize"
+      },
+      {
+        "name": "Checkbox",
+        "url": "/checkbox.html",
+        "icon": "ti ti-checkbox"
+      },
+      {
+        "name": "Radio",
+        "url": "/radio.html",
+        "icon": "ti ti-radio"
+      },
+      {
+        "name": "Toggle",
+        "url": "/toggle.html",
+        "icon": "ti ti-toggle-right"
+      },
+      {
+        "name": "Select",
+        "url": "/select.html",
+        "icon": "ti ti-selector"
+      },
+      {
+        "name": "Datepicker",
+        "url": "/datepicker.html",
+        "icon": "ti ti-calendar-time"
+      },
+      {
+        "name": "Editor",
+        "url": "/editor.html",
+        "icon": "ti ti-brand-vscode"
+      },
+      {
+        "name": "Uploader",
+        "url": "/uploader.html",
+        "icon": "ti ti-cloud-upload"
+      },
+      {
+        "name": "Form Layout",
+        "url": "/form-layout.html",
+        "icon": "ti ti-layout-board"
+      },
+      {
+        "name": "Form Validation",
+        "url": "/form-validation.html",
+        "icon": "ti ti-shield-lock"
+      },
+      {
+        "name": "Basic Table",
+        "url": "/basic-table.html",
+        "icon": "ti ti-table"
+      },
+      {
+        "name": "Data Table",
+        "url": "/data-table.html",
+        "icon": "ti ti-table-import"
+      },
+      {
+        "name": "Charts",
+        "url": "/chart.html",
+        "icon": "ti ti-chart-pie"
+      },
+      {
+        "name": "Icons",
+        "url": "/icons.html",
+        "icon": "ti ti-icons"
+      },
+      {
+        "name": "Typography",
+        "url": "/typography.html",
+        "icon": "ti ti-letter-t"
+      }
+    ]
+  },
+  {
+    "title": "Pages",
+    "pages": [
+      {
+        "name": "Login",
+        "url": "/login.html",
+        "icon": "ti ti-login"
+      },
+      {
+        "name": "Register",
+        "url": "/register.html",
+        "icon": "ti ti-registered"
+      },
+      {
+        "name": "Forgot Password",
+        "url": "/recover-password.html",
+        "icon": "ti ti-key-off"
+      },
+      {
+        "name": "Reset Password",
+        "url": "/reset-password.html",
+        "icon": "ti ti-zoom-reset"
+      },
+      {
+        "name": "Starter Page",
+        "url": "/starter.html",
+        "icon": "ti ti-home-infinity"
+      },
+      {
+        "name": "Coming Soon",
+        "url": "/comming-soon.html",
+        "icon": "ti ti-brand-comedy-central"
+      },
+      {
+        "name": "Maintenance",
+        "url": "/maintenance.html",
+        "icon": "ti ti-hexagon-letter-m"
+      },
+      {
+        "name": "Error 404",
+        "url": "/404-error.html",
+        "icon": "ti ti-error-404"
+      },
+      {
+        "name": "Error 500",
+        "url": "/500-error.html",
+        "icon": "ti ti-bug"
+      },
+      {
+        "name": "Not Authorized",
+        "url": "/not-authorized.html",
+        "icon": "ti ti-license-off"
+      }
+    ]
+  }
+]

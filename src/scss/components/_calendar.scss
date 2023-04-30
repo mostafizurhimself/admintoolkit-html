@@ -1,0 +1,152 @@
+@layer components {
+  .fc .fc-toolbar {
+    @apply flex-wrap gap-4 md:gap-0;
+    & > .fc-toolbar-chunk {
+      &:nth-child(1) {
+        @apply order-2 md:order-1;
+      }
+
+      &:nth-child(2) {
+        @apply order-1 w-full md:order-2 md:w-auto;
+      }
+
+      &:nth-child(3) {
+        @apply order-3;
+      }
+    }
+  }
+
+  .fc .fc-toolbar-title {
+    @apply text-center text-lg md:text-xl;
+  }
+
+  .fc .fc-button {
+    @apply p-2 text-sm capitalize focus:shadow-none md:px-4 md:py-2;
+  }
+
+  .fc .fc-button-primary {
+    @apply border-slate-100 bg-slate-100 text-slate-500 dark:border-slate-700 dark:bg-slate-700 dark:text-slate-400;
+
+    &:hover {
+      @apply border-slate-100 bg-slate-100 text-slate-700 dark:border-slate-700 dark:bg-slate-700 dark:text-slate-200;
+    }
+
+    &:disabled {
+      @apply border-slate-100 bg-slate-100 text-slate-500 dark:border-slate-700 dark:bg-slate-700 dark:text-slate-400;
+    }
+
+    &:focus {
+      @apply shadow-none;
+    }
+
+    &:not(:disabled).fc-button-active,
+    &:not(:disabled):active {
+      @apply border-slate-200 bg-slate-200 text-slate-700 dark:border-slate-900 dark:bg-slate-900 dark:text-slate-200;
+    }
+
+    &:not(:disabled).fc-button-active:focus,
+    &:not(:disabled):active:focus {
+      @apply shadow-none;
+    }
+  }
+
+  .fc .fc-col-header-cell-cushion {
+    @apply text-sm font-medium text-slate-700 dark:text-slate-300;
+  }
+
+  .fc .fc-daygrid-day-number {
+    @apply text-sm font-medium text-slate-500 dark:text-slate-400;
+  }
+
+  .fc-theme-standard .fc-scrollgrid {
+    @apply border border-slate-200 dark:border-slate-600;
+  }
+
+  .fc-theme-standard td,
+  .fc-theme-standard th {
+    @apply border border-slate-200 dark:border-slate-600;
+  }
+
+  .fc .fc-daygrid-day.fc-day-today {
+    @apply bg-primary-100 dark:bg-primary-900/30;
+  }
+
+  .fc .fc-timegrid-axis-cushion {
+    @apply max-w-[4rem] font-medium;
+  }
+
+  .fc .fc-timegrid-axis-cushion,
+  .fc .fc-timegrid-slot-label-cushion {
+    @apply text-sm capitalize text-slate-500 dark:text-slate-400;
+  }
+
+  .fc .fc-timegrid-divider {
+    @apply hidden;
+  }
+
+  .fc .fc-timegrid-col.fc-day-today {
+    @apply bg-primary-100 dark:bg-primary-900/30;
+  }
+
+  .fc-daygrid-dot-event {
+    @apply bg-slate-100 hover:bg-slate-200 dark:bg-slate-600 dark:hover:bg-slate-700;
+  }
+
+  .fc-daygrid-dot-event .fc-event-title {
+    @apply font-semibold;
+  }
+
+  .fc-daygrid-block-event .fc-event-title {
+    @apply text-sm font-normal;
+  }
+
+  .fc .fc-daygrid-more-link {
+    @apply text-sm font-normal hover:bg-slate-200 dark:hover:bg-slate-700;
+  }
+
+  .fc-theme-standard .fc-popover {
+    @apply rounded-sm border border-slate-300 bg-white shadow dark:border-slate-700 dark:bg-slate-800;
+  }
+
+  .fc-theme-standard .fc-popover-header {
+    @apply bg-slate-200 p-2 dark:bg-slate-700;
+  }
+
+  .fc .fc-popover-title {
+    @apply text-sm font-medium;
+  }
+
+  // .fc-timegrid-event .fc-event-main {
+  //   @apply p-1;
+  // }
+
+  .fc-timegrid-event .fc-event-time {
+    @apply text-xs;
+  }
+
+  .fc-v-event .fc-event-title {
+    @apply text-sm;
+  }
+
+  .fc-timegrid-event-harness-inset .fc-timegrid-event,
+  .fc-timegrid-event.fc-event-mirror,
+  .fc-timegrid-more-link {
+    @apply shadow-none;
+  }
+
+  .fc-theme-standard .fc-list {
+    @apply border border-slate-200 dark:border-slate-600;
+  }
+
+  .fc .fc-list-sticky .fc-list-day > * {
+    @apply bg-slate-100 text-sm font-medium text-slate-600 dark:bg-slate-700 dark:text-slate-300;
+  }
+
+  .fc .fc-list-table td {
+    @apply text-sm text-slate-500 dark:text-slate-400;
+  }
+
+  .fc .fc-list-event:hover td {
+    @apply bg-slate-100 dark:bg-slate-700;
+  }
+}

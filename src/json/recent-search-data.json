@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Recent Searches",
+    "pages": [
+      {
+        "name": "Analytics",
+        "url": "index.html",
+        "icon": "ti ti-home-stats"
+      },
+      {
+        "name": "Ecommerce",
+        "url": "ecommerce.html",
+        "icon": "ti ti-shopping-cart"
+      },
+      {
+        "name": "Chart",
+        "url": "chart.html",
+        "icon": "ti ti-chart-pie"
+      },
+      {
+        "name": "Data Table",
+        "url": "data-table.html",
+        "icon": "ti ti-table-import"
+      },
+      {
+        "name": "Typography",
+        "url": "typography.html",
+        "icon": "ti ti-letter-t"
+      },
+      {
+        "name": "Form Layout",
+        "url": "form-layout.html",
+        "icon": "ti ti-layout-board"
+      }
+    ]
+  }
+]

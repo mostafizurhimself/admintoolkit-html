@@ -1,0 +1,196 @@
+@layer components {
+  .table {
+    $table: &;
+    --table-bg: theme(colors.white);
+    --table-dark-bg: theme(colors.slate.800);
+    --table-thead-color: theme(colors.slate.700);
+    --table-thead-dark-color: theme(colors.slate.300);
+    --table-tbody-color: theme(colors.slate.600);
+    --table-tbody-dark-color: theme(colors.slate.400);
+    --table-border-color: theme(colors.slate.200);
+    --table-border-dark-color: theme(colors.slate.600);
+    --table-striped-bg: theme(colors.slate.100);
+    --table-striped-dark-bg: theme(colors.slate.700);
+    --table-hover-bg: theme(colors.slate.50);
+    --table-hover-dark-bg: theme(colors.slate.700);
+
+    @apply w-full overflow-hidden rounded-primary border-[var(--table-border-color)] shadow dark:border-[var(--table-border-dark-color)];
+
+    thead,
+    tbody,
+    tfoot,
+    td,
+    th,
+    tr {
+      @apply border-0 border-solid border-inherit;
+    }
+
+    th {
+      @apply font-semibold text-[var(--table-thead-color)] dark:text-[var(--table-thead-dark-color)];
+    }
+
+    td {
+      @apply font-normal text-[var(--table-tbody-color)] dark:text-[var(--table-tbody-dark-color)];
+    }
+
+    & > thead > tr:first-child > *,
+    & > tbody > tr:not(:last-child) > * {
+      @apply border-b;
+    }
+
+    & > tfoot > tr:first-child > * {
+      @apply border-t;
+    }
+
+    & > :not(caption) > * > * {
+      @apply bg-[var(--table-bg)] px-6 py-3 text-left text-sm dark:bg-[var(--table-dark-bg)];
+    }
+
+    &-striped {
+      & > tbody > tr:nth-of-type(odd) > * {
+        @apply bg-[var(--table-striped-bg)] dark:bg-[var(--table-striped-dark-bg)];
+      }
+
+      &-columns {
+        & > :not(caption) > tr > :nth-child(odd) {
+          @apply bg-[var(--table-striped-bg)] dark:bg-[var(--table-striped-dark-bg)];
+        }
+      }
+    }
+
+    &-hover {
+      &:not(#{$table}-striped-columns) > tbody > tr:hover > * {
+        @apply bg-[var(--table-hover-bg)] dark:bg-[var(--table-hover-dark-bg)];
+      }
+    }
+
+    &-bordered {
+      @apply border-separate border-spacing-0 border shadow-none;
+
+      & > :not(caption) > * > *:not(:last-child) {
+        @apply border-r;
+      }
+    }
+
+    &-borderless {
+      & > :not(caption) > * > * {
+        border-width: 0 !important;
+      }
+    }
+
+    &-responsive {
+      @apply overflow-x-auto rounded-primary;
+    }
+
+    &-compact {
+      & > :not(caption) > * > * {
+        @apply px-4 py-2;
+      }
+    }
+
+    &-primary {
+      --table-bg: theme(colors.primary.100);
+      --table-dark-bg: theme(colors.primary.800);
+      --table-thead-color: theme(colors.primary.500);
+      --table-thead-dark-color: theme(colors.primary.200);
+      --table-tbody-color: theme(colors.primary.500);
+      --table-tbody-dark-color: theme(colors.primary.200);
+      --table-border-color: theme(colors.primary.200);
+      --table-border-dark-color: theme(colors.primary.700);
+      --table-striped-bg: theme(colors.primary.200);
+      --table-striped-dark-bg: theme(colors.primary.900);
+      --table-hover-bg: theme(colors.primary.300 / 80%);
+      --table-hover-dark-bg: theme(colors.primary.700);
+    }
+
+    &-secondary {
+      --table-bg: theme(colors.secondary.100);
+      --table-dark-bg: theme(colors.secondary.800);
+      --table-thead-color: theme(colors.secondary.500);
+      --table-thead-dark-color: theme(colors.secondary.200);
+      --table-tbody-color: theme(colors.secondary.500);
+      --table-tbody-dark-color: theme(colors.secondary.200);
+      --table-border-color: theme(colors.secondary.200);
+      --table-border-dark-color: theme(colors.secondary.700);
+      --table-striped-bg: theme(colors.secondary.200);
+      --table-striped-dark-bg: theme(colors.secondary.900);
+      --table-hover-bg: theme(colors.secondary.300 / 80%);
+      --table-hover-dark-bg: theme(colors.secondary.700);
+    }
+
+    &-success {
+      --table-bg: theme(colors.success.100);
+      --table-dark-bg: theme(colors.success.800);
+      --table-thead-color: theme(colors.success.500);
+      --table-thead-dark-color: theme(colors.success.200);
+      --table-tbody-color: theme(colors.success.500);
+      --table-tbody-dark-color: theme(colors.success.200);
+      --table-border-color: theme(colors.success.200);
+      --table-border-dark-color: theme(colors.success.700);
+      --table-striped-bg: theme(colors.success.200);
+      --table-striped-dark-bg: theme(colors.success.900);
+      --table-hover-bg: theme(colors.success.300 / 80%);
+      --table-hover-dark-bg: theme(colors.success.700);
+    }
+
+    &-danger {
+      --table-bg: theme(colors.danger.100);
+      --table-dark-bg: theme(colors.danger.800);
+      --table-thead-color: theme(colors.danger.500);
+      --table-thead-dark-color: theme(colors.danger.200);
+      --table-tbody-color: theme(colors.danger.500);
+      --table-tbody-dark-color: theme(colors.danger.200);
+      --table-border-color: theme(colors.danger.200);
+      --table-border-dark-color: theme(colors.danger.700);
+      --table-striped-bg: theme(colors.danger.200);
+      --table-striped-dark-bg: theme(colors.danger.900);
+      --table-hover-bg: theme(colors.danger.300 / 80%);
+      --table-hover-dark-bg: theme(colors.danger.700);
+    }
+
+    &-warning {
+      --table-bg: theme(colors.warning.100);
+      --table-dark-bg: theme(colors.warning.800);
+      --table-thead-color: theme(colors.warning.500);
+      --table-thead-dark-color: theme(colors.warning.200);
+      --table-tbody-color: theme(colors.warning.500);
+      --table-tbody-dark-color: theme(colors.warning.200);
+      --table-border-color: theme(colors.warning.200);
+      --table-border-dark-color: theme(colors.warning.700);
+      --table-striped-bg: theme(colors.warning.200);
+      --table-striped-dark-bg: theme(colors.warning.900);
+      --table-hover-bg: theme(colors.warning.300 / 80%);
+      --table-hover-dark-bg: theme(colors.warning.700);
+    }
+
+    &-info {
+      --table-bg: theme(colors.info.100);
+      --table-dark-bg: theme(colors.info.800);
+      --table-thead-color: theme(colors.info.500);
+      --table-thead-dark-color: theme(colors.info.200);
+      --table-tbody-color: theme(colors.info.500);
+      --table-tbody-dark-color: theme(colors.info.200);
+      --table-border-color: theme(colors.info.200);
+      --table-border-dark-color: theme(colors.info.700);
+      --table-striped-bg: theme(colors.info.200);
+      --table-striped-dark-bg: theme(colors.info.900);
+      --table-hover-bg: theme(colors.info.300 / 80%);
+      --table-hover-dark-bg: theme(colors.info.700);
+    }
+
+    &-dark {
+      --table-bg: theme(colors.dark.100);
+      --table-dark-bg: theme(colors.dark.800);
+      --table-thead-color: theme(colors.dark.500);
+      --table-thead-dark-color: theme(colors.dark.200);
+      --table-tbody-color: theme(colors.dark.500);
+      --table-tbody-dark-color: theme(colors.dark.200);
+      --table-border-color: theme(colors.dark.200);
+      --table-border-dark-color: theme(colors.dark.700);
+      --table-striped-bg: theme(colors.dark.200);
+      --table-striped-dark-bg: theme(colors.dark.900);
+      --table-hover-bg: theme(colors.dark.300 / 80%);
+      --table-hover-dark-bg: theme(colors.dark.700);
+    }
+  }
+}

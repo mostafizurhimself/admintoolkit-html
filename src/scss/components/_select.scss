@@ -1,0 +1,119 @@
+@layer components {
+  .select {
+    @apply h-10 w-full rounded-primary border border-slate-300 bg-transparent px-4 text-sm text-slate-700 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 disabled:opacity-80 dark:border-slate-600 dark:bg-transparent dark:text-slate-400 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
+
+    & > option {
+      @apply text-slate-700;
+    }
+
+    & > option[disabled] {
+      @apply bg-slate-100 text-slate-400 dark:bg-slate-700 dark:text-slate-500;
+    }
+
+    &-sm {
+      @apply h-9;
+    }
+
+    &-md {
+      @apply h-10;
+    }
+
+    &-lg {
+      @apply h-11;
+    }
+
+    &.is-valid,
+    .form-validated &:valid {
+      @apply border-success-500  focus:border-success-500 focus:ring-success-500 dark:border-success-500 dark:focus:border-success-500;
+    }
+
+    &.is-valid ~ .success-message,
+    .form-validated &:valid ~ .success-message {
+      @apply block;
+    }
+
+    &.is-invalid,
+    .form-validated &:invalid {
+      @apply border-danger-500  focus:border-danger-500 focus:ring-danger-500 dark:border-danger-500 dark:focus:border-danger-500;
+    }
+
+    &.is-invalid ~ .error-message,
+    .form-validated &:invalid ~ .error-message {
+      @apply block;
+    }
+  }
+
+  select.tom-select {
+    //Prevent multiple scrollbar appearing in chrome using custom utility.
+    @apply zero-sr-only;
+  }
+
+  .tom-select {
+    &.ts-wrapper.single.input-active .ts-control,
+    &.ts-wrapper.multi.input-active .ts-control,
+    .ts-control {
+      @apply border border-slate-200 bg-transparent dark:border-slate-600 dark:bg-transparent;
+    }
+
+    &.ts-wrapper.input-active .ts-control {
+      outline: 0 !important;
+    }
+
+    & > .ts-control {
+      @apply h-10 rounded-primary px-4 text-slate-700 after:absolute after:bottom-0 after:right-2 after:top-0 after:m-auto after:inline-flex after:h-4 after:w-4 after:items-center after:justify-center after:font-['tabler-icons'] after:text-base after:text-slate-500 after:content-['\ea5f'] dark:text-slate-300 after:dark:text-slate-400/60;
+    }
+
+    & > .ts-control > input {
+      @apply placeholder:text-sm placeholder:text-slate-400;
+    }
+
+    &.ts-wrapper.single > .ts-control > .item {
+      @apply text-sm;
+    }
+
+    &.ts-wrapper.multi > .ts-control > .item {
+      @apply rounded-full bg-primary-100 px-[0.7rem] py-[0.15rem] text-sm text-primary-500 dark:bg-primary-500/10 dark:text-primary-500;
+
+      &:not(:last-child) {
+        @apply mr-2;
+      }
+    }
+
+    & > .ts-dropdown {
+      @apply w-full rounded-primary border border-slate-200 bg-white p-2 dark:border-slate-600 dark:bg-slate-800;
+
+      .dropdown-input-wrap > input {
+        @apply rounded border border-slate-200 text-sm text-slate-700 placeholder:text-slate-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus-visible:outline-none dark:text-slate-300;
+      }
+
+      & > .ts-dropdown-content {
+        @apply mt-2;
+
+        & > .optgroup > .optgroup-header {
+          @apply mb-2 bg-transparent text-sm font-semibold text-slate-500 dark:text-slate-400;
+        }
+
+        & > .option,
+        & > .optgroup > .option {
+          @apply rounded p-2 text-sm text-slate-500 dark:text-slate-400;
+
+          &:not(:last-child) {
+            @apply mb-1;
+          }
+
+          &.active {
+            @apply bg-primary-100 text-primary-500 dark:bg-primary-500/10;
+          }
+
+          &.selected {
+            @apply bg-primary-500 text-white dark:bg-primary-500 dark:text-white;
+          }
+        }
+
+        & > .no-results {
+          @apply text-sm text-slate-500 dark:text-slate-400;
+        }
+      }
+    }
+  }
+}

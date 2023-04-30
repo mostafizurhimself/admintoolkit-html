@@ -1,7 +1,7 @@
 @layer components {
   .modal {
     $modal: &;
-    @apply fixed inset-0 z-[1000] hidden h-full w-full flex-col overflow-y-auto overflow-x-hidden px-4 py-10;
+    @apply fixed inset-0 z-[999] hidden h-full w-full flex-col overflow-y-auto overflow-x-hidden px-4 py-10;
 
     &-full {
       @apply p-0;
@@ -12,7 +12,7 @@
     }
 
     &-dialog {
-      @apply pointer-events-none relative z-[1010] mx-auto w-full max-w-xl origin-center scale-90 transform opacity-0 transition-all duration-300 ease-in-out;
+      @apply relative z-[1001] mx-auto w-full max-w-xl origin-center scale-90 transform opacity-0 transition-all duration-500 ease-in-out;
 
       #{$modal}-sm & {
         @apply max-w-md;
@@ -32,25 +32,17 @@
     }
 
     &-content {
-      @apply pointer-events-auto relative flex h-full w-full flex-col rounded-primary bg-white shadow-xl;
-    }
-
-    &-backdrop {
-      @apply fixed inset-0 z-[1005] h-screen w-screen bg-slate-600 bg-opacity-0 transition-colors duration-300 ease-in-out;
-
-      #{$modal}.show & {
-        @apply bg-opacity-50;
-      }
+      @apply relative flex h-full w-full flex-col overflow-hidden rounded-primary bg-white shadow-xl dark:bg-slate-800;
     }
 
     &-header,
     &-body,
     &-footer {
-      @apply px-6 py-4;
+      @apply px-4 py-4;
     }
 
     &-header {
-      @apply border-b;
+      @apply border-b border-b-slate-200 dark:border-b-slate-600;
     }
 
     &-body {
@@ -58,7 +50,15 @@
     }
 
     &-footer {
-      @apply border-t;
+      @apply border-t border-t-slate-300 dark:border-t-slate-600;
+    }
+
+    &-backdrop {
+      @apply fixed inset-0 z-[1000] h-full w-full bg-black opacity-0 transition-opacity duration-500 ease-in-out;
+
+      &.show {
+        @apply opacity-40;
+      }
     }
   }
 }

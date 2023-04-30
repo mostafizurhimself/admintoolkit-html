@@ -2,17 +2,323 @@
   @apply w-1.5 bg-slate-300 dark:bg-slate-900;
 }
 
-code {
-  @apply rounded bg-slate-100 p-1 text-xs tracking-wide text-slate-500 dark:bg-slate-600 dark:text-slate-300;
+.simplebar-content-wrapper {
+  @apply scroll-smooth;
 }
 
-.help-text {
-  @apply text-xs font-light text-slate-400;
+// =======Quill Styles Start==========
+
+.ql-editor.ql-blank::before {
+  @apply pointer-events-none absolute left-4 right-4 italic text-slate-600 content-[attr(data-placeholder)] dark:text-slate-300;
+  font-family: theme('fontFamily.sans');
 }
 
-.success-message {
-  @apply text-xs text-success-500;
+.ql-container {
+  @apply min-h-[20rem] bg-white text-sm font-normal dark:border-slate-600 dark:bg-slate-800;
+  font-family: theme('fontFamily.sans');
 }
-.error-message {
-  @apply text-xs text-danger-600;
+
+// Snow Theme
+.ql-snow {
+  &.ql-container {
+    @apply rounded-b-primary border border-slate-300 dark:border-slate-600;
+  }
+
+  &.ql-toolbar {
+    @apply rounded-t-primary border border-slate-300 dark:border-slate-600 dark:bg-slate-800;
+
+    button {
+      @apply text-slate-700;
+
+      .ql-stroke {
+        @apply fill-none stroke-slate-600 dark:stroke-slate-300;
+      }
+
+      .ql-fill {
+        @apply fill-slate-600 stroke-slate-600 dark:fill-slate-300 dark:stroke-slate-300;
+      }
+
+      .ql-stroke.ql-fill {
+        @apply fill-slate-600 stroke-slate-600 dark:fill-slate-300 dark:stroke-slate-300;
+      }
+
+      &:hover {
+        @apply text-primary-500;
+
+        .ql-stroke {
+          @apply fill-none stroke-current;
+        }
+
+        .ql-fill {
+          @apply fill-current stroke-none;
+        }
+
+        .ql-stroke.ql-fill {
+          @apply fill-current stroke-current;
+        }
+      }
+
+      &.ql-active {
+        @apply text-primary-500;
+
+        .ql-stroke {
+          @apply fill-none stroke-primary-500;
+        }
+
+        .ql-fill {
+          @apply fill-current stroke-none;
+        }
+
+        .ql-stroke.ql-fill {
+          @apply fill-current stroke-current;
+        }
+      }
+    }
+
+    .ql-picker,
+    .ql-picker-label,
+    .ql-picker-options {
+      @apply text-slate-700 dark:bg-slate-800 dark:text-slate-50;
+
+      .ql-stroke {
+        @apply fill-none stroke-current;
+      }
+
+      .ql-fill {
+        @apply fill-current stroke-none;
+      }
+
+      .ql-stroke.ql-fill {
+        @apply fill-current stroke-current;
+      }
+    }
+
+    .ql-expanded {
+      .ql-picker-label,
+      .ql-picker-options {
+        @apply border border-slate-300 dark:border-slate-600;
+      }
+
+      .ql-picker-label {
+        @apply rounded-t-primary;
+      }
+
+      .ql-picker-options {
+        @apply rounded-b-primary;
+      }
+
+      #ql-picker-options-1 {
+        @apply rounded-b-primary rounded-r-primary;
+      }
+    }
+
+    .ql-picker-label:hover,
+    .ql-picker-label:hover,
+    .ql-picker-label.ql-active,
+    .ql-picker-label.ql-active,
+    .ql-picker-item:hover,
+    .ql-picker-item:hover,
+    .ql-picker-item.ql-selected,
+    .ql-picker-item.ql-selected {
+      @apply text-primary-500;
+
+      .ql-stroke {
+        @apply fill-none stroke-current;
+      }
+
+      .ql-fill {
+        @apply fill-current stroke-none;
+      }
+
+      .ql-stroke.ql-fill {
+        @apply fill-current stroke-current;
+      }
+    }
+  }
 }
+
+// Bubble Theme
+.ql-bubble {
+  &.ql-container {
+    @apply rounded-primary border border-slate-300 dark:border-slate-600;
+  }
+
+  .ql-tooltip:not(.ql-flip) .ql-tooltip-arrow {
+    @apply top-[-6px] border-b-[6px] border-b-slate-300 dark:border-b-slate-600;
+  }
+
+  .ql-tooltip.ql-flip .ql-tooltip-arrow {
+    @apply bottom-[-6px] border-t-[6px] border-b-slate-300 dark:border-b-slate-600;
+  }
+
+  .ql-tooltip {
+    @apply rounded-primary border border-slate-300 bg-slate-100 dark:border-slate-600 dark:bg-slate-800;
+
+    button {
+      @apply text-slate-700;
+
+      .ql-stroke {
+        @apply fill-none stroke-slate-600 dark:stroke-slate-300;
+      }
+
+      .ql-fill {
+        @apply fill-slate-600 stroke-slate-600 dark:fill-slate-300 dark:stroke-slate-300;
+      }
+
+      .ql-stroke.ql-fill {
+        @apply fill-slate-600 stroke-slate-600 dark:fill-slate-300 dark:stroke-slate-300;
+      }
+
+      &:hover {
+        @apply text-primary-500;
+
+        .ql-stroke {
+          @apply fill-none stroke-current;
+        }
+
+        .ql-fill {
+          @apply fill-current stroke-none;
+        }
+
+        .ql-stroke.ql-fill {
+          @apply fill-current stroke-current;
+        }
+      }
+
+      &.ql-active {
+        @apply text-primary-500;
+
+        .ql-stroke {
+          @apply fill-none stroke-primary-500;
+        }
+
+        .ql-fill {
+          @apply fill-current stroke-none;
+        }
+
+        .ql-stroke.ql-fill {
+          @apply fill-current stroke-current;
+        }
+      }
+    }
+
+    .ql-picker,
+    .ql-picker-label,
+    .ql-picker-options {
+      @apply text-slate-700 dark:bg-slate-800 dark:text-slate-50;
+
+      .ql-stroke {
+        @apply fill-none stroke-current;
+      }
+
+      .ql-fill {
+        @apply fill-current stroke-none;
+      }
+
+      .ql-stroke.ql-fill {
+        @apply fill-current stroke-current;
+      }
+    }
+
+    .ql-picker-label:hover,
+    .ql-picker-label:hover,
+    .ql-picker-label.ql-active,
+    .ql-picker-label.ql-active,
+    .ql-picker-item:hover,
+    .ql-picker-item:hover,
+    .ql-picker-item.ql-selected,
+    .ql-picker-item.ql-selected {
+      @apply text-primary-500;
+
+      .ql-stroke {
+        @apply fill-none stroke-current;
+      }
+
+      .ql-fill {
+        @apply fill-current stroke-none;
+      }
+
+      .ql-stroke.ql-fill {
+        @apply fill-current stroke-current;
+      }
+    }
+  }
+}
+
+// =======Quill Styles End==========
+
+// ============Apex Chart  Start ============
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  @apply border-b border-slate-400 bg-slate-200 text-slate-700 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-200;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light,
+.apexcharts-yaxistooltip.apexcharts-theme-light,
+.apexcharts-xaxistooltip.apexcharts-theme-light {
+  @apply border border-slate-400 bg-slate-50 text-slate-700 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200;
+}
+
+.apexcharts-text.apexcharts-xaxis-label tspan,
+.apexcharts-text.apexcharts-yaxis-label tspan {
+  @apply fill-slate-400;
+}
+
+.apexcharts-legend .apexcharts-legend-series .apexcharts-legend-text {
+  color: #94a3b8 !important;
+}
+
+// ============Apex Chart  End ============
+// Email Badge
+.tags-input-wrapper {
+  @apply m-0 flex w-full flex-wrap gap-2 border-none bg-transparent p-0 text-xs text-slate-600 outline-none dark:text-slate-300;
+
+  & input {
+    @apply flex-1 border-none bg-transparent py-1 outline-none;
+  }
+
+  & .tag {
+    @apply mb-1 inline-block rounded-full bg-slate-50 px-2 py-1 shadow dark:bg-slate-900;
+
+    & a {
+      @apply mx-2 inline-block cursor-pointer;
+    }
+  }
+}
+
+// ============ Tagify Custom CSS Starts ============
+.tagify {
+  @apply items-center gap-2;
+
+  & > &__tag {
+    @apply m-0 flex cursor-pointer items-center gap-x-1 rounded-full border border-slate-300 bg-slate-100 px-2 py-1 dark:border-slate-600 dark:bg-slate-700;
+  }
+
+  & > &__tag > div {
+    @apply p-0 leading-none;
+
+    &::before {
+      @apply shadow-none;
+    }
+  }
+
+  & > &__tag &__tag-text {
+    @apply text-sm text-slate-600 dark:text-slate-300;
+  }
+
+  & > &__tag &__tag__removeBtn {
+    @apply m-0 text-lg text-slate-600 hover:bg-transparent hover:text-danger-500 dark:text-slate-300 dark:hover:text-danger-500;
+  }
+
+  & > &__tag &__tag__removeBtn:hover + div > span {
+    @apply opacity-100;
+  }
+
+  & > &__tag &__tag__removeBtn:hover + div::before {
+    box-shadow: none !important;
+  }
+
+  & > &__input {
+    @apply m-0 px-0 py-2 text-sm text-slate-700 dark:text-slate-300;
+  }
+}
+// ============ Tagify Custom CSS Ends ============

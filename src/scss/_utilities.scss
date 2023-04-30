@@ -2,4 +2,18 @@
   .container-fluid {
     @apply w-full px-6;
   }
+
+  .zero-sr-only {
+    // Set the width, height and margin to `0` to prevent extra scrollbar appearing in chrome browser.
+    @apply sr-only m-0 h-0 w-0;
+  }
+
+  // /* Chrome, Safari and Opera */
+  // #chats::-webkit-scrollbar {
+  //   display: none;
+  // }
+  // #chats {
+  //   -ms-overflow-style: none; /* IE and Edge */
+  //   scrollbar-width: none; /* Firefox */
+  // }
 }

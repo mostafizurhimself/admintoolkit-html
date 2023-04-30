@@ -1,0 +1,11 @@
+@layer components {
+  .tooltip {
+    $tooltip: &;
+    &-basic-container {
+      @apply relative inline-flex w-auto before:invisible before:absolute before:-top-3 before:left-1/2 before:z-10 before:w-max before:max-w-xs before:-translate-x-1/2 before:-translate-y-full before:rounded-primary before:bg-gray-700 before:px-2 before:py-1.5 before:text-white before:content-[attr(data-tooltip)] after:invisible after:absolute after:-top-3 after:left-1/2 after:z-10 after:h-0 after:w-0 after:-translate-x-1/2 after:border-8 after:border-b-transparent after:border-l-transparent after:border-r-transparent after:border-t-gray-700 hover:before:visible hover:after:visible;
+    }
+    &-basic {
+      @apply rounded-primary border border-primary-500 bg-primary-500 px-4 py-2 capitalize text-white hover:border-primary-600 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    }
+  }
+}

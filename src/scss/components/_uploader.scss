@@ -1,0 +1,58 @@
+@layer components {
+  .dropzone {
+    @apply flex min-h-[10rem] flex-wrap items-center justify-center border-2 border-dashed border-slate-300 p-4 dark:border-slate-600 lg:justify-start;
+
+    &:not(&-disabled) {
+      @apply hover:border-primary-500 dark:hover:border-primary-500;
+    }
+
+    &-disabled {
+      @apply cursor-not-allowed opacity-50;
+    }
+
+    &.dz-drag-hover {
+      @apply border-primary-500;
+    }
+
+    .dz-message {
+      @apply mx-auto my-0 flex max-w-lg flex-col items-center justify-center gap-2;
+    }
+
+    .dz-preview {
+      &.dz-image-preview {
+        @apply bg-transparent;
+      }
+
+      .dz-error-mark,
+      .dz-success-mark {
+        & > svg {
+          @apply h-10 w-10;
+        }
+      }
+
+      .dz-success-mark {
+        @apply bg-success-500;
+      }
+
+      .dz-error-mark {
+        @apply bg-danger-500;
+      }
+
+      .dz-progress {
+        @apply h-2 border-0 bg-slate-200 dark:bg-slate-700;
+
+        & > .dz-upload {
+          @apply rounded-full bg-primary-500;
+        }
+      }
+
+      .dz-error-message {
+        @apply -top-[60%] bg-danger-500 after:-bottom-[12px] after:left-0 after:right-0 after:top-auto after:m-auto after:border-t-[6px] after:border-b-transparent after:border-t-danger-500;
+      }
+
+      .dz-remove {
+        @apply mt-2 text-slate-500 hover:text-slate-600 hover:no-underline dark:text-slate-400 dark:hover:text-slate-300;
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+@layer components {
+  .flatpickr {
+    $flatpickr: &;
+    $flatpickr-calendar: #{$flatpickr}-calendar;
+
+    @at-root #{$flatpickr-calendar} {
+      width: calc(14rem + 5vw) !important;
+      @apply overflow-hidden rounded-primary bg-white shadow dark:bg-slate-800;
+
+      // Direct Element
+      & > #{$flatpickr}-months {
+        @apply items-center border-b border-slate-200 p-2 dark:border-slate-700;
+
+        & > div {
+          @apply order-1 mr-4;
+        }
+
+        & > span {
+          @apply order-2;
+
+          &:not(:last-child) {
+            @apply mr-3;
+          }
+        }
+
+        #{$flatpickr}-prev-month,
+        #{$flatpickr}-next-month {
+          @apply relative flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 p-0 text-slate-500 hover:text-slate-600 dark:bg-slate-700 dark:text-slate-300 dark:hover:text-slate-100;
+
+          & > svg {
+            @apply h-2/5 w-2/5 fill-slate-600 text-slate-600 dark:fill-slate-300 dark:text-slate-300;
+          }
+
+          &:hover > svg {
+            @apply fill-slate-800 text-slate-800 dark:fill-slate-100 dark:text-slate-100;
+          }
+        }
+
+        #{$flatpickr}-month {
+          @apply h-auto;
+        }
+
+        #{$flatpickr}-current-month {
+          @apply relative left-0 flex h-auto w-full items-center justify-start gap-4 p-0;
+
+          & > .cur-month {
+            @apply m-0 h-full w-full text-left text-sm font-semibold text-slate-600 hover:bg-transparent dark:text-slate-300;
+          }
+
+          & > select {
+            @apply h-full w-full text-sm font-normal text-slate-600 hover:bg-transparent focus:ring-0 dark:text-slate-300;
+
+            & > option {
+              @apply text-slate-600;
+            }
+          }
+
+          & > .numInputWrapper {
+            @apply shrink-0;
+
+            & > input {
+              @apply px-2 py-1 text-sm font-normal text-slate-600 focus:ring-0 dark:text-slate-300;
+            }
+
+            & > span {
+              @apply inline-flex w-4 items-center justify-center border border-slate-100 bg-slate-300 p-0 dark:border-slate-600 dark:bg-slate-800;
+            }
+
+            & > span.arrowUp {
+              @apply after:border-b-slate-500 dark:after:border-b-slate-300;
+            }
+
+            & > span.arrowDown {
+              @apply after:border-t-slate-500 after:dark:border-t-slate-300;
+            }
+          }
+        }
+      }
+
+      // Direct Element
+      & > #{$flatpickr}-innerContainer {
+        #{$flatpickr}-weekdays {
+          @apply h-auto;
+        }
+
+        #{$flatpickr}-weekday {
+          @apply inline-block bg-slate-100/70 px-1 py-2 text-sm font-medium text-slate-600 dark:bg-slate-700/70 dark:text-slate-300;
+        }
+
+        #{$flatpickr}-days {
+          width: calc(14rem + 5vw) !important;
+          .dayContainer {
+            @apply w-full min-w-full max-w-full justify-between gap-y-1.5 p-2;
+          }
+        }
+
+        #{$flatpickr}-day {
+          @apply inline-flex h-full max-h-[2.3rem] w-full max-w-[2.3rem] basis-full items-center justify-center border border-transparent  text-sm leading-[2.3rem];
+
+          &:not(.inRange) {
+            @apply rounded-full;
+          }
+
+          &:not(.flatpickr-disabled) {
+            @apply hover:border-slate-100 hover:bg-slate-100 dark:hover:border-slate-700 dark:hover:bg-slate-700;
+          }
+
+          &:not(.prevMonthDay, .nextMonthDay, .flatpickr-disabled) {
+            @apply text-slate-600 dark:text-slate-300;
+          }
+
+          &.flatpickr-disabled {
+            @apply cursor-not-allowed text-slate-300 dark:text-slate-700;
+          }
+
+          &.prevMonthDay,
+          &.nextMonthDay {
+            @apply text-slate-400 dark:text-slate-500;
+          }
+
+          &.inRange {
+            @apply bg-slate-100 shadow-[-5px_0_0_0_var(--tw-shadow-color),5px_0_0_0_var(--tw-shadow-color)] shadow-slate-100 dark:bg-slate-700 dark:shadow-slate-700;
+          }
+
+          &.startRange,
+          &.endRange {
+            @apply rounded-none bg-slate-100 dark:bg-slate-700;
+          }
+
+          &.startRange {
+            @apply rounded-bl-full rounded-tl-full;
+          }
+
+          &.endRange {
+            @apply rounded-br-full rounded-tr-full;
+          }
+
+          &.endRange.startRange + .endRange:not(:nth-child(7n + 1)),
+          &.selected.startRange + .endRange:not(:nth-child(7n + 1)),
+          &.startRange.startRange + .endRange:not(:nth-child(7n + 1)) {
+            @apply shadow-[-10px_0_0_0_var(--tw-shadow-color)] shadow-primary-500 dark:shadow-primary-500;
+          }
+
+          &.today:not(.selected, .inRange, .startRange, .endRange) {
+            @apply border-primary-500 text-primary-500 hover:border-slate-100 dark:border-primary-500 dark:text-primary-500 dark:hover:border-slate-700;
+          }
+
+          &.selected,
+          &.selected.startRange,
+          &.selected.endRange {
+            @apply border-primary-500 bg-primary-500 text-slate-100 hover:border-primary-500 hover:bg-primary-500 hover:text-slate-100 dark:hover:border-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-100;
+          }
+        }
+      }
+
+      // Direct Element
+      & > #{$flatpickr}-time {
+        & > .numInputWrapper {
+          @apply hover:bg-slate-100 dark:hover:bg-slate-700;
+
+          & > input {
+            @apply p-2 text-sm font-normal text-slate-600 hover:bg-transparent focus:bg-slate-100 focus:ring-0 dark:text-slate-300 dark:hover:bg-transparent dark:focus:bg-slate-700;
+          }
+
+          & > span {
+            @apply inline-flex w-4 items-center justify-center border border-slate-100 bg-slate-300 p-0 dark:border-slate-600 dark:bg-slate-800;
+          }
+
+          & > span.arrowUp {
+            @apply after:border-b-slate-500 dark:after:border-b-slate-300;
+          }
+
+          & > span.arrowDown {
+            @apply after:border-t-slate-500 after:dark:border-t-slate-300;
+          }
+        }
+
+        & > #{$flatpickr}-time-separator {
+          @apply float-none inline-flex items-center justify-center px-2 text-xl font-medium text-slate-600 dark:text-slate-300;
+        }
+
+        & > #{$flatpickr}-am-pm {
+          @apply float-none inline-flex items-center justify-center py-4 text-sm text-slate-600 hover:bg-slate-100 focus:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700 dark:focus:bg-slate-700;
+        }
+      }
+
+      &.hasTime #{$flatpickr}-time {
+        @apply border-t border-t-slate-300 dark:border-t-slate-700;
+      }
+
+      &.hasTime.noCalendar #{$flatpickr}-time {
+        @apply border-t-transparent dark:border-t-transparent;
+      }
+    }
+  }
+}

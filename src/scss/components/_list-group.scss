@@ -1,0 +1,52 @@
+@layer components {
+  .list-group {
+    @apply rounded-primary border border-slate-300  bg-white text-sm font-medium  dark:border-slate-600 dark:bg-slate-800;
+    &-item {
+      @apply border-b border-b-slate-300  px-4 py-2 text-left dark:border-slate-600;
+
+      &-primary {
+        @apply bg-primary-100 text-primary-500;
+      }
+      &-secondary {
+        @apply bg-secondary-100 text-secondary-500;
+      }
+      &-success {
+        @apply bg-success-100 text-success-500;
+      }
+      &-danger {
+        @apply bg-danger-100 text-danger-500;
+      }
+      &-info {
+        @apply bg-info-100 text-info-500;
+      }
+      &-warning {
+        @apply bg-warning-100 text-warning-500;
+      }
+      &-dark {
+        @apply bg-dark-100 text-dark-500;
+      }
+      &-action {
+        @apply block w-full cursor-pointer duration-150 ease-in hover:bg-slate-100 dark:hover:bg-slate-600;
+        &.active {
+          @apply bg-primary-500 text-slate-50  hover:bg-primary-500;
+        }
+        &.disabled {
+          @apply cursor-not-allowed bg-white text-slate-400 hover:bg-white dark:bg-slate-800 dark:hover:bg-slate-800;
+        }
+      }
+      &.active {
+        @apply bg-primary-500 text-slate-50  hover:bg-primary-500;
+      }
+      &.disabled {
+        @apply cursor-not-allowed bg-white text-slate-400 hover:bg-white dark:bg-slate-800 dark:hover:bg-slate-800;
+      }
+    }
+
+    &-item:first-child {
+      @apply rounded-t-primary;
+    }
+    &-item:last-child {
+      @apply rounded-b-primary border-b-0;
+    }
+  }
+}

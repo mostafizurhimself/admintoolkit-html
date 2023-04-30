@@ -1,0 +1,50 @@
+@layer components {
+  .drawer {
+    @apply invisible fixed bottom-0 left-0 right-auto top-0 z-[1000] max-h-full max-w-full -translate-x-full translate-y-0 bg-white shadow-[0_.31rem_1.25rem_0_var(--tw-shadow-color)] shadow-black/30 transition-transform duration-500 ease-in-out dark:bg-slate-800 sm:max-w-xs;
+
+    &-left {
+      @apply bottom-0 left-0 right-auto top-0 max-h-full max-w-full -translate-x-full sm:max-w-xs;
+    }
+
+    &-right {
+      @apply bottom-0 left-auto right-0 top-0 max-h-full max-w-full translate-x-full sm:max-w-xs;
+    }
+
+    &-top {
+      @apply bottom-auto left-0 right-0 top-0 max-h-max min-h-[15rem] max-w-full -translate-y-full translate-x-0;
+    }
+
+    &-bottom {
+      @apply bottom-0 left-0 right-0 top-auto max-h-max min-h-[15rem] max-w-full translate-x-0 translate-y-full;
+    }
+
+    &.show:not(.hiding),
+    &.showing {
+      transform: none;
+    }
+
+    &.hiding,
+    &.show,
+    &.showing {
+      @apply visible;
+    }
+
+    &-header,
+    &-body,
+    &-footer {
+      @apply p-4;
+    }
+
+    &-header {
+      @apply flex items-center justify-between;
+    }
+
+    &-backdrop {
+      @apply fixed inset-0 z-[999] h-full w-full bg-black opacity-0 transition-opacity duration-500 ease-in-out;
+
+      &.show {
+        @apply opacity-40;
+      }
+    }
+  }
+}

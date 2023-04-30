@@ -1,150 +1,180 @@
-class Modal {
-  constructor(target) {
+export class Modal {
+  constructor(target, options = {}) {
+    //Store the target element
+    this.target = null;
+
+    //Store modal element
+    this.modal = null;
+
+    //Store modal toggle
+    this.toggle = null;
+
+    //Store drawer dismisses
+    this.dismisses = null;
+
+    //Store modal transition in miliseconds.
+    this.transition = 500;
+
+    //Store the modal options
+    this.options = {
+      keyboard: true, //Boolean. Default is true
+      backdrop: true, //Boolean | 'static'. Default is true
+      autofucus: true, //Boolean. Default is true (focus the first input)
+      ...options,
+    };
+
+    this.documentOnKeydown = (e) => this.hideOnKeydown({ e, modal: this });
+
     if (typeof target === 'string') {
       this.target = document.querySelector(target);
-    }
-
-    if (target instanceof HTMLElement) {
+    } else if (target instanceof HTMLElement) {
       this.target = target;
+    } else {
+      throw new Error('No target element found');
     }
 
-    if (!this.target) {
-      throw new Error('No target element found');
+    if (this.target.classList.contains('modal')) {
+      this.modal = this.target;
+    } else {
+      this.toggle = this.target;
+      this.modal = document.querySelector(this.toggle.dataset.target);
+
+      this.toggle.addEventListener('click', () => this.show());
+    }
+
+    this.dismisses = this.modal.querySelectorAll('[data-dismiss="modal"]');
+
+    if (this.dismisses.length) {
+      [...this.dismisses].forEach((dismiss) => {
+        dismiss.addEventListener('click', () => this.hide());
+      });
     }
   }
 
   show() {
-    // Show to modal
+    const modal = this.modal;
+
+    if (!modal.classList.contains('show')) {
+      modal.style.display = 'flex';
+
+      modal.appendChild(this.createBackdrop());
+
+      // Focus the first input
+      if (this.options.autofucus) {
+        const input = modal.querySelector('input');
+        input && input.focus();
+      }
+
+      setTimeout(() => {
+        const modalBackdrop = modal.querySelector('.modal-backdrop');
+        modal.classList.add('show');
+
+        if (modalBackdrop) {
+          modalBackdrop.classList.add('show');
+
+          modalBackdrop.addEventListener('click', () => {
+            if (this.options.backdrop && this.options.backdrop !== 'static') {
+              this.hide();
+            }
+          });
+        }
+
+        if (this.options.keyboard) {
+          document.addEventListener('keydown', this.documentOnKeydown);
+        }
+      }, 15);
+    }
   }
 
   hide() {
-    // Hide the modal
+    const modal = this.modal;
+
+    if (modal.classList.contains('show')) {
+      const modalBackdrop = modal.querySelector('.modal-backdrop');
+      modal.classList.remove('show');
+
+      if (modalBackdrop) {
+        modalBackdrop.classList.remove('show');
+      }
+
+      setTimeout(() => {
+        modal.removeAttribute('style');
+
+        modalBackdrop.remove();
+
+        document.removeEventListener('keydown', this.documentOnKeydown);
+      }, this.transition);
+    }
+  }
+
+  hideOnKeydown(args) {
+    const { e, modal } = args;
+
+    if (e.key === 'Escape' && modal.options.keyboard) {
+      modal.hide();
+    }
+  }
+
+  createBackdrop() {
+    if (this.modal.querySelector('.modal-backdrop')) {
+      this.modal.querySelector('.modal-backdrop').remove();
+    }
+
+    const backdrop = document.createElement('div');
+    backdrop.setAttribute('class', 'modal-backdrop');
+
+    return backdrop;
   }
 }
 
 const modal = {
   init() {
-    // Store all the modal trigger element
-    const triggers = document.querySelectorAll('[data-component-trigger="modal"]');
+    const toggles = this.querySelectors('[data-toggle="modal"]');
 
-    // Check if page contains any trigger
-    if (triggers.length === 0) {
-      return;
-    }
+    if (toggles.length) {
+      toggles.forEach((toggle) => {
+        const targetId = toggle.dataset.target;
 
-    triggers.forEach((trigger) => {
-      trigger.addEventListener('click', () => {
-        //Store the modal ID
-        const modalId = trigger.dataset.componentId;
+        if (targetId) {
+          const target = document.querySelector(targetId);
+          const options = {
+            keyboard: target.dataset.keyboard === 'false' ? false : true,
+            backdrop: (() => {
+              let output = true;
 
-        //Store the modal Element
-        const modal = document.querySelector(modalId);
+              if (target.dataset.backdrop === 'static') {
+                output = 'static';
+              }
 
-        if (modal) {
-          // Store all dissmissable buttons from modal
-          const dismisses = modal.querySelectorAll('[data-component-dismisss="modal"]');
+              if (target.dataset.backdrop === 'false') {
+                output = false;
+              }
 
-          //Get the modal's backdrop value
-          const backdrop = modal.dataset.componentBackdrop ? modal.dataset.componentBackdrop : 'true';
+              return output;
+            })(),
+          };
 
-          // Open the modal
-          this.open(modal);
-
-          // Check the modal contains any dismissable button
-          if (dismisses.length) {
-            // Close the modal when clicks one of the dismissable buttons
-            dismisses.forEach((dismisse) => dismisse.addEventListener('click', () => this.close(modal)));
-          }
-
-          // Check if backdrop is enabled
-          if (backdrop === 'true') {
-            // Close the modal when press the esc key
-            document.addEventListener('keydown', this.enableEscClose.bind({ modalObj: this, modal }));
-          }
+          new Modal(toggle, options);
         }
       });
-    });
+    }
   },
 
-  open(modal) {
-    if (!modal.classList.contains('show')) {
-      // Change the display property none to flex
-      modal.style.display = 'flex';
+  querySelectors(selectors) {
+    let output = [];
 
-      // Create a modal overlay
-      const overlay = this.createHTMLTag('div', {
-        class: 'modal-backdrop',
+    if (selectors) {
+      output = [...document.querySelectorAll(selectors)].filter((selectorElement) => {
+        // Return all the elements except .code-viewer-source children elements
+        return !selectorElement.parentElement.classList.contains('code-viewer-source');
       });
-
-      // Remove overlay if it exists
-      if (modal.querySelector('.modal-backdrop')) {
-        modal.querySelector('.modal-backdrop').remove();
-      }
-
-      setTimeout(() => {
-        // Add the show class to the modal
-        modal.classList.add('show');
-
-        // Append the overlay
-        modal.appendChild(overlay);
-
-        // check if backdrop is enabled
-        overlay.addEventListener('click', () => {
-          //Get the modal's backdrop value
-          const backdrop = modal.dataset.componentBackdrop ? modal.dataset.componentBackdrop : 'true';
-
-          if (backdrop === 'true') {
-            this.close(modal);
-          }
-        });
-      }, 15);
-    }
-  },
-
-  close(modal) {
-    if (modal.classList.contains('show')) {
-      modal.classList.remove('show');
-
-      setTimeout(() => {
-        // Remove the style attribute to make display none
-        modal.removeAttribute('style');
-
-        // Remove the backdrop from modal
-        modal.querySelector('.modal-backdrop').remove();
-
-        // Remove keydown eventListener from document
-        document.removeEventListener('keydown', this.enableEscClose);
-      }, 300);
-    }
-  },
-
-  enableEscClose(e) {
-    //Store the modal element
-    const modal = this.modal;
-
-    //Store the entire modal object
-    const modalObj = this.modalObj;
-
-    if (e.key == 'Escape' && modal.classList.contains('show')) {
-      modalObj.close(modal);
-    }
-  },
-
-  createHTMLTag(tag, attributes = {}) {
-    //Create the tag
-    const element = document.createElement(tag);
-
-    // Check if attrbutes is empty of not
-    if (Object.keys(attributes).length) {
-      for (const key in attributes) {
-        //Set each attribute
-        element.setAttribute(key, attributes[key]);
-      }
     }
 
-    // Return the element
-    return element;
+    return output;
   },
 };
 
+window.createModal = function (target, options = {}) {
+  return new Modal(target, options);
+};
 export default modal;

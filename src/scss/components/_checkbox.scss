@@ -1,43 +1,65 @@
-.checkbox {
-  @apply h-4 w-4 rounded border-slate-300 bg-transparent text-primary-500 shadow-sm transition-all duration-150 checked:hover:shadow-none focus:ring-0 focus:ring-offset-0 enabled:hover:shadow disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-600;
+@layer components {
+  .checkbox {
+    @apply h-4 w-4 cursor-pointer rounded border-slate-300 bg-transparent text-primary-500 focus:ring-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-80 dark:border-slate-600 dark:focus:ring-offset-slate-900;
 
-  &-primary {
-    @apply border-primary-500 text-primary-500 enabled:hover:text-primary-600;
-  }
+    &-sm {
+      @apply h-3.5 w-3.5;
+    }
 
-  &-secondary {
-    @apply border-secondary-500 text-secondary-500 enabled:hover:text-secondary-600;
-  }
+    &-md {
+      @apply h-4 w-4;
+    }
 
-  &-success {
-    @apply border-success-500 text-success-500 enabled:hover:text-success-600;
-  }
+    &-lg {
+      @apply h-5 w-5;
+    }
 
-  &-danger {
-    @apply border-danger-500 text-danger-500 enabled:hover:text-danger-600;
-  }
+    &-primary {
+      @apply border-primary-500 text-primary-500 focus:ring-primary-500;
+    }
 
-  &-warning {
-    @apply border-warning-500 text-warning-500 enabled:hover:text-warning-600;
-  }
+    &-secondary {
+      @apply border-secondary-500 text-secondary-500 focus:ring-secondary-500;
+    }
 
-  &-info {
-    @apply border-info-500 text-info-500 enabled:hover:text-info-600;
-  }
+    &-success {
+      @apply border-success-500 text-success-500 focus:ring-success-500;
+    }
 
-  &-dark {
-    @apply border-dark-500 text-dark-500 enabled:hover:text-dark-600;
-  }
+    &-danger {
+      @apply border-danger-500 text-danger-500 focus:ring-danger-500;
+    }
 
-  &-sm {
-    @apply h-4 w-4;
-  }
+    &-warning {
+      @apply border-warning-500 text-warning-500 focus:ring-warning-500;
+    }
 
-  &-md {
-    @apply h-5 w-5;
-  }
+    &-info {
+      @apply border-info-500 text-info-500 focus:ring-info-500;
+    }
 
-  &-lg {
-    @apply h-6 w-6;
+    &-dark {
+      @apply border-dark-500 text-dark-500 focus:ring-dark-500;
+    }
+
+    &.is-valid,
+    .form-validated &:valid {
+      @apply border-success-500 text-success-500 ring-2 ring-success-500 ring-offset-2 ring-offset-white dark:ring-offset-slate-900;
+    }
+
+    &.is-valid ~ .label,
+    .form-validated &:valid ~ .label {
+      @apply text-success-500;
+    }
+
+    &.is-invalid,
+    .form-validated &:invalid {
+      @apply border-danger-500 text-danger-500 ring-2 ring-danger-500 ring-offset-2 ring-offset-white dark:ring-offset-slate-900;
+    }
+
+    &.is-invalid ~ .label,
+    .form-validated &:invalid ~ .label {
+      @apply text-danger-500;
+    }
   }
 }

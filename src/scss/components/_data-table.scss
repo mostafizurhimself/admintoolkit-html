@@ -1,0 +1,135 @@
+@layer components {
+  .datatable {
+    $datatable: &;
+    $datatable-wrapper: #{$datatable}-wrapper;
+
+    @at-root #{$datatable-wrapper} {
+      #{$datatable}-container {
+        @apply overflow-x-auto;
+      }
+
+      #{$datatable}-top,
+      #{$datatable}-bottom {
+        @apply flex items-center justify-between;
+      }
+
+      #{$datatable}-top {
+        @apply mb-4 flex-col gap-4 px-2 md:flex-row;
+      }
+
+      #{$datatable}-bottom {
+        @apply mt-4 flex-col gap-4 px-2 lg:flex-row;
+      }
+
+      #{$datatable}-search {
+        @apply flex w-full items-center gap-2 md:w-[20rem];
+      }
+
+      #{$datatable}-dropdown {
+        @apply flex w-full items-center gap-2 md:w-32;
+      }
+
+      #{$datatable}-table {
+        @apply w-full overflow-hidden whitespace-nowrap rounded-primary border-slate-200 shadow dark:border-slate-600;
+
+        thead,
+        tbody,
+        tfoot,
+        td,
+        th,
+        tr {
+          @apply border-0 border-solid border-inherit;
+        }
+
+        th {
+          @apply font-semibold text-slate-700 dark:text-slate-300;
+        }
+
+        td {
+          @apply font-normal text-slate-600 dark:text-slate-400;
+        }
+
+        & > thead > tr:first-child > *,
+        & > tbody > tr:not(:last-child) > * {
+          @apply border-b;
+        }
+
+        & > tfoot > tr:first-child > * {
+          @apply border-t;
+        }
+
+        & > :not(caption) > * > * {
+          @apply bg-white px-6 py-3 text-left text-sm dark:bg-slate-800;
+        }
+      }
+
+      #{$datatable}-empty {
+        text-align: center !important;
+      }
+
+      #{$datatable}-info {
+        @apply text-sm font-medium text-slate-400;
+      }
+
+      #{$datatable}-pagination {
+        @apply flex items-center;
+
+        & > ul {
+          @apply flex flex-wrap items-center gap-2;
+        }
+
+        & > ul > li {
+          @apply flex;
+
+          & > a {
+            @apply inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-slate-200 bg-opacity-50 text-sm font-medium text-slate-500 transition-colors duration-150 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700;
+          }
+
+          &:first-child > a,
+          &:last-child > a {
+            @apply h-auto w-auto px-3 py-2;
+          }
+
+          &.datatable-ellipsis a,
+          &.datatable-disabled a {
+            @apply cursor-not-allowed bg-transparent hover:bg-transparent dark:bg-transparent dark:hover:bg-transparent;
+          }
+
+          &.datatable-ellipsis a {
+            @apply tracking-widest;
+          }
+
+          &.datatable-disabled a {
+            @apply opacity-50;
+          }
+
+          &.datatable-active a {
+            @apply bg-primary-500 text-white hover:bg-primary-500 hover:text-white focus:bg-primary-500 focus:text-white;
+          }
+        }
+      }
+
+      #{$datatable}-sorter {
+        @apply relative inline-block h-full w-full;
+      }
+
+      #{$datatable}-sorter::before,
+      #{$datatable}-sorter::after {
+        @apply absolute right-1 h-0 w-0 border-l-4 border-r-4 border-l-transparent border-r-transparent opacity-20 content-[''];
+      }
+
+      #{$datatable}-sorter::before {
+        @apply bottom-0 border-t-4 border-t-black dark:border-t-slate-300;
+      }
+
+      #{$datatable}-sorter::after {
+        @apply top-0 border-b-4 border-t-4 border-b-black border-t-transparent dark:border-b-slate-300;
+      }
+
+      #{$datatable}-ascending #{$datatable}-sorter::after,
+      #{$datatable}-descending #{$datatable}-sorter::before {
+        @apply opacity-70;
+      }
+    }
+  }
+}

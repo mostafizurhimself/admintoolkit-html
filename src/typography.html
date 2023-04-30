@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/logo-small.svg" type="image/svg+xml" />
+    <title>Typography - Admin Toolkit</title>
+    <meta
+      name="description"
+      content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/app.scss" />
+    <script>
+      if (
+        localStorage.getItem('theme') === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- Sidebar Starts -->
+      <aside class="sidebar">
+        <!-- Sidebar Header Starts -->
+        <div class="sidebar-header">
+          <div class="sidebar-logo-icon">
+            <img src="./images/logo-small.svg" alt="logo" class="h-[45px]" />
+          </div>
+
+          <div class="sidebar-logo-text">
+            <h1 class="flex text-xl">
+              <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
+              <span class="font-semibold text-primary-500">Toolkit</span>
+            </h1>
+
+            <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+          </div>
+        </div>
+        <!-- Sidebar Header Ends -->
+
+        <!-- Sidebar Menu Starts -->
+        <ul class="sidebar-content">
+          <!-- Dashboard -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="home"></i>
+              </span>
+              <span class="sidebar-menu-text">Dashboard</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="/" class="sidebar-submenu-item"> Analytics </a>
+              </li>
+              <li>
+                <a href="./ecommerce.html" class="sidebar-submenu-item">Ecommerce</a>
+              </li>
+            </ul>
+          </li>
+
+          <div class="sidebar-menu-header">Applications</div>
+
+          <!-- Email -->
+          <li>
+            <a href="./email.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="mail"></i>
+              </span>
+              <span class="sidebar-menu-text">Email</span>
+            </a>
+          </li>
+          <!-- Chat -->
+          <li>
+            <a href="./chat.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="message-square"></i>
+              </span>
+              <span class="sidebar-menu-text">Chat</span>
+            </a>
+          </li>
+          <!-- Calendar -->
+          <li>
+            <a href="./calendar.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="calendar"></i>
+              </span>
+              <span class="sidebar-menu-text">Calendar</span>
+            </a>
+          </li>
+          <!-- Invoice -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="file-text"></i>
+              </span>
+              <span class="sidebar-menu-text">Invoice</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./invoice-create.html" class="sidebar-submenu-item"> Create </a>
+              </li>
+
+              <li>
+                <a href="./invoice-details.html" class="sidebar-submenu-item"> Details </a>
+              </li>
+            </ul>
+          </li>
+          <!-- ecommnerce -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="shopping-bag"></i>
+              </span>
+              <span class="sidebar-menu-text">Ecommerce</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./product-list.html" class="sidebar-submenu-item"> Product List </a>
+              </li>
+
+              <li>
+                <a href="./product-edit.html" class="sidebar-submenu-item"> Product Edit </a>
+              </li>
+              <li>
+                <a href="./order-list.html" class="sidebar-submenu-item"> Order List </a>
+              </li>
+              <li>
+                <a href="./order-details.html" class="sidebar-submenu-item"> Order Details </a>
+              </li>
+              <li>
+                <a href="./customer-list.html" class="sidebar-submenu-item"> Customer List </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Users -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="users"></i>
+              </span>
+              <span class="sidebar-menu-text">Users</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./user-list.html" class="sidebar-submenu-item">List</a>
+              </li>
+              <li>
+                <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
+              </li>
+            </ul>
+          </li>
+          <!--  Commponents  -->
+          <div class="sidebar-menu-header">Components</div>
+          <!-- Common  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="box"></i>
+              </span>
+              <span class="sidebar-menu-text">Common</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./accordion.html" class="sidebar-submenu-item"> Accordion </a>
+              </li>
+              <li>
+                <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
+              </li>
+              <li>
+                <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
+              </li>
+              <li>
+                <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
+              </li>
+              <li>
+                <a href="./button.html" class="sidebar-submenu-item">Button</a>
+              </li>
+              <li>
+                <a href="./card.html" class="sidebar-submenu-item">Card</a>
+              </li>
+              <li>
+                <a href="./carousel.html" class="sidebar-submenu-item"> Carousel </a>
+              </li>
+
+              <li>
+                <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
+              </li>
+              <li>
+                <a href="./dropdown.html" class="sidebar-submenu-item"> Dropdown </a>
+              </li>
+              <li>
+                <a href="./list-group.html" class="sidebar-submenu-item"> List Group </a>
+              </li>
+              <li>
+                <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
+              </li>
+              <li>
+                <a href="./pagination.html" class="sidebar-submenu-item"> Pagination </a>
+              </li>
+              <li>
+                <a href="./progress-bar.html" class="sidebar-submenu-item"> Progress </a>
+              </li>
+
+              <li>
+                <a href="./spinner.html" class="sidebar-submenu-item"> Spinner </a>
+              </li>
+              <li>
+                <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
+              </li>
+              <li>
+                <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
+              </li>
+              <li>
+                <a href="./tooltip.html" class="sidebar-submenu-item"> Tooltip </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Forms  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="edit"></i>
+              </span>
+              <span class="sidebar-menu-text">Forms</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./input.html" class="sidebar-submenu-item">Input</a>
+              </li>
+              <li>
+                <a href="./input-group.html" class="sidebar-submenu-item"> Input Group </a>
+              </li>
+              <li>
+                <a href="./textarea.html" class="sidebar-submenu-item"> Textarea </a>
+              </li>
+              <li>
+                <a href="./checkbox.html" class="sidebar-submenu-item"> Checkbox </a>
+              </li>
+              <li>
+                <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
+              </li>
+              <li>
+                <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
+              </li>
+              <li>
+                <a href="./select.html" class="sidebar-submenu-item">Select</a>
+              </li>
+
+              <li>
+                <a href="./datepicker.html" class="sidebar-submenu-item"> Datepicker </a>
+              </li>
+              <li>
+                <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
+              </li>
+              <li>
+                <a href="./uploader.html" class="sidebar-submenu-item"> Uploader </a>
+              </li>
+              <li>
+                <a href="./form-layout.html" class="sidebar-submenu-item">Layout</a>
+              </li>
+              <li>
+                <a href="./form-validation.html" class="sidebar-submenu-item"> Validation </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Tables  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="list"></i>
+              </span>
+              <span class="sidebar-menu-text">Tables</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./basic-table.html" class="sidebar-submenu-item"> Basic Table </a>
+              </li>
+              <li>
+                <a href="./data-table.html" class="sidebar-submenu-item"> Data Table </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Charts  -->
+          <li>
+            <a href="./chart.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="pie-chart"></i>
+              </span>
+              <span class="sidebar-menu-text">Charts</span>
+            </a>
+          </li>
+          <!-- Icons-->
+          <li>
+            <a href="./icons.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="italic"></i>
+              </span>
+              <span class="sidebar-menu-text">Icons</span>
+            </a>
+          </li>
+          <!-- Typography-->
+          <li>
+            <a href="./typography.html" class="sidebar-menu active">
+              <span class="sidebar-menu-icon">
+                <i data-feather="type"></i>
+              </span>
+              <span class="sidebar-menu-text">Typography</span>
+            </a>
+          </li>
+          <!--  Pages  -->
+          <div class="sidebar-menu-header">Pages</div>
+          <!-- Authentication  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="lock"></i>
+              </span>
+              <span class="sidebar-menu-text">Authentication</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./login.html" class="sidebar-submenu-item">Login</a>
+              </li>
+              <li>
+                <a href="./register.html" class="sidebar-submenu-item"> Register </a>
+              </li>
+              <li>
+                <a href="./recover-password.html" class="sidebar-submenu-item"> Forgot Password </a>
+              </li>
+              <li>
+                <a href="./reset-password.html" class="sidebar-submenu-item"> Reset Password </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Miscellaneous  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="grid"></i>
+              </span>
+              <span class="sidebar-menu-text">Miscellaneous</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./starter.html" class="sidebar-submenu-item"> Starter Page </a>
+              </li>
+              <li>
+                <a href="./comming-soon.html" class="sidebar-submenu-item"> Coming Soon </a>
+              </li>
+              <li>
+                <a href="./maintenance.html" class="sidebar-submenu-item"> Maintenance </a>
+              </li>
+              <li>
+                <a href="./404-error.html" class="sidebar-submenu-item"> Error 404 </a>
+              </li>
+              <li>
+                <a href="./500-error.html" class="sidebar-submenu-item"> Error 500 </a>
+              </li>
+              <li>
+                <a href="./not-authorized.html" class="sidebar-submenu-item"> Not Authorized </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Sidebar Menu Ends -->
+      </aside>
+      <!-- Sidebar Ends -->
+
+      <!-- Wrapper Starts -->
+      <div class="wrapper">
+        <!-- Header Starts -->
+        <header class="header">
+          <div class="container-fluid flex items-center justify-between">
+            <!-- Sidebar Toggle & Search Starts -->
+            <div class="flex items-center space-x-6">
+              <button class="sidebar-toggle">
+                <span class="flex space-x-4">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    height="22"
+                    width="22"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- Mobile Search Starts -->
+              <div class="sm:hidden">
+                <button
+                  type="button"
+                  data-trigger="search-modal"
+                  class="flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300"
+                >
+                  <i width="22" height="22" data-feather="search"></i>
+                </button>
+              </div>
+              <!-- Mobile Search Ends -->
+
+              <!-- Searchbar Start -->
+              <button
+                type="button"
+                data-trigger="search-modal"
+                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex"
+              >
+                <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
+                <span class="ml-2 text-sm text-slate-400">Search</span>
+              </button>
+              <!-- Searchbar Ends -->
+            </div>
+            <!-- Sidebar Toggle & Search Ends -->
+
+            <!-- Header Options Starts -->
+            <div class="flex items-center">
+              <!-- Language Dropdown Starts -->
+              <div class="dropdown" data-strategy="absolute">
+                <div class="dropdown-toggle px-3">
+                  <button
+                    type="button"
+                    class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-700 focus:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-slate-300"
+                  >
+                    <span class="fi fi-gb"></span>
+                    <span class="hidden font-medium md:inline-block">English</span>
+                    <span class="inline-block font-medium md:hidden">EN</span>
+                  </button>
+                </div>
+
+                <div class="dropdown-content mt-3 w-40">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-gb"></span>
+                        <span class="">English</span>
+                      </button>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-de"></span>
+                        <span class="">German</span>
+                      </button>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-gf"></span>
+                        <span class="">French</span>
+                      </button>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-sa"></span>
+                        <span class="">Arabic</span>
+                      </button>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-cn"></span>
+                        <span class="">Chinese</span>
+                      </button>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-bd"></span>
+                        <span class="">Bangla</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Language Dropdown Ends -->
+
+              <!-- Dark Mood Toggle Starts -->
+              <div class="dropdown" data-strategy="absolute" id="theme-switcher-dropdown">
+                <button
+                  class="dropdown-toggle px-3 text-slate-500 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                  type="button"
+                >
+                  <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
+                  <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
+                </button>
+
+                <div class="dropdown-content mt-3 w-36">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <button type="buttton" class="dropdown-btn" data-theme-mode="light">
+                        <i width="16" height="16" data-feather="sun"></i>
+                        <span>Light</span>
+                      </button>
+                    </li>
+
+                    <li class="dropdown-list-item">
+                      <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
+                        <i width="16" height="16" data-feather="moon"></i>
+                        <span>Dark</span>
+                      </button>
+                    </li>
+
+                    <li class="dropdown-list-item">
+                      <button type="buttton" class="dropdown-btn" data-theme-mode="system">
+                        <i width="16" height="16" data-feather="monitor"></i>
+                        <span>System</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Dark Mood Toggle Ends -->
+
+              <!-- Notification Dropdown Starts -->
+              <div class="dropdown -mt-0.5" data-strategy="absolute">
+                <div class="dropdown-toggle px-3">
+                  <button
+                    class="relative mt-1 flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                  >
+                    <i width="24" height="24" data-feather="bell"></i>
+                    <span
+                      class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200"
+                    >
+                      5
+                    </span>
+                  </button>
+                </div>
+
+                <div class="dropdown-content mt-3 w-[17.5rem] divide-y dark:divide-slate-700 sm:w-80">
+                  <div class="flex items-center justify-between px-4 py-4">
+                    <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
+                    <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
+                      Clear All
+                    </button>
+                  </div>
+
+                  <div class="h-80 w-full" data-simplebar>
+                    <ul>
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500"
+                        >
+                          <i data-feather="alert-circle" width="20" height="20"></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">New order received</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>2 min ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500"
+                        >
+                          <i data-feather="alert-triangle" width="20" height="20"></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">High CPU usage</h6>
+                          <p class="text-xs text-slate-400">CPU usage is at 92%</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>5 min ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
+                        >
+                          <i data-feather="check-circle" width="20" height="20"></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>10 min ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500"
+                        >
+                          <i data-feather="x-circle" width="20" height="20"></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">Something went wrong</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>1 hour ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
+                        >
+                          <i data-feather="check-circle" width="20" height="20"></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>10 min ago</span>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="px-4 py-2">
+                    <button class="btn btn-primary-plain btn-sm w-full" type="button">
+                      <span>View More</span>
+                      <i data-feather="arrow-right" width="1rem" height="1rem"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Notification Dropdown Ends -->
+
+              <!-- Profile Dropdown Starts -->
+              <div class="dropdown" data-strategy="absolute">
+                <div class="dropdown-toggle pl-3">
+                  <button class="group relative flex items-center gap-x-1.5" type="button">
+                    <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                      <img
+                        class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
+                        src="./images/avatar1.png"
+                        alt="Avatar 1"
+                      />
+                    </div>
+                  </button>
+                </div>
+
+                <div class="dropdown-content mt-1 w-56 divide-y dark:divide-slate-600">
+                  <div class="px-4 py-3">
+                    <p class="text-sm">Signed in as</p>
+                    <p class="truncate text-sm font-medium">admin@example.com</p>
+                  </div>
+                  <div class="py-1">
+                    <a href="javascript:void(0)" class="dropdown-link">
+                      <i width="18" height="18" data-feather="user" class="text-slate-500"></i>
+                      <span>Profile</span>
+                    </a>
+                    <a href="javascript:void(0)" class="dropdown-link">
+                      <i width="18" height="18" data-feather="settings" class="text-slate-500"></i>
+                      <span>Settings</span>
+                    </a>
+                    <a href="javascript:void(0)" class="dropdown-link">
+                      <i width="18" height="18" data-feather="help-circle" class="text-slate-500"></i>
+                      <span>Support</span>
+                    </a>
+                  </div>
+                  <div class="py-1">
+                    <form method="POST" action="#">
+                      <button type="submit" class="dropdown-btn">
+                        <i width="18" height="18" data-feather="log-out" class="text-slate-500"></i>
+                        <span>Sign out</span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Profile Dropdown Ends -->
+            </div>
+            <!-- Header Options Ends -->
+          </div>
+        </header>
+        <!-- Header Ends -->
+
+        <!-- Page Content Starts -->
+        <div class="content">
+          <!-- Main Content Starts -->
+          <main class="container flex-grow p-6">
+            <!-- Page Title Starts -->
+            <div class="mb-6 flex flex-col justify-between gap-y-1 sm:flex-row sm:gap-y-0">
+              <h5>Typography</h5>
+
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="/">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#">Components</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#">Typography</a>
+                </li>
+              </ol>
+            </div>
+            <!-- Page Title Ends -->
+
+            <!-- Typography Starts -->
+            <div class="space-y-6">
+              <!-- Card: Heading Element Stars -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">HTML Headings</h4>
+
+                  <p class="card-subtitle">
+                    All HTML headings,
+                    <code>&lt;h1&gt;</code>
+                    through
+                    <code>&lt;h6&gt;</code>
+                    , are available.
+                    <code>h1</code>
+                    to
+                    <code>.h6</code>
+                    classes are also available, for when you want to match the font styling of a heading but cannot use
+                    the associated HTML element.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="flex flex-col gap-6">
+                        <!-- Heading 1 -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Heading 1
+                          </span>
+                          <h1>h1.Heading 1</h1>
+                        </div>
+
+                        <!-- Heading 2 -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Heading 2
+                          </span>
+                          <h2>h2.Heading 2</h2>
+                        </div>
+
+                        <!-- Heading 3 -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Heading 3
+                          </span>
+                          <h3>h3.Heading 3</h3>
+                        </div>
+
+                        <!-- Heading 4 -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Heading 4
+                          </span>
+                          <h4>h4.Heading 4</h4>
+                        </div>
+
+                        <!-- Heading 5 -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Heading 5
+                          </span>
+                          <h5>h5.Heading 5</h5>
+                        </div>
+
+                        <!-- Heading 6 -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Heading 6
+                          </span>
+                          <h6>h6.Heading 6</h6>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <h1>h1.Heading 1</h1>
+                      <h2>h2.Heading 2</h2>
+                      <h3>h3.Heading 3</h3>
+                      <h4>h4.Heading 4</h4>
+                      <h5>h5.Heading 5</h5>
+                      <h6>h6.Heading 6</h6>
+
+                      <!-- Using heading classes -->
+                      <p class="h1">h1.Heading 1</p>
+                      <p class="h2">h2.Heading 2</p>
+                      <p class="h3">h3.Heading 3</p>
+                      <p class="h4">h4.Heading 4</p>
+                      <p class="h5">h5.Heading 5</p>
+                      <p class="h6">h6.Heading 6</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Heading Element Ends -->
+
+              <!-- Card: Display Stars -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Display Headings</h4>
+
+                  <p class="card-subtitle">
+                    Use display headings to create a larger, more eye-catching heading to highlight key content on your
+                    page. There are <code>display-1</code> to <code>display-6</code> classes available.
+                  </p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="flex flex-col gap-6">
+                        <!-- Display 1 -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Display 1
+                          </span>
+                          <h1 class="display-1">Display 1</h1>
+                        </div>
+
+                        <!-- Display 2 -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Display 2
+                          </span>
+                          <h2 class="display-2">Display 2</h2>
+                        </div>
+
+                        <!-- Display 3 -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Display 3
+                          </span>
+                          <h3 class="display-3">Display 3</h3>
+                        </div>
+
+                        <!-- Display 4 -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Display 4
+                          </span>
+                          <h4 class="display-4">Display 4</h4>
+                        </div>
+
+                        <!-- Display 5 -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Display 5
+                          </span>
+                          <h5 class="display-5">Display 5</h5>
+                        </div>
+
+                        <!-- Display 6 -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Display 6
+                          </span>
+                          <h6 class="display-6">Display 6</h6>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <h1 class="display-1">Display 1</h1>
+                      <h2 class="display-2">Display 2</h2>
+                      <h3 class="display-3">Display 3</h3>
+                      <h4 class="display-4">Display 4</h4>
+                      <h5 class="display-5">Display 5</h5>
+                      <h6 class="display-6">Display 6</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Display Ends -->
+
+              <!-- Card: Paragraph Stars -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Pargraphs</h4>
+
+                  <p class="card-subtitle">Example of different paragraph styles.</p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="flex flex-col gap-6">
+                        <!-- Text -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Default
+                          </span>
+                          <div class="max-w-full md:max-w-md">
+                            <p>
+                              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est
+                              non commodo luctus. Duis mollis, est non commodo luctus.Duis mollis, est non commodo
+                              luctus.
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Text Lead -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Lead
+                          </span>
+
+                          <div class="max-w-full md:max-w-md">
+                            <p class="text-lead">
+                              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est
+                              non commodo luctus. Duis mollis, est non commodo luctus.Duis mollis, est non commodo
+                              luctus.
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Text muted -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Muted
+                          </span>
+
+                          <div class="max-w-full md:max-w-md">
+                            <p class="text-muted">
+                              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est
+                              non commodo luctus. Duis mollis, est non commodo luctus.Duis mollis, est non commodo
+                              luctus.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <p class="text">Vivamus...</p>
+                      <p class="text-lead">Vivamus...</p>
+                      <p class="text-muted">Vivamus...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Paragraph Ends -->
+
+              <!-- Card: Inline Text Element Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Inline Text Elements</h4>
+
+                  <p class="card-subtitle">Examples of inline text elements.</p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="flex flex-col gap-6">
+                        <!-- Highlight -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            &lt;mark&gt;
+                          </span>
+                          <p>
+                            The quick brown fox
+                            <mark>jumps</mark>
+                            over the lazy dog
+                          </p>
+                        </div>
+
+                        <!-- del -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            &lt;del&gt;
+                          </span>
+                          <p>
+                            <del> The quick brown fox jumps over the lazy dog </del>
+                          </p>
+                        </div>
+
+                        <!-- s -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            &lt;s&gt;
+                          </span>
+                          <p>
+                            <s>The quick brown fox jumps over the lazy dog</s>
+                          </p>
+                        </div>
+
+                        <!-- Underline -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            &lt;u&gt;
+                          </span>
+                          <p>
+                            <u>The quick brown fox jumps over the lazy dog</u>
+                          </p>
+                        </div>
+
+                        <!-- Ins -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            &lt;ins&gt;
+                          </span>
+                          <p>
+                            <ins> The quick brown fox jumps over the lazy dog </ins>
+                          </p>
+                        </div>
+
+                        <!-- Small -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            &lt;small&gt;
+                          </span>
+                          <p>
+                            <small> The quick brown fox jumps over the lazy dog </small>
+                          </p>
+                        </div>
+
+                        <!-- Strong -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            &lt;strong&gt;
+                          </span>
+                          <p>
+                            <strong> The quick brown fox jumps over the lazy dog </strong>
+                          </p>
+                        </div>
+
+                        <!-- Em -->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            &lt;em&gt;
+                          </span>
+                          <p>
+                            <em>The quick brown fox jumps over the lazy dog</em>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <p>
+                        The quick brown fox
+                        <mark>jumps</mark>
+                        over the lazy dog
+                      </p>
+                      <p>
+                        <del>The quick brown fox jumps over the lazy dog</del>
+                      </p>
+                      <p><s>The quick brown fox jumps over the lazy dog</s></p>
+                      <p><u>The quick brown fox jumps over the lazy dog</u></p>
+                      <p>
+                        <ins>The quick brown fox jumps over the lazy dog</ins>
+                      </p>
+                      <p>
+                        <small> The quick brown fox jumps over the lazy dog </small>
+                      </p>
+                      <p>
+                        <strong> The quick brown fox jumps over the lazy dog </strong>
+                      </p>
+                      <p>
+                        <em>The quick brown fox jumps over the lazy dog</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Inline Text Element Ends -->
+
+              <!-- Card: Font Weight Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Font Weight</h4>
+
+                  <p class="card-subtitle">Example of different font weights.</p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="flex flex-col gap-6">
+                        <!-- Font Thin-->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Thin
+                          </span>
+                          <p class="font-thin">The quick brown fox jumps over the lazy dog</p>
+                        </div>
+
+                        <!-- Font extralight-->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Extralight
+                          </span>
+                          <p class="font-extralight">The quick brown fox jumps over the lazy dog</p>
+                        </div>
+
+                        <!-- Font light-->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Light
+                          </span>
+                          <p class="font-light">The quick brown fox jumps over the lazy dog</p>
+                        </div>
+
+                        <!-- Font normal-->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Normal
+                          </span>
+                          <p class="font-normal">The quick brown fox jumps over the lazy dog</p>
+                        </div>
+
+                        <!-- Font medium-->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Medium
+                          </span>
+                          <p class="font-medium">The quick brown fox jumps over the lazy dog</p>
+                        </div>
+
+                        <!-- Font semibold-->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Semibold
+                          </span>
+                          <p class="font-semibold">The quick brown fox jumps over the lazy dog</p>
+                        </div>
+
+                        <!-- Font bold-->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Bold
+                          </span>
+                          <p class="font-bold">The quick brown fox jumps over the lazy dog</p>
+                        </div>
+
+                        <!-- Font bold-->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Extrabold
+                          </span>
+                          <p class="font-extrabold">The quick brown fox jumps over the lazy dog</p>
+                        </div>
+
+                        <!-- Font black-->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Black
+                          </span>
+                          <p class="font-black">The quick brown fox jumps over the lazy dog</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <p class="font-thin">The quick brown fox jumps over the lazy dog</p>
+                      <p class="font-extralight">The quick brown fox jumps over the lazy dog</p>
+                      <p class="font-light">The quick brown fox jumps over the lazy dog</p>
+                      <p class="font-normal">The quick brown fox jumps over the lazy dog</p>
+                      <p class="font-medium">The quick brown fox jumps over the lazy dog</p>
+                      <p class="font-semibold">The quick brown fox jumps over the lazy dog</p>
+                      <p class="font-bold">The quick brown fox jumps over the lazy dog</p>
+                      <p class="font-extrabold">The quick brown fox jumps over the lazy dog</p>
+                      <p class="font-black">The quick brown fox jumps over the lazy dog</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Font Weight Ends -->
+
+              <!-- Card: List Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">List style</h4>
+
+                  <p class="card-subtitle">Example of different list styles.</p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="flex flex-col gap-6">
+                        <!-- List None-->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            List none
+                          </span>
+
+                          <ul class="list-inside list-none">
+                            <li>Now this is a story all about how, my life got flipped turned upside down</li>
+                            <li>And I like to take a minute and sit right here</li>
+                            <li>I'll tell you how I became the prince of a town called Bel-Air</li>
+                          </ul>
+                        </div>
+
+                        <!-- List Disc-->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            List disc
+                          </span>
+
+                          <ul class="list-inside list-disc">
+                            <li>Now this is a story all about how, my life got flipped turned upside down</li>
+                            <li>And I like to take a minute and sit right here</li>
+                            <li>I'll tell you how I became the prince of a town called Bel-Air</li>
+                          </ul>
+                        </div>
+
+                        <!-- List Decimal-->
+                        <div class="flex w-full flex-col gap-1">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            List decimal
+                          </span>
+
+                          <ul class="list-inside list-decimal">
+                            <li>Now this is a story all about how, my life got flipped turned upside down</li>
+                            <li>And I like to take a minute and sit right here</li>
+                            <li>I'll tell you how I became the prince of a town called Bel-Air</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <ul class="list-inside list-none">
+                        <li>...</li>
+                      </ul>
+
+                      <ul class="list-inside list-disc">
+                        <li>...</li>
+                      </ul>
+
+                      <ul class="list-inside list-decimal">
+                        <li>...</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: List Ends -->
+
+              <!-- Card: Blockquote Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Blockquote</h4>
+
+                  <p class="card-subtitle">Example of default blockquote.</p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="flex flex-col gap-6">
+                        <!-- Default Blockquote -->
+                        <div class="flex w-full flex-col gap-2">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Default
+                          </span>
+
+                          <div class="max-w-md">
+                            <blockquote class="blockquote" cite="https://www.brainyquote.com/quotes/bruce_lee_413509">
+                              <p>
+                                I fear not the man who has practiced 10,000 kicks once, but I fear the man who has
+                                practiced one kick 10,000 times.
+                              </p>
+
+                              <span class="mt-2 inline-block text-sm text-slate-600 dark:text-slate-300">
+                                Bruce Lee
+                              </span>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <blockquote class="blockquote">
+                        <p>Quote...</p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Blockquote Ends -->
+
+              <!-- Card: Text Overflow Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Text Overflow</h4>
+
+                  <p class="card-subtitle">Example of text overflow.</p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="code-viewer-content">
+                      <div class="flex flex-col gap-6">
+                        <!-- Truncate -->
+                        <div class="flex w-full flex-col gap-2">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Truncate
+                          </span>
+
+                          <p class="truncate">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam dolorem sit nobis deleniti,
+                            maiores repudiandae neque facilis quam cupiditate. Aliquid iure quos, suscipit, ad quibusdam
+                            velit animi odit quo vero molestiae ipsam libero optio eum, esse adipisci repellendus culpa.
+                            Dolore, fuga, reprehenderit dolorem numquam alias omnis, ex quo impedit similique aperiam
+                            sequi! Libero, voluptatibus asperiores voluptate obcaecati necessitatibus dolore
+                            consequuntur. Dicta libero nulla sequi doloremque dignissimos tempora perferendis nostrum
+                            totam commodi consequuntur exercitationem ipsum quaerat deserunt dolorem aliquid beatae,
+                            excepturi eaque, dolores itaque atque. Necessitatibus eveniet vero excepturi! Ipsum sunt
+                            reiciendis non consectetur fuga excepturi? Obcaecati quas voluptatibus sequi reiciendis est
+                            nostrum reprehenderit vitae porro temporibus eveniet ipsam ratione officia, adipisci
+                            placeat, aspernatur magni? Nobis culpa quasi asperiores quos vero? Odio eveniet doloremque
+                            asperiores repellendus omnis voluptate recusandae! Iure natus magnam incidunt laboriosam ex
+                            vitae aliquid quidem rem? Animi consectetur nihil ipsa enim porro iusto voluptatum, labore,
+                            possimus sint sit quas ullam neque. Consequuntur omnis numquam doloremque veniam quo,
+                            voluptate, repellendus in at illo dolorem cumque! Id delectus non possimus aliquid cum?
+                            Dolor, asperiores perferendis nostrum enim aliquid fugiat non iste illo accusantium
+                            doloremque atque voluptatum, eos nihil repellat sunt dolores harum culpa sit ea cupiditate
+                            ullam itaque. Dolore, molestias.
+                          </p>
+                        </div>
+
+                        <!-- Ellipsis -->
+                        <div class="flex w-full flex-col gap-2">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Ellipsis
+                          </span>
+
+                          <p class="overflow-hidden text-ellipsis">
+                            The longest word in any of the major English language dictionaries is
+                            <span class="font-semibold"> pneumonoultramicroscopicsilicovolcanoconiosis, </span>
+                            a word that refers to a lung disease contracted from the inhalation of very fine silica
+                            particles, specifically from a volcano; medically, it is the same as silicosis.
+                          </p>
+                        </div>
+
+                        <!-- Clip -->
+                        <div class="flex w-full flex-col gap-2">
+                          <span
+                            class="inline-block text-sm font-medium tracking-wide text-slate-400 dark:text-slate-500"
+                          >
+                            Clip
+                          </span>
+
+                          <p class="overflow-hidden text-clip">
+                            The longest word in any of the major English language dictionaries is
+                            <span class="font-semibold"> pneumonoultramicroscopicsilicovolcanoconiosis, </span>
+                            a word that refers to a lung disease contracted from the inhalation of very fine silica
+                            particles, specifically from a volcano; medically, it is the same as silicosis.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-viewer-source">
+                      <p class="truncate">Lorem ...</p>
+                      <p class="overflow-hidden text-ellipsis">Lorem ...</p>
+                      <p class="overflow-hidden text-clip">Lorem ...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Text Overflow Ends -->
+
+              <!-- Card: Prose Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Prose</h4>
+
+                  <p class="card-subtitle">Example of tailwindcss prose to style dymamic content.</p>
+
+                  <div class="code-viewer mt-4" id="typography-code-viewer">
+                    <div class="code-viewer-content overflow-auto">
+                      <div
+                        class="prose mx-auto rounded-primary border border-slate-200 bg-white p-8 dark:prose-invert dark:border-slate-600 dark:bg-slate-800"
+                      >
+                        <p class="lead">
+                          Until now, trying to style an article, document, or blog post with Tailwind has been a tedious
+                          task that required a keen eye for typography and a lot of complex custom CSS.
+                        </p>
+                        <p>
+                          By default, Tailwind removes all of the default browser styling from paragraphs, headings,
+                          lists and more. This ends up being really useful for building application UIs because you
+                          spend less time undoing user-agent styles, but when you <em>really are</em> just trying to
+                          style some content that came from a rich-text editor in a CMS or a markdown file, it can be
+                          surprising and unintuitive.
+                        </p>
+                        <p>We get lots of complaints about it actually, with people regularly asking us things like:</p>
+                        <blockquote>
+                          <p>
+                            Why is Tailwind removing the default styles on my <code>h1</code> elements? How do I disable
+                            this? What do you mean I lose all the other base styles too?
+                          </p>
+                        </blockquote>
+                        <p>
+                          We hear you, but we're not convinced that simply disabling our base styles is what you really
+                          want. You don't want to have to remove annoying margins every time you use a
+                          <code>p</code> element in a piece of your dashboard UI. And I doubt you really want your blog
+                          posts to use the user-agent styles either — you want them to look <em>awesome</em>, not awful.
+                        </p>
+                        <p>
+                          The <code>@tailwindcss/typography</code> plugin is our attempt to give you what you
+                          <em>actually</em> want, without any of the downsides of doing something stupid like disabling
+                          our base styles.
+                        </p>
+                        <p>
+                          It adds a new <code>prose</code> class that you can slap on any block of vanilla HTML content
+                          and turn it into a beautiful, well-formatted document:
+                        </p>
+                        <pre>
+                          <code class="language-html">
+&lt;article class="prose"&gt;
+  &lt;h1&gt;Garlic bread with cheese: What the science tells us&lt;/h1&gt;
+  &lt;p&gt;
+    For years parents have espoused the health benefits of eating garlic bread with cheese to their
+    children, with the food earning such an iconic status in our culture that kids will often dress
+    up as warm, cheesy loaf for Halloween.
+  &lt;/p&gt;
+  &lt;p&gt;
+    But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
+    springing up around the country.
+  &lt;/p&gt;
+  &lt;!-- ... --&gt;
+&lt;/article&gt;
+              </code>
+            </pre>
+                        <p>
+                          For more information about how to use the plugin and the features it includes,
+                          <a href="https://github.com/tailwindcss/typography/blob/master/README.md"
+                            >read the documentation</a
+                          >.
+                        </p>
+                        <hr />
+                        <h2>What to expect from here on out</h2>
+                        <p>
+                          What follows from here is just a bunch of absolute nonsense I've written to dogfood the plugin
+                          itself. It includes every sensible typographic element I could think of, like
+                          <strong>bold text</strong>, unordered lists, ordered lists, code blocks, block quotes,
+                          <em>and even italics</em>.
+                        </p>
+                        <p>It's important to cover all of these use cases for a few reasons:</p>
+                        <ol>
+                          <li>We want everything to look good out of the box.</li>
+                          <li>Really just the first reason, that's the whole point of the plugin.</li>
+                          <li>
+                            Here's a third pretend reason though a list with three items looks more realistic than a
+                            list with two items.
+                          </li>
+                        </ol>
+                        <p>Now we're going to try out another header style.</p>
+                        <h3>Typography should be easy</h3>
+                        <p>
+                          So that's a header for you — with any luck if we've done our job correctly that will look
+                          pretty reasonable.
+                        </p>
+                        <p>Something a wise person once told me about typography is:</p>
+                        <blockquote>
+                          <p>
+                            Typography is pretty important if you don't want your stuff to look like trash. Make it good
+                            then it won't be bad.
+                          </p>
+                        </blockquote>
+                        <p>It's probably important that images look okay here by default as well:</p>
+                        <figure>
+                          <img
+                            src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
+                            alt=""
+                          />
+                          <figcaption>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
+                            of classical Latin literature from 45 BC, making it over 2000 years old.
+                          </figcaption>
+                        </figure>
+                        <p>
+                          Now I'm going to show you an example of an unordered list to make sure that looks good, too:
+                        </p>
+                        <ul>
+                          <li>So here is the first item in this list.</li>
+                          <li>In this example we're keeping the items short.</li>
+                          <li>Later, we'll use longer, more complex list items.</li>
+                        </ul>
+                        <p>And that's the end of this section.</p>
+                        <h2>What if we stack headings?</h2>
+                        <h3>We should make sure that looks good, too.</h3>
+                        <p>
+                          Sometimes you have headings directly underneath each other. In those cases you often have to
+                          undo the top margin on the second heading because it usually looks better for the headings to
+                          be closer together than a paragraph followed by a heading should be.
+                        </p>
+                        <h3>When a heading comes after a paragraph …</h3>
+                        <p>
+                          When a heading comes after a paragraph, we need a bit more space, like I already mentioned
+                          above. Now let's see what a more complex list would look like.
+                        </p>
+                        <ul>
+                          <li>
+                            <p><strong>I often do this thing where list items have headings.</strong></p>
+                            <p>
+                              For some reason I think this looks cool which is unfortunate because it's pretty annoying
+                              to get the styles right.
+                            </p>
+                            <p>
+                              I often have two or three paragraphs in these list items, too, so the hard part is getting
+                              the spacing between the paragraphs, list item heading, and separate list items to all make
+                              sense. Pretty tough honestly, you could make a strong argument that you just shouldn't
+                              write this way.
+                            </p>
+                          </li>
+                          <li>
+                            <p><strong>Since this is a list, I need at least two items.</strong></p>
+                            <p>
+                              I explained what I'm doing already in the previous list item, but a list wouldn't be a
+                              list if it only had one item, and we really want this to look realistic. That's why I've
+                              added this second list item so I actually have something to look at when writing the
+                              styles.
+                            </p>
+                          </li>
+                          <li>
+                            <p><strong>It's not a bad idea to add a third item either.</strong></p>
+                            <p>
+                              I think it probably would've been fine to just use two items but three is definitely not
+                              worse, and since I seem to be having no trouble making up arbitrary things to type, I
+                              might as well include it.
+                            </p>
+                          </li>
+                        </ul>
+                        <p>
+                          After this sort of list I usually have a closing statement or paragraph, because it kinda
+                          looks weird jumping right to a heading.
+                        </p>
+                        <h2>Code should look okay by default.</h2>
+                        <p>
+                          I think most people are going to use <a href="https://highlightjs.org/">highlight.js</a> or
+                          <a href="https://prismjs.com/">Prism</a> or something if they want to style their code blocks
+                          but it wouldn't hurt to make them look <em>okay</em> out of the box, even with no syntax
+                          highlighting.
+                        </p>
+                        <p>
+                          Here's what a default <code>tailwind.config.js</code> file looks like at the time of writing:
+                        </p>
+                        <pre>
+            <code class="language-js">
+module.exports = {
+  purge: [],
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
+}
+              </code>
+            </pre>
+                        <p>Hopefully that looks good enough to you.</p>
+                        <h3>What about nested lists?</h3>
+                        <p>
+                          Nested lists basically always look bad which is why editors like Medium don't even let you do
+                          it, but I guess since some of you goofballs are going to do it we have to carry the burden of
+                          at least making it work.
+                        </p>
+                        <ol>
+                          <li>
+                            <strong>Nested lists are rarely a good idea.</strong>
+                            <ul>
+                              <li>
+                                You might feel like you are being really "organized" or something but you are just
+                                creating a gross shape on the screen that is hard to read.
+                              </li>
+                              <li>Nested navigation in UIs is a bad idea too, keep things as flat as possible.</li>
+                              <li>Nesting tons of folders in your source code is also not helpful.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Since we need to have more items, here's another one.</strong>
+                            <ul>
+                              <li>I'm not sure if we'll bother styling more than two levels deep.</li>
+                              <li>Two is already too much, three is guaranteed to be a bad idea.</li>
+                              <li>If you nest four levels deep you belong in prison.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <strong>Two items isn't really a list, three is good though.</strong>
+                            <ul>
+                              <li>Again please don't nest lists if you want people to actually read your content.</li>
+                              <li>Nobody wants to look at this.</li>
+                              <li>I'm upset that we even have to bother styling this.</li>
+                            </ul>
+                          </li>
+                        </ol>
+                        <p>
+                          The most annoying thing about lists in Markdown is that <code>&lt;li&gt;</code> elements
+                          aren't given a child <code>&lt;p&gt;</code> tag unless there are multiple paragraphs in the
+                          list item. That means I have to worry about styling that annoying situation too.
+                        </p>
+                        <ul>
+                          <li>
+                            <p><strong>For example, here's another nested list.</strong></p>
+                            <p>But this time with a second paragraph.</p>
+                            <ul>
+                              <li>These list items won't have <code>&lt;p&gt;</code> tags</li>
+                              <li>Because they are only one line each</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>But in this second top-level list item, they will.</strong></p>
+                            <p>This is especially annoying because of the spacing on this paragraph.</p>
+                            <ul>
+                              <li>
+                                <p>
+                                  As you can see here, because I've added a second line, this list item now has a
+                                  <code>&lt;p&gt;</code> tag.
+                                </p>
+                                <p>This is the second line I'm talking about by the way.</p>
+                              </li>
+                              <li><p>Finally here's another list item so it's more like a list.</p></li>
+                            </ul>
+                          </li>
+                          <li><p>A closing list item, but with no nested list, because why not?</p></li>
+                        </ul>
+                        <p>And finally a sentence to close off this section.</p>
+                        <h2>There are other elements we need to style</h2>
+                        <p>
+                          I almost forgot to mention links, like
+                          <a href="https://tailwindcss.com">this link to the Tailwind CSS website</a>. We almost made
+                          them blue but that's so yesterday, so we went with dark gray, feels edgier.
+                        </p>
+                        <p>We even included table styles, check it out:</p>
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Wrestler</th>
+                              <th>Origin</th>
+                              <th>Finisher</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Bret "The Hitman" Hart</td>
+                              <td>Calgary, AB</td>
+                              <td>Sharpshooter</td>
+                            </tr>
+                            <tr>
+                              <td>Stone Cold Steve Austin</td>
+                              <td>Austin, TX</td>
+                              <td>Stone Cold Stunner</td>
+                            </tr>
+                            <tr>
+                              <td>Randy Savage</td>
+                              <td>Sarasota, FL</td>
+                              <td>Elbow Drop</td>
+                            </tr>
+                            <tr>
+                              <td>Vader</td>
+                              <td>Boulder, CO</td>
+                              <td>Vader Bomb</td>
+                            </tr>
+                            <tr>
+                              <td>Razor Ramon</td>
+                              <td>Chuluota, FL</td>
+                              <td>Razor's Edge</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>
+                          We also need to make sure inline code looks good, like if I wanted to talk about
+                          <code>&lt;span&gt;</code> elements or tell you the good news about
+                          <code>@tailwindcss/typography</code>.
+                        </p>
+                        <h3>Sometimes I even use <code>code</code> in headings</h3>
+                        <p>
+                          Even though it's probably a bad idea, and historically I've had a hard time making it look
+                          good. This <em>"wrap the code blocks in backticks"</em> trick works pretty well though really.
+                        </p>
+                        <p>
+                          Another thing I've done in the past is put a <code>code</code> tag inside of a link, like if I
+                          wanted to tell you about the
+                          <a href="https://github.com/tailwindcss/docs"><code>tailwindcss/docs</code></a> repository. I
+                          don't love that there is an underline below the backticks but it is absolutely not worth the
+                          madness it would require to avoid it.
+                        </p>
+                        <h4>We haven't used an <code>h4</code> yet</h4>
+                        <p>
+                          But now we have. Please don't use <code>h5</code> or <code>h6</code> in your content, Medium
+                          only supports two heading levels for a reason, you animals. I honestly considered using a
+                          <code>before</code> pseudo-element to scream at you if you use an <code>h5</code> or
+                          <code>h6</code>.
+                        </p>
+                        <p>
+                          We don't style them at all out of the box because <code>h4</code> elements are already so
+                          small that they are the same size as the body copy. What are we supposed to do with an
+                          <code>h5</code>, make it <em>smaller</em> than the body copy? No thanks.
+                        </p>
+                        <h3>We still need to think about stacked headings though.</h3>
+                        <h4>Let's make sure we don't screw that up with <code>h4</code> elements, either.</h4>
+                        <p>
+                          Phew, with any luck we have styled the headings above this text and they look pretty good.
+                        </p>
+                        <p>
+                          Let's add a closing paragraph here so things end with a decently sized block of text. I can't
+                          explain why I want things to end that way but I have to assume it's because I think things
+                          will look weird or unbalanced if there is a heading too close to the end of the document.
+                        </p>
+                        <p>
+                          What I've written here is probably long enough, but adding this final sentence can't hurt.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="code-viewer-source">
+                      <div class="prose dark:prose-invert">
+                        <!-- Your content -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Prose Ends -->
+            </div>
+            <!-- Typography Ends -->
+          </main>
+          <!-- Main Content Ends -->
+
+          <!-- Footer Starts -->
+          <footer class="footer">
+            <p class="text-sm">
+              Copyright © 2023
+              <a class="text-primary-500 hover:underline" href="https://techmasih.com" target="_blank"> TechMasih </a>
+              , All right Reserved
+            </p>
+
+            <p class="flex items-center gap-1 text-sm">
+              Hand-crafted &amp; Made with
+              <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
+            </p>
+          </footer>
+          <!-- Footer Ends -->
+        </div>
+        <!-- Page Content Ends -->
+      </div>
+      <!-- Wrapper Ends -->
+
+      <!-- Search Modal Start -->
+      <div class="modal" id="search-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header px-6">
+              <div class="group flex items-center">
+                <i
+                  data-feather="search"
+                  class="text-slate-500 group-focus-within:text-slate-600 dark:text-slate-400 dark:group-focus-within:text-slate-300"
+                ></i>
+                <input
+                  type="text"
+                  class="w-full border-none bg-transparent text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:ring-0 dark:text-slate-200"
+                  placeholder="Search"
+                />
+                <button
+                  class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
+                  data-dismiss="modal"
+                >
+                  ESC
+                </button>
+              </div>
+            </div>
+            <div class="modal-body max-h-[600px] p-6"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Search Modal Ends -->
+    </div>
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>

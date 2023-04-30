@@ -1,129 +1,164 @@
-.pagination {
-  $pagination: &;
-  @apply flex items-center;
+@layer components {
+  .pagination {
+    $pagination: &;
+    @apply flex items-center;
 
-  &-start {
-    @apply justify-start;
-  }
-
-  &-center {
-    @apply justify-center;
-  }
-
-  &-end {
-    @apply justify-end;
-  }
-
-  &-list {
-    @apply flex items-center gap-4;
-  }
-
-  &-item {
-    @apply flex;
-  }
-
-  &-link {
-    @apply inline-flex cursor-pointer items-center justify-center rounded bg-slate-200 bg-opacity-50 text-sm font-medium text-slate-500 transition-colors duration-150 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700;
-
-    &:not(&-prev-text, &-next-text) {
-      @apply h-8 w-8;
+    &-start {
+      @apply justify-start;
     }
 
-    &-prev-text,
-    &-next-text {
-      @apply px-3 py-2;
+    &-center {
+      @apply justify-center;
     }
 
-    &-more {
-      @apply bg-transparent tracking-widest hover:bg-transparent dark:bg-transparent dark:hover:bg-transparent;
+    &-end {
+      @apply justify-end;
     }
 
-    #{$pagination}-outlined & {
-      @apply border border-slate-200 bg-transparent hover:bg-slate-100 dark:border-slate-600  dark:hover:bg-slate-700;
+    &-list {
+      @apply flex flex-wrap items-center gap-4;
     }
 
-    // Pagination Sizes
-    #{$pagination}-sm &:not(&-prev-text, &-next-text) {
-      @apply h-6 w-6;
+    &-item {
+      @apply flex;
     }
 
-    #{$pagination}-sm &-prev-text,
-    #{$pagination}-sm &-next-text {
-      width: auto !important;
-      height: auto !important;
-      @apply px-2 py-1;
-    }
+    &-link {
+      @apply inline-flex cursor-pointer items-center justify-center rounded bg-white text-sm font-medium text-slate-500 shadow-sm transition-colors duration-150 dark:bg-slate-800 dark:text-slate-300;
 
-    #{$pagination}-md &:not(&-prev-text, &-next-text) {
-      @apply h-8 w-8;
-    }
+      &:not(&-prev-text, &-next-text) {
+        @apply h-8 w-8;
+      }
 
-    #{$pagination}-md &-prev-text,
-    #{$pagination}-md &-next-text {
-      width: auto !important;
-      height: auto !important;
-      @apply px-3 py-2;
-    }
+      &-prev-text,
+      &-next-text {
+        @apply px-3 py-1.5;
+      }
 
-    #{$pagination}-lg &:not(&-prev, &-next) {
-      @apply h-10 w-10;
-    }
+      &-more {
+        @apply bg-transparent tracking-widest shadow-none hover:bg-transparent dark:bg-transparent dark:hover:bg-transparent;
+      }
 
-    #{$pagination}-lg &-prev-text,
-    #{$pagination}-lg &-next-text {
-      width: auto !important;
-      height: auto !important;
-      @apply px-4 py-3;
-    }
+      #{$pagination}-outlined & {
+        @apply border border-slate-200 bg-transparent shadow-none hover:bg-slate-100 dark:border-slate-600  dark:hover:bg-slate-700;
+      }
 
-    // Pagination Shapes
-    #{$pagination}-square & {
-      @apply rounded-none;
-    }
+      // Pagination Sizes
+      #{$pagination}-sm &:not(&-prev-text, &-next-text) {
+        @apply h-6 w-6;
+      }
 
-    #{$pagination}-circle &:not(&-prev-text, &-next-text) {
-      @apply rounded-full;
-    }
+      #{$pagination}-sm &-prev-text,
+      #{$pagination}-sm &-next-text {
+        width: auto !important;
+        height: auto !important;
+        @apply px-2 py-1;
+      }
 
-    #{$pagination}-circle &-prev,
-    #{$pagination}-circle &-next {
-      @apply h-8 w-8 overflow-hidden rounded-full p-0;
-    }
+      #{$pagination}-md &:not(&-prev-text, &-next-text) {
+        @apply h-8 w-8;
+      }
 
-    // Pagination active link
-    #{$pagination}-item.active & {
-      @apply border-primary-500 bg-primary-500 text-white hover:bg-primary-500 dark:hover:bg-primary-500;
-    }
+      #{$pagination}-md &-prev-text,
+      #{$pagination}-md &-next-text {
+        width: auto !important;
+        height: auto !important;
+        @apply px-3 py-2;
+      }
 
-    // Pagination with color
-    #{$pagination}-primary #{$pagination}-item.active & {
-      @apply border-primary-500 bg-primary-500 text-white hover:bg-primary-500 dark:hover:bg-primary-500;
-    }
-    #{$pagination}-secondary #{$pagination}-item.active & {
-      @apply border-secondary-500 bg-secondary-500 text-white hover:bg-secondary-500 dark:hover:bg-secondary-500;
-    }
-    #{$pagination}-success #{$pagination}-item.active & {
-      @apply border-success-500 bg-success-500 text-white hover:bg-success-500 dark:hover:bg-success-500;
-    }
+      #{$pagination}-lg &:not(&-prev, &-next) {
+        @apply h-10 w-10;
+      }
 
-    #{$pagination}-danger #{$pagination}-item.active & {
-      @apply border-danger-500 bg-danger-500 text-white hover:bg-danger-500 dark:hover:bg-danger-500;
-    }
+      #{$pagination}-lg &-prev-text,
+      #{$pagination}-lg &-next-text {
+        width: auto !important;
+        height: auto !important;
+        @apply px-4 py-3;
+      }
 
-    #{$pagination}-warning #{$pagination}-item.active & {
-      @apply border-warning-500 bg-warning-500 text-white hover:bg-warning-500 dark:hover:bg-warning-500;
-    }
+      // Pagination Shapes
+      #{$pagination}-square & {
+        @apply rounded-none;
+      }
 
-    #{$pagination}-info #{$pagination}-item.active & {
-      @apply border-info-500 bg-info-500 text-white hover:bg-info-500 dark:hover:bg-info-500;
-    }
+      #{$pagination}-circle &:not(&-prev-text, &-next-text) {
+        @apply rounded-full;
+      }
 
-    #{$pagination}-dark #{$pagination}-item.active & {
-      @apply border-dark-500 bg-dark-500 text-white hover:bg-dark-500 dark:hover:bg-dark-500;
-    }
+      #{$pagination}-circle &-prev,
+      #{$pagination}-circle &-next {
+        @apply h-8 w-8 overflow-hidden rounded-full p-0;
+      }
 
-    #{$pagination}-item.disabled & {
-      @apply cursor-not-allowed bg-slate-300 opacity-50 dark:bg-dark-700 dark:bg-opacity-50;
+      // Pagination hover
+      #{$pagination}-item & {
+        @apply hover:bg-primary-100 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-primary-100;
+      }
+
+      #{$pagination}-primary & {
+        @apply hover:bg-primary-100 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-primary-100;
+      }
+
+      #{$pagination}-secondary & {
+        @apply hover:bg-secondary-100 hover:text-secondary-500 dark:hover:bg-secondary-500 dark:hover:text-secondary-100;
+      }
+
+      #{$pagination}-success & {
+        @apply hover:bg-success-100 hover:text-success-500 dark:hover:bg-success-500 dark:hover:text-success-100;
+      }
+
+      #{$pagination}-danger & {
+        @apply hover:bg-danger-100 hover:text-danger-500 dark:hover:bg-danger-500 dark:hover:text-danger-100;
+      }
+
+      #{$pagination}-warning & {
+        @apply hover:bg-warning-100 hover:text-warning-500 dark:hover:bg-warning-500 dark:hover:text-warning-100;
+      }
+
+      #{$pagination}-info & {
+        @apply hover:bg-info-100 hover:text-info-500 dark:hover:bg-info-500 dark:hover:text-info-100;
+      }
+
+      #{$pagination}-dark & {
+        @apply hover:bg-dark-100 hover:text-dark-500 dark:hover:bg-dark-500 dark:hover:text-dark-100;
+      }
+
+      // Pagination active link
+      #{$pagination}-item.active & {
+        @apply border-primary-500 bg-primary-500 text-white hover:bg-primary-600 dark:hover:bg-primary-600;
+      }
+
+      // Pagination with color
+      #{$pagination}-primary #{$pagination}-item.active & {
+        @apply border-primary-500 bg-primary-500 text-white hover:bg-primary-600 dark:hover:bg-primary-600;
+      }
+      #{$pagination}-secondary #{$pagination}-item.active & {
+        @apply border-secondary-500 bg-secondary-500 text-white hover:bg-secondary-600 dark:hover:bg-secondary-600;
+      }
+      #{$pagination}-success #{$pagination}-item.active & {
+        @apply border-success-500 bg-success-500 text-white hover:bg-success-600 dark:hover:bg-success-600;
+      }
+
+      #{$pagination}-danger #{$pagination}-item.active & {
+        @apply border-danger-500 bg-danger-500 text-white hover:bg-danger-600 dark:hover:bg-danger-600;
+      }
+
+      #{$pagination}-warning #{$pagination}-item.active & {
+        @apply border-warning-500 bg-warning-500 text-white hover:bg-warning-600 dark:hover:bg-warning-600;
+      }
+
+      #{$pagination}-info #{$pagination}-item.active & {
+        @apply border-info-500 bg-info-500 text-white hover:bg-info-600 dark:hover:bg-info-600;
+      }
+
+      #{$pagination}-dark #{$pagination}-item.active & {
+        @apply border-dark-500 bg-dark-500 text-white hover:bg-dark-600 dark:hover:bg-dark-600;
+      }
+
+      #{$pagination}-item.disabled & {
+        @apply cursor-not-allowed bg-slate-300 opacity-50 dark:bg-dark-700 dark:bg-opacity-50;
+      }
     }
   }
 }

@@ -1,19 +1,108 @@
-.input {
-  @apply inline-flex w-full items-center overflow-hidden rounded-primary border border-slate-300 bg-transparent px-4 py-2 text-sm placeholder-slate-400 placeholder:text-sm focus:border-primary-500 focus:ring-1 focus:ring-primary-500 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 dark:border-slate-600 dark:placeholder-slate-500 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
+@layer components {
+  .input {
+    $input: &;
+    @apply inline-block w-full appearance-none rounded-primary border border-slate-300 bg-transparent text-sm text-slate-700 placeholder:text-slate-400 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 disabled:opacity-80 disabled:placeholder:text-slate-500 dark:border-slate-600 dark:text-slate-300 dark:placeholder:text-slate-400 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
 
-  &-valid {
-    @apply border-success-500 focus:border-success-500 focus:ring-1 focus:ring-success-500 dark:border-success-500 dark:placeholder-slate-500 dark:focus:border-success-500 dark:focus:ring-success-500;
-  }
+    &:not([type='file']) {
+      @apply px-4 py-2;
+    }
 
-  &-invalid {
-    @apply border-danger-500 focus:border-danger-500 focus:ring-1 focus:ring-danger-500 dark:border-danger-500 dark:placeholder-slate-500 dark:focus:border-danger-500 dark:focus:ring-danger-500;
-  }
+    &[type='file'] {
+      @apply overflow-hidden focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500;
 
-  &-sm {
-    @apply px-4 py-1 text-xs leading-5 placeholder:text-xs;
-  }
+      &:not(:disabled):not([readonly]) {
+        @apply cursor-pointer;
+      }
 
-  &-lg {
-    @apply px-4 py-2 text-base placeholder:text-base;
+      &::file-selector-button {
+        @apply pointer-events-none mr-2 rounded-none border-0 border-solid border-inherit bg-slate-100/50 px-4 py-2 text-sm text-slate-700 transition-colors duration-150 ease-in-out hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300;
+
+        font-family: inherit;
+        appearance: button;
+        -webkit-appearance: button;
+        border-inline-end-width: 1px;
+      }
+    }
+
+    &-sm {
+      @apply text-xs;
+
+      &:not([type='file']) {
+        @apply px-4 py-1.5;
+      }
+
+      &[type='file']::file-selector-button {
+        @apply px-4 py-1.5 text-xs;
+      }
+    }
+
+    &-md {
+      @apply text-sm;
+
+      &:not([type='file']) {
+        @apply px-4 py-2;
+      }
+
+      &[type='file']::file-selector-button {
+        @apply px-4 py-2 text-sm;
+      }
+    }
+
+    &-lg {
+      @apply text-base;
+
+      &:not([type='file']) {
+        @apply px-4 py-3;
+      }
+
+      &[type='file']::file-selector-button {
+        @apply px-4 py-3 text-base;
+      }
+    }
+
+    &-color {
+      @apply h-9 w-16 rounded;
+      padding: 0.25rem !important;
+
+      &:not(:disabled):not([readonly]) {
+        @apply cursor-pointer;
+      }
+
+      &::-moz-color-swatch {
+        @apply rounded border-0;
+      }
+
+      &#{$input}-sm {
+        @apply h-7 w-12;
+      }
+
+      &#{$input}-md {
+        @apply h-9 w-16;
+      }
+
+      &#{$input}-lg {
+        @apply h-11 w-20;
+      }
+    }
+
+    &.is-valid,
+    .form-validated &:valid {
+      @apply border-success-500 focus:border-success-500 focus:ring-success-500 dark:border-success-500 dark:focus:border-success-500 dark:focus:ring-success-500;
+    }
+
+    &.is-valid ~ .success-message,
+    .form-validated &:valid ~ .success-message {
+      @apply block;
+    }
+
+    &.is-invalid,
+    .form-validated &:invalid {
+      @apply border-danger-500 focus:border-danger-500 focus:ring-danger-500 dark:border-danger-500 dark:focus:border-danger-500 dark:focus:ring-danger-500;
+    }
+
+    &.is-invalid ~ .error-message,
+    .form-validated &:invalid ~ .error-message {
+      @apply block;
+    }
   }
 }

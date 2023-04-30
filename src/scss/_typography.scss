@@ -1,0 +1,142 @@
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    @apply font-semibold leading-tight text-slate-600 dark:text-slate-200;
+  }
+
+  h1,
+  .h1 {
+    @apply text-[calc(1.375rem+1.5vw)] xl:text-[2.5rem]; //40px(100%)
+  }
+
+  h2,
+  .h2 {
+    @apply text-[calc(1.325rem+.9vw)] xl:text-[2rem]; //32px(80%)
+  }
+
+  h3,
+  .h3 {
+    @apply text-[calc(1.3rem+.6vw)] xl:text-[1.75rem]; //28px(70%)
+  }
+
+  h4,
+  .h4 {
+    @apply xl:text-2xl; //24px(60%)
+  }
+
+  h5,
+  .h5 {
+    @apply text-xl; //24px(50%)
+  }
+
+  h6,
+  .h6 {
+    @apply text-base; //16px(40%)
+  }
+
+  mark {
+    @apply rounded-sm bg-warning-100 px-[.5em] dark:bg-warning-200;
+  }
+
+  .blockquote {
+    @apply border-l-[.25rem] border-l-slate-200 pl-4 font-medium italic text-slate-600 dark:border-l-slate-800 dark:text-slate-300;
+    & > p {
+      @apply before:content-['"'] after:content-['"'];
+    }
+  }
+
+  code:not(.prose code) {
+    @apply rounded bg-slate-100 p-1 text-xs tracking-wide text-slate-500 dark:bg-slate-600 dark:text-slate-300;
+  }
+}
+
+@layer components {
+  .display-1,
+  .display-2,
+  .display-3,
+  .display-4,
+  .display-5,
+  .display-6 {
+    @apply font-semibold leading-tight text-slate-600 dark:text-slate-200;
+  }
+
+  .display-1 {
+    @apply text-[calc(1.625rem+4.5vw)] xl:text-[5rem]; //80px(100%)
+  }
+
+  .display-2 {
+    @apply text-[calc(1.575rem+3.9vw)] xl:text-[4.5rem]; //72px(90%)
+  }
+
+  .display-3 {
+    @apply text-[calc(1.525rem+3.3vw)] xl:text-[4rem]; //64px(80%)
+  }
+
+  .display-4 {
+    @apply text-[calc(1.475rem+2.7vw)] xl:text-[3.5rem]; //56px(70%)
+  }
+
+  .display-5 {
+    @apply text-[calc(1.425rem+2.1vw)] xl:text-[3rem]; //48px(60%)
+  }
+
+  .display-6 {
+    @apply text-[calc(1.375rem+1.5vw)] xl:text-[2.5rem]; //40px(50%)
+  }
+
+  .text {
+    &-lead {
+      @apply text-lg text-slate-600 dark:text-slate-300;
+    }
+
+    &-muted {
+      @apply text-slate-400/80 dark:text-slate-600;
+    }
+  }
+
+  .help-text {
+    @apply text-xs font-light text-slate-500;
+  }
+
+  .success-message {
+    @apply mt-1 hidden w-full text-xs text-success-500;
+  }
+
+  .error-message {
+    @apply mt-1 hidden w-full text-xs text-danger-600;
+  }
+
+  .label {
+    @apply inline-block text-sm text-slate-700 dark:text-slate-300;
+
+    &-sm {
+      @apply text-xs;
+    }
+
+    &-md {
+      @apply text-sm;
+    }
+
+    &-lg {
+      @apply text-base;
+    }
+
+    &-required {
+      @apply after:ml-0.5 after:inline-block after:text-danger-500 after:content-['*'];
+    }
+
+    &-disabled {
+      @apply text-slate-500 opacity-80 dark:text-slate-500;
+    }
+  }
+}

@@ -7,14 +7,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-.parcel-cache
 node_modules
 dist
 dist-ssr
 *.local
 
 #yarn logs
-.yarn/*
+.yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
@@ -31,3 +34,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local Netlify folder
+.netlify
