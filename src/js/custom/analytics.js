@@ -257,9 +257,4 @@ polygonSeries.data.setAll([
   },
 ]);
 
-// Is Hover Any Country Change BG Color
-// polygonSeries.mapPolygons.template.states.create('hover', {
-//   fill: am5.color(themeColors.primary['500']),
-// });
-
 // ========Sale Location Cart End ===========
