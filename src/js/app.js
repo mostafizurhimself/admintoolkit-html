@@ -8,6 +8,7 @@ import 'simplebar';
 import accordion from './components/accordion';
 import alert from './components/alert';
 import carousel from './components/carousel';
+import checkAll from './components/check-all';
 import codeViewer from './components/code-viewer';
 import datepicker from './components/datepicker';
 import drawer from './components/drawer';
@@ -22,11 +23,11 @@ import themeSwitcher from './components/theme-switcher';
 import tooltip from './components/tooltip';
 import uploader from './components/uploader';
 
-// Initialize themeSwitcher
-themeSwitcher.init();
-
 // Initialize searchModal
 searchModal.init();
+
+// Initialize themeSwitcher
+themeSwitcher.init();
 
 // Initialize codeViewer
 codeViewer.init();
@@ -69,6 +70,9 @@ datepicker.init();
 
 // Initialize drawer
 drawer.init();
+
+// Initialize checkAll
+checkAll.init();
 
 // Initialize feather-icons. Must be Initialize at the end.
 feather.replace();
