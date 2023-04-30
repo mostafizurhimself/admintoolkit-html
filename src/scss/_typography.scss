@@ -117,7 +117,7 @@
   }
 
   .label {
-    @apply inline-block text-sm font-medium text-slate-700 dark:text-slate-300;
+    @apply inline-block text-sm text-slate-700 dark:text-slate-300;
 
     &-sm {
       @apply text-xs;
