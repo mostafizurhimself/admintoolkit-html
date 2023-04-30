@@ -1,9 +1,17 @@
 @layer components {
   .breadcrumb {
-    @apply flex text-sm text-slate-500 dark:text-slate-300;
+    @apply flex flex-wrap items-center;  
 
     &-item {
-      @apply ml-2 flex items-center font-medium text-primary-500 after:ml-2 after:text-slate-500 after:content-['>'] last:font-normal last:text-slate-500 last:after:content-[''] dark:last:text-slate-400;
+      @apply text-sm font-medium text-primary-500;
+
+      &:not(:last-child) {
+        @apply mr-1  after:content-['>'] after:ml-1 after:text-slate-500 after:dark:text-slate-400;
+      }
+
+      &:last-child {
+        @apply font-normal text-slate-500 dark:text-slate-400;
+      }
     }
   }
 }
