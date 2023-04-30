@@ -1,12 +1,12 @@
+import * as am5 from '@amcharts/amcharts5';
+import am5geodata_worldLow from '@amcharts/amcharts5-geodata/worldLow';
+import * as am5map from '@amcharts/amcharts5/map';
+import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
+import themeConfig, { themeColors } from '@tailwind.config';
 import ApexCharts from 'apexcharts';
 import colors from 'tailwindcss/colors';
-import themeConfig, { themeColors } from '@tailwind.config';
-import * as am5 from '@amcharts/amcharts5';
-import * as am5map from '@amcharts/amcharts5/map';
-import am5geodata_worldLow from '@amcharts/amcharts5-geodata/worldLow';
-import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
-const theme = localStorage.getItem('theme');
+const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
 
 // ========Store Analytics Chart Start ===========
 const storeAnalyticsChartOptions = {

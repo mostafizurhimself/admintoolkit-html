@@ -2,7 +2,7 @@ import ApexCharts from 'apexcharts';
 import colors from 'tailwindcss/colors';
 import themeConfig, { themeColors } from '@tailwind.config';
 
-const theme = localStorage.getItem('theme');
+const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
 
 // ========Sales Report Chart Start ===========
 const salesReportChartOptions = {

@@ -783,12 +783,14 @@
                         </div>
                       </div>
                       <!-- Logo Ends -->
-                      
+
                       <!-- Title and Date Start -->
                       <div class="flex flex-col items-start gap-3 md:items-end">
                         <h4>Invoice #1001</h4>
-                        <div class="w-full flex flex-col items-start md:flex-row sm:items-center gap-2">
-                          <label for="invoice-date" class="w-full md:w-1/4 label md:text-right font-medium">Date:</label>
+                        <div class="flex w-full flex-col items-start gap-2 sm:items-center md:flex-row">
+                          <label for="invoice-date" class="label w-full font-medium md:w-1/4 md:text-right"
+                            >Date:</label
+                          >
                           <input
                             id="invoice-date"
                             class="input input-date bg-white dark:bg-slate-800"
@@ -796,8 +798,10 @@
                             placeholder="YYYY-MM-DD"
                           />
                         </div>
-                        <div class="w-full flex flex-col items-start md:flex-row sm:items-center gap-2">
-                          <label for="invoice-due-date" class="w-full md:w-1/4 label md:text-right font-medium">Due Date:</label>
+                        <div class="flex w-full flex-col items-start gap-2 sm:items-center md:flex-row">
+                          <label for="invoice-due-date" class="label w-full font-medium md:w-1/4 md:text-right"
+                            >Due Date:</label
+                          >
                           <input
                             id="invoice-due-date"
                             class="input input-date bg-white dark:bg-slate-800"
@@ -815,13 +819,13 @@
                       <div class="flex w-full flex-col items-start justify-center md:mb-0 md:w-2/3 md:justify-center">
                         <p class="text-xs font-medium uppercase text-slate-400">BILLED FROM</p>
                         <h6 class="my-1">Admin Toolkit</h6>
-                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                        <p class="whitespace-nowrap text-sm font-normal text-slate-600 dark:text-slate-300">
                           206 Yonge St, Toronto - M4S 2A3
                         </p>
-                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                        <p class="whitespace-nowrap text-sm font-normal text-slate-600 dark:text-slate-300">
                           Tel No: (317) 745-1499
                         </p>
-                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                        <p class="whitespace-nowrap text-sm font-normal text-slate-600 dark:text-slate-300">
                           Email: info@admintoolkit.com
                         </p>
                       </div>
@@ -829,13 +833,13 @@
                       <div class="flex w-full flex-col items-start justify-center md:w-1/3 md:items-end">
                         <p class="text-xs font-medium uppercase text-slate-400">BILLED TO</p>
                         <h6 class="my-1">John Doe</h6>
-                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                        <p class="whitespace-nowrap text-sm font-normal text-slate-600 dark:text-slate-300">
                           206 Yonge St, Toronto - M4S 2A3
                         </p>
-                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                        <p class="whitespace-nowrap text-sm font-normal text-slate-600 dark:text-slate-300">
                           Tel No: (317) 745-1499
                         </p>
-                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                        <p class="whitespace-nowrap text-sm font-normal text-slate-600 dark:text-slate-300">
                           Email: johndoe@example.com
                         </p>
                       </div>
@@ -1044,7 +1048,7 @@
                     </div>
 
                     <!-- Save And Print Invoice  -->
-                    <div class="flex flex-col 2xl:flex-row gap-4">
+                    <div class="flex flex-col gap-4 2xl:flex-row">
                       <button class="btn btn-primary w-full font-medium">
                         <i class="h-4" data-feather="save"></i>
                         <span>Save</span>
@@ -1062,7 +1066,7 @@
                         <i class="h-4" data-feather="eye"></i>
                         <span>Preview</span>
                       </button>
-                    </div>                   
+                    </div>
                   </div>
                 </div>
               </div>
