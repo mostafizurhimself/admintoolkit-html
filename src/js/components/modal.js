@@ -39,15 +39,7 @@ export class Modal {
       this.toggle = this.target;
       this.modal = document.querySelector(this.toggle.dataset.target);
 
-      this.toggle.addEventListener('click', () => {
-        const openModals = document.querySelectorAll('.modal.show');
-
-        if (openModals.length) {
-          [...openModals].forEach((modal) => this.hide(modal));
-        } else {
-          this.show();
-        }
-      });
+      this.toggle.addEventListener('click', () => this.show());
     }
 
     this.dismisses = this.modal.querySelectorAll('[data-dismiss="modal"]');
@@ -59,8 +51,8 @@ export class Modal {
     }
   }
 
-  show(element = null) {
-    const modal = element ? element : this.modal;
+  show() {
+    const modal = this.modal;
 
     if (!modal.classList.contains('show')) {
       modal.style.display = 'flex';
@@ -68,7 +60,7 @@ export class Modal {
       modal.appendChild(this.createBackdrop());
 
       // Focus the first input
-      if (this.options.autofucus) { 
+      if (this.options.autofucus) {
         const input = modal.querySelector('input');
         input && input.focus();
       }
@@ -95,8 +87,8 @@ export class Modal {
     }
   }
 
-  hide(element = null) {
-    const modal = element ? element : this.modal;
+  hide() {
+    const modal = this.modal;
 
     if (modal.classList.contains('show')) {
       const modalBackdrop = modal.querySelector('.modal-backdrop');
