@@ -188,9 +188,10 @@ root.setThemes([am5themes_Animated.new(root)]);
 // Create the map chart
 let salesLocationChart = root.container.children.push(
   am5map.MapChart.new(root, {
-    panX: 'translateX',
-    panY: false,
     projection: am5map.geoMercator(),
+    draggable: false,
+    panY: false,
+    panX: false,
     paddingTop: 0,
     paddingLeft: 0,
     paddingRight: 0,
