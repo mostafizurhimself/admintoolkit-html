@@ -19,6 +19,7 @@ export class Modal {
     this.options = {
       keyboard: true, //Boolean. Default is true
       backdrop: true, //Boolean | 'static'. Default is true
+      autofucus: true, //Boolean. Default is true (focus the first input)
       ...options,
     };
 
@@ -65,6 +66,13 @@ export class Modal {
       modal.style.display = 'flex';
 
       modal.appendChild(this.createBackdrop());
+
+      // Focus the first input
+      if (this.options.autofucus) { 
+        const input = modal.querySelector('input');
+        input && input.focus();
+      }
+
 
       setTimeout(() => {
         const modalBackdrop = modal.querySelector('.modal-backdrop');
