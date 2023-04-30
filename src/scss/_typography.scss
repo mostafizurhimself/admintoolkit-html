@@ -49,13 +49,13 @@
   }
 
   .blockquote {
-    @apply border-l-[.25rem] border-l-slate-200 pl-4 font-medium italic text-slate-500 dark:border-l-slate-800 dark:text-slate-300;
+    @apply border-l-[.25rem] border-l-slate-200 pl-4 font-medium italic text-slate-600 dark:border-l-slate-800 dark:text-slate-300;
     & > p {
       @apply before:content-['"'] after:content-['"'];
     }
   }
 
-  code {
+  code:not(.prose code) {
     @apply rounded bg-slate-100 p-1 text-xs tracking-wide text-slate-500 dark:bg-slate-600 dark:text-slate-300;
   }
 }
@@ -96,7 +96,7 @@
 
   .text {
     &-lead {
-      @apply text-lg text-slate-600 dark:text-slate-200;
+      @apply text-lg text-slate-600 dark:text-slate-300;
     }
 
     &-muted {

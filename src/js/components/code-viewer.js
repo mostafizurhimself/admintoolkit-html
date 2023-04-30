@@ -40,7 +40,7 @@ class CodeViewer {
     this.target.appendChild(this.createFooterElement());
 
     // Highlight the code
-    const code = this.target.querySelector('code');
+    const code = this.target.querySelector('.code-viewer-footer code');
     code.innerHTML = sourceCode;
     hljs.highlightBlock(code);
 
@@ -79,9 +79,9 @@ class CodeViewer {
     });
 
     // Add event listener to toggle button
-    const toggle = this.target.querySelector('.code-viewer-footer').querySelector('.toggle-input');
+    const toggle = this.target.querySelector('.code-viewer-footer .toggle-input');
     toggle.addEventListener('change', () => {
-      const pre = this.target.querySelector('pre');
+      const pre = this.target.querySelector('.code-viewer-footer pre');
       copyBtn.classList.toggle('invisible');
       pre.classList.toggle('hidden');
     });
