@@ -6,7 +6,7 @@
       @apply text-sm font-medium text-primary-500;
 
       &:not(:last-child) {
-        @apply mr-1  after:content-['>'] after:ml-1 after:text-slate-500 after:dark:text-slate-400;
+        @apply mr-1.5  after:content-['>'] after:ml-1.5 after:text-slate-500 after:dark:text-slate-400;
       }
 
       &:last-child {
