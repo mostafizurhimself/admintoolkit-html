@@ -30,7 +30,7 @@
       }
 
       #{$datatable}-table {
-        @apply w-full overflow-hidden rounded-primary border-slate-200 shadow dark:border-slate-600;
+        @apply w-full overflow-hidden rounded-primary whitespace-nowrap border-slate-200 shadow dark:border-slate-600;
 
         thead,
         tbody,

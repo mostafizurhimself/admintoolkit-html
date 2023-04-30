@@ -765,93 +765,95 @@
                   <p class="card-subtitle">Example of browser's default form validation.</p>
 
                   <div class="code-viewer mt-4">
-                    <form
-                      class="mx-auto max-w-lg rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
-                      action=""
-                    >
-                      <!-- Form Body -->
-                      <div class="flex flex-col gap-4">
-                        <!-- Form Row: Full name -->
-                        <div class="w-full">
-                          <label class="label label-required mb-1" for="form-basic-full-name"> Full name </label>
-                          <input
-                            class="input"
-                            id="form-basic-full-name"
-                            name="full-name"
-                            type="text"
-                            placeholder="Full name"
-                            required
-                          />
-                        </div>
-                        <!-- Form Row: Company -->
-                        <div class="w-full">
-                          <label class="label label-required mb-1" for="form-basic-company"> Company </label>
-                          <input
-                            class="input"
-                            id="form-basic-company"
-                            name="company"
-                            type="text"
-                            placeholder="Company"
-                            required
-                          />
-                        </div>
-                        <!-- Form Row: Email -->
-                        <div class="w-full">
-                          <label class="label label-required mb-1" for="form-basic-email"> Email </label>
-                          <input
-                            class="input"
-                            id="form-basic-email"
-                            name="email"
-                            type="email"
-                            placeholder="Email"
-                            required
-                          />
-                        </div>
-                        <!-- Form Row: Phone -->
-                        <div class="w-full">
-                          <label class="label label-required mb-1" for="form-basic-phone"> Phone </label>
-                          <input
-                            class="input"
-                            id="form-basic-phone"
-                            name="phone"
-                            type="text"
-                            placeholder="Phone"
-                            required
-                          />
-                        </div>
-                        <!-- Form Row: Message -->
-                        <div class="w-full">
-                          <label class="label label-required mb-1" for="form-basic-message"> Message </label>
-                          <textarea
-                            class="textarea"
-                            name="message"
-                            id="form-basic-message"
-                            placeholder="Message"
-                            required
-                          ></textarea>
-                        </div>
-                        <!-- Form Row: TOS -->
-                        <div class="w-full">
-                          <div class="flex items-center gap-1.5">
-                            <input class="checkbox" type="checkbox" name="tos" id="form-basic-tos" required />
-                            <label class="label" for="form-basic-tos">
-                              I agree with the
-                              <a
-                                class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline focus:text-primary-600 focus:outline-none"
-                                href="#"
-                                target="_blank"
-                              >
-                                term of services
-                              </a>
-                            </label>
+                    <div class="code-viewer-content overflow-auto">
+                      <form
+                        class="w-[32rem] mx-auto rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
+                        action=""
+                      >
+                        <!-- Form Body -->
+                        <div class="flex flex-col gap-4">
+                          <!-- Form Row: Full name -->
+                          <div class="w-full">
+                            <label class="label label-required mb-1" for="form-basic-full-name"> Full name </label>
+                            <input
+                              class="input"
+                              id="form-basic-full-name"
+                              name="full-name"
+                              type="text"
+                              placeholder="Full name"
+                              required
+                            />
+                          </div>
+                          <!-- Form Row: Company -->
+                          <div class="w-full">
+                            <label class="label label-required mb-1" for="form-basic-company"> Company </label>
+                            <input
+                              class="input"
+                              id="form-basic-company"
+                              name="company"
+                              type="text"
+                              placeholder="Company"
+                              required
+                            />
+                          </div>
+                          <!-- Form Row: Email -->
+                          <div class="w-full">
+                            <label class="label label-required mb-1" for="form-basic-email"> Email </label>
+                            <input
+                              class="input"
+                              id="form-basic-email"
+                              name="email"
+                              type="email"
+                              placeholder="Email"
+                              required
+                            />
+                          </div>
+                          <!-- Form Row: Phone -->
+                          <div class="w-full">
+                            <label class="label label-required mb-1" for="form-basic-phone"> Phone </label>
+                            <input
+                              class="input"
+                              id="form-basic-phone"
+                              name="phone"
+                              type="text"
+                              placeholder="Phone"
+                              required
+                            />
+                          </div>
+                          <!-- Form Row: Message -->
+                          <div class="w-full">
+                            <label class="label label-required mb-1" for="form-basic-message"> Message </label>
+                            <textarea
+                              class="textarea"
+                              name="message"
+                              id="form-basic-message"
+                              placeholder="Message"
+                              required
+                            ></textarea>
+                          </div>
+                          <!-- Form Row: TOS -->
+                          <div class="w-full">
+                            <div class="flex items-center gap-1.5">
+                              <input class="checkbox" type="checkbox" name="tos" id="form-basic-tos" required />
+                              <label class="label" for="form-basic-tos">
+                                I agree with the
+                                <a
+                                  class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline focus:text-primary-600 focus:outline-none"
+                                  href="#"
+                                  target="_blank"
+                                >
+                                  term of services
+                                </a>
+                              </label>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <!-- Form Footer -->
-                      <div class="mt-6 flex w-full items-center justify-end">
-                        <button class="btn btn-primary" type="submit">Submit</button>
-                      </div>
-                    </form>
+                        <!-- Form Footer -->
+                        <div class="mt-6 flex w-full items-center justify-end">
+                          <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -865,10 +867,10 @@
                   <p class="card-subtitle">Example of form validation with custom messages.</p>
 
                   <div id="custom-form-validation-code-viewer" class="code-viewer mt-4" data-render-source="false">
-                    <div class="code-viewer-content">
+                    <div class="code-viewer-content overflow-auto">
                       <form
                         id="form-custom-validation"
-                        class="mx-auto max-w-lg rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
+                        class="w-[32rem] mx-auto rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
                         novalidate
                       >
                         <!-- Form Body -->
@@ -953,7 +955,7 @@
           <footer class="footer">
             <p class="text-sm">
               Copyright © 2023
-              <a class="text-primary-500 hover:underline" href="https://bdlancers.com"> Bdlancers </a>
+              <a class="text-primary-500 hover:underline" href="https://techmasih.com"  target="_blank"> TechMasih </a>
               , All right Reserved
             </p>
 
