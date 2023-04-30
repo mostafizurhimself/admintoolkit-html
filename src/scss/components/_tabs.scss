@@ -14,7 +14,7 @@
         @apply flex-col border-b-transparent border-r-slate-200/80 dark:border-r-slate-700/80;
 
         & > li {
-          @apply w-full border-0 border-black;
+          @apply w-full;
         }
       }
 
@@ -24,7 +24,7 @@
     }
 
     &-content {
-      @apply border-0 border-black;
+      @apply w-full;
     }
 
     &-panel {
