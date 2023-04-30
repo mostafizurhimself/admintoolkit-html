@@ -760,8 +760,8 @@
             <!-- Page Title Ends -->
 
             <!-- Invoice Details Starts -->
-            <div class="grid grid-cols-1 gap-y-3 md:gap-x-5 lg:grid-cols-4">
-              <div class="col-span-1 lg:col-span-3">
+            <div class="grid grid-cols-1 gap-y-3 md:gap-x-5 xl:grid-cols-4">
+              <div class="col-span-1 xl:col-span-3">
                 <div class="card">
                   <div class="card-body space-y-6">
                     <!-- Invoice Header Starts -->
@@ -802,20 +802,29 @@
                       <div class="flex w-full flex-col items-start justify-center md:mb-0 md:w-2/3 md:justify-center">
                         <p class="text-xs font-medium uppercase text-slate-400">BILLED FROM</p>
                         <h6 class="my-1">Admin Toolkit</h6>
-                        <p class="text-sm font-normal text-slate-600 dark:text-slate-300">
-                          123 Example Road, Example - 1234
+                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                          206 Yonge St, Toronto - M4S 2A3
                         </p>
-                        <p class="text-sm font-normal text-slate-600 dark:text-slate-300">Tel No: 123 123 123 123</p>
-                        <p class="text-sm font-normal text-slate-600 dark:text-slate-300">Email: johndoe@example.com</p>
+                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                          Tel No: (317) 745-1499
+                        </p>
+                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                          Email: info@admintoolkit.com
+                        </p>
                       </div>
+
                       <div class="flex w-full flex-col items-start justify-center md:w-1/3 md:items-end">
                         <p class="text-xs font-medium uppercase text-slate-400">BILLED TO</p>
                         <h6 class="my-1">John Doe</h6>
-                        <p class="text-sm font-normal text-slate-600 dark:text-slate-300">
-                          123 Example Road, Example - 1234
+                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                          206 Yonge St, Toronto - M4S 2A3
                         </p>
-                        <p class="text-sm font-normal text-slate-600 dark:text-slate-300">Tel No: 123 123 123 123</p>
-                        <p class="text-sm font-normal text-slate-600 dark:text-slate-300">Email: johndoe@example.com</p>
+                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                          Tel No: (317) 745-1499
+                        </p>
+                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                          Email: johndoe@example.com
+                        </p>
                       </div>
                     </div>
                     <!-- Invoice Info Ends -->
@@ -989,30 +998,34 @@
                       </div>
                     </div>
                     <!-- Product Table Ends -->
-
+                    
                     <p class="py-2 text-center text-sm">Thanks for your Business</p>
                   </div>
                 </div>
               </div>
 
-              <div class="sticky top-20 h-max lg:col-span-1">
+              <div class="col-span-1 sticky top-20 h-max">
                 <div class="card">
                   <div class="card-body flex flex-col gap-4">
                     <button class="btn btn-primary w-full">
                       <i data-feather="send" width="1.125rem" height="1.125rem"></i>
                       Send Invoice
                     </button>
-                    <button class="btn btn-outline-primary w-full">
-                      <i data-feather="printer" width="1.125rem" height="1.125rem"></i>
-                      Print Invoice
-                    </button>
-                    <button class="btn btn-outline-primary w-full">
-                      <i data-feather="download" width="1.125rem" height="1.125rem"></i>
-                      Download Invoice
-                    </button>
-                    <button class="btn btn-outline-primary w-full">
+
+                    <button class="btn btn-primary w-full">
                       <i data-feather="dollar-sign" width="1.125rem" height="1.125rem"></i>
                       Add Payment
+                    </button>
+
+                    <div class="flex xl:flex-col 2xl:flex-row items-center gap-4">
+                      <button class="btn btn-outline-primary w-full">
+                        <i data-feather="printer" width="1.125rem" height="1.125rem"></i>
+                        <span>Print</span>
+                      </button>
+                      <button class="btn btn-outline-primary w-full">
+                        <i data-feather="download" width="1.125rem" height="1.125rem"></i>
+                        <span>Download</span>
+                      </div>
                     </button>
                   </div>
                 </div>
