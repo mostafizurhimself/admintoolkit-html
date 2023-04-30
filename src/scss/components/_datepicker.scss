@@ -4,6 +4,7 @@
     $flatpickr-calendar: #{$flatpickr}-calendar;
 
     @at-root #{$flatpickr-calendar} {
+      width: calc(14rem + 5vw) !important;
       @apply overflow-hidden rounded-primary bg-white shadow dark:bg-slate-800;
 
       // Direct Element
@@ -87,6 +88,7 @@
         }
 
         #{$flatpickr}-days {
+          width: calc(14rem + 5vw) !important;
           .dayContainer {
             @apply w-full min-w-full max-w-full justify-between gap-y-1.5 p-2;
           }
