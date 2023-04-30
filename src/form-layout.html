@@ -761,79 +761,77 @@
                   <p class="card-subtitle">Example of basic form layout.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="code-viewer-content overflow-auto">
-                      <form
-                        id="form-basic"
-                        class="w-[32rem] mx-auto rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
-                        action=""
-                      >
-                        <!-- Form Body -->
-                        <div class="flex flex-col gap-4">
-                          <!-- Form Row: Full name -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-basic-full-name"> Full name </label>
-                            <input
-                              class="input"
-                              id="form-basic-full-name"
-                              name="full-name"
-                              type="text"
-                              placeholder="Full name"
-                            />
-                          </div>
-                          <!-- Form Row: Company -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-basic-company"> Company </label>
-                            <input
-                              class="input"
-                              id="form-basic-company"
-                              name="company"
-                              type="text"
-                              placeholder="Company"
-                            />
-                          </div>
-                          <!-- Form Row: Email -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-basic-email"> Email </label>
-                            <input class="input" id="form-basic-email" name="email" type="text" placeholder="Email" />
-                          </div>
-                          <!-- Form Row: Phone -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-basic-phone"> Phone </label>
-                            <input class="input" id="form-basic-phone" name="phone" type="text" placeholder="Phone" />
-                          </div>
-                          <!-- Form Row: Message -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-basic-message"> Message </label>
-                            <textarea
-                              class="textarea"
-                              name="message"
-                              id="form-basic-message"
-                              placeholder="Message"
-                            ></textarea>
-                          </div>
-                          <!-- Form Row: TOS -->
-                          <div class="w-full">
-                            <div class="flex items-center gap-1.5">
-                              <input class="checkbox" type="checkbox" name="tos" id="form-basic-tos" />
-                              <label class="label" for="form-basic-tos">
-                                I agree with the
-                                <a
-                                  class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline focus:text-primary-600 focus:outline-none"
-                                  href="#"
-                                  target="_blank"
-                                >
-                                  term of services
-                                </a>
-                              </label>
-                            </div>
+                    <form
+                      id="form-basic"
+                      class="max-w-lg mx-auto rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
+                      action=""
+                    >
+                      <!-- Form Body -->
+                      <div class="flex flex-col gap-4">
+                        <!-- Form Row: Full name -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-basic-full-name"> Full name </label>
+                          <input
+                            class="input"
+                            id="form-basic-full-name"
+                            name="full-name"
+                            type="text"
+                            placeholder="Full name"
+                          />
+                        </div>
+                        <!-- Form Row: Company -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-basic-company"> Company </label>
+                          <input
+                            class="input"
+                            id="form-basic-company"
+                            name="company"
+                            type="text"
+                            placeholder="Company"
+                          />
+                        </div>
+                        <!-- Form Row: Email -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-basic-email"> Email </label>
+                          <input class="input" id="form-basic-email" name="email" type="text" placeholder="Email" />
+                        </div>
+                        <!-- Form Row: Phone -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-basic-phone"> Phone </label>
+                          <input class="input" id="form-basic-phone" name="phone" type="text" placeholder="Phone" />
+                        </div>
+                        <!-- Form Row: Message -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-basic-message"> Message </label>
+                          <textarea
+                            class="textarea"
+                            name="message"
+                            id="form-basic-message"
+                            placeholder="Message"
+                          ></textarea>
+                        </div>
+                        <!-- Form Row: TOS -->
+                        <div class="w-full">
+                          <div class="flex items-center gap-1.5">
+                            <input class="checkbox" type="checkbox" name="tos" id="form-basic-tos" />
+                            <label class="label" for="form-basic-tos">
+                              I agree with the
+                              <a
+                                class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline focus:text-primary-600 focus:outline-none"
+                                href="#"
+                                target="_blank"
+                              >
+                                term of services
+                              </a>
+                            </label>
                           </div>
                         </div>
-                        <!-- Form Footer -->
-                        <div class="mt-6 flex w-full items-center justify-end">
-                          <button class="btn btn-primary" type="submit">Submit</button>
-                        </div>
-                      </form>
-                    </div>
+                      </div>
+                      <!-- Form Footer -->
+                      <div class="mt-6 flex w-full items-center justify-end">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -847,106 +845,104 @@
                   <p class="card-subtitle">Example of form with icon.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="code-viewer-content overflow-auto">
-                      <form
-                        id="form-with-icon"
-                        class="w-[32rem] mx-auto rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
-                        action=""
-                      >
-                        <!-- Form Body -->
-                        <div class="flex flex-col gap-4">
-                          <!-- Form Row: Full name -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-with-icon-full-name"> Full name </label>
-                            <div class="input-group">
-                              <span class="input-group-text">
-                                <i width="1rem" height="1rem" data-feather="user"></i>
-                              </span>
-                              <input
-                                class="input"
-                                id="form-with-icon-full-name"
-                                name="full-name"
-                                type="text"
-                                placeholder="Full name"
-                              />
-                            </div>
-                          </div>
-                          <!-- Form Row: Company -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-with-icon-company"> Company </label>
-                            <div class="input-group">
-                              <span class="input-group-text">
-                                <i width="1rem" height="1rem" data-feather="map-pin"></i>
-                              </span>
-                              <input
-                                class="input"
-                                id="form-with-icon-company"
-                                name="company"
-                                type="text"
-                                placeholder="Company"
-                              />
-                            </div>
-                          </div>
-                          <!-- Form Row: Email -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-with-icon-email"> Email </label>
-                            <div class="input-group">
-                              <span class="input-group-text">
-                                <i width="1rem" height="1rem" data-feather="mail"></i>
-                              </span>
-                              <input
-                                class="input"
-                                id="form-with-icon-email"
-                                name="email"
-                                type="text"
-                                placeholder="Email"
-                              />
-                            </div>
-                          </div>
-                          <!-- Form Row: Phone -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-with-icon-phone"> Phone </label>
-                            <div class="input-group">
-                              <span class="input-group-text">
-                                <i width="1rem" height="1rem" data-feather="phone"></i>
-                              </span>
-                              <input
-                                class="input"
-                                id="form-with-icon-phone"
-                                name="phone"
-                                type="text"
-                                placeholder="Phone"
-                              />
-                            </div>
-                          </div>
-                          <!-- Form Row: Resume -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-with-icon-resume"> Resume </label>
-                            <input class="input" id="form-with-icon-resume" name="resume" type="file" />
-                          </div>
-                          <!-- Form Row: TOS -->
-                          <div class="w-full">
-                            <div class="flex items-center gap-1.5">
-                              <input class="checkbox" type="checkbox" name="tos" id="form-basic-tos" />
-                              <label class="label" for="form-basic-tos">
-                                I agree with the
-                                <a
-                                  class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline focus:text-primary-600 focus:outline-none"
-                                  href="#"
-                                  target="_blank"
-                                >
-                                  term of services
-                                </a>
-                              </label>
-                            </div>
+                    <form
+                      id="form-with-icon"
+                      class="max-w-lg mx-auto rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
+                      action=""
+                    >
+                      <!-- Form Body -->
+                      <div class="flex flex-col gap-4">
+                        <!-- Form Row: Full name -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-with-icon-full-name"> Full name </label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i width="1rem" height="1rem" data-feather="user"></i>
+                            </span>
+                            <input
+                              class="input"
+                              id="form-with-icon-full-name"
+                              name="full-name"
+                              type="text"
+                              placeholder="Full name"
+                            />
                           </div>
                         </div>
-                        <!-- Form Footer -->
-                        <div class="mt-6 flex w-full items-center justify-end">
-                          <button class="btn btn-primary" type="submit">Submit</button>
+                        <!-- Form Row: Company -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-with-icon-company"> Company </label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i width="1rem" height="1rem" data-feather="map-pin"></i>
+                            </span>
+                            <input
+                              class="input"
+                              id="form-with-icon-company"
+                              name="company"
+                              type="text"
+                              placeholder="Company"
+                            />
+                          </div>
                         </div>
-                      </form>
-                    </div>
+                        <!-- Form Row: Email -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-with-icon-email"> Email </label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i width="1rem" height="1rem" data-feather="mail"></i>
+                            </span>
+                            <input
+                              class="input"
+                              id="form-with-icon-email"
+                              name="email"
+                              type="text"
+                              placeholder="Email"
+                            />
+                          </div>
+                        </div>
+                        <!-- Form Row: Phone -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-with-icon-phone"> Phone </label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i width="1rem" height="1rem" data-feather="phone"></i>
+                            </span>
+                            <input
+                              class="input"
+                              id="form-with-icon-phone"
+                              name="phone"
+                              type="text"
+                              placeholder="Phone"
+                            />
+                          </div>
+                        </div>
+                        <!-- Form Row: Resume -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-with-icon-resume"> Resume </label>
+                          <input class="input" id="form-with-icon-resume" name="resume" type="file" />
+                        </div>
+                        <!-- Form Row: TOS -->
+                        <div class="w-full">
+                          <div class="flex items-center gap-1.5">
+                            <input class="checkbox" type="checkbox" name="tos" id="form-basic-tos" />
+                            <label class="label" for="form-basic-tos">
+                              I agree with the
+                              <a
+                                class="text-primary-500 transition-colors duration-150 hover:text-primary-600 hover:underline focus:text-primary-600 focus:outline-none"
+                                href="#"
+                                target="_blank"
+                              >
+                                term of services
+                              </a>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Form Footer -->
+                      <div class="mt-6 flex w-full items-center justify-end">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -960,78 +956,76 @@
                   <p class="card-subtitle">Example of form with dropzone.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="code-viewer-content overflow-auto">
-                      <form
-                        id="form-with-dropzone"
-                        class="w-[32rem] mx-auto rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
-                        action=""
-                      >
-                        <!-- Form Body -->
-                        <div class="flex flex-col gap-4">
-                          <!-- Form Row: Thumbnail -->
-                          <div class="w-full">
-                            <div class="dropzone dropzone-multiple">
-                              <div class="dz-message">
-                                <i
-                                  class="text-slate-600 dark:text-slate-300"
-                                  width="2rem"
-                                  height="2rem"
-                                  data-feather="image"
-                                ></i>
-                                <p class="text-sm text-slate-600 dark:text-slate-300">
-                                  Choose thumbnails or drag & drop here.
-                                </p>
-                              </div>
-                              <!-- Fallback for no JavaScript -->
-                              <div class="fallback">
-                                <input name="file" type="thumbnails" />
-                              </div>
+                    <form
+                      id="form-with-dropzone"
+                      class="max-w-lg mx-auto rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
+                      action=""
+                    >
+                      <!-- Form Body -->
+                      <div class="flex flex-col gap-4">
+                        <!-- Form Row: Thumbnail -->
+                        <div class="w-full">
+                          <div class="dropzone dropzone-multiple">
+                            <div class="dz-message">
+                              <i
+                                class="text-slate-600 dark:text-slate-300"
+                                width="2rem"
+                                height="2rem"
+                                data-feather="image"
+                              ></i>
+                              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                                Choose thumbnails or drag & drop here.
+                              </p>
+                            </div>
+                            <!-- Fallback for no JavaScript -->
+                            <div class="fallback">
+                              <input name="file" type="thumbnails" />
                             </div>
                           </div>
-                          <!-- Form Row: Post title -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-with-dropzone-title"> Post title </label>
-                            <input
-                              class="input"
-                              id="form-with-dropzone-title"
-                              name="title"
-                              type="text"
-                              placeholder="Post title"
-                            />
-                          </div>
-                          <!-- Form Row: Post category -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-with-dropzone-category">
-                              Post category
-                            </label>
-                            <select class="tom-select" name="category" id="form-with-dropzone-category">
-                              <option value="">Select category</option>
-                              <option value="entertainment">Entertainment</option>
-                              <option value="skills">Skills development</option>
-                              <option value="communication">Communication</option>
-                              <option value="marketing">Marketing</option>
-                              <option value="technology">Technology</option>
-                            </select>
-                          </div>
-                          <!-- Form Row: Post Content -->
-                          <div class="w-full">
-                            <label class="label label-required mb-1" for="form-with-dropzone-content">
-                              Post content
-                            </label>
-                            <textarea
-                              class="textarea"
-                              name="content"
-                              id="form-with-dropzone-content"
-                              placeholder="Post content"
-                            ></textarea>
-                          </div>
                         </div>
-                        <!-- Form Footer -->
-                        <div class="mt-6 flex w-full items-center justify-end">
-                          <button class="btn btn-primary" type="submit">Submit</button>
+                        <!-- Form Row: Post title -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-with-dropzone-title"> Post title </label>
+                          <input
+                            class="input"
+                            id="form-with-dropzone-title"
+                            name="title"
+                            type="text"
+                            placeholder="Post title"
+                          />
                         </div>
-                      </form>
-                    </div>
+                        <!-- Form Row: Post category -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-with-dropzone-category">
+                            Post category
+                          </label>
+                          <select class="tom-select" name="category" id="form-with-dropzone-category">
+                            <option value="">Select category</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="skills">Skills development</option>
+                            <option value="communication">Communication</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="technology">Technology</option>
+                          </select>
+                        </div>
+                        <!-- Form Row: Post Content -->
+                        <div class="w-full">
+                          <label class="label label-required mb-1" for="form-with-dropzone-content">
+                            Post content
+                          </label>
+                          <textarea
+                            class="textarea"
+                            name="content"
+                            id="form-with-dropzone-content"
+                            placeholder="Post content"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <!-- Form Footer -->
+                      <div class="mt-6 flex w-full items-center justify-end">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -1045,95 +1039,93 @@
                   <p class="card-subtitle">Example of Horizontal Form.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="code-viewer-content overflow-auto">
-                      <form
-                        id="form-horizontal"
-                        class="w-[32rem] mx-auto rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
-                        action=""
-                      >
-                        <!-- Form Body -->
-                        <div class="flex flex-col gap-4">
-                          <!-- Form Row: Full name -->
-                          <div class="flex w-full flex-col items-center gap-1 md:flex-row md:gap-2">
-                            <div class="w-full md:w-1/4">
-                              <label class="label label-required" for="form-horizontal-full-name"> Full name </label>
-                            </div>
-                            <div class="w-full md:w-3/4">
-                              <input
-                                class="input"
-                                id="form-horizontal-full-name"
-                                name="full-name"
-                                type="text"
-                                placeholder="Full name"
-                              />
-                            </div>
+                    <form
+                      id="form-horizontal"
+                      class="max-w-lg mx-auto rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
+                      action=""
+                    >
+                      <!-- Form Body -->
+                      <div class="flex flex-col gap-4">
+                        <!-- Form Row: Full name -->
+                        <div class="flex w-full flex-col items-center gap-1 md:flex-row md:gap-2">
+                          <div class="w-full md:w-1/4">
+                            <label class="label label-required" for="form-horizontal-full-name"> Full name </label>
                           </div>
-                          <!-- Form Row: Company -->
-                          <div class="flex w-full flex-col items-center gap-1 md:flex-row md:gap-2">
-                            <div class="w-full md:w-1/4">
-                              <label class="label label-required" for="form-horizontal-company"> Company </label>
-                            </div>
-                            <div class="w-full md:w-3/4">
-                              <input
-                                class="input"
-                                id="form-horizontal-company"
-                                name="company"
-                                type="text"
-                                placeholder="Company"
-                              />
-                            </div>
-                          </div>
-                          <!-- Form Row: Email -->
-                          <div class="flex w-full flex-col items-center gap-1 md:flex-row md:gap-2">
-                            <div class="w-full md:w-1/4">
-                              <label class="label label-required" for="form-horizontal-email"> Email </label>
-                            </div>
-                            <div class="w-full md:w-3/4">
-                              <input
-                                class="input"
-                                id="form-horizontal-email"
-                                name="email"
-                                type="text"
-                                placeholder="Email"
-                              />
-                            </div>
-                          </div>
-                          <!-- Form Row: Phone -->
-                          <div class="flex w-full flex-col items-center gap-1 md:flex-row md:gap-2">
-                            <div class="w-full md:w-1/4">
-                              <label class="label label-required" for="form-horizontal-phone"> Phone </label>
-                            </div>
-                            <div class="w-full md:w-3/4">
-                              <input
-                                class="input"
-                                id="form-horizontal-phone"
-                                name="phone"
-                                type="text"
-                                placeholder="Phone"
-                              />
-                            </div>
-                          </div>
-                          <!-- Form Row: Message -->
-                          <div class="flex w-full flex-col items-center gap-1 md:flex-row md:gap-2">
-                            <div class="w-full self-start md:w-1/4">
-                              <label class="label label-required mt-2" for="form-horizontal-message"> Message </label>
-                            </div>
-                            <div class="w-full md:w-3/4">
-                              <textarea
-                                class="textarea"
-                                name="message"
-                                id="form-horizontal-message"
-                                placeholder="Message"
-                              ></textarea>
-                            </div>
+                          <div class="w-full md:w-3/4">
+                            <input
+                              class="input"
+                              id="form-horizontal-full-name"
+                              name="full-name"
+                              type="text"
+                              placeholder="Full name"
+                            />
                           </div>
                         </div>
-                        <!-- Form Footer -->
-                        <div class="mt-6 flex w-full items-center justify-end">
-                          <button class="btn btn-primary" type="submit">Submit</button>
+                        <!-- Form Row: Company -->
+                        <div class="flex w-full flex-col items-center gap-1 md:flex-row md:gap-2">
+                          <div class="w-full md:w-1/4">
+                            <label class="label label-required" for="form-horizontal-company"> Company </label>
+                          </div>
+                          <div class="w-full md:w-3/4">
+                            <input
+                              class="input"
+                              id="form-horizontal-company"
+                              name="company"
+                              type="text"
+                              placeholder="Company"
+                            />
+                          </div>
                         </div>
-                      </form>
-                    </div>
+                        <!-- Form Row: Email -->
+                        <div class="flex w-full flex-col items-center gap-1 md:flex-row md:gap-2">
+                          <div class="w-full md:w-1/4">
+                            <label class="label label-required" for="form-horizontal-email"> Email </label>
+                          </div>
+                          <div class="w-full md:w-3/4">
+                            <input
+                              class="input"
+                              id="form-horizontal-email"
+                              name="email"
+                              type="text"
+                              placeholder="Email"
+                            />
+                          </div>
+                        </div>
+                        <!-- Form Row: Phone -->
+                        <div class="flex w-full flex-col items-center gap-1 md:flex-row md:gap-2">
+                          <div class="w-full md:w-1/4">
+                            <label class="label label-required" for="form-horizontal-phone"> Phone </label>
+                          </div>
+                          <div class="w-full md:w-3/4">
+                            <input
+                              class="input"
+                              id="form-horizontal-phone"
+                              name="phone"
+                              type="text"
+                              placeholder="Phone"
+                            />
+                          </div>
+                        </div>
+                        <!-- Form Row: Message -->
+                        <div class="flex w-full flex-col items-center gap-1 md:flex-row md:gap-2">
+                          <div class="w-full self-start md:w-1/4">
+                            <label class="label label-required mt-2" for="form-horizontal-message"> Message </label>
+                          </div>
+                          <div class="w-full md:w-3/4">
+                            <textarea
+                              class="textarea"
+                              name="message"
+                              id="form-horizontal-message"
+                              placeholder="Message"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Form Footer -->
+                      <div class="mt-6 flex w-full items-center justify-end">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -1150,7 +1142,7 @@
                     <div class="code-viewer-content overflow-auto">
                       <form
                         id="form-with-multiple-column"
-                        class="w-[50rem] mx-auto rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
+                        class="max-w-full rounded-primary border border-slate-300 bg-white p-4 shadow dark:border-slate-600 dark:bg-slate-800"
                         action=""
                       >
                         <!-- Form Body -->
@@ -1245,7 +1237,7 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content overflow-auto">
-                      <div class="w-[50rem] mx-auto rounded-primary bg-white shadow dark:bg-slate-800">
+                      <div class="max-w-full min-w-[26rem] rounded-primary bg-white shadow dark:bg-slate-800">
                         <div class="tabs">
                           <ul class="tabs-list">
                             <li class="tabs-item">
