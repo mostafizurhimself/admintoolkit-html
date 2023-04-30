@@ -758,16 +758,16 @@
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Invoice Create Start -->
-            <div class="grid grid-cols-1 gap-6 lg:grid-cols-4">
+            <!-- Invoice Create Starts -->
+            <div class="grid grid-cols-1 gap-6 xl:grid-cols-4">
               <!--Left Side Div Starts -->
-              <div class="col-span-1 lg:col-span-3">
+              <div class="col-span-1 xl:col-span-3">
                 <div class="card">
                   <div class="card-body space-y-6">
                     <!-- Invoice Header Starts -->
                     <div class="flex flex-col justify-between p-1 md:flex-row">
+                      <!-- Logo Starts -->
                       <div class="flex items-center justify-center md:justify-start">
-                        <!-- Logo Starts -->
                         <div class="flex h-16 w-full items-center gap-4 pr-4">
                           <span class="inline-block flex-shrink-0">
                             <img src="./images/logo-small.svg" alt="logo" class="h-[45px]" />
@@ -781,33 +781,32 @@
                             <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
                           </div>
                         </div>
-                        <!-- Logo Ends -->
                       </div>
-                      <div class="flex flex-col items-start justify-center gap-3 md:items-end">
+                      <!-- Logo Ends -->
+                      
+                      <!-- Title and Date Start -->
+                      <div class="flex flex-col items-start gap-3 md:items-end">
                         <h4>Invoice #1001</h4>
-                        <div class="flex items-center justify-end gap-3">
-                          <label for="invoice-date" class="label font-medium"> Date: </label>
-                          <div class="max-w-xs">
-                            <input
-                              id="invoice-date"
-                              class="input input-date bg-white dark:bg-slate-800"
-                              type="text"
-                              placeholder="YYYY-MM-DD"
-                            />
-                          </div>
+                        <div class="w-full flex flex-col items-start md:flex-row sm:items-center gap-2">
+                          <label for="invoice-date" class="w-full md:w-1/4 label md:text-right font-medium">Date:</label>
+                          <input
+                            id="invoice-date"
+                            class="input input-date bg-white dark:bg-slate-800"
+                            type="text"
+                            placeholder="YYYY-MM-DD"
+                          />
                         </div>
-                        <div class="flex items-center justify-end gap-3">
-                          <label for="invoice-due-date" class="label font-medium"> Due Date: </label>
-                          <div class="max-w-xs">
-                            <input
-                              id="invoice-due-date"
-                              class="input input-date bg-white dark:bg-slate-800"
-                              type="text"
-                              placeholder="YYYY-MM-DD"
-                            />
-                          </div>
+                        <div class="w-full flex flex-col items-start md:flex-row sm:items-center gap-2">
+                          <label for="invoice-due-date" class="w-full md:w-1/4 label md:text-right font-medium">Due Date:</label>
+                          <input
+                            id="invoice-due-date"
+                            class="input input-date bg-white dark:bg-slate-800"
+                            type="text"
+                            placeholder="YYYY-MM-DD"
+                          />
                         </div>
                       </div>
+                      <!-- Title and Date End -->
                     </div>
                     <!-- Invoice Header Ends -->
 
@@ -816,20 +815,29 @@
                       <div class="flex w-full flex-col items-start justify-center md:mb-0 md:w-2/3 md:justify-center">
                         <p class="text-xs font-medium uppercase text-slate-400">BILLED FROM</p>
                         <h6 class="my-1">Admin Toolkit</h6>
-                        <p class="text-sm font-normal text-slate-600 dark:text-slate-300">
-                          123 Example Road, Example - 1234
+                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                          206 Yonge St, Toronto - M4S 2A3
                         </p>
-                        <p class="text-sm font-normal text-slate-600 dark:text-slate-300">Tel No: 123 123 123 123</p>
-                        <p class="text-sm font-normal text-slate-600 dark:text-slate-300">Email: johndoe@example.com</p>
+                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                          Tel No: (317) 745-1499
+                        </p>
+                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                          Email: info@admintoolkit.com
+                        </p>
                       </div>
+
                       <div class="flex w-full flex-col items-start justify-center md:w-1/3 md:items-end">
                         <p class="text-xs font-medium uppercase text-slate-400">BILLED TO</p>
                         <h6 class="my-1">John Doe</h6>
-                        <p class="text-sm font-normal text-slate-600 dark:text-slate-300">
-                          123 Example Road, Example - 1234
+                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                          206 Yonge St, Toronto - M4S 2A3
                         </p>
-                        <p class="text-sm font-normal text-slate-600 dark:text-slate-300">Tel No: 123 123 123 123</p>
-                        <p class="text-sm font-normal text-slate-600 dark:text-slate-300">Email: johndoe@example.com</p>
+                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                          Tel No: (317) 745-1499
+                        </p>
+                        <p class="text-sm font-normal whitespace-nowrap text-slate-600 dark:text-slate-300">
+                          Email: johndoe@example.com
+                        </p>
                       </div>
                     </div>
                     <!-- Invoice Info Ends  -->
@@ -1020,6 +1028,7 @@
                         <div class="toggle-body"></div>
                       </label>
                     </div>
+
                     <!-- Charge Fee  -->
                     <div class="flex w-full justify-between">
                       <span class="label text-sm font-medium text-slate-400">Charge Late Fee</span>
@@ -1033,33 +1042,33 @@
                         <div class="toggle-body"></div>
                       </label>
                     </div>
-                    <!-- Save Invoice  -->
-                    <div class="w-full">
+
+                    <!-- Save And Print Invoice  -->
+                    <div class="flex flex-col 2xl:flex-row gap-4">
                       <button class="btn btn-primary w-full font-medium">
                         <i class="h-4" data-feather="save"></i>
-                        Save invoice
+                        <span>Save</span>
                       </button>
-                    </div>
-                    <!-- Save & Print Invoice  -->
-                    <div class="w-full">
+
                       <button class="btn btn-success w-full font-medium">
                         <i class="h-4" data-feather="printer"></i>
-                        Save & Print
+                        <span>Print</span>
                       </button>
                     </div>
+
                     <!-- Preview Invoice  -->
                     <div class="w-full">
                       <button class="btn btn-outline-primary w-full font-medium">
-                        <i class="h-4" data-feather="file-text"></i>
-                        Preview Invoice
+                        <i class="h-4" data-feather="eye"></i>
+                        <span>Preview</span>
                       </button>
-                    </div>
+                    </div>                   
                   </div>
                 </div>
               </div>
               <!--Right Side Div Ends -->
             </div>
-            <!-- Invoice Create End -->
+            <!-- Invoice Create Ends -->
           </main>
           <!-- Main Content Ends -->
 
