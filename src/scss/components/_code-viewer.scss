@@ -5,7 +5,7 @@
     @apply w-full rounded-primary border bg-white duration-300 dark:border-slate-700 dark:bg-slate-800;
 
     &-content {
-      @apply rounded-t-primary bg-slate-50 p-4 dark:bg-slate-900 sm:p-6;
+      @apply overflow-auto rounded-t-primary bg-slate-50 p-4 dark:bg-slate-900 sm:p-6;
     }
 
     &-source {
@@ -27,7 +27,7 @@
         @apply mt-4 overflow-hidden overflow-x-auto whitespace-nowrap rounded;
 
         code {
-          @apply relative w-full min-w-max whitespace-pre-wrap p-4 text-base dark:bg-slate-900;
+          @apply relative w-full min-w-max whitespace-pre-wrap bg-slate-900 p-4 text-base text-slate-200;
         }
       }
     }

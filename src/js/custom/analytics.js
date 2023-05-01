@@ -143,7 +143,7 @@ const activeUsersChartOptions = {
     position: 'bottom',
     horizontalAlign: 'center',
     itemMargin: {
-      horizontal: 20,
+      horizontal: 10,
     },
     markers: {
       width: 15,
@@ -158,9 +158,9 @@ const activeUsersChartOptions = {
       const percentage = ((value / total) * 100).toFixed(1);
 
       return `
-        <div class="ml-2">
-          <p class="text-slate-700 text-base font-semibold dark:text-slate-300">${percentage}%</p>
-          <p class="text-sm">${name}</p>
+        <div class="ml-1">
+          <p class="text-slate-700 text-sm font-semibold dark:text-slate-300">${percentage}%</p>
+          <p class="text-xs">${name}</p>
         </div>
       `;
     },
