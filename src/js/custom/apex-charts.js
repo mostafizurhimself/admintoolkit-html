@@ -1,6 +1,7 @@
 import themeConfig from '@tailwind.config';
 import ApexCharts from 'apexcharts';
 import colors from 'tailwindcss/colors';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
 
@@ -24,7 +25,7 @@ const chartOptions = {
     series: [
       {
         name: 'Desktops',
-        data: [10, 41, 80, 72, 62, 69, 91, 148, 120, 110, 150, 200],
+        data: [10, 45, 65, 55, 95, 75, 95, 85, 145],
       },
     ],
     chart: {
@@ -53,7 +54,7 @@ const chartOptions = {
       borderColor: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
     },
     xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
       axisBorder: {
         color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
       },
@@ -181,15 +182,15 @@ const chartOptions = {
     series: [
       {
         name: 'Net Profit',
-        data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 70, 76, 80],
+        data: [45, 55, 58, 55, 60, 58, 65, 60, 70],
       },
       {
         name: 'Revenue',
-        data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 100, 86, 106],
+        data: [75, 85, 100, 95, 85, 105, 90, 115, 95],
       },
       {
         name: 'Free Cash Flow',
-        data: [35, 41, 36, 26, 45, 48, 52, 53, 41, 40, 36, 26],
+        data: [35, 40, 35, 25, 45, 50, 52, 55, 45],
       },
     ],
     chart: {
@@ -216,7 +217,7 @@ const chartOptions = {
       colors: ['transparent'],
     },
     xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
       axisBorder: {
         color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
       },
@@ -439,7 +440,7 @@ const chartOptions = {
     },
   },
   pieChart: {
-    series: [44, 55, 13, 43, 22],
+    series: [45, 65, 15, 35, 25],
     chart: {
       width: 380,
       type: 'pie',
@@ -453,15 +454,15 @@ const chartOptions = {
       width: 0,
     },
     labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+    legend: {
+      position: 'bottom',
+    },
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: Number(defaultTheme.screens.sm.slice(0, -'px'.length)),
         options: {
           chart: {
-            width: 200,
-          },
-          legend: {
-            position: 'bottom',
+            width: 300,
           },
         },
       },
@@ -481,15 +482,15 @@ const chartOptions = {
     stroke: {
       width: 0,
     },
+    legend: {
+      position: 'bottom',
+    },
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: Number(defaultTheme.screens.sm.slice(0, -'px'.length)),
         options: {
           chart: {
-            width: 200,
-          },
-          legend: {
-            position: 'bottom',
+            width: 300,
           },
         },
       },
@@ -504,47 +505,43 @@ const lineChartOptionsTemplate = `
 {
   series: [
     {
-      name: "Desktops",
-      data: [10, 41, 80, 72, 62, 69, 91, 148, 120, 110, 150, 200],
+      name: 'Desktops',
+      data: [10, 45, 65, 55, 95, 75, 95, 85, 145],
     },
   ],
   chart: {
     height: 350,
-    type: "line",
+    type: 'line',
     zoom: {
       enabled: false,
     },
     toolbar: {
       show: false,
     },
+    fontFamily: themeConfig.theme.fontFamily.sans,
   },
   dataLabels: {
     enabled: false,
   },
   stroke: {
-    curve: "straight",
+    width: 2,
+    curve: 'smooth',
   },
   grid: {
     row: {
-      colors: ["transparent"],
+      colors: ['transparent'],
       opacity: 0.5,
     },
+    borderColor: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
   },
   xaxis: {
-    categories: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+    axisBorder: {
+      color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+    },
+    axisTicks: {
+      color: theme === 'dark' ? colors.slate['600'] : colors.slate['200'],
+    },
   },
 }
 `;

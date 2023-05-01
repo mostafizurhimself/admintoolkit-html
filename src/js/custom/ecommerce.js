@@ -160,7 +160,7 @@ const orderStatusChartOptions = {
       const percentage = ((value / total) * 100).toFixed(1);
 
       return `
-        <div class="ml-2">
+        <div class="ml-1">
           <p class="text-slate-700 text-sm font-semibold dark:text-slate-300">${percentage}%</p>
           <p class="text-xs">${name}</p>
         </div>
@@ -260,8 +260,8 @@ const revenueChartOptions = {
   plotOptions: {
     bar: {
       horizontal: false,
-      columnWidth: '20px',
-      borderRadius: 5,
+      columnWidth: '12px',
+      borderRadius: 6,
       borderRadiusApplication: 'around',
       borderRadiusWhenStacked: 'all',
       startingShape: 'rounded',
