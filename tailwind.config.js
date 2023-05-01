@@ -31,7 +31,7 @@ export default {
         lg: '100%',
         xl: '100%',
         "2xl": "1536px",
-      }
+      },
     },
     extend: {
       transitionProperty: {
@@ -133,6 +133,9 @@ export default {
                 color: theme('colors.primary.600'),
               },
             },
+            table: {
+              overflowX: 'auto',
+            }
           },
         },
       }),

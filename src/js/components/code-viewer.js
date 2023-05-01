@@ -42,7 +42,7 @@ class CodeViewer {
     // Highlight the code
     const code = this.target.querySelector('.code-viewer-footer code');
     code.innerHTML = sourceCode;
-    hljs.highlightBlock(code);
+    hljs.highlightElement(code);
 
     // Add copy to clipboard functionality
     const copyBtn = this.target.querySelector('#btn-copy');

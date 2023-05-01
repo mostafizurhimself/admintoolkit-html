@@ -5,15 +5,15 @@
 
     // Direct elements
     &-header {
-      @apply border-b border-b-slate-200 px-6 py-4 dark:border-slate-700;
+      @apply border-b border-b-slate-200 px-4 py-4 dark:border-slate-700 sm:px-6;
     }
 
     &-body {
-      @apply p-6;
+      @apply p-4 sm:p-6;
     }
 
     &-footer {
-      @apply flex justify-end gap-2 border-t border-slate-200 px-6 py-4 dark:border-slate-700;
+      @apply flex justify-end gap-2 border-t border-slate-200 px-4 py-4 dark:border-slate-700 sm:px-6;
     }
 
     // Child elements

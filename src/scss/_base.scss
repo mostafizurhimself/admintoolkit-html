@@ -26,7 +26,7 @@ body {
     }
 
     .footer {
-      @apply mt-auto flex flex-wrap items-center justify-between bg-white px-6 py-5 text-slate-500 dark:bg-slate-800;
+      @apply mt-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 bg-white px-4 py-5 text-slate-500 dark:bg-slate-800 sm:justify-between sm:px-6;
     }
   }
 }
