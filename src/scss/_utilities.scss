@@ -1,6 +1,6 @@
 @layer utilities {
   .container-fluid {
-    @apply w-full px-6;
+    @apply w-full px-4 sm:px-6;
   }
 
   .zero-sr-only {
