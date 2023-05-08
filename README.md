@@ -29,7 +29,7 @@ Overall, **AdminToolkit** is an excellent choice for developers who are looking 
 ## 📌 Installation
 **1. Clone the repository**
 ```bash
-git clone git@github.com:tech-masih/admintoolkit-html.git
+git clone git@github.com:mostafizurhimself/admintoolkit-html.git
 ```
 
 **2. Install dependencies**
