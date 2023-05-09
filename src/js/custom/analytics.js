@@ -142,9 +142,9 @@ const activeUsersChartOptions = {
   legend: {
     position: 'bottom',
     horizontalAlign: 'center',
-    itemMargin: {
-      horizontal: 10,
-    },
+    // itemMargin: {
+    //   horizontal: 10,
+    // },
     markers: {
       width: 10,
       height: 10,
