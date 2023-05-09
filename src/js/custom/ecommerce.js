@@ -84,7 +84,7 @@ salesReportChartLegends.forEach((legend) => {
 // ========Order Status Chart Start ===========
 const orderStatusChartOptions = {
   series: [25000, 15000, 5000],
-  labels: ['Completed', 'In Progress', 'Canceled'],
+  labels: ['Completed', 'Pending', 'Canceled'],
   colors: [themeColors.primary['500'], themeColors.warning['400'], themeColors.danger['400']],
   chart: {
     type: 'donut',
@@ -101,6 +101,7 @@ const orderStatusChartOptions = {
   stroke: {
     width: 0,
   },
+
   plotOptions: {
     pie: {
       expandOnClick: false,
@@ -148,8 +149,8 @@ const orderStatusChartOptions = {
       horizontal: 10,
     },
     markers: {
-      width: 15,
-      height: 15,
+      width: 10,
+      height: 10,
     },
     formatter: function (name, opts) {
       const total = opts.w.globals.seriesTotals.reduce((a, b) => {
@@ -161,7 +162,7 @@ const orderStatusChartOptions = {
 
       return `
         <div class="ml-1">
-          <p class="text-slate-700 text-sm font-semibold dark:text-slate-300">${percentage}%</p>
+          <p class="text-slate-700 text-sm font-medium dark:text-slate-300">${percentage}%</p>
           <p class="text-xs">${name}</p>
         </div>
       `;
