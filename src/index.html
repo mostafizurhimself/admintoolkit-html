@@ -1,1750 +1,1633 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/logo-small.svg" type="image/svg+xml" />
-    <title>Analytics - Admin Toolkit</title>
-    <meta
-      name="description"
-      content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./scss/app.scss" />
-    <script>
-      if (
-        localStorage.getItem('theme') === 'dark' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    </script>
-  </head>
 
-  <body>
-    <div id="app">
-      <!-- Sidebar Starts -->
-      <aside class="sidebar">
-        <!-- Sidebar Header Starts -->
-        <div class="sidebar-header">
-          <div class="sidebar-logo-icon">
-            <img src="./images/logo-small.svg" alt="logo" class="h-[45px]" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./images/logo-small.svg" type="image/svg+xml" />
+  <title>Analytics - Admin Toolkit</title>
+  <meta name="description"
+    content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./scss/app.scss" />
+  <script>
+    if (
+      localStorage.getItem('theme') === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</head>
 
-          <div class="sidebar-logo-text">
-            <h1 class="flex text-xl">
-              <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
-              <span class="font-semibold text-primary-500">Toolkit</span>
-            </h1>
-
-            <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
-          </div>
+<body>
+  <div id="app">
+    <!-- Sidebar Starts -->
+    <aside class="sidebar">
+      <!-- Sidebar Header Starts -->
+      <div class="sidebar-header">
+        <div class="sidebar-logo-icon">
+          <img src="./images/logo-small.svg" alt="logo" class="h-[45px]" />
         </div>
-        <!-- Sidebar Header Ends -->
 
-        <!-- Sidebar Menu Starts -->
-        <ul class="sidebar-content">
-          <!-- Dashboard -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu active">
-              <span class="sidebar-menu-icon">
-                <i data-feather="home"></i>
-              </span>
-              <span class="sidebar-menu-text">Dashboard</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="/" class="sidebar-submenu-item active">Analytics</a>
-              </li>
-              <li>
-                <a href="./ecommerce.html" class="sidebar-submenu-item">Ecommerce</a>
-              </li>
-            </ul>
-          </li>
+        <div class="sidebar-logo-text">
+          <h1 class="flex text-xl">
+            <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
+            <span class="font-semibold text-primary-500">Toolkit</span>
+          </h1>
 
-          <div class="sidebar-menu-header">Applications</div>
+          <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+        </div>
+      </div>
+      <!-- Sidebar Header Ends -->
 
-          <!-- Email -->
-          <li>
-            <a href="./email.html" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="mail"></i>
-              </span>
-              <span class="sidebar-menu-text">Email</span>
-            </a>
-          </li>
-          <!-- Chat -->
-          <li>
-            <a href="./chat.html" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="message-square"></i>
-              </span>
-              <span class="sidebar-menu-text">Chat</span>
-            </a>
-          </li>
-          <!-- Calendar -->
-          <li>
-            <a href="./calendar.html" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="calendar"></i>
-              </span>
-              <span class="sidebar-menu-text">Calendar</span>
-            </a>
-          </li>
-          <!-- Invoice -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="file-text"></i>
-              </span>
-              <span class="sidebar-menu-text">Invoice</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./invoice-create.html" class="sidebar-submenu-item"> Create </a>
-              </li>
+      <!-- Sidebar Menu Starts -->
+      <ul class="sidebar-content">
+        <!-- Dashboard -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu active">
+            <span class="sidebar-menu-icon">
+              <i data-feather="home"></i>
+            </span>
+            <span class="sidebar-menu-text">Dashboard</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="/" class="sidebar-submenu-item active">Analytics</a>
+            </li>
+            <li>
+              <a href="./ecommerce.html" class="sidebar-submenu-item">Ecommerce</a>
+            </li>
+          </ul>
+        </li>
 
-              <li>
-                <a href="./invoice-details.html" class="sidebar-submenu-item"> Details </a>
-              </li>
-            </ul>
-          </li>
-          <!-- ecommnerce -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="shopping-bag"></i>
-              </span>
-              <span class="sidebar-menu-text">Ecommerce</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./product-list.html" class="sidebar-submenu-item"> Product List </a>
-              </li>
+        <div class="sidebar-menu-header">Applications</div>
 
-              <li>
-                <a href="./product-edit.html" class="sidebar-submenu-item"> Product Edit </a>
-              </li>
-              <li>
-                <a href="./order-list.html" class="sidebar-submenu-item"> Order List </a>
-              </li>
-              <li>
-                <a href="./order-details.html" class="sidebar-submenu-item"> Order Details </a>
-              </li>
-              <li>
-                <a href="./customer-list.html" class="sidebar-submenu-item"> Customer List </a>
-              </li>
-            </ul>
-          </li>
-          <!-- Users -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="users"></i>
-              </span>
-              <span class="sidebar-menu-text">Users</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./user-list.html" class="sidebar-submenu-item">List</a>
-              </li>
-              <li>
-                <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
-              </li>
-            </ul>
-          </li>
-          <!--  Commponents  -->
-          <div class="sidebar-menu-header">Components</div>
-          <!-- Common  -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="box"></i>
-              </span>
-              <span class="sidebar-menu-text">Common</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./accordion.html" class="sidebar-submenu-item"> Accordion </a>
-              </li>
-              <li>
-                <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
-              </li>
-              <li>
-                <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
-              </li>
-              <li>
-                <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
-              </li>
-              <li>
-                <a href="./button.html" class="sidebar-submenu-item">Button</a>
-              </li>
-              <li>
-                <a href="./card.html" class="sidebar-submenu-item">Card</a>
-              </li>
-              <li>
-                <a href="./carousel.html" class="sidebar-submenu-item"> Carousel </a>
-              </li>
+        <!-- Email -->
+        <li>
+          <a href="./email.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="mail"></i>
+            </span>
+            <span class="sidebar-menu-text">Email</span>
+          </a>
+        </li>
+        <!-- Chat -->
+        <li>
+          <a href="./chat.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="message-square"></i>
+            </span>
+            <span class="sidebar-menu-text">Chat</span>
+          </a>
+        </li>
+        <!-- Calendar -->
+        <li>
+          <a href="./calendar.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="calendar"></i>
+            </span>
+            <span class="sidebar-menu-text">Calendar</span>
+          </a>
+        </li>
+        <!-- Invoice -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="file-text"></i>
+            </span>
+            <span class="sidebar-menu-text">Invoice</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./invoice-create.html" class="sidebar-submenu-item"> Create </a>
+            </li>
 
-              <li>
-                <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
-              </li>
-              <li>
-                <a href="./dropdown.html" class="sidebar-submenu-item"> Dropdown </a>
-              </li>
-              <li>
-                <a href="./list-group.html" class="sidebar-submenu-item"> List Group </a>
-              </li>
-              <li>
-                <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
-              </li>
-              <li>
-                <a href="./pagination.html" class="sidebar-submenu-item"> Pagination </a>
-              </li>
-              <li>
-                <a href="./progress-bar.html" class="sidebar-submenu-item"> Progress </a>
-              </li>
+            <li>
+              <a href="./invoice-details.html" class="sidebar-submenu-item"> Details </a>
+            </li>
+          </ul>
+        </li>
+        <!-- ecommnerce -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="shopping-bag"></i>
+            </span>
+            <span class="sidebar-menu-text">Ecommerce</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./product-list.html" class="sidebar-submenu-item"> Product List </a>
+            </li>
 
-              <li>
-                <a href="./spinner.html" class="sidebar-submenu-item"> Spinner </a>
-              </li>
-              <li>
-                <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
-              </li>
-              <li>
-                <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
-              </li>
-              <li>
-                <a href="./tooltip.html" class="sidebar-submenu-item"> Tooltip </a>
-              </li>
-            </ul>
-          </li>
-          <!-- Forms  -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="edit"></i>
-              </span>
-              <span class="sidebar-menu-text">Forms</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./input.html" class="sidebar-submenu-item">Input</a>
-              </li>
-              <li>
-                <a href="./input-group.html" class="sidebar-submenu-item"> Input Group </a>
-              </li>
-              <li>
-                <a href="./textarea.html" class="sidebar-submenu-item"> Textarea </a>
-              </li>
-              <li>
-                <a href="./checkbox.html" class="sidebar-submenu-item"> Checkbox </a>
-              </li>
-              <li>
-                <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
-              </li>
-              <li>
-                <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
-              </li>
-              <li>
-                <a href="./select.html" class="sidebar-submenu-item">Select</a>
-              </li>
+            <li>
+              <a href="./product-edit.html" class="sidebar-submenu-item"> Product Edit </a>
+            </li>
+            <li>
+              <a href="./order-list.html" class="sidebar-submenu-item"> Order List </a>
+            </li>
+            <li>
+              <a href="./order-details.html" class="sidebar-submenu-item"> Order Details </a>
+            </li>
+            <li>
+              <a href="./customer-list.html" class="sidebar-submenu-item"> Customer List </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Users -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="users"></i>
+            </span>
+            <span class="sidebar-menu-text">Users</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./user-list.html" class="sidebar-submenu-item">List</a>
+            </li>
+            <li>
+              <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
+            </li>
+          </ul>
+        </li>
+        <!--  Commponents  -->
+        <div class="sidebar-menu-header">Components</div>
+        <!-- Common  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="box"></i>
+            </span>
+            <span class="sidebar-menu-text">Common</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./accordion.html" class="sidebar-submenu-item"> Accordion </a>
+            </li>
+            <li>
+              <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
+            </li>
+            <li>
+              <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
+            </li>
+            <li>
+              <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
+            </li>
+            <li>
+              <a href="./button.html" class="sidebar-submenu-item">Button</a>
+            </li>
+            <li>
+              <a href="./card.html" class="sidebar-submenu-item">Card</a>
+            </li>
+            <li>
+              <a href="./carousel.html" class="sidebar-submenu-item"> Carousel </a>
+            </li>
 
-              <li>
-                <a href="./datepicker.html" class="sidebar-submenu-item"> Datepicker </a>
-              </li>
-              <li>
-                <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
-              </li>
-              <li>
-                <a href="./uploader.html" class="sidebar-submenu-item"> Uploader </a>
-              </li>
-              <li>
-                <a href="./form-layout.html" class="sidebar-submenu-item">Layout</a>
-              </li>
-              <li>
-                <a href="./form-validation.html" class="sidebar-submenu-item"> Validation </a>
-              </li>
-            </ul>
-          </li>
-          <!-- Tables  -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="list"></i>
-              </span>
-              <span class="sidebar-menu-text">Tables</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./basic-table.html" class="sidebar-submenu-item"> Basic Table </a>
-              </li>
-              <li>
-                <a href="./data-table.html" class="sidebar-submenu-item"> Data Table </a>
-              </li>
-            </ul>
-          </li>
-          <!-- Charts  -->
-          <li>
-            <a href="./chart.html" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="pie-chart"></i>
-              </span>
-              <span class="sidebar-menu-text">Charts</span>
-            </a>
-          </li>
-          <!-- Icons-->
-          <li>
-            <a href="./icons.html" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="italic"></i>
-              </span>
-              <span class="sidebar-menu-text">Icons</span>
-            </a>
-          </li>
-          <!-- Typography-->
-          <li>
-            <a href="./typography.html" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="type"></i>
-              </span>
-              <span class="sidebar-menu-text">Typography</span>
-            </a>
-          </li>
-          <!--  Pages  -->
-          <div class="sidebar-menu-header">Pages</div>
-          <!-- Authentication  -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="lock"></i>
-              </span>
-              <span class="sidebar-menu-text">Authentication</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./login.html" class="sidebar-submenu-item">Login</a>
-              </li>
-              <li>
-                <a href="./register.html" class="sidebar-submenu-item"> Register </a>
-              </li>
-              <li>
-                <a href="./recover-password.html" class="sidebar-submenu-item"> Forgot Password </a>
-              </li>
-              <li>
-                <a href="./reset-password.html" class="sidebar-submenu-item"> Reset Password </a>
-              </li>
-            </ul>
-          </li>
-          <!-- Miscellaneous  -->
-          <li>
-            <a href="javascript:void(0);" class="sidebar-menu">
-              <span class="sidebar-menu-icon">
-                <i data-feather="grid"></i>
-              </span>
-              <span class="sidebar-menu-text">Miscellaneous</span>
-              <span class="sidebar-menu-arrow">
-                <i data-feather="chevron-right"></i>
-              </span>
-            </a>
-            <ul class="sidebar-submenu">
-              <li>
-                <a href="./starter.html" class="sidebar-submenu-item"> Starter Page </a>
-              </li>
-              <li>
-                <a href="./comming-soon.html" class="sidebar-submenu-item"> Coming Soon </a>
-              </li>
-              <li>
-                <a href="./maintenance.html" class="sidebar-submenu-item"> Maintenance </a>
-              </li>
-              <li>
-                <a href="./404-error.html" class="sidebar-submenu-item"> Error 404 </a>
-              </li>
-              <li>
-                <a href="./500-error.html" class="sidebar-submenu-item"> Error 500 </a>
-              </li>
-              <li>
-                <a href="./not-authorized.html" class="sidebar-submenu-item"> Not Authorized </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <!-- Sidebar Menu Ends -->
-      </aside>
-      <!-- Sidebar Ends -->
+            <li>
+              <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
+            </li>
+            <li>
+              <a href="./dropdown.html" class="sidebar-submenu-item"> Dropdown </a>
+            </li>
+            <li>
+              <a href="./list-group.html" class="sidebar-submenu-item"> List Group </a>
+            </li>
+            <li>
+              <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
+            </li>
+            <li>
+              <a href="./pagination.html" class="sidebar-submenu-item"> Pagination </a>
+            </li>
+            <li>
+              <a href="./progress-bar.html" class="sidebar-submenu-item"> Progress </a>
+            </li>
 
-      <!-- Wrapper Starts -->
-      <div class="wrapper">
-        <!-- Header Starts -->
-        <header class="header">
-          <div class="container-fluid flex items-center justify-between">
-            <!-- Sidebar Toggle & Search Starts -->
-            <div class="flex items-center space-x-6 overflow-visible">
-              <button class="sidebar-toggle">
-                <span class="flex space-x-4">
-                  <svg
-                    stroke="currentColor"
-                    fill="none"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    height="22"
-                    width="22"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16"
-                    ></path>
-                  </svg>
-                </span>
+            <li>
+              <a href="./spinner.html" class="sidebar-submenu-item"> Spinner </a>
+            </li>
+            <li>
+              <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
+            </li>
+            <li>
+              <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
+            </li>
+            <li>
+              <a href="./tooltip.html" class="sidebar-submenu-item"> Tooltip </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Forms  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="edit"></i>
+            </span>
+            <span class="sidebar-menu-text">Forms</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./input.html" class="sidebar-submenu-item">Input</a>
+            </li>
+            <li>
+              <a href="./input-group.html" class="sidebar-submenu-item"> Input Group </a>
+            </li>
+            <li>
+              <a href="./textarea.html" class="sidebar-submenu-item"> Textarea </a>
+            </li>
+            <li>
+              <a href="./checkbox.html" class="sidebar-submenu-item"> Checkbox </a>
+            </li>
+            <li>
+              <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
+            </li>
+            <li>
+              <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
+            </li>
+            <li>
+              <a href="./select.html" class="sidebar-submenu-item">Select</a>
+            </li>
+
+            <li>
+              <a href="./datepicker.html" class="sidebar-submenu-item"> Datepicker </a>
+            </li>
+            <li>
+              <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
+            </li>
+            <li>
+              <a href="./uploader.html" class="sidebar-submenu-item"> Uploader </a>
+            </li>
+            <li>
+              <a href="./form-layout.html" class="sidebar-submenu-item">Layout</a>
+            </li>
+            <li>
+              <a href="./form-validation.html" class="sidebar-submenu-item"> Validation </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Tables  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="list"></i>
+            </span>
+            <span class="sidebar-menu-text">Tables</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./basic-table.html" class="sidebar-submenu-item"> Basic Table </a>
+            </li>
+            <li>
+              <a href="./data-table.html" class="sidebar-submenu-item"> Data Table </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Charts  -->
+        <li>
+          <a href="./chart.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="pie-chart"></i>
+            </span>
+            <span class="sidebar-menu-text">Charts</span>
+          </a>
+        </li>
+        <!-- Icons-->
+        <li>
+          <a href="./icons.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="italic"></i>
+            </span>
+            <span class="sidebar-menu-text">Icons</span>
+          </a>
+        </li>
+        <!-- Typography-->
+        <li>
+          <a href="./typography.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="type"></i>
+            </span>
+            <span class="sidebar-menu-text">Typography</span>
+          </a>
+        </li>
+        <!--  Pages  -->
+        <div class="sidebar-menu-header">Pages</div>
+        <!-- Authentication  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="lock"></i>
+            </span>
+            <span class="sidebar-menu-text">Authentication</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./login.html" class="sidebar-submenu-item">Login</a>
+            </li>
+            <li>
+              <a href="./register.html" class="sidebar-submenu-item"> Register </a>
+            </li>
+            <li>
+              <a href="./recover-password.html" class="sidebar-submenu-item"> Forgot Password </a>
+            </li>
+            <li>
+              <a href="./reset-password.html" class="sidebar-submenu-item"> Reset Password </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Miscellaneous  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="grid"></i>
+            </span>
+            <span class="sidebar-menu-text">Miscellaneous</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./starter.html" class="sidebar-submenu-item"> Starter Page </a>
+            </li>
+            <li>
+              <a href="./comming-soon.html" class="sidebar-submenu-item"> Coming Soon </a>
+            </li>
+            <li>
+              <a href="./maintenance.html" class="sidebar-submenu-item"> Maintenance </a>
+            </li>
+            <li>
+              <a href="./404-error.html" class="sidebar-submenu-item"> Error 404 </a>
+            </li>
+            <li>
+              <a href="./500-error.html" class="sidebar-submenu-item"> Error 500 </a>
+            </li>
+            <li>
+              <a href="./not-authorized.html" class="sidebar-submenu-item"> Not Authorized </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Sidebar Menu Ends -->
+    </aside>
+    <!-- Sidebar Ends -->
+
+    <!-- Wrapper Starts -->
+    <div class="wrapper">
+      <!-- Header Starts -->
+      <header class="header">
+        <div class="container-fluid flex items-center justify-between">
+          <!-- Sidebar Toggle & Search Starts -->
+          <div class="flex items-center space-x-6 overflow-visible">
+            <button class="sidebar-toggle">
+              <span class="flex space-x-4">
+                <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
+                  </path>
+                </svg>
+              </span>
+            </button>
+
+            <!-- Mobile Search Starts -->
+            <div class="sm:hidden">
+              <button type="button" data-trigger="search-modal"
+                class="flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300">
+                <i width="22" height="22" data-feather="search"></i>
               </button>
-
-              <!-- Mobile Search Starts -->
-              <div class="sm:hidden">
-                <button
-                  type="button"
-                  data-trigger="search-modal"
-                  class="flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300"
-                >
-                  <i width="22" height="22" data-feather="search"></i>
-                </button>
-              </div>
-              <!-- Mobile Search Ends -->
-
-              <!-- Searchbar Start -->
-              <button
-                type="button"
-                data-trigger="search-modal"
-                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex"
-              >
-                <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
-                <span class="ml-2 text-sm text-slate-400">Search</span>
-              </button>
-              <!-- Searchbar Ends -->
             </div>
-            <!-- Sidebar Toggle & Search Ends -->
+            <!-- Mobile Search Ends -->
 
-            <!-- Header Options Starts -->
-            <div class="flex items-center">
-              <!-- Language Dropdown Starts -->
-              <div class="dropdown" data-strategy="absolute">
-                <div class="dropdown-toggle px-3">
-                  <button
-                    type="button"
-                    class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-700 focus:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-slate-300"
-                  >
-                    <span class="fi fi-gb"></span>
-                    <span class="hidden font-medium md:inline-block">English</span>
-                    <span class="inline-block font-medium md:hidden">EN</span>
-                  </button>
-                </div>
-
-                <div class="dropdown-content mt-3 w-40">
-                  <ul class="dropdown-list">
-                    <li class="dropdown-list-item">
-                      <button class="dropdown-btn" type="button">
-                        <span class="fi fi-gb"></span>
-                        <span class="">English</span>
-                      </button>
-                    </li>
-                    <li class="dropdown-list-item">
-                      <button class="dropdown-btn" type="button">
-                        <span class="fi fi-de"></span>
-                        <span class="">German</span>
-                      </button>
-                    </li>
-                    <li class="dropdown-list-item">
-                      <button class="dropdown-btn" type="button">
-                        <span class="fi fi-gf"></span>
-                        <span class="">French</span>
-                      </button>
-                    </li>
-                    <li class="dropdown-list-item">
-                      <button class="dropdown-btn" type="button">
-                        <span class="fi fi-sa"></span>
-                        <span class="">Arabic</span>
-                      </button>
-                    </li>
-                    <li class="dropdown-list-item">
-                      <button class="dropdown-btn" type="button">
-                        <span class="fi fi-cn"></span>
-                        <span class="">Chinese</span>
-                      </button>
-                    </li>
-                    <li class="dropdown-list-item">
-                      <button class="dropdown-btn" type="button">
-                        <span class="fi fi-bd"></span>
-                        <span class="">Bangla</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Language Dropdown Ends -->
-
-              <!-- Dark Mood Toggle Starts -->
-              <div class="dropdown" data-strategy="absolute" id="theme-switcher-dropdown">
-                <button
-                  class="dropdown-toggle px-3 text-slate-500 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
-                  type="button"
-                >
-                  <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
-                  <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
-                </button>
-
-                <div class="dropdown-content mt-3 w-36">
-                  <ul class="dropdown-list">
-                    <li class="dropdown-list-item">
-                      <button type="buttton" class="dropdown-btn" data-theme-mode="light">
-                        <i width="16" height="16" data-feather="sun"></i>
-                        <span>Light</span>
-                      </button>
-                    </li>
-
-                    <li class="dropdown-list-item">
-                      <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
-                        <i width="16" height="16" data-feather="moon"></i>
-                        <span>Dark</span>
-                      </button>
-                    </li>
-
-                    <li class="dropdown-list-item">
-                      <button type="buttton" class="dropdown-btn" data-theme-mode="system">
-                        <i width="16" height="16" data-feather="monitor"></i>
-                        <span>System</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Dark Mood Toggle Ends -->
-
-              <!-- Notification Dropdown Starts -->
-              <div class="dropdown -mt-0.5" data-strategy="absolute">
-                <div class="dropdown-toggle px-3">
-                  <button
-                    class="relative mt-1 flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
-                  >
-                    <i width="24" height="24" data-feather="bell"></i>
-                    <span
-                      class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200"
-                    >
-                      5
-                    </span>
-                  </button>
-                </div>
-
-                <div class="dropdown-content mt-3 w-[17.5rem] divide-y dark:divide-slate-700 sm:w-80">
-                  <div class="flex items-center justify-between px-4 py-4">
-                    <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
-                    <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
-                      Clear All
-                    </button>
-                  </div>
-
-                  <div class="h-80 w-full" data-simplebar>
-                    <ul>
-                      <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                      >
-                        <div
-                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500"
-                        >
-                          <i data-feather="alert-circle" width="20" height="20"></i>
-                        </div>
-
-                        <div>
-                          <h6 class="text-sm font-normal">New order received</h6>
-                          <p class="text-xs text-slate-400">Order #1234 has been placed</p>
-                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <i data-feather="clock" width="1em" height="1em"></i>
-                            <span>2 min ago</span>
-                          </p>
-                        </div>
-                      </li>
-
-                      <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                      >
-                        <div
-                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500"
-                        >
-                          <i data-feather="alert-triangle" width="20" height="20"></i>
-                        </div>
-
-                        <div>
-                          <h6 class="text-sm font-normal">High CPU usage</h6>
-                          <p class="text-xs text-slate-400">CPU usage is at 92%</p>
-                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <i data-feather="clock" width="1em" height="1em"></i>
-                            <span>5 min ago</span>
-                          </p>
-                        </div>
-                      </li>
-
-                      <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                      >
-                        <div
-                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
-                        >
-                          <i data-feather="check-circle" width="20" height="20"></i>
-                        </div>
-
-                        <div>
-                          <h6 class="text-sm font-normal">Your order has been shipped</h6>
-                          <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
-                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <i data-feather="clock" width="1em" height="1em"></i>
-                            <span>10 min ago</span>
-                          </p>
-                        </div>
-                      </li>
-
-                      <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                      >
-                        <div
-                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500"
-                        >
-                          <i data-feather="x-circle" width="20" height="20"></i>
-                        </div>
-
-                        <div>
-                          <h6 class="text-sm font-normal">Something went wrong</h6>
-                          <p class="text-xs text-slate-400">Order #1234 has been placed</p>
-                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <i data-feather="clock" width="1em" height="1em"></i>
-                            <span>1 hour ago</span>
-                          </p>
-                        </div>
-                      </li>
-
-                      <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
-                      >
-                        <div
-                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
-                        >
-                          <i data-feather="check-circle" width="20" height="20"></i>
-                        </div>
-
-                        <div>
-                          <h6 class="text-sm font-normal">Your order has been shipped</h6>
-                          <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
-                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                            <i data-feather="clock" width="1em" height="1em"></i>
-                            <span>10 min ago</span>
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="px-4 py-2">
-                    <button class="btn btn-primary-plain btn-sm w-full" type="button">
-                      <span>View More</span>
-                      <i data-feather="arrow-right" width="1rem" height="1rem"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- Notification Dropdown Ends -->
-
-              <!-- Profile Dropdown Starts -->
-              <div class="dropdown" data-strategy="absolute">
-                <div class="dropdown-toggle pl-3">
-                  <button class="group relative flex items-center gap-x-1.5" type="button">
-                    <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
-                      <img
-                        class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
-                        src="./images/avatar1.png"
-                        alt="Avatar 1"
-                      />
-                    </div>
-                  </button>
-                </div>
-
-                <div class="dropdown-content mt-1 w-56 divide-y dark:divide-slate-600">
-                  <div class="px-4 py-3">
-                    <p class="text-sm">Signed in as</p>
-                    <p class="truncate text-sm font-medium">admin@example.com</p>
-                  </div>
-                  <div class="py-1">
-                    <a href="javascript:void(0)" class="dropdown-link">
-                      <i width="18" height="18" data-feather="user" class="text-slate-500"></i>
-                      <span>Profile</span>
-                    </a>
-                    <a href="javascript:void(0)" class="dropdown-link">
-                      <i width="18" height="18" data-feather="settings" class="text-slate-500"></i>
-                      <span>Settings</span>
-                    </a>
-                    <a href="javascript:void(0)" class="dropdown-link">
-                      <i width="18" height="18" data-feather="help-circle" class="text-slate-500"></i>
-                      <span>Support</span>
-                    </a>
-                  </div>
-                  <div class="py-1">
-                    <form method="POST" action="#">
-                      <button type="submit" class="dropdown-btn">
-                        <i width="18" height="18" data-feather="log-out" class="text-slate-500"></i>
-                        <span>Sign out</span>
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              <!-- Profile Dropdown Ends -->
-            </div>
-            <!-- Header Options Ends -->
+            <!-- Searchbar Start -->
+            <button type="button" data-trigger="search-modal"
+              class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex">
+              <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
+              <span class="ml-2 text-sm text-slate-400">Search</span>
+            </button>
+            <!-- Searchbar Ends -->
           </div>
-        </header>
-        <!-- Header Ends -->
+          <!-- Sidebar Toggle & Search Ends -->
 
-        <!-- Page Content Starts -->
-        <div class="content">
-          <!-- Main Content Starts -->
-          <main class="container flex-grow p-4 sm:p-6">
-            <!-- Page Title Starts -->
-            <div class="mb-6 flex flex-col justify-between gap-y-1 sm:flex-row sm:gap-y-0">
-              <h5>Analytics</h5>
+          <!-- Header Options Starts -->
+          <div class="flex items-center">
+            <!-- Language Dropdown Starts -->
+            <div class="dropdown" data-strategy="absolute">
+              <div class="dropdown-toggle px-3">
+                <button type="button"
+                  class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-700 focus:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-slate-300">
+                  <span class="fi fi-gb"></span>
+                  <span class="hidden font-medium md:inline-block">English</span>
+                  <span class="inline-block font-medium md:hidden">EN</span>
+                </button>
+              </div>
 
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="/">Home</a>
-                </li>
-                <li class="breadcrumb-item">
-                  <a href="#">Analytics</a>
-                </li>
-              </ol>
+              <div class="dropdown-content mt-3 w-40">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-gb"></span>
+                      <span class="">English</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-de"></span>
+                      <span class="">German</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-gf"></span>
+                      <span class="">French</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-sa"></span>
+                      <span class="">Arabic</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-cn"></span>
+                      <span class="">Chinese</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-bd"></span>
+                      <span class="">Bangla</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <!-- Page Title Ends -->
+            <!-- Language Dropdown Ends -->
 
-            <div class="space-y-6">
-              <!-- Overview Section Start -->
-              <section class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
-                <!-- Product Views  -->
-                <div class="card">
-                  <div class="card-body flex items-center gap-4">
-                    <div
-                      class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary-500 bg-opacity-20 text-primary-500"
-                    >
-                      <i data-feather="box" class="text-3xl"></i>
-                    </div>
-                    <div class="flex flex-1 flex-col gap-1">
-                      <p class="text-sm tracking-wide text-slate-500">Product Views</p>
-                      <div class="flex flex-wrap items-baseline justify-between gap-2">
-                        <h4>$24,92</h4>
-                        <span class="flex items-center text-xs font-medium text-success-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i>2.2%</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Product Sold  -->
-                <div class="card">
-                  <div class="card-body flex items-center gap-4">
-                    <div
-                      class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-success-500 bg-opacity-20 text-success-500"
-                    >
-                      <i class="bx bx-dollar-circle text-3xl"></i>
-                    </div>
-                    <div class="flex flex-1 flex-col gap-1">
-                      <p class="text-sm tracking-wide text-slate-500">Product Sold</p>
-                      <div class="flex flex-wrap items-baseline justify-between gap-2">
-                        <h4>8,430</h4>
-                        <span class="flex items-center text-xs font-medium text-danger-500">
-                          <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i> 0.5%</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Likes  -->
-                <div class="card">
-                  <div class="card-body flex items-center gap-4">
-                    <div
-                      class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-warning-500 bg-opacity-20 text-warning-500"
-                    >
-                      <i class="ti ti-thumb-up text-3xl"></i>
-                    </div>
-                    <div class="flex flex-1 flex-col gap-1">
-                      <p class="text-sm tracking-wide text-slate-500">Total Likes</p>
-                      <div class="flex flex-wrap items-baseline justify-between gap-2">
-                        <h4>46,256</h4>
-                        <span class="flex items-center text-xs font-medium text-success-500">
-                          <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i> 1.2%</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Conversation Rate  -->
-                <div class="card">
-                  <div class="card-body flex items-center gap-4">
-                    <div
-                      class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-info-500 bg-opacity-20 text-info-500"
-                    >
-                      <i class="ti ti-message-2-cog text-3xl"></i>
-                    </div>
-                    <div class="flex flex-1 flex-col gap-1">
-                      <p class="text-sm tracking-wide text-slate-500">Conversation</p>
-                      <div class="flex flex-wrap items-baseline justify-between gap-2">
-                        <h4>$200,56</h4>
-                        <span class="flex items-center text-xs font-medium text-success-500">
-                          <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i> 3.2%</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- Overview Section End -->
+            <!-- Dark Mood Toggle Starts -->
+            <div class="dropdown" data-strategy="absolute" id="theme-switcher-dropdown">
+              <button
+                class="dropdown-toggle px-3 text-slate-500 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                type="button">
+                <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
+                <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
+              </button>
 
-              <!-- Store Analytics, Active Users, Sales By Location, Top & Most Viewed Product Section Start  -->
-              <section class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-                <!-- Store Analytics -->
-                <div class="card order-1 md:col-span-2">
-                  <div class="card-body">
-                    <!-- Chart wrap -->
-                    <div id="chart-wrap" class="flex flex-col justify-between">
-                      <div class="flex flex-wrap items-center justify-between gap-3 md:gap-0">
-                        <!-- Chart Title  -->
-                        <h6>Store Analytics</h6>
-                        <!-- Legends  -->
-                        <div id="store-analytics-chart-legend" class="flex items-center gap-4">
-                          <label for="visitors">
-                            <input type="checkbox" id="visitors" class="hidden" checked value="Visitors" />
-                            <div class="flex items-center gap-1">
-                              <div class="h-[10px] w-[10px] rounded-full bg-primary-500"></div>
-                              <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Visitors</p>
-                            </div>
-                          </label>
+              <div class="dropdown-content mt-3 w-36">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="light">
+                      <i width="16" height="16" data-feather="sun"></i>
+                      <span>Light</span>
+                    </button>
+                  </li>
 
-                          <label for="orders">
-                            <input type="checkbox" id="orders" class="hidden" checked value="Orders" />
-                            <div class="flex items-center gap-1">
-                              <div class="h-[10px] w-[10px] rounded-full bg-sky-500"></div>
-                              <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Orders</span>
-                            </div>
-                          </label>
-                        </div>
-                        <!-- Select By Chart -->
-                        <select class="select select-sm w-full md:w-32">
-                          <option value="1">Yearly</option>
-                          <option value="2">Monthly</option>
-                        </select>
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
+                      <i width="16" height="16" data-feather="moon"></i>
+                      <span>Dark</span>
+                    </button>
+                  </li>
+
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="system">
+                      <i width="16" height="16" data-feather="monitor"></i>
+                      <span>System</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Dark Mood Toggle Ends -->
+
+            <!-- Notification Dropdown Starts -->
+            <div class="dropdown -mt-0.5" data-strategy="absolute">
+              <div class="dropdown-toggle px-3">
+                <button
+                  class="relative mt-1 flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
+                  <i width="24" height="24" data-feather="bell"></i>
+                  <span
+                    class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
+                    5
+                  </span>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-3 w-[17.5rem] divide-y dark:divide-slate-700 sm:w-80">
+                <div class="flex items-center justify-between px-4 py-4">
+                  <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
+                  <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
+                    Clear All
+                  </button>
+                </div>
+
+                <div class="h-80 w-full" data-simplebar>
+                  <ul>
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500">
+                        <i data-feather="alert-circle" width="20" height="20"></i>
                       </div>
-                      <!-- Chart  -->
-                      <div id="store-analytics-chart" class="-mx-4"></div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">New order received</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>2 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500">
+                        <i data-feather="alert-triangle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">High CPU usage</h6>
+                        <p class="text-xs text-slate-400">CPU usage is at 92%</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>5 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                        <i data-feather="check-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>10 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500">
+                        <i data-feather="x-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Something went wrong</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>1 hour ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                        <i data-feather="check-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>10 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="px-4 py-2">
+                  <button class="btn btn-primary-plain btn-sm w-full" type="button">
+                    <span>View More</span>
+                    <i data-feather="arrow-right" width="1rem" height="1rem"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Notification Dropdown Ends -->
+
+            <!-- Profile Dropdown Starts -->
+            <div class="dropdown" data-strategy="absolute">
+              <div class="dropdown-toggle pl-3">
+                <button class="group relative flex items-center gap-x-1.5" type="button">
+                  <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                    <img class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
+                      src="./images/avatar1.png" alt="Avatar 1" />
+                  </div>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-1 w-56 divide-y dark:divide-slate-600">
+                <div class="px-4 py-3">
+                  <p class="text-sm">Signed in as</p>
+                  <p class="truncate text-sm font-medium">admin@example.com</p>
+                </div>
+                <div class="py-1">
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="user" class="text-slate-500"></i>
+                    <span>Profile</span>
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="settings" class="text-slate-500"></i>
+                    <span>Settings</span>
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="help-circle" class="text-slate-500"></i>
+                    <span>Support</span>
+                  </a>
+                </div>
+                <div class="py-1">
+                  <form method="POST" action="#">
+                    <button type="submit" class="dropdown-btn">
+                      <i width="18" height="18" data-feather="log-out" class="text-slate-500"></i>
+                      <span>Sign out</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- Profile Dropdown Ends -->
+          </div>
+          <!-- Header Options Ends -->
+        </div>
+      </header>
+      <!-- Header Ends -->
+
+      <!-- Page Content Starts -->
+      <div class="content">
+        <!-- Main Content Starts -->
+        <main class="container flex-grow p-4 sm:p-6">
+          <!-- Page Title Starts -->
+          <div class="mb-6 flex flex-col justify-between gap-y-1 sm:flex-row sm:gap-y-0">
+            <h5>Analytics</h5>
+
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Analytics</a>
+              </li>
+            </ol>
+          </div>
+          <!-- Page Title Ends -->
+
+          <div class="space-y-6">
+            <!-- Overview Section Start -->
+            <section class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+              <!-- Product Views  -->
+              <div class="card">
+                <div class="card-body flex items-center gap-4">
+                  <div
+                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary-500 bg-opacity-20 text-primary-500">
+                    <i data-feather="box" class="text-3xl"></i>
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <p class="text-sm tracking-wide text-slate-500">Product Views</p>
+                    <div class="flex flex-wrap items-baseline justify-between gap-2">
+                      <h4>$24,92</h4>
+                      <span class="flex items-center text-xs font-medium text-success-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-up-right"></i>2.2%</span>
                     </div>
                   </div>
                 </div>
-                <!-- Active Users -->
-                <div class="card order-3 col-span-1 xl:order-2">
-                  <div class="card-body flex flex-col items-center justify-between">
-                    <!-- Header  -->
-                    <div class="flex w-full justify-between">
-                      <h6>Active Users</h6>
-                      <div class="dropdown" data-placement="bottom-end">
-                        <div class="dropdown-toggle">
-                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
-                        </div>
-                        <div class="dropdown-content w-[160px]">
-                          <ul class="dropdown-list">
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
-                            </li>
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+              </div>
+              <!-- Product Sold  -->
+              <div class="card">
+                <div class="card-body flex items-center gap-4">
+                  <div
+                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-success-500 bg-opacity-20 text-success-500">
+                    <i class="bx bx-dollar-circle text-3xl"></i>
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <p class="text-sm tracking-wide text-slate-500">Product Sold</p>
+                    <div class="flex flex-wrap items-baseline justify-between gap-2">
+                      <h4>8,430</h4>
+                      <span class="flex items-center text-xs font-medium text-danger-500">
+                        <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i> 0.5%</span>
                     </div>
-                    <!-- Chart  -->
-                    <div id="active-users-chart" class="w-full"></div>
                   </div>
                 </div>
-                <!-- Sales By Location  -->
-                <div class="card order-2 col-span-1 md:col-span-2 xl:order-3">
-                  <div class="card-body flex h-full flex-col justify-between gap-4">
-                    <div class="flex flex-wrap justify-between gap-2">
-                      <h6>Sales By Location</h6>
-                      <select class="select select-sm w-full md:w-40">
-                        <option value="1">Top Countries</option>
-                        <option value="2">New Countries</option>
+              </div>
+              <!-- Likes  -->
+              <div class="card">
+                <div class="card-body flex items-center gap-4">
+                  <div
+                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-warning-500 bg-opacity-20 text-warning-500">
+                    <i class="ti ti-thumb-up text-3xl"></i>
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <p class="text-sm tracking-wide text-slate-500">Total Likes</p>
+                    <div class="flex flex-wrap items-baseline justify-between gap-2">
+                      <h4>46,256</h4>
+                      <span class="flex items-center text-xs font-medium text-success-500">
+                        <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i> 1.2%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Conversation Rate  -->
+              <div class="card">
+                <div class="card-body flex items-center gap-4">
+                  <div
+                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-info-500 bg-opacity-20 text-info-500">
+                    <i class="ti ti-message-2-cog text-3xl"></i>
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <p class="text-sm tracking-wide text-slate-500">Conversation</p>
+                    <div class="flex flex-wrap items-baseline justify-between gap-2">
+                      <h4>$200,56</h4>
+                      <span class="flex items-center text-xs font-medium text-success-500">
+                        <i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i> 3.2%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Overview Section End -->
+
+            <!-- Store Analytics, Active Users, Sales By Location, Top & Most Viewed Product Section Start  -->
+            <section class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+              <!-- Store Analytics -->
+              <div class="card order-1 md:col-span-2">
+                <div class="card-body">
+                  <!-- Chart wrap -->
+                  <div id="chart-wrap" class="flex flex-col justify-between">
+                    <div class="flex flex-wrap items-center justify-between gap-3 md:gap-0">
+                      <!-- Chart Title  -->
+                      <h6>Store Analytics</h6>
+                      <!-- Legends  -->
+                      <div id="store-analytics-chart-legend" class="flex items-center gap-4">
+                        <label for="visitors">
+                          <input type="checkbox" id="visitors" class="hidden" checked value="Visitors" />
+                          <div class="flex items-center gap-1">
+                            <div class="h-[10px] w-[10px] rounded-full bg-primary-500"></div>
+                            <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Visitors</p>
+                          </div>
+                        </label>
+
+                        <label for="orders">
+                          <input type="checkbox" id="orders" class="hidden" checked value="Orders" />
+                          <div class="flex items-center gap-1">
+                            <div class="h-[10px] w-[10px] rounded-full bg-sky-500"></div>
+                            <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Orders</span>
+                          </div>
+                        </label>
+                      </div>
+                      <!-- Select By Chart -->
+                      <select class="select select-sm w-full md:w-32">
+                        <option value="1">Yearly</option>
+                        <option value="2">Monthly</option>
                       </select>
                     </div>
-                    <div class="grid min-h-min flex-grow grid-cols-1 gap-6 md:grid-cols-5">
-                      <!-- Sales Location Chart  -->
-                      <div id="salesLocationChart" class="col-span-1 min-h-[320px] md:col-span-3"></div>
-                      <div class="col-span-1 space-y-8 self-center md:col-span-2">
-                        <!-- United States  -->
-                        <div class="flex items-center gap-2">
-                          <img src="./images/flag-United_States.jpg" class="h-5 w-8" alt="flag-image" />
-                          <div class="flex flex-1 flex-col gap-1">
-                            <div class="flex items-center justify-between">
-                              <h6 class="text-sm text-slate-700 dark:text-slate-300">United States</h6>
-                              <p class="text-sm text-slate-400">50%</p>
-                            </div>
-                            <div
-                              class="progress progress-sm"
-                              role="progressbar"
-                              aria-valuenow="10"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              <div class="progress-line">
-                                <div class="progress-line-track">
-                                  <div class="progress-line-thumb" style="width: 50%"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Australia  -->
-                        <div class="flex items-center gap-2">
-                          <img src="./images/flag-australia.png" class="h-5 w-8" alt="flag-image" />
-                          <div class="flex flex-1 flex-col gap-1">
-                            <div class="flex items-center justify-between">
-                              <h6 class="text-sm text-slate-700 dark:text-slate-300">Australia</h6>
-                              <p class="text-sm text-slate-400">35%</p>
-                            </div>
-                            <div
-                              class="progress progress-success progress-sm"
-                              role="progressbar"
-                              aria-valuenow="10"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              <div class="progress-line">
-                                <div class="progress-line-track">
-                                  <div class="progress-line-thumb" style="width: 35%"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Brazil  -->
-                        <div class="flex items-center gap-2">
-                          <img src="./images/flag-Brazil.jpg" class="h-5 w-8" alt="flag-image" />
-                          <div class="flex flex-1 flex-col gap-1">
-                            <div class="flex items-center justify-between">
-                              <h6 class="text-sm text-slate-700 dark:text-slate-300">Brazil</h6>
-                              <p class="text-sm text-slate-400">22%</p>
-                            </div>
-                            <div
-                              class="progress progress-info progress-sm"
-                              role="progressbar"
-                              aria-valuenow="10"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              <div class="progress-line">
-                                <div class="progress-line-track">
-                                  <div class="progress-line-thumb" style="width: 22%"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Germany  -->
-                        <div class="flex items-center gap-2">
-                          <img src="./images/flag-Germany.jpg" class="h-5 w-8" alt="flag-image" />
-                          <div class="flex flex-1 flex-col gap-1">
-                            <div class="flex items-center justify-between">
-                              <h6 class="text-sm text-slate-700 dark:text-slate-300">Germany</h6>
-                              <p class="text-sm text-slate-400">52%</p>
-                            </div>
-                            <div
-                              class="progress progress-warning progress-sm"
-                              role="progressbar"
-                              aria-valuenow="10"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              <div class="progress-line">
-                                <div class="progress-line-track">
-                                  <div class="progress-line-thumb" style="width: 52%"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                    <!-- Chart  -->
+                    <div id="store-analytics-chart" class="-mx-4"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Active Users -->
+              <div class="card order-3 col-span-1 xl:order-2">
+                <div class="card-body flex flex-col items-center justify-between">
+                  <!-- Header  -->
+                  <div class="flex w-full justify-between">
+                    <h6>Active Users</h6>
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[160px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
+                  <!-- Chart  -->
+                  <div id="active-users-chart" class="w-full"></div>
                 </div>
-                <!-- Top Selling & Most Viewed Product  -->
-                <div class="order-4 col-span-1 space-y-6">
-                  <!-- Top Selling Product  -->
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="flex flex-wrap items-center justify-between">
-                        <h6>Top Selling Product</h6>
-                        <div class="flex items-center gap-2">
-                          <label for="top-selling-product-today" class="cursor-pointer">
-                            <input
-                              type="radio"
-                              name="top-selling-product"
-                              id="top-selling-product-today"
-                              class="peer sr-only"
-                              checked
-                            />
-                            <span
-                              class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400"
-                              >Today</span
-                            >
-                          </label>
-                          <span class="text-sm text-slate-200 dark:text-slate-600">|</span>
-                          <label for="top-selling-product-month" class="cursor-pointer">
-                            <input
-                              type="radio"
-                              name="top-selling-product"
-                              id="top-selling-product-month"
-                              class="peer sr-only"
-                            />
-                            <span
-                              class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400"
-                              >Month</span
-                            >
-                          </label>
-                        </div>
-                      </div>
-                      <div class="mt-4 flex items-center gap-4 rounded-primary bg-slate-50 p-4 dark:bg-slate-900">
-                        <img
-                          src="./images/product8.png"
-                          alt="product-img"
-                          class="w-20 rounded-primary bg-white p-2 dark:bg-slate-800"
-                        />
+              </div>
+              <!-- Sales By Location  -->
+              <div class="card order-2 col-span-1 md:col-span-2 xl:order-3">
+                <div class="card-body flex h-full flex-col justify-between gap-4">
+                  <div class="flex flex-wrap justify-between gap-2">
+                    <h6>Sales By Location</h6>
+                    <select class="select select-sm w-full md:w-40">
+                      <option value="1">Top Countries</option>
+                      <option value="2">New Countries</option>
+                    </select>
+                  </div>
+                  <div class="grid min-h-min flex-grow grid-cols-1 gap-6 md:grid-cols-5">
+                    <!-- Sales Location Chart  -->
+                    <div id="salesLocationChart" class="col-span-1 min-h-[320px] md:col-span-3"></div>
+                    <div class="col-span-1 space-y-8 self-center md:col-span-2">
+                      <!-- United States  -->
+                      <div class="flex items-center gap-2">
+                        <span class="fi fi-us h-5 w-8"></span>
                         <div class="flex flex-1 flex-col gap-1">
-                          <h3 class="text-sm font-semibold">Stylish Sunglass</h3>
-                          <p class="text-sm text-slate-500 dark:text-slate-400">New offer only $26.00</p>
-                          <div class="flex gap-1 text-xl text-warning-400">
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
+                          <div class="flex items-center justify-between">
+                            <h6 class="text-sm text-slate-700 dark:text-slate-300">United States</h6>
+                            <p class="text-sm text-slate-400">50%</p>
+                          </div>
+                          <div class="progress progress-sm" role="progressbar" aria-valuenow="10" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 50%"></div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <!-- Most Viewed Product -->
-                  <div class="card">
-                    <div class="card-body flex flex-col gap-2">
-                      <div class="flex flex-wrap items-center justify-between">
-                        <h6>Most Viewed Product</h6>
-                        <div class="flex items-center gap-2">
-                          <label for="most-viewed-product-today" class="cursor-pointer">
-                            <input
-                              type="radio"
-                              name="most-viewed-product"
-                              id="most-viewed-product-today"
-                              class="peer sr-only"
-                              checked
-                            />
-                            <span
-                              class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400"
-                              >Today</span
-                            >
-                          </label>
-                          <span class="text-sm text-slate-200 dark:text-slate-600">|</span>
-                          <label for="most-viewed-product-month" class="cursor-pointer">
-                            <input
-                              type="radio"
-                              name="most-viewed-product"
-                              id="most-viewed-product-month"
-                              class="peer sr-only"
-                            />
-                            <span
-                              class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400"
-                              >Month</span
-                            >
-                          </label>
-                        </div>
-                      </div>
-                      <div class="flex items-center gap-4 rounded-primary bg-slate-50 p-4 dark:bg-slate-900">
-                        <img
-                          src="./images/product7.png"
-                          alt="product-img"
-                          class="w-20 rounded-primary bg-white p-2 dark:bg-slate-800"
-                        />
+                      <!-- Australia  -->
+                      <div class="flex items-center gap-2">
+                        <span class="fi fi-au h-5 w-8"></span>
                         <div class="flex flex-1 flex-col gap-1">
-                          <h3 class="text-sm font-semibold">Trending Oz Pro Shoes</h3>
-                          <p class="text-sm text-slate-500 dark:text-slate-400">New offer only $105.00</p>
-                          <div class="flex gap-1 text-xl text-warning-500">
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bx-star"></i>
+                          <div class="flex items-center justify-between">
+                            <h6 class="text-sm text-slate-700 dark:text-slate-300">Australia</h6>
+                            <p class="text-sm text-slate-400">35%</p>
+                          </div>
+                          <div class="progress progress-success progress-sm" role="progressbar" aria-valuenow="10"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 35%"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Brazil  -->
+                      <div class="flex items-center gap-2">
+                        <span class="fi fi-br h-5 w-8"></span>
+                        <div class="flex flex-1 flex-col gap-1">
+                          <div class="flex items-center justify-between">
+                            <h6 class="text-sm text-slate-700 dark:text-slate-300">Brazil</h6>
+                            <p class="text-sm text-slate-400">22%</p>
+                          </div>
+                          <div class="progress progress-info progress-sm" role="progressbar" aria-valuenow="10"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 22%"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Germany  -->
+                      <div class="flex items-center gap-2">
+                        <span class="fi fi-de h-5 w-8"></span>
+                        <div class="flex flex-1 flex-col gap-1">
+                          <div class="flex items-center justify-between">
+                            <h6 class="text-sm text-slate-700 dark:text-slate-300">Germany</h6>
+                            <p class="text-sm text-slate-400">52%</p>
+                          </div>
+                          <div class="progress progress-warning progress-sm" role="progressbar" aria-valuenow="10"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-line">
+                              <div class="progress-line-track">
+                                <div class="progress-line-thumb" style="width: 52%"></div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </section>
-              <!-- Store Analytics, Active Users, Sales By Location, Top & Most Viewed Product Section End  -->
-
-              <!-- Campaign & Source Visited Section Start  -->
-              <section class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                <!-- Monthly Campaign State  -->
-                <div class="card">
-                  <div class="card-body flex h-full flex-col">
-                    <!-- Header  -->
-                    <div class="flex w-full justify-between">
-                      <h6>Monthly Campaign State</h6>
-                      <div class="dropdown" data-placement="bottom-end">
-                        <div class="dropdown-toggle">
-                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
-                        </div>
-                        <div class="dropdown-content w-[160px]">
-                          <ul class="dropdown-list">
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
-                            </li>
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="my-1 text-sm text-slate-400">34.25k email sent</p>
-                    <div class="mt-auto divide-y dark:divide-slate-600">
-                      <!-- Emails  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-primary-500 bg-opacity-20 text-primary-500"
-                        >
-                          <i class="ti ti-refresh text-3xl"></i>
-                        </div>
-                        <div>
-                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Retargeted</h6>
-                          <p class="text-sm text-slate-400">14,679</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-success-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i>20%</span
-                        >
-                      </div>
-                      <!-- Opened  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-14 flex h-12 w-12 items-center justify-center rounded-primary bg-success-500 bg-opacity-20 text-success-500"
-                        >
-                          <i class="ti ti-external-link text-3xl"></i>
-                        </div>
-                        <div>
-                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Opened</h6>
-                          <p class="text-sm text-slate-400">12,675</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-success-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i>35%</span
-                        >
-                      </div>
-
-                      <!-- Clicked  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-info-500 bg-opacity-20 text-info-500"
-                        >
-                          <i class="ti ti-hand-click text-3xl"></i>
-                        </div>
-                        <div>
-                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Clicked</h6>
-                          <p class="text-sm text-slate-400">6,320</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-danger-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i>10%</span
-                        >
-                      </div>
-
-                      <!-- Complaints  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-warning-500 bg-opacity-10 text-warning-500"
-                        >
-                          <i class="ti ti-message-exclamation text-3xl"></i>
-                        </div>
-                        <div>
-                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Complaints</h6>
-                          <p class="text-sm text-slate-400">575</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-danger-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i>02%</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Source Visits -->
-                <div class="card">
-                  <div class="card-body flex h-full flex-col">
-                    <!-- Header  -->
-                    <div class="flex w-full justify-between">
-                      <h6>Source Visitors</h6>
-                      <div class="dropdown" data-placement="bottom-end">
-                        <div class="dropdown-toggle">
-                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
-                        </div>
-                        <div class="dropdown-content w-[160px]">
-                          <ul class="dropdown-list">
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Actions </a>
-                            </li>
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link"> Another Action </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="text-sm text-slate-400">70.8k Visiters</p>
-                    <div class="mt-auto divide-y dark:divide-slate-600">
-                      <!-- Social Network -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-success-500 bg-opacity-20 text-success-500"
-                        >
-                          <i class="ti ti-social text-3xl"></i>
-                        </div>
-                        <div>
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-300">
-                            Social Network
-                          </p>
-                          <p class="text-sm text-slate-400">31.4k</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-danger-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i>20%</span
-                        >
-                      </div>
-                      <!-- Direct Source  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-primary-500 bg-opacity-20 text-primary-500"
-                        >
-                          <i class="ti ti-world-search text-3xl"></i>
-                        </div>
-                        <div>
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-300">
-                            Direct Source
-                          </p>
-                          <p class="text-sm text-slate-400">1.4k</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-success-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i>15%</span
-                        >
-                      </div>
-
-                      <!-- ADVT  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-warning-500 bg-opacity-20 text-warning-500"
-                        >
-                          <i class="ti ti-social text-3xl"></i>
-                        </div>
-                        <div class="flex flex-col">
-                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">ADVT</h6>
-                          <p class="text-sm text-slate-400">31.2k</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-success-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-up-right"></i>16%</span
-                        >
-                      </div>
-
-                      <!-- Referrals  -->
-                      <div class="flex items-center gap-4 py-2">
-                        <div
-                          class="flex h-12 w-14 items-center justify-center rounded-primary bg-info-500 bg-opacity-20 text-info-500"
-                        >
-                          <i class="ti ti-users-group text-3xl"></i>
-                        </div>
-                        <div class="flex flex-col">
-                          <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Referrals</h6>
-                          <p class="text-sm text-slate-400">345</p>
-                        </div>
-                        <span class="ml-auto flex items-center text-sm font-medium text-danger-500"
-                          ><i class="h-3 w-3" stroke-width="3px" data-feather="arrow-down-left"></i>08%</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- Campaign & Source Visited Section End  -->
-
-              <!-- Top Sellers Section start  -->
-              <section class="grid grid-cols-1">
-                <div class="card">
-                  <div class="card-body space-y-2">
-                    <!-- Header  -->
-                    <div class="flex w-full justify-between">
-                      <h6>Top Sellers</h6>
-                      <div class="dropdown" data-placement="bottom-end">
-                        <div class="dropdown-toggle">
-                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
-                        </div>
-                        <div class="dropdown-content w-[160px]">
-                          <ul class="dropdown-list">
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
-                            </li>
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Seller Table  -->
-                    <div class="table-responsive">
-                      <table class="table min-w-[43rem]">
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-                            <th>Date</th>
-                            <th>Product</th>
-                            <th>Country</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Revenue</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar1.png" class="avatar-img" alt="avatar-img" />
-                                </div>
-                                <div>
-                                  <p class="whitespace-nowrap font-medium">Wade Warren</p>
-                                  <p class="text-xs text-slate-400">Apple Store Online</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="whitespace-nowrap">07 August</td>
-                            <td class="whitespace-nowrap">T-shirt</td>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/flag-australia.png" class="h-5 w-8" alt="flag-img" />
-                                <p class="whitespace-nowrap uppercase">AU</p>
-                              </div>
-                            </td>
-                            <td>2865</td>
-                            <td>$5.08,876</td>
-                            <td>$27,187</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar2.png" class="avatar-img" alt="avatar-img" />
-                                </div>
-                                <div>
-                                  <p class="whitespace-nowrap font-medium">Afrad Bhuyian</p>
-                                  <p class="text-xs text-slate-400">Acme Corporation</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="whitespace-nowrap">25 Mar</td>
-                            <td class="whitespace-nowrap">Earings</td>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/flag-United_States.jpg" class="h-5 w-8" alt="flag-img" />
-                                <p class="whitespace-nowrap uppercase">USA</p>
-                              </div>
-                            </td>
-                            <td>36654</td>
-                            <td>$3.06,867</td>
-                            <td>$23,89</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar3.png" class="avatar-img" alt="avatar-img" />
-                                </div>
-                                <div>
-                                  <p class="whitespace-nowrap font-medium">Robert Fox</p>
-                                  <p class="text-xs text-slate-400">Omega Solutions</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="whitespace-nowrap">14 February</td>
-                            <td>1 phone</td>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/flag-United_Kingdom.jpg" class="h-5 w-8" alt="flag-img" />
-                                <p class="whitespace-nowrap uppercase">UK</p>
-                              </div>
-                            </td>
-                            <td>4253</td>
-                            <td>$1.06,657</td>
-                            <td>$56,99</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar4.png" class="avatar-img" alt="avatar-img" />
-                                </div>
-                                <div>
-                                  <p class="whitespace-nowrap font-medium">John William</p>
-                                  <p class="text-xs text-slate-400">Phoenix Electronics</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="whitespace-nowrap">17 January</td>
-                            <td>Watches</td>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/flag-Germany.jpg" class="h-5 w-8" alt="flag-img" />
-                                <p class="whitespace-nowrap uppercase">GER</p>
-                              </div>
-                            </td>
-                            <td>3532</td>
-                            <td>$3.54,450</td>
-                            <td>$7,67,657</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar5.png" class="avatar-img" alt="avatar-img" />
-                                </div>
-                                <div>
-                                  <p class="whitespace-nowrap font-medium">Ahmed Imtiaz</p>
-                                  <p class="text-xs text-slate-400">Thunderbolt Inc</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="whitespace-nowrap">11 November</td>
-                            <td class="whitespace-nowrap">Shoes</td>
-                            <td>
-                              <div class="flex items-center gap-2">
-                                <img src="./images/flag-Brazil.jpg" class="h-5 w-8" alt="flag-img" />
-                                <p class="whitespace-nowrap uppercase">BRA</p>
-                              </div>
-                            </td>
-                            <td>9076</td>
-                            <td>$9.54,450</td>
-                            <td>$78,01</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- Top Sellers Section End  -->
-
-              <!-- Customer Satisfaction & Top Customers Section Start -->
-              <section class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                <!-- Customer Satisfaction  -->
+              </div>
+              <!-- Top Selling & Most Viewed Product  -->
+              <div class="order-4 col-span-1 space-y-6">
+                <!-- Top Selling Product  -->
                 <div class="card">
                   <div class="card-body">
-                    <!-- Header  -->
-                    <div class="flex w-full justify-between">
-                      <h6>Customer Satisfaction</h6>
-                      <div class="dropdown" data-placement="bottom-end">
-                        <div class="dropdown-toggle">
-                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
-                        </div>
-                        <div class="dropdown-content w-[160px]">
-                          <ul class="dropdown-list">
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
-                            </li>
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
-                            </li>
-                          </ul>
-                        </div>
+                    <div class="flex flex-wrap items-center justify-between">
+                      <h6>Top Selling Product</h6>
+                      <div class="flex items-center gap-2">
+                        <label for="top-selling-product-today" class="cursor-pointer">
+                          <input type="radio" name="top-selling-product" id="top-selling-product-today"
+                            class="peer sr-only" checked />
+                          <span
+                            class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400">Today</span>
+                        </label>
+                        <span class="text-sm text-slate-200 dark:text-slate-600">|</span>
+                        <label for="top-selling-product-month" class="cursor-pointer">
+                          <input type="radio" name="top-selling-product" id="top-selling-product-month"
+                            class="peer sr-only" />
+                          <span
+                            class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400">Month</span>
+                        </label>
                       </div>
                     </div>
-                    <p class="my-1 text-sm text-slate-400">9.4k reviews</p>
-
-                    <!-- Performance Score Progress -->
-                    <div class="mt-4 flex w-full gap-[6px]">
-                      <div class="h-2 w-[40%] rounded-primary bg-primary-500"></div>
-                      <div class="h-2 w-[20%] rounded-primary bg-success-500"></div>
-                      <div class="h-2 w-[18%] rounded-primary bg-info-500"></div>
-                      <div class="h-2 w-[12%] rounded-primary bg-warning-500"></div>
-                      <div class="h-2 w-[10%] rounded-primary bg-danger-500"></div>
-                    </div>
-                    <br />
-                    <div class="space-y-8 overflow-x-auto">
-                      <!-- Excellent -->
-                      <div class="grid w-full grid-cols-3">
-                        <div class="flex items-center gap-2">
-                          <div class="h-[14px] w-[14px] rounded-full border-2 border-primary-500"></div>
-                          <p class="whitespace-nowrap text-sm font-medium">Excellent</p>
-                        </div>
-                        <div class="flex items-center justify-center">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">3760</p>
-                        </div>
-                        <div class="flex items-center justify-end">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">40%</p>
-                        </div>
-                      </div>
-                      <!-- Very Good  -->
-                      <div class="grid w-full grid-cols-3">
-                        <div class="flex items-center gap-2">
-                          <div class="h-[14px] w-[14px] rounded-full border-2 border-success-500"></div>
-                          <p class="whitespace-nowrap text-sm font-medium">Very Good</p>
-                        </div>
-                        <div class="flex items-center justify-center">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">1880</p>
-                        </div>
-                        <div class="flex items-center justify-end">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">20%</p>
-                        </div>
-                      </div>
-                      <!-- Good  -->
-                      <div class="grid w-full grid-cols-3">
-                        <div class="flex items-center gap-2">
-                          <div class="h-[14px] w-[14px] rounded-full border-2 border-info-500"></div>
-                          <p class="whitespace-nowrap text-sm font-medium">Good</p>
-                        </div>
-                        <div class="flex items-center justify-center">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">1692</p>
-                        </div>
-                        <div class="flex items-center justify-end">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">18%</p>
-                        </div>
-                      </div>
-                      <!-- Poor  -->
-                      <div class="grid w-full grid-cols-3">
-                        <div class="flex items-center gap-2">
-                          <div class="h-[14px] w-[14px] rounded-full border-2 border-warning-500"></div>
-                          <p class="whitespace-nowrap text-sm font-medium">Poor</p>
-                        </div>
-                        <div class="flex items-center justify-center">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">1128</p>
-                        </div>
-                        <div class="flex items-center justify-end">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">12%</p>
-                        </div>
-                      </div>
-                      <!-- Very Poor  -->
-                      <div class="grid w-full grid-cols-3">
-                        <div class="flex items-center gap-2">
-                          <div class="h-[14px] w-[14px] rounded-full border-2 border-danger-500"></div>
-                          <p class="whitespace-nowrap text-sm font-medium">Very Poor</p>
-                        </div>
-                        <div class="flex items-center justify-center">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">940</p>
-                        </div>
-                        <div class="flex items-center justify-end">
-                          <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">10%</p>
+                    <div class="mt-4 flex items-center gap-4 rounded-primary bg-slate-50 p-4 dark:bg-slate-900">
+                      <img src="./images/product8.png" alt="product-img"
+                        class="w-20 rounded-primary bg-white p-2 dark:bg-slate-800" />
+                      <div class="flex flex-1 flex-col gap-1">
+                        <h3 class="text-sm font-semibold">Stylish Sunglass</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">New offer only $26.00</p>
+                        <div class="flex gap-1 text-xl text-warning-400">
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- Top Customers  -->
+                <!-- Most Viewed Product -->
                 <div class="card">
-                  <div class="card-body flex h-full flex-col justify-between gap-2">
-                    <!-- Header  -->
-                    <div class="flex w-full justify-between">
-                      <h6>Top Customers</h6>
-                      <div class="dropdown" data-placement="bottom-end">
-                        <div class="dropdown-toggle">
-                          <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
-                        </div>
-                        <div class="dropdown-content w-[160px]">
-                          <ul class="dropdown-list">
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
-                            </li>
-                            <li class="dropdown-list-item">
-                              <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
-                            </li>
-                          </ul>
+                  <div class="card-body flex flex-col gap-2">
+                    <div class="flex flex-wrap items-center justify-between">
+                      <h6>Most Viewed Product</h6>
+                      <div class="flex items-center gap-2">
+                        <label for="most-viewed-product-today" class="cursor-pointer">
+                          <input type="radio" name="most-viewed-product" id="most-viewed-product-today"
+                            class="peer sr-only" checked />
+                          <span
+                            class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400">Today</span>
+                        </label>
+                        <span class="text-sm text-slate-200 dark:text-slate-600">|</span>
+                        <label for="most-viewed-product-month" class="cursor-pointer">
+                          <input type="radio" name="most-viewed-product" id="most-viewed-product-month"
+                            class="peer sr-only" />
+                          <span
+                            class="text-xs text-slate-600 peer-checked:font-medium peer-checked:text-primary-500 dark:text-slate-400">Month</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4 rounded-primary bg-slate-50 p-4 dark:bg-slate-900">
+                      <img src="./images/product7.png" alt="product-img"
+                        class="w-20 rounded-primary bg-white p-2 dark:bg-slate-800" />
+                      <div class="flex flex-1 flex-col gap-1">
+                        <h3 class="text-sm font-semibold">Trending Oz Pro Shoes</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">New offer only $105.00</p>
+                        <div class="flex gap-1 text-xl text-warning-500">
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bxs-star"></i>
+                          <i class="bx bx-star"></i>
                         </div>
                       </div>
                     </div>
-                    <!-- Customers Table  -->
-                    <div class="table-responsive">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-                            <th>
-                              <p class="whitespace-nowrap">Join Date</p>
-                            </th>
-                            <th>
-                              <p class="whitespace-nowrap">Total Order</p>
-                            </th>
-                            <th>Revenue</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="flex gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar1.png" alt="avatar-img" class="avatar-img" />
-                                </div>
-                                <div>
-                                  <p class="text-sm font-medium">Ahmed Shakil</p>
-                                  <p class="text-xs font-normal text-slate-400">ahmed@example.com</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="whitespace-nowrap">19 Aug 2022</td>
-                            <td>$20,500</td>
-                            <td>$5,000</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="flex gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar2.png" alt="avatar-img" class="avatar-img" />
-                                </div>
-                                <div>
-                                  <p class="text-sm font-medium">Mehedi Hasan</p>
-                                  <p class="text-xs font-normal text-slate-400">mehedi@example.com</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="whitespace-nowrap">01 Jan 2022</td>
-                            <td>$18,250</td>
-                            <td>$4,250</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="flex gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar3.png" alt="avatar-img" class="avatar-img" />
-                                </div>
-                                <div>
-                                  <p class="font-medium">Mirazul Islam</p>
-                                  <p class="text-xs font-normal text-slate-400">mirazul@example.com</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="whitespace-nowrap">07 Feb 2022</td>
-                            <td>$15,250</td>
-                            <td>$4,000</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="flex gap-2">
-                                <div class="avatar avatar-circle">
-                                  <img src="./images/avatar4.png" alt="avatar-img" class="avatar-img" />
-                                </div>
-                                <div>
-                                  <p class="font-medium">Tanvir Ahmed</p>
-                                  <p class="text-xs font-normal text-slate-400">tanvir@example.com</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="whitespace-nowrap">03 May 2022</td>
-                            <td>$12,650</td>
-                            <td>$3,500</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Store Analytics, Active Users, Sales By Location, Top & Most Viewed Product Section End  -->
+
+            <!-- Campaign & Source Visited Section Start  -->
+            <section class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <!-- Monthly Campaign State  -->
+              <div class="card">
+                <div class="card-body flex h-full flex-col">
+                  <!-- Header  -->
+                  <div class="flex w-full justify-between">
+                    <h6>Monthly Campaign State</h6>
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[160px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="my-1 text-sm text-slate-400">34.25k email sent</p>
+                  <div class="mt-auto divide-y dark:divide-slate-600">
+                    <!-- Emails  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-primary-500 bg-opacity-20 text-primary-500">
+                        <i class="ti ti-refresh text-3xl"></i>
+                      </div>
+                      <div>
+                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Retargeted</h6>
+                        <p class="text-sm text-slate-400">14,679</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-success-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-up-right"></i>20%</span>
+                    </div>
+                    <!-- Opened  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-14 flex h-12 w-12 items-center justify-center rounded-primary bg-success-500 bg-opacity-20 text-success-500">
+                        <i class="ti ti-external-link text-3xl"></i>
+                      </div>
+                      <div>
+                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Opened</h6>
+                        <p class="text-sm text-slate-400">12,675</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-success-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-up-right"></i>35%</span>
+                    </div>
+
+                    <!-- Clicked  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-info-500 bg-opacity-20 text-info-500">
+                        <i class="ti ti-hand-click text-3xl"></i>
+                      </div>
+                      <div>
+                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Clicked</h6>
+                        <p class="text-sm text-slate-400">6,320</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-danger-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-down-left"></i>10%</span>
+                    </div>
+
+                    <!-- Complaints  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-warning-500 bg-opacity-10 text-warning-500">
+                        <i class="ti ti-message-exclamation text-3xl"></i>
+                      </div>
+                      <div>
+                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Complaints</h6>
+                        <p class="text-sm text-slate-400">575</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-danger-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-down-left"></i>02%</span>
                     </div>
                   </div>
                 </div>
-              </section>
-              <!-- Customer Satisfaction & Top Customers Section End -->
-            </div>
-          </main>
-          <!-- Main Content Ends -->
-
-          <!-- Footer Starts -->
-          <footer class="footer">
-            <p class="text-sm">
-              Copyright © 2023
-              <a class="text-primary-500 hover:underline" href="https://getadmintoolkit.com" target="_blank">
-                Admin Toolkit
-              </a>
-            </p>
-
-            <p class="flex items-center gap-1 text-sm">
-              Hand-crafted &amp; Made with
-              <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
-            </p>
-          </footer>
-          <!-- Footer Ends -->
-        </div>
-        <!-- Page Content Ends -->
-      </div>
-      <!-- Wrapper Ends -->
-
-      <!-- Search Modal Start -->
-      <div class="modal" id="search-modal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header px-4 sm:px-6">
-              <div class="group flex items-center">
-                <i
-                  data-feather="search"
-                  class="text-slate-500 group-focus-within:text-slate-600 dark:text-slate-400 dark:group-focus-within:text-slate-300"
-                ></i>
-                <input
-                  type="text"
-                  class="w-full border-none bg-transparent text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:ring-0 dark:text-slate-200"
-                  placeholder="Search"
-                />
-                <button
-                  class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
-                  data-dismiss="modal"
-                >
-                  ESC
-                </button>
               </div>
-            </div>
-            <div class="modal-body max-h-[600px] px-4 py-6 sm:px-6"></div>
+              <!-- Source Visits -->
+              <div class="card">
+                <div class="card-body flex h-full flex-col">
+                  <!-- Header  -->
+                  <div class="flex w-full justify-between">
+                    <h6>Source Visitors</h6>
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[160px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Actions </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link"> Another Action </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-sm text-slate-400">70.8k Visiters</p>
+                  <div class="mt-auto divide-y dark:divide-slate-600">
+                    <!-- Social Network -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-success-500 bg-opacity-20 text-success-500">
+                        <i class="ti ti-social text-3xl"></i>
+                      </div>
+                      <div>
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-300">
+                          Social Network
+                        </p>
+                        <p class="text-sm text-slate-400">31.4k</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-danger-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-down-left"></i>20%</span>
+                    </div>
+                    <!-- Direct Source  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-primary-500 bg-opacity-20 text-primary-500">
+                        <i class="ti ti-world-search text-3xl"></i>
+                      </div>
+                      <div>
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-300">
+                          Direct Source
+                        </p>
+                        <p class="text-sm text-slate-400">1.4k</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-success-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-up-right"></i>15%</span>
+                    </div>
+
+                    <!-- ADVT  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="min-w-12 flex h-12 w-12 items-center justify-center rounded-primary bg-warning-500 bg-opacity-20 text-warning-500">
+                        <i class="ti ti-social text-3xl"></i>
+                      </div>
+                      <div class="flex flex-col">
+                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">ADVT</h6>
+                        <p class="text-sm text-slate-400">31.2k</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-success-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-up-right"></i>16%</span>
+                    </div>
+
+                    <!-- Referrals  -->
+                    <div class="flex items-center gap-4 py-2">
+                      <div
+                        class="flex h-12 w-14 items-center justify-center rounded-primary bg-info-500 bg-opacity-20 text-info-500">
+                        <i class="ti ti-users-group text-3xl"></i>
+                      </div>
+                      <div class="flex flex-col">
+                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">Referrals</h6>
+                        <p class="text-sm text-slate-400">345</p>
+                      </div>
+                      <span class="ml-auto flex items-center text-sm font-medium text-danger-500"><i class="h-3 w-3"
+                          stroke-width="3px" data-feather="arrow-down-left"></i>08%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Campaign & Source Visited Section End  -->
+
+            <!-- Top Sellers Section start  -->
+            <section class="grid grid-cols-1">
+              <div class="card">
+                <div class="card-body space-y-2">
+                  <!-- Header  -->
+                  <div class="flex w-full justify-between">
+                    <h6>Top Sellers</h6>
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[160px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Seller Table  -->
+                  <div class="table-responsive">
+                    <table class="table min-w-[43rem]">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Date</th>
+                          <th>Product</th>
+                          <th>Country</th>
+                          <th>Quantity</th>
+                          <th>Total</th>
+                          <th>Revenue</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <div class="avatar avatar-circle">
+                                <img src="./images/avatar1.png" class="avatar-img" alt="avatar-img" />
+                              </div>
+                              <div>
+                                <p class="whitespace-nowrap font-medium">Wade Warren</p>
+                                <p class="text-xs text-slate-400">Apple Store Online</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap">07 August</td>
+                          <td class="whitespace-nowrap">T-shirt</td>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <span class="fi fi-ae h-5 w-8"></span>
+                              <p class="whitespace-nowrap uppercase">UAE</p>
+                            </div>
+                          </td>
+                          <td>2865</td>
+                          <td>$5.08,876</td>
+                          <td>$27,187</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <div class="avatar avatar-circle">
+                                <img src="./images/avatar2.png" class="avatar-img" alt="avatar-img" />
+                              </div>
+                              <div>
+                                <p class="whitespace-nowrap font-medium">Afrad Bhuyian</p>
+                                <p class="text-xs text-slate-400">Acme Corporation</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap">25 Mar</td>
+                          <td class="whitespace-nowrap">Earings</td>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <span class="fi fi-us h-5 w-8"></span>
+                              <p class="whitespace-nowrap uppercase">USA</p>
+                            </div>
+                          </td>
+                          <td>36654</td>
+                          <td>$3.06,867</td>
+                          <td>$23,89</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <div class="avatar avatar-circle">
+                                <img src="./images/avatar3.png" class="avatar-img" alt="avatar-img" />
+                              </div>
+                              <div>
+                                <p class="whitespace-nowrap font-medium">Robert Fox</p>
+                                <p class="text-xs text-slate-400">Omega Solutions</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap">14 February</td>
+                          <td>1 phone</td>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <span class="fi fi-gb h-5 w-8"></span>
+                              <p class="whitespace-nowrap uppercase">UK</p>
+                            </div>
+                          </td>
+                          <td>4253</td>
+                          <td>$1.06,657</td>
+                          <td>$56,99</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <div class="avatar avatar-circle">
+                                <img src="./images/avatar4.png" class="avatar-img" alt="avatar-img" />
+                              </div>
+                              <div>
+                                <p class="whitespace-nowrap font-medium">John William</p>
+                                <p class="text-xs text-slate-400">Phoenix Electronics</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap">17 January</td>
+                          <td>Watches</td>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <span class="fi fi-de h-5 w-8"></span>
+                              <p class="whitespace-nowrap uppercase">GER</p>
+                            </div>
+                          </td>
+                          <td>3532</td>
+                          <td>$3.54,450</td>
+                          <td>$7,67,657</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <div class="avatar avatar-circle">
+                                <img src="./images/avatar5.png" class="avatar-img" alt="avatar-img" />
+                              </div>
+                              <div>
+                                <p class="whitespace-nowrap font-medium">Ahmed Imtiaz</p>
+                                <p class="text-xs text-slate-400">Thunderbolt Inc</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap">11 November</td>
+                          <td class="whitespace-nowrap">Shoes</td>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <span class="fi fi-br h-5 w-8"></span>
+                              <p class="whitespace-nowrap uppercase">BRA</p>
+                            </div>
+                          </td>
+                          <td>9076</td>
+                          <td>$9.54,450</td>
+                          <td>$78,01</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Top Sellers Section End  -->
+
+            <!-- Customer Satisfaction & Top Customers Section Start -->
+            <section class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <!-- Customer Satisfaction  -->
+              <div class="card">
+                <div class="card-body">
+                  <!-- Header  -->
+                  <div class="flex w-full justify-between">
+                    <h6>Customer Satisfaction</h6>
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[160px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="my-1 text-sm text-slate-400">9.4k reviews</p>
+
+                  <!-- Performance Score Progress -->
+                  <div class="mt-4 flex w-full gap-[6px]">
+                    <div class="h-2 w-[40%] rounded-primary bg-primary-500"></div>
+                    <div class="h-2 w-[20%] rounded-primary bg-success-500"></div>
+                    <div class="h-2 w-[18%] rounded-primary bg-info-500"></div>
+                    <div class="h-2 w-[12%] rounded-primary bg-warning-500"></div>
+                    <div class="h-2 w-[10%] rounded-primary bg-danger-500"></div>
+                  </div>
+                  <br />
+                  <div class="space-y-8 overflow-x-auto">
+                    <!-- Excellent -->
+                    <div class="grid w-full grid-cols-3">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-primary-500"></div>
+                        <p class="whitespace-nowrap text-sm font-medium">Excellent</p>
+                      </div>
+                      <div class="flex items-center justify-center">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">3760</p>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">40%</p>
+                      </div>
+                    </div>
+                    <!-- Very Good  -->
+                    <div class="grid w-full grid-cols-3">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-success-500"></div>
+                        <p class="whitespace-nowrap text-sm font-medium">Very Good</p>
+                      </div>
+                      <div class="flex items-center justify-center">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">1880</p>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">20%</p>
+                      </div>
+                    </div>
+                    <!-- Good  -->
+                    <div class="grid w-full grid-cols-3">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-info-500"></div>
+                        <p class="whitespace-nowrap text-sm font-medium">Good</p>
+                      </div>
+                      <div class="flex items-center justify-center">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">1692</p>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">18%</p>
+                      </div>
+                    </div>
+                    <!-- Poor  -->
+                    <div class="grid w-full grid-cols-3">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-warning-500"></div>
+                        <p class="whitespace-nowrap text-sm font-medium">Poor</p>
+                      </div>
+                      <div class="flex items-center justify-center">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">1128</p>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">12%</p>
+                      </div>
+                    </div>
+                    <!-- Very Poor  -->
+                    <div class="grid w-full grid-cols-3">
+                      <div class="flex items-center gap-2">
+                        <div class="h-[14px] w-[14px] rounded-full border-2 border-danger-500"></div>
+                        <p class="whitespace-nowrap text-sm font-medium">Very Poor</p>
+                      </div>
+                      <div class="flex items-center justify-center">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">940</p>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <p class="whitespace-nowrap text-sm font-medium text-slate-600 dark:text-slate-400">10%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Top Customers  -->
+              <div class="card">
+                <div class="card-body flex h-full flex-col justify-between gap-2">
+                  <!-- Header  -->
+                  <div class="flex w-full justify-between">
+                    <h6>Top Customers</h6>
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <i class="ti ti-dots-vertical text-lg text-slate-500"></i>
+                      </div>
+                      <div class="dropdown-content w-[160px]">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Action </a>
+                          </li>
+                          <li class="dropdown-list-item">
+                            <a href="javascript:void(0)" class="dropdown-link gap-2"> Another Action </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Customers Table  -->
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>
+                            <p class="whitespace-nowrap">Join Date</p>
+                          </th>
+                          <th>
+                            <p class="whitespace-nowrap">Total Order</p>
+                          </th>
+                          <th>Revenue</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="flex gap-2">
+                              <div class="avatar avatar-circle">
+                                <img src="./images/avatar1.png" alt="avatar-img" class="avatar-img" />
+                              </div>
+                              <div>
+                                <p class="text-sm font-medium">Ahmed Shakil</p>
+                                <p class="text-xs font-normal text-slate-400">ahmed@example.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap">19 Aug 2022</td>
+                          <td>$20,500</td>
+                          <td>$5,000</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex gap-2">
+                              <div class="avatar avatar-circle">
+                                <img src="./images/avatar2.png" alt="avatar-img" class="avatar-img" />
+                              </div>
+                              <div>
+                                <p class="text-sm font-medium">Mehedi Hasan</p>
+                                <p class="text-xs font-normal text-slate-400">mehedi@example.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap">01 Jan 2022</td>
+                          <td>$18,250</td>
+                          <td>$4,250</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex gap-2">
+                              <div class="avatar avatar-circle">
+                                <img src="./images/avatar3.png" alt="avatar-img" class="avatar-img" />
+                              </div>
+                              <div>
+                                <p class="font-medium">Mirazul Islam</p>
+                                <p class="text-xs font-normal text-slate-400">mirazul@example.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap">07 Feb 2022</td>
+                          <td>$15,250</td>
+                          <td>$4,000</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex gap-2">
+                              <div class="avatar avatar-circle">
+                                <img src="./images/avatar4.png" alt="avatar-img" class="avatar-img" />
+                              </div>
+                              <div>
+                                <p class="font-medium">Tanvir Ahmed</p>
+                                <p class="text-xs font-normal text-slate-400">tanvir@example.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap">03 May 2022</td>
+                          <td>$12,650</td>
+                          <td>$3,500</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Customer Satisfaction & Top Customers Section End -->
           </div>
+        </main>
+        <!-- Main Content Ends -->
+
+        <!-- Footer Starts -->
+        <footer class="footer">
+          <p class="text-sm">
+            Copyright © 2023
+            <a class="text-primary-500 hover:underline" href="https://getadmintoolkit.com" target="_blank">
+              Admin Toolkit
+            </a>
+          </p>
+
+          <p class="flex items-center gap-1 text-sm">
+            Hand-crafted &amp; Made with
+            <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
+          </p>
+        </footer>
+        <!-- Footer Ends -->
+      </div>
+      <!-- Page Content Ends -->
+    </div>
+    <!-- Wrapper Ends -->
+
+    <!-- Search Modal Start -->
+    <div class="modal" id="search-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header px-4 sm:px-6">
+            <div class="group flex items-center">
+              <i data-feather="search"
+                class="text-slate-500 group-focus-within:text-slate-600 dark:text-slate-400 dark:group-focus-within:text-slate-300"></i>
+              <input type="text"
+                class="w-full border-none bg-transparent text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:ring-0 dark:text-slate-200"
+                placeholder="Search" />
+              <button
+                class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
+                data-dismiss="modal">
+                ESC
+              </button>
+            </div>
+          </div>
+          <div class="modal-body max-h-[600px] px-4 py-6 sm:px-6"></div>
         </div>
       </div>
-      <!-- Search Modal Ends -->
     </div>
-    <script src="./js/app.js" type="module"></script>
-    <script src="./js/custom/analytics.js" type="module"></script>
-  </body>
+    <!-- Search Modal Ends -->
+  </div>
+  <script src="./js/app.js" type="module"></script>
+  <script src="./js/custom/analytics.js" type="module"></script>
+</body>
+
 </html>
