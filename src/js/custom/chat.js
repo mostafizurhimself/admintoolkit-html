@@ -6,12 +6,13 @@ const chatBtnShowSidebar = document.querySelector('#chat-btn-show-sidebar');
 const chatBtnHideSidebar = document.querySelector('#chat-btn-hide-sidebar');
 const btnUploadMedia = document.querySelector('#btn-upload-media');
 const inputUploadMedia = document.querySelector('#input-upload-media');
-const chatBody = document.querySelector('#chat-body');
+const chatScrollView = document.querySelector('#chat-scroll-view');
 
 // Default Scroll To Bottom
 window.addEventListener('load', () => {
-  let chatScrollHeight = chatBody.scrollHeight;
-  chatBody.scrollTo({ top: chatScrollHeight, left: 0 });
+  if (chatScrollView) {
+    chatScrollView.scrollIntoView(true);
+  }
 });
 
 if (chatListItems.length) {

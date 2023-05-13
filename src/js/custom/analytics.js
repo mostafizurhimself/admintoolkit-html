@@ -142,12 +142,12 @@ const activeUsersChartOptions = {
   legend: {
     position: 'bottom',
     horizontalAlign: 'center',
-    itemMargin: {
-      horizontal: 10,
-    },
+    // itemMargin: {
+    //   horizontal: 10,
+    // },
     markers: {
-      width: 15,
-      height: 15,
+      width: 10,
+      height: 10,
     },
     formatter: function (name, opts) {
       const total = opts.w.globals.seriesTotals.reduce((a, b) => {
@@ -159,7 +159,7 @@ const activeUsersChartOptions = {
 
       return `
         <div class="ml-1">
-          <p class="text-slate-700 text-sm font-semibold dark:text-slate-300">${percentage}%</p>
+          <p class="text-slate-700 text-sm font-medium dark:text-slate-300">${percentage}%</p>
           <p class="text-xs">${name}</p>
         </div>
       `;
