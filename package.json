@@ -2,7 +2,6 @@
   "name": "vite-multipage-setup",
   "private": true,
   "version": "1.0.1",
-  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
