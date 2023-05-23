@@ -25,7 +25,6 @@ Overall, **AdminToolkit** is an excellent choice for developers who are looking 
 - Easily Customizable
 - Developer friendly
 - Organized codebase
-- Well documented
 
 ## 📌 Installation
 
