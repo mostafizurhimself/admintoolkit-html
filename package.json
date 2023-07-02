@@ -1,9 +1,10 @@
 {
-  "name": "vite-multipage-setup",
+  "name": "admin-toolkit",
   "private": true,
-  "version": "1.0.1",
-  "license": "MIT",
+  "version": "1.0.5",
   "type": "module",
+  "license": "MIT",
+  "author": "Md Mostafizur Rahman",
   "scripts": {
     "dev": "vite",
     "build": "vite build --emptyOutDir",

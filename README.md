@@ -25,7 +25,6 @@ Overall, **AdminToolkit** is an excellent choice for developers who are looking 
 - Easily Customizable
 - Developer friendly
 - Organized codebase
-- Well documented
 
 ## 📌 Installation
 
@@ -59,16 +58,18 @@ yarn build
 yarn start
 ```
 
-## 📌 Documentation
+## 📌 Contribution
 
-The documentation for **AdminToolkit** is available [here](./documentation.pdf).
+1. Fork the repository
+2. Clone the repository
+3. Create a new branch `git checkout -b new-branch`
+4. Make changes
+5. Commit and push the changes
+6. Create a pull request
 
-## 📌 Credits
+## 📌 License
 
-- [Google Fonts](https://fonts.google.com/)
-- [Storyset](https://storyset.com/)
-- [Flaticon](https://www.flaticon.com/)
-- [Unsplash](https://unsplash.com/)
+[MIT](./LICENSE)
 
 ## 📌 Todo
 
