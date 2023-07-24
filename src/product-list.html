@@ -1,1402 +1,1468 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/logo-small.svg" type="image/svg+xml" />
+    <title>Product List - Admin Toolkit</title>
+    <meta
+      name="description"
+      content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/app.scss" />
+    <script>
+      if (
+        localStorage.getItem('theme') === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="./images/logo-small.svg" type="image/svg+xml" />
-  <title>Product List - Admin Toolkit</title>
-  <meta name="description"
-    content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./scss/app.scss" />
-  <script>
-    if (
-      localStorage.getItem('theme') === 'dark' ||
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  </script>
-</head>
+  <body>
+    <div id="app">
+      <!-- Sidebar Starts -->
+      <aside class="sidebar">
+        <!-- Sidebar Header Starts -->
+        <a href="/">
+          <div class="sidebar-header">
+            <div class="sidebar-logo-icon">
+              <img src="./images/logo-small.svg" alt="logo" class="h-[45px]" />
+            </div>
 
-<body>
-  <div id="app">
-    <!-- Sidebar Starts -->
-    <aside class="sidebar">
-      <!-- Sidebar Header Starts -->
-    <a href="/">
-        <div class="sidebar-header">
-          <div class="sidebar-logo-icon">
-            <img src="./images/logo-small.svg" alt="logo" class="h-[45px]" />
+            <div class="sidebar-logo-text">
+              <h1 class="flex text-xl">
+                <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
+                <span class="font-semibold text-primary-500">Toolkit</span>
+              </h1>
+
+              <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+            </div>
           </div>
-      
-          <div class="sidebar-logo-text">
-            <h1 class="flex text-xl">
-              <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
-              <span class="font-semibold text-primary-500">Toolkit</span>
-            </h1>
-      
-            <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
-          </div>
-        </div>
-    </a>
-      <!-- Sidebar Header Ends -->
+        </a>
+        <!-- Sidebar Header Ends -->
 
-      <!-- Sidebar Menu Starts -->
-      <ul class="sidebar-content">
-        <!-- Dashboard -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="home"></i>
-            </span>
-            <span class="sidebar-menu-text">Dashboard</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="/" class="sidebar-submenu-item"> Analytics </a>
-            </li>
-            <li>
-              <a href="./ecommerce.html" class="sidebar-submenu-item">Ecommerce</a>
-            </li>
-          </ul>
-        </li>
-
-        <div class="sidebar-menu-header">Applications</div>
-
-        <!-- Email -->
-        <li>
-          <a href="./email.html" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="mail"></i>
-            </span>
-            <span class="sidebar-menu-text">Email</span>
-          </a>
-        </li>
-        <!-- Chat -->
-        <li>
-          <a href="./chat.html" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="message-square"></i>
-            </span>
-            <span class="sidebar-menu-text">Chat</span>
-          </a>
-        </li>
-        <!-- Calendar -->
-        <li>
-          <a href="./calendar.html" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="calendar"></i>
-            </span>
-            <span class="sidebar-menu-text">Calendar</span>
-          </a>
-        </li>
-        <!-- Invoice -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="file-text"></i>
-            </span>
-            <span class="sidebar-menu-text">Invoice</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./invoice-create.html" class="sidebar-submenu-item"> Create </a>
-            </li>
-
-            <li>
-              <a href="./invoice-details.html" class="sidebar-submenu-item"> Details </a>
-            </li>
-          </ul>
-        </li>
-        <!-- ecommnerce -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu active">
-            <span class="sidebar-menu-icon">
-              <i data-feather="shopping-bag"></i>
-            </span>
-            <span class="sidebar-menu-text">Ecommerce</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./product-list.html" class="sidebar-submenu-item active"> Product List </a>
-            </li>
-            <li>
-              <a href="./product-edit.html" class="sidebar-submenu-item"> Product Edit </a>
-            </li>
-            <li>
-              <a href="./order-list.html" class="sidebar-submenu-item"> Order List </a>
-            </li>
-            <li>
-              <a href="./order-details.html" class="sidebar-submenu-item"> Order Details </a>
-            </li>
-            <li>
-              <a href="./customer-list.html" class="sidebar-submenu-item"> Customer List </a>
-            </li>
-          </ul>
-        </li>
-        <!-- Users -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="users"></i>
-            </span>
-            <span class="sidebar-menu-text">Users</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./user-list.html" class="sidebar-submenu-item">List</a>
-            </li>
-            <li>
-              <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
-            </li>
-          </ul>
-        </li>
-        <!--  Commponents  -->
-        <div class="sidebar-menu-header">Components</div>
-        <!-- Common  -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="box"></i>
-            </span>
-            <span class="sidebar-menu-text">Common</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./accordion.html" class="sidebar-submenu-item"> Accordion </a>
-            </li>
-            <li>
-              <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
-            </li>
-            <li>
-              <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
-            </li>
-            <li>
-              <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
-            </li>
-            <li>
-              <a href="./button.html" class="sidebar-submenu-item">Button</a>
-            </li>
-            <li>
-              <a href="./card.html" class="sidebar-submenu-item">Card</a>
-            </li>
-            <li>
-              <a href="./carousel.html" class="sidebar-submenu-item"> Carousel </a>
-            </li>
-
-            <li>
-              <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
-            </li>
-            <li>
-              <a href="./dropdown.html" class="sidebar-submenu-item"> Dropdown </a>
-            </li>
-            <li>
-              <a href="./list-group.html" class="sidebar-submenu-item"> List Group </a>
-            </li>
-            <li>
-              <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
-            </li>
-            <li>
-              <a href="./pagination.html" class="sidebar-submenu-item"> Pagination </a>
-            </li>
-            <li>
-              <a href="./progress-bar.html" class="sidebar-submenu-item"> Progress </a>
-            </li>
-
-            <li>
-              <a href="./spinner.html" class="sidebar-submenu-item"> Spinner </a>
-            </li>
-            <li>
-              <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
-            </li>
-            <li>
-              <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
-            </li>
-            <li>
-              <a href="./tooltip.html" class="sidebar-submenu-item"> Tooltip </a>
-            </li>
-          </ul>
-        </li>
-        <!-- Forms  -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="edit"></i>
-            </span>
-            <span class="sidebar-menu-text">Forms</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./input.html" class="sidebar-submenu-item">Input</a>
-            </li>
-            <li>
-              <a href="./input-group.html" class="sidebar-submenu-item"> Input Group </a>
-            </li>
-            <li>
-              <a href="./textarea.html" class="sidebar-submenu-item"> Textarea </a>
-            </li>
-            <li>
-              <a href="./checkbox.html" class="sidebar-submenu-item"> Checkbox </a>
-            </li>
-            <li>
-              <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
-            </li>
-            <li>
-              <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
-            </li>
-            <li>
-              <a href="./select.html" class="sidebar-submenu-item">Select</a>
-            </li>
-
-            <li>
-              <a href="./datepicker.html" class="sidebar-submenu-item"> Datepicker </a>
-            </li>
-            <li>
-              <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
-            </li>
-            <li>
-              <a href="./uploader.html" class="sidebar-submenu-item"> Uploader </a>
-            </li>
-            <li>
-              <a href="./form-layout.html" class="sidebar-submenu-item">Layout</a>
-            </li>
-            <li>
-              <a href="./form-validation.html" class="sidebar-submenu-item"> Validation </a>
-            </li>
-          </ul>
-        </li>
-        <!-- Tables  -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="list"></i>
-            </span>
-            <span class="sidebar-menu-text">Tables</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./basic-table.html" class="sidebar-submenu-item"> Basic Table </a>
-            </li>
-            <li>
-              <a href="./data-table.html" class="sidebar-submenu-item"> Data Table </a>
-            </li>
-          </ul>
-        </li>
-        <!-- Charts  -->
-        <li>
-          <a href="./chart.html" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="pie-chart"></i>
-            </span>
-            <span class="sidebar-menu-text">Charts</span>
-          </a>
-        </li>
-        <!-- Icons-->
-        <li>
-          <a href="./icons.html" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="italic"></i>
-            </span>
-            <span class="sidebar-menu-text">Icons</span>
-          </a>
-        </li>
-        <!-- Typography-->
-        <li>
-          <a href="./typography.html" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="type"></i>
-            </span>
-            <span class="sidebar-menu-text">Typography</span>
-          </a>
-        </li>
-        <!--  Pages  -->
-        <div class="sidebar-menu-header">Pages</div>
-        <!-- Authentication  -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="lock"></i>
-            </span>
-            <span class="sidebar-menu-text">Authentication</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./login.html" class="sidebar-submenu-item">Login</a>
-            </li>
-            <li>
-              <a href="./register.html" class="sidebar-submenu-item"> Register </a>
-            </li>
-            <li>
-              <a href="./recover-password.html" class="sidebar-submenu-item"> Forgot Password </a>
-            </li>
-            <li>
-              <a href="./reset-password.html" class="sidebar-submenu-item"> Reset Password </a>
-            </li>
-          </ul>
-        </li>
-        <!-- Miscellaneous  -->
-        <li>
-          <a href="javascript:void(0);" class="sidebar-menu">
-            <span class="sidebar-menu-icon">
-              <i data-feather="grid"></i>
-            </span>
-            <span class="sidebar-menu-text">Miscellaneous</span>
-            <span class="sidebar-menu-arrow">
-              <i data-feather="chevron-right"></i>
-            </span>
-          </a>
-          <ul class="sidebar-submenu">
-            <li>
-              <a href="./starter.html" class="sidebar-submenu-item"> Starter Page </a>
-            </li>
-            <li>
-              <a href="./comming-soon.html" class="sidebar-submenu-item"> Coming Soon </a>
-            </li>
-            <li>
-              <a href="./maintenance.html" class="sidebar-submenu-item"> Maintenance </a>
-            </li>
-            <li>
-              <a href="./404-error.html" class="sidebar-submenu-item"> Error 404 </a>
-            </li>
-            <li>
-              <a href="./500-error.html" class="sidebar-submenu-item"> Error 500 </a>
-            </li>
-            <li>
-              <a href="./not-authorized.html" class="sidebar-submenu-item"> Not Authorized </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <!-- Sidebar Menu Ends -->
-    </aside>
-    <!-- Sidebar Ends -->
-
-    <!-- Wrapper Starts -->
-    <div class="wrapper">
-      <!-- Header Starts -->
-      <header class="header">
-        <div class="container-fluid flex items-center justify-between">
-          <!-- Sidebar Toggle & Search Starts -->
-          <div class="flex items-center space-x-6">
-            <button class="sidebar-toggle">
-              <span class="flex space-x-4">
-                <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
-                  </path>
-                </svg>
+        <!-- Sidebar Menu Starts -->
+        <ul class="sidebar-content">
+          <!-- Dashboard -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="home"></i>
               </span>
-            </button>
+              <span class="sidebar-menu-text">Dashboard</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="/" class="sidebar-submenu-item"> Analytics </a>
+              </li>
+              <li>
+                <a href="./ecommerce.html" class="sidebar-submenu-item">Ecommerce</a>
+              </li>
+            </ul>
+          </li>
 
-            <!-- Mobile Search Starts -->
-            <div class="sm:hidden">
-              <button type="button" data-trigger="search-modal"
-                class="flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300">
-                <i width="22" height="22" data-feather="search"></i>
+          <div class="sidebar-menu-header">Applications</div>
+
+          <!-- Email -->
+          <li>
+            <a href="./email.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="mail"></i>
+              </span>
+              <span class="sidebar-menu-text">Email</span>
+            </a>
+          </li>
+          <!-- Chat -->
+          <li>
+            <a href="./chat.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="message-square"></i>
+              </span>
+              <span class="sidebar-menu-text">Chat</span>
+            </a>
+          </li>
+          <!-- Calendar -->
+          <li>
+            <a href="./calendar.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="calendar"></i>
+              </span>
+              <span class="sidebar-menu-text">Calendar</span>
+            </a>
+          </li>
+          <!-- Invoice -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="file-text"></i>
+              </span>
+              <span class="sidebar-menu-text">Invoice</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./invoice-create.html" class="sidebar-submenu-item"> Create </a>
+              </li>
+
+              <li>
+                <a href="./invoice-details.html" class="sidebar-submenu-item"> Details </a>
+              </li>
+            </ul>
+          </li>
+          <!-- ecommnerce -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu active">
+              <span class="sidebar-menu-icon">
+                <i data-feather="shopping-bag"></i>
+              </span>
+              <span class="sidebar-menu-text">Ecommerce</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./product-list.html" class="sidebar-submenu-item active"> Product List </a>
+              </li>
+              <li>
+                <a href="./product-edit.html" class="sidebar-submenu-item"> Product Edit </a>
+              </li>
+              <li>
+                <a href="./order-list.html" class="sidebar-submenu-item"> Order List </a>
+              </li>
+              <li>
+                <a href="./order-details.html" class="sidebar-submenu-item"> Order Details </a>
+              </li>
+              <li>
+                <a href="./customer-list.html" class="sidebar-submenu-item"> Customer List </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Users -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="users"></i>
+              </span>
+              <span class="sidebar-menu-text">Users</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./user-list.html" class="sidebar-submenu-item">List</a>
+              </li>
+              <li>
+                <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
+              </li>
+            </ul>
+          </li>
+          <!--  Commponents  -->
+          <div class="sidebar-menu-header">Components</div>
+          <!-- Common  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="box"></i>
+              </span>
+              <span class="sidebar-menu-text">Common</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./accordion.html" class="sidebar-submenu-item"> Accordion </a>
+              </li>
+              <li>
+                <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
+              </li>
+              <li>
+                <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
+              </li>
+              <li>
+                <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
+              </li>
+              <li>
+                <a href="./button.html" class="sidebar-submenu-item">Button</a>
+              </li>
+              <li>
+                <a href="./card.html" class="sidebar-submenu-item">Card</a>
+              </li>
+              <li>
+                <a href="./carousel.html" class="sidebar-submenu-item"> Carousel </a>
+              </li>
+
+              <li>
+                <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
+              </li>
+              <li>
+                <a href="./dropdown.html" class="sidebar-submenu-item"> Dropdown </a>
+              </li>
+              <li>
+                <a href="./list-group.html" class="sidebar-submenu-item"> List Group </a>
+              </li>
+              <li>
+                <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
+              </li>
+              <li>
+                <a href="./pagination.html" class="sidebar-submenu-item"> Pagination </a>
+              </li>
+              <li>
+                <a href="./progress-bar.html" class="sidebar-submenu-item"> Progress </a>
+              </li>
+
+              <li>
+                <a href="./spinner.html" class="sidebar-submenu-item"> Spinner </a>
+              </li>
+              <li>
+                <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
+              </li>
+              <li>
+                <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
+              </li>
+              <li>
+                <a href="./tooltip.html" class="sidebar-submenu-item"> Tooltip </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Forms  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="edit"></i>
+              </span>
+              <span class="sidebar-menu-text">Forms</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./input.html" class="sidebar-submenu-item">Input</a>
+              </li>
+              <li>
+                <a href="./input-group.html" class="sidebar-submenu-item"> Input Group </a>
+              </li>
+              <li>
+                <a href="./textarea.html" class="sidebar-submenu-item"> Textarea </a>
+              </li>
+              <li>
+                <a href="./checkbox.html" class="sidebar-submenu-item"> Checkbox </a>
+              </li>
+              <li>
+                <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
+              </li>
+              <li>
+                <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
+              </li>
+              <li>
+                <a href="./select.html" class="sidebar-submenu-item">Select</a>
+              </li>
+
+              <li>
+                <a href="./datepicker.html" class="sidebar-submenu-item"> Datepicker </a>
+              </li>
+              <li>
+                <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
+              </li>
+              <li>
+                <a href="./uploader.html" class="sidebar-submenu-item"> Uploader </a>
+              </li>
+              <li>
+                <a href="./form-layout.html" class="sidebar-submenu-item">Layout</a>
+              </li>
+              <li>
+                <a href="./form-validation.html" class="sidebar-submenu-item"> Validation </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Tables  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="list"></i>
+              </span>
+              <span class="sidebar-menu-text">Tables</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./basic-table.html" class="sidebar-submenu-item"> Basic Table </a>
+              </li>
+              <li>
+                <a href="./data-table.html" class="sidebar-submenu-item"> Data Table </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Charts  -->
+          <li>
+            <a href="./chart.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="pie-chart"></i>
+              </span>
+              <span class="sidebar-menu-text">Charts</span>
+            </a>
+          </li>
+          <!-- Icons-->
+          <li>
+            <a href="./icons.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="italic"></i>
+              </span>
+              <span class="sidebar-menu-text">Icons</span>
+            </a>
+          </li>
+          <!-- Typography-->
+          <li>
+            <a href="./typography.html" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="type"></i>
+              </span>
+              <span class="sidebar-menu-text">Typography</span>
+            </a>
+          </li>
+          <!--  Pages  -->
+          <div class="sidebar-menu-header">Pages</div>
+          <!-- Authentication  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="lock"></i>
+              </span>
+              <span class="sidebar-menu-text">Authentication</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./login.html" class="sidebar-submenu-item">Login</a>
+              </li>
+              <li>
+                <a href="./register.html" class="sidebar-submenu-item"> Register </a>
+              </li>
+              <li>
+                <a href="./recover-password.html" class="sidebar-submenu-item"> Forgot Password </a>
+              </li>
+              <li>
+                <a href="./reset-password.html" class="sidebar-submenu-item"> Reset Password </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Miscellaneous  -->
+          <li>
+            <a href="javascript:void(0);" class="sidebar-menu">
+              <span class="sidebar-menu-icon">
+                <i data-feather="grid"></i>
+              </span>
+              <span class="sidebar-menu-text">Miscellaneous</span>
+              <span class="sidebar-menu-arrow">
+                <i data-feather="chevron-right"></i>
+              </span>
+            </a>
+            <ul class="sidebar-submenu">
+              <li>
+                <a href="./starter.html" class="sidebar-submenu-item"> Starter Page </a>
+              </li>
+              <li>
+                <a href="./comming-soon.html" class="sidebar-submenu-item"> Coming Soon </a>
+              </li>
+              <li>
+                <a href="./maintenance.html" class="sidebar-submenu-item"> Maintenance </a>
+              </li>
+              <li>
+                <a href="./404-error.html" class="sidebar-submenu-item"> Error 404 </a>
+              </li>
+              <li>
+                <a href="./500-error.html" class="sidebar-submenu-item"> Error 500 </a>
+              </li>
+              <li>
+                <a href="./not-authorized.html" class="sidebar-submenu-item"> Not Authorized </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Sidebar Menu Ends -->
+      </aside>
+      <!-- Sidebar Ends -->
+
+      <!-- Wrapper Starts -->
+      <div class="wrapper">
+        <!-- Header Starts -->
+        <header class="header">
+          <div class="container-fluid flex items-center justify-between">
+            <!-- Sidebar Toggle & Search Starts -->
+            <div class="flex items-center space-x-6">
+              <button class="sidebar-toggle">
+                <span class="flex space-x-4">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    height="22"
+                    width="22"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    ></path>
+                  </svg>
+                </span>
               </button>
-            </div>
-            <!-- Mobile Search Ends -->
 
-            <!-- Searchbar Start -->
-            <button type="button" data-trigger="search-modal"
-              class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex">
-              <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
-              <span class="ml-2 text-sm text-slate-400">Search</span>
-            </button>
-            <!-- Searchbar Ends -->
-          </div>
-          <!-- Sidebar Toggle & Search Ends -->
-
-          <!-- Header Options Starts -->
-          <div class="flex items-center">
-            <!-- Language Dropdown Starts -->
-            <div class="dropdown" data-strategy="absolute">
-              <div class="dropdown-toggle px-3">
-                <button type="button"
-                  class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-700 focus:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-slate-300">
-                  <span class="fi fi-gb"></span>
-                  <span class="hidden font-medium md:inline-block">English</span>
-                  <span class="inline-block font-medium md:hidden">EN</span>
-                </button>
-              </div>
-
-              <div class="dropdown-content mt-3 w-40">
-                <ul class="dropdown-list">
-                  <li class="dropdown-list-item">
-                    <button class="dropdown-btn" type="button">
-                      <span class="fi fi-gb"></span>
-                      <span class="">English</span>
-                    </button>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <button class="dropdown-btn" type="button">
-                      <span class="fi fi-de"></span>
-                      <span class="">German</span>
-                    </button>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <button class="dropdown-btn" type="button">
-                      <span class="fi fi-gf"></span>
-                      <span class="">French</span>
-                    </button>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <button class="dropdown-btn" type="button">
-                      <span class="fi fi-sa"></span>
-                      <span class="">Arabic</span>
-                    </button>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <button class="dropdown-btn" type="button">
-                      <span class="fi fi-cn"></span>
-                      <span class="">Chinese</span>
-                    </button>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <button class="dropdown-btn" type="button">
-                      <span class="fi fi-bd"></span>
-                      <span class="">Bangla</span>
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- Language Dropdown Ends -->
-
-            <!-- Dark Mood Toggle Starts -->
-            <div class="dropdown" data-strategy="absolute" id="theme-switcher-dropdown">
-              <button
-                class="dropdown-toggle px-3 text-slate-500 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
-                type="button">
-                <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
-                <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
-              </button>
-
-              <div class="dropdown-content mt-3 w-36">
-                <ul class="dropdown-list">
-                  <li class="dropdown-list-item">
-                    <button type="buttton" class="dropdown-btn" data-theme-mode="light">
-                      <i width="16" height="16" data-feather="sun"></i>
-                      <span>Light</span>
-                    </button>
-                  </li>
-
-                  <li class="dropdown-list-item">
-                    <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
-                      <i width="16" height="16" data-feather="moon"></i>
-                      <span>Dark</span>
-                    </button>
-                  </li>
-
-                  <li class="dropdown-list-item">
-                    <button type="buttton" class="dropdown-btn" data-theme-mode="system">
-                      <i width="16" height="16" data-feather="monitor"></i>
-                      <span>System</span>
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- Dark Mood Toggle Ends -->
-
-            <!-- Notification Dropdown Starts -->
-            <div class="dropdown -mt-0.5" data-strategy="absolute">
-              <div class="dropdown-toggle px-3">
+              <!-- Mobile Search Starts -->
+              <div class="sm:hidden">
                 <button
-                  class="relative mt-1 flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
-                  <i width="24" height="24" data-feather="bell"></i>
-                  <span
-                    class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
-                    5
-                  </span>
+                  type="button"
+                  data-trigger="search-modal"
+                  class="flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300"
+                >
+                  <i width="22" height="22" data-feather="search"></i>
                 </button>
               </div>
+              <!-- Mobile Search Ends -->
 
-              <div class="dropdown-content mt-3 w-[17.5rem] divide-y dark:divide-slate-700 sm:w-80">
-                <div class="flex items-center justify-between px-4 py-4">
-                  <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
-                  <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
-                    Clear All
+              <!-- Searchbar Start -->
+              <button
+                type="button"
+                data-trigger="search-modal"
+                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex"
+              >
+                <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
+                <span class="ml-2 text-sm text-slate-400">Search</span>
+              </button>
+              <!-- Searchbar Ends -->
+            </div>
+            <!-- Sidebar Toggle & Search Ends -->
+
+            <!-- Header Options Starts -->
+            <div class="flex items-center">
+              <!-- Language Dropdown Starts -->
+              <div class="dropdown" data-strategy="absolute">
+                <div class="dropdown-toggle px-3">
+                  <button
+                    type="button"
+                    class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-700 focus:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-slate-300"
+                  >
+                    <span class="fi fi-gb"></span>
+                    <span class="hidden font-medium md:inline-block">English</span>
+                    <span class="inline-block font-medium md:hidden">EN</span>
                   </button>
                 </div>
 
-                <div class="h-80 w-full" data-simplebar>
-                  <ul>
-                    <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
-                      <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500">
-                        <i data-feather="alert-circle" width="20" height="20"></i>
-                      </div>
-
-                      <div>
-                        <h6 class="text-sm font-normal">New order received</h6>
-                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
-                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                          <i data-feather="clock" width="1em" height="1em"></i>
-                          <span>2 min ago</span>
-                        </p>
-                      </div>
+                <div class="dropdown-content mt-3 w-40">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-gb"></span>
+                        <span class="">English</span>
+                      </button>
                     </li>
-
-                    <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
-                      <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500">
-                        <i data-feather="alert-triangle" width="20" height="20"></i>
-                      </div>
-
-                      <div>
-                        <h6 class="text-sm font-normal">High CPU usage</h6>
-                        <p class="text-xs text-slate-400">CPU usage is at 92%</p>
-                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                          <i data-feather="clock" width="1em" height="1em"></i>
-                          <span>5 min ago</span>
-                        </p>
-                      </div>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-de"></span>
+                        <span class="">German</span>
+                      </button>
                     </li>
-
-                    <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
-                      <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
-                        <i data-feather="check-circle" width="20" height="20"></i>
-                      </div>
-
-                      <div>
-                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
-                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
-                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                          <i data-feather="clock" width="1em" height="1em"></i>
-                          <span>10 min ago</span>
-                        </p>
-                      </div>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-gf"></span>
+                        <span class="">French</span>
+                      </button>
                     </li>
-
-                    <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
-                      <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500">
-                        <i data-feather="x-circle" width="20" height="20"></i>
-                      </div>
-
-                      <div>
-                        <h6 class="text-sm font-normal">Something went wrong</h6>
-                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
-                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                          <i data-feather="clock" width="1em" height="1em"></i>
-                          <span>1 hour ago</span>
-                        </p>
-                      </div>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-sa"></span>
+                        <span class="">Arabic</span>
+                      </button>
                     </li>
-
-                    <li
-                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
-                      <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
-                        <i data-feather="check-circle" width="20" height="20"></i>
-                      </div>
-
-                      <div>
-                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
-                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
-                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
-                          <i data-feather="clock" width="1em" height="1em"></i>
-                          <span>10 min ago</span>
-                        </p>
-                      </div>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-cn"></span>
+                        <span class="">Chinese</span>
+                      </button>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <button class="dropdown-btn" type="button">
+                        <span class="fi fi-bd"></span>
+                        <span class="">Bangla</span>
+                      </button>
                     </li>
                   </ul>
                 </div>
+              </div>
+              <!-- Language Dropdown Ends -->
 
-                <div class="px-4 py-2">
-                  <button class="btn btn-primary-plain btn-sm w-full" type="button">
-                    <span>View More</span>
-                    <i data-feather="arrow-right" width="1rem" height="1rem"></i>
-                  </button>
+              <!-- Dark Mood Toggle Starts -->
+              <div class="dropdown" data-strategy="absolute" id="theme-switcher-dropdown">
+                <button
+                  class="dropdown-toggle px-3 text-slate-500 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                  type="button"
+                >
+                  <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
+                  <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
+                </button>
+
+                <div class="dropdown-content mt-3 w-36">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <button type="buttton" class="dropdown-btn" data-theme-mode="light">
+                        <i width="16" height="16" data-feather="sun"></i>
+                        <span>Light</span>
+                      </button>
+                    </li>
+
+                    <li class="dropdown-list-item">
+                      <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
+                        <i width="16" height="16" data-feather="moon"></i>
+                        <span>Dark</span>
+                      </button>
+                    </li>
+
+                    <li class="dropdown-list-item">
+                      <button type="buttton" class="dropdown-btn" data-theme-mode="system">
+                        <i width="16" height="16" data-feather="monitor"></i>
+                        <span>System</span>
+                      </button>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </div>
-            <!-- Notification Dropdown Ends -->
+              <!-- Dark Mood Toggle Ends -->
 
-            <!-- Profile Dropdown Starts -->
-            <div class="dropdown" data-strategy="absolute">
-              <div class="dropdown-toggle pl-3">
-                <button class="group relative flex items-center gap-x-1.5" type="button">
-                  <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
-                    <img class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
-                      src="./images/avatar1.png" alt="Avatar 1" />
+              <!-- Notification Dropdown Starts -->
+              <div class="dropdown -mt-0.5" data-strategy="absolute">
+                <div class="dropdown-toggle px-3">
+                  <button
+                    class="relative mt-1 flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                  >
+                    <i width="24" height="24" data-feather="bell"></i>
+                    <span
+                      class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200"
+                    >
+                      5
+                    </span>
+                  </button>
+                </div>
+
+                <div class="dropdown-content mt-3 w-[17.5rem] divide-y dark:divide-slate-700 sm:w-80">
+                  <div class="flex items-center justify-between px-4 py-4">
+                    <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
+                    <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
+                      Clear All
+                    </button>
                   </div>
+
+                  <div class="h-80 w-full" data-simplebar>
+                    <ul>
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500"
+                        >
+                          <i data-feather="alert-circle" width="20" height="20"></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">New order received</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>2 min ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500"
+                        >
+                          <i data-feather="alert-triangle" width="20" height="20"></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">High CPU usage</h6>
+                          <p class="text-xs text-slate-400">CPU usage is at 92%</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>5 min ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
+                        >
+                          <i data-feather="check-circle" width="20" height="20"></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>10 min ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500"
+                        >
+                          <i data-feather="x-circle" width="20" height="20"></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">Something went wrong</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>1 hour ago</span>
+                          </p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                      >
+                        <div
+                          class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
+                        >
+                          <i data-feather="check-circle" width="20" height="20"></i>
+                        </div>
+
+                        <div>
+                          <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                          <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                          <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                            <i data-feather="clock" width="1em" height="1em"></i>
+                            <span>10 min ago</span>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="px-4 py-2">
+                    <button class="btn btn-primary-plain btn-sm w-full" type="button">
+                      <span>View More</span>
+                      <i data-feather="arrow-right" width="1rem" height="1rem"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Notification Dropdown Ends -->
+
+              <!-- Profile Dropdown Starts -->
+              <div class="dropdown" data-strategy="absolute">
+                <div class="dropdown-toggle pl-3">
+                  <button class="group relative flex items-center gap-x-1.5" type="button">
+                    <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                      <img
+                        class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
+                        src="./images/avatar1.png"
+                        alt="Avatar 1"
+                      />
+                    </div>
+                  </button>
+                </div>
+
+                <div class="dropdown-content mt-1 w-[11.25rem]">
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-link">
+                        <i width="18" height="18" data-feather="user"></i>
+                        <span>Profile</span>
+                      </a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-link">
+                        <i width="18" height="18" data-feather="settings"></i>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-link">
+                        <i width="18" height="18" data-feather="log-out"></i>
+                        <span>Sign out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Profile Dropdown Ends -->
+            </div>
+            <!-- Header Options Ends -->
+          </div>
+        </header>
+        <!-- Header Ends -->
+
+        <!-- Page Content Starts -->
+        <div class="content">
+          <!-- Main Content Starts -->
+          <main class="container flex-grow p-4 sm:p-6">
+            <!-- Page Title Starts -->
+            <div class="mb-6 flex flex-col justify-between gap-y-1 sm:flex-row sm:gap-y-0">
+              <h5>Product List</h5>
+
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="/">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#">Ecommerce</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#">Product List</a>
+                </li>
+              </ol>
+            </div>
+            <!-- Page Title Ends -->
+
+            <!-- Product List Starts -->
+            <div class="space-y-4">
+              <!-- Product Header Starts -->
+              <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row md:gap-y-0">
+                <!-- Customer Search Starts -->
+                <form
+                  class="group flex h-10 w-full items-center rounded-primary border border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500 md:w-72"
+                >
+                  <div class="flex h-full items-center px-2">
+                    <i class="h-4 text-slate-400 group-focus-within:text-primary-500" data-feather="search"></i>
+                  </div>
+                  <input
+                    class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                    type="text"
+                    placeholder="Search"
+                  />
+                </form>
+                <!-- Customer Search Ends -->
+
+                <!-- Customer Action Starts -->
+                <div class="flex w-full items-center justify-between gap-x-4 md:w-auto">
+                  <div class="flex items-center gap-x-4">
+                    <div class="dropdown" data-placement="bottom-end">
+                      <div class="dropdown-toggle">
+                        <button type="button" class="btn bg-white font-medium shadow-sm dark:bg-slate-800">
+                          <i class="w-4" data-feather="filter"></i>
+                          <span class="hidden sm:inline-block">Filter</span>
+                          <i class="w-4" data-feather="chevron-down"></i>
+                        </button>
+                      </div>
+                      <div class="dropdown-content w-72 !overflow-visible">
+                        <ul class="dropdown-list space-y-4 p-4">
+                          <li class="dropdown-list-item">
+                            <h2 class="my-1 text-sm font-medium">Category</h2>
+                            <select class="tom-select w-full" autocomplete="off">
+                              <option value="">Select a Category</option>
+                              <option value="1">Electronics</option>
+                              <option value="2">Fashion</option>
+                              <option value="3">Accessories</option>
+                            </select>
+                          </li>
+
+                          <li class="dropdown-list-item">
+                            <h2 class="my-1 text-sm font-medium">Status</h2>
+                            <select class="select">
+                              <option value="">Select to Status</option>
+                              <option value="1">Available</option>
+                              <option value="2">Disabled</option>
+                            </select>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <button class="btn bg-white font-medium shadow-sm dark:bg-slate-800">
+                      <i class="h-4" data-feather="upload"></i>
+                      <span class="hidden sm:inline-block">Export</span>
+                    </button>
+                  </div>
+
+                  <a class="btn btn-primary" href="#" role="button">
+                    <i data-feather="plus" height="1rem" width="1rem"></i>
+                    <span class="hidden sm:inline-block">Add Product</span>
+                  </a>
+                </div>
+                <!-- Customer Action Ends -->
+              </div>
+              <!-- Product Header Ends -->
+
+              <!-- Product Table Starts -->
+              <div class="table-responsive whitespace-nowrap rounded-primary">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th class="w-[5%]">
+                        <input
+                          class="checkbox"
+                          type="checkbox"
+                          data-check-all
+                          data-check-all-target=".product-checkbox"
+                        />
+                      </th>
+                      <th class="w-[40%] uppercase">Product</th>
+                      <th class="w-[10%] uppercase">SKU</th>
+                      <th class="w-[10%] uppercase">Price</th>
+                      <th class="w-[10%] uppercase">Quantity</th>
+                      <th class="w-[10%] uppercase">Last Ordered</th>
+                      <th class="w-[10%] uppercase">Status</th>
+                      <th class="w-[5%] !text-right uppercase">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input class="checkbox product-checkbox" type="checkbox" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img
+                            src="./images/product16.png"
+                            class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
+                            alt="product"
+                          />
+                          <div>
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                              Apple Watch 2023
+                            </h6>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">Electronics > Accessories</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>APLW001</td>
+                      <td>$200.00</td>
+                      <td>150 pcs</td>
+                      <td>19 Aug 2022</td>
+                      <td>
+                        <div class="badge badge-soft-success">Available</div>
+                      </td>
+                      <td>
+                        <div class="flex justify-end">
+                          <div class="dropdown" data-placement="bottom-start">
+                            <div class="dropdown-toggle">
+                              <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                            </div>
+                            <div class="dropdown-content w-40">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="edit"></i>
+                                    <span>Edit</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input class="checkbox product-checkbox" type="checkbox" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img
+                            src="./images/product4.png"
+                            class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
+                            alt="product"
+                          />
+                          <div>
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                              Headphone
+                            </h6>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">Electronics > Gadget</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>WLHP008</td>
+                      <td>$50.00</td>
+                      <td>100 pcs</td>
+                      <td>15 Jul 2022</td>
+                      <td>
+                        <div class="badge badge-soft-success">Available</div>
+                      </td>
+                      <td>
+                        <div class="flex justify-end">
+                          <div class="dropdown" data-placement="bottom-start">
+                            <div class="dropdown-toggle">
+                              <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                            </div>
+                            <div class="dropdown-content w-40">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="edit"></i>
+                                    <span>Edit</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input class="checkbox product-checkbox" type="checkbox" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img
+                            src="./images/product8.png"
+                            class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
+                            alt="product"
+                          />
+                          <div>
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                              Styllish Sunglass
+                            </h6>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">Electronics > Accessories</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>SSG038</td>
+                      <td>$20.00</td>
+                      <td>200 pcs</td>
+                      <td>23 Apr 2022</td>
+                      <td>
+                        <div class="badge badge-soft-danger">Disabled</div>
+                      </td>
+                      <td>
+                        <div class="flex justify-end">
+                          <div class="dropdown" data-placement="bottom-start">
+                            <div class="dropdown-toggle">
+                              <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                            </div>
+                            <div class="dropdown-content w-40">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="edit"></i>
+                                    <span>Edit</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input class="checkbox product-checkbox" type="checkbox" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img
+                            src="./images/product9.png"
+                            class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
+                            alt="product"
+                          />
+
+                          <div>
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                              Nike Sports Shoe
+                            </h6>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">Fashion > Shoes</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>NSS068</td>
+                      <td>$70.00</td>
+                      <td>130 pcs</td>
+                      <td>02 Feb 2022</td>
+                      <td>
+                        <div class="badge badge-soft-success">Available</div>
+                      </td>
+                      <td>
+                        <div class="flex justify-end">
+                          <div class="dropdown" data-placement="bottom-start">
+                            <div class="dropdown-toggle">
+                              <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                            </div>
+                            <div class="dropdown-content w-40">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="edit"></i>
+                                    <span>Edit</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input class="checkbox product-checkbox" type="checkbox" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img
+                            src="./images/product10.png"
+                            class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
+                            alt="product"
+                          />
+                          <div>
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                              Branded Coconut Oil
+                            </h6>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">Health Care > Body Oil</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>BCCO078</td>
+                      <td>$80.00</td>
+                      <td>300 pcs</td>
+                      <td>10 Mar 2022</td>
+                      <td>
+                        <div class="badge badge-soft-success">Available</div>
+                      </td>
+                      <td>
+                        <div class="flex justify-end">
+                          <div class="dropdown" data-placement="bottom-start">
+                            <div class="dropdown-toggle">
+                              <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                            </div>
+                            <div class="dropdown-content w-40">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="edit"></i>
+                                    <span>Edit</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input class="checkbox product-checkbox" type="checkbox" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img
+                            src="./images/product11.png"
+                            class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
+                            alt="product"
+                          />
+
+                          <div>
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                              JBL Wireless Earbud
+                            </h6>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">Electronics > Gadget</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>JWEO098</td>
+                      <td>$250.00</td>
+                      <td>220 pcs</td>
+                      <td>10 Mar 2022</td>
+                      <td>
+                        <div class="badge badge-soft-danger">Disabled</div>
+                      </td>
+                      <td>
+                        <div class="flex justify-end">
+                          <div class="dropdown" data-placement="bottom-start">
+                            <div class="dropdown-toggle">
+                              <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                            </div>
+                            <div class="dropdown-content w-40">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="edit"></i>
+                                    <span>Edit</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input class="checkbox product-checkbox" type="checkbox" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img
+                            src="./images/product12.png"
+                            class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
+                            alt="product"
+                          />
+
+                          <div>
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                              McBook Pro 2023
+                            </h6>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">Electronics > Laptop</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>MBP098</td>
+                      <td>$2000.00</td>
+                      <td>20 pcs</td>
+                      <td>15 Feb 2022</td>
+                      <td>
+                        <div class="badge badge-soft-success">Available</div>
+                      </td>
+                      <td>
+                        <div class="flex justify-end">
+                          <div class="dropdown" data-placement="bottom-start">
+                            <div class="dropdown-toggle">
+                              <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                            </div>
+                            <div class="dropdown-content w-40">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="edit"></i>
+                                    <span>Edit</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input class="checkbox product-checkbox" type="checkbox" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img
+                            src="./images/product13.png"
+                            class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
+                            alt="product"
+                          />
+
+                          <div>
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                              Ladies Handbag
+                            </h6>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">Fashion > Women's Fashion</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>LHB098</td>
+                      <td>$40.00</td>
+                      <td>160 pcs</td>
+                      <td>31 Dec 2022</td>
+                      <td>
+                        <div class="badge badge-soft-danger">Disabled</div>
+                      </td>
+                      <td>
+                        <div class="flex justify-end">
+                          <div class="dropdown" data-placement="bottom-start">
+                            <div class="dropdown-toggle">
+                              <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                            </div>
+                            <div class="dropdown-content w-40">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="edit"></i>
+                                    <span>Edit</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input class="checkbox product-checkbox" type="checkbox" />
+                      </td>
+                      <td>
+                        <div class="flex items-center gap-3">
+                          <img
+                            src="./images/product14.png"
+                            class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
+                            alt="product"
+                          />
+
+                          <div>
+                            <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                              Iphone 13 Pro Max
+                            </h6>
+                            <p class="truncate text-xs text-slate-500 dark:text-slate-400">Electronics > Mobile</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>IPPM032</td>
+                      <td>$820.00</td>
+                      <td>150 pcs</td>
+                      <td>25 Nov 2022</td>
+                      <td>
+                        <div class="badge badge-soft-success">Available</div>
+                      </td>
+                      <td>
+                        <div class="flex justify-end">
+                          <div class="dropdown" data-placement="bottom-start">
+                            <div class="dropdown-toggle">
+                              <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                            </div>
+                            <div class="dropdown-content w-40">
+                              <ul class="dropdown-list">
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                    <span>Details</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="edit"></i>
+                                    <span>Edit</span>
+                                  </a>
+                                </li>
+                                <li class="dropdown-list-item">
+                                  <a href="javascript:void(0)" class="dropdown-link">
+                                    <i class="h-5 text-slate-400" data-feather="trash"></i>
+                                    <span>Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- Product Table Ends -->
+
+              <!-- Product Pagination Starts -->
+              <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row">
+                <p class="text-xs font-normal text-slate-400">Showing 1 to 10 of 50 result</p>
+                <!-- Pagination -->
+                <nav class="pagination">
+                  <ul class="pagination-list">
+                    <li class="pagination-item">
+                      <a class="pagination-link pagination-link-prev-icon" href="#">
+                        <i data-feather="chevron-left" width="1em" height="1em"></i>
+                      </a>
+                    </li>
+                    <li class="pagination-item active">
+                      <a class="pagination-link" href="#">1</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">2</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">3</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">4</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">5</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link pagination-link-next-icon" href="#">
+                        <i data-feather="chevron-right" width="1em" height="1em"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- Product Pagination Ends -->
+            </div>
+            <!-- Product List Ends -->
+          </main>
+          <!-- Main Content Ends -->
+
+          <!-- Footer Starts -->
+          <footer class="footer">
+            <p class="text-sm">
+              Copyright © 2023
+              <a class="text-primary-500 hover:underline" href="https://getadmintoolkit.com" target="_blank">
+                Admin Toolkit
+              </a>
+            </p>
+
+            <p class="flex items-center gap-1 text-sm">
+              Hand-crafted &amp; Made with
+              <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
+            </p>
+          </footer>
+          <!-- Footer Ends -->
+        </div>
+        <!-- Page Content Ends -->
+      </div>
+      <!-- Wrapper Ends -->
+      <!-- Search Modal Start -->
+      <div class="modal" id="search-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header px-4 sm:px-6">
+              <div class="group flex items-center">
+                <i
+                  data-feather="search"
+                  class="text-slate-500 group-focus-within:text-slate-600 dark:text-slate-400 dark:group-focus-within:text-slate-300"
+                ></i>
+                <input
+                  type="text"
+                  class="w-full border-none bg-transparent text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:ring-0 dark:text-slate-200"
+                  placeholder="Search"
+                />
+                <button
+                  class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
+                  data-dismiss="modal"
+                >
+                  ESC
                 </button>
               </div>
-
-              <div class="dropdown-content mt-1 w-[11.25rem]">
-                <ul class="dropdown-list">
-                  <li class="dropdown-list-item">
-                    <a href="javascript:void(0)" class="dropdown-link">
-                      <i width="18" height="18" data-feather="user"></i>
-                      <span>Profile</span>
-                    </a>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <a href="javascript:void(0)" class="dropdown-link">
-                      <i width="18" height="18" data-feather="settings"></i>
-                      <span>Settings</span>
-                    </a>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <a href="javascript:void(0)" class="dropdown-link">
-                      <i width="18" height="18" data-feather="log-out"></i>
-                      <span>Sign out</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
             </div>
-            <!-- Profile Dropdown Ends -->
+            <div class="modal-body max-h-[600px] px-4 py-6 sm:px-6"></div>
           </div>
-          <!-- Header Options Ends -->
-        </div>
-      </header>
-      <!-- Header Ends -->
-
-      <!-- Page Content Starts -->
-      <div class="content">
-        <!-- Main Content Starts -->
-        <main class="container flex-grow p-4 sm:p-6">
-          <!-- Page Title Starts -->
-          <div class="mb-6 flex flex-col justify-between gap-y-1 sm:flex-row sm:gap-y-0">
-            <h5>Product List</h5>
-
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="/">Home</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="#">Ecommerce</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="#">Product List</a>
-              </li>
-            </ol>
-          </div>
-          <!-- Page Title Ends -->
-
-          <!-- Product List Starts -->
-          <div class="space-y-4">
-            <!-- Product Header Starts -->
-            <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row md:gap-y-0">
-              <!-- Customer Search Starts -->
-              <form
-                class="group flex h-10 w-full items-center rounded-primary border border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500 md:w-72">
-                <div class="flex h-full items-center px-2">
-                  <i class="h-4 text-slate-400 group-focus-within:text-primary-500" data-feather="search"></i>
-                </div>
-                <input
-                  class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
-                  type="text" placeholder="Search" />
-              </form>
-              <!-- Customer Search Ends -->
-
-              <!-- Customer Action Starts -->
-              <div class="flex w-full items-center justify-between gap-x-4 md:w-auto">
-                <div class="flex items-center gap-x-4">
-                  <div class="dropdown" data-placement="bottom-end">
-                    <div class="dropdown-toggle">
-                      <button type="button" class="btn bg-white font-medium shadow-sm dark:bg-slate-800">
-                        <i class="w-4" data-feather="filter"></i>
-                        <span class="hidden sm:inline-block">Filter</span>
-                        <i class="w-4" data-feather="chevron-down"></i>
-                      </button>
-                    </div>
-                    <div class="dropdown-content w-72 !overflow-visible">
-                      <ul class="dropdown-list space-y-4 p-4">
-                        <li class="dropdown-list-item">
-                          <h2 class="my-1 text-sm font-medium">Category</h2>
-                          <select class="tom-select w-full" autocomplete="off">
-                            <option value="">Select a Category</option>
-                            <option value="1">Electronics</option>
-                            <option value="2">Fashion</option>
-                            <option value="3">Accessories</option>
-                          </select>
-                        </li>
-
-                        <li class="dropdown-list-item">
-                          <h2 class="my-1 text-sm font-medium">Status</h2>
-                          <select class="select">
-                            <option value="">Select to Status</option>
-                            <option value="1">Available</option>
-                            <option value="2">Disabled</option>
-                          </select>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <button class="btn bg-white font-medium shadow-sm dark:bg-slate-800">
-                    <i class="h-4" data-feather="upload"></i>
-                    <span class="hidden sm:inline-block">Export</span>
-                  </button>
-                </div>
-
-                <a class="btn btn-primary" href="#" role="button">
-                  <i data-feather="plus" height="1rem" width="1rem"></i>
-                  <span class="hidden sm:inline-block">Add Product</span>
-                </a>
-              </div>
-              <!-- Customer Action Ends -->
-            </div>
-            <!-- Product Header Ends -->
-
-            <!-- Product Table Starts -->
-            <div class="table-responsive whitespace-nowrap rounded-primary">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th class="w-[5%]">
-                      <input class="checkbox" type="checkbox" data-check-all
-                        data-check-all-target=".product-checkbox" />
-                    </th>
-                    <th class="w-[40%] uppercase">Product</th>
-                    <th class="w-[10%] uppercase">SKU</th>
-                    <th class="w-[10%] uppercase">Price</th>
-                    <th class="w-[10%] uppercase">Quantity</th>
-                    <th class="w-[10%] uppercase">Last Ordered</th>
-                    <th class="w-[10%] uppercase">Status</th>
-                    <th class="w-[5%] !text-right uppercase">Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <input class="checkbox product-checkbox" type="checkbox" />
-                    </td>
-                    <td>
-                      <div class="flex items-center gap-3">
-                        <img src="./images/product16.png"
-                          class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
-                          alt="product" />
-                        <div>
-                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
-                            Apple Watch 2023
-                          </h6>
-                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">Electronics > Accessories</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>APLW001</td>
-                    <td>$200.00</td>
-                    <td>150 pcs</td>
-                    <td>19 Aug 2022</td>
-                    <td>
-                      <div class="badge badge-soft-success">Available</div>
-                    </td>
-                    <td>
-                      <div class="flex justify-end">
-                        <div class="dropdown" data-placement="bottom-start">
-                          <div class="dropdown-toggle">
-                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
-                          </div>
-                          <div class="dropdown-content w-40">
-                            <ul class="dropdown-list">
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                  <span>Edit</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                  <span>Delete</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input class="checkbox product-checkbox" type="checkbox" />
-                    </td>
-                    <td>
-                      <div class="flex items-center gap-3">
-                        <img src="./images/product4.png"
-                          class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
-                          alt="product" />
-                        <div>
-                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
-                            Headphone
-                          </h6>
-                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">Electronics > Gadget</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>WLHP008</td>
-                    <td>$50.00</td>
-                    <td>100 pcs</td>
-                    <td>15 Jul 2022</td>
-                    <td>
-                      <div class="badge badge-soft-success">Available</div>
-                    </td>
-                    <td>
-                      <div class="flex justify-end">
-                        <div class="dropdown" data-placement="bottom-start">
-                          <div class="dropdown-toggle">
-                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
-                          </div>
-                          <div class="dropdown-content w-40">
-                            <ul class="dropdown-list">
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                  <span>Edit</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                  <span>Delete</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input class="checkbox product-checkbox" type="checkbox" />
-                    </td>
-                    <td>
-                      <div class="flex items-center gap-3">
-                        <img src="./images/product8.png"
-                          class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
-                          alt="product" />
-                        <div>
-                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
-                            Styllish Sunglass
-                          </h6>
-                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">Electronics > Accessories</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>SSG038</td>
-                    <td>$20.00</td>
-                    <td>200 pcs</td>
-                    <td>23 Apr 2022</td>
-                    <td>
-                      <div class="badge badge-soft-danger">Disabled</div>
-                    </td>
-                    <td>
-                      <div class="flex justify-end">
-                        <div class="dropdown" data-placement="bottom-start">
-                          <div class="dropdown-toggle">
-                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
-                          </div>
-                          <div class="dropdown-content w-40">
-                            <ul class="dropdown-list">
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                  <span>Edit</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                  <span>Delete</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input class="checkbox product-checkbox" type="checkbox" />
-                    </td>
-                    <td>
-                      <div class="flex items-center gap-3">
-                        <img src="./images/product9.png"
-                          class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
-                          alt="product" />
-
-                        <div>
-                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
-                            Nike Sports Shoe
-                          </h6>
-                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">Fashion > Shoes</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>NSS068</td>
-                    <td>$70.00</td>
-                    <td>130 pcs</td>
-                    <td>02 Feb 2022</td>
-                    <td>
-                      <div class="badge badge-soft-success">Available</div>
-                    </td>
-                    <td>
-                      <div class="flex justify-end">
-                        <div class="dropdown" data-placement="bottom-start">
-                          <div class="dropdown-toggle">
-                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
-                          </div>
-                          <div class="dropdown-content w-40">
-                            <ul class="dropdown-list">
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                  <span>Edit</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                  <span>Delete</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input class="checkbox product-checkbox" type="checkbox" />
-                    </td>
-                    <td>
-                      <div class="flex items-center gap-3">
-                        <img src="./images/product10.png"
-                          class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
-                          alt="product" />
-                        <div>
-                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
-                            Branded Coconut Oil
-                          </h6>
-                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">Health Care > Body Oil</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>BCCO078</td>
-                    <td>$80.00</td>
-                    <td>300 pcs</td>
-                    <td>10 Mar 2022</td>
-                    <td>
-                      <div class="badge badge-soft-success">Available</div>
-                    </td>
-                    <td>
-                      <div class="flex justify-end">
-                        <div class="dropdown" data-placement="bottom-start">
-                          <div class="dropdown-toggle">
-                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
-                          </div>
-                          <div class="dropdown-content w-40">
-                            <ul class="dropdown-list">
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                  <span>Edit</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                  <span>Delete</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input class="checkbox product-checkbox" type="checkbox" />
-                    </td>
-                    <td>
-                      <div class="flex items-center gap-3">
-                        <img src="./images/product11.png"
-                          class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
-                          alt="product" />
-
-                        <div>
-                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
-                            JBL Wireless Earbud
-                          </h6>
-                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">Electronics > Gadget</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>JWEO098</td>
-                    <td>$250.00</td>
-                    <td>220 pcs</td>
-                    <td>10 Mar 2022</td>
-                    <td>
-                      <div class="badge badge-soft-danger">Disabled</div>
-                    </td>
-                    <td>
-                      <div class="flex justify-end">
-                        <div class="dropdown" data-placement="bottom-start">
-                          <div class="dropdown-toggle">
-                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
-                          </div>
-                          <div class="dropdown-content w-40">
-                            <ul class="dropdown-list">
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                  <span>Edit</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                  <span>Delete</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input class="checkbox product-checkbox" type="checkbox" />
-                    </td>
-                    <td>
-                      <div class="flex items-center gap-3">
-                        <img src="./images/product12.png"
-                          class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
-                          alt="product" />
-
-                        <div>
-                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
-                            McBook Pro 2023
-                          </h6>
-                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">Electronics > Laptop</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>MBP098</td>
-                    <td>$2000.00</td>
-                    <td>20 pcs</td>
-                    <td>15 Feb 2022</td>
-                    <td>
-                      <div class="badge badge-soft-success">Available</div>
-                    </td>
-                    <td>
-                      <div class="flex justify-end">
-                        <div class="dropdown" data-placement="bottom-start">
-                          <div class="dropdown-toggle">
-                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
-                          </div>
-                          <div class="dropdown-content w-40">
-                            <ul class="dropdown-list">
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                  <span>Edit</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                  <span>Delete</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input class="checkbox product-checkbox" type="checkbox" />
-                    </td>
-                    <td>
-                      <div class="flex items-center gap-3">
-                        <img src="./images/product13.png"
-                          class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
-                          alt="product" />
-
-                        <div>
-                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
-                            Ladies Handbag
-                          </h6>
-                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">Fashion > Women's Fashion</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>LHB098</td>
-                    <td>$40.00</td>
-                    <td>160 pcs</td>
-                    <td>31 Dec 2022</td>
-                    <td>
-                      <div class="badge badge-soft-danger">Disabled</div>
-                    </td>
-                    <td>
-                      <div class="flex justify-end">
-                        <div class="dropdown" data-placement="bottom-start">
-                          <div class="dropdown-toggle">
-                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
-                          </div>
-                          <div class="dropdown-content w-40">
-                            <ul class="dropdown-list">
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                  <span>Edit</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                  <span>Delete</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input class="checkbox product-checkbox" type="checkbox" />
-                    </td>
-                    <td>
-                      <div class="flex items-center gap-3">
-                        <img src="./images/product14.png"
-                          class="h-10 w-10 rounded-primary border border-slate-300 dark:border-slate-400"
-                          alt="product" />
-
-                        <div>
-                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
-                            Iphone 13 Pro Max
-                          </h6>
-                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">Electronics > Mobile</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>IPPM032</td>
-                    <td>$820.00</td>
-                    <td>150 pcs</td>
-                    <td>25 Nov 2022</td>
-                    <td>
-                      <div class="badge badge-soft-success">Available</div>
-                    </td>
-                    <td>
-                      <div class="flex justify-end">
-                        <div class="dropdown" data-placement="bottom-start">
-                          <div class="dropdown-toggle">
-                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
-                          </div>
-                          <div class="dropdown-content w-40">
-                            <ul class="dropdown-list">
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
-                                  <span>Details</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="edit"></i>
-                                  <span>Edit</span>
-                                </a>
-                              </li>
-                              <li class="dropdown-list-item">
-                                <a href="javascript:void(0)" class="dropdown-link">
-                                  <i class="h-5 text-slate-400" data-feather="trash"></i>
-                                  <span>Delete</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <!-- Product Table Ends -->
-
-            <!-- Product Pagination Starts -->
-            <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row">
-              <p class="text-xs font-normal text-slate-400">Showing 1 to 10 of 50 result</p>
-              <!-- Pagination -->
-              <nav class="pagination">
-                <ul class="pagination-list">
-                  <li class="pagination-item">
-                    <a class="pagination-link pagination-link-prev-icon" href="#">
-                      <i data-feather="chevron-left" width="1em" height="1em"></i>
-                    </a>
-                  </li>
-                  <li class="pagination-item active">
-                    <a class="pagination-link" href="#">1</a>
-                  </li>
-                  <li class="pagination-item">
-                    <a class="pagination-link" href="#">2</a>
-                  </li>
-                  <li class="pagination-item">
-                    <a class="pagination-link" href="#">3</a>
-                  </li>
-                  <li class="pagination-item">
-                    <a class="pagination-link" href="#">4</a>
-                  </li>
-                  <li class="pagination-item">
-                    <a class="pagination-link" href="#">5</a>
-                  </li>
-                  <li class="pagination-item">
-                    <a class="pagination-link pagination-link-next-icon" href="#">
-                      <i data-feather="chevron-right" width="1em" height="1em"></i>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <!-- Product Pagination Ends -->
-          </div>
-          <!-- Product List Ends -->
-        </main>
-        <!-- Main Content Ends -->
-
-        <!-- Footer Starts -->
-        <footer class="footer">
-          <p class="text-sm">
-            Copyright © 2023
-            <a class="text-primary-500 hover:underline" href="https://getadmintoolkit.com" target="_blank">
-              Admin Toolkit
-            </a>
-          </p>
-
-          <p class="flex items-center gap-1 text-sm">
-            Hand-crafted &amp; Made with
-            <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
-          </p>
-        </footer>
-        <!-- Footer Ends -->
-      </div>
-      <!-- Page Content Ends -->
-    </div>
-    <!-- Wrapper Ends -->
-    <!-- Search Modal Start -->
-    <div class="modal" id="search-modal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header px-4 sm:px-6">
-            <div class="group flex items-center">
-              <i data-feather="search"
-                class="text-slate-500 group-focus-within:text-slate-600 dark:text-slate-400 dark:group-focus-within:text-slate-300"></i>
-              <input type="text"
-                class="w-full border-none bg-transparent text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:ring-0 dark:text-slate-200"
-                placeholder="Search" />
-              <button
-                class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
-                data-dismiss="modal">
-                ESC
-              </button>
-            </div>
-          </div>
-          <div class="modal-body max-h-[600px] px-4 py-6 sm:px-6"></div>
         </div>
       </div>
+      <!-- Search Modal Ends -->
     </div>
-    <!-- Search Modal Ends -->
-  </div>
-  <script src="./js/app.js" type="module"></script>
-</body>
-
+    <script src="./js/app.js" type="module"></script>
+  </body>
 </html>
