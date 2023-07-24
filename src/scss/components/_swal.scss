@@ -1,0 +1,26 @@
+div {
+    &:where(.swal2-icon) {
+      width: 3em!important;
+      height: 3em!important;
+  
+      &.swal2-warning {
+        border-color: #f4405f!important;
+        color: #f4405f!important;
+      }
+  
+      .swal2-icon-content {
+        font-size: 2.50em!important;
+      }
+    }
+  
+    &:where(.swal2-container) {
+      div:where(.swal2-popup) {
+        width: 28em!important;
+      }
+  
+      button:where(.swal2-close) {
+        font-size: 2.0em!important;
+      }
+    }
+  }
+  

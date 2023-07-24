@@ -20,13 +20,16 @@ const swalModal = {
        const button = event.target;
        
         Swal.fire({
-            title: 'Are you sure?',
-            text: 'You will not be able to recover this data!',
+          //  title: 'Are you sure?',
+            text: 'Are you sure you want to delete?',
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#3085d6',
+            confirmButtonColor: '#f4405f',
+            cancelButtonColor: '#e4e7eb',
             confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, Cancel',
+            showCloseButton: true,
+
         }).then((result) => {
             if (result.isConfirmed) {
                 this.modalform.submit();
