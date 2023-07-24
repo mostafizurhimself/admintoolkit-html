@@ -22,6 +22,7 @@ import tabs from './components/tabs';
 import themeSwitcher from './components/theme-switcher';
 import tooltip from './components/tooltip';
 import uploader from './components/uploader';
+import swalModal from './components/swal';
 
 // Initialize searchModal
 searchModal.init();
@@ -76,6 +77,9 @@ checkAll.init();
 
 // Initialize feather-icons. Must be Initialize at the end.
 feather.replace();
+
+// Initialize Swal
+swalModal.init();
 
 // Polyfill for ResizeObserver
 window.ResizeObserver = ResizeObserver;
