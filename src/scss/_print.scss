@@ -1,0 +1,11 @@
+// @media print {
+    
+//     // Hide all elements except the specified div
+//     body * {
+//       display: none;
+//     }
+  
+//     div#print-content, div#print-content * {
+//       display: block !important; // Use Tailwind's utility class to display the specified div
+//     }
+//   }
