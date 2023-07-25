@@ -66,3 +66,12 @@ function removeItem() {
     tr.remove();
   }
 }
+
+const printButton = document.getElementById('print-button');
+printButton.addEventListener('click', () => {
+  let body = document.body.innerHTML;
+  const printContent = document.getElementById('print-content').innerHTML;
+  document.body.innerHTML = printContent;
+  window.print();
+  document.body.innerHTML = body;
+});
