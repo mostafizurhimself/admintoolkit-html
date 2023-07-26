@@ -3,7 +3,7 @@
     @apply h-10 w-full rounded-primary border border-slate-300 bg-transparent px-4 text-sm text-slate-700 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 disabled:opacity-80 dark:border-slate-600 dark:bg-transparent dark:text-slate-400 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
 
     & > option {
-      @apply text-slate-700;
+      @apply text-slate-700 bg-white dark:bg-dark-700 dark:text-dark-200;
     }
 
     & > option[disabled] {
@@ -60,11 +60,11 @@
     }
 
     & > .ts-control {
-      @apply h-auto min-w-[2.5rem] rounded-primary px-4 text-slate-700 after:absolute after:bottom-0 after:right-2 after:top-0 after:m-auto after:inline-flex after:h-4 after:w-4 after:items-center after:justify-center after:font-['tabler-icons'] after:text-base after:text-slate-500 after:content-['\ea5f'] dark:text-slate-300 after:dark:text-slate-400/60;
+      @apply min-h-[2.25rem] min-w-[2.5rem] rounded-primary px-4 text-slate-700 after:absolute after:bottom-0 after:right-2 after:top-0 after:m-auto after:inline-flex after:h-4 after:w-4 after:items-center after:justify-center after:font-['tabler-icons'] after:text-base after:text-slate-500 after:content-['\ea5f'] dark:text-slate-300 after:dark:text-slate-400/60;
     }
 
     & > .ts-control > input {
-      @apply placeholder:text-sm placeholder:text-slate-400;
+      @apply placeholder:text-sm bg-red-300 placeholder:text-slate-400;
     }
 
     &.ts-wrapper.single > .ts-control > .item {
