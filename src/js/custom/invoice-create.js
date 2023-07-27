@@ -41,7 +41,9 @@ const template = `
 if (btnAddItem) {
   btnAddItem.addEventListener('click', function () {
     const tbody = tableProducts.querySelector('tbody');
-    tbody.innerHTML += template;
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = template;
+    tbody.appendChild(newRow);
     const btnRemoveItem = tbody.querySelectorAll('.btn-remove-item');
 
     if (btnRemoveItem.length) {
