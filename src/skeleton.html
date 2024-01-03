@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/logo-small.svg" type="image/svg+xml" />
-    <title>Cards - Admin Toolkit</title>
+    <title>Skeleton - Admin Toolkit</title>
     <meta
       name="description"
       content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages"
@@ -205,7 +205,7 @@
                 <a href="./button.html" class="sidebar-submenu-item">Button</a>
               </li>
               <li>
-                <a href="./card.html" class="sidebar-submenu-item active"> Card </a>
+                <a href="./card.html" class="sidebar-submenu-item">Card</a>
               </li>
               <li>
                 <a href="./carousel.html" class="sidebar-submenu-item"> Carousel </a>
@@ -229,9 +229,8 @@
               <li>
                 <a href="./progress-bar.html" class="sidebar-submenu-item"> Progress </a>
               </li>
-
               <li>
-                <a href="./spinner.html" class="sidebar-submenu-item"> Spinner </a>
+                <a href="./spinner.html" class="sidebar-submenu-item active"> Skeleton </a>
               </li>
               <li>
                 <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
@@ -454,7 +453,7 @@
               <button
                 type="button"
                 data-trigger="search-modal"
-                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex"
+                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-300 sm:flex"
               >
                 <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
                 <span class="ml-2 text-sm text-slate-400">Search</span>
@@ -584,7 +583,7 @@
                   <div class="h-80 w-full" data-simplebar>
                     <ul>
                       <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-300"
                       >
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500"
@@ -603,7 +602,7 @@
                       </li>
 
                       <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-300"
                       >
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500"
@@ -622,7 +621,7 @@
                       </li>
 
                       <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-300"
                       >
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
@@ -641,7 +640,7 @@
                       </li>
 
                       <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-300"
                       >
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500"
@@ -660,7 +659,7 @@
                       </li>
 
                       <li
-                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700"
+                        class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-300"
                       >
                         <div
                           class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500"
@@ -746,7 +745,7 @@
           <main class="container flex-grow p-4 sm:p-6">
             <!-- Page Title Starts -->
             <div class="mb-6 flex flex-col justify-between gap-y-1 sm:flex-row sm:gap-y-0">
-              <h5>Cards</h5>
+              <h5>Skeleton</h5>
 
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
@@ -756,189 +755,383 @@
                   <a href="#">Components</a>
                 </li>
                 <li class="breadcrumb-item">
-                  <a href="#">Cards</a>
+                  <a href="#">Skeleton</a>
                 </li>
               </ol>
             </div>
             <!-- Page Title Ends -->
 
-            <!-- Card Starts -->
+            <!-- Skeleton Starts -->
             <div class="space-y-6">
-              <!-- Card: Basic Card Starts -->
+              <!-- Card: Square Skeleton Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Basic Example</h4>
+                  <h4 class="card-title">Square Skeleton</h4>
 
-                  <p class="card-subtitle">Example of a basic card with card title and card content.</p>
+                  <p class="card-subtitle">Example of square skeleton.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="card">
+                    <div class="animate-pulse">
+                      <div class="h-20 w-20 rounded bg-slate-300"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Square Skeleton Ends -->
+
+              <!-- Card: Circle Skeleton Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Circle Skeleton</h4>
+
+                  <p class="card-subtitle">Example of circle skeleton.</p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="animate-pulse">
+                      <div class="h-20 w-20 rounded-full bg-slate-300"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Circle Skeleton Ends -->
+
+              <!-- Card: Line Skeleton Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Line Skeleton</h4>
+
+                  <p class="card-subtitle">Example of line skeleton.</p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="animate-pulse md:w-80">
+                      <div class="h-3 rounded bg-slate-300"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Line Skeleton Ends -->
+
+              <!-- Card: Basic Card Skeleton Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Basic Card Skeleton</h4>
+
+                  <p class="card-subtitle">Example of basic card skeleton.</p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="card animate-pulse md:w-80">
                       <div class="card-body">
-                        <h4 class="card-title">Card Title</h4>
-                        <div class="card-content">
-                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, ex a? Ullam magnam soluta
-                          voluptate molestias natus, eius sint ducimus possimus neque? Fugit cumque cum ipsam repellat
-                          beatae eius aliquam, vero hic enim voluptatem libero suscipit maxime, consequuntur non ullam.
-                          Blanditiis nulla repellendus quam dolores assumenda rem amet odio sit!
-                        </div>
+                        <div class="my-3 mb-4 h-5 w-40 rounded bg-slate-300"></div>
+
+                        <div class="mb-1.5 h-2 w-[90%] rounded bg-slate-300"></div>
+                        <div class="mb-1.5 h-2 w-[95%] rounded bg-slate-300"></div>
+                        <div class="mb-1.5 h-2 w-[85%] rounded bg-slate-300"></div>
+                        <div class="h-2 w-[70%] rounded bg-slate-300"></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Basic Card Ends -->
+              <!-- Card: Basic Card Skeleton Ends -->
 
-              <!-- Card: Card Header & Footer Starts -->
+              <!-- Card: Card Header & Footer Skeleton Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Card Header &amp; Footer</h4>
+                  <h4 class="card-title">Card Header & Footer Skeleton</h4>
 
-                  <p class="card-subtitle">Example of a card with card header and card footer.</p>
+                  <p class="card-subtitle">Example of basic card header & footer skeleton.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="card">
+                    <div class="card animate-pulse md:w-80">
                       <div class="card-header">
-                        <h4 class="card-title">Card Header</h4>
+                        <div class="h-5 w-40 rounded bg-slate-300"></div>
                       </div>
+
                       <div class="card-body">
-                        <div class="card-content">
-                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, ex a? Ullam magnam soluta
-                          voluptate molestias natus, eius sint ducimus possimus neque? Fugit cumque cum ipsam repellat
-                          beatae eius aliquam, vero hic enim voluptatem libero suscipit maxime, consequuntur non ullam.
-                          Blanditiis nulla repellendus quam dolores assumenda rem amet odio sit!
-                        </div>
+                        <div class="mb-1.5 h-2 w-[90%] rounded bg-slate-300"></div>
+                        <div class="mb-1.5 h-2 w-[95%] rounded bg-slate-300"></div>
+                        <div class="mb-1.5 h-2 w-[85%] rounded bg-slate-300"></div>
+                        <div class="h-2 w-[70%] rounded bg-slate-300"></div>
                       </div>
+
                       <div class="card-footer">
-                        <button class="btn btn-plain-secondary">Cancel</button>
-                        <button class="btn btn-primary">Save</button>
+                        <div class="h-8 w-20 rounded bg-slate-300"></div>
+                        <div class="h-8 w-20 rounded bg-slate-300"></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Card Header & Footer Ends -->
+              <!-- Card: Card Header & Footer Skeleton Ends -->
 
-              <!-- Card: Bordered Card Starts -->
+              <!-- Card: Image Grid Skeleton Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Bordered Card</h4>
+                  <h4 class="card-title">Image Grid Skeleton</h4>
 
-                  <p class="card-subtitle">Example of a bordered card with.</p>
+                  <p class="card-subtitle">Example of image grid skeleton.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="card card-bordered">
-                      <div class="card-body">
-                        <h4 class="card-title">Card Title</h4>
-                        <div class="card-content">
-                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, ex a? Ullam magnam soluta
-                          voluptate molestias natus, eius sint ducimus possimus neque? Fugit cumque cum ipsam repellat
-                          beatae eius aliquam, vero hic enim voluptatem libero suscipit maxime, consequuntur non ullam.
-                          Blanditiis nulla repellendus quam dolores assumenda rem amet odio sit!
-                        </div>
+                    <div class="animate-pulse md:w-80">
+                      <div class="mb-1.5 h-2 w-[25%] rounded bg-slate-300"></div>
+                      <div class="mb-4 h-2 w-[50%] rounded bg-slate-300"></div>
+
+                      <div class="grid grid-cols-3 gap-3">
+                        <div class="h-20 rounded bg-slate-300"></div>
+                        <div class="h-20 rounded bg-slate-300"></div>
+                        <div class="h-20 rounded bg-slate-300"></div>
+                        <div class="h-20 rounded bg-slate-300"></div>
+                        <div class="h-20 rounded bg-slate-300"></div>
+                        <div class="h-20 rounded bg-slate-300"></div>
+                      </div>
+
+                      <div class="mt-4 flex items-center justify-center gap-1.5">
+                        <div class="h-3 w-7 rounded-l-full bg-slate-300"></div>
+                        <div class="h-3 w-3 rounded-full bg-slate-300"></div>
+                        <div class="h-3 w-3 rounded-full bg-slate-300"></div>
+                        <div class="h-3 w-3 rounded-full bg-slate-300"></div>
+                        <div class="h-3 w-7 rounded-r-full bg-slate-300"></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Bordered Card Ends -->
+              <!-- Card: Image Grid Skeleton Ends -->
 
-              <!-- Card: Fixed Card Starts -->
+              <!-- Card: List Skeleton Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Fixed width Card</h4>
+                  <h4 class="card-title">List Skeleton</h4>
 
-                  <p class="card-subtitle">Example of a fixed width card.</p>
+                  <p class="card-subtitle">Example of List skeleton.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="card w-full sm:w-72">
-                      <div class="card-body">
-                        <h4 class="card-title">Card Title</h4>
-                        <div class="card-content">
-                          Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </div>
+                    <div class="animate-pulse md:w-80">
+                      <div class="mb-3 flex items-center gap-2">
+                        <div class="h-4 w-4 rounded-full bg-slate-300"></div>
+                        <div class="h-2 flex-1 rounded bg-slate-300"></div>
+                      </div>
+                      <div class="mb-3 flex items-center gap-2">
+                        <div class="h-4 w-4 rounded-full bg-slate-300"></div>
+                        <div class="h-2 flex-1 rounded bg-slate-300"></div>
+                      </div>
+                      <div class="mb-3 flex items-center gap-2">
+                        <div class="h-4 w-4 rounded-full bg-slate-300"></div>
+                        <div class="h-2 flex-1 rounded bg-slate-300"></div>
+                      </div>
+                      <div class="mb-3 flex items-center gap-2">
+                        <div class="h-4 w-4 rounded-full bg-slate-300"></div>
+                        <div class="h-2 flex-1 rounded bg-slate-300"></div>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <div class="h-4 w-4 rounded-full bg-slate-300"></div>
+                        <div class="h-2 flex-1 rounded bg-slate-300"></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Fixed Card Ends -->
+              <!-- Card: List Skeleton Ends -->
 
-              <!-- Card: Color Card Starts -->
+              <!-- Card: List With Thumbnail Skeleton Starts -->
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Card With Colors</h4>
+                  <h4 class="card-title">List With Thumbnail Skeleton</h4>
 
-                  <p class="card-subtitle">Example of a card with different background colors.</p>
+                  <p class="card-subtitle">Example of List With Thumbnail skeleton.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                      <!-- Primary Card -->
-                      <div class="card card-primary">
-                        <div class="card-body">
-                          <h4 class="card-title">Card Title</h4>
-                          <div class="card-content">
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                          </div>
+                    <div class="animate-pulse md:w-80">
+                      <div class="mb-4 flex items-center gap-2">
+                        <div class="h-14 w-14 rounded-full bg-slate-300"></div>
+                        <div class="flex-1">
+                          <div class="h-2 w-full rounded bg-slate-300"></div>
+                          <div class="mt-4 h-2 w-full rounded bg-slate-300"></div>
                         </div>
                       </div>
-                      <!-- Secondary Card -->
-                      <div class="card card-secondary">
-                        <div class="card-body">
-                          <h4 class="card-title">Card Title</h4>
-                          <div class="card-content">
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                          </div>
+                      <div class="mb-4 flex items-center gap-2">
+                        <div class="h-14 w-14 rounded-full bg-slate-300"></div>
+                        <div class="flex-1">
+                          <div class="h-2 w-full rounded bg-slate-300"></div>
+                          <div class="mt-4 h-2 w-full rounded bg-slate-300"></div>
                         </div>
                       </div>
-                      <!-- Success Color Card -->
-                      <div class="card card-success">
-                        <div class="card-body">
-                          <h4 class="card-title">Card Title</h4>
-                          <div class="card-content">
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                          </div>
-                        </div>
-                      </div>
-                      <!-- Danger Color Card -->
-                      <div class="card card-danger">
-                        <div class="card-body">
-                          <h4 class="card-title">Card Title</h4>
-                          <div class="card-content">
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                          </div>
-                        </div>
-                      </div>
-                      <!-- Warning Color Card -->
-                      <div class="card card-warning">
-                        <div class="card-body">
-                          <h4 class="card-title">Card Title</h4>
-                          <div class="card-content">
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                          </div>
-                        </div>
-                      </div>
-                      <!-- Info Color Code -->
-                      <div class="card card-info">
-                        <div class="card-body">
-                          <h4 class="card-title">Card Title</h4>
-                          <div class="card-content">
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                          </div>
+                      <div class="mb-4 flex items-center gap-2">
+                        <div class="h-14 w-14 rounded-full bg-slate-300"></div>
+                        <div class="flex-1">
+                          <div class="h-2 w-full rounded bg-slate-300"></div>
+                          <div class="mt-4 h-2 w-full rounded bg-slate-300"></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card: Color Card Ends -->
+              <!-- Card: List With Thumbnail Skeleton Ends -->
+
+              <!-- Card: Table Skeleton Starts -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Table Skeleton</h4>
+
+                  <p class="card-subtitle">Example of Table skeleton.</p>
+
+                  <div class="code-viewer mt-4">
+                    <div class="animate-pulse">
+                      <table class="table">
+                        <thead>
+                          <th>
+                            <div class="flex justify-center">
+                              <div class="h-4 w-14 rounded bg-slate-300"></div>
+                            </div>
+                          </th>
+                          <th>
+                            <div class="flex justify-center">
+                              <div class="h-4 w-20 rounded bg-slate-300"></div>
+                            </div>
+                          </th>
+                          <th>
+                            <div class="flex justify-center">
+                              <div class="h-4 w-16 rounded bg-slate-300"></div>
+                            </div>
+                          </th>
+                          <th class="">
+                            <div class="flex justify-end">
+                              <div class="h-4 w-12 rounded bg-slate-300"></div>
+                            </div>
+                          </th>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-28 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-32 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-28 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="mr-2 flex justify-end gap-1">
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-28 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-32 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-28 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="mr-2 flex justify-end gap-1">
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-28 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-32 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-28 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="mr-2 flex justify-end gap-1">
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-28 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-32 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-28 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="mr-2 flex justify-end gap-1">
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-28 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-32 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="flex justify-center">
+                                <div class="h-2 w-28 rounded bg-slate-300"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="mr-2 flex justify-end gap-1">
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                                <div class="h-2 w-2 rounded-full bg-slate-300"></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card: Table Skeleton Ends -->
             </div>
-            <!-- Card Ends -->
+            <!-- Skeleton Ends -->
           </main>
           <!-- Main Content Ends -->
 
@@ -978,7 +1171,7 @@
                   placeholder="Search"
                 />
                 <button
-                  class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
+                  class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-300 dark:text-slate-300 dark:hover:bg-slate-600"
                   data-dismiss="modal"
                 >
                   ESC

@@ -30,7 +30,7 @@ export default {
         md: '100%',
         lg: '100%',
         xl: '100%',
-        "2xl": "1536px",
+        '2xl': '1536px',
       },
     },
     extend: {
@@ -135,17 +135,11 @@ export default {
             },
             table: {
               overflowX: 'auto',
-            }
+            },
           },
         },
       }),
-      
     },
   },
-  plugins: [
-    forms,
-    variables,
-    typography,
-  ],
-}
-
+  plugins: [forms, variables, typography],
+};
