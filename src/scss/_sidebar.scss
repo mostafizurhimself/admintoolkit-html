@@ -116,7 +116,7 @@
     }
 
     &-item.active {
-      @apply text-primary-500;
+      @apply text-primary-500 dark:hover:text-white;
     }
   }
 
