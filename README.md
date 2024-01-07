@@ -60,12 +60,7 @@ yarn start
 
 ## 📌 Contribution
 
-1. Fork the repository
-2. Clone the repository
-3. Create a new branch `git checkout -b new-branch`
-4. Make changes
-5. Commit and push the changes
-6. Create a pull request
+If you're interested in contributing to Admin Toolkit, Please read our [contributing docs](CONTRIBUTING.md) before submitting a pull request.
 
 ## 📌 License
 
