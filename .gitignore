@@ -25,7 +25,6 @@ dist-ssr
 !.yarn/versions
 
 # Editor directories and files
-.vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -37,3 +36,4 @@ dist-ssr
 
 # Local Netlify folder
 .netlify
+config.bat
