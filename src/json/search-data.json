@@ -168,6 +168,11 @@
         "icon": "ti ti-tooltip"
       },
       {
+        "name": "Skeleton",
+        "url": "/skeleton.html",
+        "icon": "ti ti-layout"
+      },
+      {
         "name": "Input",
         "url": "/input.html",
         "icon": "ti ti-circle-letter-i"
