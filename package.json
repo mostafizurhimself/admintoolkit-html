@@ -6,9 +6,9 @@
   "license": "MIT",
   "author": "Md Mostafizur Rahman",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build --emptyOutDir",
-    "start": "vite preview",
+    "dev": "node init && vite",
+    "build": "node init && vite build --emptyOutDir",
+    "start": "node init && vite preview",
     "format": "prettier --write \"src/**/*.{js,css,scss,html}\""
   },
   "devDependencies": {
