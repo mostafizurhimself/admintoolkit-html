@@ -148,6 +148,11 @@
         "icon": "ti ti-progress"
       },
       {
+        "name": "Skeleton",
+        "url": "/skeleton.html",
+        "icon": "ti ti-layout"
+      },
+      {
         "name": "Spinner",
         "url": "/spinner.html",
         "icon": "ti ti-fidget-spinner"
