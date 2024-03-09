@@ -89,9 +89,6 @@ export default {
           ...themeColors,
         },
       },
-      borderRadius: {
-        primary: '0.4rem',
-      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

@@ -7,7 +7,7 @@
     }
 
     &-content {
-      @apply fixed left-0 top-0 z-20 hidden overflow-hidden rounded-primary border border-slate-200 bg-white shadow-lg dark:border-slate-700 dark:bg-slate-800;
+      @apply fixed left-0 top-0 z-20 hidden overflow-hidden rounded-md border border-slate-200 bg-white shadow-lg dark:border-slate-700 dark:bg-slate-800;
 
       &.show {
         @apply block;

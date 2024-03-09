@@ -74,7 +74,7 @@
       & > #{$avatar}-text,
       & > #{$avatar}-icon,
       & > #{$avatar}-img {
-        @apply rounded-primary;
+        @apply rounded-md;
       }
     }
 

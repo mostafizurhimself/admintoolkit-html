@@ -1,7 +1,7 @@
 @layer components {
   .card {
     $card: &;
-    @apply w-full rounded-primary bg-white shadow transition-all duration-300 dark:bg-slate-800;
+    @apply w-full rounded-md bg-white shadow transition-all duration-300 dark:bg-slate-800;
 
     // Direct elements
     &-header {
@@ -18,7 +18,7 @@
 
     // Child elements
     &-title {
-      @apply text-lg;
+      @apply text-lg font-semibold;
     }
 
     &-subtitle {

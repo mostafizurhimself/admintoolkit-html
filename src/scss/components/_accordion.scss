@@ -1,7 +1,7 @@
 @layer components {
   .accordion {
     $accordion: &;
-    @apply flex w-full flex-col divide-y divide-slate-200 overflow-hidden rounded-primary border border-slate-200 bg-white dark:divide-slate-700 dark:border-slate-700 dark:bg-slate-800;
+    @apply flex w-full flex-col divide-y divide-slate-200 overflow-hidden rounded-md border border-slate-200 bg-white dark:divide-slate-700 dark:border-slate-700 dark:bg-slate-800;
 
     &-item {
       @apply bg-transparent;

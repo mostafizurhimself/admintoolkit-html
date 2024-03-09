@@ -1,5 +1,5 @@
 const customFormValidationSourceCode = `
-  <form id="form-custom-validation" class="max-w-lg p-4 mx-auto bg-white border border-slate-300 shadow rounded-primary dark:bg-slate-800 dark:border-slate-600" novalidate>
+  <form id="form-custom-validation" class="max-w-lg p-4 mx-auto bg-white border border-slate-300 shadow rounded-md dark:bg-slate-800 dark:border-slate-600" novalidate>
     <!-- Form Body -->
     <div class="flex flex-col gap-4">
       <!-- Form Row: Full name -->

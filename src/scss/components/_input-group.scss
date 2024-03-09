@@ -4,7 +4,7 @@
     @apply relative flex w-full flex-wrap;
 
     & > &-text {
-      @apply inline-flex items-center gap-2 whitespace-nowrap rounded-primary border border-slate-300 bg-slate-100/50 px-2.5 text-sm text-slate-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-400;
+      @apply inline-flex items-center gap-2 whitespace-nowrap rounded-md border border-slate-300 bg-slate-100/50 px-4 text-sm text-slate-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-400;
     }
 
     & > .input,

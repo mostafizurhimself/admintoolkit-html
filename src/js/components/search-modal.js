@@ -138,7 +138,7 @@ export class SearchModal {
   renderItem(page) {
     return `
       <li class="">
-        <a href="${page.url}" class="flex rounded-primary px-4 py-2 text-sm items-center gap-2 bg-slate-50 hover:bg-slate-100 dark:bg-slate-700 dark:hover:bg-slate-600 shadow-sm">
+        <a href="${page.url}" class="flex rounded-md px-4 py-2 text-sm items-center gap-2 bg-slate-50 hover:bg-slate-100 dark:bg-slate-700 dark:hover:bg-slate-600 shadow-sm">
           <i class="${page.icon} text-slate-500 dark:text-slate-400 text-lg"></i>
           <span >${page.name}</span>
           <i class="ti ti-chevron-right text-slate-500 ml-auto"></i>

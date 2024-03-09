@@ -2,10 +2,10 @@
 
 @layer components {
   .code-viewer {
-    @apply w-full rounded-primary border bg-white duration-300 dark:border-slate-700 dark:bg-slate-800;
+    @apply w-full rounded-md border bg-white duration-300 dark:border-slate-700 dark:bg-slate-800;
 
     &-content {
-      @apply overflow-auto rounded-t-primary bg-slate-50 p-4 dark:bg-slate-900 sm:p-6;
+      @apply overflow-auto rounded-t-md bg-slate-50 p-4 dark:bg-slate-900 sm:p-6;
     }
 
     &-source {
@@ -13,7 +13,7 @@
     }
 
     &-footer {
-      @apply rounded-b-primary border-t px-6 py-3 dark:border-slate-700;
+      @apply rounded-b-md border-t px-6 py-3 dark:border-slate-700;
 
       & .btn-copy {
         @apply inline-flex items-center gap-2 text-sm font-medium text-slate-400 transition-colors duration-150 hover:text-slate-600 dark:text-slate-300 dark:hover:text-slate-400;

@@ -454,7 +454,7 @@
               <button
                 type="button"
                 data-trigger="search-modal"
-                class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex"
+                class="group hidden h-10 w-72 items-center overflow-hidden rounded-md bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex"
               >
                 <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
                 <span class="ml-2 text-sm text-slate-400">Search</span>
@@ -773,7 +773,7 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
-                      <input type="text" class="input" placeholder="Phone" />
+                      <input type="text" class="input" placeholder="Basic Input" />
                     </div>
                   </div>
                 </div>
@@ -789,8 +789,8 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
-                      <label class="label label-required mb-1" for="phone">Phone</label>
-                      <input type="text" class="input" id="phone" />
+                      <label class="label label-required mb-1" for="email">Email</label>
+                      <input type="email" class="input" id="email" placeholder="Enter your email" />
                     </div>
                   </div>
                 </div>
@@ -806,8 +806,10 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
-                      <input type="text" class="input" placeholder="Phone" />
-                      <p class="help-text mt-1">The Phone must be a valid Phone address</p>
+                      <input type="password" class="input" placeholder="Password" />
+                      <p class="help-text mt-1">
+                        Password must be at least 8 characters long, contain letters and numbers
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -827,9 +829,9 @@
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
                       <div class="flex flex-col gap-4">
-                        <input type="text" class="input input-sm" placeholder="Phone" />
-                        <input type="text" class="input input-md" placeholder="Phone" />
-                        <input type="text" class="input input-lg" placeholder="Phone" />
+                        <input type="text" class="input input-sm" placeholder="Small Input" />
+                        <input type="text" class="input input-md" placeholder="Default Input" />
+                        <input type="text" class="input input-lg" placeholder="Large Input" />
                       </div>
                     </div>
                   </div>
@@ -846,7 +848,7 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
-                      <input type="text" class="input is-valid" placeholder="Phone" />
+                      <input type="email" class="input is-valid" placeholder="Enter your email" value="johndoe@example.com" />
                       <p class="success-message mt-1">Looks good</p>
                     </div>
                   </div>
@@ -863,7 +865,7 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
-                      <input type="text" class="input is-invalid" placeholder="Phone" />
+                      <input type="text" class="input is-invalid" placeholder="Enter your email" />
                       <p class="error-message mt-1">This field is required</p>
                     </div>
                   </div>
@@ -880,7 +882,7 @@
 
                   <div class="code-viewer mt-4">
                     <div class="code-viewer-content bg-white">
-                      <input type="text" class="input" placeholder="Phone" disabled />
+                      <input type="text" class="input" placeholder="Disabled Input" disabled />
                     </div>
                   </div>
                 </div>
@@ -927,7 +929,7 @@
                   placeholder="Search"
                 />
                 <button
-                  class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
+                  class="rounded-md bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
                   data-dismiss="modal"
                 >
                   ESC

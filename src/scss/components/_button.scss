@@ -1,7 +1,7 @@
 @layer components {
   .btn {
     $btn: &;
-    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-primary px-4  py-2 text-sm transition-colors duration-150 ease-in-out focus:outline-none disabled:cursor-not-allowed disabled:opacity-60;
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-md px-4  py-2 text-sm transition-colors duration-150 ease-in-out focus:outline-none disabled:cursor-not-allowed disabled:opacity-60;
 
     //Sizes
     &-xs {
@@ -26,17 +26,17 @@
 
     //Groups
     &-group {
-      @apply inline-flex rounded-primary;
+      @apply inline-flex rounded-md;
 
       & > #{$btn} {
         @apply rounded-none;
 
         &:first-child {
-          @apply rounded-l-primary;
+          @apply rounded-l-md;
         }
 
         &:last-child {
-          @apply rounded-r-primary border-l-0;
+          @apply rounded-r-md border-l-0;
         }
 
         &:not(:first-child):not(:last-child) {

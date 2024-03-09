@@ -1,6 +1,6 @@
 @layer components {
   .btn {
-    @apply inline-flex  items-center justify-center gap-2 rounded-primary px-4 py-2 text-sm transition-all duration-150 disabled:cursor-not-allowed disabled:opacity-60;
+    @apply inline-flex  items-center justify-center gap-2 rounded-md px-4 py-2 text-sm transition-all duration-150 disabled:cursor-not-allowed disabled:opacity-60;
 
     // Button Sizes
     &-xs {
@@ -25,18 +25,18 @@
 
     // Button groups
     &-group {
-      @apply inline-flex rounded-primary;
+      @apply inline-flex rounded-md;
 
       .btn {
         @apply rounded-none;
       }
 
       .btn:first-child {
-        @apply rounded-l-primary;
+        @apply rounded-l-md;
       }
 
       .btn:last-child {
-        @apply rounded-r-primary border-l-0;
+        @apply rounded-r-md border-l-0;
       }
 
       .btn:not(:first-child):not(:last-child) {

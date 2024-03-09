@@ -1,6 +1,6 @@
 @layer components {
   .list-group {
-    @apply rounded-primary border border-slate-300  bg-white text-sm font-medium  dark:border-slate-600 dark:bg-slate-800;
+    @apply rounded-md border border-slate-300  bg-white text-sm font-medium  dark:border-slate-600 dark:bg-slate-800;
     &-item {
       @apply border-b border-b-slate-300  px-4 py-2 text-left dark:border-slate-600;
 
@@ -43,10 +43,10 @@
     }
 
     &-item:first-child {
-      @apply rounded-t-primary;
+      @apply rounded-t-md;
     }
     &-item:last-child {
-      @apply rounded-b-primary border-b-0;
+      @apply rounded-b-md border-b-0;
     }
   }
 }

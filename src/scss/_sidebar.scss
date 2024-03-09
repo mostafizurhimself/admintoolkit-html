@@ -52,7 +52,7 @@
   }
 
   &-menu {
-    @apply flex w-full items-center gap-2 rounded-primary p-1 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
+    @apply flex w-full items-center gap-2 rounded-md p-1 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
 
     &-icon {
       @apply flex h-9 w-9 min-w-max flex-shrink-0 items-center justify-center text-slate-500 dark:text-slate-400;
@@ -84,7 +84,7 @@
     }
 
     &.active &-icon {
-      @apply rounded-primary bg-primary-500 text-slate-200 dark:bg-primary-500;
+      @apply rounded-md bg-primary-500 text-slate-200 dark:bg-primary-500;
     }
 
     &.active &-arrow {
@@ -112,7 +112,7 @@
     @apply mt-0.5 h-0 overflow-hidden transition-height duration-300 ease-in-out;
 
     &-item {
-      @apply block rounded-primary py-2 pl-12 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
+      @apply block rounded-md py-2 pl-12 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
     }
 
     &-item.active {

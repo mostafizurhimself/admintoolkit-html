@@ -2,7 +2,7 @@
   .alert {
     $alert: &;
 
-    @apply relative flex items-center gap-2 rounded-primary p-4 text-sm;
+    @apply relative flex items-center gap-2 rounded-md p-4 text-sm;
 
     &-primary {
       @apply bg-primary-100 text-primary-500 dark:bg-primary-500 dark:text-primary-100;
@@ -63,7 +63,7 @@
     }
 
     &-dismiss {
-      @apply absolute right-2 top-3 rounded-primary p-1.5 transition-colors duration-150;
+      @apply absolute right-2 top-3 rounded-md p-1.5 transition-colors duration-150;
 
       #{$alert}-primary & {
         @apply text-primary-500 hover:bg-primary-200 dark:text-primary-100 dark:hover:bg-primary-600;

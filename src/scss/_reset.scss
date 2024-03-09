@@ -21,11 +21,11 @@
 // Snow Theme
 .ql-snow {
   &.ql-container {
-    @apply rounded-b-primary border border-slate-300 dark:border-slate-600;
+    @apply rounded-b-md border border-slate-300 dark:border-slate-600;
   }
 
   &.ql-toolbar {
-    @apply rounded-t-primary border border-slate-300 dark:border-slate-600 dark:bg-slate-800;
+    @apply rounded-t-md border border-slate-300 dark:border-slate-600 dark:bg-slate-800;
 
     button {
       @apply text-slate-700;
@@ -100,15 +100,15 @@
       }
 
       .ql-picker-label {
-        @apply rounded-t-primary;
+        @apply rounded-t-md;
       }
 
       .ql-picker-options {
-        @apply rounded-b-primary;
+        @apply rounded-b-md;
       }
 
       #ql-picker-options-1 {
-        @apply rounded-b-primary rounded-r-primary;
+        @apply rounded-b-md rounded-r-md;
       }
     }
 
@@ -140,7 +140,7 @@
 // Bubble Theme
 .ql-bubble {
   &.ql-container {
-    @apply rounded-primary border border-slate-300 dark:border-slate-600;
+    @apply rounded-md border border-slate-300 dark:border-slate-600;
   }
 
   .ql-tooltip:not(.ql-flip) .ql-tooltip-arrow {
@@ -152,7 +152,7 @@
   }
 
   .ql-tooltip {
-    @apply rounded-primary border border-slate-300 bg-slate-100 dark:border-slate-600 dark:bg-slate-800;
+    @apply rounded-md border border-slate-300 bg-slate-100 dark:border-slate-600 dark:bg-slate-800;
 
     button {
       @apply text-slate-700;

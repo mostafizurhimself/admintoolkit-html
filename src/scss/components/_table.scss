@@ -14,7 +14,7 @@
     --table-hover-bg: theme(colors.slate.50);
     --table-hover-dark-bg: theme(colors.slate.700);
 
-    @apply w-full overflow-hidden rounded-primary border-[var(--table-border-color)] shadow dark:border-[var(--table-border-dark-color)];
+    @apply w-full overflow-hidden rounded-md border-[var(--table-border-color)] shadow dark:border-[var(--table-border-dark-color)];
 
     thead,
     tbody,
@@ -79,7 +79,7 @@
     }
 
     &-responsive {
-      @apply overflow-x-auto rounded-primary;
+      @apply overflow-x-auto rounded-md;
     }
 
     &-compact {

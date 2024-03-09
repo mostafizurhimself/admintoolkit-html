@@ -47,7 +47,7 @@
       }
 
       #{$tabs}-pill & {
-        @apply rounded-primary py-2;
+        @apply rounded-md py-2;
       }
 
       #{$tabs}-vertical & {

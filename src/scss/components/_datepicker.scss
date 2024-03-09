@@ -5,7 +5,7 @@
 
     @at-root #{$flatpickr-calendar} {
       width: calc(14rem + 5vw) !important;
-      @apply overflow-hidden rounded-primary bg-white shadow dark:bg-slate-800;
+      @apply overflow-hidden rounded-md bg-white shadow dark:bg-slate-800;
 
       // Direct Element
       & > #{$flatpickr}-months {

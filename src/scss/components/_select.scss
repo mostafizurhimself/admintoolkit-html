@@ -1,6 +1,6 @@
 @layer components {
   .select {
-    @apply h-10 w-full rounded-primary border border-slate-300 bg-transparent px-4 text-sm text-slate-700 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 disabled:opacity-80 dark:border-slate-600 dark:bg-transparent dark:text-slate-400 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
+    @apply h-10 w-full rounded-md border border-slate-300 bg-transparent px-4 text-sm text-slate-700 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus:ring-inset disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 disabled:opacity-80 dark:border-slate-600 dark:bg-transparent dark:text-slate-400 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
 
     & > option {
       @apply bg-white text-slate-700 dark:bg-dark-700 dark:text-dark-200;
@@ -64,7 +64,7 @@
     }
 
     & > .ts-control {
-      @apply flex min-h-[2.5rem] w-full items-center gap-1 rounded-primary px-4 py-0 text-slate-700 after:absolute after:bottom-0 after:right-2 after:top-0 after:m-auto after:inline-flex after:h-4 after:w-4 after:items-center after:justify-center after:font-['tabler-icons'] after:text-base after:text-slate-500 after:content-['\ea5f'] dark:text-slate-300 after:dark:text-slate-400/60;
+      @apply flex min-h-[2.5rem] w-full items-center gap-1 rounded-md px-4 py-0 text-slate-700 after:absolute after:bottom-0 after:right-2 after:top-0 after:m-auto after:inline-flex after:h-4 after:w-4 after:items-center after:justify-center after:font-['tabler-icons'] after:text-base after:text-slate-500 after:content-['\ea5f'] dark:text-slate-300 after:dark:text-slate-400/60;
 
       .items-placeholder {
         @apply placeholder:text-sm;
@@ -88,10 +88,10 @@
     }
 
     & > .ts-dropdown {
-      @apply w-full rounded-primary border border-slate-300 bg-white p-2 dark:border-slate-600 dark:bg-slate-800;
+      @apply w-full rounded-md border border-slate-300 bg-white p-2 dark:border-slate-600 dark:bg-slate-800;
 
       .dropdown-input-wrap > input {
-        @apply rounded border border-slate-300 text-sm text-slate-700 placeholder:text-slate-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus-visible:outline-none dark:text-slate-300;
+        @apply rounded border border-slate-300 text-sm text-slate-700 placeholder:text-slate-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus:ring-inset focus-visible:outline-none dark:text-slate-300;
       }
 
       & > .ts-dropdown-content {
