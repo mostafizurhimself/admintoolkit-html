@@ -1,7 +1,7 @@
 {
   "name": "admin-toolkit",
   "private": true,
-  "version": "1.0.6",
+  "version": "1.1.1",
   "type": "module",
   "license": "MIT",
   "author": "Md Mostafizur Rahman",
