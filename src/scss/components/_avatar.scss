@@ -4,7 +4,7 @@
     @apply relative flex h-10 w-10 cursor-pointer items-center justify-center rounded-none;
 
     &-indicator {
-      @apply after:absolute after:bottom-[-2px] after:right-[-2px] after:inline-block after:h-2 after:w-2 after:rounded-full after:bg-slate-500 after:shadow-[0px_0px_0px_2px] after:shadow-slate-50 after:content-[''] dark:after:shadow-slate-800;
+      @apply after:absolute after:bottom-[-2px] after:right-[-2px] after:inline-block after:h-2 after:w-2 after:rounded-full after:bg-dark-500 after:shadow-[0px_0px_0px_2px] after:shadow-dark-50 after:content-[''] dark:after:shadow-dark-800;
 
       &#{$avatar}-circle {
         @apply after:bottom-0 after:right-[3px];
@@ -39,7 +39,7 @@
       }
 
       &-offline {
-        @apply after:bg-slate-500;
+        @apply after:bg-dark-500;
       }
     }
 
@@ -49,7 +49,7 @@
 
     & > &-text,
     & > &-icon {
-      @apply inline-flex h-full w-full items-center justify-center bg-secondary-500 text-slate-100;
+      @apply inline-flex h-full w-full items-center justify-center bg-secondary-500 text-dark-100;
     }
 
     & > &-icon {
@@ -159,49 +159,49 @@
     &-primary {
       & > #{$avatar}-text,
       & > #{$avatar}-icon {
-        @apply bg-primary-100 text-primary-500 dark:bg-primary-500 dark:text-slate-100;
+        @apply bg-primary-100 text-primary-500 dark:bg-primary-500 dark:text-dark-100;
       }
     }
 
     &-secondary {
       & > #{$avatar}-text,
       & > #{$avatar}-icon {
-        @apply bg-secondary-200 text-secondary-500 dark:bg-secondary-500 dark:text-slate-100;
+        @apply bg-secondary-200 text-secondary-500 dark:bg-secondary-500 dark:text-dark-100;
       }
     }
 
     &-success {
       & > #{$avatar}-text,
       & > #{$avatar}-icon {
-        @apply bg-success-100 text-success-500 dark:bg-success-500 dark:text-slate-100;
+        @apply bg-success-100 text-success-500 dark:bg-success-500 dark:text-dark-100;
       }
     }
 
     &-danger {
       & > #{$avatar}-text,
       & > #{$avatar}-icon {
-        @apply bg-danger-100 text-danger-500 dark:bg-danger-500 dark:text-slate-100;
+        @apply bg-danger-100 text-danger-500 dark:bg-danger-500 dark:text-dark-100;
       }
     }
 
     &-warning {
       & > #{$avatar}-text,
       & > #{$avatar}-icon {
-        @apply bg-warning-100 text-warning-500 dark:bg-warning-500 dark:text-slate-100;
+        @apply bg-warning-100 text-warning-500 dark:bg-warning-500 dark:text-dark-100;
       }
     }
 
     &-info {
       & > #{$avatar}-text,
       & > #{$avatar}-icon {
-        @apply bg-info-100 text-info-500 dark:bg-info-500 dark:text-slate-100;
+        @apply bg-info-100 text-info-500 dark:bg-info-500 dark:text-dark-100;
       }
     }
 
     &-dark {
       & > #{$avatar}-text,
       & > #{$avatar}-icon {
-        @apply bg-dark-200 text-dark-500 dark:bg-dark-500 dark:text-slate-100;
+        @apply bg-dark-200 text-dark-500 dark:bg-dark-500 dark:text-dark-100;
       }
     }
 

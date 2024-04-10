@@ -3,7 +3,7 @@ const customDragAndDropSourceCode = `
     <div class="dz-message">                        
       <i width="2.5rem" height="2.5rem" data-feather="upload"></i>
       <h5>Choose a file or drag  & drop here</h5>
-      <p class="text-sm text-slate-400">
+      <p class="text-sm text-dark-400">
         This is just a demo dropzone. Selected files are not actually uploaded.
       </p>
     </div>

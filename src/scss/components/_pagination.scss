@@ -24,7 +24,7 @@
     }
 
     &-link {
-      @apply inline-flex cursor-pointer items-center justify-center rounded bg-white text-sm font-medium text-slate-500 shadow-sm transition-colors duration-150 dark:bg-slate-800 dark:text-slate-300;
+      @apply inline-flex cursor-pointer items-center justify-center rounded bg-white text-sm font-medium text-dark-500 shadow-sm transition-colors duration-150 dark:bg-dark-800 dark:text-dark-300;
 
       &:not(&-prev-text, &-next-text) {
         @apply h-8 w-8;
@@ -40,7 +40,7 @@
       }
 
       #{$pagination}-outlined & {
-        @apply border border-slate-200 bg-transparent shadow-none hover:bg-slate-100 dark:border-slate-600  dark:hover:bg-slate-700;
+        @apply border border-dark-200 bg-transparent shadow-none hover:bg-dark-100 dark:border-dark-600  dark:hover:bg-dark-700;
       }
 
       // Pagination Sizes
@@ -157,7 +157,7 @@
       }
 
       #{$pagination}-item.disabled & {
-        @apply cursor-not-allowed bg-slate-300 opacity-50 dark:bg-dark-700 dark:bg-opacity-50;
+        @apply cursor-not-allowed bg-dark-300 opacity-50 dark:bg-dark-700 dark:bg-opacity-50;
       }
     }
   }

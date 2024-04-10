@@ -84,31 +84,31 @@
     }
 
     &-outline-primary {
-      @apply border border-primary-500 text-primary-500 hover:bg-primary-100 focus:border-primary-600 focus:bg-primary-100 focus:text-primary-600 disabled:hover:bg-transparent dark:hover:bg-primary-500 dark:hover:text-slate-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-primary-500;
+      @apply border border-primary-500 text-primary-500 hover:bg-primary-100 focus:border-primary-600 focus:bg-primary-100 focus:text-primary-600 disabled:hover:bg-transparent dark:hover:bg-primary-500 dark:hover:text-dark-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-primary-500;
     }
 
     &-outline-secondary {
-      @apply border border-secondary-500 text-secondary-500 hover:bg-secondary-100 focus:border-secondary-600 focus:bg-secondary-100 focus:text-secondary-600 disabled:hover:bg-transparent dark:hover:bg-secondary-500 dark:hover:text-slate-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-secondary-500;
+      @apply border border-secondary-500 text-secondary-500 hover:bg-secondary-100 focus:border-secondary-600 focus:bg-secondary-100 focus:text-secondary-600 disabled:hover:bg-transparent dark:hover:bg-secondary-500 dark:hover:text-dark-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-secondary-500;
     }
 
     &-outline-success {
-      @apply border border-success-500 text-success-500 hover:bg-success-100 focus:border-success-600 focus:bg-success-100 focus:text-success-600 disabled:hover:bg-transparent dark:hover:bg-success-500 dark:hover:text-slate-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-success-500;
+      @apply border border-success-500 text-success-500 hover:bg-success-100 focus:border-success-600 focus:bg-success-100 focus:text-success-600 disabled:hover:bg-transparent dark:hover:bg-success-500 dark:hover:text-dark-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-success-500;
     }
 
     &-outline-info {
-      @apply border border-info-500 text-info-500 hover:bg-info-100 focus:border-info-600 focus:bg-info-100 focus:text-info-600 disabled:hover:bg-transparent dark:hover:bg-info-500 dark:hover:text-slate-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-info-500;
+      @apply border border-info-500 text-info-500 hover:bg-info-100 focus:border-info-600 focus:bg-info-100 focus:text-info-600 disabled:hover:bg-transparent dark:hover:bg-info-500 dark:hover:text-dark-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-info-500;
     }
 
     &-outline-warning {
-      @apply border border-warning-500 text-warning-500 hover:bg-warning-100 focus:border-warning-600 focus:bg-warning-100 focus:text-warning-600 disabled:hover:bg-transparent dark:hover:bg-warning-500 dark:hover:text-slate-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-warning-500;
+      @apply border border-warning-500 text-warning-500 hover:bg-warning-100 focus:border-warning-600 focus:bg-warning-100 focus:text-warning-600 disabled:hover:bg-transparent dark:hover:bg-warning-500 dark:hover:text-dark-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-warning-500;
     }
 
     &-outline-danger {
-      @apply border border-danger-500 text-danger-500 hover:bg-danger-100 focus:border-danger-600 focus:bg-danger-100 focus:text-danger-600 disabled:hover:bg-transparent dark:hover:bg-danger-500 dark:hover:text-slate-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-danger-500;
+      @apply border border-danger-500 text-danger-500 hover:bg-danger-100 focus:border-danger-600 focus:bg-danger-100 focus:text-danger-600 disabled:hover:bg-transparent dark:hover:bg-danger-500 dark:hover:text-dark-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-danger-500;
     }
 
     &-outline-dark {
-      @apply border border-dark-500 text-dark-500 hover:bg-dark-100 focus:border-dark-600 focus:bg-dark-100 focus:text-dark-600 disabled:hover:bg-transparent dark:hover:bg-dark-500 dark:hover:text-slate-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-dark-500;
+      @apply border border-dark-500 text-dark-500 hover:bg-dark-100 focus:border-dark-600 focus:bg-dark-100 focus:text-dark-600 disabled:hover:bg-transparent dark:hover:bg-dark-500 dark:hover:text-dark-200 dark:disabled:hover:bg-transparent dark:disabled:hover:text-dark-500;
     }
 
     &-plain-primary {

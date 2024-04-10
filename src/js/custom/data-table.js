@@ -16,7 +16,7 @@ async function loadTable(table) {
                 </div>
                 <div>
                   <p class="text-sm font-medium">${record.name}</p>
-                  <span class="text-xs text-slate-400">${record.post}</span>
+                  <span class="text-xs text-dark-400">${record.post}</span>
                 </div>
               </div>
             </td>
@@ -84,7 +84,7 @@ const dataTableSimpleSourceCode = `
                         </div>
                         <div>
                           <p class="text-sm font-medium">\${record.name}</p>
-                          <span class="text-xs text-slate-400">\${record.post}</span>
+                          <span class="text-xs text-dark-400">\${record.post}</span>
                         </div>
                       </div>
                     </td>
@@ -188,7 +188,7 @@ const dataTableFilterSourceCode = `
                     </div>
                     <div>
                       <p class="text-sm font-medium">\${record.name}</p>
-                      <span class="text-xs text-slate-400">\${record.post}</span>
+                      <span class="text-xs text-dark-400">\${record.post}</span>
                     </div>
                   </div>
                 </td>

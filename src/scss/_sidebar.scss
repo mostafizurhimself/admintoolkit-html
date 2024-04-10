@@ -1,7 +1,7 @@
 .sidebar {
   $sidebar: &;
 
-  @apply fixed bottom-0 top-0 z-[60] h-screen w-72 -translate-x-full overflow-hidden bg-white shadow-lg transition-all duration-300 ease-in-out dark:bg-slate-800  lg:translate-x-0;
+  @apply fixed bottom-0 top-0 z-[60] h-screen w-72 -translate-x-full overflow-hidden bg-white shadow-lg transition-all duration-300 ease-in-out dark:bg-dark-800  lg:translate-x-0;
 
   &.collapsed {
     @apply lg:w-20;
@@ -52,10 +52,10 @@
   }
 
   &-menu {
-    @apply flex w-full items-center gap-2 rounded-md p-1 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
+    @apply flex w-full items-center gap-2 rounded-md p-1 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-dark-200;
 
     &-icon {
-      @apply flex h-9 w-9 min-w-max flex-shrink-0 items-center justify-center text-slate-500 dark:text-slate-400;
+      @apply flex h-9 w-9 min-w-max flex-shrink-0 items-center justify-center text-dark-500 dark:text-dark-400;
 
       svg {
         @apply h-5 w-5;
@@ -63,7 +63,7 @@
     }
 
     &-arrow {
-      @apply ml-auto mr-2 text-slate-600 transition-transform duration-150;
+      @apply ml-auto mr-2 text-dark-600 transition-transform duration-150;
 
       svg {
         @apply h-4 w-4;
@@ -76,19 +76,19 @@
 
     &:hover &-icon,
     &:hover &-arrow {
-      @apply text-primary-500 dark:text-slate-200;
+      @apply text-primary-500 dark:text-dark-200;
     }
 
     &.active {
-      @apply bg-primary-50 text-primary-500 dark:bg-slate-700 dark:text-slate-200;
+      @apply bg-primary-50 text-primary-500 dark:bg-dark-700 dark:text-dark-200;
     }
 
     &.active &-icon {
-      @apply rounded-md bg-primary-500 text-slate-200 dark:bg-primary-500;
+      @apply rounded-md bg-primary-500 text-dark-200 dark:bg-primary-500;
     }
 
     &.active &-arrow {
-      @apply text-primary-500 dark:text-slate-200;
+      @apply text-primary-500 dark:text-dark-200;
     }
 
     #{$sidebar}.collapsed &-text {
@@ -112,7 +112,7 @@
     @apply mt-0.5 h-0 overflow-hidden transition-height duration-300 ease-in-out;
 
     &-item {
-      @apply block rounded-md py-2 pl-12 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-slate-200;
+      @apply block rounded-md py-2 pl-12 text-sm transition-colors duration-150 hover:bg-primary-50 hover:text-primary-500 dark:hover:bg-primary-500 dark:hover:text-dark-200;
     }
 
     &-item.active {
@@ -121,11 +121,11 @@
   }
 
   &-menu-header {
-    @apply pb-2 pl-7 pt-4 text-xs uppercase tracking-widest text-slate-400;
+    @apply pb-2 pl-7 pt-4 text-xs uppercase tracking-widest text-dark-400;
   }
 
   &-toggle {
-    @apply text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300;
+    @apply text-dark-500 hover:text-dark-700 dark:text-dark-400 dark:hover:text-dark-300;
   }
 
   &.collapsed &-submenu {

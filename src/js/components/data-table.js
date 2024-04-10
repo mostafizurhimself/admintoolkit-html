@@ -15,8 +15,8 @@ class DataTable {
               !options.searchable
                 ? ''
                 : `<div class='${options.classes.search}'>
-                  <label class="text-sm font-medium text-slate-500 dark:text-slate-400" for="">Search:</label>
-                  <input class='${options.classes.input} input bg-white dark:bg-slate-800' placeholder='${
+                  <label class="text-sm font-medium text-dark-500 dark:text-dark-400" for="">Search:</label>
+                  <input class='${options.classes.input} input bg-white dark:bg-dark-800' placeholder='${
                     options.labels.placeholder
                   }' type='search' title='${options.labels.searchTitle}'${dom.id ? ` aria-controls="${dom.id}"` : ''}>
               </div>`
@@ -26,8 +26,8 @@ class DataTable {
               !(options.paging && options.perPageSelect)
                 ? ''
                 : `<div class='${options.classes.dropdown}'>
-                <label class="text-sm font-medium text-slate-500 dark:text-slate-400" for="">Entries:</label>
-                <select class='${options.classes.selector} select bg-white dark:bg-slate-800'></select>
+                <label class="text-sm font-medium text-dark-500 dark:text-dark-400" for="">Entries:</label>
+                <select class='${options.classes.selector} select bg-white dark:bg-dark-800'></select>
             </div>`
             }
           </div>

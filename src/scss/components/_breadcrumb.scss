@@ -6,11 +6,11 @@
       @apply text-sm font-medium text-primary-500;
 
       &:not(:last-child) {
-        @apply mr-1.5  after:ml-1.5 after:text-slate-500 after:content-['>'] after:dark:text-slate-400;
+        @apply mr-1.5  after:ml-1.5 after:text-dark-500 after:content-['>'] after:dark:text-dark-400;
       }
 
       &:last-child {
-        @apply font-normal text-slate-500 dark:text-slate-400;
+        @apply font-normal text-dark-500 dark:text-dark-400;
       }
     }
   }

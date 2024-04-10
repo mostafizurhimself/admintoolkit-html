@@ -11,7 +11,7 @@
   .h4,
   .h5,
   .h6 {
-    @apply font-semibold leading-tight text-slate-600 dark:text-slate-200;
+    @apply font-semibold leading-tight text-dark-600 dark:text-dark-200;
   }
 
   h1,
@@ -49,14 +49,14 @@
   }
 
   .blockquote {
-    @apply border-l-[.25rem] border-l-slate-200 pl-4 font-medium italic text-slate-600 dark:border-l-slate-800 dark:text-slate-300;
+    @apply border-l-[.25rem] border-l-dark-200 pl-4 font-medium italic text-dark-600 dark:border-l-dark-800 dark:text-dark-300;
     & > p {
       @apply before:content-['"'] after:content-['"'];
     }
   }
 
   code:not(.prose code) {
-    @apply rounded bg-slate-100 p-1 text-xs tracking-wide text-slate-500 dark:bg-slate-600 dark:text-slate-300;
+    @apply rounded bg-dark-100 p-1 text-xs tracking-wide text-dark-500 dark:bg-dark-600 dark:text-dark-300;
   }
 }
 
@@ -67,7 +67,7 @@
   .display-4,
   .display-5,
   .display-6 {
-    @apply font-semibold leading-tight text-slate-600 dark:text-slate-200;
+    @apply font-semibold leading-tight text-dark-600 dark:text-dark-200;
   }
 
   .display-1 {
@@ -96,16 +96,16 @@
 
   .text {
     &-lead {
-      @apply text-lg text-slate-600 dark:text-slate-300;
+      @apply text-lg text-dark-600 dark:text-dark-300;
     }
 
     &-muted {
-      @apply text-slate-400/80 dark:text-slate-600;
+      @apply text-dark-400/80 dark:text-dark-600;
     }
   }
 
   .help-text {
-    @apply text-xs font-light text-slate-400;
+    @apply text-xs font-light text-dark-400;
   }
 
   .success-message {
@@ -117,7 +117,7 @@
   }
 
   .label {
-    @apply inline-block text-sm text-slate-700 dark:text-slate-300;
+    @apply inline-block text-sm text-dark-700 dark:text-dark-300;
 
     &-sm {
       @apply text-xs;
@@ -136,7 +136,7 @@
     }
 
     &-disabled {
-      @apply text-slate-500 opacity-80 dark:text-slate-500;
+      @apply text-dark-500 opacity-80 dark:text-dark-500;
     }
   }
 }

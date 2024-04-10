@@ -6,11 +6,11 @@
       @apply flex w-full items-center gap-2 overflow-hidden;
 
       &-track {
-        @apply w-full rounded-full bg-slate-200 dark:bg-slate-700;
+        @apply w-full rounded-full bg-dark-200 dark:bg-dark-700;
       }
 
       &-label {
-        @apply text-sm font-medium text-slate-600 dark:text-slate-300;
+        @apply text-sm font-medium text-dark-600 dark:text-dark-300;
 
         #{$progress}-sm & {
           @apply text-xs;
@@ -152,7 +152,7 @@
       }
 
       &-label {
-        @apply absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 text-xl font-medium text-primary-500 dark:text-slate-300;
+        @apply absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 text-xl font-medium text-primary-500 dark:text-dark-300;
 
         #{$progress}-sm & {
           @apply text-lg;
@@ -167,31 +167,31 @@
         }
 
         #{$progress}-primary & {
-          @apply text-primary-500 dark:text-slate-300;
+          @apply text-primary-500 dark:text-dark-300;
         }
 
         #{$progress}-secondary & {
-          @apply text-secondary-500 dark:text-slate-300;
+          @apply text-secondary-500 dark:text-dark-300;
         }
 
         #{$progress}-success & {
-          @apply text-success-500 dark:text-slate-300;
+          @apply text-success-500 dark:text-dark-300;
         }
 
         #{$progress}-danger & {
-          @apply text-danger-500 dark:text-slate-300;
+          @apply text-danger-500 dark:text-dark-300;
         }
 
         #{$progress}-warning & {
-          @apply text-warning-500 dark:text-slate-300;
+          @apply text-warning-500 dark:text-dark-300;
         }
 
         #{$progress}-info & {
-          @apply text-info-500 dark:text-slate-300;
+          @apply text-info-500 dark:text-dark-300;
         }
 
         #{$progress}-dark & {
-          @apply text-dark-500 dark:text-slate-300;
+          @apply text-dark-500 dark:text-dark-300;
         }
       }
 
@@ -206,7 +206,7 @@
 
           &:nth-child(1) {
             stroke-dashoffset: 0;
-            @apply stroke-slate-200 dark:stroke-slate-700;
+            @apply stroke-dark-200 dark:stroke-dark-700;
           }
 
           &:nth-child(2) {
@@ -248,11 +248,11 @@
       @apply relative flex w-full max-w-md items-center justify-between;
 
       &-line {
-        @apply relative h-[2px] w-full bg-slate-200 after:absolute after:inset-0 after:inline-block after:h-full after:w-0 after:bg-slate-500 after:content-[''];
+        @apply relative h-[2px] w-full bg-dark-200 after:absolute after:inset-0 after:inline-block after:h-full after:w-0 after:bg-dark-500 after:content-[''];
       }
 
       &-btn {
-        @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-transparent bg-slate-500 text-slate-100  dark:bg-slate-700;
+        @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-transparent bg-dark-500 text-dark-100  dark:bg-dark-700;
 
         #{$progress}-sm & {
           @apply h-8 w-8;
@@ -267,14 +267,14 @@
         }
 
         &-complete {
-          @apply bg-primary-500 text-slate-100 dark:bg-primary-500;
+          @apply bg-primary-500 text-dark-100 dark:bg-primary-500;
 
           & + #{$progress}-step-line {
             @apply after:w-full after:bg-primary-500;
           }
 
           #{$progress}-primary & {
-            @apply bg-primary-500 text-slate-100 dark:bg-primary-500;
+            @apply bg-primary-500 text-dark-100 dark:bg-primary-500;
 
             & + #{$progress}-step-line {
               @apply after:w-full after:bg-primary-500;
@@ -282,7 +282,7 @@
           }
 
           #{$progress}-secondary & {
-            @apply bg-secondary-500 text-slate-100 dark:bg-secondary-500;
+            @apply bg-secondary-500 text-dark-100 dark:bg-secondary-500;
 
             & + #{$progress}-step-line {
               @apply after:w-full after:bg-secondary-500;
@@ -290,7 +290,7 @@
           }
 
           #{$progress}-success & {
-            @apply bg-success-500 text-slate-100 dark:bg-success-500;
+            @apply bg-success-500 text-dark-100 dark:bg-success-500;
 
             & + #{$progress}-step-line {
               @apply after:w-full after:bg-success-500;
@@ -298,7 +298,7 @@
           }
 
           #{$progress}-danger & {
-            @apply bg-danger-500 text-slate-100 dark:bg-danger-500;
+            @apply bg-danger-500 text-dark-100 dark:bg-danger-500;
 
             & + #{$progress}-step-line {
               @apply after:w-full after:bg-danger-500;
@@ -306,7 +306,7 @@
           }
 
           #{$progress}-warning & {
-            @apply bg-warning-500 text-slate-100 dark:bg-warning-500;
+            @apply bg-warning-500 text-dark-100 dark:bg-warning-500;
 
             & + #{$progress}-step-line {
               @apply after:w-full after:bg-warning-500;
@@ -314,7 +314,7 @@
           }
 
           #{$progress}-info & {
-            @apply bg-info-500 text-slate-100 dark:bg-info-500;
+            @apply bg-info-500 text-dark-100 dark:bg-info-500;
 
             & + #{$progress}-step-line {
               @apply after:w-full after:bg-info-500;
@@ -322,7 +322,7 @@
           }
 
           #{$progress}-dark & {
-            @apply bg-dark-500 text-slate-100 dark:bg-dark-500;
+            @apply bg-dark-500 text-dark-100 dark:bg-dark-500;
 
             & + #{$progress}-step-line {
               @apply after:w-full after:bg-dark-500;

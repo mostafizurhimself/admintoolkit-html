@@ -1,14 +1,14 @@
 @layer components {
   .accordion {
     $accordion: &;
-    @apply flex w-full flex-col divide-y divide-slate-200 overflow-hidden rounded-md border border-slate-200 bg-white dark:divide-slate-700 dark:border-slate-700 dark:bg-slate-800;
+    @apply flex w-full flex-col divide-y divide-dark-200 overflow-hidden rounded-md border border-dark-200 bg-white dark:divide-dark-700 dark:border-dark-700 dark:bg-dark-800;
 
     &-item {
       @apply bg-transparent;
     }
 
     &-header {
-      @apply inline-flex w-full items-center justify-between px-4 py-3 text-sm font-medium text-slate-600 transition-colors duration-150 ease-in-out dark:text-slate-300;
+      @apply inline-flex w-full items-center justify-between px-4 py-3 text-sm font-medium text-dark-600 transition-colors duration-150 ease-in-out dark:text-dark-300;
 
       #{$accordion}-item.active & {
         @apply bg-primary-100 text-primary-500 dark:bg-primary-900/20;
@@ -28,7 +28,7 @@
     }
 
     &-icon {
-      @apply rotate-0 text-lg text-slate-500 transition-transform duration-150 ease-in-out dark:text-slate-400;
+      @apply rotate-0 text-lg text-dark-500 transition-transform duration-150 ease-in-out dark:text-dark-400;
 
       #{$accordion}-item.active & {
         @apply rotate-90 text-primary-500;
@@ -36,7 +36,7 @@
     }
 
     &-content {
-      @apply px-4 py-3 text-sm text-slate-500 dark:text-slate-400;
+      @apply px-4 py-3 text-sm text-dark-500 dark:text-dark-400;
     }
   }
 }

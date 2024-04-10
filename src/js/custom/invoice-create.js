@@ -20,14 +20,14 @@ const template = `
       <input type="text" placeholder="1" class="input">
     </td>
     <td>
-      <span class="w-full inline-block text-right font-semibold text-slate-700 dark:text-slate-200">
+      <span class="w-full inline-block text-right font-semibold text-dark-700 dark:text-dark-200">
         $00.00
       </span>
     </td>
     <td class="!py-0 !px-0 !pr-2">
       <div class="flex items-center justify-center">  
         <button
-          class="btn-remove-item cursor-pointer rounded-full p-1 font-medium focus:bg-slate-300 focus:bg-opacity-50 focus:text-slate-600"
+          class="btn-remove-item cursor-pointer rounded-full p-1 font-medium focus:bg-dark-300 focus:bg-opacity-50 focus:text-dark-600"
         >
           ${feather.icons['x'].toSvg({
             class: 'h-4 w-4',

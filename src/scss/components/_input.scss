@@ -1,7 +1,7 @@
 @layer components {
   .input {
     $input: &;
-    @apply inline-block w-full appearance-none rounded-md border border-slate-300 bg-transparent text-sm text-slate-700 placeholder:text-slate-400 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 focus:ring-inset disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 disabled:opacity-80 disabled:placeholder:text-slate-500 dark:border-slate-600 dark:text-slate-300 dark:placeholder:text-slate-400 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
+    @apply inline-block w-full appearance-none rounded-md border border-dark-300 bg-transparent text-sm text-dark-700 placeholder:text-dark-400 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 focus:ring-inset disabled:cursor-not-allowed disabled:bg-dark-100 disabled:text-dark-500 disabled:opacity-80 disabled:placeholder:text-dark-500 dark:border-dark-600 dark:text-dark-300 dark:placeholder:text-dark-400 dark:focus:border-primary-500 dark:disabled:bg-dark-700;
 
     &:not([type='file']) {
       @apply px-4 py-2;
@@ -15,7 +15,7 @@
       }
 
       &::file-selector-button {
-        @apply pointer-events-none mr-2 rounded-none border-0 border-solid border-inherit bg-slate-100/50 px-4 py-2 text-sm text-slate-700 transition-colors duration-150 ease-in-out hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300;
+        @apply pointer-events-none mr-2 rounded-none border-0 border-solid border-inherit bg-dark-100/50 px-4 py-2 text-sm text-dark-700 transition-colors duration-150 ease-in-out hover:bg-dark-200 dark:bg-dark-700 dark:text-dark-300;
 
         font-family: inherit;
         appearance: button;
