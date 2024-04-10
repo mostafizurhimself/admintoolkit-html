@@ -778,11 +778,6 @@
                         <div class="toggle-body"></div>
                         <span class="label">Toggle Me</span>
                       </label>
-                      <label for="toggle-checked-input" class="toggle">
-                        <input class="toggle-input peer sr-only" id="toggle-checked-input" type="checkbox" />
-                        <div class="toggle-body"></div>
-                        <span class="label">Toggle Me</span>
-                      </label>
                     </div>
                   </div>
                 </div>
@@ -849,7 +844,7 @@
                   <div class="code-viewer mt-4">
                     <div class="flex flex-wrap items-center gap-4">
                       <label for="toggle-sm" class="toggle toggle-sm">
-                        <input class="toggle-input peer sr-only" id="toggle-sm" type="checkbox" checked />
+                        <input class="toggle-input peer sr-only" id="toggle-sm" type="checkbox" />
                         <div class="toggle-body"></div>
                         <span class="label label-sm">Small</span>
                       </label>
@@ -877,29 +872,17 @@
                   <p class="card-subtitle">Example of disabled toggle.</p>
 
                   <div class="code-viewer mt-4">
-                    <div class="flex flex-wrap items-center gap-4">
-                      <label for="disabled-checked-toggle" class="toggle">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="disabled-checked-toggle"
-                          type="checkbox"
-                          checked
-                          disabled
-                        />
-                        <div class="toggle-body"></div>
-                        <span class="label label-disabled"> Disabled Toggle </span>
-                      </label>
-                      <label for="disabled-unchecked-toggle" class="toggle">
-                        <input
-                          class="toggle-input peer sr-only"
-                          id="disabled-unchecked-toggle"
-                          type="checkbox"
-                          disabled
-                        />
-                        <div class="toggle-body"></div>
-                        <span class="label label-disabled"> Disabled Toggle </span>
-                      </label>
-                    </div>
+                    <label for="disabled-checked-toggle" class="toggle">
+                      <input
+                        class="toggle-input peer sr-only"
+                        id="disabled-checked-toggle"
+                        type="checkbox"
+                        checked
+                        disabled
+                      />
+                      <div class="toggle-body"></div>
+                      <span class="label label-disabled"> Disabled Toggle </span>
+                    </label>
                   </div>
                 </div>
               </div>
