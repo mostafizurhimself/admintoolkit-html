@@ -1,6 +1,6 @@
 @layer components {
   .dropzone {
-    @apply flex min-h-[10rem] flex-wrap items-center justify-center border-2 border-dashed border-slate-300 p-4 dark:border-slate-600 lg:justify-start;
+    @apply flex min-h-[10rem] flex-wrap items-center justify-center border-2 border-dashed border-dark-300 p-4 dark:border-dark-600 lg:justify-start;
 
     &:not(&-disabled) {
       @apply hover:border-primary-500 dark:hover:border-primary-500;
@@ -39,7 +39,7 @@
       }
 
       .dz-progress {
-        @apply h-2 border-0 bg-slate-200 dark:bg-slate-700;
+        @apply h-2 border-0 bg-dark-200 dark:bg-dark-700;
 
         & > .dz-upload {
           @apply rounded-full bg-primary-500;
@@ -51,7 +51,7 @@
       }
 
       .dz-remove {
-        @apply mt-2 text-slate-500 hover:text-slate-600 hover:no-underline dark:text-slate-400 dark:hover:text-slate-300;
+        @apply mt-2 text-dark-500 hover:text-dark-600 hover:no-underline dark:text-dark-400 dark:hover:text-dark-300;
       }
     }
   }

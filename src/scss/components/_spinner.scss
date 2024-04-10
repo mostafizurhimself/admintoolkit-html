@@ -1,6 +1,6 @@
 @layer components {
   .spinner {
-    @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-slate-600 border-r-transparent align-[-0.125rem] dark:border-slate-100 dark:border-r-transparent;
+    @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-dark-600 border-r-transparent align-[-0.125rem] dark:border-dark-100 dark:border-r-transparent;
 
     // Spinner Color Styles
     &-primary {
@@ -33,23 +33,23 @@
 
     // Spinner Size Stlyes
     &-xs {
-      @apply inline-block h-6 w-6 animate-spin rounded-full border-4 border-slate-600 border-r-transparent align-[-0.125rem]  dark:border-slate-100 dark:border-r-transparent;
+      @apply inline-block h-6 w-6 animate-spin rounded-full border-4 border-dark-600 border-r-transparent align-[-0.125rem]  dark:border-dark-100 dark:border-r-transparent;
     }
 
     &-sm {
-      @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-slate-600 border-r-transparent align-[-0.125rem] dark:border-slate-100 dark:border-r-transparent;
+      @apply inline-block h-8 w-8 animate-spin rounded-full border-4 border-dark-600 border-r-transparent align-[-0.125rem] dark:border-dark-100 dark:border-r-transparent;
     }
 
     &-md {
-      @apply inline-block h-10 w-10 animate-spin rounded-full border-4 border-slate-600 border-r-transparent align-[-0.125rem] dark:border-slate-100 dark:border-r-transparent;
+      @apply inline-block h-10 w-10 animate-spin rounded-full border-4 border-dark-600 border-r-transparent align-[-0.125rem] dark:border-dark-100 dark:border-r-transparent;
     }
 
     &-lg {
-      @apply inline-block h-12 w-12 animate-spin rounded-full border-4 border-slate-600 border-r-transparent align-[-0.125rem] dark:border-slate-100 dark:border-r-transparent;
+      @apply inline-block h-12 w-12 animate-spin rounded-full border-4 border-dark-600 border-r-transparent align-[-0.125rem] dark:border-dark-100 dark:border-r-transparent;
     }
 
     &-xl {
-      @apply inline-block h-16 w-16 animate-spin rounded-full border-4 border-slate-600 border-r-transparent align-[-0.125rem] dark:border-slate-100 dark:border-r-transparent;
+      @apply inline-block h-16 w-16 animate-spin rounded-full border-4 border-dark-600 border-r-transparent align-[-0.125rem] dark:border-dark-100 dark:border-r-transparent;
     }
   }
 

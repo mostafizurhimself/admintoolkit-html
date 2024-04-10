@@ -130,7 +130,7 @@ class CodeViewer {
     toggleBody.classList.add('toggle-body');
 
     const span = document.createElement('span');
-    span.classList.add('label', '!text-slate-400');
+    span.classList.add('label', '!text-dark-400');
     span.innerText = 'Show code';
 
     toggle.appendChild(input);

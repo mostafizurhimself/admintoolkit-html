@@ -1,5 +1,5 @@
 .simplebar-scrollbar:before {
-  @apply w-1.5 bg-slate-300 dark:bg-slate-900;
+  @apply w-1.5 bg-dark-300 dark:bg-dark-900;
 }
 
 .simplebar-content-wrapper {
@@ -9,37 +9,37 @@
 // =======Quill Styles Start==========
 
 .ql-editor.ql-blank::before {
-  @apply pointer-events-none absolute left-4 right-4 italic text-slate-600 content-[attr(data-placeholder)] dark:text-slate-300;
+  @apply pointer-events-none absolute left-4 right-4 italic text-dark-600 content-[attr(data-placeholder)] dark:text-dark-300;
   font-family: theme('fontFamily.sans');
 }
 
 .ql-container {
-  @apply min-h-[20rem] bg-white text-sm font-normal dark:border-slate-600 dark:bg-slate-800;
+  @apply min-h-[20rem] bg-white text-sm font-normal dark:border-dark-600 dark:bg-dark-800;
   font-family: theme('fontFamily.sans');
 }
 
 // Snow Theme
 .ql-snow {
   &.ql-container {
-    @apply rounded-b-md border border-slate-300 dark:border-slate-600;
+    @apply rounded-b-md border border-dark-300 dark:border-dark-600;
   }
 
   &.ql-toolbar {
-    @apply rounded-t-md border border-slate-300 dark:border-slate-600 dark:bg-slate-800;
+    @apply rounded-t-md border border-dark-300 dark:border-dark-600 dark:bg-dark-800;
 
     button {
-      @apply text-slate-700;
+      @apply text-dark-700;
 
       .ql-stroke {
-        @apply fill-none stroke-slate-600 dark:stroke-slate-300;
+        @apply fill-none stroke-dark-600 dark:stroke-dark-300;
       }
 
       .ql-fill {
-        @apply fill-slate-600 stroke-slate-600 dark:fill-slate-300 dark:stroke-slate-300;
+        @apply fill-dark-600 stroke-dark-600 dark:fill-dark-300 dark:stroke-dark-300;
       }
 
       .ql-stroke.ql-fill {
-        @apply fill-slate-600 stroke-slate-600 dark:fill-slate-300 dark:stroke-slate-300;
+        @apply fill-dark-600 stroke-dark-600 dark:fill-dark-300 dark:stroke-dark-300;
       }
 
       &:hover {
@@ -78,7 +78,7 @@
     .ql-picker,
     .ql-picker-label,
     .ql-picker-options {
-      @apply text-slate-700 dark:bg-slate-800 dark:text-slate-50;
+      @apply text-dark-700 dark:bg-dark-800 dark:text-dark-50;
 
       .ql-stroke {
         @apply fill-none stroke-current;
@@ -96,7 +96,7 @@
     .ql-expanded {
       .ql-picker-label,
       .ql-picker-options {
-        @apply border border-slate-300 dark:border-slate-600;
+        @apply border border-dark-300 dark:border-dark-600;
       }
 
       .ql-picker-label {
@@ -140,33 +140,33 @@
 // Bubble Theme
 .ql-bubble {
   &.ql-container {
-    @apply rounded-md border border-slate-300 dark:border-slate-600;
+    @apply rounded-md border border-dark-300 dark:border-dark-600;
   }
 
   .ql-tooltip:not(.ql-flip) .ql-tooltip-arrow {
-    @apply top-[-6px] border-b-[6px] border-b-slate-300 dark:border-b-slate-600;
+    @apply top-[-6px] border-b-[6px] border-b-dark-300 dark:border-b-dark-600;
   }
 
   .ql-tooltip.ql-flip .ql-tooltip-arrow {
-    @apply bottom-[-6px] border-t-[6px] border-b-slate-300 dark:border-b-slate-600;
+    @apply bottom-[-6px] border-t-[6px] border-b-dark-300 dark:border-b-dark-600;
   }
 
   .ql-tooltip {
-    @apply rounded-md border border-slate-300 bg-slate-100 dark:border-slate-600 dark:bg-slate-800;
+    @apply rounded-md border border-dark-300 bg-dark-100 dark:border-dark-600 dark:bg-dark-800;
 
     button {
-      @apply text-slate-700;
+      @apply text-dark-700;
 
       .ql-stroke {
-        @apply fill-none stroke-slate-600 dark:stroke-slate-300;
+        @apply fill-none stroke-dark-600 dark:stroke-dark-300;
       }
 
       .ql-fill {
-        @apply fill-slate-600 stroke-slate-600 dark:fill-slate-300 dark:stroke-slate-300;
+        @apply fill-dark-600 stroke-dark-600 dark:fill-dark-300 dark:stroke-dark-300;
       }
 
       .ql-stroke.ql-fill {
-        @apply fill-slate-600 stroke-slate-600 dark:fill-slate-300 dark:stroke-slate-300;
+        @apply fill-dark-600 stroke-dark-600 dark:fill-dark-300 dark:stroke-dark-300;
       }
 
       &:hover {
@@ -205,7 +205,7 @@
     .ql-picker,
     .ql-picker-label,
     .ql-picker-options {
-      @apply text-slate-700 dark:bg-slate-800 dark:text-slate-50;
+      @apply text-dark-700 dark:bg-dark-800 dark:text-dark-50;
 
       .ql-stroke {
         @apply fill-none stroke-current;
@@ -249,18 +249,18 @@
 
 // ============Apex Chart  Start ============
 .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
-  @apply border-b border-slate-400 bg-slate-200 text-slate-700 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-200;
+  @apply border-b border-dark-400 bg-dark-200 text-dark-700 dark:border-dark-600 dark:bg-dark-700 dark:text-dark-200;
 }
 
 .apexcharts-tooltip.apexcharts-theme-light,
 .apexcharts-yaxistooltip.apexcharts-theme-light,
 .apexcharts-xaxistooltip.apexcharts-theme-light {
-  @apply border border-slate-400 bg-slate-50 text-slate-700 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200;
+  @apply border border-dark-400 bg-dark-50 text-dark-700 dark:border-dark-600 dark:bg-dark-800 dark:text-dark-200;
 }
 
 .apexcharts-text.apexcharts-xaxis-label tspan,
 .apexcharts-text.apexcharts-yaxis-label tspan {
-  @apply fill-slate-400;
+  @apply fill-dark-400;
 }
 
 .apexcharts-legend .apexcharts-legend-series .apexcharts-legend-text {
@@ -270,14 +270,14 @@
 // ============Apex Chart  End ============
 // Email Badge
 .tags-input-wrapper {
-  @apply m-0 flex w-full flex-wrap gap-2 border-none bg-transparent p-0 text-xs text-slate-600 outline-none dark:text-slate-300;
+  @apply m-0 flex w-full flex-wrap gap-2 border-none bg-transparent p-0 text-xs text-dark-600 outline-none dark:text-dark-300;
 
   & input {
     @apply flex-1 border-none bg-transparent py-1 outline-none;
   }
 
   & .tag {
-    @apply mb-1 inline-block rounded-full bg-slate-50 px-2 py-1 shadow dark:bg-slate-900;
+    @apply mb-1 inline-block rounded-full bg-dark-50 px-2 py-1 shadow dark:bg-dark-900;
 
     & a {
       @apply mx-2 inline-block cursor-pointer;
@@ -290,7 +290,7 @@
   @apply items-center gap-2;
 
   & > &__tag {
-    @apply m-0 flex cursor-pointer items-center gap-x-1 rounded-full border border-slate-300 bg-slate-100 px-2 py-1 dark:border-slate-600 dark:bg-slate-700;
+    @apply m-0 flex cursor-pointer items-center gap-x-1 rounded-full border border-dark-300 bg-dark-100 px-2 py-1 dark:border-dark-600 dark:bg-dark-700;
   }
 
   & > &__tag > div {
@@ -302,11 +302,11 @@
   }
 
   & > &__tag &__tag-text {
-    @apply text-sm text-slate-600 dark:text-slate-300;
+    @apply text-sm text-dark-600 dark:text-dark-300;
   }
 
   & > &__tag &__tag__removeBtn {
-    @apply m-0 text-lg text-slate-600 hover:bg-transparent hover:text-danger-500 dark:text-slate-300 dark:hover:text-danger-500;
+    @apply m-0 text-lg text-dark-600 hover:bg-transparent hover:text-danger-500 dark:text-dark-300 dark:hover:text-danger-500;
   }
 
   & > &__tag &__tag__removeBtn:hover + div > span {
@@ -318,7 +318,7 @@
   }
 
   & > &__input {
-    @apply m-0 px-0 py-2 text-sm text-slate-700 dark:text-slate-300;
+    @apply m-0 px-0 py-2 text-sm text-dark-700 dark:text-dark-300;
   }
 }
 // ============ Tagify Custom CSS Ends ============

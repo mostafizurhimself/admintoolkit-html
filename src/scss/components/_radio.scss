@@ -1,6 +1,6 @@
 @layer components {
   .radio {
-    @apply h-4 w-4 border-slate-300 bg-transparent text-primary-500 focus:ring-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-80 dark:focus:ring-offset-slate-900;
+    @apply h-4 w-4 border-dark-300 bg-transparent text-primary-500 focus:ring-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-80 dark:focus:ring-offset-dark-900;
 
     &-sm {
       @apply h-3.5 w-3.5;
@@ -44,7 +44,7 @@
 
     &.is-valid,
     .form-validated &:valid {
-      @apply border-success-500 text-success-500 ring-2 ring-success-500 ring-offset-2 ring-offset-white dark:ring-offset-slate-900;
+      @apply border-success-500 text-success-500 ring-2 ring-success-500 ring-offset-2 ring-offset-white dark:ring-offset-dark-900;
     }
 
     &.is-valid ~ .label,
@@ -54,7 +54,7 @@
 
     &.is-invalid,
     .form-validated &:invalid {
-      @apply border-danger-500 text-danger-500 ring-2 ring-danger-500 ring-offset-2 ring-offset-white dark:ring-offset-slate-900;
+      @apply border-danger-500 text-danger-500 ring-2 ring-danger-500 ring-offset-2 ring-offset-white dark:ring-offset-dark-900;
     }
 
     &.is-invalid ~ .label,

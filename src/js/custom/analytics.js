@@ -159,7 +159,7 @@ const activeUsersChartOptions = {
 
       return `
         <div class="ml-1">
-          <p class="text-slate-700 text-sm font-medium dark:text-slate-300">${percentage}%</p>
+          <p class="text-dark-700 text-sm font-medium dark:text-dark-300">${percentage}%</p>
           <p class="text-xs">${name}</p>
         </div>
       `;

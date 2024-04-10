@@ -1,13 +1,13 @@
 @layer components {
   .select {
-    @apply h-10 w-full rounded-md border border-slate-300 bg-transparent px-4 text-sm text-slate-700 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus:ring-inset disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 disabled:opacity-80 dark:border-slate-600 dark:bg-transparent dark:text-slate-400 dark:focus:border-primary-500 dark:disabled:bg-slate-700;
+    @apply h-10 w-full rounded-md border border-dark-300 bg-transparent px-4 text-sm text-dark-700 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus:ring-inset disabled:cursor-not-allowed disabled:bg-dark-100 disabled:text-dark-500 disabled:opacity-80 dark:border-dark-600 dark:bg-transparent dark:text-dark-400 dark:focus:border-primary-500 dark:disabled:bg-dark-700;
 
     & > option {
-      @apply bg-white text-slate-700 dark:bg-dark-700 dark:text-dark-200;
+      @apply bg-white text-dark-700 dark:bg-dark-700 dark:text-dark-200;
     }
 
     & > option[disabled] {
-      @apply bg-slate-100 text-slate-400 dark:bg-slate-700 dark:text-slate-500;
+      @apply bg-dark-100 text-dark-400 dark:bg-dark-700 dark:text-dark-500;
     }
 
     &-sm {
@@ -52,7 +52,7 @@
     &.ts-wrapper.single.input-active .ts-control,
     &.ts-wrapper.multi.input-active .ts-control,
     .ts-control {
-      @apply w-full border border-slate-300 bg-transparent dark:border-slate-600 dark:bg-transparent;
+      @apply w-full border border-dark-300 bg-transparent dark:border-dark-600 dark:bg-transparent;
     }
 
     &.ts-wrapper.input-active .ts-control {
@@ -64,7 +64,7 @@
     }
 
     & > .ts-control {
-      @apply flex min-h-[2.5rem] w-full items-center gap-1 rounded-md px-4 py-0 text-slate-700 after:absolute after:bottom-0 after:right-2 after:top-0 after:m-auto after:inline-flex after:h-4 after:w-4 after:items-center after:justify-center after:font-['tabler-icons'] after:text-base after:text-slate-500 after:content-['\ea5f'] dark:text-slate-300 after:dark:text-slate-400/60;
+      @apply flex min-h-[2.5rem] w-full items-center gap-1 rounded-md px-4 py-0 text-dark-700 after:absolute after:bottom-0 after:right-2 after:top-0 after:m-auto after:inline-flex after:h-4 after:w-4 after:items-center after:justify-center after:font-['tabler-icons'] after:text-base after:text-dark-500 after:content-['\ea5f'] dark:text-dark-300 after:dark:text-dark-400/60;
 
       .items-placeholder {
         @apply placeholder:text-sm;
@@ -72,7 +72,7 @@
     }
 
     & > .ts-control > input {
-      @apply bg-red-300 placeholder:text-sm placeholder:text-slate-400;
+      @apply bg-red-300 placeholder:text-sm placeholder:text-dark-400;
     }
 
     &.ts-wrapper.single > .ts-control > .item {
@@ -88,22 +88,22 @@
     }
 
     & > .ts-dropdown {
-      @apply w-full rounded-md border border-slate-300 bg-white p-2 dark:border-slate-600 dark:bg-slate-800;
+      @apply w-full rounded-md border border-dark-300 bg-white p-2 dark:border-dark-600 dark:bg-dark-800;
 
       .dropdown-input-wrap > input {
-        @apply rounded border border-slate-300 text-sm text-slate-700 placeholder:text-slate-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus:ring-inset focus-visible:outline-none dark:text-slate-300;
+        @apply rounded border border-dark-300 text-sm text-dark-700 placeholder:text-dark-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus:ring-inset focus-visible:outline-none dark:text-dark-300;
       }
 
       & > .ts-dropdown-content {
         @apply mt-2;
 
         & > .optgroup > .optgroup-header {
-          @apply mb-2 bg-transparent text-sm font-semibold text-slate-500 dark:text-slate-400;
+          @apply mb-2 bg-transparent text-sm font-semibold text-dark-500 dark:text-dark-400;
         }
 
         & > .option,
         & > .optgroup > .option {
-          @apply rounded p-2 text-sm text-slate-500 dark:text-slate-400;
+          @apply rounded p-2 text-sm text-dark-500 dark:text-dark-400;
 
           &:not(:last-child) {
             @apply mb-1;
@@ -119,7 +119,7 @@
         }
 
         & > .no-results {
-          @apply text-sm text-slate-500 dark:text-slate-400;
+          @apply text-sm text-dark-500 dark:text-dark-400;
         }
       }
     }

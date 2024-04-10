@@ -7,7 +7,7 @@
     }
 
     &-content {
-      @apply fixed left-0 top-0 z-20 hidden overflow-hidden rounded-md border border-slate-200 bg-white shadow-lg dark:border-slate-700 dark:bg-slate-800;
+      @apply fixed left-0 top-0 z-20 hidden overflow-hidden rounded-md border border-dark-200 bg-white shadow-lg dark:border-dark-700 dark:bg-dark-800;
 
       &.show {
         @apply block;
@@ -15,11 +15,11 @@
     }
 
     &-link {
-      @apply inline-flex w-full cursor-pointer items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-slate-700;
+      @apply inline-flex w-full cursor-pointer items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-dark-700;
     }
 
     &-btn {
-      @apply inline-flex w-full items-center gap-2 px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-700;
+      @apply inline-flex w-full items-center gap-2 px-4 py-2 text-sm text-dark-700 hover:bg-dark-100 dark:text-dark-300 dark:hover:bg-dark-700;
 
       &.active {
         @apply text-primary-500 dark:text-primary-500;

@@ -30,7 +30,7 @@
       }
 
       #{$datatable}-table {
-        @apply w-full overflow-hidden whitespace-nowrap rounded-md border-slate-200 shadow dark:border-slate-600;
+        @apply w-full overflow-hidden whitespace-nowrap rounded-md border-dark-200 shadow dark:border-dark-600;
 
         thead,
         tbody,
@@ -42,11 +42,11 @@
         }
 
         th {
-          @apply font-semibold text-slate-700 dark:text-slate-300;
+          @apply font-semibold text-dark-700 dark:text-dark-300;
         }
 
         td {
-          @apply font-normal text-slate-600 dark:text-slate-400;
+          @apply font-normal text-dark-600 dark:text-dark-400;
         }
 
         & > thead > tr:first-child > *,
@@ -59,7 +59,7 @@
         }
 
         & > :not(caption) > * > * {
-          @apply bg-white px-6 py-3 text-left text-sm dark:bg-slate-800;
+          @apply bg-white px-6 py-3 text-left text-sm dark:bg-dark-800;
         }
       }
 
@@ -68,7 +68,7 @@
       }
 
       #{$datatable}-info {
-        @apply text-sm font-medium text-slate-400;
+        @apply text-sm font-medium text-dark-400;
       }
 
       #{$datatable}-pagination {
@@ -82,7 +82,7 @@
           @apply flex;
 
           & > a {
-            @apply inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-slate-200 bg-opacity-50 text-sm font-medium text-slate-500 transition-colors duration-150 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700;
+            @apply inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-dark-200 bg-opacity-50 text-sm font-medium text-dark-500 transition-colors duration-150 hover:bg-dark-200 dark:bg-dark-800 dark:text-dark-300 dark:hover:bg-dark-700;
           }
 
           &:first-child > a,
@@ -119,11 +119,11 @@
       }
 
       #{$datatable}-sorter::before {
-        @apply bottom-0 border-t-4 border-t-black dark:border-t-slate-300;
+        @apply bottom-0 border-t-4 border-t-black dark:border-t-dark-300;
       }
 
       #{$datatable}-sorter::after {
-        @apply top-0 border-b-4 border-t-4 border-b-black border-t-transparent dark:border-b-slate-300;
+        @apply top-0 border-b-4 border-t-4 border-b-black border-t-transparent dark:border-b-dark-300;
       }
 
       #{$datatable}-ascending #{$datatable}-sorter::after,

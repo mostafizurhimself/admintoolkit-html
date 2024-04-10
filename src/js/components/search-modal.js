@@ -138,10 +138,10 @@ export class SearchModal {
   renderItem(page) {
     return `
       <li class="">
-        <a href="${page.url}" class="flex rounded-md px-4 py-2 text-sm items-center gap-2 bg-slate-50 hover:bg-slate-100 dark:bg-slate-700 dark:hover:bg-slate-600 shadow-sm">
-          <i class="${page.icon} text-slate-500 dark:text-slate-400 text-lg"></i>
+        <a href="${page.url}" class="flex rounded-md px-4 py-2 text-sm items-center gap-2 bg-dark-50 hover:bg-dark-100 dark:bg-dark-700 dark:hover:bg-dark-600 shadow-sm">
+          <i class="${page.icon} text-dark-500 dark:text-dark-400 text-lg"></i>
           <span >${page.name}</span>
-          <i class="ti ti-chevron-right text-slate-500 ml-auto"></i>
+          <i class="ti ti-chevron-right text-dark-500 ml-auto"></i>
         </a>
       </li>
     `;
@@ -152,8 +152,8 @@ export class SearchModal {
     const modalBody = this.target.querySelector('.modal-body');
     modalBody.innerHTML = `
     <div class="h-20 flex items-center justify-center">
-      <p class="text-slate-400">
-        No results for <span class="text-slate-600 dark:text-slate-300">'${search}'</span>
+      <p class="text-dark-400">
+        No results for <span class="text-dark-600 dark:text-dark-300">'${search}'</span>
       </p>
     </div>
     `;

@@ -32,7 +32,7 @@
     }
 
     &-content {
-      @apply relative flex h-full w-full flex-col overflow-hidden rounded-md bg-white shadow-xl dark:bg-slate-800;
+      @apply relative flex h-full w-full flex-col overflow-hidden rounded-md bg-white shadow-xl dark:bg-dark-800;
     }
 
     &-header,
@@ -42,7 +42,7 @@
     }
 
     &-header {
-      @apply border-b border-b-slate-200 dark:border-b-slate-600;
+      @apply border-b border-b-dark-200 dark:border-b-dark-600;
     }
 
     &-body {
@@ -50,7 +50,7 @@
     }
 
     &-footer {
-      @apply border-t border-t-slate-300 dark:border-t-slate-600;
+      @apply border-t border-t-dark-300 dark:border-t-dark-600;
     }
 
     &-backdrop {
