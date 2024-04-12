@@ -4,7 +4,7 @@
     $flatpickr-calendar: #{$flatpickr}-calendar;
 
     @at-root #{$flatpickr-calendar} {
-      width: calc(14rem + 5vw) !important;
+      // width: calc(14rem + 5vw) !important;
       @apply overflow-hidden rounded-md bg-white shadow dark:bg-dark-800;
 
       // Direct Element
@@ -88,7 +88,7 @@
         }
 
         #{$flatpickr}-days {
-          width: calc(14rem + 5vw) !important;
+          // width: calc(14rem + 5vw) !important;
           .dayContainer {
             @apply w-full min-w-full max-w-full justify-between gap-y-1.5 p-2;
           }
@@ -142,7 +142,7 @@
           }
 
           &.today:not(.selected, .inRange, .startRange, .endRange) {
-            @apply border-primary-500 text-primary-500 hover:border-dark-100 dark:border-primary-500 dark:text-primary-500 dark:hover:border-dark-700;
+            @apply border-dark-300 hover:bg-dark-100 dark:border-dark-500 dark:hover:bg-dark-700;
           }
 
           &.selected,
