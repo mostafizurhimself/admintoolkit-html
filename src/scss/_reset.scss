@@ -9,8 +9,9 @@
 // =======Quill Styles Start==========
 
 .ql-editor.ql-blank::before {
-  @apply pointer-events-none absolute left-4 right-4 italic text-dark-600 content-[attr(data-placeholder)] dark:text-dark-300;
+  @apply pointer-events-none absolute left-4 right-4 text-dark-500 content-[attr(data-placeholder)] dark:text-dark-300;
   font-family: theme('fontFamily.sans');
+  font-style: normal;
 }
 
 .ql-container {
@@ -144,15 +145,15 @@
   }
 
   .ql-tooltip:not(.ql-flip) .ql-tooltip-arrow {
-    @apply top-[-6px] border-b-[6px] border-b-dark-300 dark:border-b-dark-600;
+    @apply top-[-6px] border-b-[6px] border-b-dark-200 dark:border-b-dark-600;
   }
 
   .ql-tooltip.ql-flip .ql-tooltip-arrow {
-    @apply bottom-[-6px] border-t-[6px] border-b-dark-300 dark:border-b-dark-600;
+    @apply bottom-[-6px] border-t-[6px] border-b-dark-200 dark:border-b-dark-600;
   }
 
   .ql-tooltip {
-    @apply rounded-md border border-dark-300 bg-dark-100 dark:border-dark-600 dark:bg-dark-800;
+    @apply rounded-md border border-dark-300 bg-dark-100 dark:border-dark-700 dark:bg-dark-600;
 
     button {
       @apply text-dark-700;
@@ -162,7 +163,7 @@
       }
 
       .ql-fill {
-        @apply fill-dark-600 stroke-dark-600 dark:fill-dark-300 dark:stroke-dark-300;
+        @apply fill-dark-600 stroke-none dark:fill-dark-300 dark:stroke-none;
       }
 
       .ql-stroke.ql-fill {

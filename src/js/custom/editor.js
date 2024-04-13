@@ -1,20 +1,23 @@
 const editorControlled = createEditor('#editor-controlled', {
   theme: 'snow',
+  placeholder: 'Write Something...',
+});
+
+editorControlled.on('text-change', () => {
+  console.log('Text changed')
 });
 
 const controlledEditorSource = `
-  <div id="editor-controlled">
-    <h3>Quill Controled Text Editor</h3>
-    <p>
-      Admin Toolkit dashboard template based on TailwindCSS and Vanilla JavaScript is a sleek and
-      functional web-based interface designed for administrators and developers to manage and monitor
-      various aspects of their web application
-    </p>
-  </div>
+  <div id="editor-controlled"></div>
   
   <script>
     const editorControlled = createEditor('#editor-controlled', {
       theme: 'snow'
+      placeholder: 'Write Something...',
+    });
+
+    editorControlled.on('text-change', () => {
+      console.log('Text changed')
     });
   </script>
 `;

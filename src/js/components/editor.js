@@ -12,7 +12,6 @@ const editor = {
           [{ script: 'sub' }, { script: 'super' }],
           [{ indent: '-1' }, { indent: '+1' }],
           [{ direction: 'rtl' }],
-          [{ size: ['small', false, 'large', 'huge'] }],
           [{ header: [1, 2, 3, 4, 5, 6, false] }],
           [{ color: [] }, { background: [] }],
           [{ font: [] }],
@@ -47,6 +46,8 @@ const editor = {
             theme: 'snow',
             bounds: editor,
             modules: this.theme.snow.modules,
+            placeholder: 'Write Something...',
+            ...editor.dataset,
           })
       );
     }
@@ -59,6 +60,8 @@ const editor = {
             theme: 'bubble',
             bounds: editor,
             modules: this.theme.bubble.modules,
+            placeholder: 'Write Something...',
+            ...editor.dataset,
           })
       );
     }
