@@ -36,7 +36,7 @@
       }
 
       .ql-fill {
-        @apply fill-dark-600 stroke-dark-600 dark:fill-dark-300 dark:stroke-dark-300;
+        @apply fill-dark-600 stroke-none dark:fill-dark-300 dark:stroke-none;
       }
 
       .ql-stroke.ql-fill {
