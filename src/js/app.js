@@ -7,7 +7,7 @@ import 'simplebar';
 //Core components
 import accordion from './components/accordion';
 import alert from './components/alert';
-import carousel from './components/carousel';
+import swiper from './components/swiper';
 import checkAll from './components/check-all';
 import codeViewer from './components/code-viewer';
 import datepicker from './components/datepicker';
@@ -53,8 +53,8 @@ tabs.init();
 // Initialize Tooltip
 tooltip.init();
 
-// Initialize carousel
-carousel.init();
+// Initialize swiper
+swiper.init();
 
 // Initialize editor
 editor.init();
