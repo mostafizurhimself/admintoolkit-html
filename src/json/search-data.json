@@ -113,8 +113,8 @@
         "icon": "ti ti-cards"
       },
       {
-        "name": "Carousel",
-        "url": "/carousel.html",
+        "name": "Swiper",
+        "url": "/swiper.html",
         "icon": "ti ti-carousel-horizontal"
       },
       {
